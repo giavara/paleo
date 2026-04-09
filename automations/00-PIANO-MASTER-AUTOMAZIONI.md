@@ -38,6 +38,7 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 | 3 | Welcome Unghie/Capelli | `fase1/03-welcome-unghie-capelli.md` | 6 | Optin da lead magnet unghie/capelli | In review |
 | 4 | Authority Flow | `fase1/04-authority-flow.md` | 5 | DOPO completamento welcome (sequenziale) + non ha comprato | In review |
 | 5 | Browse Abandonment | `fase1/05-browse-abandonment.md` | 2 (email 2 in draft) | Viewed Product + non ha comprato quel prodotto + non in altri flow + max 1 volta ogni 30gg | In review |
+| 6 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | In review |
 
 ### FASE 2 — Flow post-acquisto
 
@@ -297,10 +298,10 @@ Da valutare prima di attivare il flow.
 
 | Fase | Flow | Email |
 |------|------|-------|
-| Fase 1 | 5 flow (carrello, 2 welcome, authority, browse) | 24 email |
+| Fase 1 | 6 flow (carrello, 2 welcome, authority, browse, conversione) | 34 email |
 | Fase 2 | 2 flow + 5 blocchi dinamici | 8 email + 5 blocchi |
 | Fase 3 | 11 flow (6 retention, 2 winback, back in stock, sunset, fedelta') | 29 email + 1 azione |
-| **Totale** | **18 flow** | **~61 email + 5 blocchi dinamici** |
+| **Totale** | **19 flow** | **~71 email + 5 blocchi dinamici** |
 
 ## Matrice cross-sell
 
