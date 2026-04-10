@@ -1,5 +1,5 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-04-08
+**Versione:** 2.1
+**Ultimo aggiornamento:** 2026-04-10
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 2: Welcome Kit Benessere
@@ -82,7 +82,7 @@ Il codice è valido su tutti i prodotti dello store, senza limiti di spesa.
 
 **[CTA: Vai allo store e usa il tuo sconto](https://paleocomplex.com)**
 
-Nelle prossime email ti racconterò perché abbiamo creato Paleocomplex e cosa ci rende diversi da qualsiasi altro integratore sul mercato.
+**Tra un paio di giorni** ti voglio raccontare una cosa che la maggior parte dei brand di integratori non vuole farti sapere: perché prendere 10 prodotti separati è quasi sempre uno spreco di soldi. E come fare a capire se quello che hai nel cassetto sta davvero funzionando o no.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -108,7 +108,7 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-Ti faccio una domanda diretta: quanti integratori hai nel cassetto in questo momento?
+Eccomi con quello che ti avevo promesso. Ti faccio una domanda diretta: quanti integratori hai nel cassetto in questo momento?
 
 Se la risposta è "più di tre", probabilmente stai facendo quello che fanno quasi tutti. Un integratore per la vitamina D, uno per il magnesio, uno per gli omega-3, uno per le vitamine B, uno per gli antiossidanti. Cinque prodotti diversi, cinque etichette da leggere, cinque aziende diverse con standard diversi.
 
@@ -170,6 +170,8 @@ Se vuoi saperne di più, sul nostro sito trovi tutto: ingredienti, dosaggi, spie
 
 **[CTA: Scopri i nostri prodotti](https://paleocomplex.com)**
 
+**Tra qualche giorno** voglio mostrarti tre prodotti specifici, scelti tra tutti quelli che abbiamo creato, e dirti onestamente quale fa per te in base alla tua situazione. Ti racconterò anche cosa dicono le persone che li usano da mesi.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -194,7 +196,7 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-Nel report che hai scaricato si parla di energia mitocondriale, infiammazione silente, protezione del DNA e stress ossidativo. Sono tutti meccanismi che si accelerano dopo i 40 anni.
+Eccomi con i tre prodotti che ti avevo promesso. Nel report che hai scaricato si parla di energia mitocondriale, infiammazione silente, protezione del DNA e stress ossidativo. Sono tutti meccanismi che si accelerano dopo i 40 anni.
 
 La buona notizia è che puoi agire concretamente su ognuno di essi. E non servono 15 integratori diversi.
 

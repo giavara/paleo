@@ -366,6 +366,30 @@ Punti chiave per le automazioni:
 | **Team Paleocomplex** | Carrello abbandonato, Browse abandonment, Back in stock, Programma fedeltà, Sunset, Post Purchase returning (cross-sell) | Team Paleocomplex |
 | **[Nome CS reale]** (se disponibile, altrimenti Team) | Richiesta recensione | [Nome] · Team Paleocomplex |
 
+### Open loop (cliffhanger) tra email
+
+Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1, apertura email N+1 con richiamo che chiude il loop.
+
+**Obiettivi:**
+- Aumentare l'open rate progressivo della sequenza
+- Allenare il lettore a riconoscere e aprire il mittente Lorenzo
+- Creare continuità narrativa tra le email
+
+**Regola:** solo nei flow educativi/nurturing lunghi e solo dove c'è un contenuto forte da promettere. **Mai forzato in ogni email.**
+
+| Flow | Open loop |
+|------|-----------|
+| Authority Flow (4) | SÌ — tutte le email (5/5), il flow più editoriale |
+| Welcome Kit Benessere (2) | SÌ — solo 2-3 punti chiave |
+| Welcome Unghie/Capelli (3) | SÌ — solo 2-3 punti chiave |
+| Conversione (6) | SÌ — 3-4 punti strategici (cambio angolo, contenuti forti) |
+| Carrello Abbandonato | NO — transazionale |
+| Browse Abandonment | NO — touchpoint freddo |
+| Post Purchase | NO (per ora) — valutare nei flow lunghi |
+| Retention | NO |
+| Win-back | NO |
+| Back in Stock, Sunset, Fedeltà | NO — operativi |
+
 ## Fonti dati per la scrittura
 
 - Schede prodotto: `context/products/[nome]-scheda-prodotto.md`

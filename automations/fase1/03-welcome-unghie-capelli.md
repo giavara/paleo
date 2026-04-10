@@ -1,5 +1,5 @@
-**Versione:** 1.0
-**Ultimo aggiornamento:** 2026-04-08
+**Versione:** 1.1
+**Ultimo aggiornamento:** 2026-04-10
 **Status:** Bozza v1 — in attesa review Andrea
 
 # Flow 3: Welcome Unghie e Capelli
@@ -77,7 +77,7 @@ Il codice è valido su tutti i prodotti dello store, senza limiti di spesa.
 
 **[CTA: Vai allo store e usa il tuo sconto](https://paleocomplex.com)**
 
-Nelle prossime email ti spiegherò perché capelli, unghie e pelle si indeboliscono davvero, e cosa puoi fare per agire alla radice del problema.
+**Tra un paio di giorni** voglio raccontarti perché capelli e unghie si indeboliscono davvero. Spoiler: lo shampoo, lo smalto e le creme stanno lavorando sul livello sbagliato. Il vero problema è interno, e ha a che fare con qualcosa che il tuo corpo smette di produrre dopo i 30 anni.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -103,7 +103,7 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-Hai mai pensato a cosa hanno in comune capelli, unghie e pelle?
+Eccomi con quello che ti avevo promesso. Hai mai pensato a cosa hanno in comune capelli, unghie e pelle?
 
 Sono tutti fatti di collagene. Il collagene è la proteina strutturale più abbondante del tuo corpo. È quello che tiene insieme i tessuti, dà elasticità alla pelle, forza alle unghie e struttura ai capelli.
 
@@ -165,6 +165,8 @@ Se vuoi saperne di più, sul nostro sito trovi tutto: ingredienti, dosaggi, spie
 
 **[CTA: Scopri i nostri prodotti](https://paleocomplex.com)**
 
+**Tra qualche giorno** voglio mostrarti i due prodotti specifici che abbiamo creato per capelli, unghie e pelle. Te li racconterò onestamente, dirò la differenza tra loro, e ti farò leggere cosa dicono le persone che li usano da mesi. Anche le donne con la mia stessa frustrazione di partenza.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -188,6 +190,8 @@ Fondatore di Paleocomplex
 ### Corpo email
 
 Ciao [NOME]
+
+Eccomi con i due prodotti che ti avevo promesso. Te li racconto onestamente, come avevo detto.
 
 Nella scorsa email ti ho spiegato perché capelli, unghie e pelle si indeboliscono: il collagene cala, e servono dosaggi reali, cofattori giusti e protezione antiossidante per ricostruirlo.
 

@@ -1,5 +1,5 @@
-**Versione:** 1.0
-**Ultimo aggiornamento:** 2026-04-09
+**Versione:** 1.1
+**Ultimo aggiornamento:** 2026-04-10
 **Status:** Bozza v1 — in attesa review Andrea
 
 # Flow 6: Conversione
@@ -129,6 +129,8 @@ Non ti chiedo di fidarti delle mie parole. Ti chiedo di leggere quelle di chi er
 
 Queste sono persone reali. Non le abbiamo selezionate perché dicono cose belle. Le abbiamo selezionate perché partivano esattamente da dove sei tu adesso.
 
+**Nella prossima email** voglio fare una cosa diversa. Smettere per un attimo di parlarti di integratori e dirti le 5 cose che puoi fare da oggi, senza comprare nulla, per stare meglio. Perché l'integrazione funziona solo se le basi sono in ordine. E le basi sono più semplici di quanto pensi.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -223,6 +225,8 @@ Il rapporto ottimale? 100 mcg di K2 MK-7 ogni 1.000 UI di vitamina D. Se prendi 
 
 **"Mio padre ha 93 anni. Da quando ha cominciato ad assumere Paleocomplex Revolution è rinato. È tornato a deambulare benissimo, non accusa disturbi e gli è tornato l'appetito."** Eleonora M.
 
+**Tra qualche giorno** torno sulla vitamina D, ma da un angolo che probabilmente non hai mai considerato: la stagionalità. Ti dirò esattamente quando fare le analisi (sono due momenti dell'anno specifici), quando esporti al sole serve davvero, e perché chi ti consiglia di prendere il sole a novembre ti sta dicendo una cosa che la fisica smentisce.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -271,6 +275,8 @@ Il valore ottimale è tra 40 e 60 ng/ml. Non amo i mega dosaggi: se non conosci 
 
 **"I miei livelli di vitamina D sono saliti in poco tempo da 19 a 60."** Massimo C.
 
+**Tra qualche giorno** affronto l'obiezione che ricevo più spesso: "i tuoi prodotti costano troppo." Lo capisco, è la reazione più comune. Ma voglio capovolgere il ragionamento e farti vedere un calcolo che nessuno fa, ma che dovresti fare. Spoiler: non è il tuo integratore che costa troppo. È il modo in cui stai integrando adesso.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -297,7 +303,7 @@ P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con
 
 Ciao [NOME]
 
-Capisco perfettamente se pensi che i nostri prodotti costino tanto. È la reazione più comune. Oggi voglio fare un ragionamento onesto sui numeri.
+Eccoci al ragionamento che ti avevo promesso. Capisco perfettamente se pensi che i nostri prodotti costino tanto. È la reazione più comune. Oggi voglio fare un ragionamento onesto sui numeri.
 
 **Il costo di comprare singolarmente.** Prendere separatamente gli stessi ingredienti di Elisir (40 nutrienti) nelle stesse forme e dosaggi costerebbe tra **€302 e €460 per 40 giorni**. Elisir costa €139. Non è un risparmio inventato: puoi verificarlo confrontando le etichette prodotto per prodotto.
 
@@ -452,6 +458,8 @@ Il magnesio è anche un cofattore essenziale della vitamina D: senza di lui, la 
 **"Ho iniziato con Paleocomplex e ho notato subito miglioramenti: risolto problemi di crampi durante gli allenamenti. Ho raggiunto una qualità del sonno come mai prima. Un sonno profondo e senza interruzioni."** Iuri B.
 
 **"Il primo e importante miglioramento, non correlato o richiesto: il miglioramento del sonno. Cosa che mi tormentava da anni."** Carli
+
+**Tra qualche giorno** ti scrivo l'ultima email di questo percorso. Sono quasi due mesi che ti scrivo. Per chi è arrivato fin qui ho preparato qualcosa di speciale: un regalo concreto, diverso da tutto quello che ti ho proposto finora. Non aprirla solo se non sei interessato a fare il primo passo davvero.
 
 Un forte abbraccio
 Lorenzo Zarone
