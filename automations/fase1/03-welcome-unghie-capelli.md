@@ -48,15 +48,15 @@ Authority parte DOPO il completamento di questo welcome (sequenziale, NON in par
 
 ### Oggetto (3 varianti A/B)
 
-A: Ecco il tuo report + un regalo di benvenuto
-B: La verità su capelli e unghie deboli è dentro questo report
-C: Il primo passo per capelli e unghie più forti
+- A: Ecco il tuo report + un regalo di benvenuto
+- B: La verità su capelli e unghie deboli è dentro questo report
+- C: Il primo passo per capelli e unghie più forti
 
 ### Preview text (3 varianti)
 
-A: Scarica il report e scopri il tuo regalo di €10.
-B: Le vere cause di capelli deboli e unghie fragili.
-C: Il report che hai richiesto è pronto.
+- A: Scarica il report e scopri il tuo regalo di €10.
+- B: Le vere cause di capelli deboli e unghie fragili.
+- C: Il report che hai richiesto è pronto.
 
 ### Corpo email
 
@@ -89,15 +89,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Perché i tuoi capelli cadono (non è quello che pensi)
-B: La vera causa di unghie fragili e capelli deboli
-C: Il collagene che perdi ogni giorno e non lo sai
+- A: Perché i tuoi capelli cadono (non è quello che pensi)
+- B: La vera causa di unghie fragili e capelli deboli
+- C: Il collagene che perdi ogni giorno e non lo sai
 
 ### Preview text (3 varianti)
 
-A: Non è lo shampoo. Non è lo stress. È qualcosa di più profondo.
-B: Dopo i 30 anni il tuo corpo produce sempre meno collagene.
-C: La scienza dietro capelli, unghie e pelle che si indeboliscono.
+- A: Non è lo shampoo. Non è lo stress. È qualcosa di più profondo.
+- B: Dopo i 30 anni il tuo corpo produce sempre meno collagene.
+- C: La scienza dietro capelli, unghie e pelle che si indeboliscono.
 
 ### Corpo email
 
@@ -135,15 +135,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Perché ho creato integratori diversi da tutti gli altri
-B: La mia storia (e perché la bellezza parte dall'interno)
-C: Non sono un brand di cosmetici. Ecco perché.
+- A: Perché ho creato integratori diversi da tutti gli altri
+- B: La mia storia (e perché la bellezza parte dall'interno)
+- C: Non sono un brand di cosmetici. Ecco perché.
 
 ### Preview text (3 varianti)
 
-A: Non è nato come business. È nato come necessità.
-B: Integratori con dosaggi reali, non simbolici.
-C: La frustrazione che mi ha portato a creare Paleocomplex.
+- A: Non è nato come business. È nato come necessità.
+- B: Integratori con dosaggi reali, non simbolici.
+- C: La frustrazione che mi ha portato a creare Paleocomplex.
 
 ### Corpo email
 
@@ -175,15 +175,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: La soluzione per capelli, unghie e pelle più forti
-B: 6.000 mg di collagene al giorno (non 2.000 come gli altri)
-C: Ecco cosa dicono chi ha risolto il tuo stesso problema
+- A: La soluzione per capelli, unghie e pelle più forti
+- B: 6.000 mg di collagene al giorno (non 2.000 come gli altri)
+- C: Ecco cosa dicono chi ha risolto il tuo stesso problema
 
 ### Preview text (3 varianti)
 
-A: Due prodotti. Dosaggi reali. Risultati visibili.
-B: Collagene ad alto dosaggio + 12 nutrienti sinergici.
-C: Capelli più corposi, unghie più forti, pelle più luminosa.
+- A: Due prodotti. Dosaggi reali. Risultati visibili.
+- B: Collagene ad alto dosaggio + 12 nutrienti sinergici.
+- C: Capelli più corposi, unghie più forti, pelle più luminosa.
 
 ### Corpo email
 
@@ -225,15 +225,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Il segreto per far funzionare meglio il collagene
-B: Perché il collagene da solo non basta
-C: L'errore che fa chi prende solo il collagene
+- A: Il segreto per far funzionare meglio il collagene
+- B: Perché il collagene da solo non basta
+- C: L'errore che fa chi prende solo il collagene
 
 ### Preview text (3 varianti)
 
-A: Senza le vitamine giuste, il collagene non si ricostruisce.
-B: Il pezzo mancante nel protocollo capelli e pelle.
-C: La base che potenzia tutto il resto.
+- A: Senza le vitamine giuste, il collagene non si ricostruisce.
+- B: Il pezzo mancante nel protocollo capelli e pelle.
+- C: La base che potenzia tutto il resto.
 
 ### Corpo email
 
@@ -282,15 +282,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Il tuo sconto di €10 sta per scadere
-B: Un'ultima cosa prima di salutarti
-C: La scelta più semplice per capelli e unghie più forti
+- A: Il tuo sconto di €10 sta per scadere
+- B: Un'ultima cosa prima di salutarti
+- C: La scelta più semplice per capelli e unghie più forti
 
 ### Preview text (3 varianti)
 
-A: Il codice BENVENUTO è ancora attivo, ma non per molto.
-B: Questa è l'ultima email sul tuo sconto di benvenuto.
-C: Due prodotti, un protocollo semplice, risultati visibili.
+- A: Il codice BENVENUTO è ancora attivo, ma non per molto.
+- B: Questa è l'ultima email sul tuo sconto di benvenuto.
+- C: Due prodotti, un protocollo semplice, risultati visibili.
 
 ### Corpo email
 

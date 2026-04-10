@@ -57,15 +57,15 @@ Ogni email è pensata per blocchi (per il layout HTML futuro):
 
 ### Oggetto (3 varianti A/B)
 
-A: Omega 3 in polvere? Sì, e ti spiego perché
-B: Il problema delle capsule di omega 3 che nessuno ti dice
-C: Perché abbiamo messo gli omega 3 in polvere (non siamo pazzi)
+- A: Omega 3 in polvere? Sì, e ti spiego perché
+- B: Il problema delle capsule di omega 3 che nessuno ti dice
+- C: Perché abbiamo messo gli omega 3 in polvere (non siamo pazzi)
 
 ### Preview text (3 varianti)
 
-A: Krill vs olio di pesce: non è la stessa cosa.
-B: La forma conta più della quantità.
-C: Biodisponibilità, rancidità e sinergia: i 3 motivi.
+- A: Krill vs olio di pesce: non è la stessa cosa.
+- B: La forma conta più della quantità.
+- C: Biodisponibilità, rancidità e sinergia: i 3 motivi.
 
 ### Corpo email
 
@@ -99,15 +99,15 @@ P.S. Se vuoi capire quale dei nostri multivitaminici è il più adatto a te: **[
 
 ### Oggetto (3 varianti A/B)
 
-A: "Ero scettica. Mi sono dovuta ricredere."
-B: 3 persone che non ci credevano (e cosa è successo)
-C: Le storie che ci emozionano di più
+- A: "Ero scettica. Mi sono dovuta ricredere."
+- B: 3 persone che non ci credevano (e cosa è successo)
+- C: Le storie che ci emozionano di più
 
 ### Preview text (3 varianti)
 
-A: Esperienze reali di chi ha provato con zero aspettative.
-B: Scettici, titubanti, delusi da altri prodotti. Poi hanno provato.
-C: Non le abbiamo scritte noi. Le hanno scritte loro.
+- A: Esperienze reali di chi ha provato con zero aspettative.
+- B: Scettici, titubanti, delusi da altri prodotti. Poi hanno provato.
+- C: Non le abbiamo scritte noi. Le hanno scritte loro.
 
 ### Corpo email
 
@@ -141,15 +141,15 @@ P.S. Se sei pronto a provare anche tu: **[Vai alla guida alla scelta](https://pa
 
 ### Oggetto (3 varianti A/B)
 
-A: 5 cose che puoi fare oggi per stare meglio (senza comprare nulla)
-B: Prima degli integratori, parti da qui
-C: La base che nessun integratore può sostituire
+- A: 5 cose che puoi fare oggi per stare meglio (senza comprare nulla)
+- B: Prima degli integratori, parti da qui
+- C: La base che nessun integratore può sostituire
 
 ### Preview text (3 varianti)
 
-A: Alimentazione, sonno, sole: i fondamentali.
-B: L'integrazione funziona solo se il resto è a posto.
-C: Consigli pratici che non ti costano nulla.
+- A: Alimentazione, sonno, sole: i fondamentali.
+- B: L'integrazione funziona solo se il resto è a posto.
+- C: Consigli pratici che non ti costano nulla.
 
 ### Corpo email
 
@@ -191,15 +191,15 @@ P.S. Se le basi sono in ordine e vuoi fare il passo successivo: **[Vai alla guid
 
 ### Oggetto (3 varianti A/B)
 
-A: Vitamina K2: la vitamina che protegge le tue arterie
-B: Placche alle carotidi? Il ruolo della K2 che nessuno ti spiega
-C: Il calcio nelle ossa, non nelle arterie: come fa la K2
+- A: Vitamina K2: la vitamina che protegge le tue arterie
+- B: Placche alle carotidi? Il ruolo della K2 che nessuno ti spiega
+- C: Il calcio nelle ossa, non nelle arterie: come fa la K2
 
 ### Preview text (3 varianti)
 
-A: Il calcio può finire nel posto sbagliato. La K2 lo dirige.
-B: Perché ogni volta che leggo "la K2 non serve" mi sanguinano gli occhi.
-C: La vitamina più sottovalutata per la salute cardiovascolare.
+- A: Il calcio può finire nel posto sbagliato. La K2 lo dirige.
+- B: Perché ogni volta che leggo "la K2 non serve" mi sanguinano gli occhi.
+- C: La vitamina più sottovalutata per la salute cardiovascolare.
 
 ### Corpo email
 
@@ -235,15 +235,15 @@ P.S. Nei nostri multivitaminici il rapporto K2/D3 è fisso a 1:10. Quando aument
 
 ### Oggetto (3 varianti A/B)
 
-A: L'"inverno della vitamina D": cosa succede al tuo corpo da ottobre a marzo
-B: Quando fare le analisi della vitamina D (e cosa devi sapere)
-C: Se qualcuno ti dice di prendere il sole a novembre, cambia consiglio
+- A: L'"inverno della vitamina D": cosa succede al tuo corpo da ottobre a marzo
+- B: Quando fare le analisi della vitamina D (e cosa devi sapere)
+- C: Se qualcuno ti dice di prendere il sole a novembre, cambia consiglio
 
 ### Preview text (3 varianti)
 
-A: Da ottobre a marzo il tuo corpo non produce vitamina D. Ecco cosa fare.
-B: I 2 momenti dell'anno in cui controllare i tuoi livelli.
-C: Il sole, le stagioni e l'integrazione: guida pratica.
+- A: Da ottobre a marzo il tuo corpo non produce vitamina D. Ecco cosa fare.
+- B: I 2 momenti dell'anno in cui controllare i tuoi livelli.
+- C: Il sole, le stagioni e l'integrazione: guida pratica.
 
 ### Corpo email
 
@@ -283,15 +283,15 @@ P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con
 
 ### Oggetto (3 varianti A/B)
 
-A: "Costa troppo." (Capovolgiamo il ragionamento)
-B: Quanto spendi davvero in integratori ogni mese?
-C: €3,47 al giorno. Meno del tuo caffè al bar.
+- A: "Costa troppo." (Capovolgiamo il ragionamento)
+- B: Quanto spendi davvero in integratori ogni mese?
+- C: €3,47 al giorno. Meno del tuo caffè al bar.
 
 ### Preview text (3 varianti)
 
-A: Il costo di Paleocomplex vs il costo di fare male.
-B: Fai due conti e poi decidi.
-C: Il confronto che nessuno fa (ma che dovresti fare).
+- A: Il costo di Paleocomplex vs il costo di fare male.
+- B: Fai due conti e poi decidi.
+- C: Il confronto che nessuno fa (ma che dovresti fare).
 
 ### Corpo email
 
@@ -329,15 +329,15 @@ P.S. Se vuoi confrontare i nostri prodotti e capire quale si adatta al tuo budge
 
 ### Oggetto (3 varianti A/B)
 
-A: "Provo un mese e vedo." (L'errore più comune)
-B: Per quanto tempo bisogna integrare?
-C: Perché un mese non basta (ma non devi prendere integratori per sempre)
+- A: "Provo un mese e vedo." (L'errore più comune)
+- B: Per quanto tempo bisogna integrare?
+- C: Perché un mese non basta (ma non devi prendere integratori per sempre)
 
 ### Preview text (3 varianti)
 
-A: Il tempo minimo per vedere risultati reali.
-B: Ciclizzazione, costanza e il falso mito del "mese di prova".
-C: La risposta onesta alla domanda che ci fate più spesso.
+- A: Il tempo minimo per vedere risultati reali.
+- B: Ciclizzazione, costanza e il falso mito del "mese di prova".
+- C: La risposta onesta alla domanda che ci fate più spesso.
 
 ### Corpo email
 
@@ -373,15 +373,15 @@ P.S. Se vuoi iniziare con il piede giusto: **[Vai alla guida alla scelta](https:
 
 ### Oggetto (3 varianti A/B)
 
-A: Da 17 a 60. Da 39 a 70. I numeri parlano.
-B: Le analisi del sangue prima e dopo Paleocomplex
-C: Non devi crederci. Devi misurarlo.
+- A: Da 17 a 60. Da 39 a 70. I numeri parlano.
+- B: Le analisi del sangue prima e dopo Paleocomplex
+- C: Non devi crederci. Devi misurarlo.
 
 ### Preview text (3 varianti)
 
-A: Risultati reali, misurabili, verificabili.
-B: Vitamina D, ferro, energia: cosa dicono le analisi.
-C: Le prove che non servono parole per spiegare.
+- A: Risultati reali, misurabili, verificabili.
+- B: Vitamina D, ferro, energia: cosa dicono le analisi.
+- C: Le prove che non servono parole per spiegare.
 
 ### Corpo email
 
@@ -419,15 +419,15 @@ P.S. Se i numeri ti hanno convinto più delle parole: **[Vai alla guida alla sce
 
 ### Oggetto (3 varianti A/B)
 
-A: Il magnesio che non ti salva solo dai crampi
-B: 300 reazioni enzimatiche dipendono da un minerale che ti manca
-C: Crampi, insonnia, irritabilità: e se fosse solo magnesio?
+- A: Il magnesio che non ti salva solo dai crampi
+- B: 300 reazioni enzimatiche dipendono da un minerale che ti manca
+- C: Crampi, insonnia, irritabilità: e se fosse solo magnesio?
 
 ### Preview text (3 varianti)
 
-A: Il minerale più carente e più sottovalutato.
-B: Non tutti i magnesio sono uguali. Le forme contano.
-C: Perché il magnesio da farmacia potrebbe non funzionare.
+- A: Il minerale più carente e più sottovalutato.
+- B: Non tutti i magnesio sono uguali. Le forme contano.
+- C: Perché il magnesio da farmacia potrebbe non funzionare.
 
 ### Corpo email
 
@@ -465,15 +465,15 @@ P.S. Se il magnesio è uno dei nutrienti che ti mancano, nei nostri multivitamin
 
 ### Oggetto (3 varianti A/B)
 
-A: L'ultima cosa che ti chiedo (con un regalo)
-B: 58 giorni di contenuti. Ora tocca a te.
-C: Un regalo per chi è arrivato fin qui
+- A: L'ultima cosa che ti chiedo (con un regalo)
+- B: 58 giorni di contenuti. Ora tocca a te.
+- C: Un regalo per chi è arrivato fin qui
 
 ### Preview text (3 varianti)
 
-A: €10 di sconto + spedizione gratuita sul tuo primo ordine.
-B: Questo è il momento giusto per provare.
-C: Un codice speciale per chi ha avuto la pazienza di leggere.
+- A: €10 di sconto + spedizione gratuita sul tuo primo ordine.
+- B: Questo è il momento giusto per provare.
+- C: Un codice speciale per chi ha avuto la pazienza di leggere.
 
 ### Corpo email
 

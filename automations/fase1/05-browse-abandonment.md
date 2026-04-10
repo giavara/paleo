@@ -46,15 +46,15 @@ Il Browse Abandonment è il touchpoint più leggero di tutto il sistema. Non dev
 
 ### Oggetto (3 varianti A/B)
 
-A: Stavi guardando qualcosa?
-B: {{ event.Name }}: ecco cosa devi sapere
-C: Hai dato un'occhiata ai nostri prodotti
+- A: Stavi guardando qualcosa?
+- B: {{ event.Name }}: ecco cosa devi sapere
+- C: Hai dato un'occhiata ai nostri prodotti
 
 ### Preview text (3 varianti)
 
-A: Il prodotto che hai visto è ancora disponibile.
-B: Un dettaglio che forse ti è sfuggito.
-C: Ecco un motivo in più per darci un'occhiata.
+- A: Il prodotto che hai visto è ancora disponibile.
+- B: Un dettaglio che forse ti è sfuggito.
+- C: Ecco un motivo in più per darci un'occhiata.
 
 ### Corpo email
 
@@ -80,15 +80,15 @@ Team Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Cosa dicono chi usa {{ event.Name }}
-B: {{ event.Name }}: le esperienze di chi lo usa
-C: Hai ancora dubbi su {{ event.Name }}?
+- A: Cosa dicono chi usa {{ event.Name }}
+- B: {{ event.Name }}: le esperienze di chi lo usa
+- C: Hai ancora dubbi su {{ event.Name }}?
 
 ### Preview text (3 varianti)
 
-A: Le recensioni di chi ha fatto la tua stessa scelta.
-B: Esperienze reali da clienti verificati.
-C: A volte basta leggere chi ci è già passato.
+- A: Le recensioni di chi ha fatto la tua stessa scelta.
+- B: Esperienze reali da clienti verificati.
+- C: A volte basta leggere chi ci è già passato.
 
 ### Corpo email
 

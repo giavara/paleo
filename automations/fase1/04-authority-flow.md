@@ -51,15 +51,15 @@ Topic selezionati dai dati di performance delle vecchie 157 email educative:
 
 ### Oggetto (3 varianti A/B)
 
-A: Le 11 carenze nutrizionali più comuni (potresti averne 5)
-B: 11 carenze che il tuo medico non controlla
-C: Mangi bene? Potresti comunque avere queste carenze
+- A: Le 11 carenze nutrizionali più comuni (potresti averne 5)
+- B: 11 carenze che il tuo medico non controlla
+- C: Mangi bene? Potresti comunque avere queste carenze
 
 ### Preview text (3 varianti)
 
-A: Anche chi mangia "sano" ha quasi sempre queste carenze.
-B: Vitamina D, magnesio, zinco: ecco cosa manca davvero.
-C: Non è solo un problema di dieta. È un problema di cibo moderno.
+- A: Anche chi mangia "sano" ha quasi sempre queste carenze.
+- B: Vitamina D, magnesio, zinco: ecco cosa manca davvero.
+- C: Non è solo un problema di dieta. È un problema di cibo moderno.
 
 ### Corpo email
 
@@ -99,15 +99,15 @@ P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbia
 
 ### Oggetto (3 varianti A/B)
 
-A: Vitamina D: quello che nessuno ti dice
-B: Perché il tuo medico ti prescrive la dose sbagliata di vitamina D
-C: 5 cose sulla vitamina D che cambiano tutto
+- A: Vitamina D: quello che nessuno ti dice
+- B: Perché il tuo medico ti prescrive la dose sbagliata di vitamina D
+- C: 5 cose sulla vitamina D che cambiano tutto
 
 ### Preview text (3 varianti)
 
-A: Non è una vitamina. È un pro-ormone che regola 3.000 geni.
-B: Senza questi cofattori, la D3 che assumi è quasi inutile.
-C: Il 70-80% degli italiani è carente. Ecco come uscirne davvero.
+- A: Non è una vitamina. È un pro-ormone che regola 3.000 geni.
+- B: Senza questi cofattori, la D3 che assumi è quasi inutile.
+- C: Il 70-80% degli italiani è carente. Ecco come uscirne davvero.
 
 ### Corpo email
 
@@ -151,15 +151,15 @@ P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2,
 
 ### Oggetto (3 varianti A/B)
 
-A: Il 35% degli italiani ha questo difetto genetico (e non lo sa)
-B: Perché l'acido folico potrebbe non funzionare su di te
-C: La mutazione che rende inutili le tue vitamine del gruppo B
+- A: Il 35% degli italiani ha questo difetto genetico (e non lo sa)
+- B: Perché l'acido folico potrebbe non funzionare su di te
+- C: La mutazione che rende inutili le tue vitamine del gruppo B
 
 ### Preview text (3 varianti)
 
-A: Una mutazione genetica che blocca l'assorbimento delle vitamine B.
-B: Se le tue vitamine non sono in forma attivata, potresti sprecarle.
-C: Il 35% della popolazione italiana ha un problema con le vitamine B.
+- A: Una mutazione genetica che blocca l'assorbimento delle vitamine B.
+- B: Se le tue vitamine non sono in forma attivata, potresti sprecarle.
+- C: Il 35% della popolazione italiana ha un problema con le vitamine B.
 
 ### Corpo email
 
@@ -201,15 +201,15 @@ P.S. In tutti i nostri multivitaminici usiamo esclusivamente forme attivate dell
 
 ### Oggetto (3 varianti A/B)
 
-A: Le 5 domande che ci fate più spesso
-B: Dubbi sugli integratori? Ecco le risposte più oneste
-C: Tutto quello che avresti voluto chiedere (ma non hai mai chiesto)
+- A: Le 5 domande che ci fate più spesso
+- B: Dubbi sugli integratori? Ecco le risposte più oneste
+- C: Tutto quello che avresti voluto chiedere (ma non hai mai chiesto)
 
 ### Preview text (3 varianti)
 
-A: Risposte concrete alle domande più comuni.
-B: Quanto ci mette a fare effetto? Si può sospendere? Costa troppo?
-C: Le risposte che avremmo voluto avere anche noi prima di iniziare.
+- A: Risposte concrete alle domande più comuni.
+- B: Quanto ci mette a fare effetto? Si può sospendere? Costa troppo?
+- C: Le risposte che avremmo voluto avere anche noi prima di iniziare.
 
 ### Corpo email
 
@@ -253,15 +253,15 @@ P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhi
 
 ### Oggetto (3 varianti A/B)
 
-A: L'ultima cosa che ti chiedo
-B: Prima di salutarti
-C: Questa è l'ultima email di questo percorso
+- A: L'ultima cosa che ti chiedo
+- B: Prima di salutarti
+- C: Questa è l'ultima email di questo percorso
 
 ### Preview text (3 varianti)
 
-A: Nessuna pressione. Solo un pensiero prima di continuare.
-B: Non un pitch di vendita. Una promessa.
-C: Quello che riceverai d'ora in poi.
+- A: Nessuna pressione. Solo un pensiero prima di continuare.
+- B: Non un pitch di vendita. Una promessa.
+- C: Quello che riceverai d'ora in poi.
 
 ### Corpo email
 

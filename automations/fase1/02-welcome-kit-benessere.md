@@ -53,15 +53,15 @@ Authority parte DOPO il completamento di questo welcome (sequenziale, NON in par
 
 ### Oggetto (3 varianti A/B)
 
-A: Ecco il tuo report + un regalo di benvenuto
-B: Le 7 strategie scientifiche sono pronte per te
-C: Il tuo percorso verso più energia inizia qui
+- A: Ecco il tuo report + un regalo di benvenuto
+- B: Le 7 strategie scientifiche sono pronte per te
+- C: Il tuo percorso verso più energia inizia qui
 
 ### Preview text (3 varianti)
 
-A: Scarica il report e scopri il tuo regalo di €10.
-B: 47 studi, 7 strategie, 1 protocollo da 30 giorni.
-C: Il report che hai richiesto è pronto.
+- A: Scarica il report e scopri il tuo regalo di €10.
+- B: 47 studi, 7 strategie, 1 protocollo da 30 giorni.
+- C: Il report che hai richiesto è pronto.
 
 ### Corpo email
 
@@ -94,15 +94,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Il problema degli integratori che nessuno ti dice
-B: Perché prendere 10 integratori separati non funziona
-C: La differenza tra integrare e integrare bene
+- A: Il problema degli integratori che nessuno ti dice
+- B: Perché prendere 10 integratori separati non funziona
+- C: La differenza tra integrare e integrare bene
 
 ### Preview text (3 varianti)
 
-A: La maggior parte delle persone sta buttando soldi.
-B: Più prodotti non significa più risultati.
-C: Quello che i brand di integratori non vogliono che tu sappia.
+- A: La maggior parte delle persone sta buttando soldi.
+- B: Più prodotti non significa più risultati.
+- C: Quello che i brand di integratori non vogliono che tu sappia.
 
 ### Corpo email
 
@@ -136,15 +136,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Perché ho creato Paleocomplex
-B: La storia dietro ai nostri integratori
-C: Tutto è iniziato da una frustrazione
+- A: Perché ho creato Paleocomplex
+- B: La storia dietro ai nostri integratori
+- C: Tutto è iniziato da una frustrazione
 
 ### Preview text (3 varianti)
 
-A: Non è nato come business. È nato come necessità.
-B: La mia storia con gli integratori è iniziata come la tua.
-C: C'era un problema che nessuno risolveva.
+- A: Non è nato come business. È nato come necessità.
+- B: La mia storia con gli integratori è iniziata come la tua.
+- C: C'era un problema che nessuno risolveva.
 
 ### Corpo email
 
@@ -180,15 +180,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Quale integratore è il più adatto a te?
-B: Energia, lucidità, protezione: ecco da dove partire
-C: Cosa scegliere dopo i 40 anni (la risposta è più semplice di quanto pensi)
+- A: Quale integratore è il più adatto a te?
+- B: Energia, lucidità, protezione: ecco da dove partire
+- C: Cosa scegliere dopo i 40 anni (la risposta è più semplice di quanto pensi)
 
 ### Preview text (3 varianti)
 
-A: Tre prodotti, tre esigenze diverse. Ecco come orientarti.
-B: La guida rapida per chi vuole iniziare con il piede giusto.
-C: Ecco cosa usano le persone come te.
+- A: Tre prodotti, tre esigenze diverse. Ecco come orientarti.
+- B: La guida rapida per chi vuole iniziare con il piede giusto.
+- C: Ecco cosa usano le persone come te.
 
 ### Corpo email
 
@@ -242,15 +242,15 @@ Fondatore di Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Il tuo sconto di €10 sta per scadere
-B: Un'ultima cosa prima di salutarti
-C: Non vorrei che te ne pentissi
+- A: Il tuo sconto di €10 sta per scadere
+- B: Un'ultima cosa prima di salutarti
+- C: Non vorrei che te ne pentissi
 
 ### Preview text (3 varianti)
 
-A: Il codice BENVENUTO è ancora attivo, ma non per molto.
-B: Questa è l'ultima email sul tuo sconto di benvenuto.
-C: Ti avevo promesso di non essere insistente. Infatti questa è l'ultima.
+- A: Il codice BENVENUTO è ancora attivo, ma non per molto.
+- B: Questa è l'ultima email sul tuo sconto di benvenuto.
+- C: Ti avevo promesso di non essere insistente. Infatti questa è l'ultima.
 
 ### Corpo email
 

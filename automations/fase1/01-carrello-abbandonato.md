@@ -24,15 +24,15 @@
 
 ### Oggetto (3 varianti A/B)
 
-A: Il tuo carrello ti aspetta
-B: Hai lasciato qualcosa in sospeso
-C: Stavi per fare una scelta importante
+- A: Il tuo carrello ti aspetta
+- B: Hai lasciato qualcosa in sospeso
+- C: Stavi per fare una scelta importante
 
 ### Preview text (3 varianti)
 
-A: I prodotti che hai scelto sono ancora disponibili.
-B: Completa il tuo ordine prima che le scorte cambino.
-C: Bastano pochi click per completare il tuo ordine.
+- A: I prodotti che hai scelto sono ancora disponibili.
+- B: Completa il tuo ordine prima che le scorte cambino.
+- C: Bastano pochi click per completare il tuo ordine.
 
 ### Corpo email
 
@@ -74,15 +74,15 @@ Team Paleocomplex
 
 #### Oggetto (3 varianti A/B)
 
-A: Qualche dubbio? Ecco le risposte
-B: Le domande che ci fanno più spesso
-C: Ecco cosa devi sapere prima di ordinare
+- A: Qualche dubbio? Ecco le risposte
+- B: Le domande che ci fanno più spesso
+- C: Ecco cosa devi sapere prima di ordinare
 
 #### Preview text (3 varianti)
 
-A: Pagamento, spedizione, qualità: risposte chiare.
-B: Tutto quello che devi sapere su Paleocomplex.
-C: Le risposte alle domande più comuni dei nuovi clienti.
+- A: Pagamento, spedizione, qualità: risposte chiare.
+- B: Tutto quello che devi sapere su Paleocomplex.
+- C: Le risposte alle domande più comuni dei nuovi clienti.
 
 #### Corpo email
 
@@ -124,15 +124,15 @@ Team Paleocomplex
 
 #### Oggetto (3 varianti A/B)
 
-A: Hai lasciato qualcosa nel carrello
-B: Il tuo ordine è ancora in sospeso
-C: Ci rivediamo?
+- A: Hai lasciato qualcosa nel carrello
+- B: Il tuo ordine è ancora in sospeso
+- C: Ci rivediamo?
 
 #### Preview text (3 varianti)
 
-A: I tuoi prodotti ti aspettano.
-B: Completa l'ordine e non interrompere il tuo percorso.
-C: Bastano pochi click.
+- A: I tuoi prodotti ti aspettano.
+- B: Completa l'ordine e non interrompere il tuo percorso.
+- C: Bastano pochi click.
 
 #### Corpo email
 
@@ -156,15 +156,15 @@ Team Paleocomplex
 
 ### Oggetto (3 varianti A/B)
 
-A: Cosa dicono chi li usa ogni giorno
-B: Questo è quello che succede quando inizi
-C: Il tuo carrello scade presto
+- A: Cosa dicono chi li usa ogni giorno
+- B: Questo è quello che succede quando inizi
+- C: Il tuo carrello scade presto
 
 ### Preview text (3 varianti)
 
-A: Le esperienze di chi ha fatto la tua stessa scelta.
-B: Migliaia di persone hanno già scelto Paleocomplex.
-C: I prodotti che hai scelto sono ancora disponibili, ma non per sempre.
+- A: Le esperienze di chi ha fatto la tua stessa scelta.
+- B: Migliaia di persone hanno già scelto Paleocomplex.
+- C: I prodotti che hai scelto sono ancora disponibili, ma non per sempre.
 
 ### Corpo email
 
