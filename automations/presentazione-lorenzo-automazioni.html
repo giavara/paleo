@@ -331,6 +331,53 @@
   .matrix tr:nth-child(even) td { background: #F9F8F5; }
   .matrix .product { font-weight: 600; white-space: nowrap; }
 
+  /* CTA section */
+  .cta-section {
+    background: #1A1A1A;
+    color: #FAFAF7;
+    padding: 56px 32px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 32px 0;
+  }
+  .cta-section h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #FAFAF7;
+  }
+  .cta-section p {
+    font-size: 14px;
+    color: #A0998A;
+    max-width: 540px;
+    margin: 0 auto 28px;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #FAFAF7;
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+  .cta-button:hover { opacity: 0.85; }
+  .cta-button.secondary {
+    background: transparent;
+    color: #FAFAF7;
+    border: 1px solid #A0998A;
+  }
+
   /* Footer */
   .footer {
     text-align: center;
@@ -338,6 +385,11 @@
     font-size: 12px;
     color: #C4BFB3;
     border-top: 1px solid #E5E2DA;
+  }
+  .footer a {
+    color: #1A1A1A;
+    text-decoration: none;
+    border-bottom: 1px solid #C4BFB3;
   }
 
   /* Arrow connectors */
@@ -815,10 +867,20 @@
     </table>
   </div>
 
+  <!-- CTA: leggi le email -->
+  <div class="cta-section">
+    <h2>Leggi tutte le email complete</h2>
+    <p>Ogni flow è scritto per intero: oggetti, preview text, corpo email, recensioni, CTA. Tutto il materiale operativo è su GitHub, organizzato per fase.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/giavara/paleo/tree/main/automations/fase1" class="cta-button" target="_blank">Vai alle email — Fase 1</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutta la cartella automazioni</a>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <div class="footer">
     <p>Paleocomplex — Piano Automazioni Klaviyo — Aprile 2026</p>
-    <p style="margin-top: 4px;">Le email complete sono su <strong>github.com/giavara/paleo</strong></p>
+    <p style="margin-top: 4px;">Repository: <a href="https://github.com/giavara/paleo" target="_blank">github.com/giavara/paleo</a></p>
   </div>
 
 </div>
