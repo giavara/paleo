@@ -1,5 +1,5 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-04-08
+**Versione:** 2.1
+**Ultimo aggiornamento:** 2026-04-10
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 4: Authority Flow
@@ -87,6 +87,8 @@ Le carenze più diffuse tra gli italiani sono 5.
 
 La buona notizia: colmare queste carenze è possibile. Parte dall'alimentazione, parte dall'integrazione consapevole.
 
+**Tra qualche giorno** voglio raccontarti perché il 70-80% degli italiani è carente di vitamina D anche prendendola, e perché il tuo medico probabilmente ti sta consigliando il dosaggio sbagliato. È uno dei contenuti che ho scritto con più rabbia. Non saltarlo.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -112,6 +114,8 @@ P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbia
 ### Corpo email
 
 Ciao [NOME]
+
+Pochi giorni fa ti avevo promesso uno dei contenuti che ho scritto con più rabbia. Eccolo.
 
 La vitamina D non è una vitamina. È un pro-ormone. E influenza l'espressione di oltre 3.000 dei 30.000 geni umani. Non è coinvolta solo nel metabolismo del calcio, come tanti credono: ha recettori in quasi tutti gli organi del corpo.
 
@@ -139,6 +143,8 @@ Non separare ciò che madre natura ha messo insieme.
 
 Non amo i mega dosaggi. Se non conosci i tuoi livelli, parti con 5.000 UI al giorno e controlla dopo 3 mesi. Se non basta, sali a 10.000 e ricontrolla.
 
+**Nella prossima email** ti parlo di un difetto genetico che colpisce 1 italiano su 3 e rende quasi inutile l'acido folico che assumono. Se hai mai sentito parlare di MTHFR senza capire cosa significa per te, non saltare la prossima. È più importante di quanto sembri.
+
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
@@ -165,6 +171,8 @@ P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2,
 
 Ciao [NOME]
 
+Te l'avevo promesso. Oggi ti parlo del difetto genetico che colpisce 1 italiano su 3 e che probabilmente nessuno ti ha mai spiegato.
+
 Hai mai sentito parlare di metilazione?
 
 È uno dei processi biochimici più importanti del tuo corpo. Avviene miliardi di volte al secondo e serve per riparare il DNA, produrre neurotrasmettitori come serotonina e dopamina, disintossicare il fegato e regolare l'espressione genica.
@@ -188,6 +196,8 @@ Cosa significa nella pratica? Una carenza silenziosa di folato attivo e B12 atti
 Come capire se hai la mutazione MTHFR? Esiste un test genetico specifico. Ma a prescindere dal test, la soluzione è semplice: usare direttamente le forme vitaminiche già attive. Metilfolato al posto dell'acido folico. Metilcobalamina al posto della cianocobalamina. Piridossina-5-fosfato al posto della piridossina.
 
 Il tuo corpo le usa direttamente, senza bisogno di conversione. Funzionano per tutti, con o senza la mutazione.
+
+**Tra qualche giorno** rispondo alle 5 domande che ci fate più spesso. Inclusa quella che ricevo ogni settimana: "ma non rischio il sovradosaggio?" La risposta sorprende sempre. E ti racconterò anche di chi avevi i tuoi stessi dubbi e ha cambiato idea.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -215,7 +225,7 @@ P.S. In tutti i nostri multivitaminici usiamo esclusivamente forme attivate dell
 
 Ciao [NOME]
 
-Nelle ultime settimane ti ho parlato di carenze nutrizionali, vitamina D e metilazione. Oggi cambio registro e rispondo alle domande che riceviamo più spesso.
+Eccomi con quello che ti avevo promesso. Nelle ultime settimane ti ho parlato di carenze nutrizionali, vitamina D e metilazione. Oggi cambio registro e rispondo alle domande che riceviamo più spesso.
 
 **"Quanto ci mette a fare effetto un integratore?"**
 
@@ -240,6 +250,8 @@ Ecco cosa dicono alcune persone che avevano i tuoi stessi dubbi:
 **"Ho 68 anni e non prendo altro. Un equilibrato apporto di vitamine che migliora lo stato generale di salute e dà una sensazione generale di benessere ed energia."** Flavio
 
 **"Ho notato subito più slancio durante la giornata lavorativa, una sensazione di concentrazione mentale più lunga e anche una pelle del viso più liscia."** Michele
+
+**L'ultima email** di questo percorso te la mando tra qualche giorno. Non ti chiederò di comprare. Ti farò un regalo che vale più di qualsiasi sconto: una capacità che ti servirà per tutta la vita, anche se non comprerai mai nulla da noi.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -267,9 +279,9 @@ P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhi
 
 Ciao [NOME]
 
-Questa è l'ultima email di questo percorso.
+Eccomi con il regalo che ti avevo promesso.
 
-Nelle ultime settimane ti ho parlato delle carenze nutrizionali più diffuse, del perché la vitamina D va sempre presa con i suoi cofattori, di cosa significa avere una mutazione MTHFR e perché le forme vitaminiche contano.
+Questa è l'ultima email di questo percorso. Nelle ultime settimane ti ho parlato delle carenze nutrizionali più diffuse, del perché la vitamina D va sempre presa con i suoi cofattori, di cosa significa avere una mutazione MTHFR e perché le forme vitaminiche contano.
 
 Non ti ho mai chiesto di comprare a tutti i costi. Non lo faccio neanche adesso.
 
@@ -329,6 +341,13 @@ Fine Authority → nurturing via newsletter (campaign settimanali)
 ---
 
 ## Note
+
+### Open loop tra email (v2.1)
+Ogni email (1-4) finisce con una promessa specifica e curiosa sulla prossima ("nella prossima email ti racconto..."). Ogni email (2-5) inizia con un richiamo che chiude il loop ("eccomi con quello che ti avevo promesso..."). Tecnica del cliffhanger applicata per:
+- Aumentare l'open rate progressivo della sequenza
+- Allenare il lettore a riconoscere e aprire il mittente Lorenzo
+- Creare continuità narrativa tra le email (sequenza, non email isolate)
+Da estendere a Welcome (flow 2-3) e Conversione (flow 6).
 
 ### Taglio editoriale applicato
 - Nessun prodotto citato nel corpo email (solo nel P.S.)
