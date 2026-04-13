@@ -81,7 +81,7 @@ Le carenze più diffuse tra gli italiani sono 5.
 
 **Zinco:** essenziale per il sistema immunitario e la riparazione del DNA. Lo perdiamo con il sudore e lo stress. Lo trovi nelle ostriche, nel fegato, nei semi di zucca e nella carne rossa. Ma se non mangi questi cibi regolarmente, è difficile raggiungere il fabbisogno.
 
-**Vitamine del gruppo B:** le più sottovalutate. Servono per l'energia, il sistema nervoso e la metilazione (un processo di cui ti parlerò tra qualche giorno). Le trovi nei cereali integrali, nelle uova, nel pesce e nel fegato. Ma c'è un problema genetico che riguarda il 35% degli italiani e che rende quasi inutile la forma di B9 più diffusa negli alimenti fortificati.
+**Vitamine del gruppo B:** le più sottovalutate. Servono per l'energia, il sistema nervoso e la metilazione (un processo di cui ti parlerò tra qualche giorno). Le trovi nei cereali integrali, nelle uova, nel pesce e nel fegato. Ma c'è un problema genetico che riguarda fino al 40% degli italiani e che rende quasi inutile la forma di B9 più diffusa negli alimenti fortificati.
 
 **Omega-3 (EPA e DHA):** il rapporto omega-6/omega-3 nella dieta moderna è sbilanciato fino a 20:1. Dovrebbe essere 2:1. Questo squilibrio alimenta l'infiammazione silente. Le fonti migliori sono il pesce azzurro (sardine, sgombro, acciughe) e il krill.
 
@@ -157,7 +157,7 @@ P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2,
 
 ### Oggetto (3 varianti A/B)
 
-- A: Il 35% degli italiani ha questo difetto genetico (e non lo sa)
+- A: Fino al 40% degli italiani ha questo difetto genetico (e non lo sa)
 - B: Perché l'acido folico potrebbe non funzionare su di te
 - C: La mutazione che rende inutili le tue vitamine del gruppo B
 
@@ -165,7 +165,7 @@ P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2,
 
 - A: Una mutazione genetica che blocca l'assorbimento delle vitamine B.
 - B: Se le tue vitamine non sono in forma attivata, potresti sprecarle.
-- C: Il 35% della popolazione italiana ha un problema con le vitamine B.
+- C: Fino al 40% della popolazione italiana ha un problema con le vitamine B.
 
 ### Corpo email
 
@@ -179,7 +179,7 @@ Hai mai sentito parlare di metilazione?
 
 Per funzionare, la metilazione ha bisogno di due vitamine chiave: **B9 (folato) e B12**.
 
-Ecco il problema. Circa il **35% degli italiani** (40% a livello mondiale) ha una mutazione genetica chiamata MTHFR che impedisce al corpo di convertire l'acido folico nella sua forma attiva, il metilfolato.
+Ecco il problema. Fino al **40% degli italiani** ha una mutazione genetica chiamata MTHFR che impedisce al corpo di convertire l'acido folico nella sua forma attiva, il metilfolato.
 
 L'acido folico è la forma sintetica di B9 che trovi nei multivitaminici da supermercato e negli alimenti fortificati. Se hai questa mutazione, il tuo corpo non riesce a trasformarlo in qualcosa di utilizzabile. Risultato: pensi di integrare, ma in realtà stai buttando via i soldi.
 

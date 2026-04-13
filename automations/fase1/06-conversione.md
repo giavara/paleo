@@ -449,7 +449,7 @@ Il magnesio ossido (quello che trovi nella maggior parte degli integratori da fa
 
 Le forme che funzionano davvero sono il **magnesio citrato** (ottima biodisponibilità, ben tollerato), il **magnesio bisglicinato** (chelato con glicina, eccellente per il sonno) e il **magnesio taurinato** (combinato con taurina, ottimo per il cuore e il sistema nervoso).
 
-Nei nostri multivitaminici usiamo il magnesio citrato. Se oltre al multivitaminico vuoi un supporto specifico per il sonno, il bisglicinato è la forma migliore.
+Nei nostri multivitaminici usiamo magnesio citrato o bisglicinato, a seconda della formulazione. Entrambe sono forme ad alta biodisponibilità, ben tollerate a livello intestinale.
 
 Il magnesio è anche un cofattore essenziale della vitamina D: senza di lui, la D3 non si attiva. Se integri vitamina D senza magnesio, stai facendo solo metà del lavoro.
 

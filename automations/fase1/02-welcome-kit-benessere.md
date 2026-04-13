@@ -204,13 +204,13 @@ La buona notizia è che puoi agire concretamente su ognuno di essi. E non servon
 
 **Elisir:** il più completo in assoluto. 40 nutrienti in un misurino al giorno: Omega-3 da Krill, glutatione liposomiale, quercetina fitosomiale, ubiquinolo, trans-resveratrolo, vitamine attivate. È la risposta diretta a tutte le 7 strategie del report. **€3,47/giorno per 40 giorni.**
 
-**Revolution:** antiossidanti avanzati (glutatione liposomiale, ubiquinolo, astaxantina) per chi vuole una protezione forte senza il costo massimo. 26 nutrienti, ideale per chi ha superato i 40. **€3,97/giorno per 30 giorni.**
+**Revolution:** antiossidanti avanzati (glutatione liposomiale, ubiquinolo, astaxantina, vitamina C liposomiale) per chi vuole una protezione forte senza il costo massimo. 26 nutrienti, ideale per chi ha superato i 40. **€3,97/giorno per 30 giorni.**
 
 **Essentiel:** il focus è sulla mente. Citicolina e acetil-carnitina per lucidità mentale e funzione cognitiva, più 34 nutrienti. Zero crostacei. Il miglior rapporto qualità/prezzo della gamma. **€2,15/giorno per 60 giorni.**
 
 Il multivitaminico è il punto di partenza. Ma se vuoi andare ancora più a fondo sulle strategie anti-aging del report, ci sono due prodotti specifici che completano il protocollo:
 
-**Renaissance:** 13 nutraceutici mirati alla protezione cellulare e alla longevità. Contiene NMN, PQQ, trans-resveratrolo e quercetina. È il complemento ideale al multivitaminico per chi prende sul serio la strategia anti-aging. **€89 per 30 giorni.**
+**Renaissance:** 13 nutraceutici mirati alla protezione cellulare e alla longevità. Contiene NR (Nicotinammide Riboside, precursore del NAD+), ubiquinolo, trans-resveratrolo e quercetina fitosomiale. È il complemento ideale al multivitaminico per chi prende sul serio la strategia anti-aging. **€89 per 30 giorni.**
 
 **Jeunesse:** 12g di collagene bovino grass-fed al giorno, acido ialuronico e antiossidanti per pelle, capelli e articolazioni. Quando parliamo di "ricostruzione del collagene" nel report, questo è lo strumento. **€99 per 50 giorni.**
 
