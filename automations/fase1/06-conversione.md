@@ -291,7 +291,7 @@ P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con
 
 - A: "Costa troppo." (Capovolgiamo il ragionamento)
 - B: Quanto spendi davvero in integratori ogni mese?
-- C: €3,47 al giorno. Meno del tuo caffè al bar.
+- C: €3,47 al giorno. Meno di una colazione al bar.
 
 ### Preview text (3 varianti)
 
@@ -307,7 +307,7 @@ Eccoci al ragionamento che ti avevo promesso. Capisco perfettamente se pensi che
 
 **Il costo di comprare singolarmente.** Prendere separatamente gli stessi ingredienti di Elisir (40 nutrienti) nelle stesse forme e dosaggi costerebbe tra **€302 e €460 per 40 giorni**. Elisir costa €139. Non è un risparmio inventato: puoi verificarlo confrontando le etichette prodotto per prodotto.
 
-**Il costo al giorno.** Elisir costa €3,47 al giorno. Essentiel costa €2,15. Paleocomplex base costa €2,23. Meno di un caffè al bar, meno di una bottiglietta d'acqua al distributore, meno di metà del costo di un parcheggio in centro.
+**Il costo al giorno.** Elisir costa €3,47 al giorno. Essentiel costa €2,15. Paleocomplex base costa €2,23. Meno di una colazione al bar con cappuccino e cornetto.
 
 **Il costo di NON integrare bene.** Questo è il calcolo che nessuno fa. Quanto costano 5 integratori separati con dosaggi simbolici che non fanno nulla? Non zero: costano i soldi che hai speso più il tempo che hai perso senza risultati. Quante persone spendono €30-50 al mese in prodotti da farmacia con il "100% del VNR" e dopo un anno non hanno notato nessuna differenza?
 
