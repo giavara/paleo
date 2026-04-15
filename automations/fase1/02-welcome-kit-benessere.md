@@ -274,9 +274,9 @@ Se non sai da dove partire, il mio consiglio è semplice:
 
 **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
 
-**Vuoi lavorare su pelle, capelli e articolazioni?** Youth e Jeunesse sono i nostri integratori di collagene ad alto dosaggio, progettati per essere affiancati al multivitaminico.
+**Vuoi lavorare su pelle, capelli e articolazioni?** [Youth](https://paleocomplex.com/prodotto/youth/) e [Jeunesse](https://paleocomplex.com/prodotto/jeunesse/) sono i nostri integratori di collagene ad alto dosaggio, progettati per essere affiancati al multivitaminico.
 
-**Vuoi un protocollo anti-aging completo?** La combinazione più potente è multivitaminico + Renaissance (13 nutraceutici mirati alla protezione cellulare e alla longevità).
+**Vuoi un protocollo anti-aging completo?** La combinazione più potente è multivitaminico + [Renaissance](https://paleocomplex.com/prodotto/renaissance/) (13 nutraceutici mirati alla protezione cellulare e alla longevità).
 
 **[CTA: Usa il codice BENVENUTO](https://paleocomplex.com)**
 
