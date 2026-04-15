@@ -208,7 +208,7 @@ La buona notizia è che puoi agire concretamente su ognuno di essi. E non servon
 
 **Revolution:** antiossidanti avanzati (glutatione liposomiale, ubiquinolo, astaxantina, vitamina C liposomiale) per chi vuole una protezione forte senza il costo massimo. 26 nutrienti, ideale per chi ha superato i 40. **€3,97/giorno per 30 giorni.**
 
-**Essentiel:** il focus è sulla mente. Citicolina e acetil-carnitina per lucidità mentale e funzione cognitiva, più 34 nutrienti. Zero crostacei. Il miglior rapporto qualità/prezzo della gamma. **€2,15/giorno per 60 giorni.**
+**Essentiel:** 34 nutrienti con un focus sulla mente. Tra questi, citicolina e acetil-carnitina per lucidità mentale e funzione cognitiva. Zero crostacei. Il miglior rapporto qualità/prezzo della gamma. **€2,15/giorno per 60 giorni.**
 
 Il multivitaminico è il punto di partenza. Ma se vuoi andare ancora più a fondo sulle strategie anti-aging del report, ci sono due prodotti specifici che completano il protocollo:
 

@@ -197,7 +197,7 @@ Nella scorsa email ti ho spiegato perché capelli, unghie e pelle si indebolisco
 
 Abbiamo creato due prodotti che fanno esattamente questo.
 
-**Youth:** 6.000 mg di collagene bovino idrolizzato al giorno, più 12 nutrienti sinergici: acido ialuronico, glucosamina, condroitina, MSM, vitamina C, zinco, biotina, NAC e aminoacidi precursori del collagene. Un unico prodotto che copre capelli, unghie, pelle e articolazioni a dosaggi seri. **€59 per 30 giorni, circa €1,97 al giorno.**
+**Youth:** 6.000 mg di collagene bovino idrolizzato al giorno con 12 nutrienti sinergici: acido ialuronico, glucosamina, condroitina, MSM, vitamina C, zinco, biotina, NAC e aminoacidi precursori del collagene. Un unico prodotto che copre capelli, unghie, pelle e articolazioni a dosaggi seri. **€59 per 30 giorni, circa €1,97 al giorno.**
 
 **Jeunesse:** per chi vuole il massimo. **12.000 mg di collagene bovino grass-fed** (il doppio di Youth), più antiossidanti cutanei avanzati: astaxantina, estratto di corteccia di pino e centella asiatica per stimolare la produzione naturale di collagene. Glucosamina di origine vegetale (adatto a chi è allergico ai crostacei). **€99 per 50 giorni, circa €1,98 al giorno.**
 
