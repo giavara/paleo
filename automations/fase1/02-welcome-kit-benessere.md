@@ -1,4 +1,4 @@
-**Versione:** 2.2
+**Versione:** 2.3
 **Ultimo aggiornamento:** 2026-04-15
 **Status:** Bozza v2 — in attesa review Andrea
 
@@ -270,15 +270,15 @@ Il codice **BENVENUTO** ti dà ancora **€10 di sconto sul primo acquisto**, va
 
 Se non sai da dove partire, il mio consiglio è semplice:
 
-**Per il massimo della completezza** → **Elisir** (40 nutrienti, anti-aging completo, €3,47/giorno)
+**Vuoi un multivitaminico completo per la tua età?** Abbiamo preparato una guida che ti aiuta a trovare quello giusto in 2 minuti, in base alla tua situazione e ai tuoi obiettivi.
 
-**Per protezione antiossidante forte** → **Revolution** (26 nutrienti, glutatione + ubiquinolo + astaxantina, €3,97/giorno)
+**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
 
-**Per lucidità mentale e miglior rapporto qualità/prezzo** → **Essentiel** (34 nutrienti, citicolina, zero crostacei, €2,15/giorno)
+**Vuoi lavorare su pelle, capelli e articolazioni?** Youth e Jeunesse sono i nostri integratori di collagene ad alto dosaggio, progettati per essere affiancati al multivitaminico.
 
-Per una guida più dettagliata: **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+**Vuoi un protocollo anti-aging completo?** La combinazione più potente è multivitaminico + Renaissance (13 nutraceutici mirati alla protezione cellulare e alla longevità).
 
-Oppure vai direttamente allo store: **[CTA: Usa il codice BENVENUTO](https://paleocomplex.com)**
+**[CTA: Usa il codice BENVENUTO](https://paleocomplex.com)**
 
 Dopo questa email continuerai a ricevere contenuti di valore sulla salute e sull'integrazione. Niente spam, solo cose utili. Ma lo sconto di benvenuto non tornerà.
 
