@@ -1,4 +1,4 @@
-**Versione:** 1.2
+**Versione:** 1.3
 **Ultimo aggiornamento:** 2026-04-15
 **Status:** Bozza v1 — in attesa review Andrea
 
@@ -175,6 +175,8 @@ Ecco 5 cose concrete che puoi fare da subito.
 
 Se fai queste 5 cose, sei già avanti rispetto al 90% delle persone. L'integrazione è il passo successivo: colma le carenze che l'alimentazione da sola non riesce a coprire.
 
+Ho scritto un libro intero su questi 5 pilastri della salute (alimentazione, integrazione, esercizio fisico, detossificazione, sonno). Si chiama **["La Bibbia della Salute"](https://paleocomplex.com/prodotto/libro-la-bibbia-della-salute/)** e copre tutto quello che serve per costruire un approccio completo al benessere.
+
 **[BLOCCO REVIEW]**
 
 **"Un solo barattolo al posto dei 10 che dovevo usare in precedenza."** Stefano F.
@@ -218,6 +220,8 @@ La K2 attiva due proteine fondamentali. La prima, l'osteocalcina, lega il calcio
 Ogni volta che leggo qualcuno scrivere "fino a 10.000 unità di vitamina D la K2 non serve" mi sanguinano gli occhi. È il contrario: è proprio la carenza di K2 che può portare ai cosiddetti "sintomi di tossicità della vitamina D" e alla calcificazione arteriosa.
 
 Il rapporto ottimale? 100 mcg di K2 MK-7 ogni 1.000 UI di vitamina D. Se prendi 5.000 UI di D3, ti servono 500 mcg di K2. Se ne prendi 10.000, te ne servono 1.000 mcg. Quanti integratori di vitamina D sul mercato includono la K2 a questi dosaggi? Quasi nessuno.
+
+Ho dedicato un intero libro alla vitamina D e ai suoi cofattori, inclusa la K2. Si chiama **["Vitamina D: tutte le bugie smascherate"](https://paleocomplex.com/prodotto/vitamina-d-tutte-le-bugie-smascherate/)**, 400 pagine per smontare tutte le false credenze. Un medico lo tiene in ambulatorio a disposizione dei suoi pazienti.
 
 **[BLOCCO REVIEW]**
 
@@ -267,7 +271,7 @@ Da aprile a settembre invece il sole è il tuo migliore alleato. Esponiti il pi�
 
 **Fine settembre:** dopo l'estate, quando i livelli sono al massimo. Se neanche dopo mesi di sole arrivi a 40-60 ng/ml, c'è un problema di assorbimento o di integrazione insufficiente.
 
-Il valore ottimale è tra 40 e 60 ng/ml. Non amo i mega dosaggi: se non conosci i tuoi livelli, parti con 5.000 UI al giorno, controlla dopo 3 mesi e aggiusta. Se non basta, sali a 10.000.
+Il valore ottimale è tra 40 e 60 ng/ml. Non amo i mega dosaggi: se non conosci i tuoi livelli, un buon punto di partenza può essere 4.000-5.000 UI al giorno, per poi verificare con le analisi dopo 3 mesi e aggiustare di conseguenza (confrontati sempre con il tuo medico curante per trovare il dosaggio più adatto alla tua situazione).
 
 **[BLOCCO REVIEW]**
 
@@ -282,6 +286,8 @@ Lorenzo Zarone
 Fondatore di Paleocomplex
 
 P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con la dose) insieme a K2, magnesio, zinco e tutti i cofattori: **[Scopri quale fa per te](https://paleocomplex.com/guida-scelta)**
+
+P.P.S. Sul mio **[canale YouTube](https://www.youtube.com/@paleocomplex)** trovi video di approfondimento sulla vitamina D, i cofattori e molto altro. E se vuoi andare in profondità, il mio libro **["Vitamina D: tutte le bugie smascherate"](https://paleocomplex.com/prodotto/vitamina-d-tutte-le-bugie-smascherate/)** è il riferimento più completo che ho scritto.
 
 ---
 
@@ -309,7 +315,7 @@ Eccoci al ragionamento che ti avevo promesso. Capisco perfettamente se pensi che
 
 **Il costo al giorno.** Elisir costa €3,47 al giorno. Essentiel costa €2,15. Paleocomplex base costa €2,23. Meno di una colazione al bar con cappuccino e cornetto.
 
-**Il costo di NON integrare bene.** Questo è il calcolo che nessuno fa. Quanto costano 5 integratori separati con dosaggi simbolici che non fanno nulla? Non zero: costano i soldi che hai speso più il tempo che hai perso senza risultati. Quante persone spendono €30-50 al mese in prodotti da farmacia con il "100% del VNR" e dopo un anno non hanno notato nessuna differenza?
+**Il costo di NON integrare bene.** Questo è il calcolo che nessuno fa. Quanto costano 5 integratori separati con dosaggi simbolici che non fanno nulla? Non zero: costano i soldi che hai speso più il tempo che hai perso senza risultati. Quante persone spendono €30-50 al mese in prodotti da farmacia con il "100% del VNR (Valori Nutrizionali di Riferimento)" e dopo un anno non hanno notato nessuna differenza?
 
 Non ti sto dicendo che devi comprare da noi. Ti sto dicendo che se scegli di integrare, fallo bene. Confronta le etichette. Guarda le forme. Guarda i dosaggi. Poi decidi.
 
@@ -447,9 +453,11 @@ Ma c'è un problema: non tutti i magnesio sono uguali.
 
 Il magnesio ossido (quello che trovi nella maggior parte degli integratori da farmacia) ha una biodisponibilità molto bassa. Il tuo corpo ne assorbe una piccola parte, e il resto finisce nell'intestino con effetto lassativo. Non è un caso se tante persone dicono "il magnesio mi dà problemi intestinali": stanno prendendo la forma sbagliata.
 
-Le forme che funzionano davvero sono il **magnesio citrato** (ottima biodisponibilità, ben tollerato), il **magnesio bisglicinato** (chelato con glicina, eccellente per il sonno) e il **magnesio taurinato** (combinato con taurina, ottimo per il cuore e il sistema nervoso).
+Le forme che funzionano davvero sono il **magnesio citrato** e il **magnesio bisglicinato**. Due approcci diversi, entrambi superiori all'ossido.
 
-Nei nostri multivitaminici usiamo magnesio citrato o bisglicinato, a seconda della formulazione. Entrambe sono forme ad alta biodisponibilità, ben tollerate a livello intestinale.
+Nei nostri multivitaminici usiamo il magnesio citrato. Perché? Perché oltre ad avere un'ottima biodisponibilità, il citrato tampona l'acidità extracellulare (lo spazio tra le cellule) ed è di fondamentale importanza per la salute metabolica generale. Può contribuire anche alla prevenzione dei calcoli renali. A livello metabolico e di salute lo considero il migliore.
+
+L'unica eccezione è Essentiel, dove abbiamo scelto il magnesio bisglicinato, chelato con glicina e particolarmente indicato per chi cerca anche un supporto al rilassamento e al sonno.
 
 Il magnesio è anche un cofattore essenziale della vitamina D: senza di lui, la D3 non si attiva. Se integri vitamina D senza magnesio, stai facendo solo metà del lavoro.
 
@@ -506,11 +514,11 @@ Se non sai quale prodotto scegliere: **[CTA: Vai alla guida alla scelta](https:/
 
 Oppure vai direttamente allo store: **[CTA: Usa il codice PRIMOPASSO](https://paleocomplex.com)**
 
-**[BLOCCO PRODOTTO: Elisir — 40 nutrienti, €3,47/giorno]**
+**[BLOCCO PRODOTTO: Paleocomplex — 23 nutrienti con Omega-3 da Krill e vitamina D modulabile fino a 10.000 UI. Il prodotto storico, ideale per iniziare. €2,23/giorno.]**
 
-**[BLOCCO PRODOTTO: Essentiel — 34 nutrienti, €2,15/giorno]**
+**[BLOCCO PRODOTTO: Essentiel — 34 nutrienti con citicolina e acetil-carnitina per la funzione cognitiva. Senza crostacei. Il miglior rapporto qualità/prezzo. €2,15/giorno.]**
 
-**[BLOCCO PRODOTTO: Revolution — 26 nutrienti, €3,97/giorno]**
+**[BLOCCO PRODOTTO: Elisir — 40 nutrienti con Omega-3 da Krill, glutatione liposomiale, quercetina fitosomiale, ubiquinolo e trans-resveratrolo. Il più completo in assoluto. €3,47/giorno.]**
 
 **[BLOCCO REVIEW: Le 3 più forti]**
 

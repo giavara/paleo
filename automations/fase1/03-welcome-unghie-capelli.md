@@ -1,4 +1,4 @@
-**Versione:** 1.2
+**Versione:** 1.3
 **Ultimo aggiornamento:** 2026-04-15
 **Status:** Bozza v1 — in attesa review Andrea
 
@@ -310,7 +310,7 @@ Se non sai da dove partire:
 
 **Per capelli, unghie e pelle** → **Youth** (6.000 mg collagene + 12 nutrienti, €1,97/giorno)
 
-**Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed con 12 nutrienti sinergici tra cui antiossidanti potenti come astaxantina e estratto di corteccia di pino, €1,98/giorno)
+**Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed con 12 nutrienti sinergici tra cui antiossidanti avanzati come astaxantina e estratto di corteccia di pino, €1,98/giorno)
 
 **Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[CTA: Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta)**
 
