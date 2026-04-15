@@ -71,7 +71,7 @@ Ecco il report che hai richiesto su capelli deboli e unghie fragili.
 
 All'interno troverai le cause reali di questi problemi e perché la maggior parte delle soluzioni che hai provato finora non ha funzionato. Spoiler: il problema non è quasi mai "esterno".
 
-Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO**.
+Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO** (ti basta inserirlo nel campo "Codice Promozionale" durante l'acquisto).
 
 Il codice è valido su tutti i prodotti dello store, senza limiti di spesa.
 

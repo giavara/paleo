@@ -76,7 +76,7 @@ Ecco il report che hai richiesto: **"Le 7 Strategie Scientifiche per corpo forte
 
 All'interno troverai un protocollo di 30 giorni basato su 47 studi scientifici, con strategie concrete su energia mitocondriale, infiammazione silente, protezione del DNA e ritmo circadiano. Non è il solito elenco generico di consigli: è un piano d'azione con routine mattutina e serale.
 
-Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO**.
+Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO** (ti basta inserirlo nel campo "Codice Promozionale" durante l'acquisto).
 
 Il codice è valido su tutti i prodotti dello store, senza limiti di spesa.
 
