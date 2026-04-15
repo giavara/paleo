@@ -120,6 +120,8 @@ In Elisir, il nostro multivitaminico più completo, la B12 è a **200 mcg nella 
 
 Il risultato? **Un solo prodotto al giorno che sostituisce 15-20 integratori separati.** E che costa meno della somma dei singoli: Elisir costa €3,47 al giorno. Gli stessi ingredienti comprati separatamente nelle stesse forme costerebbero tra €302 e €460 per 40 giorni.
 
+E non solo. Anche con mezzo misurino, Elisir sarebbe comunque di gran lunga superiore a qualsiasi multivitaminico da banco. A metà dose avresti ancora la B12 a 100 mcg (40 volte la dose che trovi al supermercato), la vitamina C a 250 mg in forma liposomiale, e tutti gli antiossidanti che nei prodotti da banco semplicemente non esistono. Per 80 giorni, con una spesa di poco più di un euro e mezzo al giorno.
+
 Non ti chiedo di credermi sulla parola. Ti chiedo di confrontare le etichette.
 
 **[CTA: Scopri i nostri multivitaminici](https://paleocomplex.com/guida-scelta)**
