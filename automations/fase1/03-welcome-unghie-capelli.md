@@ -71,7 +71,7 @@ Ecco il report che hai richiesto su capelli deboli e unghie fragili.
 
 All'interno troverai le cause reali di questi problemi e perché la maggior parte delle soluzioni che hai provato finora non ha funzionato. Spoiler: il problema non è quasi mai "esterno".
 
-Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO** (ti basta inserirlo nel campo "Codice Promozionale" durante l'acquisto).
+Come regalo di benvenuto, ho anche un **codice sconto di €10 sul tuo primo acquisto**: **BENVENUTO** (ti basta inserirlo nel campo "Codice coupon" durante l'acquisto).
 
 Il codice è valido su tutti i prodotti dello store, senza limiti di spesa.
 
@@ -115,7 +115,7 @@ Shampoo rinforzanti, smalti indurenti e creme antirughe lavorano sulla superfici
 
 E non basta prendere un integratore di collagene qualsiasi. Servono tre cose:
 
-**1. Collagene in quantità sufficiente.** La maggior parte degli integratori contiene 2-3 grammi. La ricerca indica che servono almeno 5-10 grammi al giorno per avere un effetto misurabile.
+**1. Collagene in quantità sufficiente.** La maggior parte degli integratori contiene 1-3 grammi. La ricerca indica che servono almeno 5-10 grammi al giorno per avere un effetto misurabile.
 
 **2. I cofattori giusti.** Il corpo non può sintetizzare collagene senza vitamina C, zinco e biotina. Senza questi cofattori, il collagene che assumi viene sprecato.
 
@@ -310,7 +310,7 @@ Se non sai da dove partire:
 
 **Per capelli, unghie e pelle** → **Youth** (6.000 mg collagene + 12 nutrienti, €1,97/giorno)
 
-**Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed + antiossidanti avanzati, €1,98/giorno)
+**Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed con 12 nutrienti sinergici tra cui antiossidanti potenti come astaxantina e estratto di corteccia di pino, €1,98/giorno)
 
 **Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[CTA: Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta)**
 

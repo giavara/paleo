@@ -498,7 +498,7 @@ Ma se sei arrivato a leggere questa email, significa che qualcosa di quello che 
 Ho creato un codice speciale per chi, come te, ha avuto la pazienza di seguire questo percorso:
 
 **Codice: PRIMOPASSO**
-**€10 di sconto + spedizione gratuita sul tuo primo ordine.** (Ti basta inserirlo nel campo "Codice Promozionale" durante l'acquisto.)
+**€10 di sconto + spedizione gratuita sul tuo primo ordine.** (Ti basta inserirlo nel campo "Codice coupon" durante l'acquisto.)
 
 Non è il solito sconto. È un invito a fare il primo passo con zero rischi. Non ti è piaciuto? Non riordinare. Ma almeno avrai provato sulla tua pelle (e nelle tue analisi del sangue) cosa significa integrare con dosaggi reali.
 
