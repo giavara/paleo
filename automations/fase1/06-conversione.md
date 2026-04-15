@@ -1,5 +1,5 @@
-**Versione:** 1.1
-**Ultimo aggiornamento:** 2026-04-10
+**Versione:** 1.2
+**Ultimo aggiornamento:** 2026-04-15
 **Status:** Bozza v1 — in attesa review Andrea
 
 # Flow 6: Conversione

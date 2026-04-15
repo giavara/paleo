@@ -1,5 +1,5 @@
-**Versione:** 2.1
-**Ultimo aggiornamento:** 2026-04-10
+**Versione:** 2.2
+**Ultimo aggiornamento:** 2026-04-15
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 2: Welcome Kit Benessere
