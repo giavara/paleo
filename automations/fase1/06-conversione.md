@@ -1,5 +1,5 @@
-**Versione:** 1.3
-**Ultimo aggiornamento:** 2026-04-15
+**Versione:** 1.5
+**Ultimo aggiornamento:** 2026-04-16
 **Status:** Bozza v1 — in attesa review Andrea
 
 # Flow 6: Conversione
@@ -279,6 +279,8 @@ Il valore ottimale è tra 40 e 60 ng/ml. Non amo i mega dosaggi: se non conosci 
 
 **"I miei livelli di vitamina D sono saliti in poco tempo da 19 a 60."** Massimo C.
 
+I risultati sono personali e variano da persona a persona. Se col solo multivitaminico non raggiungi livelli ottimali di vitamina D, il mio consiglio non è raddoppiare la dose del multivitaminico, ma aggiungere le **[gocce di Vitamina D](https://paleocomplex.com/prodotto/vitamina-d/)** per modulare l'integrazione alle tue esigenze.
+
 **Tra qualche giorno** affronto l'obiezione che ricevo più spesso: "i tuoi prodotti costano troppo." Lo capisco, è la reazione più comune. Ma voglio capovolgere il ragionamento e farti vedere un calcolo che nessuno fa, ma che dovresti fare. Spoiler: non è il tuo integratore che costa troppo. È il modo in cui stai integrando adesso.
 
 Un forte abbraccio
@@ -315,7 +317,7 @@ Eccoci al ragionamento che ti avevo promesso. Capisco perfettamente se pensi che
 
 **Il costo al giorno.** Elisir costa €3,47 al giorno. Essentiel costa €2,15. Paleocomplex base costa €2,23. Meno di una colazione al bar con cappuccino e cornetto.
 
-**Il costo di NON integrare bene.** Questo è il calcolo che nessuno fa. Quanto costano 5 integratori separati con dosaggi simbolici che non fanno nulla? Non zero: costano i soldi che hai speso più il tempo che hai perso senza risultati. Quante persone spendono €30-50 al mese in prodotti da farmacia con il "100% del VNR (Valori Nutrizionali di Riferimento)" e dopo un anno non hanno notato nessuna differenza?
+**Il costo di NON integrare bene.** Questo è il calcolo che nessuno fa. Quanto costano 5 integratori separati con dosaggi simbolici che non fanno nulla? Non zero: costano i soldi che hai speso più il tempo che hai perso senza risultati. Quante persone spendono €30-50 al mese in prodotti da farmacia con il "100% del VNR (Valori Nutritivi di Riferimento)" e dopo un anno non hanno notato nessuna differenza?
 
 Non ti sto dicendo che devi comprare da noi. Ti sto dicendo che se scegli di integrare, fallo bene. Confronta le etichette. Guarda le forme. Guarda i dosaggi. Poi decidi.
 
@@ -418,6 +420,8 @@ Oggi lascio parlare i numeri. Nessuna opinione, nessuna promessa. Solo risultati
 "La vitamina D solitamente la assumevo tramite il D-base, ma avendola a zero non riuscivo mai ad averla alta. Ora con un'unica soluzione ho risolto."
 
 Questi risultati non li abbiamo creati noi. Li hanno misurati i laboratori di analisi e li hanno condivisi le persone. Se vuoi verificare anche tu, fai le analisi della 25(OH)D prima di iniziare e ripetile dopo 3 mesi.
+
+I risultati sono personali e variano in base alle condizioni di partenza, all'assorbimento individuale e allo stile di vita. Se col solo multivitaminico non raggiungi livelli ottimali, aggiungi le **[gocce di Vitamina D](https://paleocomplex.com/prodotto/vitamina-d/)**: meglio modulare l'integrazione che raddoppiare la dose.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -527,6 +531,8 @@ Oppure vai direttamente allo store: **[CTA: Usa il codice PRIMOPASSO](https://pa
 **"Soffro di stanchezza cronica da 16 anni. Per 16 anni la mia vita è stata un inferno. Dopo 2 mesi ho ripreso a dormire, capelli e unghie più forti, migliorata anche la stanchezza cronica. So che il mio percorso è ancora lungo, ma ora so che sono sulla strada giusta."** Raffaella
 
 **"Sono uno psicologo, fisioterapista, erborista, laureato in scienze motorie. Molto attento alla salute vera e non come persuasione commerciale. Ho subito notato la competenza di Lorenzo. Il prodotto mi ha fornito energia, scomparsa di dolori articolari, e i miei livelli di vitamina D sono saliti da 19 a 60."** Massimo C.
+
+I risultati sono personali. Se col solo multivitaminico non raggiungi i livelli ottimali di vitamina D, aggiungi le **[gocce di Vitamina D](https://paleocomplex.com/prodotto/vitamina-d/)**.
 
 Dopo questa email continuerai a ricevere la nostra newsletter con contenuti di valore. Ma il codice PRIMOPASSO non durerà per sempre.
 

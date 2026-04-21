@@ -1,5 +1,5 @@
-**Versione:** 1.4
-**Ultimo aggiornamento:** 2026-04-15
+**Versione:** 1.5
+**Ultimo aggiornamento:** 2026-04-16
 **Status:** Bozza v1 — in attesa review Andrea
 
 # Flow 1: Carrello Abbandonato
@@ -94,7 +94,7 @@ Ecco le risposte alle domande più frequenti.
 
 **"Perché costa così tanto?"**
 
-Perché non troverai mai il "100% del VNR (Valori Nutrizionali di Riferimento)" nei nostri prodotti. Quel 100% è il minimo per non avere carenze, non il dosaggio per stare davvero bene. Noi usiamo forme attive (vitamine B metilate, ubiquinolo, R-lipoico) a dosaggi che molti medici funzionali prescrivono singolarmente. Per darti un'idea: la vitamina B12 in Elisir è a **80 volte la dose che trovi al supermercato**, nella forma metilata più biodisponibile. Nei multivitaminici da banco trovi il 100% nella forma più economica.
+Perché non troverai mai il "100% del VNR (Valori Nutritivi di Riferimento)" nei nostri prodotti. Quel 100% è il minimo per non avere carenze, non il dosaggio per stare davvero bene. Noi usiamo forme attive (vitamine B metilate, ubiquinolo, R-lipoico) a dosaggi che molti medici funzionali prescrivono singolarmente. Per darti un'idea: la vitamina B12 in Elisir è a **80 volte la dose che trovi al supermercato**, nella forma metilata più biodisponibile. Nei multivitaminici da banco trovi il 100% nella forma più economica.
 
 Facciamo due conti: Elisir, il nostro multivitaminico più completo con 40 nutrienti, costa **€3,47 al giorno**. Meno di una colazione al bar. Se comprassi gli stessi ingredienti separatamente nelle stesse forme e dosaggi, spenderesti **tra €302 e €460 per 40 giorni** invece di €139.
 

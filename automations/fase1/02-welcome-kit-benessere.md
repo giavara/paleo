@@ -1,5 +1,5 @@
-**Versione:** 2.4
-**Ultimo aggiornamento:** 2026-04-15
+**Versione:** 2.5
+**Ultimo aggiornamento:** 2026-04-16
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 2: Welcome Kit Benessere
@@ -114,7 +114,9 @@ Se la risposta è "più di tre", probabilmente stai facendo quello che fanno qua
 
 Il problema non è la buona intenzione. Il problema è che **la maggior parte di questi prodotti ha dosaggi simbolici**.
 
-Ti faccio un esempio concreto. Prendi un multivitaminico da supermercato e guarda l'etichetta. Troverai scritto "Vitamina B12: 2,5 mcg (100% VNR, Valori Nutrizionali di Riferimento)". Quel 100% è il **minimo per non avere carenze**. Non è il dosaggio per stare bene davvero.
+Ti faccio un esempio concreto. Prendi un multivitaminico da supermercato e guarda l'etichetta. Troverai scritto "Vitamina B12: 2,5 mcg (100% VNR, Valori Nutritivi di Riferimento)". Quel 100% è il **minimo per non avere carenze**. Non è il dosaggio per stare bene davvero.
+
+I nostri multivitaminici invece tendono all'apporto massimo giornaliero legalmente consentito, quello che serve per stare bene sul lungo termine.
 
 In Elisir, il nostro multivitaminico più completo, la B12 è a **200 mcg nella forma metilata** (80 volte la dose che trovi al supermercato). La forma metilata è quella che il tuo corpo può usare direttamente, senza doverla convertire. E lo stesso vale per ogni singolo ingrediente: forme attive, dosaggi reali, nessun riempitivo.
 

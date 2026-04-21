@@ -1,5 +1,5 @@
-**Versione:** 2.2
-**Ultimo aggiornamento:** 2026-04-15
+**Versione:** 2.4
+**Ultimo aggiornamento:** 2026-04-16
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 4: Authority Flow
@@ -85,7 +85,7 @@ Le carenze più diffuse tra gli italiani sono 5.
 
 **Omega-3 (EPA e DHA):** il rapporto omega-6/omega-3 nella dieta moderna è sbilanciato fino a 20:1. Dovrebbe essere 2:1. Questo squilibrio alimenta l'infiammazione silente. Le fonti migliori sono il pesce azzurro (sardine, sgombro, acciughe) e il krill.
 
-La buona notizia: colmare queste carenze è possibile. Parte dall'alimentazione, parte dall'integrazione consapevole. Se vuoi approfondire ognuno di questi nutrienti, sul nostro **[blog](https://blog.paleocomplex.com)** trovi decine di articoli con studi e spiegazioni dettagliate.
+La buona notizia: colmare queste carenze è possibile. Parte dall'alimentazione, parte dall'integrazione consapevole. Se vuoi approfondire ognuno di questi nutrienti, sul nostro **[blog](https://blog.paleocomplex.com)** trovi centinaia di articoli con studi e spiegazioni dettagliate.
 
 **Tra qualche giorno** voglio raccontarti perché il 70-80% degli italiani è carente di vitamina D anche prendendola, e perché il tuo medico probabilmente ti sta consigliando il dosaggio sbagliato. È uno dei contenuti che ho scritto con più rabbia. Non saltarlo.
 
@@ -140,6 +140,8 @@ Te li elenco, perché sono importanti:
 Non separare ciò che madre natura ha messo insieme. Ci ho scritto un libro intero, 400 pagine: **["Vitamina D: tutte le bugie smascherate"](https://paleocomplex.com/prodotto/vitamina-d-tutte-le-bugie-smascherate/)**. Un medico mi ha scritto che lo tiene in ambulatorio a disposizione dei pazienti. Se la vitamina D ti interessa davvero, lì trovi tutto.
 
 **Quanto dovresti avere nel sangue?** L'analisi da fare è la 25(OH)D. Il valore ottimale è tra 40 e 60 ng/ml. Sotto i 30 sei carente. I miei consigli: fai le analisi a fine marzo (dopo l'inverno, quando i livelli sono al minimo) e a fine settembre (dopo l'estate, quando sono al massimo). Da aprile a settembre, esponiti al sole il più possibile: 20 minuti con pelle scoperta producono circa 15.000 UI di D3.
+
+Ma attenzione: il problema della maggior parte degli integratori non sono i mega dosaggi. È il contrario. Si fermano al 100% del VNR (Valori Nutritivi di Riferimento), che è il minimo per non ammalarsi, non il dosaggio per stare bene. I nostri multivitaminici invece tendono all'apporto massimo giornaliero legalmente consentito, quello che serve per la salute a lungo termine.
 
 Non amo i mega dosaggi. Se non conosci i tuoi livelli, un buon punto di partenza può essere 4.000-5.000 UI al giorno, per poi verificare con le analisi dopo 3 mesi e aggiustare di conseguenza (confrontati sempre con il tuo medico curante per trovare il dosaggio più adatto alla tua situazione).
 
@@ -288,7 +290,7 @@ Questa è l'ultima email di questo percorso. Nelle ultime settimane ti ho parlat
 
 Non ti ho mai chiesto di comprare a tutti i costi. Non lo faccio neanche adesso.
 
-Ti chiedo solo una cosa: la prossima volta che prendi in mano un integratore, qualsiasi integratore, gira il barattolo e leggi l'etichetta. Guarda le forme vitaminiche. Guarda i dosaggi. Chiediti se quel 100% del VNR (Valori Nutrizionali di Riferimento) è davvero abbastanza, o è solo il minimo per non avere carenze.
+Ti chiedo solo una cosa: la prossima volta che prendi in mano un integratore, qualsiasi integratore, gira il barattolo e leggi l'etichetta. Guarda le forme vitaminiche. Guarda i dosaggi. Chiediti se quel 100% del VNR è davvero abbastanza, o è solo il minimo per non avere carenze.
 
 Questo è il regalo più grande che posso farti: la capacità di leggere un'etichetta e capire se quello che stai prendendo può davvero fare la differenza.
 
