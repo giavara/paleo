@@ -1,5 +1,5 @@
-**Versione:** 2.4
-**Ultimo aggiornamento:** 2026-04-16
+**Versione:** 3.0
+**Ultimo aggiornamento:** 2026-04-22
 **Status:** Bozza v2 — in attesa review Andrea
 
 # Flow 4: Authority Flow
@@ -87,7 +87,7 @@ Le carenze più diffuse tra gli italiani sono 5.
 
 La buona notizia: colmare queste carenze è possibile. Parte dall'alimentazione, parte dall'integrazione consapevole. Se vuoi approfondire ognuno di questi nutrienti, sul nostro **[blog](https://blog.paleocomplex.com)** trovi centinaia di articoli con studi e spiegazioni dettagliate.
 
-**Tra qualche giorno** voglio raccontarti perché il 70-80% degli italiani è carente di vitamina D anche prendendola, e perché il tuo medico probabilmente ti sta consigliando il dosaggio sbagliato. È uno dei contenuti che ho scritto con più rabbia. Non saltarlo.
+**Tra un paio di giorni** voglio mostrarti perché la maggior parte degli integratori che compri dal supermercato, anche quelli che sembrano "completi", è di fatto sottodosata. C'è una tabella del Ministero della Salute che quasi nessuno conosce. E i numeri ti sorprenderanno.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -97,7 +97,85 @@ P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbia
 
 ---
 
-## EMAIL 2 — La verità sulla vitamina D (la voce di Lorenzo) (+4 giorni)
+## EMAIL 2 — Perché gli integratori che hai comprato sono sottodosati (+3 giorni)
+
+### Oggetto (3 varianti A/B)
+
+- A: Perché gli integratori che hai comprato sono sottodosati
+- B: 80 mg o 1 grammo? La differenza che cambia tutto
+- C: Il 100% del VNR è davvero il 100%?
+
+### Preview text (3 varianti)
+
+- A: La tabella del Ministero della Salute che quasi nessuno conosce.
+- B: 12 volte più vitamina C. E non è un errore.
+- C: Quello che Linus Pauling diceva e tutti hanno dimenticato.
+
+### Corpo email
+
+Ciao [NOME]
+
+Ti avevo promesso una cosa importante. Eccola.
+
+Hai mai preso in mano una confezione di multivitaminico dal supermercato o dalla farmacia? Accanto a ogni vitamina c'è scritto **"100% VNR"** (Valori Nutritivi di Riferimento). Sembra abbastanza. Non lo è.
+
+Esiste una tabella ufficiale del Ministero della Salute, revisione settembre 2021, che definisce l'**apporto massimo giornaliero** di vitamine e minerali ammesso in un integratore alimentare in Italia. Il VNR è il **minimo**. Il massimo è un'altra cosa. E spesso parliamo di ordini di grandezza diversi.
+
+**[IMMAGINE: tabella Ministero della Salute — Apporti giornalieri di vitamine e minerali ammessi negli integratori alimentari, revisione settembre 2021]**
+
+Guardiamo alcuni esempi concreti:
+
+| Nutriente | Integratore da supermercato (100% VNR) | Massimo legale in Italia | Differenza |
+|---|---|---|---|
+| Vitamina C | 80 mg | 1.000 mg | 12 volte |
+| Vitamina E | 12 mg | 60 mg | 5 volte |
+| Vitamina B12 | 2,5 µg | 1.000 µg | 400 volte |
+| Magnesio | 375 mg | 450 mg | 1,2 volte |
+
+Sul magnesio il VNR è già vicino al massimo. Su vitamina C, E e B12 siamo in un altro pianeta.
+
+**Prendi la vitamina C.** Linus Pauling, unico uomo ad aver vinto due premi Nobel individuali (Chimica e Pace), sosteneva che i benefici reali arrivano con dosaggi tra 500 e 1.000 mg al giorno. I multivitaminici comuni si fermano a 80 mg. Con 80 mg eviti lo scorbuto. Con 500-1.000 mg lavori davvero sul sistema immunitario e sulla sintesi del collagene.
+
+Non è una questione di opinioni. È quello che la ricerca scientifica mostra da oltre 40 anni. E la scienza più recente ha anche un nome per questo fenomeno.
+
+**La Teoria del Triage di Bruce Ames.**
+
+Quando il tuo corpo è a corto di un nutriente, inizia a razionarlo. Dà la priorità alle funzioni di sopravvivenza immediata (metabolismo, riproduzione, enzimi essenziali) e taglia le funzioni che proteggono la salute a lungo termine: prevenzione cancro, riparazione del DNA, salute cardiovascolare.
+
+Nelle parole di Ames:
+
+*"Stai scambiando la salute a lungo termine con la salute a breve termine. Potrai anche sembrare perfettamente a posto, ma se non stai apportando nutrienti a sufficienza, stai invecchiando velocemente e male."*
+
+È per questo che un integratore al 100% del VNR, per quanto possa sembrare completo, è di fatto **un integratore sottodosato**.
+
+**Perché quasi tutti i brand si fermano al VNR?** Una risposta sola: costo. Mettere 80 mg di vitamina C costa pochi centesimi. Mettere 1 grammo in forma liposomiale costa dieci volte tanto. Moltiplica per ogni ingrediente e capisci perché l'industria preferisce il minimo.
+
+**Noi facciamo l'opposto.** Nei nostri multivitaminici ogni ingrediente tende all'apporto massimo giornaliero legalmente consentito. Ecco un campione concreto, prendendo Elisir a dose piena:
+
+| Nutriente | Supermercato (100% VNR) | Massimo legale | Elisir a dose piena |
+|---|---|---|---|
+| Vitamina E | 12 mg | 60 mg | **60 mg** (100%) |
+| Vitamina B6 | 1,4 mg | 10 mg | **10 mg** (100%) in forma attivata |
+| Biotina | 50 µg | 450 µg | **450 µg** (100%) |
+| Acido folico | 200 µg | 400 µg | **400 µg** (100%) come metilfolato |
+
+Stesso ragionamento per la vitamina C (500 mg liposomiale, nella zona Pauling), la B12 metilata, la vitamina A, la niacina. Ogni singolo ingrediente è pensato per fare davvero la differenza, non per compilare un'etichetta.
+
+Questo è il motivo per cui i nostri prodotti hanno un costo diverso. Ed è il motivo per cui hanno ricevuto centinaia di recensioni di persone che hanno visto cambiamenti reali nelle loro analisi del sangue e nella loro vita.
+
+La vera domanda da farti è questa: **quanto vale la tua salute?** Se la risposta è meno di una colazione al bar al giorno, allora i nostri prodotti non fanno per te. E va benissimo così. Ma almeno adesso sai perché il "100% VNR" del tuo multivitaminico attuale non basta.
+
+**Nella prossima email** ti parlo della vitamina D. Non basta prenderla. E con quasi tutte le marche, stai sprecando soldi.
+
+Un forte abbraccio
+Lorenzo Zarone
+Fondatore di Paleocomplex
+
+P.S. Se vuoi confrontare le nostre etichette con quelle degli integratori che usi adesso, abbiamo una guida per orientarti: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+
+---
+
+## EMAIL 3 — La verità sulla vitamina D (la voce di Lorenzo) (+6 giorni)
 
 ### Oggetto (3 varianti A/B)
 
@@ -115,7 +193,7 @@ P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbia
 
 Ciao [NOME]
 
-Pochi giorni fa ti avevo promesso uno dei contenuti che ho scritto con più rabbia. Eccolo.
+Te l'avevo promesso. Oggi passiamo al nutriente che più di ogni altro viene preso male: la vitamina D.
 
 La vitamina D non è una vitamina. È un pro-ormone. E influenza l'espressione di oltre 3.000 dei 30.000 geni umani. Non è coinvolta solo nel metabolismo del calcio, come tanti credono: ha recettori in quasi tutti gli organi del corpo.
 
@@ -141,8 +219,6 @@ Non separare ciò che madre natura ha messo insieme. Ci ho scritto un libro inte
 
 **Quanto dovresti avere nel sangue?** L'analisi da fare è la 25(OH)D. Il valore ottimale è tra 40 e 60 ng/ml. Sotto i 30 sei carente. I miei consigli: fai le analisi a fine marzo (dopo l'inverno, quando i livelli sono al minimo) e a fine settembre (dopo l'estate, quando sono al massimo). Da aprile a settembre, esponiti al sole il più possibile: 20 minuti con pelle scoperta producono circa 15.000 UI di D3.
 
-Ma attenzione: il problema della maggior parte degli integratori non sono i mega dosaggi. È il contrario. Si fermano al 100% del VNR (Valori Nutritivi di Riferimento), che è il minimo per non ammalarsi, non il dosaggio per stare bene. I nostri multivitaminici invece tendono all'apporto massimo giornaliero legalmente consentito, quello che serve per la salute a lungo termine.
-
 Non amo i mega dosaggi. Se non conosci i tuoi livelli, un buon punto di partenza può essere 4.000-5.000 UI al giorno, per poi verificare con le analisi dopo 3 mesi e aggiustare di conseguenza (confrontati sempre con il tuo medico curante per trovare il dosaggio più adatto alla tua situazione).
 
 **Nella prossima email** ti parlo di un difetto genetico che colpisce 1 italiano su 3 e rende quasi inutile l'acido folico che assumono. Se hai mai sentito parlare di MTHFR senza capire cosa significa per te, non saltare la prossima. È più importante di quanto sembri.
@@ -158,7 +234,7 @@ P.P.S. Se vuoi approfondire davvero la vitamina D, ho scritto 400 pagine sull'ar
 
 ---
 
-## EMAIL 3 — Metilazione: perché le forme vitaminiche contano (+7 giorni)
+## EMAIL 4 — Metilazione: perché le forme vitaminiche contano (+9 giorni)
 
 ### Oggetto (3 varianti A/B)
 
@@ -212,7 +288,7 @@ P.S. In tutti i nostri multivitaminici usiamo esclusivamente forme attivate dell
 
 ---
 
-## EMAIL 4 — Social proof + domande frequenti (+10 giorni)
+## EMAIL 5 — Social proof + domande frequenti (+12 giorni)
 
 ### Oggetto (3 varianti A/B)
 
@@ -266,7 +342,7 @@ P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhi
 
 ---
 
-## EMAIL 5 — Ultima email del percorso (+14 giorni)
+## EMAIL 6 — Ultima email del percorso (+14 giorni)
 
 ### Oggetto (3 varianti A/B)
 
@@ -318,23 +394,28 @@ EMAIL 1 — Le 11 carenze nutrizionali più comuni (alimentazione + stile di vit
     │
     ├── Se acquista → esce → Post Purchase New (flow 6)
     │
-    ▼  (+4 giorni)
-EMAIL 2 — Vitamina D: cofattori, analisi, dosaggi (la voce di Lorenzo)
+    ▼  (+3 giorni)
+EMAIL 2 — VNR vs apporto massimo legale (tabella Ministero + campione Elisir + Pauling/Ames)
     │
     ├── Se acquista → esce → Post Purchase New (flow 6)
     │
-    ▼  (+7 giorni)
-EMAIL 3 — Metilazione, MTHFR e forme attive (educazione pura)
+    ▼  (+6 giorni)
+EMAIL 3 — Vitamina D: cofattori, analisi, dosaggi (la voce di Lorenzo)
     │
     ├── Se acquista → esce → Post Purchase New (flow 6)
     │
-    ▼  (+10 giorni)
-EMAIL 4 — FAQ + social proof (gestione obiezioni morbida)
+    ▼  (+9 giorni)
+EMAIL 4 — Metilazione, MTHFR e forme attive (educazione pura)
+    │
+    ├── Se acquista → esce → Post Purchase New (flow 6)
+    │
+    ▼  (+12 giorni)
+EMAIL 5 — FAQ + social proof (gestione obiezioni morbida)
     │
     ├── Se acquista → esce → Post Purchase New (flow 6)
     │
     ▼  (+14 giorni)
-EMAIL 5 — Ultima email, tono editoriale, nessuna pressione
+EMAIL 6 — Ultima email, tono editoriale, nessuna pressione
     │
     ▼
 Fine Authority → nurturing via newsletter (campaign settimanali)

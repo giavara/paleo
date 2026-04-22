@@ -1,6 +1,6 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-04-07
-**Status:** Architettura confermata — in fase di scrittura email
+**Versione:** 2.2
+**Ultimo aggiornamento:** 2026-04-22
+**Status:** Fase 1 review Lorenzo completata — 3 correzioni finali da applicare (VNR/RDA, blog, disclaimer) poi chiudere e passare a fase 2
 
 # Piano Master — Automazioni Email Klaviyo
 
@@ -26,6 +26,9 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 10. **Win-back: doppio approccio.** (A) Flow basato su timing fisso: +85gg dall'ultimo ordine (ciclo medio Paleocomplex = 76gg). (B) Segmento Klaviyo Predictive Analytics per intercettare chi sta performando sotto la media indipendentemente dal timing. I due approcci sono complementari.
 11. **Browse Abandonment: filtro prodotto gia' acquistato.** Se l'utente ha gia' comprato quel prodotto, il flow NON parte. L'email arriva solo a chi sta esplorando un prodotto che non ha ancora acquistato.
 12. **Compleanno: parcheggiato.** Lo attiviamo appena abbiamo un sistema che raccoglie la data di nascita (campo nel checkout o form dedicato).
+13. **VNR vs RDA (feedback Lorenzo 16 aprile):** Alla prima menzione di VNR nelle email, scrivere per esteso "Valore Nutritivo di Riferimento". Aggiungere il concetto: gli altri integratori si basano sul VNR (minimo per non ammalarsi nel breve termine), i nostri danno il 100% dell'RDA (apporto massimo giornaliero, privo di effetti collaterali, efficace per la salute a lungo termine). Esempio: B12 nell'Elisir e' 80 volte la dose da supermercato. Esempio Vitamina C: VNR = 80mg (anti-scorbuto), RDA = 1g (salute a lungo termine). **Applicare a:** Authority, Conversione, Welcome Series dove si citano dosaggi.
+14. **Blog: "centinaia" non "decine" (feedback Lorenzo 16 aprile):** Correggere in tutte le email dove si cita il blog. Sono quasi 300 articoli. **Applicare a:** Authority flow.
+15. **Disclaimer recensioni (feedback Lorenzo 16 aprile):** Aggiungere "I risultati sono personali" dopo le recensioni. Per recensioni che citano vitamina D: aggiungere consiglio di integrare con gocce di Vitamina D per chi non raggiunge livelli ottimali col solo multivitaminico (non raddoppiare il dosaggio, piuttosto aggiungere le gocce). **Applicare a:** Conversione (email con social proof), Post-acquisto (email recensioni).
 
 ## Architettura dei flow
 
@@ -33,12 +36,12 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 
 | # | Flow | File | Email | Trigger | Status |
 |---|------|------|-------|---------|--------|
-| 1 | Carrello abbandonato | `fase1/01-carrello-abbandonato.md` | 3 | Checkout started + non completato | Da scrivere |
-| 2 | Welcome Kit Benessere | `fase1/02-welcome-kit-benessere.md` | 5 | Optin da popup/homepage/blog/landing social | In review |
-| 3 | Welcome Unghie/Capelli | `fase1/03-welcome-unghie-capelli.md` | 6 | Optin da lead magnet unghie/capelli | In review |
-| 4 | Authority Flow | `fase1/04-authority-flow.md` | 5 | DOPO completamento welcome (sequenziale) + non ha comprato | In review |
-| 5 | Browse Abandonment | `fase1/05-browse-abandonment.md` | 2 (email 2 in draft) | Viewed Product + non ha comprato quel prodotto + non in altri flow + max 1 volta ogni 30gg | In review |
-| 6 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | In review |
+| 1 | Carrello abbandonato | `fase1/01-carrello-abbandonato.md` | 3 | Checkout started + non completato | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
+| 2 | Welcome Kit Benessere | `fase1/02-welcome-kit-benessere.md` | 5 | Optin da popup/homepage/blog/landing social | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
+| 3 | Welcome Unghie/Capelli | `fase1/03-welcome-unghie-capelli.md` | 6 | Optin da lead magnet unghie/capelli | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
+| 4 | Authority Flow | `fase1/04-authority-flow.md` | 6 | DOPO completamento welcome (sequenziale) + non ha comprato | v3.0 2026-04-22 — aggiunta email 2 VNR vs apporto massimo legale |
+| 5 | Browse Abandonment | `fase1/05-browse-abandonment.md` | 2 (email 2 in draft) | Viewed Product + non ha comprato quel prodotto + non in altri flow + max 1 volta ogni 30gg | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
+| 6 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
 
 ### FASE 2 — Flow post-acquisto
 
@@ -138,11 +141,12 @@ Prodotti citati coerenti col tema beauty: Youth, Jeunesse, multivitaminico come 
 
 | # | Timing | Contenuto |
 |---|--------|-----------|
-| 1 | +1gg dal completamento welcome | La filosofia Paleocomplex: "meno integratori, meglio dosati" |
-| 2 | +3gg | I 3 errori che tutti fanno con gli integratori (dosaggi simbolici, forme non attive, combo sbagliate) |
-| 3 | +5gg | Cosa rende unico un multivitaminico Paleo (forme attive, dosaggi reali, trasparenza etichetta) |
-| 4 | +8gg | Social proof: 3 recensioni reali + risultati concreti |
-| 5 | +11gg | "Quale integratore fa per te?" — mini-guida alla scelta con CTA |
+| 1 | +1gg dal completamento welcome | Le 11 carenze nutrizionali più comuni (alimentazione + stile di vita) |
+| 2 | +3gg | VNR vs apporto massimo legale: tabella Ministero + campione Elisir + Pauling/Teoria Triage di Ames |
+| 3 | +6gg | Vitamina D: cofattori, analisi, dosaggi (voce Lorenzo) |
+| 4 | +9gg | Metilazione, MTHFR e forme attive |
+| 5 | +12gg | FAQ + social proof (gestione obiezioni morbida) |
+| 6 | +14gg | Ultima email, tono editoriale, nessuna pressione |
 
 ### Flow 5: Browse Abandonment
 
@@ -298,10 +302,10 @@ Da valutare prima di attivare il flow.
 
 | Fase | Flow | Email |
 |------|------|-------|
-| Fase 1 | 6 flow (carrello, 2 welcome, authority, browse, conversione) | 34 email |
+| Fase 1 | 6 flow (carrello, 2 welcome, authority, browse, conversione) | 35 email |
 | Fase 2 | 2 flow + 5 blocchi dinamici | 8 email + 5 blocchi |
 | Fase 3 | 11 flow (6 retention, 2 winback, back in stock, sunset, fedelta') | 29 email + 1 azione |
-| **Totale** | **19 flow** | **~71 email + 5 blocchi dinamici** |
+| **Totale** | **19 flow** | **~72 email + 5 blocchi dinamici** |
 
 ## Matrice cross-sell
 
@@ -354,7 +358,9 @@ Punti chiave per le automazioni:
 - Apertura "Ciao [NOME]" SENZA virgola (placeholder Klaviyo per il nome del contatto, se fallisce resta "Ciao" pulito) — a capo con maiuscola — chiusura con firma variabile per mittente (vedi tabella sotto)
 - Ogni email: 3 varianti oggetto A/B + 3 varianti preview text
 - Grassetti strategici, frasi brevi, paragrafi corti (mobile-first)
-- MAI inventare dati, dosaggi, ingredienti — verificare sempre su schede prodotto e etichette
+- MAI inventare dati, dosaggi, ingredienti — verificare SEMPRE su schede prodotto e etichette
+- **Conteggio nutrienti:** mai usare "più" prima del numero totale (es. "più 34 nutrienti" sembra 34 IN AGGIUNTA). Usare "con", "tra cui" o ":"
+- **Verifica obbligatoria:** ogni claim su ingredienti, dosaggi, forme vitaminiche e conteggi va incrociato con `context/products/[nome]-scheda-prodotto.md` prima di scrivere. Errori su ingredienti sono intollerabili per un brand di integratori
 - Usare sempre accenti reali (è, à, ò, ù, é) — MAI apostrofo al posto dell'accento
 - **Linguaggio gender-neutral:** evitare "Benvenuto/a". Usare forme neutre naturali ("Da oggi fai parte di...", "Ti diamo il benvenuto nel..."). Il codice sconto BENVENUTO e il sostantivo "benvenuto" restano invariati. Per il flow Unghie/Capelli la grafica sarà stilizzata al femminile, ma il copy resta neutro
 
@@ -379,7 +385,7 @@ Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1, apertura e
 
 | Flow | Open loop |
 |------|-----------|
-| Authority Flow (4) | SÌ — tutte le email (5/5), il flow più editoriale |
+| Authority Flow (4) | SÌ — tutte le email (6/6), il flow più editoriale |
 | Welcome Kit Benessere (2) | SÌ — solo 2-3 punti chiave |
 | Welcome Unghie/Capelli (3) | SÌ — solo 2-3 punti chiave |
 | Conversione (6) | SÌ — 3-4 punti strategici (cambio angolo, contenuti forti) |
