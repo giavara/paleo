@@ -1,6 +1,6 @@
 **Versione:** 0.9
 **Ultimo aggiornamento:** 2026-05-11
-**Status:** Email 2, 3 e 5 riscritte con blocchi separati. Email 5: recensioni verificate dal CSV aggiornato `context/20260511 paleocomplex export-reviews.csv` (418 recensioni totali). Testoplus: testimonianza testosterone 5,34→6,44 da screenshot pagina vendita. Renaissance: usate le 2 recensioni brevi disponibili + framing onesto su benefici a lungo termine. Pass content-verifier 2026-05-11: applicati fix su livelli vit D (50-80 ng/ml allineato a Lorenzo), triptofano (precursore serotonina/melatonina), Liverty ciclizzazione (60gg + pausa 2-3 mesi), beta-alanina (tampona acidosi), creatina saturazione 4-6 settimane con uso intermittente. In review Andrea.
+
 
 # Flow 6: Post Purchase — Nuovo Cliente
 
@@ -719,8 +719,8 @@ I risultati arrivano con la costanza. Per il collagene **3 mesi continuativi** s
 
 Su Testoplus le recensioni pubbliche sono ancora poche perché è un prodotto entrato più di recente nel nostro catalogo. Ma uno dei messaggi più importanti che Lorenzo ha ricevuto è proprio una testimonianza concreta con i numeri delle analisi del sangue:
 
-*"Ti mando il valore del testosterone prima dell'utilizzo del Testoplus e dopo 2 mesi di integrazione: livelli di testosterone passati da 5,34 a 6,44."*
-**Messaggio di un cliente dopo 2 mesi**
+*"Ti mando il valore del testosterone prima dell'utilizzo del Testoplus e dopo 2 mesi di integrazione: livelli di testosterone passati da 5,34 a 644."*
+**Messaggio di un cliente dopo 2 mesi**. Una trasformazione incredibile ma ci tengo a precisare che ogni risultato è soggettivo.
 
 È esattamente il tipo di feedback che ci interessa: documentato, misurabile, onesto. Se nelle prossime settimane noti cambiamenti (energia, libido, recupero, o se fai analisi ormonali), **rispondi pure a questa email** raccontandomi com'è andata: per me è prezioso sentire la tua esperienza diretta.
 
