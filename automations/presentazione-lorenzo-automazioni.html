@@ -37,6 +37,12 @@
     color: #A0998A;
     letter-spacing: 1px;
   }
+  .header .version {
+    font-size: 11px;
+    color: #6A6A6A;
+    margin-top: 16px;
+    letter-spacing: 1px;
+  }
 
   /* Container */
   .container {
@@ -105,6 +111,65 @@
     margin-top: 4px;
   }
 
+  /* Progress tracker */
+  .progress-section {
+    margin: 32px 0;
+  }
+  .progress-bar-wrapper {
+    background: #fff;
+    border: 1px solid #E5E2DA;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  .progress-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .progress-count {
+    font-size: 13px;
+    color: #A0998A;
+  }
+  .progress-track {
+    height: 8px;
+    background: #F0EDE5;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+  }
+  .progress-fill-done {
+    background: #1A1A1A;
+    height: 100%;
+  }
+  .progress-fill-active {
+    background: #8A8270;
+    height: 100%;
+  }
+  .progress-legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+    font-size: 11px;
+    color: #6A6A6A;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .legend-dot.done { background: #1A1A1A; }
+  .legend-dot.active { background: #8A8270; }
+  .legend-dot.pending { background: #F0EDE5; }
+
   /* Flow diagram */
   .flow-map {
     margin: 32px 0;
@@ -142,6 +207,17 @@
     color: #A0998A;
     margin-left: auto;
   }
+  .phase-status {
+    font-size: 11px;
+    color: #FAFAF7;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+  }
+  .phase-status.done { background: #1A1A1A; }
+  .phase-status.active { background: #8A8270; }
+  .phase-status.pending { background: #C4BFB3; }
 
   .flow-card {
     display: flex;
@@ -172,6 +248,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
   }
   .flow-name {
     font-size: 14px;
@@ -179,8 +256,9 @@
   }
   .flow-meta {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
+    flex-wrap: wrap;
   }
   .flow-meta span {
     font-size: 12px;
@@ -193,7 +271,21 @@
     font-size: 12px;
     font-weight: 600;
     color: #1A1A1A;
+    flex-shrink: 0;
   }
+  .flow-state {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .flow-state.done { background: #1A1A1A; color: #FAFAF7; }
+  .flow-state.review { background: #E5E2DA; color: #1A1A1A; }
+  .flow-state.active { background: #8A8270; color: #FAFAF7; }
+  .flow-state.pending { background: transparent; color: #C4BFB3; border: 1px solid #E5E2DA; }
 
   /* Journey */
   .journey {
@@ -264,6 +356,7 @@
     font-size: 18px;
     flex-shrink: 0;
     margin-top: 2px;
+    font-weight: 600;
   }
   .decision h4 {
     font-size: 14px;
@@ -331,6 +424,37 @@
   .matrix tr:nth-child(even) td { background: #F9F8F5; }
   .matrix .product { font-weight: 600; white-space: nowrap; }
 
+  /* Method box */
+  .method-box {
+    background: #fff;
+    border: 1px solid #E5E2DA;
+    border-radius: 4px;
+    padding: 28px;
+    margin: 24px 0;
+  }
+  .method-box h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1A1A1A;
+  }
+  .method-box p {
+    font-size: 13px;
+    color: #6A6A6A;
+    margin-bottom: 12px;
+  }
+  .method-box p:last-child { margin-bottom: 0; }
+  .method-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .method-list li {
+    font-size: 13px;
+    color: #6A6A6A;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
   /* CTA section */
   .cta-section {
     background: #1A1A1A;
@@ -392,14 +516,6 @@
     border-bottom: 1px solid #C4BFB3;
   }
 
-  /* Arrow connectors */
-  .arrow-down {
-    text-align: center;
-    padding: 8px 0;
-    color: #C4BFB3;
-    font-size: 18px;
-  }
-
   /* Responsive */
   @media (max-width: 768px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
@@ -414,6 +530,7 @@
   <div class="container">
     <h1>Paleocomplex</h1>
     <div class="subtitle">Automazioni Email Klaviyo — Piano Strategico</div>
+    <div class="version">v3.0 · aggiornata maggio 2026</div>
   </div>
 </div>
 
@@ -422,7 +539,7 @@
   <!-- SEZIONE 1: NUMERI -->
   <div class="section">
     <div class="section-label">Il quadro</div>
-    <h2>Da 218 email a 71. Ogni email ha un ruolo preciso.</h2>
+    <h2>Da 218 email a 72. Ogni email ha un ruolo preciso.</h2>
     <p>Le vecchie automazioni ActiveCampaign avevano 218 email che generavano €195K di revenue totale. Il problema: il 50% delle email generava meno del 5% del revenue. Troppe email, troppo rumore, risultati concentrati su pochissime.</p>
     <p>La nuova architettura Klaviyo riduce il volume del 67% ma mantiene (e migliora) la copertura su tutti i momenti critici del percorso cliente. Ogni contatto riceve quasi 2 mesi di contenuti automatici personalizzati prima di entrare nella newsletter.</p>
 
@@ -433,24 +550,79 @@
         <div class="detail">da 9 vecchi</div>
       </div>
       <div class="stat">
-        <div class="number">71</div>
+        <div class="number">72</div>
         <div class="label">Email totali</div>
         <div class="detail">da 218 vecchie</div>
       </div>
       <div class="stat">
         <div class="number">3</div>
         <div class="label">Fasi di rollout</div>
-        <div class="detail">aprile → maggio</div>
+        <div class="detail">aprile → giugno</div>
       </div>
       <div class="stat">
         <div class="number">58</div>
-        <div class="label">Giorni di nurturing auto</div>
+        <div class="label">Giorni di nurturing</div>
         <div class="detail">welcome + authority + conversione</div>
       </div>
     </div>
   </div>
 
-  <!-- SEZIONE 2: ARCHITETTURA -->
+  <!-- SEZIONE 2: STATO DEI LAVORI -->
+  <div class="section">
+    <div class="section-label">Stato dei lavori</div>
+    <h2>A che punto siamo</h2>
+    <p>Il piano è organizzato in 3 fasi sequenziali. Le email sono già scritte in modo definitivo, fact-checked contro schede prodotto e FAQ, e disponibili su GitHub. Ogni flow passa per la tua review prima di essere caricato su Klaviyo.</p>
+
+    <div class="progress-section">
+      <div class="progress-bar-wrapper">
+        <div class="progress-header">
+          <div class="progress-title">Fase 1 — Revenue e acquisizione</div>
+          <div class="progress-count">6/6 flow scritti · in review</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill-done" style="width: 100%"></div>
+        </div>
+        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
+          Carrello, Welcome Kit, Welcome Unghie/Capelli, Authority, Browse Abandonment, Conversione.
+        </div>
+      </div>
+
+      <div class="progress-bar-wrapper">
+        <div class="progress-header">
+          <div class="progress-title">Fase 2 — Post-acquisto</div>
+          <div class="progress-count">1/2 flow scritti · 1 in scrittura</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill-done" style="width: 50%"></div>
+          <div class="progress-fill-active" style="width: 50%"></div>
+        </div>
+        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
+          Post Purchase Nuovo Cliente (6 email + 14 blocchi dinamici): scritto, in review. Post Purchase Cliente Ricorrente: prossimo.
+        </div>
+      </div>
+
+      <div class="progress-bar-wrapper">
+        <div class="progress-header">
+          <div class="progress-title">Fase 3 — Retention e lifecycle</div>
+          <div class="progress-count">0/11 flow scritti · pendente</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill-done" style="width: 0%"></div>
+        </div>
+        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
+          6 Retention per prodotto, 2 Win-back, Back in Stock, Sunset (pulizia lista), Programma Fedeltà.
+        </div>
+      </div>
+
+      <div class="progress-legend" style="justify-content: center; margin-top: 20px;">
+        <span><span class="legend-dot done"></span>Scritto / In review</span>
+        <span><span class="legend-dot active"></span>In scrittura</span>
+        <span><span class="legend-dot pending"></span>Da scrivere</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEZIONE 3: ARCHITETTURA -->
   <div class="section">
     <div class="section-label">Architettura</div>
     <h2>19 flow in 3 fasi</h2>
@@ -461,7 +633,7 @@
         <div class="phase-header">
           <div class="phase-number">1</div>
           <div class="phase-title">Revenue e acquisizione</div>
-          <div class="phase-timing">Aprile settimana 3-4</div>
+          <div class="phase-status done">In review</div>
         </div>
 
         <div class="flow-card">
@@ -469,9 +641,9 @@
           <div class="flow-content">
             <div class="flow-name">Carrello Abbandonato</div>
             <div class="flow-meta">
-              <span>+4h → +16h → +2gg</span>
-              <span>Split nuovo/esistente</span>
+              <span>+4h → +16h → +2gg · split nuovo/esistente</span>
               <div class="flow-emails">3 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -483,6 +655,7 @@
             <div class="flow-meta">
               <span>10 giorni · focus anti-aging 40+</span>
               <div class="flow-emails">5 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -494,6 +667,7 @@
             <div class="flow-meta">
               <span>12 giorni · focus collagene</span>
               <div class="flow-emails">6 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -503,8 +677,9 @@
           <div class="flow-content">
             <div class="flow-name">Authority Flow</div>
             <div class="flow-meta">
-              <span>14 giorni · taglio editoriale</span>
-              <div class="flow-emails">5 email</div>
+              <span>14 giorni · taglio editoriale, scienza</span>
+              <div class="flow-emails">6 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -516,6 +691,7 @@
             <div class="flow-meta">
               <span>Max 1 volta ogni 30gg</span>
               <div class="flow-emails">2 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -525,8 +701,9 @@
           <div class="flow-content">
             <div class="flow-name">Conversione</div>
             <div class="flow-meta">
-              <span>32 giorni · scienza, stile di vita, social proof, obiezioni</span>
+              <span>32 giorni · scienza, obiezioni, social proof</span>
               <div class="flow-emails">10 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -537,7 +714,7 @@
         <div class="phase-header">
           <div class="phase-number">2</div>
           <div class="phase-title">Post-acquisto</div>
-          <div class="phase-timing">Maggio settimana 1</div>
+          <div class="phase-status active">In scrittura</div>
         </div>
 
         <div class="flow-card">
@@ -545,8 +722,9 @@
           <div class="flow-content">
             <div class="flow-name">Post Purchase — Nuovo cliente</div>
             <div class="flow-meta">
-              <span>29 giorni · contenuto dinamico per prodotto</span>
+              <span>32 giorni · 14 blocchi dinamici per prodotto</span>
               <div class="flow-emails">6 email</div>
+              <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
@@ -558,6 +736,7 @@
             <div class="flow-meta">
               <span>Snello, 2 touchpoint</span>
               <div class="flow-emails">2 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -568,7 +747,7 @@
         <div class="phase-header">
           <div class="phase-number">3</div>
           <div class="phase-title">Retention e lifecycle</div>
-          <div class="phase-timing">Maggio settimana 2-4</div>
+          <div class="phase-status pending">Da scrivere</div>
         </div>
 
         <div class="flow-card">
@@ -578,6 +757,7 @@
             <div class="flow-meta">
               <span>Cross-sell + riacquisto · timing per prodotto</span>
               <div class="flow-emails">18 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -589,6 +769,7 @@
             <div class="flow-meta">
               <span>85gg + Klaviyo AI · split engaged/disengaged</span>
               <div class="flow-emails">6 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -600,6 +781,7 @@
             <div class="flow-meta">
               <span>Critico per Youth / Jeunesse</span>
               <div class="flow-emails">1 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -611,6 +793,7 @@
             <div class="flow-meta">
               <span>Protegge deliverability</span>
               <div class="flow-emails">2 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -622,6 +805,7 @@
             <div class="flow-meta">
               <span>Club → Silver → Gold → Elite</span>
               <div class="flow-emails">4 email</div>
+              <span class="flow-state pending">Da scrivere</span>
             </div>
           </div>
         </div>
@@ -629,7 +813,7 @@
     </div>
   </div>
 
-  <!-- SEZIONE 3: PERCORSO CLIENTE -->
+  <!-- SEZIONE 4: PERCORSO CLIENTE -->
   <div class="section">
     <div class="section-label">Percorso cliente</div>
     <h2>Cosa succede dal primo contatto all'acquisto</h2>
@@ -662,8 +846,8 @@
           <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div class="journey-info">
-          <h4>Acquista? → Post Purchase</h4>
-          <p>Benvenuto → Istruzioni uso → Ottimizza → Aspettative → Recensione. Contenuto specifico per prodotto.</p>
+          <h4>Acquista? → Post Purchase (32 giorni)</h4>
+          <p>Benvenuto → Istruzioni (dinamiche per prodotto) → Aspettative (dinamiche per categoria) → Ottimizza → Social proof (Flaminia) → Richiesta recensione (Flaminia)</p>
           <div class="journey-day">Se acquista in qualsiasi momento</div>
         </div>
       </div>
@@ -673,8 +857,8 @@
           <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
         </div>
         <div class="journey-info">
-          <h4>Non acquista? → Authority Flow (5 email)</h4>
-          <p>Contenuto editoriale: carenze nutrizionali, vitamina D, metilazione. Taglio scientifico, nessun pitch diretto. La tua voce.</p>
+          <h4>Non acquista? → Authority Flow (6 email)</h4>
+          <p>Carenze nutrizionali → VNR vs apporto massimo legale → Vitamina D → Metilazione → FAQ → Chiusura editoriale. Taglio scientifico, nessun pitch diretto. La tua voce.</p>
           <div class="journey-day">Giorni 12-26</div>
         </div>
       </div>
@@ -714,10 +898,10 @@
     </div>
   </div>
 
-  <!-- SEZIONE 4: DECISIONI -->
+  <!-- SEZIONE 5: DECISIONI CHIAVE -->
   <div class="section">
     <div class="section-label">Decisioni chiave</div>
-    <h2>6 scelte strategiche da confermare</h2>
+    <h2>Le 6 scelte strategiche dietro il piano</h2>
 
     <div class="decisions">
       <div class="decision">
@@ -731,8 +915,8 @@
       <div class="decision">
         <div class="decision-icon">2</div>
         <div>
-          <h4>Post-purchase: un unico flow con contenuto dinamico per prodotto</h4>
-          <p>Chi compra Elisir vede le istruzioni di Elisir. Chi compra Elisir + Jeunesse vede entrambe. Un solo flow da gestire, non 5 paralleli. Semplice da mantenere su Klaviyo.</p>
+          <h4>Post-purchase: un unico flow con blocchi dinamici per prodotto</h4>
+          <p>Chi compra Elisir vede le istruzioni di Elisir. Chi compra Elisir + Jeunesse vede entrambe. Un solo flow da gestire, non 14 paralleli. Le istruzioni, le aspettative e il social proof sono dinamici, basati sugli effettivi prodotti dell'ordine.</p>
         </div>
       </div>
 
@@ -770,11 +954,44 @@
     </div>
   </div>
 
-  <!-- SEZIONE 5: MITTENTI -->
+  <!-- SEZIONE 6: METODO DI LAVORO -->
+  <div class="section">
+    <div class="section-label">Metodo di lavoro</div>
+    <h2>Come garantiamo l'accuratezza</h2>
+    <p>Per un brand di integratori la credibilità si gioca sui dettagli: dosaggi, ingredienti, forme vitaminiche, claim scientifici. Un singolo errore mina la fiducia di un cliente, soprattutto quello informato. Per questo ogni email passa attraverso un processo rigoroso prima del tuo via libera.</p>
+
+    <div class="method-box">
+      <h4>1. Scrittura basata su fonti autoritarie</h4>
+      <p>Le informazioni tecniche su prodotti vengono SEMPRE da:</p>
+      <ul class="method-list">
+        <li><strong>Schede prodotto</strong> ufficiali (fonte primaria, basata sulle etichette e sulle tue interviste)</li>
+        <li><strong>FAQ del sito</strong> (fonte secondaria, per integrare)</li>
+        <li><strong>Tue dichiarazioni dirette</strong> registrate nella documentazione del progetto</li>
+      </ul>
+      <p>Le recensioni dei clienti sono verificate verbatim dal CSV di export delle recensioni WooCommerce (418 recensioni totali, file aggiornato 2026-05-11). Nessuna recensione inventata o riformulata.</p>
+    </div>
+
+    <div class="method-box">
+      <h4>2. Audit di fact-checking prima del rilascio</h4>
+      <p>Prima che qualsiasi email arrivi nella tua review, viene eseguito un audit sistematico contro le schede prodotto. Audit fatti finora:</p>
+      <ul class="method-list">
+        <li>Audit Fase 1 — corretti 3 errori critici (NMN→NR, "più 34 nutrienti", Vit C liposomiale in Revolution)</li>
+        <li>Audit dosaggi Post Purchase — corretti 7 errori critici (tacche misurino, dosaggi inventati, Elisir Basic alternanza stagionale, Artosan/FANS, Renaissance ciclo, Testoplus dose, switch Youth/Jeunesse)</li>
+        <li>Audit aspettative — verificate timeline contro ogni "Sezione 3.3 Timeline dei Risultati Attesi" delle schede prodotto</li>
+      </ul>
+    </div>
+
+    <div class="method-box">
+      <h4>3. Versioning continuo</h4>
+      <p>Ogni modifica alle email aggiorna versione e data. Lo storico delle modifiche è tracciato su Git: puoi vedere ogni cambiamento, chi l'ha proposto, e tornare indietro se necessario. Niente perde mai.</p>
+    </div>
+  </div>
+
+  <!-- SEZIONE 7: MITTENTI -->
   <div class="section">
     <div class="section-label">Mittenti</div>
     <h2>Chi firma cosa</h2>
-    <p>La tua autorità è un asset. Non va sprecata su email operative. Firmi solo le email dove la tua voce fa la differenza.</p>
+    <p>La tua autorità è un asset. Non va sprecata su email operative. Firmi solo le email dove la tua voce fa la differenza. Per il customer care e i check-in più umani abbiamo aggiunto Flaminia come secondo mittente: un punto di contatto in carne e ossa che ascolta i feedback dei clienti.</p>
 
     <div class="mittenti-grid">
       <div class="mittente-card">
@@ -791,7 +1008,7 @@
 
       <div class="mittente-card">
         <div class="name">Team Paleocomplex</div>
-        <div class="role">Le comunicazioni operative</div>
+        <div class="role">Comunicazioni operative</div>
         <div class="flows">
           Carrello abbandonato<br>
           Browse abandonment<br>
@@ -802,18 +1019,18 @@
       </div>
 
       <div class="mittente-card">
-        <div class="name">Persona CS</div>
-        <div class="role">Il tocco umano</div>
+        <div class="name">Flaminia</div>
+        <div class="role">Customer Care</div>
         <div class="flows">
+          Social proof + check-in<br>
           Richiesta recensione<br>
-          <br>
-          <span style="color:#C4BFB3; font-size:11px">Se non c'è una persona<br>dedicata, firma il Team</span>
+          Risposta ai feedback dei clienti
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SEZIONE 6: CROSS-SELL -->
+  <!-- SEZIONE 8: CROSS-SELL -->
   <div class="section">
     <div class="section-label">Cross-sell</div>
     <h2>Matrice prodotti complementari</h2>
@@ -869,17 +1086,18 @@
 
   <!-- CTA: leggi le email -->
   <div class="cta-section">
-    <h2>Leggi tutte le email complete</h2>
-    <p>Ogni flow è scritto per intero: oggetti, preview text, corpo email, recensioni, CTA. Tutto il materiale operativo è su GitHub, organizzato per fase.</p>
+    <h2>Leggi le email pronte per la review</h2>
+    <p>Ogni flow ha il suo file dettagliato: oggetti, preview text, corpo email, blocchi dinamici, recensioni, CTA. Tutto su GitHub, organizzato per fase.</p>
     <div class="cta-buttons">
-      <a href="https://github.com/giavara/paleo/tree/main/automations/fase1" class="cta-button" target="_blank">Vai alle email — Fase 1</a>
-      <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutta la cartella automazioni</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations/fase1" class="cta-button" target="_blank">Fase 1 — 6 flow</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations/fase2" class="cta-button" target="_blank">Fase 2 — Post-acquisto</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutta la cartella</a>
     </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <p>Paleocomplex — Piano Automazioni Klaviyo — Aprile 2026</p>
+    <p>Paleocomplex — Piano Automazioni Klaviyo — Maggio 2026</p>
     <p style="margin-top: 4px;">Repository: <a href="https://github.com/giavara/paleo" target="_blank">github.com/giavara/paleo</a></p>
   </div>
 
