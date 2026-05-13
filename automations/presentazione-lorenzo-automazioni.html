@@ -530,7 +530,7 @@
   <div class="container">
     <h1>Paleocomplex</h1>
     <div class="subtitle">Automazioni Email Klaviyo — Piano Strategico</div>
-    <div class="version">v3.0 · aggiornata maggio 2026</div>
+    <div class="version">v4.0 · aggiornata 13 maggio 2026</div>
   </div>
 </div>
 
@@ -539,20 +539,20 @@
   <!-- SEZIONE 1: NUMERI -->
   <div class="section">
     <div class="section-label">Il quadro</div>
-    <h2>Da 218 email a 72. Ogni email ha un ruolo preciso.</h2>
-    <p>Le vecchie automazioni ActiveCampaign avevano 218 email che generavano €195K di revenue totale. Il problema: il 50% delle email generava meno del 5% del revenue. Troppe email, troppo rumore, risultati concentrati su pochissime.</p>
-    <p>La nuova architettura Klaviyo riduce il volume del 67% ma mantiene (e migliora) la copertura su tutti i momenti critici del percorso cliente. Ogni contatto riceve quasi 2 mesi di contenuti automatici personalizzati prima di entrare nella newsletter.</p>
+    <h2>33 flow modulari. Ogni email ha un ruolo preciso.</h2>
+    <p>Le vecchie automazioni ActiveCampaign avevano 218 email distribuite in 9 flow monolitici che generavano €195K di revenue totale. Il problema: il 50% delle email generava meno del 5% del revenue. Troppe email, troppo rumore, risultati concentrati su pochissime.</p>
+    <p>La nuova architettura Klaviyo è modulare: 33 flow specializzati che girano in parallelo. Un cliente medio riceve solo 6-12 email nel primo mese (in base ai prodotti acquistati), ognuna pertinente al suo percorso. Ogni contatto riceve fino a 2 mesi di contenuti automatici personalizzati prima di entrare nella newsletter.</p>
 
     <div class="stats">
       <div class="stat">
-        <div class="number">19</div>
+        <div class="number">33</div>
         <div class="label">Flow automatici</div>
         <div class="detail">da 9 vecchi</div>
       </div>
       <div class="stat">
-        <div class="number">72</div>
+        <div class="number">114</div>
         <div class="label">Email totali</div>
-        <div class="detail">da 218 vecchie</div>
+        <div class="detail">6-12 per cliente medio</div>
       </div>
       <div class="stat">
         <div class="number">3</div>
@@ -589,15 +589,14 @@
 
       <div class="progress-bar-wrapper">
         <div class="progress-header">
-          <div class="progress-title">Fase 2 — Post-acquisto</div>
-          <div class="progress-count">1/2 flow scritti · 1 in scrittura</div>
+          <div class="progress-title">Fase 2 — Post-acquisto (architettura rinnovata)</div>
+          <div class="progress-count">16/16 flow scritti · in review</div>
         </div>
         <div class="progress-track">
-          <div class="progress-fill-done" style="width: 50%"></div>
-          <div class="progress-fill-active" style="width: 50%"></div>
+          <div class="progress-fill-done" style="width: 100%"></div>
         </div>
         <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
-          Post Purchase Nuovo Cliente (6 email + 14 blocchi dinamici): scritto, in review. Post Purchase Cliente Ricorrente: prossimo.
+          Architettura a doppio binario: 2 flow stato cliente (Primo Cliente / Ricorrente) + 14 flow prodotto (uno per SKU). Girano in parallelo: ogni cliente riceve il flow giusto per ogni prodotto acquistato per la prima volta.
         </div>
       </div>
 
@@ -625,7 +624,8 @@
   <!-- SEZIONE 3: ARCHITETTURA -->
   <div class="section">
     <div class="section-label">Architettura</div>
-    <h2>19 flow in 3 fasi</h2>
+    <h2>33 flow in 3 fasi</h2>
+    <p style="margin-bottom: 24px;">La novità della Fase 2: invece di 1 flow gigante con 14 blocchi condizionali, abbiamo 14 flow indipendenti (uno per ogni prodotto). Più 2 flow stato cliente. Tutti girano in parallelo, i timing non si sovrappongono. Vantaggio: un cliente esistente che compra un prodotto nuovo riceve sempre l'educazione specifica di quel prodotto, anche se non è il suo primo ordine in assoluto.</p>
 
     <div class="flow-map">
       <!-- FASE 1 -->
@@ -713,30 +713,45 @@
       <div class="phase">
         <div class="phase-header">
           <div class="phase-number">2</div>
-          <div class="phase-title">Post-acquisto</div>
-          <div class="phase-status active">In scrittura</div>
+          <div class="phase-title">Post-acquisto (doppio binario)</div>
+          <div class="phase-status done">In review</div>
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">07</div>
+          <div class="flow-badge">06</div>
           <div class="flow-content">
-            <div class="flow-name">Post Purchase — Nuovo cliente</div>
+            <div class="flow-name">Stato cliente — Primo Cliente Assoluto</div>
             <div class="flow-meta">
-              <span>32 giorni · 14 blocchi dinamici per prodotto</span>
-              <div class="flow-emails">6 email</div>
+              <span>32 giorni · benvenuto + ottimizza abitudini + recensione brand</span>
+              <div class="flow-emails">3 email</div>
               <span class="flow-state review">Review</span>
             </div>
           </div>
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">08</div>
+          <div class="flow-badge">07</div>
           <div class="flow-content">
-            <div class="flow-name">Post Purchase — Cliente ricorrente</div>
+            <div class="flow-name">Stato cliente — Cliente Ricorrente</div>
             <div class="flow-meta">
-              <span>Snello, 2 touchpoint</span>
+              <span>3 giorni · grazie + cross-sell intelligente (esclude prodotti già posseduti)</span>
               <div class="flow-emails">2 email</div>
-              <span class="flow-state pending">Da scrivere</span>
+              <span class="flow-state review">Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-badge">08-21</div>
+          <div class="flow-content">
+            <div class="flow-name">Flow prodotto × 14 (uno per SKU)</div>
+            <div class="flow-meta">
+              <span>Istruzioni + Aspettative + Social proof · trigger su SKU "mai acquistato prima"</span>
+              <div class="flow-emails">42 email (3 × 14)</div>
+              <span class="flow-state review">Review</span>
+            </div>
+            <div style="margin-top: 12px; font-size: 12px; color: #6A6A6A; line-height: 1.5;">
+              Paleocomplex, Revolution, Elisir, Elisir Basic, Essentiel, Youth, Jeunesse, Hurricane, Armageddon, Artosan, Liverty, Testoplus, Renaissance, Vitamina D
             </div>
           </div>
         </div>
@@ -751,7 +766,7 @@
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">09-14</div>
+          <div class="flow-badge">22-27</div>
           <div class="flow-content">
             <div class="flow-name">Retention × 6 prodotti</div>
             <div class="flow-meta">
@@ -763,7 +778,7 @@
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">15-16</div>
+          <div class="flow-badge">28-29</div>
           <div class="flow-content">
             <div class="flow-name">Win-back (timing + predittivo)</div>
             <div class="flow-meta">
@@ -775,7 +790,7 @@
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">17</div>
+          <div class="flow-badge">30</div>
           <div class="flow-content">
             <div class="flow-name">Back in Stock</div>
             <div class="flow-meta">
@@ -787,7 +802,7 @@
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">18</div>
+          <div class="flow-badge">31</div>
           <div class="flow-content">
             <div class="flow-name">Sunset — Pulizia lista</div>
             <div class="flow-meta">
@@ -799,7 +814,7 @@
         </div>
 
         <div class="flow-card">
-          <div class="flow-badge">19</div>
+          <div class="flow-badge">32</div>
           <div class="flow-content">
             <div class="flow-name">Programma Fedeltà</div>
             <div class="flow-meta">
@@ -846,8 +861,8 @@
           <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div class="journey-info">
-          <h4>Acquista? → Post Purchase (32 giorni)</h4>
-          <p>Benvenuto → Istruzioni (dinamiche per prodotto) → Aspettative (dinamiche per categoria) → Ottimizza → Social proof (Flaminia) → Richiesta recensione (Flaminia)</p>
+          <h4>Acquista? → Post Purchase a doppio binario (32 giorni)</h4>
+          <p>Binario A (stato cliente): Benvenuto Lorenzo → Ottimizza abitudini → Recensione brand (Flaminia). Binario B (prodotto): per ogni prodotto acquistato per la prima volta, Istruzioni → Aspettative → Social proof. I due binari girano in parallelo: timing alternati, mai 2 email lo stesso giorno.</p>
           <div class="journey-day">Se acquista in qualsiasi momento</div>
         </div>
       </div>
@@ -978,6 +993,7 @@
         <li>Audit Fase 1 — corretti 3 errori critici (NMN→NR, "più 34 nutrienti", Vit C liposomiale in Revolution)</li>
         <li>Audit dosaggi Post Purchase — corretti 7 errori critici (tacche misurino, dosaggi inventati, Elisir Basic alternanza stagionale, Artosan/FANS, Renaissance ciclo, Testoplus dose, switch Youth/Jeunesse)</li>
         <li>Audit aspettative — verificate timeline contro ogni "Sezione 3.3 Timeline dei Risultati Attesi" delle schede prodotto</li>
+        <li>Audit recensioni flow prodotto 08-21 — per ogni SKU selezione top 3 recensioni verificate dal CSV (filtrato per product_sku), preferenza per recensioni con dati misurabili (analisi del sangue, tempistiche specifiche), pulizia editoriale (CAPS, refusi) ma mai riformulazione del contenuto</li>
       </ul>
     </div>
 
@@ -1001,7 +1017,8 @@
           Welcome series<br>
           Authority flow<br>
           Flow conversione<br>
-          Post-purchase educative<br>
+          Flow prodotto (istruzioni + aspettative)<br>
+          Email "benvenuto" e "grazie" stato cliente<br>
           Win-back
         </div>
       </div>
@@ -1022,8 +1039,9 @@
         <div class="name">Flaminia</div>
         <div class="role">Customer Care</div>
         <div class="flows">
-          Social proof + check-in<br>
-          Richiesta recensione<br>
+          Social proof flow prodotto<br>
+          Cross-sell cliente ricorrente<br>
+          Richiesta recensione brand<br>
           Risposta ai feedback dei clienti
         </div>
       </div>
@@ -1090,7 +1108,7 @@
     <p>Ogni flow ha il suo file dettagliato: oggetti, preview text, corpo email, blocchi dinamici, recensioni, CTA. Tutto su GitHub, organizzato per fase.</p>
     <div class="cta-buttons">
       <a href="https://github.com/giavara/paleo/tree/main/automations/fase1" class="cta-button" target="_blank">Fase 1 — 6 flow</a>
-      <a href="https://github.com/giavara/paleo/tree/main/automations/fase2" class="cta-button" target="_blank">Fase 2 — Post-acquisto</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations/fase2" class="cta-button" target="_blank">Fase 2 — 16 flow (2 stato + 14 prodotto)</a>
       <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutta la cartella</a>
     </div>
   </div>
