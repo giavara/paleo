@@ -70,7 +70,7 @@ Se hai anche Armageddon nell'ordine, puoi miscelarli: 30-40 minuti prima dell'al
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie cardiovascolari, ipertensione), scrivici a **ordini@paleocomplex.com**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie cardiovascolari, ipertensione), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 
@@ -121,7 +121,7 @@ La creatina raggiunge la saturazione completa nei muscoli. Tieni presente che as
 
 Se la prima volta che lo prendi senti subito una carica importante, è normale. Se invece sei abituato a pre-workout molto stimolanti, Hurricane può sembrarti "morbido": è una scelta progettuale. Abbiamo voluto un prodotto efficace che non desse picchi di adrenalina seguiti da crash, ma un'energia sostenuta per tutta la sessione.
 
-**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, scrivici a **ordini@paleocomplex.com**.
+**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

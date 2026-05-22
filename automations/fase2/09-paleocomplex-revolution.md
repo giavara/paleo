@@ -62,7 +62,7 @@ Il tuo Paleocomplex Revolution è in viaggio (se non te l'ha già consegnato il 
 
 Il tuo Revolution è un multivitaminico in polvere a dose modulabile, con antiossidanti avanzati rispetto al Paleocomplex base (glutatione liposomiale, ubiquinolo, astaxantina, vitamina C liposomiale). Il misurino ha tacche a 2, 3 e 5 ml. La dose consigliata per adulti è di 2 misurini al giorno, riempiti fino alla tacca 5 (10 ml totali). Puoi modulare la quantità in base alle tue esigenze: ogni nutriente scala proporzionalmente alla dose. Per la vitamina D, ad esempio: 2 ml = 2.000 UI, 5 ml = 5.000 UI, 10 ml (2 misurini) = 10.000 UI.
 
-Se hai dubbi su quale dose è adatta a te, scrivici a **ordini@paleocomplex.com**.
+Se hai dubbi su quale dose è adatta a te, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
 
 **Come prenderlo**
 
@@ -74,7 +74,7 @@ Il prodotto contiene Omega-3 da krill. Può capitare di percepire un leggero odo
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici a **ordini@paleocomplex.com**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente dalle prime settimane di integrazione. Spoiler: non è quello che ti dicono le pubblicità.
 
@@ -133,7 +133,7 @@ L'integrazione non è una pillola che provi per giudicarla. È un investimento s
 
 Se sei a 5 giorni dall'inizio e "non senti niente", è perfettamente normale. Continua. Tra qualche settimana riparliamo.
 
-**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, scrivici a **ordini@paleocomplex.com**.
+**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

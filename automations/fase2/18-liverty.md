@@ -70,7 +70,7 @@ Se hai calcoli biliari o patologie epatiche, parlane con il tuo medico prima di 
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici a **ordini@paleocomplex.com**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 
@@ -123,7 +123,7 @@ Protezione epatica costante. Particolarmente utile per chi vive in città, consu
 
 Il modo migliore per misurare l'effetto di Liverty è fare un'analisi prima di iniziare e una dopo 2-3 mesi: transaminasi (ALT, AST, GGT), profilo lipidico, ferritina. Sono parametri sensibili che ti dicono in modo oggettivo se il prodotto sta facendo il suo lavoro.
 
-**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, scrivici a **ordini@paleocomplex.com**.
+**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

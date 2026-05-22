@@ -100,7 +100,7 @@ Ecco cosa dicono alcune persone che lo usano:
 
 **[BLOCCO RECENSIONI DINAMICO: 2-3 recensioni filtrate per prodotto visualizzato]**
 
-Se hai domande, scrivici a **info@paleocomplex.com**. Ti rispondiamo personalmente.
+Se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Ti rispondiamo personalmente.
 
 **[CTA: Scopri {{ event.Name }}]({{ event.URL }})**
 

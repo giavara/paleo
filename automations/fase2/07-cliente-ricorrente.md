@@ -84,7 +84,7 @@ L'ordine ti è già stato confermato dal sistema (l'email con il riepilogo è ar
 
 **Tra qualche giorno** Flaminia ti scriverà con un suggerimento concreto: un prodotto che, dato quello che hai nel tuo protocollo, potrebbe completarlo bene. Niente forzature, solo logica di combinazioni.
 
-Per qualsiasi cosa scrivici a **ordini@paleocomplex.com**.
+Per qualsiasi cosa contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

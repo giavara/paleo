@@ -58,13 +58,13 @@ Il tuo Testoplus è in viaggio (se non te l'ha già consegnato il corriere mentr
 
 **Dosaggio standard per uomini**
 
-Da 4 a 6 capsule al giorno. Si parte con 2 dopo colazione e 2 dopo pranzo; se serve si aggiungono 2 dopo cena.
+Da 4 a 6 compresse al giorno. Si parte con 2 dopo colazione e 2 dopo pranzo; se serve si aggiungono 2 dopo cena.
 
-In casi specifici (sovrappeso/obesi con aromatasi elevata) si può arrivare fino a 8 capsule per un breve periodo, distribuendole nella giornata (colazione, pranzo, spuntino, cena), poi scalare gradualmente a 6 e poi a 4. Ma è una scelta da prendere con il proprio medico.
+In casi specifici (sovrappeso/obesi con aromatasi elevata) si può arrivare fino a 8 compresse per un breve periodo, distribuendole nella giornata (colazione, pranzo, spuntino, cena), poi scalare gradualmente a 6 e poi a 4. Ma è una scelta da prendere con il proprio medico.
 
 **Dosaggio per donne**
 
-Per le donne in menopausa o con calo della libido, il dosaggio è ridotto a 2-4 capsule al giorno.
+Per le donne in menopausa o con calo della libido, il dosaggio è ridotto a 2-4 compresse al giorno.
 
 **Avvertenza importante**
 
@@ -72,7 +72,7 @@ Non usare in presenza di disfunzioni della tiroide e non combinare con farmaci a
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici a **ordini@paleocomplex.com**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 

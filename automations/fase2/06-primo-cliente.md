@@ -109,7 +109,7 @@ Nelle prossime settimane però ti scriverò io, di persona. Non sono email di ve
 
 Niente promesse esagerate. Solo informazioni che la maggior parte dei brand di integratori non si prende il tempo di darti.
 
-Per qualsiasi cosa scrivici a **ordini@paleocomplex.com**: rispondiamo sempre, di solito entro la giornata lavorativa.
+Per qualsiasi cosa contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**: rispondiamo sempre, di solito entro la giornata lavorativa.
 
 A domani.
 
@@ -156,7 +156,7 @@ Ci sono cinque abitudini che amplificano l'effetto di qualunque integratore tu p
 
 Se fai queste cinque cose, il tuo integratore lavora al massimo del suo potenziale. Se non le fai, anche il miglior integratore del mondo rende la metà.
 
-Se nel frattempo hai domande, scrivici a info@paleocomplex.com.
+Se nel frattempo hai domande, contattaci dalla [pagina contatti del sito](https://paleocomplex.com/contatti/).
 
 Un forte abbraccio
 Lorenzo Zarone
