@@ -110,7 +110,7 @@ Carta di credito, PayPal (anche a rate senza costi aggiuntivi), e contrassegno (
 
 Abbiamo preparato una guida che ti aiuta a trovare il prodotto giusto in base alla tua età, ai tuoi obiettivi e al tuo budget. **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
 
-Se preferisci un consiglio personalizzato, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)** e ti rispondiamo personalmente.
+Se preferisci un consiglio personalizzato, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)** e ti rispondiamo personalmente.
 
 **[DYNAMIC TABLE BLOCK — prodotti nel carrello]**
 

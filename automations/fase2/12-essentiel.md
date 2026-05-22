@@ -68,7 +68,7 @@ Sciogli la polvere in un bicchiere di acqua fresca o a temperatura ambiente. Mai
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente dalle prime settimane di integrazione. Spoiler: non è quello che ti dicono le pubblicità.
 
@@ -127,7 +127,7 @@ L'integrazione non è una pillola che provi per giudicarla. È un investimento s
 
 Se sei a 5 giorni dall'inizio e "non senti niente", è perfettamente normale. Continua. Tra qualche settimana riparliamo.
 
-**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
+**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

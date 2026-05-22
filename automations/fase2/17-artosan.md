@@ -70,7 +70,7 @@ Artosan può essere assunto insieme ai comuni antinfiammatori (FANS come ibuprof
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 
@@ -123,7 +123,7 @@ Mantenimento della protezione anti-infiammatoria e prevenzione del peggioramento
 
 **Una nota importante**
 
-Se dopo 2-3 settimane il dolore non si è attenuato, prima di abbandonare il prodotto verifica due cose: (1) stai prendendo la dose corretta per la fase acuta (2-3 capsule/giorno, non 1)? (2) il dolore potrebbe avere origine non infiammatoria, e in quel caso serve un'indagine medica. Contattaci dalla [pagina contatti del sito](https://paleocomplex.com/contatti/) se vuoi confrontarti.
+Se dopo 2-3 settimane il dolore non si è attenuato, prima di abbandonare il prodotto verifica due cose: (1) stai prendendo la dose corretta per la fase acuta (2-3 capsule/giorno, non 1)? (2) il dolore potrebbe avere origine non infiammatoria, e in quel caso serve un'indagine medica. Scrivici dalla nostra [pagina di supporto](https://paleocomplex.com/contatti/) se vuoi confrontarti.
 
 **Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando.
 

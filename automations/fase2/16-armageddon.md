@@ -72,7 +72,7 @@ Se hai anche Hurricane nell'ordine, puoi miscelarli prima dell'allenamento. È u
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie renali, dieta specifica), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie renali, dieta specifica), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 
@@ -123,7 +123,7 @@ Se hai più di 40 anni e ti alleni con i pesi, Armageddon è un alleato contro l
 
 Gli aminoacidi non sono un prodotto da provare per una settimana e giudicare. Sono un supporto strutturale al tuo allenamento: la differenza la noti quando ti chiedi "perché mi sto recuperando meglio?". È una domanda che arriva dopo 3-4 settimane, non dopo 3-4 giorni.
 
-**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**.
+**Più avanti** Flaminia, una persona del nostro team, ti scriverà per sentire come stai andando. Nel frattempo, se hai domande, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone

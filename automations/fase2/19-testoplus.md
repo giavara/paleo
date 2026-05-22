@@ -72,7 +72,7 @@ Non usare in presenza di disfunzioni della tiroide e non combinare con farmaci a
 
 **Per dubbi specifici**
 
-Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), contattaci dalla **[pagina contatti del sito](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
+Se hai dubbi sul dosaggio o vuoi adattare l'assunzione a una tua condizione (gravidanza, allattamento, patologie, farmaci), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**. Per qualunque altra domanda sui prodotti, la pagina **[FAQ del sito](https://paleocomplex.com/faq/)** copre quasi tutti i casi.
 
 **Tra qualche giorno** ti dico cosa aspettarti realisticamente.
 
