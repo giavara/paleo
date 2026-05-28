@@ -25,7 +25,7 @@ Il Browse Abandonment è il touchpoint più leggero di tutto il sistema. Non dev
 ## Configurazione Klaviyo
 
 **Trigger:** Viewed Product
-**Mittente:** Team Paleocomplex (tutte le email)
+**Mittente:** Flaminia (Customer Care) — tutte le email del flow
 **Filtri profilo:**
 - Placed Order zero times since starting this flow (per quel prodotto specifico)
 - Started Checkout zero times since starting this flow
@@ -72,7 +72,8 @@ Se non sai quale prodotto è il più adatto a te, abbiamo una guida rapida che t
 
 **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
@@ -104,7 +105,8 @@ Se hai domande, scrivici dalla nostra **[pagina di supporto](https://paleocomple
 
 **[CTA: Scopri {{ event.Name }}]({{ event.URL }})**
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 

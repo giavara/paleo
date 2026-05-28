@@ -215,8 +215,9 @@ Punti chiave:
 | Mittente | Flow | Firma |
 |----------|------|-------|
 | **Lorenzo Zarone** | Welcome (tutte), Authority (tutte), Conversione, Flow prodotto 08-21 (email 1 e 2), Flow stato cliente 06-07 (email 1 e 2 primo cliente, email 1 ricorrente), Win-back, Email "ultima occasione" | Un forte abbraccio · Lorenzo Zarone · Fondatore di Paleocomplex |
-| **Flaminia (Customer Care)** | Flow prodotto 08-21 email 3 social proof, Flow stato cliente 06 email 3 recensione + 07 email 2 cross-sell | Flaminia · Customer Care Paleocomplex |
-| **Team Paleocomplex** | Carrello abbandonato, Browse abandonment, Back in stock, Programma fedeltà, Sunset | Team Paleocomplex |
+| **Flaminia (Customer Care)** | Tutto il resto: Carrello abbandonato, Browse abandonment, Flow prodotto 08-21 email 3 social proof, Flow stato cliente 06 email 3 recensione + 07 email 2 cross-sell, Back in stock, Programma fedeltà, Sunset | Flaminia · Customer Care Paleocomplex |
+
+**Nota**: rimosso il mittente "Team Paleocomplex" — sterile e impersonale. Flaminia diventa il volto unico del customer care per tutte le comunicazioni non-Lorenzo. Lorenzo resta la voce del fondatore per le comunicazioni educative/brand. Due voci sole, complementari e riconoscibili.
 
 ### Open loop (cliffhanger) tra email
 

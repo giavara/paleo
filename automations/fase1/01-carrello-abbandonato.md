@@ -7,7 +7,7 @@
 ## Configurazione Klaviyo
 
 **Trigger:** Started Checkout
-**Mittente:** Team Paleocomplex (tutte le email del flow)
+**Mittente:** Flaminia (Customer Care) — tutte le email del flow
 **Filtri profilo:**
 - Placed Order zero times since starting this flow
 - Has not been in this flow in the last 7 days
@@ -55,7 +55,8 @@ Il tuo carrello è ancora pronto.
 **[CTA: Completa il tuo ordine]**
 (link a homepage / carrello)
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
@@ -116,7 +117,8 @@ Se preferisci un consiglio personalizzato, scrivici dalla nostra **[pagina di su
 
 **[CTA: Torna al tuo carrello]**
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
@@ -148,7 +150,8 @@ Non lasciare che una pausa diventi un'interruzione.
 
 **[CTA: Completa il tuo ordine]**
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
@@ -186,7 +189,8 @@ Il tuo carrello non resterà attivo per sempre. Se quei prodotti ti interessavan
 
 **[CTA: Completa il tuo ordine]**
 
-Team Paleocomplex
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
