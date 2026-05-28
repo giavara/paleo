@@ -91,7 +91,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se vuoi capire quale dei nostri multivitaminici è il più adatto a te: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se vuoi capire quale dei nostri multivitaminici è il più adatto a te: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -135,7 +135,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se sei pronto a provare anche tu: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se sei pronto a provare anche tu: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -187,7 +187,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se le basi sono in ordine e vuoi fare il passo successivo: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se le basi sono in ordine e vuoi fare il passo successivo: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -235,7 +235,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Nei nostri multivitaminici il rapporto K2/D3 è fisso a 1:10. Quando aumenti la dose, tutti i cofattori scalano proporzionalmente. **[Scopri come sono formulati](https://paleocomplex.com/guida-scelta)**
+P.S. Nei nostri multivitaminici il rapporto K2/D3 è fisso a 1:10. Quando aumenti la dose, tutti i cofattori scalano proporzionalmente. **[Scopri come sono formulati](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -287,7 +287,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con la dose) insieme a K2, magnesio, zinco e tutti i cofattori: **[Scopri quale fa per te](https://paleocomplex.com/guida-scelta)**
+P.S. I nostri multivitaminici contengono D3 da 2.000 a 10.000 UI (modulabile con la dose) insieme a K2, magnesio, zinco e tutti i cofattori: **[Scopri quale fa per te](https://paleocomplex.com/guida-scelta/)**
 
 P.P.S. Sul mio **[canale YouTube](https://www.youtube.com/@paleocomplex)** trovi video di approfondimento sulla vitamina D, i cofattori e molto altro. E se vuoi andare in profondità, il mio libro **["Vitamina D: tutte le bugie smascherate"](https://paleocomplex.com/prodotto/vitamina-d-tutte-le-bugie-smascherate/)** è il riferimento più completo che ho scritto.
 
@@ -335,7 +335,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se vuoi confrontare i nostri prodotti e capire quale si adatta al tuo budget: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se vuoi confrontare i nostri prodotti e capire quale si adatta al tuo budget: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -379,7 +379,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se vuoi iniziare con il piede giusto: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se vuoi iniziare con il piede giusto: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -427,7 +427,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se i numeri ti hanno convinto più delle parole: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se i numeri ti hanno convinto più delle parole: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -477,7 +477,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se il magnesio è uno dei nutrienti che ti mancano, nei nostri multivitaminici è in forma citrato insieme a tutti gli altri cofattori: **[Scopri quale fa per te](https://paleocomplex.com/guida-scelta)**
+P.S. Se il magnesio è uno dei nutrienti che ti mancano, nei nostri multivitaminici è in forma citrato insieme a tutti gli altri cofattori: **[Scopri quale fa per te](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -514,7 +514,7 @@ Ho creato un codice speciale per chi, come te, ha avuto la pazienza di seguire q
 
 Non è il solito sconto. È un invito a fare il primo passo con zero rischi. Non ti è piaciuto? Non riordinare. Ma almeno avrai provato sulla tua pelle (e nelle tue analisi del sangue) cosa significa integrare con dosaggi reali.
 
-Se non sai quale prodotto scegliere: **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+Se non sai quale prodotto scegliere: **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Oppure vai direttamente allo store: **[CTA: Usa il codice PRIMOPASSO](https://paleocomplex.com)**
 

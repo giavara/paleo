@@ -93,7 +93,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbiamo preparato una guida semplice per orientarti: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se vuoi capire quale integrazione potrebbe fare la differenza per te, abbiamo preparato una guida semplice per orientarti: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -171,7 +171,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se vuoi confrontare le nostre etichette con quelle degli integratori che usi adesso, abbiamo una guida per orientarti: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se vuoi confrontare le nostre etichette con quelle degli integratori che usi adesso, abbiamo una guida per orientarti: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -227,7 +227,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2, magnesio, zinco, boro, vitamina A). Il rapporto K2/D3 è fisso a 1:10, così all'aumentare della dose tutti i cofattori scalano proporzionalmente. **[Scopri come sono formulati](https://paleocomplex.com/guida-scelta)**
+P.S. Tutti i nostri multivitaminici contengono D3 insieme ai suoi cofattori (K2, magnesio, zinco, boro, vitamina A). Il rapporto K2/D3 è fisso a 1:10, così all'aumentare della dose tutti i cofattori scalano proporzionalmente. **[Scopri come sono formulati](https://paleocomplex.com/guida-scelta/)**
 
 P.P.S. Se vuoi approfondire davvero la vitamina D, ho scritto 400 pagine sull'argomento: **["Vitamina D: tutte le bugie smascherate"](https://paleocomplex.com/prodotto/vitamina-d-tutte-le-bugie-smascherate/)**. Un medico mi ha scritto che lo tiene in ambulatorio a disposizione dei pazienti.
 
@@ -284,7 +284,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. In tutti i nostri multivitaminici usiamo esclusivamente forme attivate delle vitamine B. Se vuoi verificare le differenze tra forme standard e forme attive, puoi confrontare le etichette dei nostri prodotti con quelle di qualsiasi altro multivitaminico: **[Scopri i nostri prodotti](https://paleocomplex.com/guida-scelta)**
+P.S. In tutti i nostri multivitaminici usiamo esclusivamente forme attivate delle vitamine B. Se vuoi verificare le differenze tra forme standard e forme attive, puoi confrontare le etichette dei nostri prodotti con quelle di qualsiasi altro multivitaminico: **[Scopri i nostri prodotti](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -338,7 +338,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhiata alla nostra guida per trovare il prodotto più adatto: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhiata alla nostra guida per trovare il prodotto più adatto: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 
@@ -380,7 +380,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se un giorno deciderai di prendere sul serio la tua integrazione, abbiamo una guida semplice per aiutarti a scegliere: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+P.S. Se un giorno deciderai di prendere sul serio la tua integrazione, abbiamo una guida semplice per aiutarti a scegliere: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 ---
 

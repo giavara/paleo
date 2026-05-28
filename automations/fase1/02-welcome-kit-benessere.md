@@ -126,7 +126,7 @@ E non solo. Anche con mezzo misurino, Elisir sarebbe comunque di gran lunga supe
 
 Non ti chiedo di credermi sulla parola. Ti chiedo di confrontare le etichette.
 
-**[CTA: Scopri i nostri multivitaminici](https://paleocomplex.com/guida-scelta)**
+**[CTA: Scopri i nostri multivitaminici](https://paleocomplex.com/guida-scelta/)**
 
 Ricorda che hai ancora il tuo sconto di benvenuto: **codice BENVENUTO** per €10 sul primo acquisto.
 
@@ -218,7 +218,7 @@ Il multivitaminico è il punto di partenza. Ma se vuoi andare ancora più a fond
 
 **Jeunesse:** 12g di collagene bovino grass-fed al giorno, acido ialuronico e antiossidanti per pelle, capelli e articolazioni. Quando parliamo di "ricostruzione del collagene" nel report, questo è lo strumento. **€99 per 50 giorni.**
 
-Non sai da dove partire? **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+Non sai da dove partire? **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Ecco cosa dicono alcune delle persone che hanno già fatto questa scelta:
 
@@ -274,7 +274,7 @@ Se non sai da dove partire, il mio consiglio è semplice:
 
 **Vuoi un multivitaminico completo per la tua età?** Abbiamo preparato una guida che ti aiuta a trovare quello giusto in 2 minuti, in base alla tua situazione e ai tuoi obiettivi.
 
-**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 **Vuoi lavorare su pelle, capelli e articolazioni?** [Youth](https://paleocomplex.com/prodotto/youth/) e [Jeunesse](https://paleocomplex.com/prodotto/jeunesse/) sono i nostri integratori di collagene ad alto dosaggio, progettati per essere affiancati al multivitaminico.
 
@@ -343,7 +343,7 @@ Tutte verificate dal file `context/2026 03 31 paleocoplex export-reviews.csv`:
 
 ### Link da verificare prima della pubblicazione
 - Link al PDF del report "7 Strategie Scientifiche" → verificare URL attivo
-- `paleocomplex.com/guida-scelta` → pagina da creare (vedi task-operativo)
+- `https://paleocomplex.com/guida-scelta/` → pagina online
 - Codice BENVENUTO → verificare che sia attivo e configurato correttamente su WooCommerce
 
 ### Confronto prezzi ingredienti (email 2)

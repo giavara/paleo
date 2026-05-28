@@ -260,7 +260,7 @@ Due gesti al giorno, e il tuo corpo ha tutto quello che serve per ricostruire da
 
 Quale multivitaminico scegliere? Dipende dalle tue esigenze. Abbiamo preparato una guida che ti aiuta a trovare quello giusto in base alla tua età e ai tuoi obiettivi.
 
-**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Una nostra cliente l'ha detto meglio di me:
 
@@ -312,7 +312,7 @@ Se non sai da dove partire:
 
 **Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed con 12 nutrienti sinergici tra cui antiossidanti avanzati come astaxantina e estratto di corteccia di pino, €1,98/giorno)
 
-**Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[CTA: Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta)**
+**Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[CTA: Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Oppure vai direttamente allo store: **[CTA: Usa il codice BENVENUTO](https://paleocomplex.com)**
 
@@ -381,6 +381,6 @@ Tutte verificate dal file `context/2026 03 31 paleocoplex export-reviews.csv`:
 
 ### Link da verificare prima della pubblicazione
 - Link al PDF del report unghie/capelli → verificare URL attivo
-- `paleocomplex.com/guida-scelta` → pagina da creare (vedi task-operativo)
+- `https://paleocomplex.com/guida-scelta/` → pagina online
 - Codice BENVENUTO → verificare che sia attivo
 - URL prodotto Youth e Jeunesse → verificare che siano attivi (Jeunesse potrebbe essere esaurito)

@@ -196,7 +196,7 @@ I prodotti specifici lavorano su una funzione precisa (articolazioni, fegato, or
 >
 > [**Essentiel**](https://paleocomplex.com/prodotto/essentiel/) — 34 nutrienti senza krill, ottimo rapporto qualità-prezzo, focus cognitivo. *[mostra se SKU `essentiel` non in storico]*
 
-Su [**guida-scelta**](https://paleocomplex.com/guida-scelta) trovi un orientamento rapido per scegliere quello giusto per te in base ad età e obiettivi.
+Su [**guida-scelta**](https://paleocomplex.com/guida-scelta/) trovi un orientamento rapido per scegliere quello giusto per te in base ad età e obiettivi.
 
 ---
 

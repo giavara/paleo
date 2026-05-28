@@ -70,7 +70,7 @@ Ogni nostro prodotto è formulato con dosaggi reali e ingredienti in forme biodi
 
 Se non sai quale prodotto è il più adatto a te, abbiamo una guida rapida che ti aiuta a orientarti.
 
-**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Flaminia
 Customer Care Paleocomplex

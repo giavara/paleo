@@ -48,7 +48,7 @@ Nessun problema.
 
 Vogliamo solo ricordarti che dietro ogni nostro integratore ci sono mesi di studio, formulazioni ad alto dosaggio con forme attive e una trasparenza totale sull'etichetta. Non troverai mai dosaggi simbolici nei nostri prodotti, solo quantità che possono fare davvero la differenza.
 
-Se hai dubbi su quale prodotto sia il più adatto a te, abbiamo preparato una guida che ti aiuta a scegliere in base alla tua età e ai tuoi obiettivi. **[CTA: Scopri la guida alla scelta](https://paleocomplex.com/guida-scelta)**
+Se hai dubbi su quale prodotto sia il più adatto a te, abbiamo preparato una guida che ti aiuta a scegliere in base alla tua età e ai tuoi obiettivi. **[CTA: Scopri la guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Il tuo carrello è ancora pronto.
 
@@ -109,7 +109,7 @@ Carta di credito, PayPal (anche a rate senza costi aggiuntivi), e contrassegno (
 
 **"Non so quale prodotto scegliere."**
 
-Abbiamo preparato una guida che ti aiuta a trovare il prodotto giusto in base alla tua età, ai tuoi obiettivi e al tuo budget. **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta)**
+Abbiamo preparato una guida che ti aiuta a trovare il prodotto giusto in base alla tua età, ai tuoi obiettivi e al tuo budget. **[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Se preferisci un consiglio personalizzato, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)** e ti rispondiamo personalmente.
 
