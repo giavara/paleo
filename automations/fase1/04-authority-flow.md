@@ -1,6 +1,6 @@
-**Versione:** 3.0
-**Ultimo aggiornamento:** 2026-04-22
-**Status:** Bozza v2 — in attesa review Andrea
+**Versione:** 3.1
+**Ultimo aggiornamento:** 2026-06-05
+**Status:** Bozza v3 — in attesa review Andrea
 
 # Flow 4: Authority Flow
 
@@ -51,7 +51,7 @@ Topic selezionati dai dati di performance delle vecchie 157 email educative:
 
 ### Oggetto (3 varianti A/B)
 
-- A: Le 11 carenze nutrizionali più comuni (potresti averne 5)
+- A: 5 carenze nutrizionali più comuni in Italia (potresti averne 5)
 - B: 11 carenze che il tuo medico non controlla
 - C: Mangi bene? Potresti comunque avere queste carenze
 
@@ -125,12 +125,12 @@ Esiste una tabella ufficiale del Ministero della Salute, revisione settembre 202
 
 Guardiamo alcuni esempi concreti:
 
-| Nutriente | Integratore da supermercato (100% VNR) | Massimo legale in Italia | Differenza |
-|---|---|---|---|
-| Vitamina C | 80 mg | 1.000 mg | 12 volte |
-| Vitamina E | 12 mg | 60 mg | 5 volte |
-| Vitamina B12 | 2,5 µg | 1.000 µg | 400 volte |
-| Magnesio | 375 mg | 450 mg | 1,2 volte |
+| Nutriente    | Integratore da supermercato (100% VNR) | Massimo legale in Italia | Differenza |
+| ------------ | -------------------------------------- | ------------------------ | ---------- |
+| Vitamina C   | 80 mg                                  | 1.000 mg                 | 12 volte   |
+| Vitamina E   | 12 mg                                  | 60 mg                    | 5 volte    |
+| Vitamina B12 | 2,5 µg                                 | 1.000 µg                 | 400 volte  |
+| Magnesio     | 375 mg                                 | 450 mg                   | 1,2 volte  |
 
 Sul magnesio il VNR è già vicino al massimo. Su vitamina C, E e B12 siamo in un altro pianeta.
 
@@ -152,12 +152,12 @@ Nelle parole di Ames:
 
 **Noi facciamo l'opposto.** Nei nostri multivitaminici ogni ingrediente tende all'apporto massimo giornaliero legalmente consentito. Ecco un campione concreto, prendendo Elisir a dose piena:
 
-| Nutriente | Supermercato (100% VNR) | Massimo legale | Elisir a dose piena |
-|---|---|---|---|
-| Vitamina E | 12 mg | 60 mg | **60 mg** (100%) |
-| Vitamina B6 | 1,4 mg | 10 mg | **10 mg** (100%) in forma attivata |
-| Biotina | 50 µg | 450 µg | **450 µg** (100%) |
-| Acido folico | 200 µg | 400 µg | **400 µg** (100%) come metilfolato |
+| Nutriente    | Supermercato (100% VNR) | Massimo legale | Elisir a dose piena                |
+| ------------ | ----------------------- | -------------- | ---------------------------------- |
+| Vitamina E   | 12 mg                   | 60 mg          | **60 mg** (100%)                   |
+| Vitamina B6  | 1,4 mg                  | 10 mg          | **10 mg** (100%) in forma attivata |
+| Biotina      | 50 µg                   | 450 µg         | **450 µg** (100%)                  |
+| Acido folico | 200 µg                  | 400 µg         | **400 µg** (100%) come metilfolato |
 
 Stesso ragionamento per la vitamina C (500 mg liposomiale, nella zona Pauling), la B12 metilata, la vitamina A, la niacina. Ogni singolo ingrediente è pensato per fare davvero la differenza, non per compilare un'etichetta.
 
@@ -252,7 +252,7 @@ P.P.S. Se vuoi approfondire davvero la vitamina D, ho scritto 400 pagine sull'ar
 
 Ciao [NOME]
 
-Te l'avevo promesso. Oggi ti parlo del difetto genetico che colpisce 1 italiano su 3 e che probabilmente nessuno ti ha mai spiegato.
+Oggi ti parlo del difetto genetico che colpisce 1 italiano su 3 e che probabilmente nessuno ti ha mai spiegato.
 
 Hai mai sentito parlare di metilazione?
 
@@ -342,19 +342,19 @@ P.S. Se questi dubbi erano anche i tuoi e ora ti senti più sereno, dai un'occhi
 
 ---
 
-## EMAIL 6 — Ultima email del percorso (+14 giorni)
+## EMAIL 6 — Ultima email del percorso (+14 giorni) — La guida che vorrei aver avuto io
 
 ### Oggetto (3 varianti A/B)
 
-- A: L'ultima cosa che ti chiedo
-- B: Prima di salutarti
-- C: Questa è l'ultima email di questo percorso
+- A: I 5 controlli prima di comprare qualsiasi integratore
+- B: Il regalo che ti avevo promesso (salvati questa email)
+- C: La mia checklist da 5 secondi per leggere un'etichetta
 
 ### Preview text (3 varianti)
 
-- A: Nessuna pressione. Solo un pensiero prima di continuare.
-- B: Non un pitch di vendita. Una promessa.
-- C: Quello che riceverai d'ora in poi.
+- A: Una capacità che ti servirà ovunque, anche se non comprerai mai da noi.
+- B: Cinque minuti per imparare cosa nessuno ti dice sulle etichette.
+- C: La sintesi di tutto quello di cui ti ho parlato finora.
 
 ### Corpo email
 
@@ -362,17 +362,83 @@ Ciao [NOME]
 
 Eccomi con il regalo che ti avevo promesso.
 
-Questa è l'ultima email di questo percorso. Nelle ultime settimane ti ho parlato delle carenze nutrizionali più diffuse, del perché la vitamina D va sempre presa con i suoi cofattori, di cosa significa avere una mutazione MTHFR e perché le forme vitaminiche contano.
+Questa è l'ultima email di questo percorso. Nelle ultime due settimane ti ho parlato delle carenze nutrizionali più diffuse, del perché il VNR non basta, di vitamina D e cofattori, di MTHFR e forme attive. Argomenti densi, lo so. Adesso te li metto insieme in uno strumento pratico.
 
-Non ti ho mai chiesto di comprare a tutti i costi. Non lo faccio neanche adesso.
+Ti regalo la **checklist dei 5 controlli** che faccio io ogni volta che prendo in mano un integratore, qualunque sia il brand. Cinque domande veloci. Quando le saprai a memoria, in farmacia o davanti a uno scaffale ti basteranno trenta secondi per capire se hai in mano un prodotto serio o un placebo costoso.
 
-Ti chiedo solo una cosa: la prossima volta che prendi in mano un integratore, qualsiasi integratore, gira il barattolo e leggi l'etichetta. Guarda le forme vitaminiche. Guarda i dosaggi. Chiediti se quel 100% del VNR è davvero abbastanza, o è solo il minimo per non avere carenze.
+---
 
-Questo è il regalo più grande che posso farti: la capacità di leggere un'etichetta e capire se quello che stai prendendo può davvero fare la differenza.
+**1. Guarda la forma delle vitamine B**
 
-E se in queste settimane ti è venuta voglia di andare più a fondo, ho messo tutto quello che so in un libro: **["La Bibbia della Salute"](https://paleocomplex.com/prodotto/libro-la-bibbia-della-salute/)**. Alimentazione, integrazione, esercizio fisico, detossificazione e sonno. I 5 pilastri, spiegati come li spiegherei a un amico.
+Cerca le **forme attive**, quelle già pronte per l'uso del corpo:
+
+- Folato → cerca **"metilfolato" (5-MTHF) o quatrefolic**, non "acido folico"
+- Vitamina B12 → cerca **"metilcobalamina" o "idrossicobalamina"**, non "cianocobalamina"
+- Vitamina B6 → cerca **"piridossal-5-fosfato (P5P)"**, non "piridossina HCl"
+
+Perché conta: chi ha una mutazione MTHFR (una persona su due, anche se non lo sa) non riesce a convertire bene le forme sintetiche. E anche chi non ce l'ha guadagna efficienza con le forme attive. Costano di più da produrre, per questo gli integratori da supermercato non le usano.
+
+---
+
+**2. Guarda la forma di magnesio e zinco**
+
+Per il **magnesio** cerca "citrato", "bisglicinato" o "malato". Evita "ossido di magnesio": ha una biodisponibilità del 4%, lo prendi e lo elimini quasi tutto senza assorbirlo. Eppure è la forma più diffusa, perché costa meno.
+
+Per lo **zinco** cerca "bisglicinato" o "picolinato". Evita "ossido di zinco" e "solfato di zinco" per le stesse ragioni.
+
+Perché conta: la forma del minerale determina quanto ne arriva davvero nel sangue. Un magnesio bisglicinato a 200 mg è più efficace di un ossido a 500 mg.
+
+---
+
+**3. Vitamina D mai da sola**
+
+Se vedi un integratore con solo vitamina D, è incompleto. La D ha bisogno dei suoi cofattori per funzionare in sicurezza:
+
+- **K2** (preferibilmente in forma MK-7) — dirige il calcio nelle ossa invece che nelle arterie
+- **Magnesio** — necessario per attivare la D nel fegato e nei reni
+- **Zinco, boro, vitamina A** — cofattori del metabolismo della D
+
+Il rapporto K2/D3 di riferimento è **1:10** (1 µg di K2 ogni 100 UI di D3). Sotto questa proporzione, la D rischia di mobilitare calcio senza avere chi lo dirige verso le ossa.
+
+Perché conta: ti hanno venduto vitamina D in gocce per anni come se fosse una panacea. Da sola, ad alti dosaggi e senza cofattori, può fare più male che bene.
+
+---
+
+**4. Il VNR è il minimo, non l'efficace**
+
+Quando leggi "100% del VNR" su un'etichetta, sta dicendo "abbastanza per non avere carenze acute nel breve termine". Non sta dicendo "abbastanza per stare bene".
+
+Esempio concreto della vitamina C: il **VNR è 80 mg** (dose anti-scorbuto stabilita decenni fa). L'**apporto massimo giornaliero** accettato dal Ministero della Salute è **1.000 mg**. Differenza: 12 volte tanto. La maggior parte degli integratori si ferma al primo numero.
+
+Cosa cercare: dosaggi che si avvicinano all'apporto massimo legale (riportato nella tabella del Ministero della Salute, revisione 2021), non solo al VNR. E guarda sempre la **quantità in mg/µg/UI per dose**, non solo la percentuale: una pubblicità di "100% VNR" non ti dice niente se quel 100% è 12 volte sotto la dose efficace.
+
+---
+
+**5. Guarda cosa NON serve**
+
+Più la lista degli ingredienti è corta e leggibile, meglio è. Sospetta quando trovi:
+
+- **Coloranti** (E1xx, E2xx) — non servono al prodotto, servono a renderlo "bello"
+- **Edulcoranti artificiali** (aspartame, sucralosio, acesulfame K) — segnale che il prodotto è scadente di base e va mascherato
+- **Biossido di titanio (E171)** — vietato dal 2022 in UE come additivo alimentare, ma ancora presente in alcuni integratori venduti come scorta vecchia
+- **Oli idrogenati o grassi trans** — non hanno motivo di stare lì
+- **Eccipienti chimici** invece di vegetali (es. stearato di magnesio sintetico)
+
+Cosa cercare: ingredienti riconoscibili, breve elenco di eccipienti, possibilmente origine vegetale. Le diciture "senza glutine, senza OGM, senza conservanti" sono un buon segnale, non un punto di arrivo.
+
+---
+
+**[Qui inserisco l'immagine tabella riassuntiva — Andrea sta preparando una grafica che riprende i 5 controlli in forma di checklist visiva da salvare/screenshottare]**
+
+---
+
+**Adesso hai gli strumenti.**
+
+Anche se non comprerai mai nulla da noi, queste 5 domande ti faranno spendere meglio i tuoi soldi in salute. Salvati questa email o tieni la tabella qui sopra a portata di mano: la prossima volta che sei in farmacia, in erboristeria o stai per cliccare "acquista" online, fai questi 5 controlli e vedrai la differenza tra un integratore serio e un placebo costoso.
 
 Da adesso in poi riceverai la nostra newsletter con contenuti sulla salute, l'alimentazione e l'integrazione. Niente spam, solo cose che vale la pena leggere. Se un argomento non ti interessa, salta pure l'email. Se un giorno vorrai smettere, il link è sempre in fondo.
+
+E se in queste settimane ti è venuta voglia di andare più a fondo, ho messo tutto quello che so in un libro: **["La Bibbia della Salute"](https://paleocomplex.com/prodotto/libro-la-bibbia-della-salute/)**. Alimentazione, integrazione, esercizio fisico, detossificazione e sonno. I 5 pilastri, spiegati come li spiegherei a un amico.
 
 Grazie per aver letto fin qui.
 
@@ -380,7 +446,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se un giorno deciderai di prendere sul serio la tua integrazione, abbiamo una guida semplice per aiutarti a scegliere: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
+P.S. Se vuoi vedere i nostri prodotti con questa nuova lente e capire quale potrebbe fare al caso tuo: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**. Troverai dosaggi, forme vitaminiche e cofattori dichiarati nero su bianco.
 
 ---
 
@@ -460,3 +526,8 @@ Chi non compra dopo 24-26 giorni di contenuti va in nurturing newsletter. Lo sco
 
 ### Formato prodotti nei flow precedenti
 Aggiornare la regola: usare "Ingrediente:" (con due punti) e non "Ingrediente." (con punto) seguito dalla descrizione.
+
+### Changelog
+- **v3.1 (2026-06-05)**: riscrittura completa email 6 ("ultima email del percorso"). Il setup di email 5 prometteva "un regalo che vale più di qualsiasi sconto, una capacità che ti servirà per tutta la vita" ma l'email 6 lo chiudeva con una sola riga di consiglio ("gira il barattolo e leggi l'etichetta"). Promessa non mantenuta. Ora l'email 6 contiene la **checklist dei 5 controlli per leggere un'etichetta di integratore**: forme attive vitamine B, biodisponibilità minerali, vit D + cofattori, VNR vs apporto massimo legale, eccipienti/additivi da evitare. Riprende e sintetizza concetti già seminati nelle email 2-3-4 del flow. Lasciato spazio nel corpo per inserire una **tabella riassuntiva grafica** (Andrea sta preparando l'immagine — è un asset salvabile/screenshottabile che amplifica il valore del "regalo"). Aggiornato anche P.S. con framing coerente.
+- v3.0 (2026-04-22): aggiunta email 2 VNR vs apporto massimo legale (tabella Ministero + Pauling/Ames).
+- v2.x: feedback Lorenzo 15-16 aprile (correzioni VNR, blog "centinaia", disclaimer recensioni).
