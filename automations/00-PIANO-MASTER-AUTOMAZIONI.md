@@ -1,6 +1,6 @@
-**Versione:** 3.0
-**Ultimo aggiornamento:** 2026-05-13
-**Status:** Fase 1 review Lorenzo completata. Fase 2 refactor architetturale completato (06 Primo Cliente + 07 Cliente Ricorrente + 14 flow prodotto 08-21). In attesa review Lorenzo Fase 2.
+**Versione:** 4.0
+**Ultimo aggiornamento:** 2026-06-11
+**Status:** Fase 1 review Lorenzo completata. Fase 2 refactor architetturale completato (07 Primo Cliente + 08 Cliente Ricorrente + 14 flow prodotto 09-22 + 23 Recensione Brand). Rinumerazione globale eseguita 2026-06-11 per evitare conflitto col 06 Conversione di Fase 1.
 
 # Piano Master — Automazioni Email Klaviyo
 
@@ -16,8 +16,8 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 
 1. **Authority + Post Purchase non si sovrappongono.** Chi compra entra SOLO nel Post Purchase. L'Authority Flow si sospende. Chi NON compra dopo il welcome entra nell'Authority completo.
 2. **Architettura post-purchase a due binari paralleli** (refactor maggio 2026):
-   - **Flow stato cliente** (06 Primo Cliente Assoluto, 07 Cliente Ricorrente): parlano della relazione brand, mai del prodotto specifico
-   - **Flow prodotto** (08-21, uno per SKU): trigger basato sull'acquisto di un prodotto MAI acquistato prima. Contengono istruzioni + aspettative + social proof specifici del prodotto.
+   - **Flow stato cliente** (07 Primo Cliente Assoluto, 08 Cliente Ricorrente): parlano della relazione brand, mai del prodotto specifico
+   - **Flow prodotto** (09-22, uno per SKU): trigger basato sull'acquisto di un prodotto MAI acquistato prima. Contengono istruzioni + aspettative + social proof specifici del prodotto.
    - I due binari girano in parallelo, i timing non si sovrappongono.
    - Vantaggio: un cliente esistente che compra Elisir per la prima volta riceve sia il flow Cliente Ricorrente sia il flow prodotto Elisir (educazione specifica). Architettura modulare, manutenzione pulita.
 3. **Optin marketing nel post-purchase:** P.S. soft in email 2 e 3 solo per chi non ha optin. Non prioritario (99.9% ha gia' autorizzato).
@@ -32,9 +32,9 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 12. **Compleanno: parcheggiato.** Lo attiviamo appena abbiamo un sistema che raccoglie la data di nascita.
 13. **VNR vs RDA:** Alla prima menzione di VNR nelle email, scrivere per esteso "Valore Nutritivo di Riferimento". Aggiungere il concetto: gli altri integratori si basano sul VNR (minimo per non ammalarsi nel breve termine), i nostri danno il 100% dell'RDA (apporto massimo giornaliero). Applicare a: Authority, Conversione, Welcome Series dove si citano dosaggi.
 14. **Blog: "centinaia" non "decine":** Quasi 300 articoli. Applicare a: Authority flow.
-15. **Disclaimer recensioni:** "I risultati sono personali" dopo le recensioni. Per recensioni che citano vitamina D: aggiungere consiglio di integrare con gocce di Vitamina D. Applicare a: Conversione (email con social proof), flow prodotto 08-21 (email social proof).
-16. **Trigger flow prodotto: basato su SKU** (refactor maggio 2026). Ogni flow prodotto (08-21) ha trigger `Placed Order` + filter `Item SKU equals X` + filter `Has not placed order with SKU X over all time before this event`. Trigger SKU-based (non match stringa) per evitare ambiguità tra prodotti con nome simile.
-17. **Cliente Ricorrente cross-sell: esclusione "già posseduto":** ogni sotto-blocco di suggerimento nell'email 2 del flow 07 è condizionato su "Customer has not placed order with item SKU X over all time" → non proponiamo prodotti che il cliente ha già nel protocollo.
+15. **Disclaimer recensioni:** "I risultati sono personali" dopo le recensioni. Per recensioni che citano vitamina D: aggiungere consiglio di integrare con gocce di Vitamina D. Applicare a: Conversione (email con social proof), flow prodotto 09-22 (email social proof).
+16. **Trigger flow prodotto: basato su SKU** (refactor maggio 2026). Ogni flow prodotto (09-22) ha trigger `Placed Order` + filter `Item SKU equals X` + filter `Has not placed order with SKU X over all time before this event`. Trigger SKU-based (non match stringa) per evitare ambiguità tra prodotti con nome simile.
+17. **Cliente Ricorrente cross-sell: esclusione "già posseduto":** ogni sotto-blocco di suggerimento nell'email 2 del flow 08 è condizionato su "Customer has not placed order with item SKU X over all time" → non proponiamo prodotti che il cliente ha già nel protocollo.
 
 ## Architettura dei flow
 
@@ -47,22 +47,24 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 | 3 | Welcome Unghie/Capelli | `fase1/03-welcome-unghie-capelli.md` | 6 | Optin da lead magnet unghie/capelli | Review Lorenzo OK 16/04 |
 | 4 | Authority Flow | `fase1/04-authority-flow.md` | 6 | DOPO completamento welcome (sequenziale) + non ha comprato | v3.0 — email 2 VNR vs apporto massimo legale |
 | 5 | Browse Abandonment | `fase1/05-browse-abandonment.md` | 2 | Viewed Product + non ha comprato + max 1 volta ogni 30gg | Review Lorenzo OK 16/04 |
-| 6 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | Review Lorenzo OK 16/04 |
+| 7 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | Review Lorenzo OK 16/04 |
 
-### FASE 2 — Flow post-acquisto (16 flow)
+### FASE 2 — Flow post-acquisto (17 flow)
 
 **Architettura a due binari paralleli:**
 
-#### Binario A — Flow stato cliente (2 flow, 8 email)
+#### Binario A — Flow stato cliente + universale (3 flow, 5 email)
 
 | # | Flow | File | Email | Trigger | Status |
 |---|------|------|-------|---------|--------|
-| 6 | Primo Cliente Assoluto | `fase2/06-primo-cliente.md` | 3 | Placed Order + Has Placed Order = 1 over all time | v1.0 2026-05-13 — In attesa review Lorenzo |
-| 7 | Cliente Ricorrente | `fase2/07-cliente-ricorrente.md` | 2 | Placed Order + Has Placed Order >= 2 over all time | v1.0 2026-05-13 — In attesa review Lorenzo |
+| 7 | Primo Cliente Assoluto | `fase2/07-primo-cliente.md` | 2 | Placed Order + Has Placed Order = 1 over all time | v2.0 2026-06-11 |
+| 8 | Cliente Ricorrente | `fase2/08-cliente-ricorrente.md` | 2 | Placed Order + Has Placed Order >= 2 over all time | v1.2 2026-06-11 |
+| 23 | Recensione Brand | `fase2/23-recensione-brand.md` | 1 | Fulfilled Order +32gg | v1.0 2026-06-11 |
 
 Contenuto:
-- **06 Primo Cliente**: Benvenuto Lorenzo (+2h) → Ottimizza abitudini Lorenzo (+12gg) → Richiesta recensione Flaminia (+32gg)
-- **07 Cliente Ricorrente**: Grazie + costanza Lorenzo (+2h) → Cross-sell Flaminia (+3gg, blocchi dinamici con esclusione "già posseduto")
+- **07 Primo Cliente**: Benvenuto Lorenzo (+2h dal Placed) → Ottimizza abitudini Lorenzo (+12gg dal Placed)
+- **08 Cliente Ricorrente**: Grazie + costanza Lorenzo (+2h dal Placed) → Cross-sell Flaminia (+7gg dal Placed, blocchi dinamici con esclusione "già posseduto")
+- **23 Recensione Brand**: Anticipo richiesta recensione Flaminia (+32gg dal Fulfilled, universale per primi e ricorrenti, anticipa di 2gg l'email automatica WC)
 
 #### Binario B — Flow prodotto (14 flow, 42 email)
 
@@ -70,20 +72,20 @@ Ogni flow è triggerato dall'acquisto di uno specifico SKU **per la prima volta 
 
 | # | Flow | File | SKU | Email | Status |
 |---|------|------|-----|-------|--------|
-| 8 | Paleocomplex | `fase2/08-paleocomplex.md` | `paleocomplex` | 3 | v0.2 — review Andrea OK |
-| 9 | Paleocomplex Revolution | `fase2/09-paleocomplex-revolution.md` | `paleocomplex-revo` | 3 | v0.1 — in attesa review |
-| 10 | Elisir | `fase2/10-elisir.md` | `elisir` | 3 | v0.1 |
-| 11 | Elisir Basic | `fase2/11-elisir-basic.md` | `elisir-basic` | 3 | v0.1 |
-| 12 | Essentiel | `fase2/12-essentiel.md` | `essentiel` | 3 | v0.1 |
-| 13 | Youth | `fase2/13-youth.md` | `youth` | 3 | v0.1 |
-| 14 | Jeunesse | `fase2/14-jeunesse.md` | `jeunesse` | 3 | v0.1 |
-| 15 | Hurricane | `fase2/15-hurricane.md` | `hurricane` | 3 | v0.1 |
-| 16 | Armageddon | `fase2/16-armageddon.md` | `armageddon` | 3 | v0.1 |
-| 17 | Artosan | `fase2/17-artosan.md` | `artosan` | 3 | v0.1 |
-| 18 | Liverty | `fase2/18-liverty.md` | `liverty` | 3 | v0.1 |
-| 19 | Testoplus | `fase2/19-testoplus.md` | `testo-plus` | 3 | v0.1 |
-| 20 | Renaissance | `fase2/20-renaissance.md` | `renaissance` | 3 | v0.1 |
-| 21 | Vitamina D | `fase2/21-vitamina-d.md` | `vitamina-d` | 3 | v0.1 |
+| 9 | Paleocomplex | `fase2/09-paleocomplex.md` | `paleocomplex` | 3 | v0.2 — review Andrea OK |
+| 10 | Paleocomplex Revolution | `fase2/10-paleocomplex-revolution.md` | `paleocomplex-revo` | 3 | v0.1 — in attesa review |
+| 11 | Elisir | `fase2/11-elisir.md` | `elisir` | 3 | v0.1 |
+| 12 | Elisir Basic | `fase2/12-elisir-basic.md` | `elisir-basic` | 3 | v0.1 |
+| 13 | Essentiel | `fase2/13-essentiel.md` | `essentiel` | 3 | v0.1 |
+| 14 | Youth | `fase2/14-youth.md` | `youth` | 3 | v0.1 |
+| 15 | Jeunesse | `fase2/15-jeunesse.md` | `jeunesse` | 3 | v0.1 |
+| 16 | Hurricane | `fase2/16-hurricane.md` | `hurricane` | 3 | v0.1 |
+| 17 | Armageddon | `fase2/17-armageddon.md` | `armageddon` | 3 | v0.1 |
+| 18 | Artosan | `fase2/18-artosan.md` | `artosan` | 3 | v0.1 |
+| 19 | Liverty | `fase2/19-liverty.md` | `liverty` | 3 | v0.1 |
+| 20 | Testoplus | `fase2/20-testoplus.md` | `testo-plus` | 3 | v0.1 |
+| 21 | Renaissance | `fase2/21-renaissance.md` | `renaissance` | 3 | v0.1 |
+| 22 | Vitamina D | `fase2/22-vitamina-d.md` | `vitamina-d` | 3 | v0.1 |
 
 Struttura standard di ogni flow prodotto:
 - Email 1 (+1gg, Lorenzo): Istruzioni assunzione specifiche del prodotto
@@ -95,45 +97,48 @@ Struttura standard di ogni flow prodotto:
 ```
 T+2h    [06 Stato]   Benvenuto Lorenzo
 T+1gg   [08 Paleo]   Istruzioni Paleocomplex
-T+5gg   [08 Paleo]   Aspettative multivitaminico
-T+12gg  [06 Stato]   Ottimizza abitudini
-T+18gg  [08 Paleo]   Social proof Paleocomplex (Flaminia)
-T+32gg  [06 Stato]   Recensione brand (Flaminia)
+T+5gg   [09 Paleo]      Aspettative multivitaminico
+T+12gg  [07 Stato]      Ottimizza abitudini
+T+18gg  [09 Paleo]      Social proof Paleocomplex (Flaminia)
+T+33gg  [23 Recensione] Anticipo recensione (Flaminia, +32gg dal Fulfilled)
+T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
 ```
 
-Gap minimo tra invii ≥ 2 giorni. Sequenza alternata Lorenzo/Flaminia.
+Gap minimo tra invii ≥ 2 giorni. Sequenza alternata Lorenzo/Flaminia. NB: T+33gg dal Placed è una stima — il flow 23 parte da Fulfilled+32gg, quindi il T effettivo varia col tempo di spedizione.
 
 **Esempio cliente ricorrente che compra Elisir per la prima volta** (al suo 3° ordine):
 
 ```
-T+2h    [07 Stato]   Grazie + costanza Lorenzo
-T+1gg   [10 Elisir]  Istruzioni Elisir
-T+3gg   [07 Stato]   Cross-sell Flaminia (esclude prodotti già posseduti)
-T+5gg   [10 Elisir]  Aspettative multivitaminico
-T+18gg  [10 Elisir]  Social proof Elisir (Flaminia)
+T+2h    [08 Stato]      Grazie + costanza Lorenzo
+T+1gg   [11 Elisir]     Istruzioni Elisir
+T+5gg   [11 Elisir]     Aspettative multivitaminico
+T+7gg   [08 Stato]      Cross-sell Flaminia (esclude prodotti già posseduti)
+T+18gg  [11 Elisir]     Social proof Elisir (Flaminia)
+T+33gg  [23 Recensione] Anticipo recensione (Flaminia)
+T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
 ```
 
 ### FASE 3 — Flow di retention e lifecycle (11 flow, ~29 email + 1 azione)
 
 | # | Flow | File | Email | Trigger | Timing cross-sell | Timing riacquisto | Status |
 |---|------|------|-------|---------|-------------------|-------------------|--------|
-| 22 | Retention Elisir/EB | `fase3/22-retention-elisir.md` | 3 | Fulfilled Order con Elisir o EB | gg 28 | gg 35 | Da scrivere |
-| 23 | Retention Paleo/Rev | `fase3/23-retention-paleo.md` | 3 | Fulfilled Order con Paleo o Rev | gg 20 | gg 25 | Da scrivere |
-| 24 | Retention Youth | `fase3/24-retention-youth.md` | 3 | Fulfilled Order con Youth | gg 20 | gg 25 | Da scrivere |
-| 25 | Retention Jeunesse | `fase3/25-retention-jeunesse.md` | 3 | Fulfilled Order con Jeunesse | gg 35 | gg 45 | Da scrivere |
-| 26 | Retention Sport | `fase3/26-retention-sport.md` | 3 | Fulfilled Order con Hurricane o Armageddon | gg 20 | gg 25 | Da scrivere |
-| 27 | Retention Generico | `fase3/27-retention-generico.md` | 3 | Fulfilled Order con Artosan/Liverty/Testoplus/Renaissance/VitD | gg 45 | gg 55 | Da scrivere |
-| 28 | Win-back (timing) | `fase3/28-winback.md` | 4 | Nessun ordine da 85+ giorni | — | — | Da scrivere |
-| 29 | Win-back (predictive) | `fase3/29-winback-predictive.md` | 2 | Klaviyo Predictive: churn risk alto | — | — | Da scrivere |
-| 30 | Back in Stock | `fase3/30-back-in-stock.md` | 1 | Subscribed to Back In Stock + prodotto torna disponibile | — | — | Da scrivere |
-| 31 | Sunset (pulizia lista) | `fase3/31-sunset.md` | 2 + azione | Segmento: iscritto 180+ gg, 0 aperture/click/ordini, 5+ email | — | — | Da scrivere |
-| 32 | Programma Fedeltà | `fase3/32-programma-fedelta.md` | 4 | Raggiungimento livello Club/Silver/Gold/Elite | — | — | Da scrivere |
+| 24 | Retention Elisir/EB | `fase3/24-retention-elisir.md` | 3 | Fulfilled Order con Elisir o EB | gg 28 | gg 35 | Da scrivere |
+| 25 | Retention Paleo/Rev | `fase3/25-retention-paleo.md` | 3 | Fulfilled Order con Paleo o Rev | gg 20 | gg 25 | Da scrivere |
+| 26 | Retention Youth | `fase3/26-retention-youth.md` | 3 | Fulfilled Order con Youth | gg 20 | gg 25 | Da scrivere |
+| 27 | Retention Jeunesse | `fase3/27-retention-jeunesse.md` | 3 | Fulfilled Order con Jeunesse | gg 35 | gg 45 | Da scrivere |
+| 28 | Retention Sport | `fase3/28-retention-sport.md` | 3 | Fulfilled Order con Hurricane o Armageddon | gg 20 | gg 25 | Da scrivere |
+| 29 | Retention Generico | `fase3/29-retention-generico.md` | 3 | Fulfilled Order con Artosan/Liverty/Testoplus/Renaissance/VitD | gg 45 | gg 55 | Da scrivere |
+| 30 | Win-back (timing) | `fase3/30-winback.md` | 4 | Nessun ordine da 85+ giorni | — | — | Da scrivere |
+| 31 | Win-back (predictive) | `fase3/31-winback-predictive.md` | 2 | Klaviyo Predictive: churn risk alto | — | — | Da scrivere |
+| 32 | Back in Stock | `fase3/32-back-in-stock.md` | 1 | Subscribed to Back In Stock + prodotto torna disponibile | — | — | Da scrivere |
+| 33 | Sunset (pulizia lista) | `fase3/33-sunset.md` | 2 + azione | Segmento: iscritto 180+ gg, 0 aperture/click/ordini, 5+ email | — | — | Da scrivere |
+| 34 | Programma Fedeltà | `fase3/34-programma-fedelta.md` | 4 | Raggiungimento livello Club/Silver/Gold/Elite | — | — | Da scrivere |
 
 ### FUTURO — Da attivare quando pronti
 
 | # | Flow | Email | Prerequisito | Status |
 |---|------|-------|-------------|--------|
-| 33 | Compleanno | 1 | Sistema raccolta data di nascita (campo checkout o form) | Parcheggiato |
+| 35 | Compleanno | 1 | Sistema raccolta data di nascita (campo checkout o form) | Parcheggiato |
 
 ## Conteggio totale
 
@@ -149,7 +154,7 @@ T+18gg  [10 Elisir]  Social proof Elisir (Flaminia)
 
 ## Matrice cross-sell
 
-(Riferimento per il flow 07 Cliente Ricorrente)
+(Riferimento per il flow 08 Cliente Ricorrente)
 
 | Ha comprato | Cross-sell primario | Cross-sell sport |
 |-------------|--------------------|--------------------|
@@ -163,14 +168,14 @@ T+18gg  [10 Elisir]  Social proof Elisir (Flaminia)
 | Armageddon | Hurricane + multivitaminico | — |
 | Artosan/Liverty/Testoplus/Renaissance/VitD | Multivitaminico come base | Hurricane + Armageddon |
 
-Nel flow 07, ogni suggerimento è condizionato su "il cliente non ha già acquistato quel prodotto" (logica esclusione "già posseduto").
+Nel flow 08, ogni suggerimento è condizionato su "il cliente non ha già acquistato quel prodotto" (logica esclusione "già posseduto").
 
 ## Note tecniche Klaviyo
 
 ### Funzionalità da sfruttare
 - **Dynamic table blocks:** prodotti nel carrello abbandonato (flow 1)
-- **Show/Hide blocks:** sotto-blocchi condizionali nel flow 07 cross-sell
-- **Trigger SKU-based:** per i 14 flow prodotto (08-21) — `Item SKU equals X` + `zero times before`
+- **Show/Hide blocks:** sotto-blocchi condizionali nel flow 08 cross-sell
+- **Trigger SKU-based:** per i 14 flow prodotto (09-22) — `Item SKU equals X` + `zero times before`
 - **Codici sconto univoci:** per carrello e win-back (impediscono condivisione)
 - **Smart Sending:** attivo su tutti i flow TRANNE Back in Stock
 - **Predictive Analytics:** churn risk per win-back predictive (29), expected next order date per retention
@@ -191,7 +196,7 @@ Nel flow 07, ogni suggerimento è condizionato su "il cliente non ha già acquis
 - [ ] Creare segmento Sunset con i criteri indicati
 - [ ] Configurare proprietà profilo "Unengaged" per la soppressione
 - [ ] Validare SKU esatti in WooCommerce (lista in tabella Fase 2B sopra)
-- [ ] Testare logica trigger "Has not placed order with SKU X over all time before" su Klaviyo per flow prodotto 08-21
+- [ ] Testare logica trigger "Has not placed order with SKU X over all time before" su Klaviyo per flow prodotto 09-22
 
 ## Regole di scrittura email
 
@@ -214,8 +219,8 @@ Punti chiave:
 
 | Mittente | Flow | Firma |
 |----------|------|-------|
-| **Lorenzo Zarone** | Welcome (tutte), Authority (tutte), Conversione, Flow prodotto 08-21 (email 1 e 2), Flow stato cliente 06-07 (email 1 e 2 primo cliente, email 1 ricorrente), Win-back, Email "ultima occasione" | Un forte abbraccio · Lorenzo Zarone · Fondatore di Paleocomplex |
-| **Flaminia (Customer Care)** | Tutto il resto: Carrello abbandonato, Browse abandonment, Flow prodotto 08-21 email 3 social proof, Flow stato cliente 06 email 3 recensione + 07 email 2 cross-sell, Back in stock, Programma fedeltà, Sunset | Flaminia · Customer Care Paleocomplex |
+| **Lorenzo Zarone** | Welcome (tutte), Authority (tutte), Conversione, Flow prodotto 09-22 (email 1 e 2), Flow stato cliente 07-08 (email 1 e 2 primo cliente, email 1 ricorrente), Win-back, Email "ultima occasione" | Un forte abbraccio · Lorenzo Zarone · Fondatore di Paleocomplex |
+| **Flaminia (Customer Care)** | Tutto il resto: Carrello abbandonato, Browse abandonment, Flow prodotto 09-22 email 3 social proof, Flow 23 (Recensione Brand) recensione + 07 email 2 cross-sell, Back in stock, Programma fedeltà, Sunset | Flaminia · Customer Care Paleocomplex |
 
 **Nota**: rimosso il mittente "Team Paleocomplex" — sterile e impersonale. Flaminia diventa il volto unico del customer care per tutte le comunicazioni non-Lorenzo. Lorenzo resta la voce del fondatore per le comunicazioni educative/brand. Due voci sole, complementari e riconoscibili.
 
@@ -229,8 +234,8 @@ Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1.
 | Welcome Kit Benessere (2) | SÌ — solo 2-3 punti chiave |
 | Welcome Unghie/Capelli (3) | SÌ — solo 2-3 punti chiave |
 | Conversione (6) | SÌ — 3-4 punti strategici |
-| Flow prodotto 08-21 | SÌ — open loop interno (email 1→2 e 2→3) |
-| Flow stato cliente 06-07 | NO (eccetto email 1 → "Flaminia ti scriverà tra qualche giorno") |
+| Flow prodotto 09-22 | SÌ — open loop interno (email 1→2 e 2→3) |
+| Flow stato cliente 07-08 | NO (eccetto email 1 → "Flaminia ti scriverà tra qualche giorno") |
 | Carrello, Browse, Retention, Win-back, Back in Stock | NO |
 
 ## Fonti dati per la scrittura
@@ -249,12 +254,12 @@ Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1.
 2. Ogni flow ha il suo file dedicato nella sottocartella della fase
 3. Quando un flow è completato, aggiornare lo Status nella tabella sopra
 4. Se cambia l'architettura aggiornare QUESTO documento
-5. Per i flow prodotto: il template è il flow 08 (Paleocomplex), validato con Andrea. Variazioni nei singoli flow per dosaggi/recensioni/aspettative specifiche del prodotto
+5. Per i flow prodotto: il template è il flow 09 (Paleocomplex), validato con Andrea. Variazioni nei singoli flow per dosaggi/recensioni/aspettative specifiche del prodotto
 6. Per prerequisiti tecnici Klaviyo: vedi checklist nella sezione "Note tecniche Klaviyo"
 
 ## Changelog
 
-- **v3.0 (2026-05-13)**: refactor architetturale Fase 2 maggiore. Il flow monolitico "Post Purchase New Customer" con 14 blocchi condizionali è stato smontato e ricomposto in 16 flow paralleli: 2 stato cliente (06 Primo Cliente, 07 Cliente Ricorrente) + 14 flow prodotto (08-21, uno per SKU). Motivazione: il vecchio schema non garantiva educazione specifica al cliente ricorrente che acquistava un prodotto mai provato (es. cliente compra Youth, poi Elisir: con vecchio schema, niente istruzioni Elisir). Nuovo schema risolve il buco architetturale, manutenzione più pulita, trigger SKU-based (zero ambiguità). Cross-sell flow 07: aggiunta logica esclusione "già posseduto" (Andrea, maggio 2026). Numerazione Fase 3 shiftata a 22-32.
+- **v3.0 (2026-05-13)**: refactor architetturale Fase 2 maggiore. Il flow monolitico "Post Purchase New Customer" con 14 blocchi condizionali è stato smontato e ricomposto in 16 flow paralleli: 2 stato cliente (06 Primo Cliente, 08 Cliente Ricorrente) + 14 flow prodotto (09-22, uno per SKU). Motivazione: il vecchio schema non garantiva educazione specifica al cliente ricorrente che acquistava un prodotto mai provato (es. cliente compra Youth, poi Elisir: con vecchio schema, niente istruzioni Elisir). Nuovo schema risolve il buco architetturale, manutenzione più pulita, trigger SKU-based (zero ambiguità). Cross-sell flow 08: aggiunta logica esclusione "già posseduto" (Andrea, maggio 2026). Numerazione Fase 3 shiftata a 24-34.
 - v2.2 (2026-04-22): Authority v3.0 con email 2 VNR vs apporto massimo legale.
 - v2.1 (2026-04-16): Feedback Lorenzo Fase 1 review (correzioni VNR, blog "centinaia", disclaimer recensioni).
 - v2.0 (2026-04): Fase 1 completata e in review Lorenzo.

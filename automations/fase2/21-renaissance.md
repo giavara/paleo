@@ -1,7 +1,7 @@
 **Versione:** 0.1
 **Ultimo aggiornamento:** 2026-05-13
 
-# Flow 20: Prodotto — Renaissance
+# Flow 21: Prodotto — Renaissance
 
 ## Chi entra in questo flow
 
@@ -138,7 +138,7 @@ Fondatore di Paleocomplex
 **Mittente:** Flaminia (Customer Care)
 **Tipo:** Statica
 
-Recensioni dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro `product_sku = renaissance` (solo 2 recensioni generiche disponibili). Decisione: usarle con framing onesto sui benefici a lungo termine misurabili in analisi (come nel flow 06 originale).
+Recensioni dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro `product_sku = renaissance` (solo 2 recensioni generiche disponibili). Decisione: usarle con framing onesto sui benefici a lungo termine misurabili in analisi (come nel flow 07 originale).
 
 ### Oggetto (3 varianti A/B)
 

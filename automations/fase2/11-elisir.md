@@ -1,7 +1,7 @@
 **Versione:** 0.1
 **Ultimo aggiornamento:** 2026-05-13
 
-# Flow 10: Prodotto — Elisir
+# Flow 11: Prodotto — Elisir
 
 ## Chi entra in questo flow
 
@@ -54,7 +54,9 @@ Persone che hanno acquistato **Elisir** (versione completa, non Basic) per la pr
 
 Ciao [NOME]
 
-Il tuo Elisir è in viaggio (se non te l'ha già consegnato il corriere mentre leggi). Prima che lo apri voglio assicurarmi che parti con il piede giusto. Gli integratori funzionano se assunti bene. È un dettaglio che può fare la differenza tra "non sento niente" e "sento la differenza dopo qualche settimana".
+Il tuo Elisir è in viaggio (se non te l'ha già consegnato il corriere mentre leggi). 
+
+Prima che lo apri voglio assicurarmi che parti con il piede giusto. Gli integratori funzionano se assunti bene. È un dettaglio che può fare la differenza tra "non sento niente" e "sento la differenza dopo qualche settimana".
 
 **Dosaggio e modalità**
 
@@ -103,7 +105,9 @@ Ciao [NOME]
 
 A questo punto hai (spero) iniziato il tuo Elisir da qualche giorno. È il momento giusto per parlarti di una cosa importante: cosa aspettarti realisticamente.
 
-Ti chiedo cinque minuti perché questo è il punto in cui la maggior parte delle persone si scoraggia. Iniziano un integratore, dopo 7-10 giorni "non sentono niente" e mollano. È un errore. Ma è anche colpa di come il marketing comunica gli integratori, promettendo risultati immediati quando i meccanismi biologici hanno tempi diversi.
+Ti chiedo cinque minuti perché questo è il punto in cui la maggior parte delle persone si scoraggia. Iniziano un integratore, dopo 7-10 giorni "non sentono niente" e mollano. È un errore. 
+
+Ma è anche colpa di come il marketing comunica gli integratori, promettendo risultati immediati quando i meccanismi biologici hanno tempi diversi.
 
 Ti spiego come funzionano davvero le cose, partendo da una premessa onesta: ogni corpo è diverso. Lo stato di partenza, l'assorbimento individuale, lo stile di vita, l'età, eventuali patologie, tutto influisce sui tempi.
 
@@ -160,11 +164,13 @@ Recensioni verificate dal CSV `context/20260511 paleocomplex export-reviews.csv`
 
 Ciao [NOME]
 
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. 
 
-Sono passate circa 2-3 settimane da quando hai iniziato il tuo Elisir. È un momento interessante: alcune persone iniziano a notare qualcosa, altre sono ancora nella fase di pazienza che ti aveva descritto Lorenzo. In entrambi i casi può essere utile leggere le esperienze di chi è passato dallo stesso punto in cui sei tu adesso.
+Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
 
-Ti lascio qualche storia vera. Sono tutte recensioni di clienti verificati.
+Sono passate circa 2-3 settimane da quando hai iniziato il tuo Elisir. È un momento interessante: **alcune persone iniziano a notare qualcosa**, altre sono ancora nella fase di pazienza che ti aveva descritto Lorenzo. In entrambi i casi può essere utile leggere le esperienze di chi è passato dallo stesso punto in cui sei tu adesso.
+
+Ti lascio qualche storia vera. Sono tutte **recensioni di clienti verificati**.
 
 *"Il meglio del meglio. Integrazione completa che tiene conto di ogni aspetto fondamentale: supporto nutrizionale, energia, anti-età, antiossidante, mitocondriale, sistema immunitario. Credo che al mondo non esista niente di meglio nel mondo dei nutraceutici. In un misurino fornisce il massimo dell'integrazione."*
 **Matteo Anceschi**

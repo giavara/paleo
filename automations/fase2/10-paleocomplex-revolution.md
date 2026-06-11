@@ -1,7 +1,7 @@
 **Versione:** 0.1
 **Ultimo aggiornamento:** 2026-05-13
 
-# Flow 9: Prodotto — Paleocomplex Revolution
+# Flow 10: Prodotto — Paleocomplex Revolution
 
 ## Chi entra in questo flow
 
@@ -194,7 +194,7 @@ Customer Care Paleocomplex
 
 - Trigger SKU-based: zero ambiguità con Paleocomplex base
 - Recensione Eleonora: pulita da ALL-CAPS e refusi tastiera, contenuto preservato
-- Stesso pattern di chiusura/firme del flow 08
+- Stesso pattern di chiusura/firme del flow 09
 
 ### Status
 Bozza v0.1 — in attesa review.

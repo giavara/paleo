@@ -372,9 +372,9 @@ Ti regalo la **checklist dei 5 controlli** che faccio io ogni volta che prendo i
 
 Cerca le **forme attive**, quelle già pronte per l'uso del corpo:
 
-- Folato → cerca **"metilfolato" (5-MTHF) o quatrefolic**, non "acido folico"
-- Vitamina B12 → cerca **"metilcobalamina" o "idrossicobalamina"**, non "cianocobalamina"
-- Vitamina B6 → cerca **"piridossal-5-fosfato (P5P)"**, non "piridossina HCl"
+- Folato (B9) → cerca **"Metiltetraidrofolato, metilfolato o (5-MTHF)"**, non semplice "acido folico"
+- Vitamina B12 → cerca **"metilcobalamina**, non "cianocobalamina"
+- Vitamina B6 → cerca **"piridossal-5-fosfato (P5P) o pirossidina 5 fosfato"**, non "piridossina HCl"
 
 Perché conta: chi ha una mutazione MTHFR (una persona su due, anche se non lo sa) non riesce a convertire bene le forme sintetiche. E anche chi non ce l'ha guadagna efficienza con le forme attive. Costano di più da produrre, per questo gli integratori da supermercato non le usano.
 

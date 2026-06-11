@@ -1,13 +1,13 @@
-**Versione:** 1.0
-**Ultimo aggiornamento:** 2026-05-13
+**Versione:** 2.0
+**Ultimo aggiornamento:** 2026-06-11
 
-# Flow 6: Stato Cliente — Primo Cliente Assoluto
+# Flow 7: Stato Cliente — Primo Cliente Assoluto
 
 ## Chi entra in questo flow
 
 Persone che hanno effettuato il **primo ordine in assoluto** sul sito Paleocomplex (Has Placed Order = 1 over all time).
 
-Il flow lavora sulla **relazione brand**, non sulla parte prodotto. L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) è gestita dai **flow prodotto 08-21** che girano in parallelo, triggerati dai singoli SKU presenti nell'ordine.
+Il flow lavora sulla **relazione brand**, non sulla parte prodotto. L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) è gestita dai **flow prodotto 09-22** che girano in parallelo, triggerati dai singoli SKU presenti nell'ordine.
 
 L'obiettivo del flow è:
 - Validare la scelta e abbattere il buyer's remorse subito dopo l'ordine
@@ -29,7 +29,7 @@ L'obiettivo del flow è:
 
 **Effetto su altri flow:**
 - L'Authority Flow si sospende per questo contatto (chi compra esce dall'Authority)
-- I flow prodotto (08-21) girano in parallelo, triggerati dagli SKU specifici dell'ordine
+- I flow prodotto (09-22) girano in parallelo, triggerati dagli SKU specifici dell'ordine
 - I retention flow per prodotto partono dopo (timing Fulfilled Order specifici per prodotto)
 
 ## Mittenti
@@ -38,33 +38,34 @@ L'obiettivo del flow è:
 |---|-------|----------|
 | 1 | Benvenuto | Lorenzo Zarone |
 | 2 | Ottimizza | Lorenzo Zarone |
-| 3 | Richiesta recensione | Flaminia (Customer Care) |
+
+**Nota:** la richiesta recensione brand è stata spostata in un flow dedicato (**Flow 23 — Recensione Brand**, vedi `fase2/23-recensione-brand.md`). Triggerato su Fulfilled Order +32gg, gira in parallelo a questo flow per tutti i clienti (primi e ricorrenti). Vedi changelog per il motivo.
 
 ## Timeline
 
 | # | Timing | Tema | Tipo |
 |---|--------|------|------|
-| 1 | +2h | Benvenuto + cosa succede adesso | Statica |
-| 2 | +12gg | Ottimizza i risultati (5 abitudini complementari) | Statica |
-| 3 | +32gg | Richiesta recensione (anticipa la mail di sistema a +34gg) | Statica |
+| 1 | +2h dal Placed | Benvenuto + cosa succede adesso | Statica |
+| 2 | +12gg dal Placed | Ottimizza i risultati (5 abitudini complementari) | Statica |
 
-**Incastro con flow prodotto** (esempio cliente nuovo che compra solo Paleocomplex):
+**Incastro con flow prodotto** (esempio cliente nuovo che compra solo Paleocomplex, fulfilled scenario medio T+1gg):
 
 ```
-T+2h    [06 Stato]   Benvenuto Lorenzo
-T+1gg   [08 Paleo]   Istruzioni Paleocomplex
-T+5gg   [08 Paleo]   Aspettative multivitaminico
-T+12gg  [06 Stato]   Ottimizza abitudini
-T+18gg  [08 Paleo]   Social proof Paleocomplex (Flaminia)
-T+32gg  [06 Stato]   Recensione brand (Flaminia)
+T+2h    [07 Stato]      Benvenuto Lorenzo
+T+1gg   [09 Paleo]      Istruzioni Paleocomplex
+T+5gg   [09 Paleo]      Aspettative multivitaminico
+T+12gg  [07 Stato]      Ottimizza abitudini
+T+18gg  [09 Paleo]      Social proof Paleocomplex (Flaminia)
+T+33gg  [23 Recensione] Richiesta recensione brand (Flaminia)
+T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
 ```
 
 Gap minimo tra invii ≥ 2 giorni. Sequenza alternata Lorenzo/Flaminia.
 
 **Coordinamento con WooCommerce:**
 - L'email di conferma ordine arriva da WooCommerce standard (riepilogo ordine, totale, dettaglio prodotti)
-- L'email di richiesta recensione automatica di WooCommerce è schedulata a +34gg dall'ordine (oggetto: "⭐⭐⭐⭐⭐ Quante stelle daresti a Paleocomplex?")
-- La nostra email 3 di richiesta recensione (+32gg) anticipa di 2 giorni questa email di sistema, preparando il cliente
+- L'email di richiesta recensione automatica di WooCommerce è schedulata a +34gg dal Completed (quando l'ordine viene spedito)
+- Il **Flow 23** anticipa di 2 giorni questa email di sistema, triggerato su Fulfilled+32gg per avere gap esatto e indipendente dai tempi di spedizione
 
 ---
 
@@ -101,9 +102,9 @@ Solitamente la consegna avviene in 24/48h (usiamo corriere espresso nella maggio
 
 Nelle prossime settimane però ti scriverò io, di persona. Non sono email di vendita, sono email pensate per aiutarti a tirare fuori il massimo da quello che hai comprato.
 
-**Domani** ti spiego come assumere correttamente il prodotto: è la cosa più importante per partire bene.
+**Appena il tuo ordine partirà** ti spiego come assumere correttamente il prodotto: è la cosa più importante per partire bene.
 
-**Tra qualche giorno** ti dico cosa aspettarti realisticamente dalle prime settimane di integrazione.
+**Nei giorni successivi** ti dico cosa aspettarti realisticamente dalle prime settimane di integrazione.
 
 **Più avanti** ti darò qualche consiglio per amplificare i risultati senza spendere altro.
 
@@ -164,58 +165,15 @@ Fondatore di Paleocomplex
 
 ---
 
-## EMAIL 3 — Richiesta recensione (+32 giorni)
-
-**Mittente:** Flaminia (Customer Care)
-**Tipo:** Statica (uguale per tutti)
-
-### Oggetto (3 varianti A/B)
-
-- A: Tra poco riceverai una mia richiesta. Te la anticipo.
-- B: Una cosa veloce, se hai 2 minuti
-- C: Il tuo parere mi farebbe davvero piacere
-
-### Preview text (3 varianti)
-
-- A: Il tuo voto vale più di mille slogan.
-- B: Riceverai un'email con oggetto "⭐⭐⭐⭐⭐ Quante stelle daresti a Paleocomplex?"
-- C: Bastano pochi minuti per condividere la tua esperienza.
-
-### Corpo email
-
-Ciao [NOME]
-
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex.
-
-Sono passate circa quattro settimane da quando hai ricevuto il tuo ordine. Hai avuto il tempo di provare il prodotto, di capire se ti trovi bene con il sapore o la praticità d'uso, e magari di iniziare a notare qualche cambiamento.
-
-Ho una piccola richiesta da farti.
-
-Tra poche ore riceverai un'email automatica dal nostro sistema con oggetto **"⭐⭐⭐⭐⭐ Quante stelle daresti a Paleocomplex?"**. È un invito ufficiale a lasciare una recensione sul prodotto che hai comprato.
-
-Per noi le recensioni dei clienti contano davvero. Più di qualunque pubblicità che potremmo fare. Il mondo degli integratori è pieno di promesse vuote e prodotti che non mantengono quello che dichiarano. Le recensioni reali sono l'unico modo che hanno le persone serie di capire chi vale la pena ascoltare.
-
-Non serve scrivere un trattato. Bastano un voto e qualche parola su quello che hai notato. Anche solo "energia più stabile durante la giornata" o "pelle più morbida dopo tre settimane" è prezioso. E se hai trovato qualcosa che non ti convince, dillo: i feedback meno entusiastici sono quelli che ci aiutano a migliorare.
-
-Se non trovi l'email tra qualche ora controlla in spam o posta indesiderata.
-
-Grazie davvero per la fiducia che ci hai dato finora.
-
-Flaminia
-Customer Care Paleocomplex
-
----
-
 ## Note operative
 
 ### CTA per email
-- Email 1: nessuna CTA esplicita, solo ordini@ in caso di problemi
+- Email 1: nessuna CTA esplicita, solo link a pagina di supporto in caso di problemi
 - Email 2: 3 link inline a articoli blog (sonno, sole, alimentazione)
-- Email 3: nessuna CTA (l'azione è sulla mail di sistema successiva)
 
 ### Open loop tra email
 - Email 1 → 2: "Più avanti ti darò consigli per amplificare i risultati"
-- Email 2 → 3: nessun open loop diretto (email 3 ha topic completamente diverso, transazionale)
+- (La richiesta recensione brand è ora nel Flow 23 separato)
 
 ### Filtro accessori
 Il flow NON parte se l'ordine contiene SOLO Lampada Apollo, occhiali blue blocker, libri.
@@ -227,8 +185,17 @@ Trigger filter: ordine deve contenere almeno 1 integratore.
 - La firma standardizzata di Flaminia: "Flaminia · Customer Care Paleocomplex"
 
 ### Refactoring storico
-Le email 2 (Istruzioni), 3 (Aspettative), 5 (Social proof) della versione precedente di questo flow sono state estratte e migrate nei **flow prodotto 08-21** (uno per SKU), per garantire che il cliente riceva l'educazione specifica del prodotto anche quando lo acquista come cliente ricorrente (es. primo cliente compra Youth, riceve Welcome + flow Youth; al secondo ordine compra Elisir, riceve Cliente Ricorrente + flow Elisir specifico).
+Le email 2 (Istruzioni), 3 (Aspettative), 5 (Social proof) della versione precedente di questo flow sono state estratte e migrate nei **flow prodotto 09-22** (uno per SKU), per garantire che il cliente riceva l'educazione specifica del prodotto anche quando lo acquista come cliente ricorrente (es. primo cliente compra Youth, riceve Welcome + flow Youth; al secondo ordine compra Elisir, riceve Cliente Ricorrente + flow Elisir specifico).
+
+### Decisione trigger / Fulfilled vs Placed (2026-06-11)
+Analisi dati WooCommerce 90gg (1.265 ordini): tempo Placed→Fulfilled mediana 22h, P90 55h, P95 71h. Il 26% degli ordini ha fulfilled > 1.5gg (ordini weekend e venerdì sera). Per questo:
+- Flow 07 (Primo Cliente) e 08 (Cliente Ricorrente): **trigger Placed Order** — intervengono subito per buyer's remorse, copy non parla del prodotto fisico
+- Flow prodotto 09-22: **trigger Fulfilled Order** — parlano del prodotto in viaggio, sempre veri
+- Flow 23 (Recensione Brand): **trigger Fulfilled Order +32gg** — gap esatto con email automatica WC (+34gg da Completed), indipendente dalla velocità di spedizione
+- Copy email 1 modificato: rimosso "Domani ti spiego" (regge solo per il 60% degli ordini) → sostituito con "Appena il tuo ordine partirà ti spiego" (regge per tutti)
 
 ### Changelog
-- v1.0 (2026-05-13): refactor architetturale. Spogliato dei blocchi prodotto-specifici (email 2 istruzioni, email 3 aspettative, email 5 social proof) migrati nei flow prodotto 08-21. Il flow ora gestisce solo lo stato cliente "primo ordine in assoluto" (benvenuto + ottimizza abitudini + richiesta recensione brand). Cleanup nomenclatura: rinominato da "Post Purchase Nuovo Cliente" a "Primo Cliente Assoluto" per chiarire il ruolo nel nuovo schema.
+- **v2.0 (2026-06-11)**: rinumerazione globale (06 → 07 per evitare conflitto con 06-conversione di Fase 1). **Email 3 (Richiesta recensione brand) rimossa e migrata nel nuovo Flow 23 — Recensione Brand**, triggerato su Fulfilled+32gg invece che Placed+32gg. Motivazione: con Placed-based, il gap tra la nostra recensione e l'email WC (che parte da Completed+34gg) oscillava da 1 a 5 giorni a seconda della velocità di spedizione, rompendo il copy "tra poche ore riceverai un'email automatica". Con Fulfilled+32gg il gap è sempre esatto di 2 giorni.
+- v1.1 (2026-06-11): fix copy email 1 Benvenuto. Rimosso il riferimento "Domani" alle istruzioni prodotto (non regge per il 26% degli ordini con fulfilled > 1.5gg). Sostituito con "Appena il tuo ordine partirà ti spiego..." per coerenza con trigger Fulfilled del flow prodotto.
+- v1.0 (2026-05-13): refactor architetturale. Spogliato dei blocchi prodotto-specifici (email 2 istruzioni, email 3 aspettative, email 5 social proof) migrati nei flow prodotto. Cleanup nomenclatura.
 - v0.9 (2026-05-11): versione precedente con 6 email + blocchi condizionali per prodotto. Archiviata.
