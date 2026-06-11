@@ -7,7 +7,7 @@
 
 Persone che hanno effettuato un **ordine successivo al primo** (Has Placed Order >= 2 over all time).
 
-Il flow lavora sulla **relazione brand** (grazie, costanza, cross-sell). L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) per **prodotti acquistati per la prima volta** è gestita dai **flow prodotto 09-22** che girano in parallelo: se il cliente ricorrente acquista un prodotto mai provato prima, riceve il flow prodotto specifico oltre a questo flow stato.
+Il flow lavora sulla **relazione brand** (grazie, costanza, cross-sell). L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) per **prodotti acquistati per la prima volta** è gestita dai **flow prodotto 24-37** che girano in parallelo: se il cliente ricorrente acquista un prodotto mai provato prima, riceve il flow prodotto specifico oltre a questo flow stato.
 
 L'obiettivo del flow è:
 - Validare il riacquisto e rinforzare la decisione di fedeltà
@@ -26,8 +26,8 @@ L'obiettivo del flow è:
 - Se l'ordine contiene SOLO accessori (Lampada Apollo, occhiali, libri), il flow NON parte
 
 **Effetto su altri flow:**
-- Il flow 07 (Primo Cliente Assoluto) NON parte (filtro Has Placed Order = 1)
-- I flow prodotto 09-22 girano in parallelo per i prodotti dell'ordine acquistati per la prima volta in assoluto
+- Il flow 21 (Primo Cliente Assoluto) NON parte (filtro Has Placed Order = 1)
+- I flow prodotto 24-37 girano in parallelo per i prodotti dell'ordine acquistati per la prima volta in assoluto
 - I retention flow per prodotto partono dopo (Fulfilled Order)
 
 ## Mittenti
@@ -47,7 +47,7 @@ L'obiettivo del flow è:
 **Coordinamento con altri flow:**
 - L'email di conferma ordine arriva da WooCommerce standard
 - La richiesta recensione automatica WooCommerce è a +34gg. Per i clienti ricorrenti probabilmente l'hanno già lasciata in passato — il sistema WC dovrebbe gestirlo nativamente
-- Se il cliente acquista un prodotto mai provato, i flow prodotto specifici 09-22 girano in parallelo (es. cliente esistente compra Elisir per la prima volta: riceve questo flow + flow 11 Elisir specifico)
+- Se il cliente acquista un prodotto mai provato, i flow prodotto specifici 24-37 girano in parallelo (es. cliente esistente compra Elisir per la prima volta: riceve questo flow + flow 26 Elisir specifico)
 
 ---
 
@@ -246,7 +246,7 @@ Se un cliente ha già acquistato in passato TUTTI i prodotti suggeribili (caso r
 ```
 [Placed Order, Has Placed Order >= 2 over all time, ordine NON solo accessori]
     │
-    │  In parallelo: se ordine contiene prodotti mai acquistati prima → trigger Flow 09-22 specifico
+    │  In parallelo: se ordine contiene prodotti mai acquistati prima → trigger Flow 24-37 specifico
     ▼  (+2 ore)
 EMAIL 1 — Grazie + costanza (Lorenzo, statica)
     │
@@ -286,5 +286,5 @@ I suggerimenti seguono la matrice del piano master (sezione "Matrice cross-sell"
 ### Changelog
 - **v1.2 (2026-06-11)**: spostato cross-sell email 2 da T+5gg a **T+7gg dal Placed**. Motivazione: con T+5 il cross-sell si sovrapponeva all'Aspettative dei flow prodotto (che è a T+4 dal Fulfilled = T+5-6 dal Placed mediana, T+6-7 nel worst case weekend). T+7 garantisce sequenza pulita Istruzioni → Aspettative → Cross-sell in tutti gli scenari di fulfillment.
 - v1.1 (2026-06-11): spostato cross-sell email 2 da T+3gg a T+5gg dal Placed (fix iniziale conflitto con Istruzioni prodotto). Vedi v1.2 per ulteriore spostamento.
-- v1.0 (2026-05-13): refactor architetturale. Email 1 riscritta in modo generico (no più "il primo ciclo ti è stato utile" che presupponeva ricompra dello stesso prodotto). Email 2 cross-sell: aggiunti conditional di esclusione "già posseduto" su ogni sotto-blocco prodotto (risolve il problema di proporre prodotti che il cliente ha già nel protocollo). Aggiunto fallback content block per edge case "cliente con storico completo". Aggiunto riferimento ai flow prodotto 09-22 che girano in parallelo per prodotti acquistati per la prima volta. Renamed da "Post Purchase Cliente Ricorrente" a "Cliente Ricorrente" per coerenza con nuovo schema.
+- v1.0 (2026-05-13): refactor architetturale. Email 1 riscritta in modo generico (no più "il primo ciclo ti è stato utile" che presupponeva ricompra dello stesso prodotto). Email 2 cross-sell: aggiunti conditional di esclusione "già posseduto" su ogni sotto-blocco prodotto (risolve il problema di proporre prodotti che il cliente ha già nel protocollo). Aggiunto fallback content block per edge case "cliente con storico completo". Aggiunto riferimento ai flow prodotto 24-37 che girano in parallelo per prodotti acquistati per la prima volta. Renamed da "Post Purchase Cliente Ricorrente" a "Cliente Ricorrente" per coerenza con nuovo schema.
 - v0.1 (2026-05-11): bozza iniziale.

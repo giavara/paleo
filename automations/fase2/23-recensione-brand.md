@@ -7,7 +7,7 @@
 
 Tutti i clienti che hanno ricevuto fisicamente il prodotto (ordine passato a Completed in WooCommerce), indipendentemente dal fatto che sia il primo ordine o un riacquisto.
 
-Il flow gira **in parallelo** ai flow stato cliente (07 Primo Cliente / 08 Cliente Ricorrente) e ai flow prodotto (09-22). È un flow universale post-acquisto che anticipa di 2 giorni la richiesta recensione automatica di WooCommerce.
+Il flow gira **in parallelo** ai flow stato cliente (21 Primo Cliente / 22 Cliente Ricorrente) e ai flow prodotto (24-37). È un flow universale post-acquisto che anticipa di 2 giorni la richiesta recensione automatica di WooCommerce.
 
 L'obiettivo è preparare il cliente alla recensione, abbassare la friction e migliorare il response rate dell'email di sistema WooCommerce che arriva subito dopo.
 
@@ -25,7 +25,7 @@ L'obiettivo è preparare il cliente alla recensione, abbassare la friction e mig
 - Se l'ordine contiene SOLO accessori (Lampada Apollo, occhiali, libri), il flow NON parte (l'email WC automatica continuerà a partire comunque per quei prodotti)
 
 **Effetto su altri flow:**
-- Non interferisce con flow 07/08 (stato cliente) né con 09-22 (prodotto): timing distante
+- Non interferisce con flow 21/22 (stato cliente) né con 24-37 (prodotto): timing distante
 - L'email WC automatica con oggetto "⭐⭐⭐⭐⭐ Quante stelle daresti a Paleocomplex?" parte a +34gg dal Completed → questo flow la anticipa di esattamente 2 giorni
 
 ## Mittenti
@@ -97,8 +97,8 @@ Customer Care Paleocomplex
 
 ## Note operative
 
-### Perché un flow dedicato e non email 3 del flow 07
-Inizialmente la richiesta recensione era email 3 del flow 06 (poi 07 dopo rinumerazione), triggerata su Placed Order +32gg. Problema: l'email WC automatica parte da Completed +34gg, non da Placed. Quindi il gap tra le due variava da 1 a 5 giorni (per ordini weekend con fulfilled lento). Il copy "Tra poche ore riceverai..." rompeva su una parte degli ordini.
+### Perché un flow dedicato e non email 3 del flow 21 Primo Cliente
+Inizialmente la richiesta recensione era email 3 del flow Primo Cliente (storicamente numerato 06, poi 07, ora 21), triggerata su Placed Order +32gg. Problema: l'email WC automatica parte da Completed +34gg, non da Placed. Quindi il gap tra le due variava da 1 a 5 giorni (per ordini weekend con fulfilled lento). Il copy "Tra poche ore riceverai..." rompeva su una parte degli ordini.
 
 Spostando il trigger a Fulfilled +32gg, il gap è sempre esatto di 2 giorni. Copy "Tra due giorni riceverai" sempre vero.
 

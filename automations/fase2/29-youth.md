@@ -1,19 +1,19 @@
 **Versione:** 0.1
 **Ultimo aggiornamento:** 2026-05-13
 
-# Flow 15: Prodotto — Jeunesse
+# Flow 29: Prodotto — Youth
 
 ## Chi entra in questo flow
 
-Persone che hanno acquistato **Jeunesse** per la prima volta in assoluto.
+Persone che hanno acquistato **Youth** per la prima volta in assoluto.
 
 ## Configurazione Klaviyo
 
 **Trigger:** Placed Order
 
 **Filtro trigger (entrambe le condizioni):**
-1. **Item SKU equals** `jeunesse`
-2. **Placed Order metric** → has happened **zero times** where Item SKU equals `jeunesse` **over all time before this event**
+1. **Item SKU equals** `youth`
+2. **Placed Order metric** → has happened **zero times** where Item SKU equals `youth` **over all time before this event**
 
 ## Mittenti
 
@@ -27,8 +27,8 @@ Persone che hanno acquistato **Jeunesse** per la prima volta in assoluto.
 
 | # | Timing | Tema | Tipo |
 |---|--------|------|------|
-| 1 | +1gg | Istruzioni assunzione Jeunesse | Statica |
-| 2 | +5gg | Aspettative collagene grass-fed | Statica |
+| 1 | +1gg | Istruzioni assunzione Youth | Statica |
+| 2 | +5gg | Aspettative collagene | Statica |
 | 3 | +18gg | Social proof + check-in | Statica |
 
 ---
@@ -40,7 +40,7 @@ Persone che hanno acquistato **Jeunesse** per la prima volta in assoluto.
 
 ### Oggetto (3 varianti A/B)
 
-- A: Il tuo Jeunesse è in viaggio. Ecco come usarlo bene.
+- A: Il tuo Youth è in viaggio. Ecco come usarlo bene.
 - B: Le istruzioni per partire con il piede giusto
 - C: Cinque minuti per fare le cose nel modo corretto
 
@@ -54,17 +54,21 @@ Persone che hanno acquistato **Jeunesse** per la prima volta in assoluto.
 
 Ciao [NOME]
 
-Il tuo Jeunesse è in viaggio (se non te l'ha già consegnato il corriere mentre leggi). Prima che lo apri voglio assicurarmi che parti con il piede giusto. Il collagene funziona se assunto bene e con costanza.
+Il tuo Youth è in viaggio (se non te l'ha già consegnato il corriere mentre leggi). Prima che lo apri voglio assicurarmi che parti con il piede giusto. Il collagene funziona se assunto bene e con costanza.
 
 **Dosaggio e modalità**
 
-Il tuo Jeunesse è un integratore di collagene grass-fed in polvere, formula premium: assumi 1 misurino colmo al giorno (circa 15 g), sciolto in 250 ml di acqua fresca o a temperatura ambiente.
+Il tuo Youth è un integratore di collagene in polvere ad alto dosaggio: 2 misurini colmi al giorno (circa 10 g totali) sciolti in 250 ml di acqua fresca o a temperatura ambiente.
 
 **Quando prenderlo**
 
 Si prende preferibilmente dopo cena, idealmente 1-1,5 ore prima di andare a dormire. La glicina (un terzo del collagene) favorisce il rilassamento e supporta la qualità del sonno profondo: è proprio nel sonno profondo che il corpo costruisce nuovo collagene.
 
 Il collagene richiede costanza. I primi risultati sulla pelle si vedono dopo 2-3 settimane, su unghie e capelli serve un mese o più. Datti almeno 3 mesi continuativi per giudicare l'efficacia.
+
+**Una nota importante**
+
+La glucosamina presente in Youth deriva da crostacei. Se sei allergico ai crostacei, scrivici dalla nostra [pagina di supporto](https://paleocomplex.com/contatti/): possiamo aiutarti a passare a Jeunesse (glucosamina di origine vegetale).
 
 **Per dubbi specifici**
 
@@ -99,7 +103,7 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-A questo punto hai (spero) iniziato il tuo Jeunesse da qualche giorno. È il momento giusto per parlarti di una cosa importante: cosa aspettarti realisticamente.
+A questo punto hai (spero) iniziato il tuo Youth da qualche giorno. È il momento giusto per parlarti di una cosa importante: cosa aspettarti realisticamente.
 
 Ti chiedo cinque minuti perché questo è il punto in cui la maggior parte delle persone si scoraggia. Iniziano un integratore, dopo 7-10 giorni "non sentono niente" e mollano. È un errore. Ma è anche colpa di come il marketing comunica gli integratori, promettendo risultati immediati quando i meccanismi biologici hanno tempi diversi.
 
@@ -140,11 +144,11 @@ Fondatore di Paleocomplex
 **Mittente:** Flaminia (Customer Care)
 **Tipo:** Statica
 
-Recensioni verificate dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro `product_sku = jeunesse` (15 recensioni 5 stelle disponibili). Selezionate 3 top: pelle a 40 anni (Alice B.), capelli + ciglia (Alice), risultati di coppia rapidi (Martina).
+Recensioni verificate dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro `product_sku = youth` (52 recensioni 5 stelle disponibili). Selezionate 3 top: primi risultati rapidi (Manuela, 10gg), pelle + sonno (Veronica, 2 mesi), pelle over 60 + dolori (Antonio).
 
 ### Oggetto (3 varianti A/B)
 
-- A: Come sta andando con il tuo Jeunesse?
+- A: Come sta andando con il tuo Youth?
 - B: Sono passate quasi tre settimane
 - C: Volevo sentirti
 
@@ -160,20 +164,20 @@ Ciao [NOME]
 
 Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
 
-Sono passate circa 2-3 settimane da quando hai iniziato il tuo Jeunesse. È un momento interessante: alcune persone iniziano a notare qualcosa, altre sono ancora nella fase di pazienza che ti aveva descritto Lorenzo. In entrambi i casi può essere utile leggere le esperienze di chi è passato dallo stesso punto in cui sei tu adesso.
+Sono passate circa 2-3 settimane da quando hai iniziato il tuo Youth. È un momento interessante: alcune persone iniziano a notare qualcosa, altre sono ancora nella fase di pazienza che ti aveva descritto Lorenzo. In entrambi i casi può essere utile leggere le esperienze di chi è passato dallo stesso punto in cui sei tu adesso.
 
 Ti lascio qualche storia vera. Sono tutte recensioni di clienti verificati.
 
-*"Promuovo questo prodotto come uno dei migliori in assoluto. Pelle in assoluto migliorata: ho 40 anni e vi assicuro che neanche a 20 l'avevo così elastica e bella. Capelli folti e lucenti e ottimo risultato anche alle ciglia. Fantastico prodotto, non credo proprio di mollarlo mai."*
-**Alice B.**
+*"Dopo soli 10 giorni di assunzione la mia pelle è diventata più morbida e liscia, i capelli più corposi e robusti. Un integratore davvero favoloso. Consigliatissimo."*
+**Manuela**
 
-*"Trovo il prodotto davvero essenziale. Già fin da subito si nota un miglioramento nei capelli, pelle più compatta e luminosa e addirittura trovo le mie ciglia più lunghe. Lo consiglio e io non potrei più farne a meno."*
-**Alice**
+*"Ottimo prodotto, lo consiglio vivamente. Lo uso da due mesi e ho visto un notevole miglioramento della pelle e della qualità del sonno. Sono estremamente soddisfatta."*
+**Veronica Dazzi**
 
-*"Ottimo prodotto, non credevo fosse così efficace: ho cominciato a vederne i risultati già dopo la prima settimana di assunzione. Anche mio marito ha cominciato ad assumerlo e non si lamenta più dei suoi dolori ossei."*
-**Martina**
+*"Davvero un ottimo prodotto. Mi ha aiutato per i dolori muscolari e anche per la mia pelle del viso, molto più luminosa nonostante abbia superato i 60 anni."*
+**Antonio Balducci**
 
-I risultati sono personali, dipendono dalle condizioni di partenza e dallo stile di vita. Per il collagene la costanza è tutto: dai a Jeunesse almeno 3 mesi continuativi prima di trarre conclusioni.
+I risultati sono personali, dipendono dalle condizioni di partenza e dallo stile di vita. Per il collagene la costanza è tutto: dai a Youth almeno 3 mesi continuativi prima di trarre conclusioni.
 
 **Una cosa importante**: queste sono storie di persone reali, ma non sono "garanzie". Ogni corpo risponde a tempi suoi. Se a questo punto non stai notando ancora cambiamenti, non significa che il prodotto non stia funzionando: significa solo che il tuo corpo ha bisogno di più tempo per costruire nuovo collagene. Continua.
 

@@ -7,7 +7,7 @@
 
 Persone che hanno effettuato il **primo ordine in assoluto** sul sito Paleocomplex (Has Placed Order = 1 over all time).
 
-Il flow lavora sulla **relazione brand**, non sulla parte prodotto. L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) è gestita dai **flow prodotto 09-22** che girano in parallelo, triggerati dai singoli SKU presenti nell'ordine.
+Il flow lavora sulla **relazione brand**, non sulla parte prodotto. L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) è gestita dai **flow prodotto 24-37** che girano in parallelo, triggerati dai singoli SKU presenti nell'ordine.
 
 L'obiettivo del flow è:
 - Validare la scelta e abbattere il buyer's remorse subito dopo l'ordine
@@ -29,7 +29,7 @@ L'obiettivo del flow è:
 
 **Effetto su altri flow:**
 - L'Authority Flow si sospende per questo contatto (chi compra esce dall'Authority)
-- I flow prodotto (09-22) girano in parallelo, triggerati dagli SKU specifici dell'ordine
+- I flow prodotto (24-37) girano in parallelo, triggerati dagli SKU specifici dell'ordine
 - I retention flow per prodotto partono dopo (timing Fulfilled Order specifici per prodotto)
 
 ## Mittenti
@@ -51,11 +51,11 @@ L'obiettivo del flow è:
 **Incastro con flow prodotto** (esempio cliente nuovo che compra solo Paleocomplex, fulfilled scenario medio T+1gg):
 
 ```
-T+2h    [07 Stato]      Benvenuto Lorenzo
-T+1gg   [09 Paleo]      Istruzioni Paleocomplex
-T+5gg   [09 Paleo]      Aspettative multivitaminico
-T+12gg  [07 Stato]      Ottimizza abitudini
-T+18gg  [09 Paleo]      Social proof Paleocomplex (Flaminia)
+T+2h    [21 Stato]      Benvenuto Lorenzo
+T+1gg   [24 Paleo]      Istruzioni Paleocomplex
+T+5gg   [24 Paleo]      Aspettative multivitaminico
+T+12gg  [21 Stato]      Ottimizza abitudini
+T+18gg  [24 Paleo]      Social proof Paleocomplex (Flaminia)
 T+33gg  [23 Recensione] Richiesta recensione brand (Flaminia)
 T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
 ```
@@ -185,12 +185,12 @@ Trigger filter: ordine deve contenere almeno 1 integratore.
 - La firma standardizzata di Flaminia: "Flaminia · Customer Care Paleocomplex"
 
 ### Refactoring storico
-Le email 2 (Istruzioni), 3 (Aspettative), 5 (Social proof) della versione precedente di questo flow sono state estratte e migrate nei **flow prodotto 09-22** (uno per SKU), per garantire che il cliente riceva l'educazione specifica del prodotto anche quando lo acquista come cliente ricorrente (es. primo cliente compra Youth, riceve Welcome + flow Youth; al secondo ordine compra Elisir, riceve Cliente Ricorrente + flow Elisir specifico).
+Le email 2 (Istruzioni), 3 (Aspettative), 5 (Social proof) della versione precedente di questo flow sono state estratte e migrate nei **flow prodotto 24-37** (uno per SKU), per garantire che il cliente riceva l'educazione specifica del prodotto anche quando lo acquista come cliente ricorrente (es. primo cliente compra Youth, riceve Welcome + flow Youth; al secondo ordine compra Elisir, riceve Cliente Ricorrente + flow Elisir specifico).
 
 ### Decisione trigger / Fulfilled vs Placed (2026-06-11)
 Analisi dati WooCommerce 90gg (1.265 ordini): tempo Placed→Fulfilled mediana 22h, P90 55h, P95 71h. Il 26% degli ordini ha fulfilled > 1.5gg (ordini weekend e venerdì sera). Per questo:
-- Flow 07 (Primo Cliente) e 08 (Cliente Ricorrente): **trigger Placed Order** — intervengono subito per buyer's remorse, copy non parla del prodotto fisico
-- Flow prodotto 09-22: **trigger Fulfilled Order** — parlano del prodotto in viaggio, sempre veri
+- Flow 21 (Primo Cliente) e 22 (Cliente Ricorrente): **trigger Placed Order** — intervengono subito per buyer's remorse, copy non parla del prodotto fisico
+- Flow prodotto 24-37: **trigger Fulfilled Order** — parlano del prodotto in viaggio, sempre veri
 - Flow 23 (Recensione Brand): **trigger Fulfilled Order +32gg** — gap esatto con email automatica WC (+34gg da Completed), indipendente dalla velocità di spedizione
 - Copy email 1 modificato: rimosso "Domani ti spiego" (regge solo per il 60% degli ordini) → sostituito con "Appena il tuo ordine partirà ti spiego" (regge per tutti)
 

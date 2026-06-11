@@ -7,7 +7,7 @@
 
 Persone che hanno acquistato **Paleocomplex** (base, non Revolution) **per la prima volta in assoluto**, indipendentemente dal fatto che sia il primo ordine o un riacquisto. Lo scopo del flow è dare istruzioni, aspettative e social proof specifici del prodotto.
 
-Il flow gira **in parallelo** ai flow di stato cliente (07 Primo Cliente Assoluto / 08 Cliente Ricorrente), che si occupano della relazione brand. Qui parla solo il prodotto.
+Il flow gira **in parallelo** ai flow di stato cliente (21 Primo Cliente Assoluto / 22 Cliente Ricorrente), che si occupano della relazione brand. Qui parla solo il prodotto.
 
 L'obiettivo del flow è:
 - Garantire che il cliente assuma il prodotto correttamente (dosaggio, timing, modalità)
@@ -28,7 +28,7 @@ In pratica: il flow parte se nell'ordine corrente c'è il SKU `paleocomplex` e n
 **Nota tecnica:** trigger basato sullo SKU (non sul match di stringa nel nome prodotto) → evita ambiguità con prodotti che hanno "Paleocomplex" nel nome (es. Paleocomplex Revolution). Stesso pattern verrà applicato a tutti i 14 flow prodotto.
 
 **Effetto su altri flow:**
-- Gira in parallelo a 07 Primo Cliente Assoluto (se è il primo ordine in assoluto) o a 08 Cliente Ricorrente (se è ordine ≥ 2)
+- Gira in parallelo a 21 Primo Cliente Assoluto (se è il primo ordine in assoluto) o a 22 Cliente Ricorrente (se è ordine ≥ 2)
 - Non interferisce con i retention flow per prodotto (timing più avanti)
 
 ## Mittenti
@@ -50,12 +50,12 @@ In pratica: il flow parte se nell'ordine corrente c'è il SKU `paleocomplex` e n
 **Incastro con flow stato cliente** (esempio cliente nuovo, primo ordine in assoluto, che compra solo Paleocomplex):
 
 ```
-T+2h    [07 Stato]   Benvenuto Lorenzo
-T+1gg   [09 Paleo]   Istruzioni Paleocomplex
-T+5gg   [09 Paleo]   Aspettative multivitaminico
-T+12gg  [07 Stato]   Ottimizza abitudini
-T+18gg  [09 Paleo]   Social proof multivitaminici (Flaminia)
-T+32gg  [07 Stato]   Recensione brand (Flaminia)
+T+2h    [21 Stato]   Benvenuto Lorenzo
+T+1gg   [24 Paleo]   Istruzioni Paleocomplex
+T+5gg   [24 Paleo]   Aspettative multivitaminico
+T+12gg  [21 Stato]   Ottimizza abitudini
+T+18gg  [24 Paleo]   Social proof multivitaminici (Flaminia)
+T+32gg  [21 Stato]   Recensione brand (Flaminia)
 ```
 
 Gap minimo tra invii ≥ 2 giorni. Sequenza pulita Lorenzo/Flaminia.
@@ -229,14 +229,14 @@ Customer Care Paleocomplex
 - Email 2 → 3: "Più avanti Flaminia ti scriverà per sentire come stai andando"
 
 ### Coordinamento con flow paralleli
-- Se cliente è nuovo (primo ordine), riceve in parallelo flow 09 (benvenuto Lorenzo +2h, ottimizza +12gg, recensione +32gg)
-- Se cliente è ricorrente (ordine ≥ 2, primo acquisto Paleocomplex), riceve in parallelo flow 09 (grazie Lorenzo +2h, cross-sell Flaminia +3gg)
-- Email 3 di questo flow (Flaminia, +18gg) si distanzia di 14 giorni dall'email cross-sell del flow 09: gap sufficiente per non sovrapporsi
-- Email 3 di questo flow (+18gg) si distanzia di 14 giorni dall'email recensione del flow 09 (+32gg): gap sufficiente
+- Se cliente è nuovo (primo ordine), riceve in parallelo flow 24 (benvenuto Lorenzo +2h, ottimizza +12gg, recensione +32gg)
+- Se cliente è ricorrente (ordine ≥ 2, primo acquisto Paleocomplex), riceve in parallelo flow 24 (grazie Lorenzo +2h, cross-sell Flaminia +3gg)
+- Email 3 di questo flow (Flaminia, +18gg) si distanzia di 14 giorni dall'email cross-sell del flow 24: gap sufficiente per non sovrapporsi
+- Email 3 di questo flow (+18gg) si distanzia di 14 giorni dall'email recensione del flow 24 (+32gg): gap sufficiente
 
 ### Status
-Bozza v0.2 — in attesa review Andrea. Una volta validato, lo userò come template per i flow 09-21 (gli altri 13 prodotti).
+Bozza v0.2 — in attesa review Andrea. Una volta validato, lo userò come template per i flow 24-21 (gli altri 13 prodotti).
 
 ### Changelog
 - v0.2 (2026-05-13): trigger basato su SKU `paleocomplex` invece di match stringa + 3 recensioni Paleocomplex puro selezionate dal CSV (Camelo, Pennello, Cristina) invece di recensioni famiglia multivit.
-- v0.1 (2026-05-13): bozza iniziale, estratta dai blocchi del flow 09 (istruzioni Paleocomplex + aspettative multivit + social proof multivit).
+- v0.1 (2026-05-13): bozza iniziale, estratta dai blocchi del flow 24 (istruzioni Paleocomplex + aspettative multivit + social proof multivit).

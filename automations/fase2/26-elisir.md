@@ -1,7 +1,7 @@
 **Versione:** 0.1
 **Ultimo aggiornamento:** 2026-05-13
 
-# Flow 11: Prodotto — Elisir
+# Flow 26: Prodotto — Elisir
 
 ## Chi entra in questo flow
 
