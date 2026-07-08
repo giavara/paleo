@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>H2 2026 — Diagnosi e piano | Paleocomplex</title>
+<link rel="icon" href="assets/logo-black.svg" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+/* ---- Font self-hosted (variabili) ---- */
+@font-face{font-family:'Cormorant Garamond';font-weight:300 700;font-style:normal;font-display:swap;src:url('fonts/CormorantGaramond.ttf') format('truetype');}
+@font-face{font-family:'Inter';font-weight:100 900;font-style:normal;font-display:swap;src:url('fonts/Inter.ttf') format('truetype');}
+:root{
+  --ink:#1C1813; --white:#FFFFFF; --orange:#C29A45; --orange600:#A9843A;
+  --g050:#FAF6EF; --g100:#F3EEE5; --g150:#EDE3D1; --g200:#E6DED0; --g300:#CFC5B4;
+  --g400:#A79C88; --g500:#7C725F; --g600:#544C3E;
+  --success:#1F9D63; --success100:#E9F2E7; --success700:#3D6B34;
+  --warning:#C29A45; --warning100:#F7EEDC; --warning700:#8A6A24;
+  --danger:#B5473F; --danger100:#F6E4E2; --danger700:#93362F;
+  --blue:#2D8FC4;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;}
+deck-stage:not(:defined){visibility:hidden;}
+deck-stage{background:#000;}
+section{
+  font-family:var(--font); color:var(--ink); background:var(--white);
+  overflow:hidden; -webkit-font-smoothing:antialiased;
+}
+.pad{position:absolute; inset:0; padding:96px 110px; display:flex; flex-direction:column;}
+.dark{background:var(--ink); color:var(--white);}
+.paper{background:var(--g050);}
+.o{color:var(--orange);}
+
+/* type */
+.eyebrow{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--g500);}
+.dark .eyebrow{color:rgba(255,255,255,.55);}
+.kicker{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);}
+.dark .kicker{color:#fff;}
+h1{font-size:100px;line-height:1.0;letter-spacing:-0.03em;font-weight:600;margin:0;}
+h2{font-size:66px;line-height:1.05;letter-spacing:-0.025em;font-weight:600;margin:0;}
+h3{font-size:32px;line-height:1.15;letter-spacing:-0.01em;font-weight:600;margin:0;}
+.lead{font-size:29px;line-height:1.5;font-weight:400;color:var(--g600);max-width:32ch;}
+.dark .lead{color:rgba(255,255,255,.72);}
+.foot{position:absolute;left:110px;right:110px;bottom:54px;display:flex;align-items:center;justify-content:space-between;font-size:18px;color:var(--g400);}
+.dark .foot{color:rgba(255,255,255,.4);}
+.foot img{height:22px;display:block;}
+.num-badge{font-size:18px;font-weight:600;color:var(--g400);}
+
+/* skin Paleo: display serif su titoli e numeri giganti */
+h1,h2,.close-wrap h2{font-family:var(--font-display);font-weight:700;}
+.kpi .kval,.band .bval{font-family:var(--font-display);font-weight:700;}
+
+/* cover */
+.cover-logo{height:44px;}
+.cover-mark{position:absolute;right:-120px;bottom:-140px;height:760px;opacity:.05;}
+
+/* header */
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:48px;}
+.head h2{max-width:26ch;}
+
+/* rules / bullets */
+.rule-row{display:flex;gap:20px;margin-top:34px;}
+.rule{flex:1;display:flex;gap:14px;align-items:flex-start;font-size:21px;line-height:1.45;color:var(--g600);}
+.rule .icon{color:var(--orange);flex:none;margin-top:2px;}
+.rule b{color:var(--ink);font-weight:600;}
+.dark .rule{color:rgba(255,255,255,.75);}
+.dark .rule b{color:#fff;}
+
+/* KPI cards */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px;}
+.kpi{background:#fff;border:1px solid var(--g200);border-radius:14px;padding:32px 30px;display:flex;flex-direction:column;}
+.paper .kpi{box-shadow:0 4px 14px rgba(20,20,20,.05);}
+.kpi .kic{color:var(--orange);margin-bottom:20px;}
+.kpi .kval{font-size:60px;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums;}
+.kpi .kunit{font-size:26px;font-weight:600;color:var(--g400);}
+.kpi .klabel{font-size:19px;font-weight:500;color:var(--g500);margin-top:14px;line-height:1.35;}
+.kpi .kval.bad{color:var(--danger700);}
+
+/* big number band */
+.band{display:flex;gap:40px;margin-top:20px;}
+.band .bcell{flex:1;}
+.band .bval{font-size:76px;letter-spacing:-0.02em;line-height:1;color:var(--orange);font-variant-numeric:tabular-nums;}
+.band .blabel{font-size:21px;color:var(--g600);margin-top:14px;line-height:1.4;max-width:22ch;}
+.dark .band .blabel{color:rgba(255,255,255,.7);}
+
+/* roadmap */
+.road{display:flex;gap:0;margin-top:20px;flex:1;align-items:stretch;}
+.rstep{flex:1;position:relative;padding:0 26px;display:flex;flex-direction:column;}
+.rstep:not(:last-child){border-right:1px solid var(--g200);}
+.rstep .rnum{width:52px;height:52px;border-radius:999px;background:var(--ink);color:#fff;font-size:24px;font-weight:600;display:grid;place-items:center;margin-bottom:24px;}
+.rstep.accent .rnum{background:var(--orange);}
+.rstep h3{margin-bottom:14px;}
+.rstep p{font-size:19px;line-height:1.45;color:var(--g600);margin:0;}
+.rstep .when{font-size:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--g400);margin-top:auto;padding-top:22px;}
+
+/* callout / honesty box */
+.callout{display:flex;gap:22px;align-items:flex-start;background:var(--warning100);border:1px solid #E4D3AC;border-radius:16px;padding:34px 40px;margin-top:8px;}
+.callout .cic{color:var(--warning700);flex:none;margin-top:2px;}
+.callout .ctext{font-size:24px;line-height:1.5;color:var(--ink);}
+.callout .ctext b{font-weight:600;}
+.callout.good{background:var(--success100);border-color:#C4D8BE;}
+.callout.good .cic{color:var(--success700);}
+.callout.bad{background:var(--danger100);border-color:#E3C0BC;}
+.callout.bad .cic{color:var(--danger700);}
+
+/* tabella numeri */
+.tbl{width:100%;border-collapse:collapse;margin-top:4px;font-variant-numeric:tabular-nums;}
+.tbl th{font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--g500);text-align:right;padding:12px 20px;border-bottom:2px solid var(--g300);font-weight:600;}
+.tbl th:first-child,.tbl td:first-child{text-align:left;}
+.tbl td{font-size:25px;padding:14px 20px;border-bottom:1px solid var(--g200);color:var(--g600);text-align:right;}
+.tbl td b{color:var(--ink);font-weight:600;}
+.tbl .pos{color:var(--success700);font-weight:600;}
+.tbl .neg{color:var(--danger700);font-weight:600;}
+.tbl tr.tot td{border-bottom:none;border-top:2px solid var(--ink);color:var(--ink);font-weight:600;font-size:27px;}
+.tbl.compact th{padding:10px 16px;}
+.tbl.compact td{font-size:22px;padding:10px 16px;}
+.tbl.compact tr.tot td{font-size:24px;}
+.dark .tbl th{color:rgba(255,255,255,.55);border-bottom-color:rgba(255,255,255,.3);}
+.dark .tbl td{color:rgba(255,255,255,.75);border-bottom-color:rgba(255,255,255,.14);}
+.dark .tbl td b{color:#fff;}
+.dark .tbl tr.tot td{border-top-color:#fff;color:#fff;}
+.dark .tbl .pos{color:#7CC79A;}
+.dark .tbl .neg{color:#E8A49E;}
+
+/* close */
+.close-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.close-wrap h2{font-size:82px;max-width:20ch;}
+.steps{list-style:none;padding:0;margin:44px 0 0;display:flex;gap:40px;}
+.steps li{flex:1;display:flex;flex-direction:column;gap:14px;}
+.steps .snum{font-size:22px;font-weight:600;color:var(--orange);}
+.steps .stxt{font-size:24px;line-height:1.4;color:rgba(255,255,255,.85);}
+
+@media (prefers-reduced-motion:no-preference){
+  [data-deck-active] .anim{animation:rise .55s cubic-bezier(.2,.7,.2,1) both;}
+  [data-deck-active] .anim:nth-child(2){animation-delay:.05s;}
+  [data-deck-active] .anim:nth-child(3){animation-delay:.1s;}
+  [data-deck-active] .anim:nth-child(4){animation-delay:.15s;}
+  [data-deck-active] .anim:nth-child(5){animation-delay:.2s;}
+}
+@keyframes rise{from{transform:translateY(16px);}to{transform:none;}}
+</style>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · COVER -->
+  <section class="dark" data-label="Cover">
+    <div class="pad">
+      <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+      <img class="cover-logo anim" src="assets/logo-white.svg" alt="Paleocomplex" style="align-self:flex-start;" />
+      <div style="flex:1;"></div>
+      <div class="eyebrow anim" style="margin-bottom:26px;">Report interno · 8 luglio 2026</div>
+      <h1 class="anim">H2 2026: diagnosi<br>e piano corretto<span class="o">.</span></h1>
+      <p class="lead anim" style="margin-top:34px;max-width:46ch;">Cosa dicono davvero i dati di H1, perché il piano di fine anno non regge l'aritmetica, e la rotta che massimizza la probabilità di handover.</p>
+    </div>
+    <div class="foot"><span>Documento di lavoro — Andrea</span><span>23.931 ordini analizzati · WooCommerce + Klaviyo + ActiveCampaign</span></div>
+  </section>
+
+  <!-- 2 · LA VERITÀ SU H1 -->
+  <section class="paper" data-label="La verità su H1">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">La verità su H1</span>
+        <h2 class="anim">Buono in superficie<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim">
+        <div class="kpi"><div class="kic"><span data-lucide="banknote"></span></div><div class="kval">+10,6<span class="kunit">%</span></div><div class="klabel">fatturato netto IVA — €382.500, Q2 sopra target</div></div>
+        <div class="kpi"><div class="kic" style="color:var(--danger700);"><span data-lucide="trending-down"></span></div><div class="kval bad">−10,7<span class="kunit">%</span></div><div class="klabel">margine: €148.700 contro €166.500 del 2025 — ads raddoppiati (€119K vs €63,7K)</div></div>
+        <div class="kpi"><div class="kic" style="color:var(--danger700);"><span data-lucide="crosshair"></span></div><div class="kval bad">€141</div><div class="klabel">costo di acquisizione per cliente nuovo — era €81 nel 2025 (+74%)</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="user-plus"></span></div><div class="kval">843</div><div class="klabel">clienti nuovi (+7,4% sul 2025): record storico, ma pagato il doppio</div></div>
+      </div>
+      <div class="callout anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="landmark"></span></span>
+        <div class="ctext"><b>Abbiamo comprato crescita mangiando utile.</b> +€55.000 di spesa ads hanno portato solo +58 clienti nuovi in più: il costo marginale dell'extra budget è <b>~€950 a cliente</b>. Lorenzo guarda il conto in banca — questo è ciò che "sente".</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">02</span></div>
+  </section>
+
+  <!-- 3 · SCALING RITIRATO -->
+  <section class="dark" data-label="Ads: rotta corretta">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Correzione di rotta</span>
+        <h2 class="anim">Lo scaling ads è ritirato<span class="o">.</span></h2>
+      </div>
+      <div class="band anim" style="margin-top:30px;">
+        <div class="bcell"><div class="bval">€86</div><div class="blabel">contribution del primo ordine di un cliente nuovo (AOV €116 × 74%)</div></div>
+        <div class="bcell"><div class="bval">6–9<span style="font-size:34px;color:rgba(255,255,255,.5);"> mesi</span></div><div class="blabel">per ripagare un CAC di €141: il pareggio arriva solo col riacquisto</div></div>
+        <div class="bcell"><div class="bval">€15–17<span style="font-size:34px;color:rgba(255,255,255,.5);">K</span></div><div class="blabel">budget mensile H2: fermo, riallocato su ciò che è incrementale</div></div>
+      </div>
+      <p class="lead anim" style="margin-top:56px;max-width:56ch;">La raccomandazione "+25–30% al mese" era costruita sul file margini incompleto (solo Google, spesa sottostimata 2x). Coi numeri veri: Meta serve al 67% clienti esistenti, Google intercetta domanda già nostra. <b style="color:#fff;">Nuova bussola: CPA nuovo cliente &lt; €100 per canale, misurato ogni settimana — mai più blended ROAS.</b></p>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">03</span></div>
+  </section>
+
+  <!-- 4 · CRESCITA = PROMO -->
+  <section data-label="La crescita è promo">
+    <div class="pad">
+      <div class="head" style="margin-bottom:22px;">
+        <span class="eyebrow anim">Da dove viene la crescita</span>
+        <h2 class="anim">31 giorni di promo = 32% del fatturato<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th>Promo H1 2026</th><th>Giorni</th><th>Revenue netto</th><th>€ / giorno</th></tr></thead>
+        <tbody>
+          <tr><td><b>Essentiel €89</b> (30/3–3/4)</td><td>5</td><td>€9.767</td><td>€1.953</td></tr>
+          <tr><td><b>FEDE20</b> (13–16/4)</td><td>4</td><td>€24.149</td><td>€6.037</td></tr>
+          <tr><td><b>SPRING20</b> (27/4–4/5)</td><td>8</td><td>€22.025</td><td>€2.753</td></tr>
+          <tr><td><b>Blue Blocker</b> (25/5–1/6)</td><td>8</td><td>€13.107</td><td>€1.638</td></tr>
+          <tr><td><b>FESTA</b> (25–30/6)</td><td>6</td><td>€54.553</td><td class="pos">€9.092</td></tr>
+          <tr class="tot"><td>Totale promo</td><td>31</td><td>€123.601</td><td>€3.987</td></tr>
+        </tbody>
+      </table>
+      <div class="callout anim" style="margin-top:30px;">
+        <span class="cic"><span data-lucide="alert-triangle"></span></span>
+        <div class="ctext">Baseline fuori promo: <b>€1.718 al giorno</b> — meno della metà. I mesi senza promo forte sono piatti o negativi (mar −4,6%, mag −2,2%). <b>Il business oggi vive di picchi comprati; la baseline organica è ferma.</b></div>
+      </div>
+    </div>
+    <div class="foot"><span>Fonte: WooCommerce, finestre promo H1 2026</span><span class="num-badge">04</span></div>
+  </section>
+
+  <!-- 5 · LTV IN CALO -->
+  <section class="paper" data-label="LTV in calo">
+    <div class="pad">
+      <div class="head" style="margin-bottom:22px;">
+        <span class="eyebrow anim">Il valore dei clienti</span>
+        <h2 class="anim">Ogni coorte vale meno della precedente<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th>Coorte (primo acquisto)</th><th>Clienti</th><th>LTV 90gg</th><th>LTV 180gg</th><th>LTV 365gg</th><th>Riacquisto in 180gg</th></tr></thead>
+        <tbody>
+          <tr><td><b>2023 H2</b></td><td>657</td><td>€186</td><td>€236</td><td><b>€313</b></td><td>36,4%</td></tr>
+          <tr><td><b>2024 H1</b></td><td>584</td><td>€207</td><td>€243</td><td><b>€304</b></td><td>34,6%</td></tr>
+          <tr><td><b>2024 H2</b></td><td>670</td><td>€180</td><td>€223</td><td><b>€280</b></td><td>38,5%</td></tr>
+          <tr><td><b>2025 H1</b></td><td>785</td><td>€177</td><td>€216</td><td><b>€279</b></td><td>38,3%</td></tr>
+          <tr><td><b>2025 H2</b></td><td>619</td><td>€161</td><td>€196</td><td class="neg">€224*</td><td>34,4%</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:17px;color:var(--g500);margin:14px 0 0;" class="anim">* Coorte non ancora pienamente matura a 365gg — il valore finale salirà poco. Revenue netta IVA per cliente, verificata su tutta la storia ordini.</p>
+      <div class="callout bad anim" style="margin-top:26px;">
+        <span class="cic"><span data-lucide="trending-down"></span></span>
+        <div class="ctext"><b>CAC in salita (€81→€141) mentre il valore cliente scende (€313→€224) e il riacquisto a 90 giorni è fermo al 26–33% da due anni.</b> La forbice si chiude lavorando la retention — non comprando più traffico.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">05</span></div>
+  </section>
+
+  <!-- 6 · LA LISTA -->
+  <section class="dark" data-label="La lista email">
+    <div class="pad">
+      <div class="head" style="margin-bottom:22px;">
+        <span class="eyebrow anim">Email = 30% della revenue Q2</span>
+        <h2 class="anim">La lista è il motore.<br>E adesso è spenta<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th></th><th>AC — 2024</th><th>AC — mag 2026</th><th>Klaviyo — oggi</th></tr></thead>
+        <tbody>
+          <tr><td><b>Open rate</b></td><td>17–19%</td><td class="neg">11,3%</td><td class="pos">20–24% full · 30–47% engaged</td></tr>
+          <tr><td><b>Click rate</b></td><td>0,7–0,9%</td><td class="neg">0,24%</td><td class="pos">2–8% sui segmenti caldi</td></tr>
+          <tr><td><b>Invii / mese</b></td><td>300–500K</td><td>88K</td><td>~124K (giugno)</td></tr>
+          <tr><td><b>Contatti raggiungibili</b></td><td>46K (20K attivi)</td><td>—</td><td>21.078 profili</td></tr>
+        </tbody>
+      </table>
+      <div class="callout anim" style="margin-top:30px;background:rgba(181,71,63,.15);border-color:rgba(181,71,63,.4);">
+        <span class="cic" style="color:#E8A49E;"><span data-lucide="mail-x"></span></span>
+        <div class="ctext" style="color:#fff;"><b>Zero invii dall'1 al 15 giugno e dal 30 giugno a oggi.</b> La "martedì educativa" non sta uscendo, la riattivazione dei 28K disiscritti non è mai partita. Ogni settimana di silenzio ≈ €3–5K di baseline persa — e il warmup della deliverability va all'indietro.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">06</span></div>
+  </section>
+
+  <!-- 7 · FLOW -->
+  <section data-label="Flow Klaviyo">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Il collo di bottiglia n°1</span>
+        <h2 class="anim">24 flow accesi, €2.000 al mese<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim" style="grid-template-columns:repeat(3,1fr);">
+        <div class="kpi"><div class="kic"><span data-lucide="workflow"></span></div><div class="kval">9<span class="kunit">%</span></div><div class="klabel">della revenue email viene dai flow — il benchmark di settore è 40–50%</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="shopping-cart"></span></div><div class="kval">407</div><div class="klabel">destinatari del carrello abbandonato in 3,5 mesi: troppo pochi — verificare il trigger sui guest (51% degli ordini)</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="mouse-pointer-click"></span></div><div class="kval">0</div><div class="klabel">conversioni su quasi tutti i flow retention post-acquisto: manca l'offerta di riacquisto</div></div>
+      </div>
+      <div class="callout good anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="zap"></span></span>
+        <div class="ctext"><b>La leva più grossa e più economica dell'H2: portare i flow da €2K a €8–10K al mese = +€40–50K nel semestre, tutto margine.</b> Audit tecnico entro il 20/7: trigger carrello/browse, incentivo esplicito al day 45–75, win-back con sconto reale sui one-time buyer.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">07</span></div>
+  </section>
+
+  <!-- 8 · IL PIANO NON REGGE -->
+  <section class="paper" data-label="Verifica del piano">
+    <div class="pad">
+      <div class="head" style="margin-bottom:22px;">
+        <span class="eyebrow anim">Verifica del piano di fine anno</span>
+        <h2 class="anim">I target attuali non reggono l'aritmetica<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th>Periodo</th><th>Target attuale</th><th>Actual 2025</th><th>Crescita implicita</th><th>Riferimento reale</th></tr></thead>
+        <tbody>
+          <tr><td><b>Q3 2026</b></td><td>€280.000</td><td>€146.100</td><td class="neg">+92%</td><td>Q2, il migliore: +17,5%</td></tr>
+          <tr><td><b>Q4 2026</b></td><td>€345.000</td><td>€179.500</td><td class="neg">+92%</td><td>H1 intero: +10,6%</td></tr>
+          <tr><td><b>Anno</b></td><td>€900–920K</td><td>€672.800</td><td class="neg">H2 a +59%</td><td>Luglio 1–7: piatto sul 2025</td></tr>
+        </tbody>
+      </table>
+      <div class="callout bad anim" style="margin-top:34px;">
+        <span class="cic"><span data-lucide="calculator"></span></span>
+        <div class="ctext">Il piano di aprile metteva settembre a €88K contro un settembre 2025 di <b>€38,7K reali (+127%)</b>: era una speranza, non un piano. <b>Meglio ricalibrare adesso che mancare 280K a ottobre</b> — un target concordato e centrato vale più di uno ambizioso e mancato, soprattutto per l'handover.</div>
+      </div>
+    </div>
+    <div class="foot"><span>Netto IVA · actual 2025 dal pull WooCommerce completo</span><span class="num-badge">08</span></div>
+  </section>
+
+  <!-- 9 · SCENARI H2 -->
+  <section data-label="Scenari H2">
+    <div class="pad">
+      <div class="head" style="margin-bottom:18px;">
+        <span class="eyebrow anim">Scenari H2 — netto IVA</span>
+        <h2 class="anim">Il nuovo target: ~€773K anno, +15%<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th>Mese</th><th>2025</th><th>Prudente</th><th>Base ◆</th><th>Spinto</th><th style="text-align:left;padding-left:34px;">Leva del mese</th></tr></thead>
+        <tbody>
+          <tr><td><b>Luglio</b></td><td>57,8K</td><td>58K</td><td><b>62K</b></td><td>65K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Artosan €39 + re-engagement 5K + newsletter</td></tr>
+          <tr><td><b>Agosto</b></td><td>49,6K</td><td>56K</td><td><b>62K</b></td><td>67K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Multivit "3+1" (24–31) + pack sport</td></tr>
+          <tr><td><b>Settembre</b></td><td>38,7K</td><td>42K</td><td><b>46K</b></td><td>50K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Rientro + nurturing + Amazon</td></tr>
+          <tr><td><b>Ottobre</b></td><td>55,8K</td><td>60K</td><td><b>65K</b></td><td>71K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Restock Jeunesse + back-in-stock</td></tr>
+          <tr><td><b>Novembre</b></td><td>70,1K</td><td>87K</td><td><b>95K</b></td><td>105K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Black Friday in due fasi (9–15 + 27)</td></tr>
+          <tr><td><b>Dicembre</b></td><td>53,5K</td><td>57K</td><td><b>61K</b></td><td>66K</td><td style="font-size:18px;text-align:left;padding-left:34px;">Natale 16–22 + gift</td></tr>
+          <tr class="tot"><td>Anno 2026</td><td>672,8K</td><td>742K</td><td>773K</td><td>806K</td><td style="font-size:18px;text-align:left;padding-left:34px;">margine H2 ≥ 45%</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:19px;color:var(--g500);margin:18px 0 0;line-height:1.4;" class="anim">Lo scenario Spinto richiede: flow a €10K/mese da settembre, Amazon €5–8K/mese da ottobre, video di Lorenzo che alimentano ads con CAC &lt; €100, zero incidenti stock.</p>
+    </div>
+    <div class="foot"><span>◆ Base = proposta di nuovo target ufficiale</span><span class="num-badge">09</span></div>
+  </section>
+
+  <!-- 10 · LE LEVE -->
+  <section class="paper" data-label="Le leve H2">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Le leve, in ordine di resa per ora di lavoro</span>
+        <h2 class="anim">Dove si vince il semestre<span class="o">.</span></h2>
+      </div>
+      <div class="road anim">
+        <div class="rstep accent">
+          <div class="rnum">1</div>
+          <h3>Flow + lista sempre accesa</h3>
+          <p>Audit flow entro 20/7 (carrello, retention con offerta, win-back). Re-engagement 5.000 dormienti + martedì educativa dal 14/7, senza più buchi.</p>
+          <div class="when">+€40–50K H2 · costo zero</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">2</div>
+          <h3>Promo con stock-gate</h3>
+          <p>In promo il business fa 2,3x la baseline: 4 promo H2 + BF due fasi. Verifica stock scritta 7 giorni prima del lancio, gate bloccante.</p>
+          <div class="when">≈ metà della crescita H2</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">3</div>
+          <h3>AOV primo ordine</h3>
+          <p>Fermo a €113–116 da 18 mesi (returning: €154). Bundle starter nel welcome, order bump, PayPal 3 rate sui prodotti &gt;€100.</p>
+          <div class="when">+€8–9K/anno ogni +€10</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">4</div>
+          <h3>Acquisizione nuova</h3>
+          <p>Ads riallocati (CPA nuovo &lt;€100/canale, settimanale) · Amazon con Paleocomplex+Youth · lead magnet D3+K2 · video Lorenzo per le creative.</p>
+          <div class="when">Alza il tetto del 2027</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">10</span></div>
+  </section>
+
+  <!-- 11 · LATO LORENZO -->
+  <section class="dark" data-label="Lato Lorenzo">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Le due cose che valgono più di ogni ottimizzazione</span>
+        <h2 class="anim">Cosa serve da Lorenzo<span class="o">.</span></h2>
+      </div>
+      <div class="rule-row anim" style="margin-top:40px;">
+        <div class="rule"><span class="icon" data-lucide="package-x"></span><div><b>Stock: 4 rotture in 18 mesi, ~€30–40K persi nel 2026</b><br><span style="font-size:19px;">Jeunesse a zero feb–mar e di nuovo fino a metà ottobre. Ogni buco cade dopo una promo: era prevedibile dai volumi. → Piano riordini unico H2 agganciato al calendario promo, <b>entro il 15/7</b>. Jeunesse ottobre = gate del Black Friday.</span></div></div>
+        <div class="rule"><span class="icon" data-lucide="video"></span><div><b>Contenuti: il top-of-funnel spento è il motivo del CAC +74%</b><br><span style="font-size:19px;">La domanda organica (video, blog, passaparola) si è fermata e la pubblicità la sta comprando a caro prezzo. → Sessione videomaker a Roma (40–50 video), <b>data fissata entro luglio</b>. Più: slide e testo del lead magnet D3+K2, fermi da giugno.</span></div></div>
+      </div>
+      <div class="callout anim" style="margin-top:52px;background:rgba(194,154,69,.14);border-color:rgba(194,154,69,.4);">
+        <span class="cic" style="color:var(--orange);"><span data-lucide="handshake"></span></span>
+        <div class="ctext" style="color:#fff;">Argomento handover, non accusa: <b>se il collo di bottiglia è operativo, la delega è la soluzione — non il rischio.</b> Calendario promo H2 firmato una volta, dashboard ogni lunedì: la "crescita stabile" la vede da solo, senza chiedere.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">11</span></div>
+  </section>
+
+  <!-- 12 · KPI HANDOVER -->
+  <section data-label="KPI settimanali">
+    <div class="pad">
+      <div class="head" style="margin-bottom:22px;">
+        <span class="eyebrow anim">La scheda dell'handover — ogni lunedì</span>
+        <h2 class="anim">Sei numeri, ogni settimana<span class="o">.</span></h2>
+      </div>
+      <table class="tbl compact anim">
+        <thead><tr><th>KPI</th><th>Target H2</th><th>Fonte</th></tr></thead>
+        <tbody>
+          <tr><td><b>Revenue settimana vs stessa settimana 2025</b></td><td class="pos">≥ +15%</td><td>WooCommerce</td></tr>
+          <tr><td><b>CPA nuovo cliente per canale</b></td><td>&lt; €100</td><td>Ads Manager, export settimanale</td></tr>
+          <tr><td><b>Flow revenue settimanale</b></td><td>≥ €2K da settembre</td><td>Klaviyo</td></tr>
+          <tr><td><b>Open rate campagne</b></td><td>≥ 30% entro ottobre</td><td>Klaviyo</td></tr>
+          <tr><td><b>Copertura stock top 6 prodotti</b></td><td>&gt; 45 giorni</td><td>Check venerdì con Lorenzo</td></tr>
+          <tr><td><b>Margine mensile</b></td><td>≥ 45% da agosto</td><td>File margini</td></tr>
+        </tbody>
+      </table>
+      <div class="callout good anim" style="margin-top:30px;">
+        <span class="cic"><span data-lucide="list-checks"></span></span>
+        <div class="ctext"><b>Questa settimana (8–12/7):</b> check Lorenzo (riordini + video + buco Jeunesse) · segmento e sequenza re-engagement 5K · warmup sonno-glicina schedulata per martedì 14 · mensili ads per chiudere il file margini · fissare la call di ricalibrazione target.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">12</span></div>
+  </section>
+
+  <!-- 13 · CLOSE -->
+  <section class="dark" data-label="La rotta">
+    <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+    <div class="pad">
+      <div class="close-wrap">
+        <div class="kicker anim o" style="margin-bottom:30px;">La rotta</div>
+        <h2 class="anim">Crescita stabile<br>batte 900K<span class="o">.</span></h2>
+        <ol class="steps anim">
+          <li><span class="snum">01</span><span class="stxt">Ricalibrare il target con Lorenzo entro luglio: ~€773K (+15%), margine in risalita da agosto</span></li>
+          <li><span class="snum">02</span><span class="stxt">Sei mesi consecutivi di crescita sul 2025, trainati da lista, flow e calendario promo</span></li>
+          <li><span class="snum">03</span><span class="stxt">Sistema che gira da solo e si vede ogni lunedì: è questo che firma l'handover</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="foot"><span>Report completo: output/strategy/2026-07-08_report-h2.md</span><span class="num-badge">13</span></div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+<script>
+  function paint(){ if(window.lucide){ lucide.createIcons(); } }
+  paint();
+  document.querySelector('deck-stage')?.addEventListener('slidechange', paint);
+  window.addEventListener('load', paint);
+</script>
+</body>
+</html>
