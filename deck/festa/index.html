@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Promo FESTA — Report | Paleocomplex</title>
+<link rel="icon" href="assets/logo-black.svg" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+/* ---- Font self-hosted (variabili) ---- */
+@font-face{font-family:'Cormorant Garamond';font-weight:300 700;font-style:normal;font-display:swap;src:url('fonts/CormorantGaramond.ttf') format('truetype');}
+@font-face{font-family:'Inter';font-weight:100 900;font-style:normal;font-display:swap;src:url('fonts/Inter.ttf') format('truetype');}
+:root{
+  --ink:#1C1813; --white:#FFFFFF; --orange:#C29A45; --orange600:#A9843A;
+  --g050:#FAF6EF; --g100:#F3EEE5; --g150:#EDE3D1; --g200:#E6DED0; --g300:#CFC5B4;
+  --g400:#A79C88; --g500:#7C725F; --g600:#544C3E;
+  --success:#1F9D63; --success100:#E9F2E7; --success700:#3D6B34;
+  --warning:#C29A45; --warning100:#F7EEDC; --warning700:#8A6A24;
+  --danger:#B5473F; --danger100:#F6E4E2; --danger700:#93362F;
+  --blue:#2D8FC4;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;}
+deck-stage:not(:defined){visibility:hidden;}
+deck-stage{background:#000;}
+section{
+  font-family:var(--font); color:var(--ink); background:var(--white);
+  overflow:hidden; -webkit-font-smoothing:antialiased;
+}
+.pad{position:absolute; inset:0; padding:96px 110px; display:flex; flex-direction:column;}
+.dark{background:var(--ink); color:var(--white);}
+.paper{background:var(--g050);}
+.o{color:var(--orange);}
+
+/* type */
+.eyebrow{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--g500);}
+.dark .eyebrow{color:rgba(255,255,255,.55);}
+.kicker{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);}
+.dark .kicker{color:#fff;}
+h1{font-size:100px;line-height:1.0;letter-spacing:-0.03em;font-weight:600;margin:0;}
+h2{font-size:66px;line-height:1.05;letter-spacing:-0.025em;font-weight:600;margin:0;}
+h3{font-size:32px;line-height:1.15;letter-spacing:-0.01em;font-weight:600;margin:0;}
+.lead{font-size:29px;line-height:1.5;font-weight:400;color:var(--g600);max-width:32ch;}
+.dark .lead{color:rgba(255,255,255,.72);}
+.foot{position:absolute;left:110px;right:110px;bottom:54px;display:flex;align-items:center;justify-content:space-between;font-size:18px;color:var(--g400);}
+.dark .foot{color:rgba(255,255,255,.4);}
+.foot img{height:22px;display:block;}
+.num-badge{font-size:18px;font-weight:600;color:var(--g400);}
+
+/* skin Paleo: display serif su titoli e numeri giganti */
+h1,h2,.close-wrap h2{font-family:var(--font-display);font-weight:700;}
+.kpi .kval,.band .bval{font-family:var(--font-display);font-weight:700;}
+
+/* cover */
+.cover-logo{height:44px;}
+.cover-mark{position:absolute;right:-120px;bottom:-140px;height:760px;opacity:.05;}
+
+/* header */
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:48px;}
+.head h2{max-width:26ch;}
+
+/* rules / bullets */
+.rule-row{display:flex;gap:20px;margin-top:34px;}
+.rule{flex:1;display:flex;gap:14px;align-items:flex-start;font-size:21px;line-height:1.45;color:var(--g600);}
+.rule .icon{color:var(--orange);flex:none;margin-top:2px;}
+.rule b{color:var(--ink);font-weight:600;}
+.dark .rule{color:rgba(255,255,255,.75);}
+.dark .rule b{color:#fff;}
+
+/* two-column split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:center;}
+.prod-list{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:18px;}
+.prod-list li{display:flex;gap:14px;align-items:flex-start;font-size:23px;line-height:1.4;color:var(--g600);}
+.dark .prod-list li{color:rgba(255,255,255,.78);}
+.prod-list .icon{color:var(--orange);flex:none;margin-top:3px;}
+.prod-list b{color:var(--ink);font-weight:600;}
+.dark .prod-list b{color:#fff;}
+
+/* KPI cards */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px;}
+.kpi{background:#fff;border:1px solid var(--g200);border-radius:14px;padding:32px 30px;display:flex;flex-direction:column;}
+.paper .kpi{box-shadow:0 4px 14px rgba(20,20,20,.05);}
+.kpi .kic{color:var(--orange);margin-bottom:20px;}
+.kpi .kval{font-size:60px;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums;}
+.kpi .kunit{font-size:26px;font-weight:600;color:var(--g400);}
+.kpi .klabel{font-size:19px;font-weight:500;color:var(--g500);margin-top:14px;line-height:1.35;}
+
+/* big number band */
+.band{display:flex;gap:40px;margin-top:20px;}
+.band .bcell{flex:1;}
+.band .bval{font-size:76px;letter-spacing:-0.02em;line-height:1;color:var(--orange);font-variant-numeric:tabular-nums;}
+.band .blabel{font-size:21px;color:var(--g600);margin-top:14px;line-height:1.4;max-width:20ch;}
+.dark .band .blabel{color:rgba(255,255,255,.7);}
+
+/* roadmap */
+.road{display:flex;gap:0;margin-top:20px;flex:1;align-items:stretch;}
+.rstep{flex:1;position:relative;padding:0 26px;display:flex;flex-direction:column;}
+.rstep:not(:last-child){border-right:1px solid var(--g200);}
+.rstep .rnum{width:52px;height:52px;border-radius:999px;background:var(--ink);color:#fff;font-size:24px;font-weight:600;display:grid;place-items:center;margin-bottom:24px;}
+.rstep.accent .rnum{background:var(--orange);}
+.rstep h3{margin-bottom:14px;}
+.rstep p{font-size:19px;line-height:1.45;color:var(--g600);margin:0;}
+.rstep .when{font-size:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--g400);margin-top:auto;padding-top:22px;}
+
+/* callout / honesty box */
+.callout{display:flex;gap:22px;align-items:flex-start;background:var(--warning100);border:1px solid #E4D3AC;border-radius:16px;padding:34px 40px;margin-top:8px;}
+.callout .cic{color:var(--warning700);flex:none;margin-top:2px;}
+.callout .ctext{font-size:24px;line-height:1.5;color:var(--ink);}
+.callout .ctext b{font-weight:600;}
+.callout.good{background:var(--success100);border-color:#C4D8BE;}
+.callout.good .cic{color:var(--success700);}
+
+/* close */
+.close-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.close-wrap h2{font-size:82px;max-width:20ch;}
+.steps{list-style:none;padding:0;margin:44px 0 0;display:flex;gap:40px;}
+.steps li{flex:1;display:flex;flex-direction:column;gap:14px;}
+.steps .snum{font-size:22px;font-weight:600;color:var(--orange);}
+.steps .stxt{font-size:24px;line-height:1.4;color:rgba(255,255,255,.85);}
+
+@media (prefers-reduced-motion:no-preference){
+  [data-deck-active] .anim{animation:rise .55s cubic-bezier(.2,.7,.2,1) both;}
+  [data-deck-active] .anim:nth-child(2){animation-delay:.05s;}
+  [data-deck-active] .anim:nth-child(3){animation-delay:.1s;}
+  [data-deck-active] .anim:nth-child(4){animation-delay:.15s;}
+  [data-deck-active] .anim:nth-child(5){animation-delay:.2s;}
+}
+@keyframes rise{from{transform:translateY(16px);}to{transform:none;}}
+</style>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · COVER -->
+  <section class="dark" data-label="Cover">
+    <div class="pad">
+      <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+      <img class="cover-logo anim" src="assets/logo-white.svg" alt="Paleocomplex" style="align-self:flex-start;" />
+      <div style="flex:1;"></div>
+      <div class="eyebrow anim" style="margin-bottom:26px;">Report promo · 25–30 giugno 2026</div>
+      <h1 class="anim">FESTA dei 10 anni<span class="o">.</span></h1>
+      <p class="lead anim" style="margin-top:34px;max-width:40ch;">Sei giorni di promo per il decennale. Il risultato: il miglior giugno nella storia del brand.</p>
+    </div>
+    <div class="foot"><span>Preparato per Lorenzo</span><span>paleocomplex.com</span></div>
+  </section>
+
+  <!-- 2 · I NUMERI -->
+  <section class="paper" data-label="I numeri">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Il risultato</span>
+        <h2 class="anim">Sei giorni, un record<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim">
+        <div class="kpi"><div class="kic"><span data-lucide="banknote"></span></div><div class="kval">€59.692</div><div class="klabel">venduto in 6 giorni di promo</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="shopping-cart"></span></div><div class="kval">309</div><div class="klabel">ordini completati</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="scale"></span></div><div class="kval">€193</div><div class="klabel">carrello medio, contro €150 di media: i clienti hanno fatto scorta</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="package"></span></div><div class="kval">940</div><div class="klabel">pezzi venduti</div></div>
+      </div>
+      <div class="callout good anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="trophy"></span></span>
+        <div class="ctext"><b>Giugno chiude a €108.170, +20% sul giugno 2025</b> — che era il record storico. E il trimestre supera l'obiettivo: <b>€213.500 netto IVA contro i 210.000 previsti</b>.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">02</span></div>
+  </section>
+
+  <!-- 3 · EMAIL -->
+  <section data-label="Il motore: le email">
+    <div class="pad">
+      <div class="split">
+        <div>
+          <div class="eyebrow anim" style="margin-bottom:22px;">Cosa ha trainato la promo</div>
+          <h2 class="anim">Le email hanno fatto €45.869. Da sole<span class="o">.</span></h2>
+          <ul class="prod-list anim">
+            <li><span class="icon" data-lucide="mail"></span><b>9 invii in 6 giorni</b> — lancio, educative, urgency finale a scaletta</li>
+            <li><span class="icon" data-lucide="users"></span><b>Fino a 21.000 contatti</b> raggiunti per invio: la lista più ampia mai usata</li>
+            <li><span class="icon" data-lucide="crown"></span>La macchina email è <b>il primo canale di vendita</b> del brand</li>
+          </ul>
+        </div>
+        <div class="anim" style="background:var(--g050);border:1px solid var(--g200);border-radius:18px;padding:48px;display:flex;flex-direction:column;justify-content:center;gap:8px;">
+          <div class="eyebrow" style="color:var(--g400);">Ordini generati dalle email</div>
+          <div style="font-family:var(--font-display);font-size:96px;font-weight:700;letter-spacing:-0.02em;line-height:1;color:var(--orange);margin-top:14px;">227</div>
+          <p style="font-size:21px;color:var(--g600);line-height:1.5;margin:18px 0 0;max-width:28ch;">Le aperture (~20%) cresceranno col consolidamento del dominio: <b style="color:var(--ink);">il potenziale è ancora davanti</b>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">03</span></div>
+  </section>
+
+  <!-- 4 · CLIENTI NUOVI -->
+  <section class="dark" data-label="Clienti nuovi">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Non solo lista: acquisizione</span>
+        <h2 class="anim">La FESTA ha portato facce nuove<span class="o">.</span></h2>
+      </div>
+      <div class="band anim" style="margin-top:40px;">
+        <div class="bcell"><div class="bval">178</div><div class="blabel">clienti nuovi nel mese — mai un acquisto prima, verificato su tutto lo storico ordini</div></div>
+        <div class="bcell"><div class="bval">+34<span style="font-size:34px;color:rgba(255,255,255,.5);">%</span></div><div class="blabel">sopra la media mensile 2026</div></div>
+        <div class="bcell"><div class="bval">28</div><div class="blabel">automazioni attive che ora li accompagnano al riacquisto</div></div>
+      </div>
+      <p class="lead anim" style="margin-top:56px;max-width:52ch;">Ogni cliente nuovo entra nei flussi automatici: benvenuto, post acquisto, riacquisto. La promo non ha solo venduto, ha allargato la base.</p>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">04</span></div>
+  </section>
+
+  <!-- 5 · STOCK -->
+  <section class="paper" data-label="Stock">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Cosa ci ha frenato</span>
+        <h2 class="anim">La promo ha svuotato il magazzino<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim" style="grid-template-columns:repeat(3,1fr);">
+        <div class="kpi"><div class="kic"><span data-lucide="package-x"></span></div><div class="kval">0</div><div class="klabel">Jeunesse rimasti: 63 venduti, esaurito. Riordino a metà ottobre</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="flame"></span></div><div class="kval">158</div><div class="klabel">Youth venduti — primo prodotto della promo</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="truck"></span></div><div class="kval">83</div><div class="klabel">Revolution venduti — salvati dal riassortimento arrivato in corsa</div></div>
+      </div>
+      <div class="callout anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="alert-triangle"></span></span>
+        <div class="ctext">La domanda ha superato le scorte: <b>per circa tre mesi restiamo senza Jeunesse</b> proprio mentre i clienti lo chiedono. Per agosto e per il Black Friday serve <b>stock verificato e riordini pianificati prima del lancio</b>.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">05</span></div>
+  </section>
+
+  <!-- 6 · PROSSIMI 60 GIORNI -->
+  <section data-label="Prossimi 60 giorni">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Luglio – Agosto</span>
+        <h2 class="anim">I prossimi 60 giorni. Il piano è pieno<span class="o">.</span></h2>
+      </div>
+      <div class="road anim">
+        <div class="rstep accent">
+          <div class="rnum">1</div>
+          <h3>Riattivazione</h3>
+          <p>5.000 clienti dormienti: segmento + sequenza di 4 email. Biografia Lorenzo su pagine prodotto e home.</p>
+          <div class="when">Luglio · prima metà</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">2</div>
+          <h3>Lanci</h3>
+          <p>Promo Artosan €39 · lead magnet D3+K2 con consegna automatica via Instagram · campagne Amazon (Paleocomplex e Youth) · video a Roma.</p>
+          <div class="when">Luglio · seconda metà</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">3</div>
+          <h3>Sistema</h3>
+          <p>Nuove pagine prodotto con FAQ complete · flussi predittivi di riacquisto · consulenze a pagamento €250 · articolo Lampada Apollo.</p>
+          <div class="when">Entro fine luglio</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">4</div>
+          <h3>Agosto</h3>
+          <p>Promo "compri 3, il quarto in omaggio" (24–31) · pack sport · montaggio video · email educative attive tutto il mese.</p>
+          <div class="when">24–31 agosto</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Ogni settimana: monitoraggio email e pubblicità, verifica stock del venerdì</span><span class="num-badge">06</span></div>
+  </section>
+
+  <!-- 7 · CLOSE -->
+  <section class="dark" data-label="Da decidere insieme">
+    <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+    <div class="pad">
+      <div class="close-wrap">
+        <div class="kicker anim o" style="margin-bottom:30px;">Da decidere insieme</div>
+        <h2 class="anim">Tre cose, al prossimo check<span class="o">.</span></h2>
+        <ol class="steps anim">
+          <li><span class="snum">01</span><span class="stxt">Tempi del nuovo lotto Jeunesse e nuova etichetta</span></li>
+          <li><span class="snum">02</span><span class="stxt">Gestione dei tre mesi senza Jeunesse: redirect su Youth o preordine</span></li>
+          <li><span class="snum">03</span><span class="stxt">Riordini in vista del Black Friday: merce in casa entro il 7 novembre</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="foot"><span>paleocomplex.com</span><span class="num-badge">07</span></div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+<script>
+  function paint(){ if(window.lucide){ lucide.createIcons(); } }
+  paint();
+  document.querySelector('deck-stage')?.addEventListener('slidechange', paint);
+  window.addEventListener('load', paint);
+</script>
+</body>
+</html>

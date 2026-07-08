@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Primo semestre 2026 — Report | Paleocomplex</title>
+<link rel="icon" href="assets/logo-black.svg" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+/* ---- Font self-hosted (variabili) ---- */
+@font-face{font-family:'Cormorant Garamond';font-weight:300 700;font-style:normal;font-display:swap;src:url('fonts/CormorantGaramond.ttf') format('truetype');}
+@font-face{font-family:'Inter';font-weight:100 900;font-style:normal;font-display:swap;src:url('fonts/Inter.ttf') format('truetype');}
+:root{
+  --ink:#1C1813; --white:#FFFFFF; --orange:#C29A45; --orange600:#A9843A;
+  --g050:#FAF6EF; --g100:#F3EEE5; --g150:#EDE3D1; --g200:#E6DED0; --g300:#CFC5B4;
+  --g400:#A79C88; --g500:#7C725F; --g600:#544C3E;
+  --success:#1F9D63; --success100:#E9F2E7; --success700:#3D6B34;
+  --warning:#C29A45; --warning100:#F7EEDC; --warning700:#8A6A24;
+  --danger:#B5473F; --danger100:#F6E4E2; --danger700:#93362F;
+  --blue:#2D8FC4;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;}
+deck-stage:not(:defined){visibility:hidden;}
+deck-stage{background:#000;}
+section{
+  font-family:var(--font); color:var(--ink); background:var(--white);
+  overflow:hidden; -webkit-font-smoothing:antialiased;
+}
+.pad{position:absolute; inset:0; padding:96px 110px; display:flex; flex-direction:column;}
+.dark{background:var(--ink); color:var(--white);}
+.paper{background:var(--g050);}
+.o{color:var(--orange);}
+
+/* type */
+.eyebrow{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--g500);}
+.dark .eyebrow{color:rgba(255,255,255,.55);}
+.kicker{font-size:21px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);}
+.dark .kicker{color:#fff;}
+h1{font-size:100px;line-height:1.0;letter-spacing:-0.03em;font-weight:600;margin:0;}
+h2{font-size:66px;line-height:1.05;letter-spacing:-0.025em;font-weight:600;margin:0;}
+h3{font-size:32px;line-height:1.15;letter-spacing:-0.01em;font-weight:600;margin:0;}
+.lead{font-size:29px;line-height:1.5;font-weight:400;color:var(--g600);max-width:32ch;}
+.dark .lead{color:rgba(255,255,255,.72);}
+.foot{position:absolute;left:110px;right:110px;bottom:54px;display:flex;align-items:center;justify-content:space-between;font-size:18px;color:var(--g400);}
+.dark .foot{color:rgba(255,255,255,.4);}
+.foot img{height:22px;display:block;}
+.num-badge{font-size:18px;font-weight:600;color:var(--g400);}
+
+/* skin Paleo: display serif su titoli e numeri giganti */
+h1,h2,.close-wrap h2{font-family:var(--font-display);font-weight:700;}
+.kpi .kval,.band .bval{font-family:var(--font-display);font-weight:700;}
+
+/* cover */
+.cover-logo{height:44px;}
+.cover-mark{position:absolute;right:-120px;bottom:-140px;height:760px;opacity:.05;}
+
+/* header */
+.head{display:flex;flex-direction:column;gap:18px;margin-bottom:48px;}
+.head h2{max-width:26ch;}
+
+/* rules / bullets */
+.rule-row{display:flex;gap:20px;margin-top:34px;}
+.rule{flex:1;display:flex;gap:14px;align-items:flex-start;font-size:21px;line-height:1.45;color:var(--g600);}
+.rule .icon{color:var(--orange);flex:none;margin-top:2px;}
+.rule b{color:var(--ink);font-weight:600;}
+.dark .rule{color:rgba(255,255,255,.75);}
+.dark .rule b{color:#fff;}
+
+/* two-column split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:center;}
+.prod-list{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:18px;}
+.prod-list li{display:flex;gap:14px;align-items:flex-start;font-size:23px;line-height:1.4;color:var(--g600);}
+.dark .prod-list li{color:rgba(255,255,255,.78);}
+.prod-list .icon{color:var(--orange);flex:none;margin-top:3px;}
+.prod-list b{color:var(--ink);font-weight:600;}
+.dark .prod-list b{color:#fff;}
+
+/* KPI cards */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:8px;}
+.kpi{background:#fff;border:1px solid var(--g200);border-radius:14px;padding:32px 30px;display:flex;flex-direction:column;}
+.paper .kpi{box-shadow:0 4px 14px rgba(20,20,20,.05);}
+.kpi .kic{color:var(--orange);margin-bottom:20px;}
+.kpi .kval{font-size:60px;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums;}
+.kpi .kunit{font-size:26px;font-weight:600;color:var(--g400);}
+.kpi .klabel{font-size:19px;font-weight:500;color:var(--g500);margin-top:14px;line-height:1.35;}
+
+/* big number band */
+.band{display:flex;gap:40px;margin-top:20px;}
+.band .bcell{flex:1;}
+.band .bval{font-size:76px;letter-spacing:-0.02em;line-height:1;color:var(--orange);font-variant-numeric:tabular-nums;}
+.band .blabel{font-size:21px;color:var(--g600);margin-top:14px;line-height:1.4;max-width:20ch;}
+.dark .band .blabel{color:rgba(255,255,255,.7);}
+
+/* roadmap */
+.road{display:flex;gap:0;margin-top:20px;flex:1;align-items:stretch;}
+.rstep{flex:1;position:relative;padding:0 26px;display:flex;flex-direction:column;}
+.rstep:not(:last-child){border-right:1px solid var(--g200);}
+.rstep .rnum{width:52px;height:52px;border-radius:999px;background:var(--ink);color:#fff;font-size:24px;font-weight:600;display:grid;place-items:center;margin-bottom:24px;}
+.rstep.accent .rnum{background:var(--orange);}
+.rstep h3{margin-bottom:14px;}
+.rstep p{font-size:19px;line-height:1.45;color:var(--g600);margin:0;}
+.rstep .when{font-size:16px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--g400);margin-top:auto;padding-top:22px;}
+
+/* callout / honesty box */
+.callout{display:flex;gap:22px;align-items:flex-start;background:var(--warning100);border:1px solid #E4D3AC;border-radius:16px;padding:34px 40px;margin-top:8px;}
+.callout .cic{color:var(--warning700);flex:none;margin-top:2px;}
+.callout .ctext{font-size:24px;line-height:1.5;color:var(--ink);}
+.callout .ctext b{font-weight:600;}
+.callout.good{background:var(--success100);border-color:#C4D8BE;}
+.callout.good .cic{color:var(--success700);}
+
+/* tabella numeri */
+.tbl{width:100%;border-collapse:collapse;margin-top:4px;font-variant-numeric:tabular-nums;}
+.tbl th{font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--g500);text-align:right;padding:12px 20px;border-bottom:2px solid var(--g300);font-weight:600;}
+.tbl th:first-child,.tbl td:first-child{text-align:left;}
+.tbl td{font-size:25px;padding:14px 20px;border-bottom:1px solid var(--g200);color:var(--g600);text-align:right;}
+.tbl td b{color:var(--ink);font-weight:600;}
+.tbl .pos{color:var(--success700);font-weight:600;}
+.tbl .neg{color:var(--danger700);font-weight:600;}
+.tbl tr.tot td{border-bottom:none;border-top:2px solid var(--ink);color:var(--ink);font-weight:600;font-size:27px;}
+
+/* close */
+.close-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.close-wrap h2{font-size:82px;max-width:20ch;}
+.steps{list-style:none;padding:0;margin:44px 0 0;display:flex;gap:40px;}
+.steps li{flex:1;display:flex;flex-direction:column;gap:14px;}
+.steps .snum{font-size:22px;font-weight:600;color:var(--orange);}
+.steps .stxt{font-size:24px;line-height:1.4;color:rgba(255,255,255,.85);}
+
+@media (prefers-reduced-motion:no-preference){
+  [data-deck-active] .anim{animation:rise .55s cubic-bezier(.2,.7,.2,1) both;}
+  [data-deck-active] .anim:nth-child(2){animation-delay:.05s;}
+  [data-deck-active] .anim:nth-child(3){animation-delay:.1s;}
+  [data-deck-active] .anim:nth-child(4){animation-delay:.15s;}
+  [data-deck-active] .anim:nth-child(5){animation-delay:.2s;}
+}
+@keyframes rise{from{transform:translateY(16px);}to{transform:none;}}
+</style>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- 1 · COVER -->
+  <section class="dark" data-label="Cover">
+    <div class="pad">
+      <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+      <img class="cover-logo anim" src="assets/logo-white.svg" alt="Paleocomplex" style="align-self:flex-start;" />
+      <div style="flex:1;"></div>
+      <div class="eyebrow anim" style="margin-bottom:26px;">Report · gennaio – giugno 2026</div>
+      <h1 class="anim">Primo semestre<span class="o">.</span></h1>
+      <p class="lead anim" style="margin-top:34px;max-width:42ch;">Più clienti, più fatturato, un sistema costruito per rendere. I numeri che contano e la rotta per il secondo semestre.</p>
+    </div>
+    <div class="foot"><span>Preparato per Lorenzo</span><span>paleocomplex.com</span></div>
+  </section>
+
+  <!-- 2 · KPI SEMESTRE -->
+  <section class="paper" data-label="Il semestre in numeri">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Il semestre in numeri</span>
+        <h2 class="anim">Crescita su tutta la linea<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim">
+        <div class="kpi"><div class="kic"><span data-lucide="banknote"></span></div><div class="kval">€382.500</div><div class="klabel">fatturato netto IVA — <b>+11,6%</b> sul primo semestre 2025</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="shopping-cart"></span></div><div class="kval">2.707</div><div class="klabel">ordini, +10% sul 2025</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="user-plus"></span></div><div class="kval">840</div><div class="klabel">clienti nuovi: mai un acquisto prima, verificato su tutto lo storico</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="target"></span></div><div class="kval">€213,5<span class="kunit">K</span></div><div class="klabel">secondo trimestre — obiettivo 210K superato</div></div>
+      </div>
+      <div class="callout good anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="trophy"></span></span>
+        <div class="ctext"><b>Giugno da record: €98.500 netto IVA, +20%</b> sul miglior giugno di sempre, trainato dalla FESTA del decennale.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">02</span></div>
+  </section>
+
+  <!-- 3 · MESE PER MESE -->
+  <section data-label="Mese per mese">
+    <div class="pad">
+      <div class="head" style="margin-bottom:26px;">
+        <span class="eyebrow anim">Andamento</span>
+        <h2 class="anim">Mese per mese, contro il 2025<span class="o">.</span></h2>
+      </div>
+      <table class="tbl anim">
+        <thead><tr><th>Mese</th><th>2025</th><th>2026</th><th>Differenza</th></tr></thead>
+        <tbody>
+          <tr><td><b>Gennaio</b></td><td>€44.465</td><td><b>€48.838</b></td><td class="pos">+9,8%</td></tr>
+          <tr><td><b>Febbraio</b></td><td>€48.321</td><td><b>€52.157</b></td><td class="pos">+7,9%</td></tr>
+          <tr><td><b>Marzo</b></td><td>€71.239</td><td><b>€67.941</b></td><td class="neg">−4,6%</td></tr>
+          <tr><td><b>Aprile</b></td><td>€47.020</td><td><b>€63.263</b></td><td class="pos">+34,5%</td></tr>
+          <tr><td><b>Maggio</b></td><td>€52.912</td><td><b>€51.764</b></td><td class="neg">−2,2%</td></tr>
+          <tr><td><b>Giugno</b></td><td>€81.842</td><td><b>€98.513</b></td><td class="pos">+20,4%</td></tr>
+          <tr class="tot"><td>Totale</td><td>€345.800</td><td>€382.476</td><td class="pos">+11,6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="foot"><span>Fatturato netto IVA, fonte WooCommerce</span><span class="num-badge">03</span></div>
+  </section>
+
+  <!-- 4 · LA LETTURA -->
+  <section class="dark" data-label="La lettura">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">La lettura</span>
+        <h2 class="anim">La crescita arriva quando<br>tutto lavora insieme<span class="o">.</span></h2>
+      </div>
+      <div class="rule-row anim" style="margin-top:40px;">
+        <div class="rule"><span class="icon" data-lucide="calendar-heart"></span><div><b>Aprile +34%</b><br><span style="font-size:19px;">Programma fedeltà + promo di primavera: promo, email e pubblicità coordinate.</span></div></div>
+        <div class="rule"><span class="icon" data-lucide="party-popper"></span><div><b>Giugno +20%</b><br><span style="font-size:19px;">La FESTA del decennale: il mese migliore nella storia del brand.</span></div></div>
+        <div class="rule"><span class="icon" data-lucide="minus"></span><div><b>Mesi senza promo ≈ 2025</b><br><span style="font-size:19px;">Marzo e maggio in linea con l'anno scorso: senza un'occasione forte, il mercato non si muove da solo.</span></div></div>
+      </div>
+      <p class="lead anim" style="margin-top:56px;max-width:50ch;">La conclusione è semplice: <b style="color:#fff;">il calendario promo è il motore del fatturato</b>. Per questo il secondo semestre ne ha già uno completo, da agosto al Natale.</p>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">04</span></div>
+  </section>
+
+  <!-- 5 · BASE CLIENTI -->
+  <section data-label="La base clienti">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Il patrimonio</span>
+        <h2 class="anim">Il 74% del fatturato<br>viene da chi torna<span class="o">.</span></h2>
+      </div>
+      <div class="kpis anim" style="grid-template-columns:repeat(3,1fr);">
+        <div class="kpi"><div class="kic"><span data-lucide="repeat"></span></div><div class="kval">67%</div><div class="klabel">degli ordini arriva da clienti esistenti</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="shopping-bag"></span></div><div class="kval">€150</div><div class="klabel">carrello medio di chi ritorna, contro €112 del primo acquisto</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="workflow"></span></div><div class="kval">28</div><div class="klabel">automazioni email attive — migrazione Klaviyo completata</div></div>
+      </div>
+      <div class="callout good anim" style="margin-top:44px;">
+        <span class="cic"><span data-lucide="mails"></span></span>
+        <div class="ctext"><b>È ora di spingere sulle email.</b> Nella FESTA 9 invii hanno prodotto da soli €45.869. A luglio riattiviamo i 5.000 clienti fermi da oltre 7 mesi e completiamo i flussi predittivi: <b>fatturato senza spesa pubblicitaria</b>.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">05</span></div>
+  </section>
+
+  <!-- 6 · MARGINE -->
+  <section class="dark" data-label="Margine">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Margine</span>
+        <h2 class="anim">Abbiamo investito per crescere.<br>Ora si raccoglie<span class="o">.</span></h2>
+      </div>
+      <div class="band anim" style="margin-top:30px;">
+        <div class="bcell"><div class="bval">€148,7<span style="font-size:34px;color:rgba(255,255,255,.5);">K</span></div><div class="blabel">margine netto del semestre, il 38,9% del fatturato</div></div>
+        <div class="bcell"><div class="bval">2<span style="font-size:34px;color:rgba(255,255,255,.5);">x</span></div><div class="blabel">investimento pubblicitario rispetto al 2025: è il costo dei clienti nuovi</div></div>
+        <div class="bcell"><div class="bval">52<span style="font-size:34px;color:rgba(255,255,255,.5);">%</span></div><div class="blabel">margine di giugno, il migliore del semestre</div></div>
+      </div>
+      <p class="lead anim" style="margin-top:56px;max-width:54ch;">Giugno indica la strada: quando la lista spinge insieme alle promo, il margine sale anche con la pubblicità attiva. La rotta del semestre due: <b style="color:#fff;">più resa dalla lista e dalle pagine prodotto, pubblicità concentrata dove rende</b>.</p>
+    </div>
+    <div class="foot"><img src="assets/logo-white.svg" alt="Paleocomplex" /><span class="num-badge">06</span></div>
+  </section>
+
+  <!-- 7 · STOCK -->
+  <section class="paper" data-label="Stock">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Il vincolo da sciogliere</span>
+        <h2 class="anim">Più volte senza prodotti chiave<span class="o">.</span></h2>
+      </div>
+      <p class="lead anim" style="max-width:52ch;">Youth fermo ad aprile con le campagne spente, Jeunesse esaurito in primavera, tornato e di nuovo esaurito dopo la FESTA. Ogni rottura sono <b style="color:var(--ink);">vendite perse nel momento esatto in cui il cliente vuole comprare</b>.</p>
+      <div class="kpis anim" style="grid-template-columns:repeat(2,1fr);margin-top:40px;">
+        <div class="kpi"><div class="kic"><span data-lucide="package-x"></span></div><div class="kval">0</div><div class="klabel">Jeunesse disponibili oggi — riordino consegna a metà ottobre</div></div>
+        <div class="kpi"><div class="kic"><span data-lucide="calendar-clock"></span></div><div class="kval">7 nov</div><div class="klabel">data limite arrivo merce per il Black Friday anticipato (9–15 novembre)</div></div>
+      </div>
+      <div class="callout anim" style="margin-top:40px;">
+        <span class="cic"><span data-lucide="clipboard-list"></span></span>
+        <div class="ctext"><b>Proposta:</b> un piano riordini unico allineato al calendario promo del semestre, deciso adesso. È la condizione perché agosto, l'autunno e il Black Friday rendano quanto possono.</div>
+      </div>
+    </div>
+    <div class="foot"><img src="assets/logo-black.svg" alt="Paleocomplex" /><span class="num-badge">07</span></div>
+  </section>
+
+  <!-- 8 · PIANO H2 -->
+  <section data-label="Il piano H2">
+    <div class="pad">
+      <div class="head">
+        <span class="eyebrow anim">Secondo semestre</span>
+        <h2 class="anim">Il piano è già in moto<span class="o">.</span></h2>
+      </div>
+      <div class="road anim">
+        <div class="rstep accent">
+          <div class="rnum">1</div>
+          <h3>Luglio</h3>
+          <p>Riattivazione 5.000 dormienti · promo Artosan €39 · campagne Amazon · lead magnet D3+K2 · nuove pagine prodotto · video a Roma.</p>
+          <div class="when">In corso</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">2</div>
+          <h3>Agosto</h3>
+          <p>Promo "compri 3, il quarto in omaggio" (24–31) · pack sport · pubblicazione video · email attive tutto il mese.</p>
+          <div class="when">24–31 agosto</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">3</div>
+          <h3>Autunno</h3>
+          <p>Spinta acquisizione con i video · arrivo riordino Jeunesse · preparazione campagne Black Friday.</p>
+          <div class="when">Settembre – Ottobre</div>
+        </div>
+        <div class="rstep">
+          <div class="rnum">4</div>
+          <h3>Black Friday + Natale</h3>
+          <p>Black Friday in due fasi (anticipo 9–15 novembre, poi il 27) · promo di Natale 16–22 dicembre.</p>
+          <div class="when">Novembre – Dicembre</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Ogni promo con stock verificato prima del lancio</span><span class="num-badge">08</span></div>
+  </section>
+
+  <!-- 9 · CLOSE -->
+  <section class="dark" data-label="La rotta">
+    <img class="cover-mark" src="assets/mark-white.svg" alt="" />
+    <div class="pad">
+      <div class="close-wrap">
+        <div class="kicker anim o" style="margin-bottom:30px;">La rotta</div>
+        <h2 class="anim">Crescere sì.<br>Con margine<span class="o">.</span></h2>
+        <ol class="steps anim">
+          <li><span class="snum">01</span><span class="stxt">Stock allineato al calendario promo: riordini decisi adesso</span></li>
+          <li><span class="snum">02</span><span class="stxt">Lista email a pieno regime: dormienti, flussi predittivi, nuove pagine</span></li>
+          <li><span class="snum">03</span><span class="stxt">Black Friday preparato da settembre, merce in casa entro il 7 novembre</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="foot"><span>paleocomplex.com</span><span class="num-badge">09</span></div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+<script>
+  function paint(){ if(window.lucide){ lucide.createIcons(); } }
+  paint();
+  document.querySelector('deck-stage')?.addEventListener('slidechange', paint);
+  window.addEventListener('load', paint);
+</script>
+</body>
+</html>
