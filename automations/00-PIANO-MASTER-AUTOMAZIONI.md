@@ -1,6 +1,6 @@
-**Versione:** 5.0
-**Ultimo aggiornamento:** 2026-06-11
-**Status:** Fase 1 review Lorenzo completata. Fase 2 refactor architetturale completato (21 Primo Cliente + 22 Cliente Ricorrente + 14 flow prodotto 24-37 + 23 Recensione Brand). Rinumerazione globale eseguita 2026-06-11 per evitare conflitto col 06 Conversione di Fase 1.
+**Versione:** 6.0
+**Ultimo aggiornamento:** 2026-06-18
+**Status:** Fase 1 in produzione. Fase 2 montata su Klaviyo (giugno 2026). Fase 3 scritta completa (7 flow, architettura Predictive/RFM/Catalog Insights) — in review Andrea, poi montaggio. Trial Klaviyo Marketing Analytics attivo dal 2026-06-18 (30gg).
 
 # Piano Master — Automazioni Email Klaviyo
 
@@ -22,19 +22,19 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
    - Vantaggio: un cliente esistente che compra Elisir per la prima volta riceve sia il flow Cliente Ricorrente sia il flow prodotto Elisir (educazione specifica). Architettura modulare, manutenzione pulita.
 3. **Optin marketing nel post-purchase:** P.S. soft in email 2 e 3 solo per chi non ha optin. Non prioritario (99.9% ha gia' autorizzato).
 4. **Email educative vecchie (157 email Automazione Italia + Finale):** NON migrate come automazione. Le migliori 15-20 diventano contenuto per newsletter settimanale (campaign). Tenute a lato per riuso.
-5. **Cross-sell sport trasversale:** Hurricane e Armageddon proposti come blocco trasversale nell'email 2 del flow Cliente Ricorrente.
-6. **Retention/Cross-sell: flow separati per prodotto**, non un unico flow con condizionali. Ogni flow ha trigger, timing e contenuto specifico per prodotto. **Trigger: Fulfilled Order** (non Placed Order) — il cliente deve aver ricevuto il prodotto.
+5. **Cross-sell (rivisto giugno 2026): SOLO data-driven.** Unico punto di cross-sell automatico = Flow 78 (Best Cross-Sell Date + Next Best Product, Catalog Insights). La vecchia email 2 del Flow 22 con blocchi famiglia + sport trasversale è stata rimossa (Flow 22 v2.0 = solo grazie).
+6. **Retention (rivisto giugno 2026, trial Marketing Analytics):** NIENTE flow retention separati per prodotto. Architettura a 2 livelli: Flow 71 First-Order Reorder (timing fisso per famiglia pack, solo primi clienti) + Flow 72 AI Repeat Purchase (Expected Date of Next Order di Klaviyo Predictive, clienti ricorrenti). Dettaglio completo in `fase3/00-mappatura-fase3.md`.
 7. **Carrello abbandonato: conditional split nuovo vs. esistente** nella email 2. Nuovo cliente: risposta obiezioni + eventuale incentivo. Cliente esistente: tono diverso, no sconto. NO split per valore carrello. Codici sconto univoci. Re-ingresso limitato a 1 volta ogni 7 giorni. Disabilitare email carrello nativo WooCommerce.
 8. **Welcome series: email 4 a +7gg per chi non ha acquistato.** Dato Klaviyo: la maggior parte degli acquisti avviene entro 10 giorni. Email 4 = "ultima occasione" con tono lettera personale Lorenzo + reminder sconto BENVENUTO.
 9. **Welcome da lead magnet specifico: contenuto e prodotti coerenti con il tema del lead magnet**. **L'Authority parte DOPO il completamento della welcome** (sequenziale, NON in parallelo). La storia di Lorenzo è nel welcome, l'Authority non la ripete.
-10. **Win-back: doppio approccio.** (A) Flow basato su timing fisso: +85gg dall'ultimo ordine (ciclo medio Paleocomplex = 76gg). (B) Segmento Klaviyo Predictive Analytics per intercettare chi sta performando sotto la media indipendentemente dal timing.
+10. **Win-back (rivisto giugno 2026): RFM-driven.** Flow 73 triggerato dall'ingresso nel segmento RFM `At Risk / Needs Attention` (classificazione automatica notturna Klaviyo), con conditional split su Historic CLV (>300€ = 3 email brand-first, ≤300€ = 2 email con sconto diretto). Sostituisce il vecchio doppio approccio timing-fisso + churn-risk.
 11. **Browse Abandonment: filtro prodotto gia' acquistato.** Se l'utente ha gia' comprato quel prodotto, il flow NON parte.
 12. **Compleanno: parcheggiato.** Lo attiviamo appena abbiamo un sistema che raccoglie la data di nascita.
 13. **VNR vs RDA:** Alla prima menzione di VNR nelle email, scrivere per esteso "Valore Nutritivo di Riferimento". Aggiungere il concetto: gli altri integratori si basano sul VNR (minimo per non ammalarsi nel breve termine), i nostri danno il 100% dell'RDA (apporto massimo giornaliero). Applicare a: Authority, Conversione, Welcome Series dove si citano dosaggi.
 14. **Blog: "centinaia" non "decine":** Quasi 300 articoli. Applicare a: Authority flow.
 15. **Disclaimer recensioni:** "I risultati sono personali" dopo le recensioni. Per recensioni che citano vitamina D: aggiungere consiglio di integrare con gocce di Vitamina D. Applicare a: Conversione (email con social proof), flow prodotto 24-37 (email social proof).
 16. **Trigger flow prodotto: basato su SKU** (refactor maggio 2026). Ogni flow prodotto (24-37) ha trigger `Placed Order` + filter `Item SKU equals X` + filter `Has not placed order with SKU X over all time before this event`. Trigger SKU-based (non match stringa) per evitare ambiguità tra prodotti con nome simile.
-17. **Cliente Ricorrente cross-sell: esclusione "già posseduto":** ogni sotto-blocco di suggerimento nell'email 2 del flow 22 è condizionato su "Customer has not placed order with item SKU X over all time" → non proponiamo prodotti che il cliente ha già nel protocollo.
+17. **Esclusione "già posseduto" nel cross-sell:** gestita nativamente dal blocco `Next Best Product` di Klaviyo (Flow 78), che non suggerisce mai prodotti già acquistati dal profilo. (La vecchia implementazione manuale con conditional blocks nel Flow 22 è stata rimossa.)
 
 ## Architettura dei flow
 
@@ -58,12 +58,12 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 | # | Flow | File | Email | Trigger | Status |
 |---|------|------|-------|---------|--------|
 | 21 | Primo Cliente Assoluto | `fase2/21-primo-cliente.md` | 2 | Placed Order + Has Placed Order = 1 over all time | v2.0 2026-06-11 |
-| 22 | Cliente Ricorrente | `fase2/22-cliente-ricorrente.md` | 2 | Placed Order + Has Placed Order >= 2 over all time | v1.2 2026-06-11 |
+| 22 | Cliente Ricorrente | `fase2/22-cliente-ricorrente.md` | 1 | Placed Order + Has Placed Order >= 2 over all time | v2.0 2026-06-18 — solo grazie, cross-sell migrato al Flow 78 |
 | 23 | Recensione Brand | `fase2/23-recensione-brand.md` | 1 | Fulfilled Order +32gg | v1.0 2026-06-11 |
 
 Contenuto:
 - **21 Primo Cliente**: Benvenuto Lorenzo (+2h dal Placed) → Ottimizza abitudini Lorenzo (+12gg dal Placed)
-- **22 Cliente Ricorrente**: Grazie + costanza Lorenzo (+2h dal Placed) → Cross-sell Flaminia (+7gg dal Placed, blocchi dinamici con esclusione "già posseduto")
+- **22 Cliente Ricorrente**: Grazie + costanza Lorenzo (+2h dal Placed). Nient'altro: il cross-sell è gestito dal Flow 78 Cross-Sell Data-Driven (Catalog Insights)
 - **23 Recensione Brand**: Anticipo richiesta recensione Flaminia (+32gg dal Fulfilled, universale per primi e ricorrenti, anticipa di 2gg l'email automatica WC)
 
 #### Binario B — Flow prodotto (14 flow, 42 email)
@@ -109,30 +109,35 @@ Gap minimo tra invii ≥ 2 giorni. Sequenza alternata Lorenzo/Flaminia. NB: T+33
 **Esempio cliente ricorrente che compra Elisir per la prima volta** (al suo 3° ordine):
 
 ```
-T+2h    [22 Stato]      Grazie + costanza Lorenzo
-T+1gg   [26 Elisir]     Istruzioni Elisir
-T+5gg   [26 Elisir]     Aspettative multivitaminico
-T+7gg   [22 Stato]      Cross-sell Flaminia (esclude prodotti già posseduti)
-T+18gg  [26 Elisir]     Social proof Elisir (Flaminia)
-T+33gg  [23 Recensione] Anticipo recensione (Flaminia)
-T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
+T+2h      [22 Stato]      Grazie + costanza Lorenzo
+T+1gg     [26 Elisir]     Istruzioni Elisir
+T+5gg     [26 Elisir]     Aspettative multivitaminico
+T+18gg    [26 Elisir]     Social proof Elisir (Flaminia)
+T+33gg    [23 Recensione] Anticipo recensione (Flaminia)
+T+35gg    [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
+T+30-90gg [78 Cross-sell] Suggerimento AI Next Best Product (Lorenzo) — alla Best Cross-Sell Date del cliente
 ```
 
-### FASE 3 — Flow di retention e lifecycle (11 flow, slot 71-81, buffer 82+, ~29 email + 1 azione)
+### FASE 3 — Retention, Winback, Lifecycle (7 flow attivi + 1 sospeso, slot 71-78, buffer 79+)
 
-| # | Flow | File | Email | Trigger | Timing cross-sell | Timing riacquisto | Status |
-|---|------|------|-------|---------|-------------------|-------------------|--------|
-| 71 | Retention Elisir/EB | `fase3/71-retention-elisir.md` | 3 | Fulfilled Order con Elisir o EB | gg 28 | gg 35 | Da scrivere |
-| 72 | Retention Paleo/Rev | `fase3/72-retention-paleo.md` | 3 | Fulfilled Order con Paleo o Rev | gg 20 | gg 25 | Da scrivere |
-| 73 | Retention Youth | `fase3/73-retention-youth.md` | 3 | Fulfilled Order con Youth | gg 20 | gg 25 | Da scrivere |
-| 74 | Retention Jeunesse | `fase3/74-retention-jeunesse.md` | 3 | Fulfilled Order con Jeunesse | gg 35 | gg 45 | Da scrivere |
-| 75 | Retention Sport | `fase3/75-retention-sport.md` | 3 | Fulfilled Order con Hurricane o Armageddon | gg 20 | gg 25 | Da scrivere |
-| 76 | Retention Generico | `fase3/76-retention-generico.md` | 3 | Fulfilled Order con Artosan/Liverty/Testoplus/Renaissance/VitD | gg 45 | gg 55 | Da scrivere |
-| 77 | Win-back (timing) | `fase3/77-winback.md` | 4 | Nessun ordine da 85+ giorni | — | — | Da scrivere |
-| 78 | Win-back (predictive) | `fase3/78-winback-predictive.md` | 2 | Klaviyo Predictive: churn risk alto | — | — | Da scrivere |
-| 79 | Back in Stock | `fase3/79-back-in-stock.md` | 1 | Subscribed to Back In Stock + prodotto torna disponibile | — | — | Da scrivere |
-| 80 | Sunset (pulizia lista) | `fase3/80-sunset.md` | 2 + azione | Segmento: iscritto 180+ gg, 0 aperture/click/ordini, 5+ email | — | — | Da scrivere |
-| 81 | Programma Fedeltà | `fase3/81-programma-fedelta.md` | 4 | Raggiungimento livello Club/Silver/Gold/Elite | — | — | Da scrivere |
+**Architettura rivista giugno 2026** dopo attivazione trial Klaviyo Marketing Analytics (RFM + Catalog Insights + Predictive). Dettaglio completo, sormonti e filtri di esclusione in **`fase3/00-mappatura-fase3.md`** (documento di riferimento).
+
+| # | Flow | File | Email | Trigger | ML Klaviyo? | Status |
+|---|------|------|-------|---------|-------------|--------|
+| 71 | First-Order Reorder | `fase3/71-first-order-reorder.md` | 5 (3 rami: ~30gg / ~60gg / VitD) | Fulfilled Order + Lifetime Orders = 1 + split famiglia pack | ❌ timing fisso | v2.2 — scritto |
+| 72 | AI Repeat Purchase | `fase3/72-ai-repeat-purchase.md` | 5 (2 Above CLV + 3 Below CLV) | Expected Date of Next Order + split Predicted CLV | ✅ Predictive ×2 | v1.0 — scritto, ATTIVARE dopo 60-90gg dati |
+| 73 | RFM Winback | `fase3/73-rfm-winback.md` | 5 (3 High CLV + 2 Standard) | Segmento RFM At Risk/Needs Attention + split Historic CLV | ✅ RFM | v1.0 — scritto |
+| 74 | Sunset Lead | `fase3/74-sunset-lead.md` | 2 + suppress | Segmento comportamentale (180gg iscritto, 0 ordini, 0 engagement) | ❌ | v1.0 — scritto |
+| 75 | Sunset Cliente Storico | `fase3/75-sunset-cliente-storico.md` | 2 + frequency reduction | Segmento comportamentale (1+ ordini, 180gg inattivo) | ❌ | v1.0 — scritto |
+| 76 | Back in Stock | `fase3/76-back-in-stock.md` | 1 | Subscribed to Back In Stock + restock | ❌ event nativo | v1.0 — scritto, richiede widget "Notify me" |
+| ~~77~~ | Programma Fedeltà | — | — | (sospeso: plugin loyalty non collegato a Klaviyo) | — | SOSPESO |
+| 78 | Cross-Sell Data-Driven | `fase3/78-cross-sell-data-driven.md` | 1 | Best Cross-Sell Date + blocco Next Best Product | ✅ Catalog Insights ×2 | v1.1 — scritto, richiede Marketing Analytics |
+
+**Punti chiave dell'architettura Fase 3:**
+- **Sconti solo dove servono** (selective discounting Klaviyo): Flow 72 Below-CLV (10%→15%), Flow 73 (10% o 15% univoco per HCLV alto), Flow 75 (BENTORNATO20 open-ended). MAI sconto in Flow 71 (primo riacquisto), 72 Above-CLV, 76, 78.
+- **Flow 78 = unico punto di cross-sell automatico** del sistema (la vecchia email cross-sell del Flow 22 è stata rimossa).
+- **Sormonti gestiti con filtri di esclusione**: 72↔73 (gap 30gg), 73↔75 (gap 60gg), 71↔72 (Lifetime Orders + esclusione 365gg), 72↔78 (esclusione reciproca). Tabella completa in `fase3/00-mappatura-fase3.md`.
+- **Smart Sending OFF su tutti i flow Fase 3** (email importanti, non broadcast).
 
 ### FUTURO — Da attivare quando pronti
 
@@ -145,10 +150,10 @@ T+35gg  [WooCommerce]   Email automatica ⭐⭐⭐⭐⭐
 | Fase | Flow | Email |
 |------|------|-------|
 | Fase 1 | 6 flow | 35 email |
-| Fase 2 stato cliente | 2 flow | 8 email |
-| Fase 2 prodotto | 14 flow | 42 email |
-| Fase 3 | 11 flow | ~29 email + 1 azione |
-| **Totale** | **33 flow** | **~114 email** |
+| Fase 2 stato cliente + recensione | 3 flow (21, 22, 23) | 4 email |
+| Fase 2 prodotto | 14 flow (24-37) | 42 email |
+| Fase 3 | 7 flow attivi (71-76, 78) + 1 sospeso (77) | 19 email + 2 azioni |
+| **Totale** | **30 flow attivi** | **~100 email** |
 
 **Nota volume per cliente medio**: il numero email totali è alto, ma ogni cliente riceve solo una frazione (dipende dai prodotti acquistati). Un nuovo cliente che compra 1 prodotto riceve circa 6 email nel primo mese (3 stato + 3 prodotto). Un cliente con 3 prodotti diversi nello stesso ordine ne riceve circa 12 in 32 giorni (3 stato + 3×3 prodotto), distribuiti senza sovrapposizioni.
 
@@ -219,8 +224,8 @@ Punti chiave:
 
 | Mittente | Flow | Firma |
 |----------|------|-------|
-| **Lorenzo Zarone** | Welcome (tutte), Authority (tutte), Conversione, Flow prodotto 24-37 (email 1 e 2), Flow stato cliente 21-22 (email 1 e 2 primo cliente, email 1 ricorrente), Win-back, Email "ultima occasione" | Un forte abbraccio · Lorenzo Zarone · Fondatore di Paleocomplex |
-| **Flaminia (Customer Care)** | Tutto il resto: Carrello abbandonato, Browse abandonment, Flow prodotto 24-37 email 3 social proof, Flow 23 (Recensione Brand) recensione + 07 email 2 cross-sell, Back in stock, Programma fedeltà, Sunset | Flaminia · Customer Care Paleocomplex |
+| **Lorenzo Zarone** | Welcome (tutte), Authority (tutte), Conversione, Flow prodotto 24-37 (email 1 e 2), Flow 21 (entrambe), Flow 22 (grazie), Flow 71 email 2 + VitD, Flow 72 Above-CLV (tutte) + Below-CLV email 3, Flow 73 (High CLV email 1-2, Standard email 2), Flow 74 (entrambe), Flow 75 email 1, Flow 78 | Un forte abbraccio · Lorenzo Zarone · Fondatore di Paleocomplex |
+| **Flaminia (Customer Care)** | Tutto il resto: Carrello abbandonato, Browse abandonment, Flow prodotto 24-37 email 3 social proof, Flow 23 Recensione Brand, Flow 71 email 1, Flow 72 Below-CLV email 1-2, Flow 73 (High CLV email 3, Standard email 1), Flow 75 email 2, Back in stock | Flaminia · Customer Care Paleocomplex |
 
 **Nota**: rimosso il mittente "Team Paleocomplex" — sterile e impersonale. Flaminia diventa il volto unico del customer care per tutte le comunicazioni non-Lorenzo. Lorenzo resta la voce del fondatore per le comunicazioni educative/brand. Due voci sole, complementari e riconoscibili.
 
@@ -259,6 +264,8 @@ Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1.
 
 ## Changelog
 
+- **v6.0 (2026-06-18)**: architettura Fase 3 definitiva basata su Klaviyo Marketing Analytics (trial 30gg attivo). Eliminati gli 11 flow retention/winback pianificati (6 retention per prodotto + 2 winback + back in stock + sunset + fedeltà) e sostituiti con 7 flow: 71 First-Order Reorder (timing fisso 3 rami famiglia pack), 72 AI Repeat Purchase (Expected Date of Next Order + split Predicted CLV), 73 RFM Winback (segmento At Risk/Needs Attention + split Historic CLV), 74 Sunset Lead (suppress), 75 Sunset Cliente Storico (frequency reduction, no suppress), 76 Back in Stock, 78 Cross-Sell Data-Driven (Best Cross-Sell Date + Next Best Product). Flow 77 Fedeltà sospeso (plugin non collegato). **Flow 22 Cliente Ricorrente ridotto a semplice grazie (v2.0)**: cross-sell rimosso e centralizzato nel Flow 78. Documento di riferimento sormonti/segmenti: `fase3/00-mappatura-fase3.md`.
+- v5.0 (2026-06-11): rinumerazione definitiva a decine (Fase 1: 01-20, Fase 2: 21-70, Fase 3: 71+). Nuovo flow 23 Recensione Brand su Fulfilled+32gg. Fix timing cross-flow su dati fulfillment reali.
 - **v3.0 (2026-05-13)**: refactor architetturale Fase 2 maggiore. Il flow monolitico "Post Purchase New Customer" con 14 blocchi condizionali è stato smontato e ricomposto in 16 flow paralleli: 2 stato cliente (21 Primo Cliente, 22 Cliente Ricorrente) + 14 flow prodotto (24-37, uno per SKU). Motivazione: il vecchio schema non garantiva educazione specifica al cliente ricorrente che acquistava un prodotto mai provato (es. cliente compra Youth, poi Elisir: con vecchio schema, niente istruzioni Elisir). Nuovo schema risolve il buco architetturale, manutenzione più pulita, trigger SKU-based (zero ambiguità). Cross-sell flow 22: aggiunta logica esclusione "già posseduto" (Andrea, maggio 2026). Numerazione Fase 3 shiftata a 71-81.
 - v2.2 (2026-04-22): Authority v3.0 con email 2 VNR vs apporto massimo legale.
 - v2.1 (2026-04-16): Feedback Lorenzo Fase 1 review (correzioni VNR, blog "centinaia", disclaimer recensioni).

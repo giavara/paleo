@@ -1,18 +1,17 @@
-**Versione:** 1.2
-**Ultimo aggiornamento:** 2026-06-11
+**Versione:** 2.0
+**Ultimo aggiornamento:** 2026-06-18
 
-# Flow 8: Stato Cliente — Cliente Ricorrente
+# Flow 22: Stato Cliente — Cliente Ricorrente
 
 ## Chi entra in questo flow
 
 Persone che hanno effettuato un **ordine successivo al primo** (Has Placed Order >= 2 over all time).
 
-Il flow lavora sulla **relazione brand** (grazie, costanza, cross-sell). L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) per **prodotti acquistati per la prima volta** è gestita dai **flow prodotto 24-37** che girano in parallelo: se il cliente ricorrente acquista un prodotto mai provato prima, riceve il flow prodotto specifico oltre a questo flow stato.
+Il flow lavora sulla **relazione brand**: un semplice grazie che valida il riacquisto e rinforza la costanza. L'educazione specifica sui prodotti (istruzioni, aspettative, social proof) per **prodotti acquistati per la prima volta** è gestita dai **flow prodotto 24-37** che girano in parallelo. Il **cross-sell è gestito dal Flow 78 Cross-Sell Data-Driven** (Catalog Insights), che sceglie prodotto e momento con l'AI di Klaviyo invece che con regole fisse.
 
 L'obiettivo del flow è:
 - Validare il riacquisto e rinforzare la decisione di fedeltà
-- Suggerire un prodotto complementare al loro acquisto (cross-sell intelligente con esclusione prodotti già posseduti)
-- Mantenere il filo del rapporto umano con Flaminia
+- Rinforzare il messaggio della costanza (filosofia Lorenzo)
 
 ## Configurazione Klaviyo
 
@@ -25,29 +24,33 @@ L'obiettivo del flow è:
 - Items contains at least one supplement (Elisir, Revolution, Essentiel, Paleocomplex, Elisir Basic, Youth, Jeunesse, Hurricane, Armageddon, Artosan, Liverty, Testoplus, Renaissance, Vitamina D)
 - Se l'ordine contiene SOLO accessori (Lampada Apollo, occhiali, libri), il flow NON parte
 
+**Smart Sending:** OFF
+
+**Re-entry:** Allow re-entry a ogni ordine (è un grazie transazionale, giusto che arrivi ogni volta)
+
 **Effetto su altri flow:**
 - Il flow 21 (Primo Cliente Assoluto) NON parte (filtro Has Placed Order = 1)
 - I flow prodotto 24-37 girano in parallelo per i prodotti dell'ordine acquistati per la prima volta in assoluto
-- I retention flow per prodotto partono dopo (Fulfilled Order)
+- Il Flow 78 Cross-Sell Data-Driven gira in parallelo e suggerisce il prodotto complementare alla Best Cross-Sell Date calcolata dall'AI
+- Il Flow 23 Recensione Brand parte a Fulfilled+32gg
 
 ## Mittenti
 
 | # | Email | Mittente |
 |---|-------|----------|
 | 1 | Grazie + costanza | Lorenzo Zarone |
-| 2 | Cross-sell prodotto complementare | Flaminia (Customer Care) |
 
 ## Timeline
 
-| # | Timing | Tema | Tipo |
-|---|--------|------|------|
-| 1 | +2h | Grazie per essere tornato + costanza | Statica |
-| 2 | +7gg | Cross-sell prodotto complementare | 4 blocchi dinamici per famiglia + blocco sport trasversale, tutti con esclusione "già posseduto" |
+| # | Timing (T+X dal trigger) | Delay Klaviyo | Tema | Tipo |
+|---|--------------------------|---------------|------|------|
+| 1 | +2h dal Placed | 2 hours from trigger | Grazie per essere tornato + costanza | Statica |
 
 **Coordinamento con altri flow:**
 - L'email di conferma ordine arriva da WooCommerce standard
-- La richiesta recensione automatica WooCommerce è a +34gg. Per i clienti ricorrenti probabilmente l'hanno già lasciata in passato — il sistema WC dovrebbe gestirlo nativamente
+- La richiesta recensione automatica WooCommerce è a +34gg dal Completed
 - Se il cliente acquista un prodotto mai provato, i flow prodotto specifici 24-37 girano in parallelo (es. cliente esistente compra Elisir per la prima volta: riceve questo flow + flow 26 Elisir specifico)
+- Il cross-sell arriva via Flow 78 alla Best Cross-Sell Date del cliente (tipicamente T+30-90gg, calcolata dall'AI di Klaviyo)
 
 ---
 
@@ -82,162 +85,11 @@ Continua così.
 
 L'ordine ti è già stato confermato dal sistema (l'email con il riepilogo è arrivata). Lo prepariamo entro 24 ore lavorative e parte con corriere espresso, tracking incluso.
 
-**Tra qualche giorno** Flaminia ti scriverà con un suggerimento concreto: un prodotto che, dato quello che hai nel tuo protocollo, potrebbe completarlo bene. Niente forzature, solo logica di combinazioni.
-
 Per qualsiasi cosa scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**.
 
 Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
-
----
-
-## EMAIL 2 — Cross-sell prodotto complementare (+7 giorni)
-
-**Mittente:** Flaminia (Customer Care)
-**Tipo:** Tronco comune + 4 blocchi dinamici per famiglia (sui prodotti DELL'ORDINE CORRENTE) + blocco sport trasversale. **Ogni suggerimento all'interno dei blocchi ha conditional di esclusione "già posseduto"** (vedi sotto).
-
-### Oggetto (3 varianti A/B)
-
-- A: Una cosa che potrebbe completare bene il tuo protocollo
-- B: Un suggerimento, se ti va
-- C: Cosa funziona bene con quello che usi già
-
-### Preview text (3 varianti)
-
-- A: Nessuna pressione. Solo logica di combinazioni.
-- B: Il prodotto che spesso accompagna il tuo.
-- C: Una piccola idea da Flaminia.
-
-### Corpo email
-
-**Tronco comune — apertura**
-
-Ciao [NOME]
-
-Sono Flaminia. Lorenzo mi ha lasciato il testimone su questa email, come sempre quando si tratta di parlare con i nostri clienti più affezionati.
-
-Visto che sei tornato, voglio darti un suggerimento concreto basato su quello che hai acquistato: un prodotto che spesso accompagna bene il tuo nei protocolli più completi. Non è una vendita forzata: è quello che ci raccontano i clienti che combinano più prodotti, e quello che Lorenzo consiglia nella sua guida ai protocolli.
-
-Qui sotto trovi il suggerimento più adatto al tuo ordine.
-
----
-
-**[BLOCCO 1 — HAI ACQUISTATO UN MULTIVITAMINICO]**
-*Show condition: Items contains "Paleocomplex" OR "Revolution" OR "Elisir" OR "Elisir Basic" OR "Essentiel"*
-
-**Il complemento naturale: collagene per pelle, capelli, unghie**
-
-Il multivitaminico copre le basi vitaminiche e minerali. Per andare oltre, il passo successivo più consigliato è il collagene: lavora su pelle, unghie, capelli e articolazioni, dimensioni che il multivitaminico tocca solo marginalmente.
-
-*Sotto-blocco Youth (mostrato solo se cliente non ha mai acquistato Youth in passato — condition: Customer has not Placed Order with item SKU `youth`):*
-> [**Youth**](https://paleocomplex.com/prodotto/youth/) — 6 g di collagene bovino al giorno, con acido ialuronico, glucosamina e i cofattori per la sintesi del collagene. È il punto di partenza.
-
-*Sotto-blocco Jeunesse (mostrato solo se cliente non ha mai acquistato Jeunesse — condition: SKU `jeunesse` non in storico):*
-> [**Jeunesse**](https://paleocomplex.com/prodotto/jeunesse/) — 12 g di collagene bovino grass-fed al giorno, più antiossidanti cutanei avanzati (astaxantina, corteccia di pino, centella asiatica). È la versione potenziata, con focus anti-aging.
-
-*Sotto-blocco Renaissance (mostrato solo se cliente non ha mai acquistato Renaissance — condition: SKU `renaissance` non in storico):*
-> Se vuoi un protocollo anti-aging completo, c'è anche [**Renaissance**](https://paleocomplex.com/prodotto/renaissance/), 13 nutraceutici per la longevità cellulare. Da abbinare al multivitaminico, lavora su senolitici, NAD+, autofagia.
-
-*Se tutti i sotto-blocchi sopra sono nascosti (cliente ha già tutto), il BLOCCO 1 NON si mostra affatto e si passa al blocco successivo o trasversale.*
-
----
-
-**[BLOCCO 2 — HAI ACQUISTATO COLLAGENE (Youth o Jeunesse)]**
-*Show condition: Items contains "Youth" OR "Jeunesse"*
-
-**Il complemento naturale: la base multivitaminica**
-
-Il collagene da solo è ottimo per pelle, capelli e unghie. Ma per amplificarne l'efficacia ti serve una base solida di vitamine e minerali: senza vitamina C, zinco e biotina (i cofattori della sintesi del collagene) il tuo corpo non può costruire collagene nuovo in modo efficiente.
-
-*Sotto-blocco Elisir (mostrato solo se cliente non ha mai acquistato Elisir — condition: SKU `elisir` non in storico):*
-> [**Elisir**](https://paleocomplex.com/prodotto/elisir/) — il più completo della linea, 40 nutrienti in un misurino al giorno. Include omega 3 da krill, antiossidanti avanzati, vitamine attivate.
-
-*Sotto-blocco Essentiel (mostrato solo se cliente non ha mai acquistato Essentiel — condition: SKU `essentiel` non in storico):*
-> [**Essentiel**](https://paleocomplex.com/prodotto/essentiel/) — 34 nutrienti, senza krill, con focus cognitivo (citicolina, acetil-carnitina). Per chi è allergico ai crostacei o cerca un prodotto più orientato alla funzione cognitiva.
-
-*Sotto-blocco Renaissance (mostrato solo se cliente non ha mai acquistato Renaissance — condition: SKU `renaissance` non in storico):*
-> Per chi vuole spingere l'anti-aging cellulare, [**Renaissance**](https://paleocomplex.com/prodotto/renaissance/) è il livello successivo: lavora sui meccanismi di longevità più profondi.
-
-*Se cliente ha già acquistato Paleocomplex o Revolution (multivitaminici della casa) ma non Elisir/Essentiel, mostriamo comunque Elisir/Essentiel come "upgrade" naturale ma con framing diverso.* TODO setup Klaviyo: definire show/hide preciso del framing.
-
----
-
-**[BLOCCO 3 — HAI ACQUISTATO UN PRODOTTO SPORT (Hurricane o Armageddon)]**
-*Show condition: Items contains "Hurricane" OR "Armageddon"*
-
-**Il complemento naturale: l'altro prodotto sport + la base multivitaminica**
-
-I prodotti sport lavorano sulla performance e sul recupero. Se non hai già una base multivitaminica, il consiglio è abbinarne una: l'allenamento intenso aumenta lo stress ossidativo e la richiesta di micronutrienti.
-
-*Sotto-blocco "se manca Armageddon" (mostrato solo se ordine contiene Hurricane AND cliente non ha mai acquistato Armageddon — condition: SKU `armageddon` non in storico):*
-> Se usi Hurricane, l'abbinamento naturale è [**Armageddon**](https://paleocomplex.com/prodotto/armageddon/): aminoacidi essenziali per il recupero e la protezione muscolare. La miscela Hurricane + Armageddon pre-workout è il protocollo che ti consigliamo per allenamenti intensi.
-
-*Sotto-blocco "se manca Hurricane" (mostrato solo se ordine contiene Armageddon AND cliente non ha mai acquistato Hurricane — condition: SKU `hurricane` non in storico):*
-> Se usi Armageddon, [**Hurricane**](https://paleocomplex.com/prodotto/hurricane/) è il pre-workout che lavora in sinergia: creatina, beta-alanina, citrullina per esplosività e pump muscolare.
-
-*Sotto-blocco multivitaminico per sportivi (mostrato solo se cliente non ha mai acquistato Revolution né Elisir — condition: SKU `paleocomplex-revo` non in storico AND SKU `elisir` non in storico):*
-> Per la base multivitaminica, se ti alleni intensamente ti consigliamo [**Revolution**](https://paleocomplex.com/prodotto/paleocomplex-revolution/) (antiossidanti avanzati per chi mette sotto stress il corpo) o [**Elisir**](https://paleocomplex.com/prodotto/elisir/) (più completo in assoluto).
-
----
-
-**[BLOCCO 4 — HAI ACQUISTATO UN PRODOTTO SPECIFICO (Artosan, Liverty, Testoplus, Renaissance, Vit D)]**
-*Show condition: Items contains "Artosan" OR "Liverty" OR "Testoplus" OR "Renaissance" OR "Vitamina D"*
-
-**Il complemento naturale: la base multivitaminica**
-
-I prodotti specifici lavorano su una funzione precisa (articolazioni, fegato, ormoni, anti-aging, vitamina D). Sono ottimi quando hai un obiettivo mirato, ma danno il meglio quando appoggiati a una base di micronutrienti completa.
-
-*Sotto-blocchi multivitaminici (ognuno mostrato solo se cliente non ha già quel SKU in storico):*
-
-> Se non usi già un multivitaminico:
->
-> [**Elisir**](https://paleocomplex.com/prodotto/elisir/) — il più completo, 40 nutrienti tra cui omega 3 da krill, antiossidanti avanzati, vitamine attivate. *[mostra se SKU `elisir` non in storico]*
->
-> [**Essentiel**](https://paleocomplex.com/prodotto/essentiel/) — 34 nutrienti senza krill, ottimo rapporto qualità-prezzo, focus cognitivo. *[mostra se SKU `essentiel` non in storico]*
-
-Su [**guida-scelta**](https://paleocomplex.com/guida-scelta/) trovi un orientamento rapido per scegliere quello giusto per te in base ad età e obiettivi.
-
----
-
-**[BLOCCO TRASVERSALE — SPORT]**
-*Show condition: Items NOT contains "Hurricane" AND NOT contains "Armageddon" (cioè: si mostra a chi NON ha acquistato prodotti sport nell'ordine corrente). Inoltre ognuno dei sotto-blocchi è condizionato su "non ha mai acquistato il prodotto in passato".*
-
-**Se ti alleni: scopri la linea sport**
-
-Una nota a parte: se ti alleni regolarmente (palestra, corsa, ciclismo, sport di endurance), la nostra linea sport potrebbe completare bene il tuo protocollo.
-
-*Sotto-blocco Hurricane (mostrato solo se cliente non ha mai acquistato Hurricane — condition: SKU `hurricane` non in storico):*
-> [**Hurricane**](https://paleocomplex.com/prodotto/hurricane/) — pre-workout completo, creatina + beta-alanina + citrullina, da bere 30-45 minuti prima dell'allenamento.
-
-*Sotto-blocco Armageddon (mostrato solo se cliente non ha mai acquistato Armageddon — condition: SKU `armageddon` non in storico):*
-> [**Armageddon**](https://paleocomplex.com/prodotto/armageddon/) — aminoacidi essenziali, per il recupero e la protezione muscolare durante e dopo l'allenamento. Utile anche per chi ha più di 40 anni come supporto anti-sarcopenia.
-
-*Se entrambi i sotto-blocchi sono nascosti (cliente ha già Hurricane + Armageddon in storico), il BLOCCO TRASVERSALE non si mostra.*
-
----
-
-**Tronco comune — chiusura**
-
-Una cosa importante: nessuno di questi suggerimenti è una "vendita forzata". Sono solo le combinazioni più sensate basate su quello che usi già. Se non ti interessano, ignora pure l'email.
-
-Se invece vuoi un parere personalizzato sul tuo caso specifico, **rispondi pure a questa email** raccontandomi i tuoi obiettivi: ti aiuto a costruire il protocollo giusto.
-
-A presto
-Flaminia
-Customer Care Paleocomplex
-
----
-
-## Edge case: cliente con storico completo
-
-Se un cliente ha già acquistato in passato TUTTI i prodotti suggeribili (caso raro, ma esiste), tutti i sotto-blocchi della email 2 risultano nascosti e il cliente vedrebbe solo il tronco comune + niente blocchi. Per evitare un'email vuota, va inserito un **fallback content block** che si mostra quando nessun altro blocco è visibile:
-
-> *Hai già un protocollo completo con la nostra linea. Continua così.*
->
-> *Se vuoi un confronto su come ottimizzare i dosaggi, le combinazioni o le pause cicliche, **rispondi pure a questa email**: te lo costruiamo insieme.*
-
-**TODO setup Klaviyo:** implementare il fallback come ultimo blocco con condizione "tutti gli altri blocchi sono hidden".
 
 ---
 
@@ -247,44 +99,38 @@ Se un cliente ha già acquistato in passato TUTTI i prodotti suggeribili (caso r
 [Placed Order, Has Placed Order >= 2 over all time, ordine NON solo accessori]
     │
     │  In parallelo: se ordine contiene prodotti mai acquistati prima → trigger Flow 24-37 specifico
+    │  In parallelo: Flow 78 Cross-Sell Data-Driven alla Best Cross-Sell Date (AI)
+    │  In parallelo: Flow 23 Recensione Brand a Fulfilled+32gg
     ▼  (+2 ore)
 EMAIL 1 — Grazie + costanza (Lorenzo, statica)
     │
-    ▼  (+7 giorni)
-EMAIL 2 — Cross-sell complementare (Flaminia, blocchi dinamici con esclusione "già posseduto")
-    │
     ▼
-Fine flow → entra in Retention specifico per il prodotto acquistato (gg 20-55)
+Fine flow
 ```
 
 ---
 
 ## Note operative
 
-### Logica esclusione "già posseduto"
+### Dove è finito il cross-sell
 
-Tutti i sotto-blocchi cross-sell hanno una condition aggiuntiva: il prodotto viene proposto **solo se il cliente non lo ha mai acquistato in passato**. Implementazione Klaviyo: usare "Placed Order metric → Item SKU equals X has happened zero times over all time" come show condition di ogni sotto-blocco.
+Fino alla v1.2 questo flow conteneva una seconda email di cross-sell (Flaminia, +7gg) con 4 blocchi dinamici per famiglia + esclusione "già posseduto". **Rimossa nella v2.0**: il cross-sell è ora gestito dal **Flow 78 Cross-Sell Data-Driven**, che usa Catalog Insights di Klaviyo (Best Cross-Sell Date + Next Best Product) per scegliere il prodotto e il momento con l'AI invece che con la matrice hard-coded.
 
-Questa logica risolve il problema di proporre prodotti che il cliente ha già nel protocollo (es. cliente ha Paleocomplex + Youth e ricompra Paleocomplex → senza esclusione gli proporremmo Youth che già ha; con esclusione, il blocco Youth si nasconde e mostriamo solo Renaissance/Jeunesse).
+Vantaggi del passaggio:
+- Il suggerimento arriva al momento in cui i clienti simili effettivamente aggiungono quel prodotto (pattern reali, non regole fisse)
+- Zero manutenzione della matrice cross-sell (l'AI si aggiorna da sola coi dati)
+- Nessun rischio di suggerire un prodotto già posseduto (Next Best Product lo esclude nativamente)
+- Un solo punto di cross-sell = zero rischio di email duplicate
+
+Il copy della vecchia email 2 (blocchi famiglia + sport trasversale) resta recuperabile nella history git del file, se mai servisse per una campagna broadcast.
 
 ### Niente sconto
 
-Decisione confermata: nessun codice sconto in questo flow. Il cliente ricorrente è già fedele, lo sconto svaluta il prezzo pieno che ha appena pagato. Lo sconto resta per il win-back (flow 24-25, quando il cliente non torna da 85+ giorni).
-
-### Link prodotti
-
-Tutti i prodotti citati nei blocchi sono linkati alla pagina prodotto del sito. La guida alla scelta è linkata come fallback per chi vuole orientarsi.
-
-### Coerenza con la matrice cross-sell del piano master
-
-I suggerimenti seguono la matrice del piano master (sezione "Matrice cross-sell"):
-- Multivitaminico → Collagene primario, Renaissance secondario, Sport trasversale
-- Collagene Youth/Jeunesse → Multivitaminico se non l'ha + Renaissance + Sport trasversale
-- Sport → L'altro prodotto sport + Multivitaminico
-- Specifici → Multivitaminico come base
+Nessun codice sconto in questo flow. Il cliente ricorrente è già fedele, lo sconto svaluta il prezzo pieno che ha appena pagato. Lo sconto vive nei flow di retention/winback (72 Below-CLV, 73 At Risk).
 
 ### Changelog
-- **v1.2 (2026-06-11)**: spostato cross-sell email 2 da T+5gg a **T+7gg dal Placed**. Motivazione: con T+5 il cross-sell si sovrapponeva all'Aspettative dei flow prodotto (che è a T+4 dal Fulfilled = T+5-6 dal Placed mediana, T+6-7 nel worst case weekend). T+7 garantisce sequenza pulita Istruzioni → Aspettative → Cross-sell in tutti gli scenari di fulfillment.
-- v1.1 (2026-06-11): spostato cross-sell email 2 da T+3gg a T+5gg dal Placed (fix iniziale conflitto con Istruzioni prodotto). Vedi v1.2 per ulteriore spostamento.
-- v1.0 (2026-05-13): refactor architetturale. Email 1 riscritta in modo generico (no più "il primo ciclo ti è stato utile" che presupponeva ricompra dello stesso prodotto). Email 2 cross-sell: aggiunti conditional di esclusione "già posseduto" su ogni sotto-blocco prodotto (risolve il problema di proporre prodotti che il cliente ha già nel protocollo). Aggiunto fallback content block per edge case "cliente con storico completo". Aggiunto riferimento ai flow prodotto 24-37 che girano in parallelo per prodotti acquistati per la prima volta. Renamed da "Post Purchase Cliente Ricorrente" a "Cliente Ricorrente" per coerenza con nuovo schema.
+- **v2.0 (2026-06-18)**: rimossa Email 2 Cross-sell (Flaminia +7gg con blocchi dinamici). Il cross-sell migra al Flow 78 Cross-Sell Data-Driven basato su Catalog Insights (decisione Andrea 2026-06-18, dopo attivazione trial Marketing Analytics). Il flow diventa un semplice grazie: 1 email Lorenzo +2h. Rimosso open loop "Flaminia ti scriverà" dall'email 1. Aggiunta timeline con dual notation delay Klaviyo.
+- v1.2 (2026-06-11): spostato cross-sell email 2 da T+5gg a T+7gg dal Placed (fix conflitto timing con Aspettative dei flow prodotto).
+- v1.1 (2026-06-11): spostato cross-sell email 2 da T+3gg a T+5gg dal Placed (fix iniziale conflitto con Istruzioni prodotto).
+- v1.0 (2026-05-13): refactor architetturale. Email 1 riscritta generica. Email 2 cross-sell con conditional esclusione "già posseduto". Renamed da "Post Purchase Cliente Ricorrente" a "Cliente Ricorrente".
 - v0.1 (2026-05-11): bozza iniziale.
