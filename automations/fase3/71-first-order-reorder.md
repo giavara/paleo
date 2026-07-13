@@ -1,4 +1,4 @@
-**Versione:** 2.2
+**Versione:** 3.0
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 71: First-Order Reorder Reminder
@@ -117,9 +117,9 @@ Ciao [NOME]
 
 Sono Flaminia. Ti scrivo perché ho fatto due conti: il tuo {{ event.Items.0.product_name }} sta arrivando alla fine.
 
-Sei al giorno 25 dalla spedizione, e il tuo pack è stato pensato per durare circa un mese di assunzione costante.
+Sei al giorno 25 dalla spedizione e il tuo pack si sta avvicinando alla fine.
 
-Ti scrivo adesso, non quando sarà finito, perché ho imparato una cosa lavorando con i nostri clienti: **il vero risultato sta nella costanza**. Chi interrompe l'integrazione anche solo per una settimana perde una buona parte del progresso accumulato nel primo mese.
+Ti scrivo adesso, non quando sarà finito, perché ho imparato una cosa lavorando con i nostri clienti: **il vero risultato sta nella costanza**. Le interruzioni, anche brevi, rallentano il percorso che hai costruito nel primo mese.
 
 E il primo mese è importante. È la fase in cui il corpo comincia a rispondere davvero al supporto che gli stai dando, qualunque sia il prodotto che hai scelto. Saltarlo significa ricominciare da capo.
 
@@ -155,15 +155,15 @@ Ciao [NOME]
 
 Sono Lorenzo. Flaminia mi ha detto che ti ha scritto qualche giorno fa. Ti scrivo io adesso perché è il momento giusto.
 
-A questo punto il tuo {{ event.Items.0.product_name }} è finito o sta per finirlo. Ho due cose da dirti.
+A questo punto il tuo {{ event.Items.0.product_name }} è finito, o stai per finirlo. Ho due cose da dirti.
 
-**La prima**: hai fatto bene a iniziare. Il primo mese di integrazione vera non è semplice. Ti dà il tempo di capire come reagisce il tuo corpo, di abituarti al sapore o alla modalità d'uso, di vedere i primi segnali. Sei arrivato fin qui, è un risultato.
+**La prima**: hai fatto bene a iniziare. Il primo mese di integrazione vera non è semplice. Ti dà il tempo di capire come reagisce il tuo corpo, di abituarti al sapore o alla modalità d'uso, di vedere i primi segnali. Arrivare fin qui è già un risultato.
 
 **La seconda**: adesso viene la parte che separa chi vede davvero la differenza da chi no. È la **costanza**.
 
 Te lo dico in modo diretto perché è quello che dico a chiunque mi scriva: gli integratori veri non funzionano come un farmaco che provi per 30 giorni e poi giudichi. Funzionano come un investimento sul tempo. Tre mesi continuativi è il minimo per giudicare onestamente. Dal quarto mese in poi cominciano a consolidarsi i benefici strutturali, quelli che fanno la differenza negli anni.
 
-Se hai dubbi sul dosaggio, sul prodotto giusto per te, o vuoi confrontarti con me su qualcosa, **rispondi a questa email**. Leggo io personalmente.
+Se hai dubbi sul dosaggio, sul prodotto giusto per te, o vuoi confrontarti con noi su qualcosa, **rispondi a questa email**: la leggiamo io e il mio team, e ti rispondiamo.
 
 Se invece sei convinto e vuoi continuare:
 
@@ -203,11 +203,11 @@ Ciao [NOME]
 
 Sono Flaminia. Ti scrivo perché sei al giorno 50 dalla spedizione del tuo {{ event.Items.0.product_name }}.
 
-Il pack che hai ordinato è stato pensato per durare circa due mesi di assunzione costante, quindi sei nella fase finale.
+Il pack che hai ordinato si sta avvicinando alla fine.
 
 Volevo scriverti adesso, e non alla fine, perché su questi prodotti la costanza vale ancora di più. Lavorano su strutture che richiedono settimane di lavoro continuo per consolidare i risultati (collagene, supporto epatico, articolazioni, sistema nutritivo profondo a seconda di quello che hai scelto).
 
-Saltare anche solo 15 giorni di assunzione ti riporta indietro di settimane.
+Le pause lunghe rallentano il consolidamento dei risultati su cui hai già lavorato.
 
 A questo punto del percorso può essere che tu abbia notato i primi cambiamenti (pelle più compatta, articolazioni migliorate, energia più costante a seconda del prodotto), oppure che stia ancora aspettando. In entrambi i casi: continua.
 
@@ -241,11 +241,11 @@ Customer Care Paleocomplex
 
 Ciao [NOME]
 
-Sono Lorenzo. Sei arrivato alla fine del tuo primo pack di {{ event.Items.0.product_name }}. Te lo dico onestamente: adesso viene il bivio.
+Sono Lorenzo. Il tuo primo pack di {{ event.Items.0.product_name }} è agli sgoccioli. Te lo dico onestamente: adesso viene il bivio.
 
 Su prodotti come questo, che lavorano su rigenerazione strutturale, supporto profondo a organi o sistemi specifici, la maggior parte delle persone abbandona dopo i primi 60 giorni perché "non ha ancora visto la differenza". È un errore di tempistica.
 
-I primi 60 giorni servono per saturare il sistema. Solo dal terzo mese in poi cominciano a manifestarsi i benefici visibili e duraturi. Chi smette ora ha messo le basi senza godersi la casa che ha costruito.
+I primi due mesi servono per costruire le basi. Ed è di solito dal terzo mese che i benefici cominciano a consolidarsi e a farsi notare. Chi smette ora ha messo le basi senza godersi la casa che ha costruito.
 
 Te lo dico perché ci ho visto troppi clienti smettere a metà strada e poi ricominciare da capo sei mesi dopo. Non è efficiente, e soprattutto, hai investito tempo che ora rischi di buttare via.
 
@@ -291,7 +291,7 @@ Il flaconcino dovrebbe essere a circa l'80% di utilizzo. Hai ancora qualche sett
 
 Ti scrivo per tre motivi:
 
-**1. Se non l'hai ancora fatto, fai le analisi della 25(OH)D adesso.** È il momento giusto: dopo 4 mesi di supplementazione i valori si sono stabilizzati. Hai un quadro reale di come la tua dose sta funzionando. Il range ottimale è 50-80 ng/ml.
+**1. Se non l'hai ancora fatto, fai le analisi della 25(OH)D adesso.** È il momento giusto: dopo 4 mesi di supplementazione i valori si sono stabilizzati. Hai un quadro reale di come la tua dose sta funzionando. Il range ottimale è 40-60 ng/ml.
 
 **2. Se hai fatto le analisi, mi farebbe piacere conoscere i tuoi valori prima/dopo.** Rispondi pure a questa email con i numeri (anche solo "ero a X, adesso sono a Y"). Sono i dati che ci aiutano a costruire un quadro reale.
 
@@ -390,6 +390,7 @@ Verificare in Klaviyo Account Settings → Integrations → WooCommerce → Metr
 - **Prerequisito SKU/metric mapping:** non bloccante per questo design (si instrada su ProductName, gia' presente negli eventi), ma resta da disabilitare le email carrello native WooCommerce ecc. come da memoria.
 
 ### Changelog
+- **v3.0 (2026-06-18)**: fix da verifica content-verifier (report 4 agenti + review Andrea). (1) Range 25(OH)D corretto da 50-80 a **40-60 ng/ml** (scheda prodotto, citazione Lorenzo). (2) Rimossi i claim di durata pack falsi per parte del ramo ("circa un mese" non regge per Elisir/EB 40gg; "circa due mesi" non regge per Jeunesse 50gg) → claim neutro "si sta avvicinando alla fine". (3) Ammorbiditi claim scientifici esagerati (interruzione 1 settimana, 15 giorni = settimane indietro, "saturare il sistema"). (4) Fix grammatica ("sta per finirlo") e gender-neutral ("Sei arrivato" ecc.). (5) "Leggo io personalmente" → "la leggiamo io e il mio team" (Lorenzo).
 - **v2.2 (2026-06-18)**: montato come Draft in Klaviyo via Create Flow API (flow ID `Xi3wcm`). Documentate le 3 differenze design-vs-implementazione (split su ProductName via conditional-split annidati invece di multi-branch su SKU; filtro primo-ordine via profile_filter Placed Order=1; variabile reale `event.ProductNames.0`) e i to-do manuali nel builder (mittenti, A/B, deep-link).
 - **v2.1 (2026-06-18)**: semplificazione drastica della ramificazione su decisione di Andrea. Da 6 rami granulari a **3 rami per blocchi di durata approssimata**:
   - Ramo A ~30gg: 9 SKU (Paleo/Rev/Elisir/EB/Youth/Testoplus/Renaissance/Hurricane/Armageddon)

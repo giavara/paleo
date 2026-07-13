@@ -1,4 +1,4 @@
-**Versione:** 1.0
+**Versione:** 1.1
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 74: Sunset Lead (Iscritti mai-clienti)
@@ -65,29 +65,29 @@ Nessun sormonto: chi è in Flow 74 non ha mai acquistato (Placed Order = 0), qui
 
 ### Oggetto (3 varianti A/B)
 
-- A: Ancora interessato? Domanda seria
+- A: Ti interessa ancora? Domanda seria
 - B: Ci sei? Un check onesto
 - C: Prima che ti tolga dalla lista, un pensiero
 
 ### Preview text (3 varianti)
 
 - A: Da 6 mesi non apri le nostre email. Legittimo, ma…
-- B: Ci sei un motivo per cui sei ancora iscritto?
+- B: C'è un motivo per cui ricevi ancora le nostre email?
 - C: 30 secondi per decidere.
 
 ### Corpo email
 
 Ciao [NOME]
 
-Sono Lorenzo, fondatore di Paleocomplex. Ti scrivo direttamente perché il nostro sistema mi segnala che sei iscritto alla newsletter da oltre 6 mesi ma non stai leggendo quello che ti mandiamo.
+Sono Lorenzo, fondatore di Paleocomplex. Ti scrivo direttamente perché la tua iscrizione alla newsletter risale a oltre 6 mesi fa, ma non stai leggendo quello che ti mandiamo.
 
 Ci sono due possibilità.
 
 **La prima**: le nostre email finiscono in spam o in una cartella secondaria e non le vedi. In quel caso, se ci tieni a continuare a ricevere i nostri contenuti (integrazione, nutrizione, ricerca scientifica), aggiungi il nostro indirizzo alla tua rubrica o alla lista dei contatti prioritari. Poi resta qui, ti scriverò di nuovo.
 
-**La seconda**: hai perso interesse, la tua vita è cambiata, o semplicemente non è più un topic per te in questo momento. Va bene assolutamente. Non è un giudizio, e non c'è nulla di male.
+**La seconda**: hai perso interesse, la tua vita è cambiata, o semplicemente non è più un argomento che ti interessa in questo momento. Va bene assolutamente. Non è un giudizio, e non c'è nulla di male.
 
-Quello che ti chiedo è di scegliere. Se resti interessato, **clicca qui e conferma che vuoi restare**:
+Quello che ti chiedo è di scegliere. Se vuoi restare, **clicca qui e confermalo**:
 
 **[Sì, voglio continuare a ricevere contenuti Paleocomplex](https://paleocomplex.com)**
 
@@ -114,7 +114,7 @@ Fondatore di Paleocomplex
 
 ### Preview text (3 varianti)
 
-- A: Nessuna manipolazione. Solo una decisione da prendere.
+- A: Solo una decisione da prendere, in tutta onestà.
 - B: Dopo di questa, ti tolgo dalla lista.
 - C: Un click per continuare, niente per uscire.
 
@@ -124,7 +124,7 @@ Ciao [NOME]
 
 Sono Lorenzo di nuovo. Una settimana fa ti ho scritto per chiederti se volessi continuare a ricevere le nostre email. Non ho ricevuto risposta.
 
-È OK. Rispetto anche il silenzio.
+Va bene così. Rispetto anche il silenzio.
 
 Ma prima di toglierti dalla lista automaticamente (cosa che farò tra qualche giorno), voglio darti un'ultima occasione onesta.
 
@@ -208,4 +208,5 @@ Suppress Profile (from broadcast + flow)
 Bozza v1.0 — pronto per montaggio Klaviyo. Da attivare con calma monitorando l'impatto.
 
 ### Changelog
+- **v1.1 (2026-06-18)**: fix da verifica content-verifier. Anglicismi rimossi (topic, "È OK"), grammatica preview ("Ci sei un motivo"), gender-neutral (oggetto "Ancora interessato?", "sei iscritto", "Se resti interessato"), preview "Nessuna manipolazione" sostituito con formulazione positiva.
 - v1.0 (2026-06-18): prima stesura. Segmento comportamentale (iscritti mai-clienti + 180gg + no engagement 90gg). 2 email Lorenzo + suppress automatico. Nessuno sconto (lead che non ha convertito in 180gg non è recuperabile con sconto).

@@ -1,4 +1,4 @@
-**Versione:** 1.0
+**Versione:** 2.0
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 73: RFM Winback
@@ -110,11 +110,11 @@ Ho controllato: hai fatto diversi ordini con noi nel tempo, poi c'è stato un si
 
 Voglio solo dirti tre cose, poi ti lascio in pace se preferisci.
 
-**Uno**: qualunque sia il motivo per cui hai smesso (prezzo, dubbi sul prodotto, cambiamento nella tua vita, o semplicemente perché è passato il tempo), mi farebbe piacere saperlo. Le mail come questa mi permettono di capire dove miglioriamo. **Rispondi pure a questa email**: leggo io, personalmente. Anche solo una riga.
+**Uno**: qualunque sia il motivo per cui hai smesso (prezzo, dubbi sul prodotto, cambiamento nella tua vita, o semplicemente perché è passato il tempo), mi farebbe piacere saperlo. Le mail come questa ci permettono di capire dove miglioriamo. **Rispondi pure a questa email**: la leggiamo io e il mio team, e ti rispondiamo. Anche solo una riga.
 
 **Due**: da quando hai smesso di ordinare abbiamo continuato a lavorare. Sono usciti nuovi prodotti, alcuni sono in cantiere. La gamma è cresciuta. Se vuoi vedere cosa è cambiato senza pressione, ti lascio il link al **[nostro catalogo](https://paleocomplex.com/negozio/)**.
 
-**Tre**: nel prossimo mese ti scriverò altre due email. Poi ti lascerò in pace se non risponderai. Nessuna insistenza, niente automation impazzita.
+**Tre**: nel prossimo mese riceverai da noi altre due email. Poi ridurremo drasticamente la frequenza, se non risponderai. Nessuna insistenza, niente email a raffica.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -143,7 +143,7 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-Sono Lorenzo di nuovo. Come promesso, oggi ti aggiorno su cosa è cambiato mentre eri via. Niente pitch di vendita, solo informazione.
+Sono Lorenzo di nuovo. Come promesso, oggi ti aggiorno su cosa è cambiato mentre eri via. Nessuna proposta commerciale, solo un aggiornamento.
 
 **Renaissance**: se non l'hai mai provato, è il nostro anti-aging cellulare avanzato. 13 nutraceutici che lavorano su meccanismi profondi (senolitici, NAD+, autofagia). È il prodotto più clinicamente sofisticato che ho formulato.
 
@@ -151,12 +151,12 @@ Sono Lorenzo di nuovo. Come promesso, oggi ti aggiorno su cosa è cambiato mentr
 
 **Jeunesse**: se conoscevi Youth, Jeunesse è il fratello maggiore. 12g di collagene grass-fed + antiossidanti cutanei avanzati (astaxantina, pino corteccia).
 
-**In pipeline**: sto lavorando su altre due formule. Non prometto date, ma se ti fa piacere sapere quando saranno pronte, resta iscritto alla newsletter.
+**E non è finita**: sto lavorando su nuove formule. Non prometto date, ma se ti fa piacere sapere quando saranno pronte, resta con noi in newsletter.
 
 Se vuoi guardare senza fretta:
 **[Vai al catalogo aggiornato](https://paleocomplex.com/negozio/)**
 
-Se vuoi confrontarti con me su cosa potrebbe avere senso per te oggi (magari le tue esigenze sono cambiate rispetto a quando avevi cominciato), **rispondi a questa email**. Leggo io.
+Se vuoi confrontarti su cosa potrebbe avere senso per te oggi (magari le tue esigenze sono cambiate rispetto all'inizio), **rispondi a questa email**: la leggiamo io e il mio team.
 
 La prossima settimana Flaminia ti scriverà con un'ultima cosa, poi ti lascio scegliere.
 
@@ -173,13 +173,13 @@ Fondatore di Paleocomplex
 
 #### Oggetto (3 varianti A/B)
 
-- A: L'ultima email. Poi silenzio (davvero)
+- A: L'ultima email di questo ciclo
 - B: Un'ultima cosa per te da parte nostra
 - C: 15% e reso facile, se ti serve una spinta
 
 #### Preview text (3 varianti)
 
-- A: Codice valido 14 giorni. Reso senza spese.
+- A: Codice personale valido 14 giorni. E reso facile.
 - B: Se il prezzo era il freno, adesso non lo è più.
 - C: La nostra ultima proposta, senza altre insistenze.
 
@@ -193,16 +193,16 @@ Se sei arrivato fin qui e ancora non hai riordinato, ho un'ipotesi: forse hai va
 
 Ti do un ultimo aiuto concreto:
 
-**Codice univoco per te**: **{{ unique_coupon_code }}**
+**Codice personale per te**: **{{ unique_coupon_code }}**
 **Sconto**: 15% sul tuo prossimo ordine
 **Validità**: 14 giorni dalla ricezione di questa email
-**Bonus**: reso facile senza spese per te se il prodotto non ti convince. Bastano un'email di comunicazione e il pacco ce lo riprendiamo noi.
+**Bonus**: reso facile se il prodotto non ti convince. Basta un'email e organizziamo tutto.
 
 Non ci sono trucchi. Se vuoi riprendere, questo è il momento.
 
 **[Riordina con il tuo codice](https://paleocomplex.com/negozio/)**
 
-Se invece hai deciso che non fa più per te, va bene lo stesso. Non ti scriveremo più con push automatico dopo questa email. Resterai nella nostra newsletter di contenuto, una email a settimana.
+Se invece hai deciso che non fa più per te, va bene lo stesso. Per i prossimi mesi non riceverai altri promemoria automatici da parte nostra. Resterai nella nostra newsletter, con i contenuti di sempre e ogni tanto le nostre novità.
 
 Grazie per il tempo che ci hai dedicato negli anni.
 
@@ -227,7 +227,7 @@ Customer Care Paleocomplex
 #### Preview text (3 varianti)
 
 - A: 10% di sconto se vuoi riprendere il percorso.
-- B: Non un pitch. Una domanda.
+- B: Nessuna offerta. Solo una domanda.
 - C: Sono passati mesi. Come va?
 
 #### Corpo email
@@ -242,12 +242,12 @@ Se vuoi rispondermi con una riga sola, sarei felice di leggerla. Aiuta noi a cap
 
 Nel frattempo, se sei nella posizione di voler riprendere il percorso, ti lascio un piccolo aiuto:
 
-**Codice: RIPRENDI10** (10% di sconto sul tuo prossimo ordine)
+**Codice: RIPRENDI10X9** (10% di sconto sul tuo prossimo ordine)
 **Validità**: 14 giorni
 
 **[Riprendi il percorso](https://paleocomplex.com/negozio/)**
 
-Se non è il momento giusto, va bene. Ti scriverò un'ultima email tra qualche giorno, poi ti lascio decidere.
+Se non è il momento giusto, va bene. Ti scriveremo un'ultima email tra qualche giorno, poi ti lasciamo decidere.
 
 A presto
 Flaminia
@@ -280,15 +280,15 @@ Sono Lorenzo. Flaminia ti ha scritto qualche giorno fa. Prendo io il testimone p
 
 Ti dico onestamente cosa succede da qui in poi.
 
-Se non riordini o non rispondi entro qualche settimana, il nostro sistema smetterà di scriverti con reminder automatici di riacquisto. Continuerai a ricevere la nostra newsletter di contenuto (una email a settimana su salute, integrazione, ricerca scientifica), che puoi disiscrivere quando vuoi.
+Se non riordini o non rispondi, per un lungo periodo non riceverai promemoria di riacquisto. Continuerai a ricevere la nostra newsletter (contenuti su salute, alimentazione e integrazione, e ogni tanto le nostre offerte), che puoi disattivare quando vuoi.
 
-Il codice **RIPRENDI10** (10% di sconto) è ancora attivo per qualche giorno se vuoi tornare.
+Il codice **RIPRENDI10X9** (10% di sconto) è ancora attivo per qualche giorno, se vuoi tornare.
 
 Voglio dirti una cosa da fondatore: la costanza è quello che ho sempre predicato ai nostri clienti. Non ti sto chiedendo di riordinare per farmi un favore. Ti sto chiedendo di riflettere se il tuo percorso di salute vale il piccolo sforzo di riprendere in mano l'integrazione. Se sì, siamo qui. Se no, va bene lo stesso: l'integrazione non è per tutti.
 
 **[Vai al negozio](https://paleocomplex.com/negozio/)**
 
-Se vuoi confrontarti con me prima di decidere, **rispondi a questa email**. Leggo io.
+Se vuoi confrontarti prima di decidere, **rispondi a questa email**: la leggiamo io e il mio team.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -300,7 +300,7 @@ Fondatore di Paleocomplex
 
 ### Codici sconto
 
-- **RIPRENDI10** (10%, statico riutilizzabile, valido 14gg): Email 1 Standard
+- **RIPRENDI10X9** (10%, statico con nome alfanumerico che comunica temporaneità, validità dichiarata 14gg): Email 1 Standard. Configurare in WooCommerce con scadenza assoluta rinnovata o limite 1 uso per cliente.
 - **{{ unique_coupon_code }}** (15%, univoco per profilo, valido 14gg): Email 3 High CLV
 
 Configurare codici univoci in WooCommerce app coupon (Yith Coupon Email o simile) collegati a Klaviyo via integrazione standard.
@@ -311,7 +311,7 @@ Klaviyo Academy raccomanda per top clienti persi di **partire con brand reintrod
 
 ### Reso facile solo in High CLV Email 3
 
-Ridurre il rischio percepito del cliente storico che teme di "sbagliare a riordinare". Reso facile senza spese = zero friction. Per clienti standard non menziono reso (troppa complicazione operativa per clienti minori).
+Ridurre il rischio percepito del cliente storico che teme di "sbagliare a riordinare". NOTA (Andrea 2026-06-18): il reso è possibile ma le spese di spedizione del reso sono a carico del cliente — per questo il copy dice "reso facile" SENZA promettere "senza spese". Per clienti standard non menziono reso.
 
 ### Soglia HCLV 300€
 
@@ -352,7 +352,7 @@ Cliente entra solo se:
     │
     └── NO (Standard)
           ▼ immediate
-          Email 1 Flaminia (RIPRENDI10 10%)
+          Email 1 Flaminia (RIPRENDI10X9 10%)
           ▼ wait 10 days [filter]
           ▼
           Email 2 Lorenzo (ultima trasparenza, codice ancora valido)
@@ -370,4 +370,6 @@ Filtro extra su Flow 75: `NOT received Flow 73 last email in last 60 days`. Cos�
 Bozza v1.0 — pronto per montaggio Klaviyo. Richiede Marketing Analytics attivo per RFM.
 
 ### Changelog
+- **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) Reso: il copy non promette più "senza spese" (le spese di reso sono a carico del cliente) → "reso facile... organizziamo tutto". (2) Codice RIPRENDI10 → **RIPRENDI10X9** (alfanumerico, validità 14gg). (3) Promesse di silenzio rese veritiere ("per i prossimi mesi..."), tolto "(davvero)" dall'oggetto. (4) Anglicismi rimossi (pitch, automation). (5) Fix sintassi ("Bastano un'email"). (6) "Ti scriverò altre due email" → "riceverai da noi" (la terza è di Flaminia). (7) Pipeline resa vaga ("nuove formule"). (8) "Leggo io" → "la leggiamo io e il mio team". (9) Newsletter descritta onestamente (include offerte).
+- v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
 - v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% RIPRENDI10 + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).

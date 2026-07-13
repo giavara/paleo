@@ -1,4 +1,4 @@
-**Versione:** 1.0
+**Versione:** 2.0
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 72: AI Repeat Purchase Flow (Predictive-powered)
@@ -127,7 +127,7 @@ Ti scrivo per due motivi.
 
 **Primo**, voglio chiederti un favore. Se hai esperienza concreta con i nostri prodotti, un cambiamento misurabile, un risultato che ti ha sorpreso, **rispondi pure a questa email** e raccontamelo. Le testimonianze dei clienti come te valgono per noi più di qualunque pubblicità. E mi farebbe davvero piacere sapere come sta andando.
 
-**Secondo**, da qui in poi voglio che tu sappia delle cose prima degli altri. Nei prossimi mesi usciranno delle novità (alcuni prodotti sono in fase finale di sviluppo, su altri stiamo lavorando). Ti scriverò personalmente quando saranno pronte, prima che le annunci pubblicamente.
+**Secondo**, da qui in poi voglio che tu sappia delle cose prima degli altri. Nei prossimi mesi usciranno delle novità (alcuni prodotti sono in fase finale di sviluppo, su altri stiamo lavorando). Sarai tra le prime persone a saperlo.
 
 Tra qualche giorno ti scrivo con qualcosa di più concreto: un suggerimento di prodotti che potrebbero completare bene il tuo protocollo, dato quello che usi già.
 
@@ -166,7 +166,7 @@ Hai costruito una base seria con il tuo protocollo di integrazione. A questo pun
 
 **La prima: anti-aging cellulare profondo (Renaissance)**
 
-Se non lo stai già usando, Renaissance lavora su meccanismi che nessun multivitaminico copre: senolitici (eliminazione cellule vecchie), NAD+ (energia mitocondriale), autofagia, supporto telomeri. Non è un sostituto del tuo prodotto, è un'aggiunta complementare per chi ha già le basi solide. Vedi i benefici nei marker infiammatori e nel profilo lipidico, misurabili in analisi.
+Se non lo stai già usando, Renaissance lavora su meccanismi che nessun multivitaminico copre: senolitici (eliminazione cellule vecchie), NAD+ (energia mitocondriale), autofagia, supporto telomeri. Non è un sostituto del tuo prodotto, è un'aggiunta complementare per chi ha già le basi solide. Puoi notare miglioramenti nei marker infiammatori e nel profilo lipidico, misurabili nelle analisi.
 
 **[Scopri Renaissance](https://paleocomplex.com/prodotto/renaissance/)**
 
@@ -209,15 +209,15 @@ Fondatore di Paleocomplex
 
 Ciao [NOME]
 
-Sono Flaminia. Ti scrivo perché in base ai dati del tuo percorso, dovresti essere a corto del tuo prodotto in questi giorni o nei prossimi.
+Sono Flaminia. Ti scrivo perché, di solito, a questo punto del percorso il prodotto sta per finire. E non vorrei che ti trovassi con un buco proprio adesso.
 
-So che hai fatto già più di un ordine con noi: significa che ti sei trovato bene e hai capito che la costanza è la chiave. Non sto qui a ripetertelo, lo sai meglio di me.
+So che con noi hai fatto già più di un ordine: significa che il percorso sta funzionando e che la costanza per te non è una novità. Non sto qui a ripetertelo, lo sai meglio di me.
 
 Però lo so anche un'altra cosa: a volte tra un ordine e l'altro passa qualche giorno di troppo, e quei pochi giorni di interruzione sono uno spreco rispetto al lavoro che stai facendo.
 
-Per non lasciarti questo dubbio, ti faccio un piccolo regalo. Se vuoi riordinare adesso senza interruzione, usa il codice **CONTINUA10** per avere il **10% di sconto** sul tuo prossimo ordine.
+Per non lasciarti questo dubbio, ti faccio un piccolo regalo. Se vuoi riordinare adesso senza interruzione, usa il codice **CONTINUA10K7** per avere il **10% di sconto** sul tuo prossimo ordine.
 
-Valido per i prossimi 7 giorni. Spedizione veloce come sempre.
+Valido per 14 giorni. Spedizione veloce come sempre.
 
 **[Riordina sul nostro sito](https://paleocomplex.com)**
 
@@ -244,7 +244,7 @@ Customer Care Paleocomplex
 
 - A: Tre storie di clienti che hanno tenuto duro.
 - B: La differenza tra il 1° mese e il 4°.
-- C: Il codice CONTINUA10 è ancora valido.
+- C: Il codice CONTINUA10K7 è ancora valido.
 
 #### Corpo email
 
@@ -252,20 +252,20 @@ Ciao [NOME]
 
 Sono Flaminia di nuovo. Una settimana fa ti ho scritto per il riacquisto. So che non l'hai ancora fatto e non voglio mettere pressione. Voglio raccontarti qualcosa.
 
-Negli ultimi mesi ho letto centinaia di recensioni e messaggi di clienti che, dopo aver iniziato a essere "discontinui" come potresti essere tu adesso, hanno ripreso il percorso con costanza. Tre storie su tutte mi sono rimaste.
+Negli ultimi mesi ho letto centinaia di recensioni dei nostri clienti. Tre storie sul valore della costanza mi sono rimaste in mente, e oggi le condivido con te.
 
-*"Avevo cominciato bene, poi tra un viaggio e l'altro avevo lasciato passare due mesi. Ho ripreso a settembre e nel giro di 6 settimane mi è tornata l'energia che ricordavo dal primo periodo. Stavolta non smetto."*
-**Cliente verificata** (dal CSV recensioni)
+*"Ottimo prodotto che ormai uso da anni. Aiuta molto nei periodi di stanchezza e stress. Ho sentito la differenza in un periodo di sospensione che ho fatto e devo dire che ora, assumendolo di nuovo, mi sento in buona energia e mai stanca."*
+**Ornella B.**
 
-*"All'inizio pensavo che potessi alternare. Poi ho capito leggendo le email di Lorenzo che la costanza non è un suggerimento, è il prodotto. Da quel momento prendo l'integratore tutti i giorni senza pensarci. Funziona."*
-**Cliente verificato**
+*"Non ho trovato immediato beneficio, ma alla terza confezione non credo sia un caso che i dolori siano quasi scomparsi e la stanchezza attenuata. Mi sento di consigliarlo, e ovviamente continuo a monitorare."*
+**Alessia D.**
 
-*"Riacquisto sempre prima che finisca per evitare il buco. Mi sono dato questa regola dopo il primo anno e da allora non ho più avuto pause."*
-**Cliente verificato**
+*"L'ho utilizzato con costanza e ho visto risultati concreti, soprattutto in termini di vitalità e concentrazione."*
+**Paola L.**
 
-Il messaggio comune: chi riprende sa che il tempo perso non si recupera, ma chi non riprende lo perde davvero.
+Il messaggio comune: i risultati arrivano a chi non interrompe. E chi ha provato a sospendere, come Ornella, ha sentito la differenza.
 
-Il codice **CONTINUA10** (10% di sconto) è valido ancora per qualche giorno se vuoi continuare adesso.
+Il codice **CONTINUA10K7** (10% di sconto) è ancora valido per qualche giorno, se vuoi continuare adesso.
 
 **[Riordina sul nostro sito](https://paleocomplex.com)**
 
@@ -282,13 +282,13 @@ Customer Care Paleocomplex
 
 #### Oggetto (3 varianti A/B)
 
-- A: L'ultima cosa che ti chiedo (poi non rompo più)
+- A: L'ultima cosa che ti chiedo su questo
 - B: Per riprendere il tuo percorso, il mio ultimo aiuto
 - C: Una decisione, e poi ti lascio in pace
 
 #### Preview text (3 varianti)
 
-- A: 15% di sconto. Codice univoco. Niente altre email dopo questa.
+- A: 15% di sconto con un codice personale. Poi mi fermo.
 - B: Te lo dico io: continua, o decidi di smettere. Non c'è terzo.
 - C: Il momento di chiudere questo loop.
 
@@ -296,19 +296,19 @@ Customer Care Paleocomplex
 
 Ciao [NOME]
 
-Sono Lorenzo. Te lo dico onestamente: ti stavi avvicinando alla data in cui Klaviyo (il nostro sistema di gestione delle email) prevedeva il tuo prossimo ordine. Ti ho fatto scrivere da Flaminia due volte negli ultimi 17 giorni. Non hai ancora riordinato.
+Sono Lorenzo. Te lo dico onestamente: è passato più o meno il tempo in cui di solito si arriva al riordino, e il tuo non è arrivato. Flaminia ti ha scritto due volte nelle ultime settimane. Nessun riordino ancora.
 
 Ho due ipotesi.
 
-**La prima**: hai deciso che non fa per te. Va bene anche questo. Non sono offeso. Se è questo il caso, **rispondi pure a questa email** e dimmelo. Mi farebbe piacere sapere che cosa non ha funzionato: il prodotto, il prezzo, il timing, il sapore, qualsiasi cosa. Vorrei migliorare il servizio per chi viene dopo di te.
+**La prima**: hai deciso che non fa per te. Va bene anche questo, nessun problema. Se è questo il caso, **rispondi pure a questa email** e dimmelo. Mi farebbe piacere sapere che cosa non ha funzionato: il prodotto, il prezzo, il timing, il sapore, qualsiasi cosa. Vorrei migliorare il servizio per chi viene dopo di te.
 
 **La seconda**: vuoi continuare ma stai aspettando il momento giusto, o un piccolo aiuto economico.
 
-Se sei nel secondo caso, ti do un ultimo aiuto. Codice univoco **{{ unique_coupon_code }}** che ti dà il **15% di sconto** sul tuo prossimo ordine. Valido per 7 giorni dalla ricezione di questa email, poi scade. Niente promo periodiche, niente codici riutilizzabili.
+Se sei nel secondo caso, ti do un ultimo aiuto. Codice **{{ unique_coupon_code }}** che ti dà il **15% di sconto** sul tuo prossimo ordine. È un codice personale, generato per te: vale 14 giorni dalla ricezione di questa email, poi scade.
 
 **[Riordina con il tuo codice](https://paleocomplex.com)**
 
-Dopo questa email non ti scriverò più automaticamente per riordinare. Tornerai nella nostra newsletter normale, una mail a settimana di contenuto, niente push commerciale.
+Dopo questa email, per le prossime settimane non riceverai altri promemoria di riordino da parte mia. Tornerai nella nostra newsletter: contenuti su salute e integrazione, e ogni tanto le nostre novità.
 
 Spero di rivederti.
 
@@ -336,7 +336,7 @@ Per partire (e per inserire una soglia temporanea): **200€**. Da ricalibrare c
 
 Klaviyo permette di generare codici univoci (uno per profilo), con validità limitata nel tempo. Va configurato nell'app coupon di WooCommerce e collegato a Klaviyo via integrazione standard. **Importante**: codice univoco impedisce che venga condiviso pubblicamente (es. screenshot su forum). Nel Flow 72 Email 3 Below CLV uso `{{ unique_coupon_code }}` come placeholder per il codice generato.
 
-Per Email 1 Below CLV uso `CONTINUA10` (codice statico riutilizzabile a 10%) per semplicità. Quando avremo dati su come performa, valuteremo se fare anche questo univoco.
+Per Email 1 Below CLV uso `CONTINUA10K7` (10%): codice statico ma con nome alfanumerico che comunica temporaneità (decisione Andrea 2026-06-18). Validità dichiarata 14 giorni — configurare in WooCommerce con scadenza assoluta rinnovata periodicamente, oppure limite 1 uso per cliente. La sequenza è coerente: Email 1 (T+0, codice 14gg) → Email 2 (T+7, codice ancora valido per 7gg) → Email 3 (T+17, il CONTINUA10K7 è scaduto, arriva il codice personale 15%).
 
 ### Dynamic content prodotto
 
@@ -379,7 +379,7 @@ Quando configureremo il Flow 73 (At Risk Winback), il suo trigger filter include
     │
     └── NO (Below CLV)
           ▼ immediate
-          Email 1 Flaminia (reorder + CONTINUA10 10%)
+          Email 1 Flaminia (reorder + CONTINUA10K7 10%)
           ▼ wait 7 days [filter]
           ▼
           Email 2 Flaminia (social proof + reminder codice)
@@ -402,4 +402,6 @@ Tu hai già tutti questi prerequisiti come dati totali, ma Klaviyo deve avere vi
 Bozza v1.0 — pronto per montaggio Klaviyo, ma DA ATTIVARE solo dopo 60-90gg post-migrazione.
 
 ### Changelog
+- **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) **Le 3 testimonianze inventate della Email 2 Below sono state sostituite con recensioni REALI dal CSV** (Ornella B. su sospensione/ripresa, Alessia D. su terza confezione, Paola L. su costanza) e rimossa la nota interna "(dal CSV recensioni)". (2) Codice CONTINUA10 → **CONTINUA10K7**, validità 14gg (matematica sequenza ora coerente: E2 a +7gg trova codice ancora valido, E3 a +17gg lo trova scaduto e porta il 15% personale). (3) Rimossa la frase falsa "niente promo periodiche, niente codici riutilizzabili" → "è un codice personale". (4) Promessa di silenzio resa veritiera ("per le prossime settimane... da parte mia"). (5) Rimossi i riferimenti creepy a Klaviyo/predizione data ordine. (6) Fix persona Flaminia ("Ti ho fatto scrivere" → "Flaminia ti ha scritto"). (7) Claim Renaissance prudente ("puoi notare"). (8) Early access ammorbidito ("sarai tra le prime persone a saperlo"). (9) Gender-neutral.
+- v1.0 (2026-06-18): prima stesura. Architettura template Klaviyo Academy: trigger Expected Date of Next Order + conditional split Predicted CLV. Above CLV: 2 email Lorenzo, no sconto, focus riconoscimento/community. Below CLV: 3 email Flaminia+Lorenzo, escalation sconto 10%→15%. Coordinamento con Flow 71 (esclusione 365gg) e Flow 73 (esclusione reciproca).
 - v1.0 (2026-06-18): prima stesura. Architettura template Klaviyo Academy: trigger Expected Date of Next Order + conditional split Predicted CLV. Above CLV: 2 email Lorenzo, no sconto, focus riconoscimento/community. Below CLV: 3 email Flaminia+Lorenzo, escalation sconto 10%→15%. Coordinamento con Flow 71 (esclusione 365gg) e Flow 73 (esclusione reciproca).

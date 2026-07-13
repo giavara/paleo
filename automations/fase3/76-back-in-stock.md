@@ -1,4 +1,4 @@
-**Versione:** 1.0
+**Versione:** 1.1
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 76: Back in Stock
@@ -57,8 +57,8 @@ Nessun sormonto significativo. La email di back-in-stock è transazionale al 100
 
 ### Oggetto (3 varianti A/B)
 
-- A: 🎉 Il tuo {{ event.product_name }} è di nuovo disponibile
-- B: Bentornato: {{ event.product_name }} è tornato in stock
+- A: Il tuo {{ event.product_name }} è di nuovo disponibile
+- B: È tornato: {{ event.product_name }} di nuovo disponibile
 - C: Come promesso: {{ event.product_name }} è di nuovo qui
 
 ### Preview text (3 varianti)
@@ -73,11 +73,11 @@ Ciao [NOME]
 
 Sono Flaminia. Ottime notizie: **{{ event.product_name }}** è tornato disponibile sul nostro sito.
 
-Ti scrivo subito perché ti eri iscritto per essere avvisato appena fosse tornato.
+Ti scrivo subito perché avevi chiesto di ricevere l'avviso appena fosse tornato.
 
 **[Vai al prodotto e ordina](https://paleocomplex.com/prodotto/{{ event.product_slug }})**
 
-Una nota pratica: gli esaurimenti su Paleocomplex tipicamente durano poco. Se hai deciso di ordinarlo, meglio non aspettare troppo: potrebbe finire di nuovo in pochi giorni, specialmente se si è trattato di un esaurimento su un prodotto molto richiesto.
+Una nota pratica: sui prodotti più richiesti, le scorte del primo rientro a volte finiscono in fretta. Se hai deciso di ordinarlo, meglio non aspettare troppo.
 
 Spedizione veloce come sempre: 24-48h con corriere espresso.
 
@@ -141,4 +141,5 @@ Fine flow
 Bozza v1.0 — pronto per montaggio Klaviyo. Prerequisito: installare widget "Notify me" sulle pagine prodotto esaurite.
 
 ### Changelog
+- **v1.1 (2026-06-18)**: fix da verifica content-verifier. Rimossa emoji 🎉 dall'oggetto A, oggetto B riformulato (via "Bentornato" gendered e "in stock" anglicismo), "ti eri iscritto" → "avevi chiesto di ricevere l'avviso" (neutro), claim scarsità ammorbidito ("le scorte del primo rientro a volte finiscono in fretta").
 - v1.0 (2026-06-18): prima stesura. 1 email immediata Flaminia con dynamic content sul prodotto. Smart Sending OFF (trasazionale). Nessun sormonto con altri flow.

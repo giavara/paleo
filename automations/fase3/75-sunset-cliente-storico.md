@@ -1,4 +1,4 @@
-**Versione:** 1.0
+**Versione:** 1.1
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 75: Sunset Cliente Storico
@@ -71,7 +71,7 @@ Vedi `00-mappatura-fase3.md` sezione Sormonti. Sintesi:
 
 ### Oggetto (3 varianti A/B)
 
-- A: Ci sei stato con noi. Volevo dirti solo una cosa.
+- A: Hai fatto un pezzo di strada con noi. Volevo dirti una cosa.
 - B: Niente fretta. Solo un pensiero da fondatore.
 - C: Ti ricordo, ma senza pressione
 
@@ -79,7 +79,7 @@ Vedi `00-mappatura-fase3.md` sezione Sormonti. Sintesi:
 
 - A: Se un giorno vuoi tornare, ti aspetto qui.
 - B: 20% aperto. Nessuna scadenza forzata.
-- C: Niente automation cinico. Solo umanità.
+- C: Niente messaggi automatici a raffica. Solo un pensiero sincero.
 
 ### Corpo email
 
@@ -87,17 +87,17 @@ Ciao [NOME]
 
 Sono Lorenzo. Ti scrivo da fondatore di Paleocomplex.
 
-Ho controllato: hai fatto ordini con noi in passato. Poi c'è stato un silenzio lungo, di mesi. Il nostro sistema ti aveva segnalato "a rischio" tempo fa e ti abbiamo scritto per riprenderti. Non ha funzionato. Fair enough.
+Ho controllato: hai fatto ordini con noi in passato. Poi c'è stato un silenzio lungo, di mesi. Nei mesi scorsi ti abbiamo scritto un paio di volte per invitarti a tornare. Non ha funzionato, e ci sta.
 
 Ti scrivo adesso in modo diverso.
 
-Non ti chiedo di ricomprare. Non ti offro uno sconto a tempo che scade tra 3 giorni e ti mette pressione. Ti dico una cosa sola: **se un giorno vorrai tornare, siamo qui**. Non tra 3 mesi, non tra 6, non tra 2 anni. Il pomodoro maturo si raccoglie quando è il momento.
+Non ti chiedo di ricomprare. Non ti offro uno sconto a tempo che scade tra 3 giorni e ti mette pressione. Ti dico una cosa sola: **se un giorno vorrai tornare, siamo qui**. Non tra 3 mesi, non tra 6, non tra 2 anni. Quando sarà il momento giusto per te.
 
 Se e quando vorrai tornare, ti lascio un codice **aperto senza scadenza**: **BENTORNATO20**, il 20% sul tuo prossimo ordine, quando vorrai riprendere. Nessun trucco.
 
 **[Vai al negozio](https://paleocomplex.com/negozio/)**
 
-E se hai voglia di raccontarmi cosa è successo (un cambiamento di vita, un problema con i nostri prodotti, un cambio nelle tue priorità), **rispondi a questa email**. Leggo io, personalmente. Mi aiuta a capire meglio come lavorare.
+E se hai voglia di raccontarmi cosa è successo (un cambiamento di vita, un problema con i nostri prodotti, un cambio nelle tue priorità), **rispondi a questa email**: la leggiamo io e il mio team. Mi aiuta a capire meglio come lavorare.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -118,9 +118,9 @@ Fondatore di Paleocomplex
 
 ### Preview text (3 varianti)
 
-- A: Nessuna suppression forzata. Solo trasparenza.
+- A: Nessuna cancellazione forzata. Solo trasparenza.
 - B: Puoi scegliere la frequenza che ti fa più comodo.
-- C: Rispetto anche il non risposta.
+- C: Va bene anche se non rispondi.
 
 ### Corpo email
 
@@ -222,4 +222,5 @@ Update Profile Property: frequency_preference = monthly + tag "Unengaged Storico
 Bozza v1.0 — pronto per montaggio Klaviyo. Da attivare in parallelo con Flow 74 ma monitorando che i filtri di esclusione con Flow 73 funzionino.
 
 ### Changelog
+- **v1.1 (2026-06-18)**: fix da verifica content-verifier. (1) Rimosso il reveal dell'etichetta interna "a rischio" → "ti abbiamo scritto un paio di volte per invitarti a tornare". (2) Anglicismi rimossi (fair enough, suppression, automation). (3) Fix preview "il non risposta". (4) Rimosso "il pomodoro maturo". (5) Gender-neutral (oggetto "Ci sei stato con noi"). (6) "Leggo io personalmente" → team. BENTORNATO20 invariato in attesa della decisione sconti.
 - v1.0 (2026-06-18): prima stesura. Segmento comportamentale (1+ ordini + 180gg inattivo totale). 2 email caldre Lorenzo + Flaminia + azione di frequency reduction (NON suppression hard). Sconto BENTORNATO20 open-ended senza scadenza. Coordinamento con Flow 73 (60gg gap). Filosofia long-term retention diversa dal Flow 74 Lead.

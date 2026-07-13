@@ -1,4 +1,4 @@
-**Versione:** 1.1
+**Versione:** 2.0
 **Ultimo aggiornamento:** 2026-06-18
 
 # Flow 78: Cross-Sell Data-Driven (Catalog Insights)
@@ -86,9 +86,9 @@ I tre lavorano insieme su temi diversi:
 
 ### Preview text (3 varianti)
 
-- A: Il nostro sistema mi ha segnalato una combinazione da suggerirti.
+- A: C'è una combinazione che voglio suggerirti. Ti spiego perché adesso.
 - B: Un prodotto che completa bene quello che usi già.
-- C: Data-driven, non manipolazione. Te lo spiego.
+- C: Un suggerimento basato sui dati. Te lo spiego.
 
 ### Corpo email
 
@@ -96,9 +96,9 @@ Ciao [NOME]
 
 Sono Lorenzo. Ti scrivo con un suggerimento un po' diverso dal solito.
 
-Il nostro sistema (uso un tool AI di Klaviyo che analizza i pattern di acquisto dei nostri clienti) mi ha segnalato una cosa specifica su di te.
+Guardando i percorsi dei nostri clienti ho notato una cosa: **chi ha comprato quello che usi tu, a un certo punto aggiunge tipicamente un prodotto preciso al proprio protocollo**. E quel punto, per la maggior parte, è più o meno questo momento del percorso.
 
-Basandosi su quello che hai comprato da noi finora e sui **pattern d'acquisto dei clienti che hanno un percorso simile al tuo**, l'AI mi indica che questo è il momento giusto per aggiungere un prodotto specifico al tuo protocollo.
+Non è una promozione. È un'osservazione che viene dai dati di migliaia di ordini, e credo valga la pena condividerla con te.
 
 **Il prodotto suggerito per te:**
 
@@ -112,16 +112,16 @@ Basandosi su quello che hai comprato da noi finora e sui **pattern d'acquisto de
 **[Scopri {{ person.next_best_product.name }}]({{ person.next_best_product.url }})**
 
 {% else %}
-(Blocco dynamic content Klaviyo `Next Best Product`: si compila automaticamente con il prodotto suggerito dall'AI per questo profilo)
+<!-- SETUP KLAVIYO: questo ramo NON deve mai arrivare al cliente. Configurare: (a) fallback reale con blocco "i più scelti dai nostri clienti", oppure (b) conditional split prima dell'email che fa uscire dal flow i profili senza next_best_product. -->
 {% endif %}
 
 ---
 
-**Perché te lo suggerisco adesso**: i clienti nel nostro database che hanno acquistato quello che hai già tu, tipicamente hanno aggiunto questo prodotto al loro protocollo circa in questo periodo. È il momento in cui i benefici della combinazione si consolidano.
+**Perché te lo suggerisco adesso**: perché è questo il momento in cui, tipicamente, i benefici della combinazione si consolidano meglio. Prima sarebbe stato prematuro, dopo sarebbe un'occasione persa.
 
-**Nota importante**: non è uno sconto, non è una promo a tempo, non è manipolazione. È solo un suggerimento data-driven che il nostro sistema mi ha proposto per te.
+**Nota importante**: non è uno sconto e non è una promo a tempo. È solo un suggerimento basato su quello che vedo nei percorsi dei nostri clienti.
 
-Se vuoi vedere il prodotto, cliccare per approfondire, o rispondere a questa email per confrontarti con me su come integrarlo, **sei libero**. Se non ti interessa, ignora pure: non ti scriverò più con reminder automatici su questo prodotto specifico.
+Se vuoi vedere il prodotto, approfondire, o rispondere a questa email per confrontarti su come integrarlo, **decidi tu**. Se non ti interessa, ignora pure: non insisterò con altre email su questo suggerimento.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -193,5 +193,6 @@ Fine flow (re-entry consentito dopo 180gg)
 Bozza v1.0 — richiede Marketing Analytics attivo per Catalog Insights. Da attivare in coda al Flow 72 (60-90gg dopo go-live) per dare tempo a Klaviyo di popolare `Best Cross-Sell Date` per la coorte clienti.
 
 ### Changelog
+- **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisione Andrea ("una cosa specifica su di te" assolutamente da togliere). Riscritta l'apertura dell'email: rimossi tutti i riferimenti a tool/AI/Klaviyo e alla segnalazione individuale → framing sul comportamento tipico dei clienti simili ("chi ha comprato quello che usi tu, a un certo punto aggiunge tipicamente..."). Rimossi anglicismi (data-driven, reminder). Promessa "non ti scriverò più" resa compatibile col re-entry 180gg. Ramo {% else %} del template trasformato in istruzione di setup esplicita (mai testo segnaposto al cliente).
 - **v1.1 (2026-06-18)**: il Flow 78 diventa l'UNICO punto di cross-sell automatico. Rimossa la vecchia email 2 cross-sell del Flow 22 (che ora è un semplice grazie). Sormonto 22/78 risolto alla radice. Fix em-dash nei corpi email (regola skill paleo-email).
 - v1.0 (2026-06-18): prima stesura. Trigger Best Cross-Sell Date (Catalog Insights). Content dinamico Next Best Product block. 1 email singola Lorenzo. ROI da valutare a fine trial 30gg per decidere upgrade piano Marketing Analytics permanente.

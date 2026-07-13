@@ -1,5 +1,5 @@
-**Versione:** 0.1
-**Ultimo aggiornamento:** 2026-05-13
+**Versione:** 0.2
+**Ultimo aggiornamento:** 2026-06-18
 
 # Flow 27: Prodotto — Elisir Basic
 
@@ -129,7 +129,7 @@ I benefici strutturali e preventivi si consolidano. Salute cardiovascolare, dens
 
 **Una nota specifica per il tuo Elisir Basic**
 
-Elisir Basic non contiene vitamina D: se hai scelto questa versione perché la integri separatamente o per compatibilità con farmaci anticoagulanti, ricordati di monitorare i tuoi livelli di 25(OH)D con un'analisi del sangue ogni 6-12 mesi. Mantenere la vit D tra 50 e 80 ng/ml è uno dei fattori più impattanti su immunità e benessere generale.
+Elisir Basic non contiene vitamina D: se hai scelto questa versione perché la integri separatamente o per compatibilità con farmaci anticoagulanti, ricordati di monitorare i tuoi livelli di 25(OH)D con un'analisi del sangue ogni 6-12 mesi. Mantenere la vit D tra 40 e 60 ng/ml è uno dei fattori più impattanti su immunità e benessere generale.
 
 **La verità che pochi dicono**
 
@@ -197,4 +197,4 @@ Customer Care Paleocomplex
 ---
 
 ### Status
-Bozza v0.1 — in attesa review.
+v0.2 — CORRETTO range 25(OH)D da 50-80 a 40-60 ng/ml (allineamento a scheda prodotto, verifica 2026-06-18). ⚠️ FLOW GIÀ MONTATO SU KLAVIYO: correggere Email 2 anche nel builder.

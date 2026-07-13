@@ -1,5 +1,5 @@
-**Versione:** 0.1
-**Ultimo aggiornamento:** 2026-05-13
+**Versione:** 0.2
+**Ultimo aggiornamento:** 2026-06-18
 
 # Flow 37: Prodotto — Vitamina D in gocce
 
@@ -68,7 +68,7 @@ Dose standard: 4 gocce al giorno a colazione, equivalenti a circa 2.000 UI. Ogni
 
 **Se non conosci i tuoi livelli**
 
-Parti con 4 gocce al giorno per 3 mesi e poi fai un controllo della 25(OH)D. In base al risultato puoi regolare il dosaggio per arrivare al range ottimale (50-80 ng/ml).
+Parti con 4 gocce al giorno per 3 mesi e poi fai un controllo della 25(OH)D. In base al risultato puoi regolare il dosaggio per arrivare al range ottimale (40-60 ng/ml).
 
 **Per dubbi specifici**
 
@@ -115,7 +115,7 @@ I livelli si stabilizzano. Il sistema immunitario è più reattivo. Le ossa bene
 
 **Uso continuativo**
 
-La vitamina D è una supplementazione che ha senso a vita per chi vive in Italia, specialmente da ottobre a marzo quando il sole non basta a stimolare la produzione cutanea. Mantenere il 25(OH)D tra 50 e 80 ng/ml richiede integrazione costante: controlla i livelli a fine marzo e fine settembre per regolare il dosaggio.
+La vitamina D è una supplementazione che ha senso a vita per chi vive in Italia, specialmente da ottobre a marzo quando il sole non basta a stimolare la produzione cutanea. Mantenere il 25(OH)D tra 40 e 60 ng/ml richiede integrazione costante: controlla i livelli a fine marzo e fine settembre per regolare il dosaggio.
 
 **Cosa rende la Vitamina D diversa**
 
@@ -168,7 +168,7 @@ Le esperienze di chi la usa parlano chiaro:
 
 I risultati sono personali. Ma a differenza di quasi tutti gli altri integratori, la Vitamina D si misura: per capire se il dosaggio è quello giusto per te, controlla i livelli dopo 3 mesi e regola di conseguenza.
 
-**Una nota pratica**: il range ottimale di 25(OH)D è 50-80 ng/ml. Sotto 30 ng/ml è insufficienza, sotto 20 è carenza. Sopra 100 ng/ml è eccesso (raro con dosi standard).
+**Una nota pratica**: il range ottimale di 25(OH)D è 40-60 ng/ml. Sotto 30 ng/ml è insufficienza, sotto 20 è carenza. Sopra 100 ng/ml è eccesso (raro con dosi standard).
 
 E se hai già fatto l'analisi o stai per farla, mi farebbe davvero piacere saperlo. **Rispondi pure a questa email** raccontandomi i tuoi valori (anche solo prima/dopo): per noi è prezioso costruire un quadro reale di come la nostra Vitamina D funziona per persone diverse.
 
@@ -178,4 +178,4 @@ Customer Care Paleocomplex
 ---
 
 ### Status
-Bozza v0.1 — in attesa review.
+v0.2 — CORRETTO range 25(OH)D da 50-80 a 40-60 ng/ml (allineamento a scheda prodotto, verifica content-verifier 2026-06-18). ⚠️ FLOW GIÀ MONTATO SU KLAVIYO: correggere Email 1, 2 e 3 anche nel builder.
