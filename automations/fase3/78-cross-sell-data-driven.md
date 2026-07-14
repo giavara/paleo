@@ -122,7 +122,7 @@ Non è una promozione. È un'osservazione che viene dai dati di migliaia di ordi
 E siccome provare un prodotto nuovo è sempre un piccolo salto, te lo rendo più semplice: ti lascio **10€ di sconto** per la prova. Il codice è personale e vale su qualsiasi prodotto del catalogo, non solo su quello che ti ho suggerito.
 
 **Codice personale: {{ unique_coupon_code_crosssell }}**
-**Validità**: 14 giorni.
+**Validità**: 14 giorni — scade a mezzanotte del 14° giorno.
 
 Se vuoi vedere il prodotto, approfondire, o rispondere a questa email per confrontarti su come integrarlo, **decidi tu**. Se non ti interessa, ignora pure: non insisterò con altre email su questo suggerimento.
 

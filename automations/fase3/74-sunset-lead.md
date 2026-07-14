@@ -134,7 +134,7 @@ In tutti questi mesi ti abbiamo mandato contenuti su salute e integrazione, ma n
 Se il freno era il prezzo, questo è il momento di provarci: ti lascio un codice personale del **20% di sconto** sul tuo primo ordine, su qualsiasi prodotto del catalogo.
 
 **Codice personale: {{ unique_coupon_code_sunset }}**
-**Validità**: 14 giorni, poi scade davvero.
+**Validità**: 14 giorni — scade a mezzanotte del 14° giorno, e non torna.
 
 **[Scegli il tuo primo prodotto](https://paleocomplex.com/negozio/)**
 
@@ -162,7 +162,7 @@ Fondatore di Paleocomplex
 ### Preview text (3 varianti)
 
 - A: Nessun rancore, qualunque cosa scegli.
-- B: Ancora pochi giorni per usare il tuo 20%.
+- B: Il tuo 20% scade tra una settimana.
 - C: Dopo questa email, silenzio — a meno che tu non scelga di restare.
 
 ### Corpo email
@@ -175,7 +175,7 @@ Le cose stanno così: Lorenzo ti ha scritto due volte nelle ultime settimane. Se
 
 Prima di salutarci, due cose veloci.
 
-**La prima**: il tuo codice personale del **20%** ({{ unique_coupon_code_sunset }}) è ancora valido per qualche giorno. Se hai anche solo una curiosità da provare, questo è il momento con le condizioni migliori che avrai mai.
+**La prima**: il tuo codice personale del **20%** ({{ unique_coupon_code_sunset }}) scade tra 7 giorni, a mezzanotte. Se hai anche solo una curiosità da provare, queste sono le condizioni migliori che vedrai mai.
 
 **[Vai al negozio](https://paleocomplex.com/negozio/)**
 

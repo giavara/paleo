@@ -195,7 +195,7 @@ Ti do un ultimo aiuto concreto:
 
 **Codice personale per te**: **{{ unique_coupon_code }}**
 **Sconto**: 15% sul tuo prossimo ordine
-**Validità**: 14 giorni dalla ricezione di questa email
+**Validità**: 14 giorni — scade a mezzanotte del 14° giorno
 **Bonus**: reso facile se il prodotto non ti convince. Basta un'email e organizziamo tutto.
 
 Non ci sono trucchi. Se vuoi riprendere, questo è il momento.
@@ -243,7 +243,7 @@ Se vuoi rispondermi con una riga sola, sarei felice di leggerla. Aiuta noi a cap
 Nel frattempo, se sei nella posizione di voler riprendere il percorso, ti lascio un piccolo aiuto:
 
 **Codice personale: {{ unique_coupon_code_riprendi }}** (10% di sconto sul tuo prossimo ordine)
-**Validità**: 14 giorni dalla ricezione di questa email
+**Validità**: 14 giorni — scade a mezzanotte del 14° giorno, poi non funziona più
 
 **[Riprendi il percorso](https://paleocomplex.com/negozio/)**
 
@@ -282,7 +282,7 @@ Ti dico onestamente cosa succede da qui in poi.
 
 Se non riordini o non rispondi, per un lungo periodo non riceverai promemoria di riacquisto. Continuerai a ricevere la nostra newsletter (contenuti su salute, alimentazione e integrazione, e ogni tanto le nostre offerte), che puoi disattivare quando vuoi.
 
-Il tuo codice personale del 10% è ancora attivo per qualche giorno, se vuoi tornare.
+Il tuo codice personale del 10% scade tra 4 giorni, a mezzanotte. Se vuoi tornare, questo è il momento.
 
 Voglio dirti una cosa da fondatore: la costanza è quello che ho sempre predicato ai nostri clienti. Non ti sto chiedendo di riordinare per farmi un favore. Ti sto chiedendo di riflettere se il tuo percorso di salute vale il piccolo sforzo di riprendere in mano l'integrazione. Se sì, siamo qui. Se no, va bene lo stesso: l'integrazione non è per tutti.
 
