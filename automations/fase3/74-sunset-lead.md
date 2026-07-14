@@ -1,5 +1,5 @@
-**Versione:** 1.1
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 2.0
+**Ultimo aggiornamento:** 2026-07-14
 
 # Flow 74: Sunset Lead (Iscritti mai-clienti)
 
@@ -44,13 +44,16 @@ Definition (TUTTE le condizioni):
 
 ## Struttura email
 
-**2 email + 1 azione automatica**:
+**3 email + 1 azione automatica** (v2.0, decisione Andrea 2026-07-14: lo sconto entra anche qui come ultima carta — chi non ha mai comprato potrebbe avere avuto il prezzo come freno, e visto che sta uscendo dalla lista, ogni conversione è guadagno puro):
 
-| # | Timing | Mittente | Tema |
-|---|--------|----------|------|
-| 1 | T+0 dall'ingresso | Lorenzo Zarone | "Mi senti ancora?" — richiesta esplicita di conferma interesse |
-| 2 | +7gg dopo Email 1 | Lorenzo Zarone | "Ultima nota. Rispetto la tua scelta" — link gestione preferenze |
-| Azione | +3gg dopo Email 2 senza engagement | (sistema) | Tag `Unengaged` + Suppress da broadcast future |
+| # | Timing | Mittente | Tema | Sconto |
+|---|--------|----------|------|--------|
+| 1 | T+0 dall'ingresso | Lorenzo Zarone | "Mi senti ancora?" — conferma interesse | NO |
+| 2 | +7gg dopo Email 1 | Lorenzo Zarone | Ultima occasione + **20% univoco** ("se il freno era il prezzo") | **20%** |
+| 3 | +7gg dopo Email 2 | Flaminia | Reminder codice + invito gentile a scegliere (resta o disiscriviti) | reminder 20% |
+| Azione | +3gg dopo Email 3 | (sistema) | Suppress SOLO chi ha zero aperture e zero click su tutte e 3 le email | — |
+
+**Logica engagement (il "segnale di interesse" che chiedeva Andrea)**: chi apre o clicca anche solo una delle 3 email dimostra interesse residuo → NON viene soppresso, resta in lista normale. Chi non interagisce con nessuna delle 3 → tag `Unengaged` + suppression. Il click sul codice sconto è il segnale più forte (per quello lo sconto sta in email 2 E 3: fa anche da test di interesse).
 
 ## Coordinamento con altri flow
 
@@ -101,44 +104,43 @@ Fondatore di Paleocomplex
 
 ---
 
-## EMAIL 2 — Lorenzo (+7gg dopo Email 1, ultima)
+## EMAIL 2 — Lorenzo (+7gg dopo Email 1) — Ultima occasione + 20%
 
 **Mittente:** Lorenzo Zarone
-**Tipo:** Statica con link gestione preferenze
+**Tipo:** Statica con codice sconto univoco
 
 ### Oggetto (3 varianti A/B)
 
-- A: L'ultima email che ricevi da noi (probabilmente)
-- B: Silenzio. Rispetto anche questo.
-- C: Se ci sei, batti un colpo
+- A: Prima di salutarci: un regalo, se ti va
+- B: Il 20% che non ti ho mai dato
+- C: Se il freno era il prezzo, adesso non lo è più
 
 ### Preview text (3 varianti)
 
-- A: Solo una decisione da prendere, in tutta onestà.
-- B: Dopo di questa, ti tolgo dalla lista.
-- C: Un click per continuare, niente per uscire.
+- A: Un codice personale del 20%, valido 14 giorni.
+- B: L'ultima proposta che ti faccio, poi decidi tu.
+- C: Mai comprato da noi? Questo è il momento migliore.
 
 ### Corpo email
 
 Ciao [NOME]
 
-Sono Lorenzo di nuovo. Una settimana fa ti ho scritto per chiederti se volessi continuare a ricevere le nostre email. Non ho ricevuto risposta.
+Sono Lorenzo di nuovo. Una settimana fa ti ho chiesto se volessi continuare a ricevere le nostre email. Non ho ricevuto segnali, e va bene.
 
-Va bene così. Rispetto anche il silenzio.
+Prima di chiudere questo ciclo, però, voglio farti una proposta concreta.
 
-Ma prima di toglierti dalla lista automaticamente (cosa che farò tra qualche giorno), voglio darti un'ultima occasione onesta.
+In tutti questi mesi ti abbiamo mandato contenuti su salute e integrazione, ma non hai mai provato i nostri prodotti. Ci può stare: magari non era il momento, magari avevi dubbi, magari il prezzo ti sembrava alto per un prodotto che non conosci.
 
-Se vuoi continuare, ti basta cliccare qui:
+Se il freno era il prezzo, questo è il momento di provarci: ti lascio un codice personale del **20% di sconto** sul tuo primo ordine, su qualsiasi prodotto del catalogo.
 
-**[Voglio restare: riattiva la mia iscrizione](https://paleocomplex.com)**
+**Codice personale: {{ unique_coupon_code_sunset }}**
+**Validità**: 14 giorni, poi scade davvero.
 
-Se non fai niente, tra qualche giorno il nostro sistema smetterà di scriverti. Non riceverai più email da Paleocomplex, né newsletter né promo.
+**[Scegli il tuo primo prodotto](https://paleocomplex.com/negozio/)**
 
-Nessun risentimento da parte mia. Le liste devono restare pulite, e chi non è più interessato è giusto che non riceva contenuti che non legge.
+Se non sai da dove partire, la nostra **[guida alla scelta](https://paleocomplex.com/guida-scelta/)** ti orienta in base a età e obiettivi.
 
-Se un giorno vorrai tornare, ti basterà iscriverti di nuovo dal sito. Ti accoglieremo con la stessa serietà.
-
-Grazie del tempo.
+E se invece il tema non ti interessa più, nessun problema: te lo dico nella prossima email, l'ultima, come uscire in un click.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -146,29 +148,75 @@ Fondatore di Paleocomplex
 
 ---
 
-## AZIONE AUTOMATICA — Suppress + Tag
+## EMAIL 3 — Flaminia (+7gg dopo Email 2, ultima)
 
-**Timing:** +3 giorni dopo Email 2, se il profilo non ha né aperto né cliccato né riattivato
+**Mittente:** Flaminia (Customer Care)
+**Tipo:** Statica con reminder codice + link disiscrizione esplicito
 
-**Azione Klaviyo:**
-1. **Update Profile**: aggiungi tag `Unengaged - Sunset Lead 2026-06-XX` (con data del sunset)
-2. **Suppress Profile**: sopprimi da email marketing
+### Oggetto (3 varianti A/B)
 
-Questa azione è configurabile in Klaviyo via "Update Profile Property" step + "Suppress" action nel flow builder.
+- A: L'ultima email che ricevi da noi (decidi tu)
+- B: Il tuo codice del 20% sta per scadere
+- C: Restare o uscire: un click e scegli
 
-**Nota**: la suppression NON cancella il profilo. Se un giorno il cliente si iscrive di nuovo o compra, viene automaticamente riabilitato.
+### Preview text (3 varianti)
+
+- A: Nessun rancore, qualunque cosa scegli.
+- B: Ancora pochi giorni per usare il tuo 20%.
+- C: Dopo questa email, silenzio — a meno che tu non scelga di restare.
+
+### Corpo email
+
+Ciao [NOME]
+
+Sono Flaminia, mi occupo dei clienti di Paleocomplex. Chiudo io questo ciclo di email.
+
+Le cose stanno così: Lorenzo ti ha scritto due volte nelle ultime settimane. Se non c'è stato nessun segnale da parte tua, dopo questa email il nostro sistema smetterà di scriverti. Niente più newsletter, niente più aggiornamenti.
+
+Prima di salutarci, due cose veloci.
+
+**La prima**: il tuo codice personale del **20%** ({{ unique_coupon_code_sunset }}) è ancora valido per qualche giorno. Se hai anche solo una curiosità da provare, questo è il momento con le condizioni migliori che avrai mai.
+
+**[Vai al negozio](https://paleocomplex.com/negozio/)**
+
+**La seconda**: se invece preferisci semplicemente non ricevere più le nostre email, puoi **[disiscriverti qui](https://paleocomplex.com)** in un click, senza rancore. Oppure non fare niente: ci penserà il nostro sistema, con la stessa gentilezza.
+
+Se un giorno vorrai tornare, ti basterà iscriverti di nuovo dal sito.
+
+Grazie del tempo che ci hai dedicato.
+
+Flaminia
+Customer Care Paleocomplex
 
 ---
 
+## AZIONE AUTOMATICA — Suppress + Tag (solo zero-engagement)
+
+**Timing:** +3 giorni dopo Email 3
+
+**Conditional split PRIMA dell'azione:**
+```
+Opened email at least once since starting this flow
+OR Clicked email at least once since starting this flow?
+  ├── SÌ (segnale di interesse) → EXIT senza suppression. Il profilo resta in lista normale.
+  └── NO (zero engagement su 3 email) →
+        1. Update Profile: tag "Unengaged - Sunset Lead [DATA]"
+        2. Suppress Profile da email marketing
+```
+
+**Nota**: la suppression NON cancella il profilo. Se un giorno si iscrive di nuovo o compra, viene automaticamente riabilitato.
+
 ## Note operative
 
-### Nessun sconto in questo flow
+### Sconto 20% univoco — perché adesso sì (v2.0)
 
-Un lead che non ha mai comprato e non risponde da 180gg non è un cliente da recuperare con lo sconto. Se non ha convertito con 6 mesi di welcome + newsletter + autority flow, non lo farà con -10%. Meglio sopprimere e concentrarci sui contatti attivi.
+Decisione Andrea 2026-07-14. Il ragionamento è cambiato rispetto alla v1: questo lead ha già ignorato BENVENUTO e PRIMOPASSO durante il nurturing, vero — ma sta USCENDO dalla lista. La baseline di conversione è ~zero, quindi qualunque ordine generato dal 20% è guadagno puro, e il margine lo consente. In più il click sul codice è il miglior test di interesse residuo: alimenta la logica engagement che decide chi sopprimere.
 
-### Perché Lorenzo mittente per entrambe
+**Setup codice**: coupon master `SUNSET20` in WooCommerce (20%, usage limit 1+1), collegato a Klaviyo Coupons con prefix `SL20-`. Klaviyo genera il codice univoco per profilo con validità 14gg. Stessa procedura documentata nel Flow 73.
 
-Su un tema "delicato" come "ti sto togliendo dalla lista", la voce del fondatore è più credibile e onesta di un "team". Lorenzo che dice "va bene, rispetto" ha peso. Team Paleocomplex che dice lo stesso suona come automation cinico.
+### Mittenti: Lorenzo apre e propone, Flaminia chiude
+
+Su un tema "delicato" come "ti sto togliendo dalla lista", la voce del fondatore è più credibile e onesta (Email 1 e 2, inclusa la proposta del 20%). La chiusura operativa (reminder codice + disiscrizione esplicita) passa a Flaminia: è customer care puro, e il cambio di voce segnala al lettore che il ciclo si sta davvero chiudendo.
 
 ### Impatto atteso
 
@@ -186,27 +234,28 @@ Su un database tipico di ecommerce, il segmento Sunset Lead raccoglie 10-25% deg
 [Segmento Sunset Lead → Trigger su ingresso]
     │
     ▼ immediate
-Email 1 Lorenzo (mi senti ancora?)
+Email 1 Lorenzo (mi senti ancora? — no sconto)
     │
     ▼ wait 7 days
-[Filter: Opened or Clicked in last 7 days? YES → EXIT, NO → continua]
-    │
+[Filter: Placed Order zero times since starting flow]
     ▼
-Email 2 Lorenzo (ultima nota)
+Email 2 Lorenzo (ultima occasione + 20% univoco SL20-xxx)
+    │
+    ▼ wait 7 days
+[Filter: Placed Order zero times since starting flow]
+    ▼
+Email 3 Flaminia (reminder codice + resta/disiscriviti)
     │
     ▼ wait 3 days
-[Filter: Opened or Clicked in last 3 days? YES → EXIT]
-    │
-    ▼
-Update Profile Property: tag "Unengaged - Sunset Lead [DATA]"
-    │
-    ▼
-Suppress Profile (from broadcast + flow)
+[Conditional split: Opened OR Clicked at least once in this flow?]
+    ├── SÌ → EXIT (resta in lista)
+    └── NO → Tag "Unengaged" + Suppress
 ```
 
 ### Status
 Bozza v1.0 — pronto per montaggio Klaviyo. Da attivare con calma monitorando l'impatto.
 
 ### Changelog
+- **v2.0 (2026-07-14)**: lo sconto entra nel Sunset Lead (decisione Andrea). Struttura da 2 a 3 email: E1 conferma interesse (invariata), E2 Lorenzo con **20% univoco** ("se il freno era il prezzo"), E3 Flaminia con reminder codice + scelta esplicita resta/disiscriviti. Suppression SOLO per chi ha zero aperture e zero click su tutte e 3 le email (il click sul codice è il test di interesse). Codice univoco Klaviyo con prefix SL20-, master WooCommerce SUNSET20.
 - **v1.1 (2026-06-18)**: fix da verifica content-verifier. Anglicismi rimossi (topic, "È OK"), grammatica preview ("Ci sei un motivo"), gender-neutral (oggetto "Ancora interessato?", "sei iscritto", "Se resti interessato"), preview "Nessuna manipolazione" sostituito con formulazione positiva.
 - v1.0 (2026-06-18): prima stesura. Segmento comportamentale (iscritti mai-clienti + 180gg + no engagement 90gg). 2 email Lorenzo + suppress automatico. Nessuno sconto (lead che non ha convertito in 180gg non è recuperabile con sconto).

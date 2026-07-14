@@ -1,5 +1,5 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 3.0
+**Ultimo aggiornamento:** 2026-07-14
 
 # Flow 78: Cross-Sell Data-Driven (Catalog Insights)
 
@@ -54,7 +54,7 @@ Doppio ML: uno per il timing, uno per il contenuto.
 
 | # | Timing | Mittente | Tema |
 |---|--------|----------|------|
-| 1 | Immediate dal trigger (10:00 AM) | Lorenzo Zarone | "Un suggerimento data-driven per il tuo protocollo" con `Next Best Product` block |
+| 1 | Immediate dal trigger (10:00 AM) | Lorenzo Zarone | Suggerimento del prossimo prodotto con `Next Best Product` block + **10€ di sconto univoco** per la prova |
 
 **Rationale per 1 sola email**: se il cliente non risponde al momento ottimale calcolato dall'AI, insistere con follow-up secondari è controproducente. Il valore del data-driven cross-sell è "sparare al momento giusto", non "sparare tante volte".
 
@@ -119,7 +119,10 @@ Non è una promozione. È un'osservazione che viene dai dati di migliaia di ordi
 
 **Perché te lo suggerisco adesso**: perché è questo il momento in cui, tipicamente, i benefici della combinazione si consolidano meglio. Prima sarebbe stato prematuro, dopo sarebbe un'occasione persa.
 
-**Nota importante**: non è uno sconto e non è una promo a tempo. È solo un suggerimento basato su quello che vedo nei percorsi dei nostri clienti.
+E siccome provare un prodotto nuovo è sempre un piccolo salto, te lo rendo più semplice: ti lascio **10€ di sconto** per la prova. Il codice è personale e vale su qualsiasi prodotto del catalogo, non solo su quello che ti ho suggerito.
+
+**Codice personale: {{ unique_coupon_code_crosssell }}**
+**Validità**: 14 giorni.
 
 Se vuoi vedere il prodotto, approfondire, o rispondere a questa email per confrontarti su come integrarlo, **decidi tu**. Se non ti interessa, ignora pure: non insisterò con altre email su questo suggerimento.
 
@@ -130,6 +133,12 @@ Fondatore di Paleocomplex
 ---
 
 ## Note operative
+
+### Sconto 10€ per la prova (v3.0)
+
+Decisione Andrea 2026-07-14: il cross-sell include **10€ di sconto univoco** valido su tutto il catalogo. Razionale: qui lo sconto ha incrementalità vera — il cliente sta valutando un prodotto che NON ha mai comprato, e la barriera della prima prova è reale. Diverso dal caso Flow 72 (riordino dello stesso prodotto, che avverrebbe comunque). Il valore fisso in euro (invece del %) è più leggibile come "buono prova" e non svaluta il prezzo pieno del prodotto suggerito.
+
+**Setup codice**: coupon master `PROVA10E` in WooCommerce (10€ fissi, usage limit 1+1, nessuna restrizione di prodotto), collegato a Klaviyo Coupons con prefix `NP10-`. Klaviyo genera il codice per profilo, validità 14gg. Procedura come nel Flow 73.
 
 ### Prerequisiti tecnici
 
@@ -193,6 +202,7 @@ Fine flow (re-entry consentito dopo 180gg)
 Bozza v1.0 — richiede Marketing Analytics attivo per Catalog Insights. Da attivare in coda al Flow 72 (60-90gg dopo go-live) per dare tempo a Klaviyo di popolare `Best Cross-Sell Date` per la coorte clienti.
 
 ### Changelog
+- **v3.0 (2026-07-14)**: aggiunto **10€ di sconto univoco** per la prova del prodotto suggerito (decisione Andrea: "10€ per provare nuovi prodotti, vale su tutto"). Qui lo sconto ha incrementalità vera (prima prova di un prodotto mai acquistato), a differenza del reorder. Codice univoco Klaviyo prefix NP10-, master WooCommerce PROVA10E.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisione Andrea ("una cosa specifica su di te" assolutamente da togliere). Riscritta l'apertura dell'email: rimossi tutti i riferimenti a tool/AI/Klaviyo e alla segnalazione individuale → framing sul comportamento tipico dei clienti simili ("chi ha comprato quello che usi tu, a un certo punto aggiunge tipicamente..."). Rimossi anglicismi (data-driven, reminder). Promessa "non ti scriverò più" resa compatibile col re-entry 180gg. Ramo {% else %} del template trasformato in istruzione di setup esplicita (mai testo segnaposto al cliente).
 - **v1.1 (2026-06-18)**: il Flow 78 diventa l'UNICO punto di cross-sell automatico. Rimossa la vecchia email 2 cross-sell del Flow 22 (che ora è un semplice grazie). Sormonto 22/78 risolto alla radice. Fix em-dash nei corpi email (regola skill paleo-email).
 - v1.0 (2026-06-18): prima stesura. Trigger Best Cross-Sell Date (Catalog Insights). Content dinamico Next Best Product block. 1 email singola Lorenzo. ROI da valutare a fine trial 30gg per decidere upgrade piano Marketing Analytics permanente.

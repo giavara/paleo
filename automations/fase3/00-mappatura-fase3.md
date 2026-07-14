@@ -1,5 +1,5 @@
-**Versione:** 1.1
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 2.0
+**Ultimo aggiornamento:** 2026-07-14
 
 # Mappatura Fase 3 — Retention, Winback, Lifecycle
 
@@ -11,7 +11,7 @@ Documento di riferimento per l'architettura completa Fase 3 di Paleocomplex. Inc
 |---|------|-------------------------|-------------------|---------|----------|
 | **71** | First-Order Reorder | `Placed Order` + filter `Customer's Lifetime Number of Orders = 1` + conditional split famiglia SKU | ❌ NO — timing fisso per famiglia pack | Reorder primo cliente (rete di sicurezza pre-Predictive) | **ALTA** |
 | **72** | AI Repeat Purchase | Date property trigger: `Expected Date of Next Order` | ✅ **SÌ — Predictive Analytics** calcola ENO personalizzata per cliente | Reorder ricorrente al momento personalizzato | **ALTA** |
-| | └ Conditional Split | `Predicted CLV ≥ soglia (~200€)` | ✅ **SÌ — Predictive Analytics** calcola CLV atteso 365gg | Above/Below split per modulare copy e sconto | |
+| | └ Conditional Split | `Predicted CLV ≥ soglia (~200€)` | ✅ **SÌ — Predictive Analytics** calcola CLV atteso 365gg | Above/Below split per modulare il copy (nessuno sconto in questo flow) | |
 | **73** | RFM Winback | Ingresso segmento `Current RFM group ∈ [At Risk, Needs Attention]` | ✅ **SÌ — RFM Automation** classifica i clienti in 6 gruppi ogni notte | Riattivazione clienti a rischio churn | **MEDIA** |
 | | └ Conditional Split | `Historic CLV > 300€` | ❌ NO — dato storico | Distinguere top spender persi da clienti medi | |
 | **74** | Sunset Lead | Ingresso segmento comportamentale (`Subscribed > 180gg` + `Placed Order = 0` + `Last Open > 90gg` + `Last Click > 90gg`) | ❌ NO — segmento comportamentale semplice | Igiene lista: sopprimere iscritti mai-clienti mai-attivi | BASSA |
@@ -26,6 +26,22 @@ Documento di riferimento per l'architettura completa Fase 3 di Paleocomplex. Inc
 **Legenda ML/Predictive:**
 - ✅ **SÌ**: Klaviyo calcola automaticamente il trigger/valore usando Machine Learning o Analytics avanzato
 - ❌ **NO**: trigger/valore comportamentale o event-based, impostabile senza AI
+
+## Strategia sconti del ciclo retention (decisa 2026-07-14)
+
+Principio: **lo sconto cresce con la distanza del cliente, mai con la vicinanza**. Si sconta dove c'è incrementalità vera (cliente che non comprerebbe senza), mai dove l'acquisto avverrebbe comunque.
+
+| Flow | Momento cliente | Sconto | Codice | Tipo |
+|------|-----------------|--------|--------|------|
+| 71 First-Order Reorder | Primo riacquisto in finestra naturale | **0%** | — | Mai educare il nuovo cliente allo sconto |
+| 72 AI Repeat Purchase | Riordino alla data prevista (picco propensione) | **0%** al lancio | — | Opzione test 10€ dopo 60-90gg di dati se conversion Below debole |
+| 73 RFM Winback Standard | At Risk, HCLV ≤300€ | **10%** | univoco `RP10-xxx` (14gg) | Primo sconto del ciclo: c'è segnale reale di allontanamento |
+| 73 RFM Winback High | At Risk, HCLV >300€ | **15%** solo Email 3 | univoco `WB15-xxx` (14gg) | Prima brand reintroduction, sconto come ultima leva |
+| 74 Sunset Lead | Mai cliente, in uscita dalla lista | **20%** Email 2+3 | univoco `SL20-xxx` (14gg) | Baseline ~zero: ogni conversione è guadagno puro. Il click fa anche da test interesse |
+| 75 Sunset Cliente Storico | Ex cliente dormiente 180gg | **20%** open-ended | statico `BENTORNATO20` (1 uso/cliente) | Carta finale senza pressione temporale |
+| 78 Cross-Sell Data-Driven | Cliente attivo, prova prodotto NUOVO | **10€ fissi** | univoco `NP10-xxx` (14gg) | Incrementalità vera: barriera della prima prova. Vale su tutto il catalogo |
+
+**Codici univoci Klaviyo per WooCommerce**: supporto nativo confermato (help.klaviyo.com/hc/en-us/articles/22168739689627). Coupon master in WooCommerce (usage limit 1+1) + collegamento in Klaviyo Content → Coupons → WooCommerce tab con prefix. Klaviyo genera e assegna i codici per profilo con scadenza relativa alla ricezione. L'unico statico che resta è BENTORNATO20 (open-ended by design, limite 1 uso/cliente in WooCommerce).
 
 ## Cosa Klaviyo calcola in automatico vs cosa impostiamo noi
 
@@ -235,5 +251,6 @@ Metriche da guardare a fine trial per decidere se sottoscrivere il piano permane
 4. **RFM shift**: quanti clienti At Risk sono tornati Loyal grazie al Flow 73
 
 ## Changelog
+- **v2.0 (2026-07-14)**: aggiunta la sezione "Strategia sconti del ciclo retention" (decisioni Andrea): 72 no-sconto al lancio con opzione 10€ post-dati, 73 primo punto sconto (10%/15% univoci), 74 sunset lead con 20% univoco (E2+E3) e suppression solo zero-engagement, 75 BENTORNATO20 confermato, 78 con 10€ fissi per la prova prodotto. Tutti i codici univoci Klaviyo (WooCommerce nativo) tranne BENTORNATO20.
 - **v1.1 (2026-06-18)**: Flow 78 dichiarato UNICO punto di cross-sell del sistema. Rimossa la vecchia email 2 cross-sell del Flow 22 Cliente Ricorrente (ora semplice grazie, v2.0). Sormonto 22/78 eliminato alla radice.
 - v1.0 (2026-06-18): prima stesura completa. Include tabella architetturale, sequenza logica cliente, 4 sormonti analizzati, filtri di esclusione, definizione segmenti da creare in Klaviyo, requisiti operativi, KPI trial.

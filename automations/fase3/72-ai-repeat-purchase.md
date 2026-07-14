@@ -1,5 +1,5 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 3.0
+**Ultimo aggiornamento:** 2026-07-14
 
 # Flow 72: AI Repeat Purchase Flow (Predictive-powered)
 
@@ -42,8 +42,8 @@ Subito dopo il trigger, lo split valuta `Predictive analytics about someone > Pr
 
 | Ramo | Condizione | Cliente | Numero email | Sconto |
 |------|------------|---------|--------------|--------|
-| **YES — Above CLV** | Predicted CLV ≥ soglia (~200€) | Top spender / loyal | **2 email** | NO (community-building) |
-| **NO — Below CLV** | Predicted CLV < soglia | Cliente da coltivare | **3 email** | SÌ (10% → 15%) |
+| **YES — Above CLV** | Predicted CLV ≥ soglia (~200€) | Top spender / loyal | **2 email** | NO |
+| **NO — Below CLV** | Predicted CLV < soglia | Cliente da coltivare | **2 email** | **NO** (decisione Andrea 2026-07-14, vedi nota sconti) |
 
 ### Razionale dei due rami
 
@@ -53,7 +53,9 @@ Subito dopo il trigger, lo split valuta `Predictive analytics about someone > Pr
 - Richiesta testimonial pubblico (riconoscimento)
 - Dialogo personale con Lorenzo (rispondi a questa email)
 
-**Below CLV (Cliente da Coltivare)**: ha potenziale ma non è ancora top. L'incentivo monetario è giustificato per spingerlo verso lo step successivo. 10% sull'email 1, escalation a 15% sull'email 3 finale.
+**Below CLV (Cliente da Coltivare)**: ha potenziale ma non è ancora top. Riceve reminder + social proof, SENZA sconto. Razionale (decisione Andrea 2026-07-14): il trigger ENO scatta quando il cliente sta già statisticamente per riordinare — scontare qui brucia margine su ordini che arriverebbero comunque ed educa il cliente ad aspettare lo sconto a ogni ciclo. Il primo sconto del sistema arriva nel Flow 73, quando c'è un SEGNALE reale di allontanamento (RFM At Risk).
+
+**Opzione futura**: dopo 60-90gg di performance del flow, se il conversion rate del ramo Below è debole, si può testare un incentivo fisso di 10€ (margini lo permettono, lo sconto è la leva che storicamente funziona). Da valutare sui dati, non a priori.
 
 ## Mittenti per ramo
 
@@ -62,12 +64,11 @@ Subito dopo il trigger, lo split valuta `Predictive analytics about someone > Pr
 | Above CLV | Email 1 (immediate) | Lorenzo Zarone |
 | Above CLV | Email 2 (+7gg) | Lorenzo Zarone |
 | Below CLV | Email 1 (immediate) | Flaminia (Customer Care) |
-| Below CLV | Email 2 (+7gg) | Flaminia (Customer Care) |
-| Below CLV | Email 3 (+10gg, ultima) | Lorenzo Zarone |
+| Below CLV | Email 2 (+7gg, ultima) | Flaminia (Customer Care) |
 
 **Pattern**:
 - Above CLV: Lorenzo coerente per tutto il ramo (autorità, riconoscimento, voice del fondatore al cliente top)
-- Below CLV: Flaminia per le prime due (warmer, customer care attento), Lorenzo nell'ultima (autorità che chiude il loop con sconto più alto, ultimo push)
+- Below CLV: Flaminia per entrambe (warmer, customer care attento). Il push con eventuale incentivo, se il cliente non risponde, è compito del Flow 73
 
 ## Coordinamento con altri flow
 
@@ -82,7 +83,7 @@ Trigger Flow 72 alla data ENO
     │
     ├── Above CLV (no sconto) — 2 email distribuite in 7gg
     │
-    └── Below CLV (sconto) — 3 email distribuite in 17gg
+    └── Below CLV (no sconto) — 2 email distribuite in 7gg
 
 Filtri di esclusione:
 - Se cliente ricompra: esce subito dal flow (filter Placed Order zero times)
@@ -188,7 +189,7 @@ Fondatore di Paleocomplex
 
 ## RAMO BELOW CLV — Cliente da Coltivare (predicted CLV < soglia)
 
-### Email 1 — Flaminia (immediate dal trigger) — Reorder reminder + sconto soft
+### Email 1 — Flaminia (immediate dal trigger) — Reorder reminder
 
 **Mittente:** Flaminia (Customer Care)
 **Tipo:** Statica
@@ -202,8 +203,8 @@ Fondatore di Paleocomplex
 #### Preview text (3 varianti)
 
 - A: Il momento giusto per continuare il percorso.
-- B: Sappiamo che vuoi continuare, ti facciamo un regalo.
-- C: 10% di sconto se vuoi continuare adesso.
+- B: Per non interrompere il percorso che sta funzionando.
+- C: Due minuti per riordinare senza interruzione.
 
 #### Corpo email
 
@@ -215,11 +216,11 @@ So che con noi hai fatto già più di un ordine: significa che il percorso sta f
 
 Però lo so anche un'altra cosa: a volte tra un ordine e l'altro passa qualche giorno di troppo, e quei pochi giorni di interruzione sono uno spreco rispetto al lavoro che stai facendo.
 
-Per non lasciarti questo dubbio, ti faccio un piccolo regalo. Se vuoi riordinare adesso senza interruzione, usa il codice **CONTINUA10K7** per avere il **10% di sconto** sul tuo prossimo ordine.
-
-Valido per 14 giorni. Spedizione veloce come sempre.
+Per non lasciarti questo dubbio, ti scrivo adesso: se vuoi riordinare senza interruzione, bastano due minuti.
 
 **[Riordina sul nostro sito](https://paleocomplex.com)**
+
+Spedizione veloce come sempre, 24-48h lavorative con corriere espresso.
 
 Se hai dubbi sul prodotto, su un eventuale cambio o vuoi parlarne, **rispondi pure a questa email**. Leggo io.
 
@@ -244,7 +245,7 @@ Customer Care Paleocomplex
 
 - A: Tre storie di clienti che hanno tenuto duro.
 - B: La differenza tra il 1° mese e il 4°.
-- C: Il codice CONTINUA10K7 è ancora valido.
+- C: Cosa dicono i clienti che non hanno mollato.
 
 #### Corpo email
 
@@ -265,56 +266,13 @@ Negli ultimi mesi ho letto centinaia di recensioni dei nostri clienti. Tre stori
 
 Il messaggio comune: i risultati arrivano a chi non interrompe. E chi ha provato a sospendere, come Ornella, ha sentito la differenza.
 
-Il codice **CONTINUA10K7** (10% di sconto) è ancora valido per qualche giorno, se vuoi continuare adesso.
-
 **[Riordina sul nostro sito](https://paleocomplex.com)**
+
+Se invece hai deciso che il prodotto non fa per te, va bene lo stesso: **rispondi a questa email** e dimmi cosa non ha funzionato. Ci aiuta a migliorare, e a te non arriveranno altri promemoria su questo riordino.
 
 A presto
 Flaminia
 Customer Care Paleocomplex
-
----
-
-### Email 3 — Lorenzo (+10gg dopo Email 2, = T+17 dal trigger) — Ultima chance, sconto più alto
-
-**Mittente:** Lorenzo Zarone
-**Tipo:** Statica
-
-#### Oggetto (3 varianti A/B)
-
-- A: L'ultima cosa che ti chiedo su questo
-- B: Per riprendere il tuo percorso, il mio ultimo aiuto
-- C: Una decisione, e poi ti lascio in pace
-
-#### Preview text (3 varianti)
-
-- A: 15% di sconto con un codice personale. Poi mi fermo.
-- B: Te lo dico io: continua, o decidi di smettere. Non c'è terzo.
-- C: Il momento di chiudere questo loop.
-
-#### Corpo email
-
-Ciao [NOME]
-
-Sono Lorenzo. Te lo dico onestamente: è passato più o meno il tempo in cui di solito si arriva al riordino, e il tuo non è arrivato. Flaminia ti ha scritto due volte nelle ultime settimane. Nessun riordino ancora.
-
-Ho due ipotesi.
-
-**La prima**: hai deciso che non fa per te. Va bene anche questo, nessun problema. Se è questo il caso, **rispondi pure a questa email** e dimmelo. Mi farebbe piacere sapere che cosa non ha funzionato: il prodotto, il prezzo, il timing, il sapore, qualsiasi cosa. Vorrei migliorare il servizio per chi viene dopo di te.
-
-**La seconda**: vuoi continuare ma stai aspettando il momento giusto, o un piccolo aiuto economico.
-
-Se sei nel secondo caso, ti do un ultimo aiuto. Codice **{{ unique_coupon_code }}** che ti dà il **15% di sconto** sul tuo prossimo ordine. È un codice personale, generato per te: vale 14 giorni dalla ricezione di questa email, poi scade.
-
-**[Riordina con il tuo codice](https://paleocomplex.com)**
-
-Dopo questa email, per le prossime settimane non riceverai altri promemoria di riordino da parte mia. Tornerai nella nostra newsletter: contenuti su salute e integrazione, e ogni tanto le nostre novità.
-
-Spero di rivederti.
-
-Un forte abbraccio
-Lorenzo Zarone
-Fondatore di Paleocomplex
 
 ---
 
@@ -332,11 +290,11 @@ Una volta che Klaviyo ha 60-90gg di dati post go-live:
 
 Per partire (e per inserire una soglia temporanea): **200€**. Da ricalibrare con dati reali quando disponibili.
 
-### Codice univoco — perché
+### Niente codici sconto in questo flow (v3.0)
 
-Klaviyo permette di generare codici univoci (uno per profilo), con validità limitata nel tempo. Va configurato nell'app coupon di WooCommerce e collegato a Klaviyo via integrazione standard. **Importante**: codice univoco impedisce che venga condiviso pubblicamente (es. screenshot su forum). Nel Flow 72 Email 3 Below CLV uso `{{ unique_coupon_code }}` come placeholder per il codice generato.
+Decisione Andrea 2026-07-14: il Flow 72 parte SENZA sconti su entrambi i rami. Il trigger ENO coincide col momento di massima propensione naturale al riacquisto: lo sconto qui ha incrementalità quasi nulla e insegna ad aspettare. Il primo sconto del ciclo retention vive nel Flow 73 (At Risk).
 
-Per Email 1 Below CLV uso `CONTINUA10K7` (10%): codice statico ma con nome alfanumerico che comunica temporaneità (decisione Andrea 2026-06-18). Validità dichiarata 14 giorni — configurare in WooCommerce con scadenza assoluta rinnovata periodicamente, oppure limite 1 uso per cliente. La sequenza è coerente: Email 1 (T+0, codice 14gg) → Email 2 (T+7, codice ancora valido per 7gg) → Email 3 (T+17, il CONTINUA10K7 è scaduto, arriva il codice personale 15%).
+**Opzione post-lancio**: dopo 60-90gg di dati, se il conversion rate Below CLV è debole, testare un incentivo fisso di **10€** (A/B sul ramo). I margini lo permettono e lo sconto è la leva storicamente più efficace del brand — ma va usata dove c'è incrementalità vera, quindi solo dopo aver visto la baseline senza sconto.
 
 ### Dynamic content prodotto
 
@@ -354,7 +312,7 @@ Klaviyo Academy esplicita: senza `frequency = never` il flow rispedirebbe ogni v
 
 ### Filtro reciproco con Flow 73
 
-Quando configureremo il Flow 73 (At Risk Winback), il suo trigger filter includerà `NOT currently in Flow 72`. Così evitiamo che cliente che ha appena ricevuto la Email 3 Below CLV Lorenzo (con 15% codice) riceva anche subito una Email 1 Flow 73 con altro sconto. Sequenza: Flow 72 → eventualmente Flow 73 dopo che il 72 è terminato (entrata in At Risk segment richiede tempo).
+Il Flow 73 (At Risk Winback) ha trigger filter `NOT currently in Flow 72` + gap 30gg dall'ultima email del 72. Sequenza pulita: il 72 fa il reminder senza sconto; se il cliente non risponde e scivola in At Risk, il 73 porta il PRIMO sconto del ciclo (10% o 15% per HCLV). Escalation coerente e crescente.
 
 ### Schema flow Klaviyo
 
@@ -379,13 +337,10 @@ Quando configureremo il Flow 73 (At Risk Winback), il suo trigger filter include
     │
     └── NO (Below CLV)
           ▼ immediate
-          Email 1 Flaminia (reorder + CONTINUA10K7 10%)
+          Email 1 Flaminia (reminder riordino, no sconto)
           ▼ wait 7 days [filter]
           ▼
-          Email 2 Flaminia (social proof + reminder codice)
-          ▼ wait 10 days [filter]
-          ▼
-          Email 3 Lorenzo (ultima chance + {{ unique_coupon_code }} 15%)
+          Email 2 Flaminia (social proof recensioni reali + chiusura onesta)
 ```
 
 ### Quando attivare il Flow 72
@@ -402,6 +357,7 @@ Tu hai già tutti questi prerequisiti come dati totali, ma Klaviyo deve avere vi
 Bozza v1.0 — pronto per montaggio Klaviyo, ma DA ATTIVARE solo dopo 60-90gg post-migrazione.
 
 ### Changelog
+- **v3.0 (2026-07-14)**: rimossi TUTTI gli sconti dal flow (decisione Andrea). Ramo Below CLV ridotto da 3 a 2 email (rimossa la Email 3 Lorenzo "ultima chance 15%": il ruolo di ultimo push con incentivo passa interamente al Flow 73). Razionale: il trigger ENO coincide col picco naturale di propensione — scontare lì brucia margine senza incrementalità e educa al ritardo. Opzione documentata: test 10€ sul ramo Below dopo 60-90gg di dati. La Email 2 Below chiude ora con invito onesto al feedback.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) **Le 3 testimonianze inventate della Email 2 Below sono state sostituite con recensioni REALI dal CSV** (Ornella B. su sospensione/ripresa, Alessia D. su terza confezione, Paola L. su costanza) e rimossa la nota interna "(dal CSV recensioni)". (2) Codice CONTINUA10 → **CONTINUA10K7**, validità 14gg (matematica sequenza ora coerente: E2 a +7gg trova codice ancora valido, E3 a +17gg lo trova scaduto e porta il 15% personale). (3) Rimossa la frase falsa "niente promo periodiche, niente codici riutilizzabili" → "è un codice personale". (4) Promessa di silenzio resa veritiera ("per le prossime settimane... da parte mia"). (5) Rimossi i riferimenti creepy a Klaviyo/predizione data ordine. (6) Fix persona Flaminia ("Ti ho fatto scrivere" → "Flaminia ti ha scritto"). (7) Claim Renaissance prudente ("puoi notare"). (8) Early access ammorbidito ("sarai tra le prime persone a saperlo"). (9) Gender-neutral.
 - v1.0 (2026-06-18): prima stesura. Architettura template Klaviyo Academy: trigger Expected Date of Next Order + conditional split Predicted CLV. Above CLV: 2 email Lorenzo, no sconto, focus riconoscimento/community. Below CLV: 3 email Flaminia+Lorenzo, escalation sconto 10%→15%. Coordinamento con Flow 71 (esclusione 365gg) e Flow 73 (esclusione reciproca).
 - v1.0 (2026-06-18): prima stesura. Architettura template Klaviyo Academy: trigger Expected Date of Next Order + conditional split Predicted CLV. Above CLV: 2 email Lorenzo, no sconto, focus riconoscimento/community. Below CLV: 3 email Flaminia+Lorenzo, escalation sconto 10%→15%. Coordinamento con Flow 71 (esclusione 365gg) e Flow 73 (esclusione reciproca).

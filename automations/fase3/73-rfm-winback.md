@@ -1,5 +1,5 @@
-**Versione:** 2.0
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 3.0
+**Ultimo aggiornamento:** 2026-07-14
 
 # Flow 73: RFM Winback
 
@@ -54,7 +54,7 @@ Subito dopo l'ingresso nel flow, valutare `Historic CLV`:
 | Ramo | Condizione | Cliente | Email | Sconto |
 |------|------------|---------|-------|--------|
 | **HIGH** | Historic CLV > 300€ | Top spender persi (valgono molto) | **3 email** | Sconto graduale (15% finale) |
-| **STANDARD** | Historic CLV ≤ 300€ | Clienti medi persi | **2 email** | Sconto standard (10%) |
+| **STANDARD** | Historic CLV ≤ 300€ | Clienti medi persi | **2 email** | Sconto 10% (codice univoco) |
 
 ### Razionale dei rami
 
@@ -242,8 +242,8 @@ Se vuoi rispondermi con una riga sola, sarei felice di leggerla. Aiuta noi a cap
 
 Nel frattempo, se sei nella posizione di voler riprendere il percorso, ti lascio un piccolo aiuto:
 
-**Codice: RIPRENDI10X9** (10% di sconto sul tuo prossimo ordine)
-**Validità**: 14 giorni
+**Codice personale: {{ unique_coupon_code_riprendi }}** (10% di sconto sul tuo prossimo ordine)
+**Validità**: 14 giorni dalla ricezione di questa email
 
 **[Riprendi il percorso](https://paleocomplex.com/negozio/)**
 
@@ -282,7 +282,7 @@ Ti dico onestamente cosa succede da qui in poi.
 
 Se non riordini o non rispondi, per un lungo periodo non riceverai promemoria di riacquisto. Continuerai a ricevere la nostra newsletter (contenuti su salute, alimentazione e integrazione, e ogni tanto le nostre offerte), che puoi disattivare quando vuoi.
 
-Il codice **RIPRENDI10X9** (10% di sconto) è ancora attivo per qualche giorno, se vuoi tornare.
+Il tuo codice personale del 10% è ancora attivo per qualche giorno, se vuoi tornare.
 
 Voglio dirti una cosa da fondatore: la costanza è quello che ho sempre predicato ai nostri clienti. Non ti sto chiedendo di riordinare per farmi un favore. Ti sto chiedendo di riflettere se il tuo percorso di salute vale il piccolo sforzo di riprendere in mano l'integrazione. Se sì, siamo qui. Se no, va bene lo stesso: l'integrazione non è per tutti.
 
@@ -300,8 +300,19 @@ Fondatore di Paleocomplex
 
 ### Codici sconto
 
-- **RIPRENDI10X9** (10%, statico con nome alfanumerico che comunica temporaneità, validità dichiarata 14gg): Email 1 Standard. Configurare in WooCommerce con scadenza assoluta rinnovata o limite 1 uso per cliente.
-- **{{ unique_coupon_code }}** (15%, univoco per profilo, valido 14gg): Email 3 High CLV
+**Entrambi i rami usano codici UNIVOCI generati da Klaviyo** (decisione Andrea 2026-07-14 — supporto WooCommerce nativo confermato):
+
+- **{{ unique_coupon_code_riprendi }}** (10%, univoco, 14gg): Email 1 Standard
+- **{{ unique_coupon_code }}** (15%, univoco, 14gg): Email 3 High CLV
+
+**Setup Klaviyo unique coupons per WooCommerce** (guida: help.klaviyo.com/hc/en-us/articles/22168739689627):
+1. In WooCommerce: Marketing → Coupons → crea 2 coupon "master": `RIPRENDI10` (10%) e `WINBACK15` (15%), entrambi con **Usage limit: 1 per coupon + 1 per user** e scadenza relativa gestita da Klaviyo
+2. In Klaviyo: Content → Coupons → tab WooCommerce Coupons → Create WooCommerce Coupon → collega i master
+3. Imposta un **prefix** riconoscibile (es. `RP10-` e `WB15-`): Klaviyo genera codici tipo `RP10-H3SHFR7KGS`, uno per profilo
+4. Imposta il batch minimo di codici da tenere pronti (Klaviyo li rigenera in automatico)
+5. Nelle email, inserisci il tag coupon dal template editor (blocco Coupon) — il codice si compila per profilo
+
+Vantaggi: scadenza reale per-destinatario (14gg dalla ricezione), zero condivisione sui forum, zero manutenzione manuale.
 
 Configurare codici univoci in WooCommerce app coupon (Yith Coupon Email o simile) collegati a Klaviyo via integrazione standard.
 
@@ -370,6 +381,7 @@ Filtro extra su Flow 75: `NOT received Flow 73 last email in last 60 days`. Cos�
 Bozza v1.0 — pronto per montaggio Klaviyo. Richiede Marketing Analytics attivo per RFM.
 
 ### Changelog
+- **v3.0 (2026-07-14)**: codici sconto UNIVOCI Klaviyo su entrambi i rami (RIPRENDI10X9 statico eliminato). Supporto WooCommerce nativo verificato; setup documentato nelle note operative. Il Flow 73 è ora il PRIMO punto sconto dell'intero ciclo retention (il 72 è diventato no-sconto): scala 10% Standard / 15% High CLV coerente e crescente.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) Reso: il copy non promette più "senza spese" (le spese di reso sono a carico del cliente) → "reso facile... organizziamo tutto". (2) Codice RIPRENDI10 → **RIPRENDI10X9** (alfanumerico, validità 14gg). (3) Promesse di silenzio rese veritiere ("per i prossimi mesi..."), tolto "(davvero)" dall'oggetto. (4) Anglicismi rimossi (pitch, automation). (5) Fix sintassi ("Bastano un'email"). (6) "Ti scriverò altre due email" → "riceverai da noi" (la terza è di Flaminia). (7) Pipeline resa vaga ("nuove formule"). (8) "Leggo io" → "la leggiamo io e il mio team". (9) Newsletter descritta onestamente (include offerte).
 - v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
 - v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% RIPRENDI10 + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
