@@ -189,13 +189,13 @@ Ciao [NOME]
 
 Sono Flaminia. Lorenzo ti ha scritto due volte nelle ultime settimane. Prendo io il testimone per l'ultima email di questo ciclo.
 
-Se sei arrivato fin qui e ancora non hai riordinato, ho un'ipotesi: forse hai valutato ma il prezzo pieno ti frena. Capita a molti clienti storici, non c'è nulla di male ad ammetterlo.
+Se dopo queste settimane non hai ancora riordinato, ho un'ipotesi: forse hai valutato ma il prezzo pieno ti frena. Capita a molti clienti storici, non c'è nulla di male ad ammetterlo.
 
 Ti do un ultimo aiuto concreto:
 
 **Codice personale per te**: **{{ unique_coupon_code }}**
 **Sconto**: 15% sul tuo prossimo ordine
-**Validità**: 14 giorni — scade a mezzanotte del 14° giorno
+**Validità**: 14 giorni. Scade a mezzanotte del 14° giorno.
 **Bonus**: reso facile se il prodotto non ti convince. Basta un'email e organizziamo tutto.
 
 Non ci sono trucchi. Se vuoi riprendere, questo è il momento.
@@ -234,7 +234,7 @@ Customer Care Paleocomplex
 
 Ciao [NOME]
 
-Sono Flaminia di Paleocomplex. Ti scrivo perché ho notato che è passato del tempo dall'ultima volta che sei stato con noi.
+Sono Flaminia di Paleocomplex. Ti scrivo perché ho notato che è passato del tempo dal tuo ultimo ordine con noi.
 
 Non ti sto inseguendo. Ti scrivo perché voglio farti una domanda semplice: **come va?** Hai continuato l'integrazione con qualcos'altro, hai fatto una pausa, hai cambiato prodotto?
 
@@ -243,7 +243,7 @@ Se vuoi rispondermi con una riga sola, sarei felice di leggerla. Aiuta noi a cap
 Nel frattempo, se sei nella posizione di voler riprendere il percorso, ti lascio un piccolo aiuto:
 
 **Codice personale: {{ unique_coupon_code_riprendi }}** (10% di sconto sul tuo prossimo ordine)
-**Validità**: 14 giorni — scade a mezzanotte del 14° giorno, poi non funziona più
+**Validità**: 14 giorni. Scade a mezzanotte del 14° giorno, poi non funziona più
 
 **[Riprendi il percorso](https://paleocomplex.com/negozio/)**
 

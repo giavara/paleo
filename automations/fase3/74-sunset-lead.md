@@ -134,7 +134,7 @@ In tutti questi mesi ti abbiamo mandato contenuti su salute e integrazione, ma n
 Se il freno era il prezzo, questo è il momento di provarci: ti lascio un codice personale del **20% di sconto** sul tuo primo ordine, su qualsiasi prodotto del catalogo.
 
 **Codice personale: {{ unique_coupon_code_sunset }}**
-**Validità**: 14 giorni — scade a mezzanotte del 14° giorno, e non torna.
+**Validità**: 14 giorni. Scade a mezzanotte del 14° giorno, e non torna.
 
 **[Scegli il tuo primo prodotto](https://paleocomplex.com/negozio/)**
 
@@ -163,7 +163,7 @@ Fondatore di Paleocomplex
 
 - A: Nessun rancore, qualunque cosa scegli.
 - B: Il tuo 20% scade tra una settimana.
-- C: Dopo questa email, silenzio — a meno che tu non scelga di restare.
+- C: Dopo questa email, silenzio. A meno che tu non scelga di restare.
 
 ### Corpo email
 
