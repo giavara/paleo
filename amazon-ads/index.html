@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!--
+  Brief banner Amazon DSP per Fabiana
+  Versione: 1.1 (2026-07-14)
+  Changelog:
+  v1.0 - Brief iniziale: progetto, sistema visivo, copy Fase 1, tabella 19 formati, packshot, naming, checklist
+  v1.1 - Angolo Paleocomplex cambiato da "Non il solito" a "Etichetta" (nuovo copy approvato), fase 2 corretta a 5 formati, label fasi senza trattini lunghi, evidenziazione tabella su palette brand
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paleocomplex - Brief banner Amazon DSP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1A1A;
+    --paper:#FAFAF7;
+    --paper-dim:#F2EEE4;
+    --bronzo:#8B6F47;
+    --bronzo-chiaro:#B08D5B;
+    --linea:#EDE5D3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:48px 28px 80px;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.15;}
+  h1{font-size:44px;margin:8px 0 4px;}
+  h1 em{font-style:italic;color:var(--bronzo);}
+  h2{font-size:30px;margin:0 0 18px;}
+  h3{font-size:21px;margin:26px 0 10px;}
+  p{margin:0 0 14px;}
+  a{color:var(--bronzo);text-decoration:none;border-bottom:1px solid var(--linea);}
+  a:hover{border-bottom-color:var(--bronzo);}
+  .label{
+    font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.2em;color:var(--bronzo);
+    display:block;margin-bottom:6px;
+  }
+  .subtitle{font-size:16px;color:#555;max-width:640px;}
+  header.doc{border-bottom:2px solid var(--ink);padding-bottom:28px;margin-bottom:32px;}
+  .meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:20px;}
+  .meta div{font-size:13px;}
+  .meta .label{margin-bottom:2px;}
+  section{margin:0 0 56px;}
+  .secnum{
+    font-family:'Inter',sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:0.2em;color:var(--bronzo);display:block;margin-bottom:4px;
+  }
+  /* Sommario */
+  nav.toc{background:var(--paper-dim);border:1px solid var(--linea);padding:24px 28px;margin-bottom:56px;}
+  nav.toc ol{list-style:none;counter-reset:toc;columns:2;column-gap:36px;}
+  nav.toc li{counter-increment:toc;margin-bottom:8px;break-inside:avoid;font-size:14px;font-weight:500;}
+  nav.toc li::before{content:counter(toc,decimal-leading-zero);font-weight:700;color:var(--bronzo);margin-right:10px;font-size:12px;letter-spacing:0.1em;}
+  nav.toc a{border-bottom:none;color:var(--ink);}
+  nav.toc a:hover{color:var(--bronzo);}
+  /* Box */
+  .box{background:var(--paper-dim);border:1px solid var(--linea);padding:20px 24px;margin:18px 0;}
+  .box-alert{background:var(--ink);color:var(--paper);border:none;}
+  .box-alert .label{color:var(--bronzo-chiaro);}
+  .box-alert strong{color:var(--paper);}
+  .copybox{
+    background:#fff;border:2px dashed var(--bronzo);
+    padding:22px 26px;margin:18px 0;
+  }
+  .copybox .role{
+    font-size:10px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.2em;color:var(--bronzo);display:block;margin:14px 0 2px;
+  }
+  .copybox .role:first-child{margin-top:0;}
+  .copybox .txt{font-size:17px;font-weight:500;}
+  .copybox .txt.head{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;}
+  .copybox .txt.cta{display:inline-block;background:var(--ink);color:var(--paper);padding:6px 16px;border-radius:4px;font-size:13px;font-weight:600;margin-top:4px;}
+  /* Swatch */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin:18px 0;}
+  .swatch{border:1px solid var(--linea);}
+  .swatch .chip{height:64px;}
+  .swatch .info{padding:8px 10px;background:#fff;font-size:12px;line-height:1.4;}
+  .swatch .info strong{display:block;font-size:12px;}
+  .swatch .info code{font-family:'Inter',sans-serif;font-size:11px;color:#666;}
+  /* Font demo */
+  .fontdemo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .fontdemo .cell{background:#fff;border:1px solid var(--linea);padding:18px 20px;}
+  .fontdemo .cell .sample-serif{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;}
+  .fontdemo .cell .sample-serif em{color:var(--bronzo);}
+  .fontdemo .cell .sample-sans{font-family:'Inter',sans-serif;font-size:24px;font-weight:700;}
+  .fontdemo .cell .sample-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:var(--bronzo);}
+  .fontdemo .cell small{display:block;margin-top:8px;color:#666;font-size:12px;}
+  /* Tabelle */
+  .tablewrap{overflow-x:auto;margin:18px 0;}
+  table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;}
+  th,td{border:1px solid var(--linea);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--ink);color:var(--paper);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;}
+  tr.w50 td{background:#F2EEE4;}
+  tr.w50 td:first-child{border-left:3px solid var(--bronzo);}
+  td.dim{font-weight:700;white-space:nowrap;}
+  .pill{display:inline-block;background:var(--ink);color:var(--paper);border-radius:4px;padding:1px 8px;font-size:11px;font-weight:600;white-space:nowrap;}
+  .pill.bz{background:var(--bronzo);}
+  /* Liste */
+  ul.clean{list-style:none;margin:0 0 14px;}
+  ul.clean li{padding-left:22px;position:relative;margin-bottom:8px;}
+  ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:2px;background:var(--bronzo);}
+  ul.no{list-style:none;margin:0 0 14px;}
+  ul.no li{padding-left:26px;position:relative;margin-bottom:8px;}
+  ul.no li::before{content:"\00D7";position:absolute;left:0;top:0;font-weight:700;color:var(--bronzo);font-size:17px;line-height:1.4;}
+  /* Immagini */
+  .imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:18px 0;}
+  .imgcard{background:#fff;border:1px solid var(--linea);padding:14px;}
+  .imgcard img{width:100%;height:200px;object-fit:contain;display:block;background:var(--paper);}
+  .imgcard .cap{font-size:12px;margin-top:10px;line-height:1.5;}
+  .imgcard .cap strong{display:block;}
+  .imgcard .cap a{word-break:break-all;font-size:11px;}
+  /* Mockup esempio */
+  .mockrow{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin:18px 0;}
+  .mock{flex:0 0 auto;}
+  .mock .cap{font-size:11px;color:#666;margin-top:6px;text-align:center;}
+  .mock-300{width:300px;height:250px;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
+  .mock-300 .l{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--bronzo-chiaro);margin-bottom:8px;}
+  .mock-300 .h{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;line-height:1.25;margin-bottom:14px;}
+  .mock-300 .h em{color:var(--bronzo-chiaro);}
+  .mock-300 .c{background:var(--paper);color:var(--ink);border-radius:4px;padding:6px 14px;font-size:11px;font-weight:600;}
+  .mock-728{width:100%;max-width:728px;height:90px;background:var(--paper-dim);border:1px solid var(--linea);display:flex;align-items:center;justify-content:space-between;padding:0 26px;gap:18px;}
+  .mock-728 .h{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;line-height:1.2;}
+  .mock-728 .h em{color:var(--bronzo);}
+  .mock-728 .c{background:var(--ink);color:var(--paper);border-radius:4px;padding:7px 14px;font-size:11px;font-weight:600;white-space:nowrap;flex:0 0 auto;}
+  /* Checklist */
+  ul.check{list-style:none;margin:0 0 14px;}
+  ul.check li{padding-left:30px;position:relative;margin-bottom:10px;}
+  ul.check li::before{content:"";position:absolute;left:0;top:3px;width:15px;height:15px;border:2px solid var(--bronzo);background:#fff;}
+  footer.doc{border-top:2px solid var(--ink);padding-top:20px;font-size:12px;color:#666;}
+  code{background:var(--paper-dim);padding:1px 6px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
+  /* Stampa */
+  @media print{
+    body{font-size:12px;}
+    .wrap{max-width:none;padding:0;}
+    section{page-break-inside:auto;margin-bottom:32px;}
+    .copybox,.box,.swatch,.imgcard,table,.mockrow{page-break-inside:avoid;}
+    h2{page-break-after:avoid;}
+    nav.toc{page-break-after:always;}
+    a{color:var(--ink);border-bottom:none;}
+    .chip,.pill,.box-alert,th,.mock-300,.copybox .txt.cta,.mock-728 .c{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+  @media (max-width:640px){
+    nav.toc ol{columns:1;}
+    .fontdemo{grid-template-columns:1fr;}
+    h1{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="doc">
+  <span class="label">Paleocomplex &middot; Brief creativit&agrave;</span>
+  <h1>Banner display <em>Amazon DSP</em></h1>
+  <p class="subtitle">Documento operativo per la produzione dei banner statici. Qui dentro c&rsquo;&egrave; tutto: sistema visivo, copy definitivo, formati, immagini, naming. Non serve altro materiale.</p>
+  <div class="meta">
+    <div><span class="label">Per</span>Fabiana (designer)</div>
+    <div><span class="label">Da</span>Andrea Giavara</div>
+    <div><span class="label">Data brief</span>14 luglio 2026</div>
+    <div><span class="label">Consegna</span><strong>28 agosto 2026</strong></div>
+  </div>
+</header>
+
+<nav class="toc">
+  <span class="label">Sommario</span>
+  <ol>
+    <li><a href="#progetto">Il progetto</a></li>
+    <li><a href="#visivo">Sistema visivo</a></li>
+    <li><a href="#copy">Copy da usare</a></li>
+    <li><a href="#formati">Tabella formati Fase 1</a></li>
+    <li><a href="#immagini">Immagini prodotto</a></li>
+    <li><a href="#naming">Naming file e consegna</a></li>
+    <li><a href="#checklist">Checklist prima di consegnare</a></li>
+    <li><a href="#contatti">Contatti e tempi</a></li>
+  </ol>
+</nav>
+
+<!-- ============ 1. PROGETTO ============ -->
+<section id="progetto">
+  <span class="secnum">SEZIONE 01</span>
+  <h2>Il progetto</h2>
+  <p>Paleocomplex lancia campagne <strong>display su Amazon DSP</strong> che portano traffico a <strong>paleocomplex.com</strong> (non a pagine Amazon). Servono <strong>banner statici</strong> per due soggetti, ognuno con il suo angolo di comunicazione:</p>
+  <ul class="clean">
+    <li><strong>Youth</strong> (collagene) con l&rsquo;angolo <strong>&ldquo;Dosaggio&rdquo;</strong>: il confronto fattuale sulle etichette</li>
+    <li><strong>Paleocomplex</strong> (multivitaminico) con l&rsquo;angolo <strong>&ldquo;Etichetta&rdquo;</strong>: il confronto fattuale con i multivitaminici da farmacia e supermercato</li>
+  </ul>
+  <div class="box">
+    <span class="label">Fase 1: da produrre ora</span>
+    <p style="margin-bottom:6px;"><strong>19 formati &times; 2 soggetti (1 angolo per soggetto) = 38 export totali.</strong></p>
+    <p style="margin-bottom:0;">In pratica: 2 layout master (uno Youth, uno Paleocomplex) declinati su tutti i formati della tabella in sezione 04. Consegna entro il <strong>28 agosto 2026</strong>.</p>
+  </div>
+  <div class="box">
+    <span class="label">Fase 2: NON produrre ora</span>
+    <p style="margin-bottom:0;">Dopo i primi dati delle campagne verr&agrave; richiesto un <strong>secondo angolo per soggetto</strong>, solo sui 5 formati a maggior volume gi&agrave; impostati in fase 1 (300x250, 320x50, 728x90, 160x600, 970x250). Arriver&agrave; un brief dedicato: per ora ignorala, la cito solo perch&eacute; tu sappia cosa arriva dopo.</p>
+  </div>
+  <p><strong>Target delle campagne:</strong> uomini e donne 45-75, attenti alla salute, leggono le etichette, diffidenti verso i prodotti da farmacia/supermercato. Il banner deve parlare a loro: linguaggio semplice, zero jargon, leggibilit&agrave; prima di tutto.</p>
+</section>
+
+<!-- ============ 2. SISTEMA VISIVO ============ -->
+<section id="visivo">
+  <span class="secnum">SEZIONE 02</span>
+  <h2>Sistema visivo</h2>
+  <p>&Egrave; il sistema visivo del brand, lo stesso del sito e delle landing. Va rispettato alla lettera.</p>
+
+  <h3>Palette (solo questi 6 colori, nessun altro)</h3>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#1A1A1A;"></div><div class="info"><strong>Ink</strong><code>#1A1A1A</code> nero: testo, sfondi scuri</div></div>
+    <div class="swatch"><div class="chip" style="background:#FAFAF7;border-bottom:1px solid #EDE5D3;"></div><div class="info"><strong>Paper</strong><code>#FAFAF7</code> panna: sfondi chiari, testo su scuro</div></div>
+    <div class="swatch"><div class="chip" style="background:#F2EEE4;"></div><div class="info"><strong>Paper dim</strong><code>#F2EEE4</code> panna calda, per blocchi</div></div>
+    <div class="swatch"><div class="chip" style="background:#8B6F47;"></div><div class="info"><strong>Bronzo</strong><code>#8B6F47</code> accento principale</div></div>
+    <div class="swatch"><div class="chip" style="background:#B08D5B;"></div><div class="info"><strong>Bronzo chiaro</strong><code>#B08D5B</code> accento su fondo scuro</div></div>
+    <div class="swatch"><div class="chip" style="background:#EDE5D3;"></div><div class="info"><strong>Linea</strong><code>#EDE5D3</code> bordi e separatori</div></div>
+  </div>
+  <div class="box-alert box">
+    <span class="label">Regola di combinazione</span>
+    <p style="margin-bottom:0;">Fondo scuro (ink) + testo panna + accenti bronzo chiaro, <strong>oppure</strong> fondo panna/paper-dim + testo ink + accenti bronzo. Mai mischiare in modo confuso. Niente altri colori: no verde, no rosso acceso, no gradienti.</p>
+  </div>
+
+  <h3>Font (Google Fonts)</h3>
+  <div class="fontdemo">
+    <div class="cell">
+      <div class="sample-serif">Il collagene <em>completo</em></div>
+      <small><strong>Cormorant Garamond</strong>, pesi 600/700. &Egrave; il font dei titoli e dei prezzi. Il <em>corsivo</em> si usa per enfatizzare una parola chiave del titolo.</small>
+    </div>
+    <div class="cell">
+      <div class="sample-sans">6.000 mg</div>
+      <div class="sample-label" style="margin-top:6px;">Collagene idrolizzato</div>
+      <small><strong>Inter</strong>, pesi 600/700. Per i numeri grandi (in serif rischiano di non leggersi), per le label maiuscole con letter-spacing largo (~0.2em, in bronzo) e per i testi piccoli.</small>
+    </div>
+  </div>
+
+  <h3>CTA (bottone)</h3>
+  <ul class="clean">
+    <li>Rettangolo squadrato, <strong>raggio 4px</strong>. Niente pillole super arrotondate.</li>
+    <li>Fondo ink con testo paper, oppure fondo paper con testo ink. Testo in Inter 600.</li>
+  </ul>
+
+  <h3>Look &amp; feel</h3>
+  <ul class="clean">
+    <li>Editoriale, da rivista premium. Lusso sobrio, non gridato.</li>
+    <li>Molto spazio attorno al testo, gerarchia chiara, contrasto forte.</li>
+    <li><strong>1 messaggio per banner.</strong> Massimo 3 elementi di testo per banner (es. headline + sub + CTA, oppure claim + CTA).</li>
+    <li>Se usi una fotografia come sfondo e il testo non si legge, metti un overlay scuro (ink al 45-65%) o una fascia scura dietro al testo.</li>
+    <li>Leggibilit&agrave; a colpo d&rsquo;occhio: il titolo deve leggersi a dimensione reale del banner, molti formati verranno visti su mobile.</li>
+  </ul>
+
+  <h3>Mai, in nessun banner</h3>
+  <ul class="no">
+    <li>Emoji</li>
+    <li>Trattini lunghi (&ndash; o &mdash;): si usano virgole, punti o due punti</li>
+    <li>Gradienti</li>
+    <li>Colori fuori palette</li>
+    <li>Ombre pesanti, clip-art, font fantasiosi</li>
+    <li>Pi&ugrave; di 3 elementi di testo per banner</li>
+  </ul>
+
+  <h3>Esempi indicativi di gerarchia (non layout vincolanti)</h3>
+  <div class="mockrow">
+    <div class="mock">
+      <div class="mock-300">
+        <div class="l">Youth &middot; Collagene</div>
+        <div class="h">6.000 mg di collagene per dose, <em>pi&ugrave; 12 nutrienti sinergici</em>.</div>
+        <div class="c">Confronta le etichette</div>
+      </div>
+      <div class="cap">300x250, fondo ink, variante Media (packshot a lato o sotto)</div>
+    </div>
+    <div class="mock" style="flex:1 1 300px;min-width:280px;">
+      <div class="mock-728">
+        <div class="h">Il tuo collagene ha 2 grammi. <em>Youth ne ha 6.</em></div>
+        <div class="c">Confronta le etichette</div>
+      </div>
+      <div class="cap">728x90, fondo paper-dim, variante Grande (packshot piccolo a sinistra se ci sta)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. COPY ============ -->
+<section id="copy">
+  <span class="secnum">SEZIONE 03</span>
+  <h2>Copy da usare</h2>
+  <div class="box-alert box">
+    <span class="label">Regola ferma</span>
+    <p style="margin-bottom:0;">Il copy va riprodotto <strong>esattamente com&rsquo;&egrave; scritto qui</strong>, accenti italiani reali inclusi (&egrave;, pi&ugrave;, perch&eacute;), senza riformulazioni, tagli o aggiunte. Sono testi verificati anche a livello di conformit&agrave; claims per gli integratori: cambiare una parola pu&ograve; creare un problema legale. Se un testo non entra in un formato, non riscriverlo: scala alla variante pi&ugrave; corta (vedi tabella formati) o segnala ad Andrea.</p>
+  </div>
+
+  <p>Ogni soggetto ha 4 varianti di lunghezza. Quale variante va su quale formato lo dice la colonna &ldquo;Variante copy&rdquo; della tabella in sezione 04. In sintesi:</p>
+  <ul class="clean">
+    <li><strong>Grande</strong> = headline + sub + CTA</li>
+    <li><strong>Media</strong> = versione media + CTA</li>
+    <li><strong>Striscia</strong> = micro claim + CTA</li>
+    <li><strong>Micro</strong> = solo logo + micro claim (senza CTA)</li>
+  </ul>
+
+  <h3>Soggetto 1: Youth, angolo &ldquo;Dosaggio&rdquo;</h3>
+  <div class="copybox">
+    <span class="role">Headline (formati grandi)</span>
+    <div class="txt head">Il tuo collagene ha 2 grammi. Youth ne ha 6.</div>
+    <span class="role">Sub (formati grandi, sotto la headline)</span>
+    <div class="txt">6.000 mg di collagene idrolizzato pi&ugrave; 12 nutrienti sinergici in una dose.</div>
+    <span class="role">Versione media (formati medi)</span>
+    <div class="txt">6.000 mg di collagene per dose, pi&ugrave; 12 nutrienti sinergici.</div>
+    <span class="role">Micro (strisce e formati micro)</span>
+    <div class="txt">Collagene 6.000 mg</div>
+    <span class="role">CTA principale</span>
+    <div class="txt cta">Confronta le etichette</div>
+    <span class="role">CTA alternativa (se la principale non entra)</span>
+    <div class="txt cta">Scopri Youth</div>
+  </div>
+
+  <h3>Soggetto 2: Paleocomplex, angolo &ldquo;Etichetta&rdquo;</h3>
+  <div class="copybox">
+    <span class="role">Headline (formati grandi)</span>
+    <div class="txt head">Apri l&rsquo;etichetta del tuo multivitaminico. Poi apri la nostra.</div>
+    <span class="role">Sub (formati grandi, sotto la headline)</span>
+    <div class="txt">D3 a 2.000 UI, Omega 3 da Krill, B9 e B12 metilate, K2 MK-7. 23 nutrienti a dosaggi dichiarati.</div>
+    <span class="role">Versione media (formati medi)</span>
+    <div class="txt">La differenza &egrave; nell&rsquo;etichetta, non nel marketing.</div>
+    <span class="role">Micro (strisce e formati micro)</span>
+    <div class="txt">L&rsquo;etichetta non mente.</div>
+    <span class="role">CTA principale</span>
+    <div class="txt cta">Confronta le etichette</div>
+    <span class="role">CTA alternativa (se la principale non entra)</span>
+    <div class="txt cta">Scopri la formula</div>
+  </div>
+
+  <h3>Elementi opzionali: prezzo e social proof</h3>
+  <p>Utilizzabili <strong>solo sui formati Grande e Media</strong>, e solo se il layout resta pulito (ricorda: massimo 3 elementi di testo). Mai su strisce e micro. Prezzo in Cormorant Garamond, listino barrato pi&ugrave; piccolo accanto.</p>
+  <div class="tablewrap">
+    <table>
+      <tr><th>Soggetto</th><th>Prezzo</th><th>Social proof</th></tr>
+      <tr><td><strong>Youth</strong></td><td>59 euro <span style="text-decoration:line-through;color:#888;">67 euro</span></td><td>4,9 su 5, oltre 50 recensioni verificate</td></tr>
+      <tr><td><strong>Paleocomplex</strong></td><td>67 euro <span style="text-decoration:line-through;color:#888;">77 euro</span></td><td>4,9 su 5, oltre 200 recensioni</td></tr>
+    </table>
+  </div>
+  <p>Se usi le stelle per il social proof: 5 stelle piene in bronzo, mai gialle.</p>
+</section>
+
+<!-- ============ 4. FORMATI ============ -->
+<section id="formati">
+  <span class="secnum">SEZIONE 04</span>
+  <h2>Tabella formati Fase 1 (da produrre)</h2>
+  <p>19 formati, ognuno in versione Youth e versione Paleocomplex = <strong>38 file totali</strong>.</p>
+  <div class="box-alert box">
+    <span class="label">Attenzione: formati con limite 50 kb</span>
+    <p style="margin-bottom:0;">I formati <strong>400x339</strong> e <strong>480x400</strong> hanno un peso massimo di soli <strong>50 kb</strong> (e vanno pure esportati a risoluzione doppia): vanno costruiti con <strong>fondi piatti</strong> ink o paper, senza fotografie pesanti. Packshot piccolo e ben compresso, o solo tipografia. In alternativa JPEG con compressione aggressiva, ma controlla che resti pulito. Nella tabella sono evidenziati con sfondo panna e bordo bronzo.</p>
+  </div>
+  <div class="box">
+    <span class="label">Formati con export 2x</span>
+    <p style="margin-bottom:0;">Amazon richiede alcuni formati esportati a <strong>risoluzione doppia</strong>: il file va consegnato a dimensione doppia rispetto a quella nominale (es. il formato 400x339 si consegna come immagine 800x678). Il nome file resta con la dimensione nominale (vedi sezione 06). Lavora questi formati in vettoriale o a 2x fin dall&rsquo;inizio, cos&igrave; il testo resta nitido.</p>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <tr>
+        <th>Dimensioni (px)</th><th>Peso max</th><th>Export 2x</th><th>Variante copy</th><th>Note layout</th>
+      </tr>
+      <tr><td class="dim">150x80</td><td>200 kb</td><td>No</td><td><span class="pill bz">Micro</span></td><td>Micro orizzontale: solo logo + micro claim</td></tr>
+      <tr><td class="dim">150x94</td><td>200 kb</td><td>No</td><td><span class="pill bz">Micro</span></td><td>Micro quasi quadrato: solo logo + micro claim</td></tr>
+      <tr><td class="dim">160x600</td><td>200 kb</td><td>No</td><td><span class="pill">Media</span></td><td>Skyscraper verticale: testo impilato + packshot + CTA</td></tr>
+      <tr><td class="dim">170x248</td><td>200 kb</td><td>No</td><td><span class="pill">Media</span></td><td>Verticale piccolo: testo compatto, packshot ridotto</td></tr>
+      <tr><td class="dim">300x250</td><td>200 kb</td><td>No</td><td><span class="pill">Media</span></td><td>Rectangle classico: il formato di riferimento per il master</td></tr>
+      <tr><td class="dim">320x50</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia mobile: micro claim + CTA testuale</td></tr>
+      <tr class="w50"><td class="dim">400x339</td><td><strong>50 kb</strong></td><td><strong>S&Igrave; &rarr; 800x678</strong></td><td><span class="pill">Media</span></td><td>Fondo piatto, niente foto pesanti (limite 50 kb)</td></tr>
+      <tr><td class="dim">412x360</td><td>200 kb</td><td><strong>S&Igrave; &rarr; 824x720</strong></td><td><span class="pill">Media</span></td><td>Quasi quadrato, orizzontale</td></tr>
+      <tr><td class="dim">414x125</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia mobile larga: micro claim + CTA</td></tr>
+      <tr><td class="dim">414x150</td><td>200 kb</td><td><strong>S&Igrave; &rarr; 828x300</strong></td><td><span class="pill">Striscia</span></td><td>Striscia mobile larga: micro claim + CTA</td></tr>
+      <tr><td class="dim">414x290</td><td>200 kb</td><td><strong>S&Igrave; &rarr; 828x580</strong></td><td><span class="pill">Media</span></td><td>Rettangolo mobile orizzontale</td></tr>
+      <tr class="w50"><td class="dim">480x400</td><td><strong>50 kb</strong></td><td><strong>S&Igrave; &rarr; 960x800</strong></td><td><span class="pill">Media</span></td><td>Fondo piatto, niente foto pesanti (limite 50 kb)</td></tr>
+      <tr><td class="dim">600x90</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia desktop: micro claim + CTA</td></tr>
+      <tr><td class="dim">728x90</td><td>200 kb</td><td>No</td><td><span class="pill" style="background:#8B6F47;">Grande</span></td><td>Leaderboard orizzontale: headline + CTA; sub solo se resta leggibile, altrimenti ometterlo</td></tr>
+      <tr><td class="dim">768x66</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia bassa: micro claim + CTA</td></tr>
+      <tr><td class="dim">970x90</td><td>200 kb</td><td>No</td><td><span class="pill" style="background:#8B6F47;">Grande</span></td><td>Super leaderboard: headline + CTA; sub solo se resta leggibile</td></tr>
+      <tr><td class="dim">970x250</td><td>200 kb</td><td>No</td><td><span class="pill" style="background:#8B6F47;">Grande</span></td><td>Billboard: layout completo headline + sub + CTA + packshot. Il formato pi&ugrave; ricco</td></tr>
+      <tr><td class="dim">1024x50</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia bassa: micro claim + CTA</td></tr>
+      <tr><td class="dim">1024x66</td><td>200 kb</td><td>No</td><td><span class="pill">Striscia</span></td><td>Striscia bassa: micro claim + CTA</td></tr>
+    </table>
+  </div>
+  <p>Consiglio operativo: costruisci prima i due master sul <strong>300x250</strong> (Media) e sul <strong>970x250</strong> (Grande), falli approvare ad Andrea, poi declina tutti gli altri formati.</p>
+</section>
+
+<!-- ============ 5. IMMAGINI ============ -->
+<section id="immagini">
+  <span class="secnum">SEZIONE 05</span>
+  <h2>Immagini prodotto (packshot)</h2>
+  <p>Scarica i file originali ad alta risoluzione da questi URL (clic destro, salva immagine, oppure incolla l&rsquo;URL nel browser). Le immagini vanno <strong>scontornate</strong> e usate su fondo palette (ink, paper o paper-dim), mai sul loro sfondo originale.</p>
+  <div class="imgs">
+    <div class="imgcard">
+      <img src="https://paleocomplex.com/wp-content/uploads/2023/02/Youth_Front-1-scaled.jpg" alt="Packshot Youth fronte">
+      <div class="cap"><strong>Youth, packshot principale</strong><a href="https://paleocomplex.com/wp-content/uploads/2023/02/Youth_Front-1-scaled.jpg">https://paleocomplex.com/wp-content/uploads/2023/02/Youth_Front-1-scaled.jpg</a></div>
+    </div>
+    <div class="imgcard">
+      <img src="https://paleocomplex.com/wp-content/uploads/2023/02/palecomplex-ok.png" alt="Packshot Paleocomplex">
+      <div class="cap"><strong>Paleocomplex, packshot principale</strong><a href="https://paleocomplex.com/wp-content/uploads/2023/02/palecomplex-ok.png">https://paleocomplex.com/wp-content/uploads/2023/02/palecomplex-ok.png</a></div>
+    </div>
+    <div class="imgcard">
+      <img src="https://paleocomplex.com/wp-content/uploads/2023/10/youth-product-image-sum.png" alt="Immagine di supporto Youth">
+      <div class="cap"><strong>Youth, immagine di supporto</strong><a href="https://paleocomplex.com/wp-content/uploads/2023/10/youth-product-image-sum.png">https://paleocomplex.com/wp-content/uploads/2023/10/youth-product-image-sum.png</a></div>
+    </div>
+    <div class="imgcard">
+      <img src="https://paleocomplex.com/wp-content/uploads/2023/02/paleocomplex-multivitaminico-completo-v2.png" alt="Immagine di supporto Paleocomplex">
+      <div class="cap"><strong>Paleocomplex, immagine di supporto</strong><a href="https://paleocomplex.com/wp-content/uploads/2023/02/paleocomplex-multivitaminico-completo-v2.png">https://paleocomplex.com/wp-content/uploads/2023/02/paleocomplex-multivitaminico-completo-v2.png</a></div>
+    </div>
+  </div>
+  <p><strong>Logo:</strong> scaricabile dal sito <a href="https://paleocomplex.com">paleocomplex.com</a> (&egrave; nell&rsquo;header del sito). Se serve una versione vettoriale o su fondo trasparente, chiedila ad Andrea.</p>
+  <p style="font-size:13px;color:#666;">Nota: se le anteprime qui sopra non si caricano (sei offline o il sito &egrave; irraggiungibile), gli URL restano validi: copiali nel browser.</p>
+</section>
+
+<!-- ============ 6. NAMING ============ -->
+<section id="naming">
+  <span class="secnum">SEZIONE 06</span>
+  <h2>Naming file e consegna</h2>
+  <h3>Schema nome file</h3>
+  <div class="box">
+    <p style="font-size:17px;margin-bottom:10px;"><code>amz_[prodotto]_[angolo]_[larghezzaxaltezza].png</code></p>
+    <ul class="clean" style="margin-bottom:0;">
+      <li>Youth: <code>amz_youth_dosaggio_300x250.png</code></li>
+      <li>Paleocomplex: <code>amz_paleocomplex_etichetta_728x90.png</code></li>
+    </ul>
+  </div>
+  <p><strong>Formati 2x:</strong> il nome file resta con la dimensione <strong>nominale</strong>, anche se l&rsquo;immagine dentro &egrave; doppia. Esempio: <code>amz_youth_dosaggio_400x339.png</code> &egrave; un file esportato a 800x678 pixel.</p>
+  <h3>Consegna</h3>
+  <ul class="clean">
+    <li>File <strong>PNG o JPEG</strong>, ognuno sotto il peso massimo indicato in tabella (sezione 04)</li>
+    <li><strong>Uno zip per prodotto</strong>: uno con i 19 file Youth, uno con i 19 file Paleocomplex</li>
+  </ul>
+</section>
+
+<!-- ============ 7. CHECKLIST ============ -->
+<section id="checklist">
+  <span class="secnum">SEZIONE 07</span>
+  <h2>Checklist prima di consegnare</h2>
+  <p>Da verificare su <strong>ogni singolo file</strong>:</p>
+  <ul class="check">
+    <li>Palette rispettata: solo ink, paper, paper-dim, bronzo, bronzo chiaro, linea</li>
+    <li>Font giusti: Cormorant Garamond per titoli e prezzi, Inter per numeri, label e testi piccoli</li>
+    <li>Copy esatto, copiato senza modifiche (accenti italiani inclusi: &egrave;, pi&ugrave;, perch&eacute;)</li>
+    <li>Niente emoji, niente trattini lunghi (&ndash; o &mdash;)</li>
+    <li>Prezzo presente solo dove previsto (formati Grande e Media, mai su strisce e micro)</li>
+    <li>Peso file sotto il limite del formato (attenzione ai 50 kb di 400x339 e 480x400)</li>
+    <li>Testo leggibile a dimensione reale del banner (guardalo al 100%, non zoomato)</li>
+    <li>Formati 2x esportati a risoluzione doppia (400x339, 412x360, 414x150, 414x290, 480x400)</li>
+    <li>Naming corretto: <code>amz_[prodotto]_[angolo]_[larghezzaxaltezza].png</code></li>
+  </ul>
+</section>
+
+<!-- ============ 8. CONTATTI ============ -->
+<section id="contatti">
+  <span class="secnum">SEZIONE 08</span>
+  <h2>Contatti e tempi</h2>
+  <div class="tablewrap">
+    <table>
+      <tr><th style="width:180px;">Brief</th><td>Andrea Giavara</td></tr>
+      <tr><th>Consegna finale</th><td><strong>Entro il 28 agosto 2026</strong> (le campagne partono il 1 settembre: la data non pu&ograve; slittare)</td></tr>
+      <tr><th>Step consigliato</th><td>Master 300x250 e 970x250 dei due soggetti in approvazione ad Andrea prima di declinare gli altri 17 formati</td></tr>
+      <tr><th>Dubbi</th><td>Qualsiasi dubbio (copy che non entra, packshot, logo, pesi file), scrivi ad Andrea sul canale abituale. Meglio una domanda in pi&ugrave; che un file da rifare.</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer class="doc">
+  <p style="margin-bottom:4px;"><strong>Paleocomplex</strong> &middot; Brief banner Amazon DSP &middot; v1.1 &middot; 14 luglio 2026</p>
+  <p style="margin-bottom:0;">Documento autosufficiente: contiene sistema visivo, copy definitivo, formati, immagini e naming. Non servono altri materiali per la Fase 1.</p>
+</footer>
+
+</div>
+</body>
+</html>
