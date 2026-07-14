@@ -43,7 +43,11 @@ Principio: **lo sconto cresce con la distanza del cliente, mai con la vicinanza*
 
 **Codici univoci Klaviyo per WooCommerce**: supporto nativo confermato (help.klaviyo.com/hc/en-us/articles/22168739689627). Coupon master in WooCommerce (usage limit 1+1) + collegamento in Klaviyo Content → Coupons → WooCommerce tab con prefix. Klaviyo genera e assegna i codici per profilo con scadenza relativa alla ricezione.
 
-**Setup scadenza (fatto da Andrea 2026-07-14)**: tutti i coupon univoci scadono a **15 giorni alle 00:00** dall'assegnazione → il cliente ha 14 giorni pieni, e il copy può dire con precisione "scade a mezzanotte del 14° giorno". Le email successive dello stesso flow citano i giorni residui esatti (73 Standard E2 a +10gg → "scade tra 4 giorni"; 74 E3 a +7gg → "scade tra 7 giorni"). ⚠️ Verificare: (a) che in Klaviyo sia impostato 12:00 **AM** = mezzanotte, non mezzogiorno; (b) che **BENTORNATO20 resti SENZA scadenza** (è l'open-ended del Flow 75, non deve avere i 15 giorni).
+**Setup scadenza (fatto e verificato, Andrea 2026-07-14)**: tutti i coupon univoci scadono a **15 giorni alle 00:00 (mezzanotte, verificato)** dall'assegnazione → il cliente ha 14 giorni pieni, e il copy dice con precisione "scade a mezzanotte del 14° giorno". Le email successive dello stesso flow citano i giorni residui esatti (73 Standard E2 a +10gg → "scade tra 4 giorni"; 74 E3 a +7gg → "scade tra 7 giorni").
+
+**BENTORNATO20 (fatto)**: creato come coupon statico normale in WooCommerce, 20%, **1 uso per cliente, senza scadenza** — coerente col design open-ended del Flow 75.
+
+✅ Setup coupon completato. Prossimi passi operativi: creazione segmenti Klaviyo (definizioni in questo documento) e montaggio flow: 71 → 73 → 74 → 75 → 76 subito; 72 e 78 montati ma in draft finché Predictive/Catalog Insights non hanno 60-90gg di dati.
 
 ## Cosa Klaviyo calcola in automatico vs cosa impostiamo noi
 
