@@ -217,13 +217,16 @@ Definition:
   AND Last clicked > 180 days ago
 ```
 
-### Segmento "Above Average CLV" (per Flow 72 conditional split o campagne dedicate)
+### Segmento "Above Average CLV" (per campagne dedicate — NON richiesto dal Flow 72)
 
 ```
 Definition:
-  Properties about someone > Predictive Analytics > Predicted CLV is at least 200€
+  Properties about someone > Predictive Analytics > Predicted CLV is at least 150
 ```
-(La soglia va ricalcolata quando abbiamo dati reali sulla media del segmento "1+ ordini").
+
+**Soglia: 150€** (media reale calcolata 22/7 su 2.895 clienti ricorrenti — stessa soglia dello split del Flow 72, tenerle allineate ai ricalcoli periodici).
+
+**Chiarimento sul ruolo (22/7)**: il Flow 72 NON usa questo segmento — il conditional split dentro il flow valuta direttamente la property `Predicted CLV is at least 150` (più pulito, sempre aggiornato, nessuna dipendenza). Il segmento serve per le **campagne manuali ai VIP**: in particolare per mantenere la promessa dell'email Above ("sarai tra le prime persone a saperlo") — a ogni lancio nuovo prodotto, mandare una campagna a questo segmento 48-72h prima dell'annuncio pubblico.
 
 ## Requisiti operativi da verificare
 
