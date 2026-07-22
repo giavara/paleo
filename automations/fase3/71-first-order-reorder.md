@@ -179,41 +179,38 @@ Fondatore di Paleocomplex
 
 ## RAMO B — Pack ~60 giorni (4 SKU)
 
-Copre i prodotti con pack a durata doppia (Jeunesse collagene grass-fed, Essentiel multivit no-krill, Liverty supporto epatico mantenimento, Artosan articolazioni mantenimento).
+Copre i prodotti con pack a durata doppia (Jeunesse, Essentiel, Liverty, Artosan). **Email identiche al Ramo A** (decisione Andrea 2026-07-22): cambiano solo i riferimenti alla durata ("primo mese" → "primi due mesi"). In Klaviyo: duplicare i template del Ramo A e modificare solo le 2-3 frasi indicate in grassetto qui sotto.
 
 ### Email 1 — Flaminia (+50 giorni dal Fulfilled)
 
 **Mittente:** Flaminia (Customer Care)
+**Tipo:** Statica con dynamic content sul `event.Items.0.product_name`
 
 #### Oggetto (3 varianti A/B)
 
-- A: A che punto siamo con il tuo {{ event.Items.0.product_name }}?
-- B: Sono passate quasi 8 settimane
-- C: Volevo sentire come va
+- A: Tra qualche giorno finirai il tuo {{ event.Items.0.product_name }}
+- B: Una piccola nota sul tuo pack
+- C: Volevo dirti una cosa importante
 
 #### Preview text (3 varianti)
 
-- A: Il pack sta arrivando alla fine, ti scrivo per ricordarti.
-- B: Due mesi di percorso. Adesso siamo al momento giusto.
-- C: La cosa più importante adesso è non interrompere.
+- A: La costanza è tutto. 
+- B: Per non interrompere il percorso che hai iniziato.
+- C: Sto pensando a te in queste settimane.
 
 #### Corpo email
 
 Ciao [NOME]
 
-Sono Flaminia. Ti scrivo perché sei al giorno 50 dalla spedizione del tuo {{ event.Items.0.product_name }}.
+Sono Flaminia. Ti scrivo perché in teoria il tuo {{ event.Items.0.product_name }} sta arrivando alla fine.
 
-Il pack che hai ordinato si sta avvicinando alla fine.
+Ti scrivo adesso, non quando sarà finito, perché ho imparato una cosa lavorando con i nostri clienti: **il vero risultato sta nella costanza**. Le interruzioni, anche brevi, rallentano il percorso che hai costruito **in questi primi due mesi**.
 
-Volevo scriverti adesso, e non alla fine, perché su questi prodotti la costanza vale ancora di più. Lavorano su strutture che richiedono settimane di lavoro continuo per consolidare i risultati (collagene, supporto epatico, articolazioni, sistema nutritivo profondo a seconda di quello che hai scelto).
+**E questi primi due mesi sono importanti.** È la fase in cui il corpo comincia a rispondere davvero al supporto che gli stai dando, qualunque sia il prodotto che hai scelto. Saltarla significa ricominciare da capo.
 
-Le pause lunghe rallentano il consolidamento dei risultati su cui hai già lavorato.
+Se hai dubbi su come va o su quale dosaggio scegliere, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
-A questo punto del percorso può essere che tu abbia notato i primi cambiamenti (pelle più compatta, articolazioni migliorate, energia più costante a seconda del prodotto), oppure che stia ancora aspettando. In entrambi i casi: continua.
-
-Se hai dubbi o vuoi confrontarti con noi, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
-
-Tra qualche giorno Lorenzo ti scriverà con il link per riordinare.
+Tra qualche giorno Lorenzo ti scriverà con il link diretto per riordinare senza fatica. Nel frattempo, se vuoi anticipare, puoi farlo direttamente dal **[nostro sito](https://paleocomplex.com)**.
 
 A presto
 Flaminia
@@ -227,29 +224,31 @@ Customer Care Paleocomplex
 
 #### Oggetto (3 varianti A/B)
 
-- A: Il tuo {{ event.Items.0.product_name }} è finito
-- B: Due mesi di percorso. Adesso la scelta è tua.
-- C: Continuare o smettere: perché conta
+- A: Il tuo {{ event.Items.0.product_name }} è finito (o quasi)
+- B: Non lasciare un buco nel tuo percorso
+- C: Da qui in poi è solo costanza
 
 #### Preview text (3 varianti)
 
-- A: Il momento in cui la maggior parte molla. Non sei tu, vero?
-- B: Il vero risultato sta in cosa fai adesso.
-- C: 30 secondi per riordinare e continuare.
+- A: 30 secondi per riordinare e continuare.
+- B: La cosa più importante è non saltare.
+- C: La differenza tra chi vede risultati e chi no.
 
 #### Corpo email
 
 Ciao [NOME]
 
-Sono Lorenzo. Il tuo primo pack di {{ event.Items.0.product_name }} è agli sgoccioli. Te lo dico onestamente: adesso viene il bivio.
+Sono Lorenzo. Qualche giorno fa ti ha scritto Flaminia. Adesso ti scrivo io, perché è il momento giusto.
 
-Su prodotti come questo, che lavorano su rigenerazione strutturale, supporto profondo a organi o sistemi specifici, la maggior parte delle persone abbandona dopo i primi 60 giorni perché "non ha ancora visto la differenza". È un errore di tempistica.
+A questo punto il tuo {{ event.Items.0.product_name }} è finito, o stai per finirlo. Ho due cose da dirti.
 
-I primi due mesi servono per costruire le basi. Ed è di solito dal terzo mese che i benefici cominciano a consolidarsi e a farsi notare. Chi smette ora ha messo le basi senza godersi la casa che ha costruito.
+**La prima**: hai fatto bene a iniziare. **I primi due mesi di integrazione vera non sono semplici.** Ti danno il tempo di capire come reagisce il tuo corpo, di abituarti al sapore o alla modalità d'uso, di vedere i primi segnali. Arrivare fin qui è già un risultato.
 
-Te lo dico perché ci ho visto troppi clienti smettere a metà strada e poi ricominciare da capo sei mesi dopo. Non è efficiente, e soprattutto, hai investito tempo che ora rischi di buttare via.
+**La seconda**: adesso viene la parte che separa chi vede davvero la differenza da chi no. È la **costanza**.
 
-Se vuoi confrontarti su come prosegui (dosaggio, eventuali combinazioni, dubbi sul prodotto), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
+Te lo dico in modo diretto perché è quello che dico a chiunque mi scriva: gli integratori veri non funzionano come un farmaco che provi per 30 giorni e poi giudichi. Funzionano come un investimento sul tempo. Tre mesi continuativi è il minimo per giudicare onestamente. Dal quarto mese in poi cominciano a consolidarsi i benefici strutturali, quelli che fanno la differenza negli anni.
+
+Se hai dubbi sul dosaggio o sul prodotto giusto per te, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
 Se invece vuoi continuare:
 
@@ -267,47 +266,48 @@ Fondatore di Paleocomplex
 
 ## RAMO C — Vitamina D (singola email a T+120)
 
-Solo per la Vitamina D in gocce, durata pack 150 giorni circa (5 mesi a 4 gocce/giorno).
+Solo Vitamina D in gocce (pack ~150 giorni). **Email identica al Ramo A Email 2** (decisione Andrea 2026-07-22), con tre soli adattamenti: (1) niente riferimento a Flaminia (non c'è Email 1 in questo ramo), (2) nome prodotto scritto in chiaro "la tua Vitamina D" invece del tag dinamico (mono-prodotto, ed evita l'errore di genere "il tuo Vitamina D"), (3) durate al plurale ("questi primi mesi").
 
 ### Email unica — Lorenzo (+120 giorni dal Fulfilled)
 
 **Mittente:** Lorenzo Zarone
+**Tipo:** Statica (nome prodotto in chiaro, no dynamic content)
 
 #### Oggetto (3 varianti A/B)
 
-- A: La tua Vitamina D sta finendo
-- B: 4 mesi di Vitamina D. Adesso un controllo.
-- C: Tre cose veloci sulla tua integrazione
+- A: La tua Vitamina D è finita (o quasi)
+- B: Non lasciare un buco nel tuo percorso
+- C: Da qui in poi è solo costanza
 
 #### Preview text (3 varianti)
 
-- A: È il momento di valutare i livelli e riordinare.
-- B: Se hai fatto le analisi, mi fa piacere saperlo.
-- C: La vitamina D è uno dei pochi integratori misurabili davvero.
+- A: 30 secondi per riordinare e continuare.
+- B: La cosa più importante è non saltare.
+- C: La differenza tra chi vede risultati e chi no.
 
 #### Corpo email
 
 Ciao [NOME]
 
-Sono Lorenzo. Sei al giorno 120 dalla spedizione della tua Vitamina D in gocce.
+Sono Lorenzo. Ti scrivo perché in teoria la tua Vitamina D in gocce sta arrivando alla fine.
 
-Il flaconcino dovrebbe essere a circa l'80% di utilizzo. Hai ancora qualche settimana di prodotto, ma è il momento giusto per due cose: il controllo dei valori e il pensiero al riordino.
+A questo punto il flaconcino è quasi finito. Ho due cose da dirti.
 
-Ti scrivo per tre motivi:
+**La prima**: hai fatto bene a iniziare. **Questi primi mesi di integrazione vera non sono semplici.** Ti danno il tempo di capire come reagisce il tuo corpo, di abituarti alla modalità d'uso, di vedere i primi segnali. Arrivare fin qui è già un risultato.
 
-**1. Se non l'hai ancora fatto, fai le analisi della 25(OH)D adesso.** È il momento giusto: dopo 4 mesi di supplementazione i valori si sono stabilizzati. Hai un quadro reale di come la tua dose sta funzionando. Il range ottimale è 40-60 ng/ml.
+**La seconda**: adesso viene la parte che separa chi vede davvero la differenza da chi no. È la **costanza**.
 
-**2. Se hai fatto le analisi, ci farebbe piacere conoscere i tuoi valori prima/dopo.** Rispondi pure a questa email con i numeri (anche solo "ero a X, adesso sono a Y"): li leggiamo sempre, e ci aiutano a costruire un quadro reale.
+Te lo dico in modo diretto perché è quello che dico a chiunque mi scriva: gli integratori veri non funzionano come un farmaco che provi per 30 giorni e poi giudichi. Funzionano come un investimento sul tempo. E la Vitamina D, in particolare, è una supplementazione di lungo periodo: specialmente da ottobre a marzo, quando in Italia il sole non basta.
 
-**3. Per il riacquisto**, la Vitamina D è una supplementazione di lungo periodo, specialmente da ottobre a marzo quando in Italia il sole non basta. Se vuoi assicurarti di avere il flaconcino di scorta:
+Se hai dubbi sul dosaggio o sul prodotto giusto per te, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
+
+Se invece vuoi continuare:
 
 **[Riordina la tua Vitamina D in gocce](https://paleocomplex.com/prodotto/vitamina-d/)**
 
 Spedizione veloce come sempre, in 24-48h lavorative con corriere espresso. E paghi come preferisci: carta, PayPal o contrassegno.
 
 Un'ultima cosa che in pochi notano: **più prodotti metti nell'ordine, più risparmi**. Con 3 prodotti (anche diversi tra loro) hai il 10% di sconto con il codice PROMO3, con 6 prodotti il 15% con PROMO6. E ogni euro speso vale un punto del programma fedeltà, che sblocca sconti permanenti sugli ordini successivi. Trovi tutto nella **[pagina promozioni](https://paleocomplex.com/promozioni/)**.
-
-Una nota: se le analisi dovessero dirti che sei in carenza marcata, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)** prima di riordinare: ragioniamo insieme sul dosaggio.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -398,6 +398,7 @@ Verificare in Klaviyo Account Settings → Integrations → WooCommerce → Metr
 - **Prerequisito SKU/metric mapping:** non bloccante per questo design (si instrada su ProductName, gia' presente negli eventi), ma resta da disabilitare le email carrello native WooCommerce ecc. come da memoria.
 
 ### Changelog
+- **v4.1 (2026-07-22)**: rami B e C uniformati al Ramo A (decisione Andrea: "le email dei rami B e C devono essere uguali a quelle del ramo A, tranne le durate"). Rimossi i contenuti famiglia-specifici del Ramo B ("collagene, supporto epatico, articolazioni...": non generalizzavano sui 4 SKU) e l'angolo analisi-25(OH)D del Ramo C (recuperabile dalla history git per una futura campagna dedicata). Ramo B = copia esatta di A con "primo mese"→"primi due mesi". Ramo C = copia di A Email 2 senza riferimento a Flaminia, con "la tua Vitamina D" in chiaro (mono-prodotto + genere femminile) e nota sul lungo periodo ottobre-marzo. Montaggio Klaviyo: duplicare i template del Ramo A e cambiare solo le frasi in grassetto.
 - **v4.0 (2026-07-22)**: revisione pre-montaggio con Andrea. (1) **Contatti → pagina di supporto** ovunque (https://paleocomplex.com/contatti/): rimosso "rispondi a questa email" per i dubbi/supporto e rimosso "parlarne direttamente con Lorenzo" (in futuro non sarà possibile); formula plurale "leggiamo sempre e ti rispondiamo". Resta il reply diretto solo per la raccolta valori analisi VitD (feedback, non supporto). (2) Email 2 apertura naturale: via "Flaminia mi ha detto" → "Qualche giorno fa ti ha scritto Flaminia". (3) **Blocco risparmio in chiusura di tutte le Email 2 + VitD**: spedizione 24-48h + pagamenti (carta, PayPal, contrassegno) + sconti quantità PROMO3/PROMO6 + programma fedeltà, con link a paleocomplex.com/promozioni/ (verificato 200). (4) Gender fix "sei convinto".
 - **v3.0 (2026-06-18)**: fix da verifica content-verifier (report 4 agenti + review Andrea). (1) Range 25(OH)D corretto da 50-80 a **40-60 ng/ml** (scheda prodotto, citazione Lorenzo). (2) Rimossi i claim di durata pack falsi per parte del ramo ("circa un mese" non regge per Elisir/EB 40gg; "circa due mesi" non regge per Jeunesse 50gg) → claim neutro "si sta avvicinando alla fine". (3) Ammorbiditi claim scientifici esagerati (interruzione 1 settimana, 15 giorni = settimane indietro, "saturare il sistema"). (4) Fix grammatica ("sta per finirlo") e gender-neutral ("Sei arrivato" ecc.). (5) "Leggo io personalmente" → "la leggiamo io e il mio team" (Lorenzo).
 - **v2.2 (2026-06-18)**: montato come Draft in Klaviyo via Create Flow API (flow ID `Xi3wcm`). Documentate le 3 differenze design-vs-implementazione (split su ProductName via conditional-split annidati invece di multi-branch su SKU; filtro primo-ordine via profile_filter Placed Order=1; variabile reale `event.ProductNames.0`) e i to-do manuali nel builder (mittenti, A/B, deep-link).
