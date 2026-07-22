@@ -1,4 +1,4 @@
-**Versione:** 3.1
+**Versione:** 3.2
 **Ultimo aggiornamento:** 2026-07-22
 
 # Flow 72: AI Repeat Purchase Flow (Predictive-powered)
@@ -112,7 +112,7 @@ Filtri di esclusione:
 
 #### Oggetto (3 varianti A/B)
 
-- A: Volevo dirti una cosa, da fondatore a cliente storico
+- A: Volevo dirti una cosa, da fondatore a uno dei nostri migliori clienti
 - B: Sei una delle persone che mi aiutano a crescere
 - C: Un pensiero per te
 
@@ -128,7 +128,7 @@ Ciao [NOME]
 
 Sono Lorenzo. Ti scrivo per una cosa diversa dal solito.
 
-Ho fatto due conti sui clienti che, da quando ho fondato Paleocomplex, hanno scelto di continuare con noi nel tempo. Sei tra questi.
+Ho fatto due conti sui clienti che, dopo il primo ordine, hanno scelto di tornare e continuare con noi. Sei tra questi.
 
 Non sono numeri buttati lì: tu hai investito sulla tua salute con noi più di quanto faccia la maggior parte dei nostri clienti. Te lo dico perché lo voglio riconoscere esplicitamente. Spesso si parla solo di acquisizione e si dimentica chi è già qui da tempo. Io non voglio fare questo errore.
 
@@ -136,7 +136,7 @@ Ti scrivo per due motivi.
 
 **Primo**, voglio chiederti un favore. Se hai esperienza concreta con i nostri prodotti, un cambiamento misurabile, un risultato che ti ha sorpreso, **rispondi pure a questa email** e raccontamelo. Le testimonianze dei clienti come te valgono per noi più di qualunque pubblicità. E mi farebbe davvero piacere sapere come sta andando.
 
-**Secondo**, da qui in poi voglio che tu sappia delle cose prima degli altri. Nei prossimi mesi usciranno delle novità (alcuni prodotti sono in fase finale di sviluppo, su altri stiamo lavorando). Sarai tra le prime persone a saperlo.
+**Secondo**, da qui in poi voglio che tu sappia delle cose prima degli altri. Nei prossimi mesi usciranno delle novità e non mi riferisco solo a promozioni e sconti (alcuni prodotti sono in fase finale di sviluppo, su altri stiamo lavorando). Sarai tra le prime persone a saperlo.
 
 Tra qualche giorno ti scrivo con qualcosa di più concreto: un suggerimento di prodotti che potrebbero completare bene il tuo protocollo, dato quello che usi già.
 
@@ -365,6 +365,7 @@ Tu hai già tutti questi prerequisiti come dati totali, ma Klaviyo deve avere vi
 Bozza v1.0 — pronto per montaggio Klaviyo, ma DA ATTIVARE solo dopo 60-90gg post-migrazione.
 
 ### Changelog
+- **v3.2 (2026-07-22)**: fix accuratezza "cliente storico" nel ramo Above (segnalato da Andrea): ~13% del ramo ha solo 2 ordini, "storico" suonava falso. Oggetto A → "uno dei nostri migliori clienti" (criterio vero dell'Above = valore previsto, non anzianità); "continuare con noi nel tempo" → "tornare e continuare con noi" (fattualmente vero dal 2° ordine in su). Nel Flow 73 High "cliente storico" resta: lì il criterio è HCLV >450€ con storia d'acquisto reale.
 - **v3.1 (2026-07-22)**: soglia Predicted CLV calcolata su dati reali via API Klaviyo (segmento Acquirenti abituali, 2.895 clienti 2+ ordini): media €153 → **soglia 150€** (29% Above / 71% Below). Documentato il metodo di ricalcolo periodico.
 - **v3.0 (2026-07-14)**: rimossi TUTTI gli sconti dal flow (decisione Andrea). Ramo Below CLV ridotto da 3 a 2 email (rimossa la Email 3 Lorenzo "ultima chance 15%": il ruolo di ultimo push con incentivo passa interamente al Flow 73). Razionale: il trigger ENO coincide col picco naturale di propensione — scontare lì brucia margine senza incrementalità e educa al ritardo. Opzione documentata: test 10€ sul ramo Below dopo 60-90gg di dati. La Email 2 Below chiude ora con invito onesto al feedback.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) **Le 3 testimonianze inventate della Email 2 Below sono state sostituite con recensioni REALI dal CSV** (Ornella B. su sospensione/ripresa, Alessia D. su terza confezione, Paola L. su costanza) e rimossa la nota interna "(dal CSV recensioni)". (2) Codice CONTINUA10 → **CONTINUA10K7**, validità 14gg (matematica sequenza ora coerente: E2 a +7gg trova codice ancora valido, E3 a +17gg lo trova scaduto e porta il 15% personale). (3) Rimossa la frase falsa "niente promo periodiche, niente codici riutilizzabili" → "è un codice personale". (4) Promessa di silenzio resa veritiera ("per le prossime settimane... da parte mia"). (5) Rimossi i riferimenti creepy a Klaviyo/predizione data ordine. (6) Fix persona Flaminia ("Ti ho fatto scrivere" → "Flaminia ti ha scritto"). (7) Claim Renaissance prudente ("puoi notare"). (8) Early access ammorbidito ("sarai tra le prime persone a saperlo"). (9) Gender-neutral.
