@@ -11,7 +11,7 @@ Documento di riferimento per l'architettura completa Fase 3 di Paleocomplex. Inc
 |---|------|-------------------------|-------------------|---------|----------|
 | **71** | First-Order Reorder | `Placed Order` + filter `Customer's Lifetime Number of Orders = 1` + conditional split famiglia SKU | ❌ NO — timing fisso per famiglia pack | Reorder primo cliente (rete di sicurezza pre-Predictive) | **ALTA** |
 | **72** | AI Repeat Purchase | Date property trigger: `Expected Date of Next Order` | ✅ **SÌ — Predictive Analytics** calcola ENO personalizzata per cliente | Reorder ricorrente al momento personalizzato | **ALTA** |
-| | └ Conditional Split | `Predicted CLV ≥ soglia (~200€)` | ✅ **SÌ — Predictive Analytics** calcola CLV atteso 365gg | Above/Below split per modulare il copy (nessuno sconto in questo flow) | |
+| | └ Conditional Split | `Predicted CLV ≥ 150€` (media reale calcolata 22/7 su 2.895 clienti) | ✅ **SÌ — Predictive Analytics** calcola CLV atteso 365gg | Above/Below split per modulare il copy (nessuno sconto in questo flow) | |
 | **73** | RFM Winback | Ingresso segmento `Current RFM group ∈ [At Risk, Needs Attention]` | ✅ **SÌ — RFM Automation** classifica i clienti in 6 gruppi ogni notte | Riattivazione clienti a rischio churn | **MEDIA** |
 | | └ Conditional Split | `Historic CLV > 300€` | ❌ NO — dato storico | Distinguere top spender persi da clienti medi | |
 | **74** | Sunset Lead | Ingresso segmento comportamentale (`Subscribed > 180gg` + `Placed Order = 0` + `Last Open > 90gg` + `Last Click > 90gg`) | ❌ NO — segmento comportamentale semplice | Igiene lista: sopprimere iscritti mai-clienti mai-attivi | BASSA |
@@ -75,7 +75,7 @@ Principio: **lo sconto cresce con la distanza del cliente, mai con la vicinanza*
 
 1. **Segmenti comportamentali** (Flow 74 Sunset Lead, Flow 75 Sunset Cliente Storico)
 2. **Filtri di esclusione reciproca tra flow** (vedi sezione Sormonti)
-3. **Soglia Predicted CLV** per il conditional split del Flow 72 (dopo aver calcolato la media)
+3. **Soglia Predicted CLV** per il conditional split del Flow 72: **150€** (media reale 22/7; ricalcolare ogni 3-6 mesi via API)
 4. **Timing fissi** del Flow 71 (per famiglia pack)
 5. **Copy delle email**, oggetti, dynamic content variables
 6. **Sconti e codici coupon**
@@ -207,7 +207,7 @@ Definition:
   AND Last clicked > 90 days ago
 ```
 
-### Segmento "Sunset Cliente Storico" (per Flow 75)
+### Segmento "Sunset Customer" (per Flow 75)
 
 ```
 Definition:
@@ -227,12 +227,12 @@ Definition:
 
 ## Requisiti operativi da verificare
 
-- [ ] **Marketing Analytics attivato** — trial 30gg avviato (Andrea, 2026-06-18)
-- [ ] **Integrazione WooCommerce** attiva e funzionante — già verificato
-- [ ] **Catalogo prodotti sincronizzato** con Klaviyo — da verificare
+- [x] **Marketing Analytics attivato** — trial 30gg avviato (Andrea, 2026-06-18)
+- [x] **Integrazione WooCommerce** attiva e funzionante — già verificato
+- [x] **Catalogo prodotti sincronizzato** con Klaviyo — da verificare
 - [ ] **Revenue metric mapped** su evento "Placed Order" — da verificare
-- [ ] **500+ clienti storici + 180gg storico + 3+ ordini per almeno alcuni clienti** — Andrea conferma OK
-- [ ] **Aspettare 48h** dopo attivazione Catalog Insights per il processing dei report
+- [x] **500+ clienti storici + 180gg storico + 3+ ordini per almeno alcuni clienti** — Andrea conferma OK
+- [x] **Aspettare 48h** dopo attivazione Catalog Insights per il processing dei report
 
 ## Cosa ci porta il trial Marketing Analytics (riepilogo)
 

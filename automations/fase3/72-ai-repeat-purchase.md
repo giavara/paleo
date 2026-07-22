@@ -1,5 +1,5 @@
-**Versione:** 3.0
-**Ultimo aggiornamento:** 2026-07-14
+**Versione:** 3.1
+**Ultimo aggiornamento:** 2026-07-22
 
 # Flow 72: AI Repeat Purchase Flow (Predictive-powered)
 
@@ -19,7 +19,15 @@ Implementa il **template ufficiale Klaviyo Academy** "Increase CLV with a refine
 
 **Quando attivare il flow**: 60-90 giorni dopo go-live Klaviyo, quando Predictive ha abbastanza dati per calcolare ENO e Predicted CLV affidabili. Prima è prematuro (mediana store, non personalizzata).
 
-**Soglia Predicted CLV**: da calcolare media del segmento `Has placed 1+ orders` esportando CSV (Manage segment → Export to CSV → media colonna `predicted_clv`). Per partire, soglia stimata **200€**. Da ricalibrare con dati reali.
+**Soglia Predicted CLV: 150€** (calcolata su dati reali via API il 2026-07-22, non più stima).
+
+Analisi sul segmento "Acquirenti abituali (WooCommerce)" (`WfhUpU`, 2.895 clienti con 2+ ordini = esattamente l'audience di questo flow):
+- Media Predicted CLV: **€153** → soglia arrotondata a **150€**
+- Mediana: €40,52 (distribuzione fortemente asimmetrica: i top client tirano su la media)
+- P75: €184 | P90: €421 | Max: €3.545
+- Con soglia 150€: **29% Above** (837 clienti VIP) / **71% Below** (2.058)
+
+La soglia va ricalcolata ogni 3-6 mesi (la media si sposta con la base clienti). Metodo: paging API `segments/WfhUpU/profiles` con `additional-fields[profile]=predictive_analytics`, media su `predicted_clv`.
 
 ## Configurazione Klaviyo
 
@@ -42,7 +50,7 @@ Subito dopo il trigger, lo split valuta `Predictive analytics about someone > Pr
 
 | Ramo | Condizione | Cliente | Numero email | Sconto |
 |------|------------|---------|--------------|--------|
-| **YES — Above CLV** | Predicted CLV ≥ soglia (~200€) | Top spender / loyal | **2 email** | NO |
+| **YES — Above CLV** | Predicted CLV ≥ **150€** (media reale, calc. 22/7) | Top spender / loyal (29% dei ricorrenti) | **2 email** | NO |
 | **NO — Below CLV** | Predicted CLV < soglia | Cliente da coltivare | **2 email** | **NO** (decisione Andrea 2026-07-14, vedi nota sconti) |
 
 ### Razionale dei due rami
@@ -357,6 +365,7 @@ Tu hai già tutti questi prerequisiti come dati totali, ma Klaviyo deve avere vi
 Bozza v1.0 — pronto per montaggio Klaviyo, ma DA ATTIVARE solo dopo 60-90gg post-migrazione.
 
 ### Changelog
+- **v3.1 (2026-07-22)**: soglia Predicted CLV calcolata su dati reali via API Klaviyo (segmento Acquirenti abituali, 2.895 clienti 2+ ordini): media €153 → **soglia 150€** (29% Above / 71% Below). Documentato il metodo di ricalcolo periodico.
 - **v3.0 (2026-07-14)**: rimossi TUTTI gli sconti dal flow (decisione Andrea). Ramo Below CLV ridotto da 3 a 2 email (rimossa la Email 3 Lorenzo "ultima chance 15%": il ruolo di ultimo push con incentivo passa interamente al Flow 73). Razionale: il trigger ENO coincide col picco naturale di propensione — scontare lì brucia margine senza incrementalità e educa al ritardo. Opzione documentata: test 10€ sul ramo Below dopo 60-90gg di dati. La Email 2 Below chiude ora con invito onesto al feedback.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) **Le 3 testimonianze inventate della Email 2 Below sono state sostituite con recensioni REALI dal CSV** (Ornella B. su sospensione/ripresa, Alessia D. su terza confezione, Paola L. su costanza) e rimossa la nota interna "(dal CSV recensioni)". (2) Codice CONTINUA10 → **CONTINUA10K7**, validità 14gg (matematica sequenza ora coerente: E2 a +7gg trova codice ancora valido, E3 a +17gg lo trova scaduto e porta il 15% personale). (3) Rimossa la frase falsa "niente promo periodiche, niente codici riutilizzabili" → "è un codice personale". (4) Promessa di silenzio resa veritiera ("per le prossime settimane... da parte mia"). (5) Rimossi i riferimenti creepy a Klaviyo/predizione data ordine. (6) Fix persona Flaminia ("Ti ho fatto scrivere" → "Flaminia ti ha scritto"). (7) Claim Renaissance prudente ("puoi notare"). (8) Early access ammorbidito ("sarai tra le prime persone a saperlo"). (9) Gender-neutral.
 - v1.0 (2026-06-18): prima stesura. Architettura template Klaviyo Academy: trigger Expected Date of Next Order + conditional split Predicted CLV. Above CLV: 2 email Lorenzo, no sconto, focus riconoscimento/community. Below CLV: 3 email Flaminia+Lorenzo, escalation sconto 10%→15%. Coordinamento con Flow 71 (esclusione 365gg) e Flow 73 (esclusione reciproca).
