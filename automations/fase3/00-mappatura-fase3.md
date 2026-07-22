@@ -228,6 +228,8 @@ Definition:
 
 **Chiarimento sul ruolo (22/7)**: il Flow 72 NON usa questo segmento — il conditional split dentro il flow valuta direttamente la property `Predicted CLV is at least 150` (più pulito, sempre aggiornato, nessuna dipendenza). Il segmento serve per le **campagne manuali ai VIP**: in particolare per mantenere la promessa dell'email Above ("sarai tra le prime persone a saperlo") — a ogni lancio nuovo prodotto, mandare una campagna a questo segmento 48-72h prima dell'annuncio pubblico.
 
+**Nota sulla dinamicità (22/7)**: la membership del segmento si muove col ricalcolo settimanale di Predictive — chi si raffredda esce, chi cresce entra. Comportamento corretto ("i VIP di oggi"). Caso limite accettato: chi ha ricevuto la promessa early-access nel Flow 72 e poi esce dal segmento non riceverà le campagne. **Rifinitura opzionale se servisse**: azione Update Profile `vip_promise = true` nel ramo Above del 72 + audience campagne = segmento OR vip_promise. Da valutare solo se il churn dal segmento si rivelasse significativo.
+
 ## Requisiti operativi da verificare
 
 - [x] **Marketing Analytics attivato** — trial 30gg avviato (Andrea, 2026-06-18)
