@@ -162,7 +162,8 @@ Recensioni verificate dal CSV `context/20260511 paleocomplex export-reviews.csv`
 
 Ciao [NOME]
 
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. 
+Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
 
 Sono passate circa 2-3 settimane da quando hai iniziato il tuo Youth. È un momento interessante: alcune persone iniziano a notare qualcosa, altre sono ancora nella fase di pazienza che ti aveva descritto Lorenzo. In entrambi i casi può essere utile leggere le esperienze di chi è passato dallo stesso punto in cui sei tu adesso.
 

@@ -1,6 +1,6 @@
-**Versione:** 3.1
-**Ultimo aggiornamento:** 2026-06-05
-**Status:** Bozza v3 — in attesa review Andrea
+**Versione:** 3.2
+**Ultimo aggiornamento:** 2026-07-17
+**Status:** LIVE (`YimR66`) — v3.2: documentato lo stato reale del trigger + risolto il bug del segmento (unghie/capelli e D3+K2 non entravano)
 
 # Flow 4: Authority Flow
 
@@ -28,13 +28,24 @@ Topic selezionati dai dati di performance delle vecchie 157 email educative:
 | Vitamina D + cofattori | €1.125 | 24,1% | Pillar topic del brand, filosofia Lorenzo |
 | Metilazione/MTHFR | €1.168 | 23,7% | Differenziatore tecnico (forme attivate) |
 
-## Configurazione Klaviyo
+## Configurazione Klaviyo (stato reale verificato 2026-07-17)
 
-**Trigger:** Completamento Welcome Kit Benessere (flow 2) OPPURE Welcome Unghie/Capelli (flow 3) + non ha acquistato
+**Flow ID:** `YimR66` — `live`
+**Trigger:** segmento `Sjna4H` = "welcome completato (02 kit + 03 unghie-capelli + 07 d3k2)"
 **Mittente:** Lorenzo Zarone (tutte le email)
-**Filtri profilo:**
-- Has Placed Order zero times over all time
-- Has completed Welcome flow
+**Filtro di flow:** `Placed Order` (`Yx2zYn`) count = 0, timeframe `flow-start`
+
+**Come funziona l'handoff dai welcome:** ogni welcome termina con un'azione `update-profile` che scrive una property booleana `flow-XX-...-completed = true`. Il segmento `Sjna4H` fa OR su quelle property. Il meccanismo è affidabile anche come filtro "non ha comprato": tutti i welcome hanno il filtro `Placed Order = 0 since flow-start`, quindi chi acquista durante il welcome esce prima dell'ultimo step e **non viene mai taggato completed**.
+
+| Welcome | Property scritta | In Authority |
+|---------|------------------|--------------|
+| `02-welcome-kit-benessere` (`TtW2bf`) | `flow-02-welcome-kit-benessere-completed` | ✅ |
+| `03-welcome-unghie-capelli` (`VuzNGC`) | `flow-03-welcome-unghie-capelli-completed` | ✅ (dal 17/7/2026) |
+| `07-welcome-d3-k2` (`SuFKGT`) | `flow-07-welcome-d3-k2-completed` | ✅ (dal 17/7/2026) |
+
+⚠️ **Bug storico risolto il 17/7/2026** (trovato da Andrea): il segmento conteneva SOLO la property del flow 02, quindi i **286 completer di unghie/capelli non sono mai entrati in Authority**, pur essendo previsto dal piano. I 286 storici NON sono stati nurturati per scelta (solo i nuovi da adesso): le modifiche manuali alla definizione di un segmento non triggerano i flow, servirebbe la funzione esplicita "add past profiles". Se un domani si volessero recuperare, è quella la leva, ed è una decisione deliberata da prendere.
+
+⚠️ **Se si aggiunge un nuovo welcome/lead magnet**: NON basta creare il flow. Vanno fatte 2 cose — (1) l'ultima azione del welcome deve scrivere `flow-XX-...-completed = true`, (2) quella property va aggiunta in OR nel segmento `Sjna4H`. Altrimenti i lead si fermano lì.
 
 **Uscita dal flow:**
 - Se acquista durante il flow → esce e entra nel Post Purchase New Customer (flow 6)

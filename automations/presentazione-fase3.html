@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paleocomplex — Fase 3: Retention &amp; Lifecycle con l'AI di Klaviyo</title>
+<!--
+  v1.0 — 22 luglio 2026
+  Pagina dedicata Fase 3 automazioni Klaviyo (flow 71-78). Collegata a presentazione-lorenzo-automazioni.html (overview).
+  Fonti: output/automations/fase3/00-mappatura-fase3.md v2.0 + doc flow 71-78 (versioni al 22/7).
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root{
+    --paper:#FAFAF7; --ink:#1A1A1A; --ink2:#4A4A4A; --ink3:#6A6A6A;
+    --taupe:#A0998A; --sand:#C4BFB3; --line:#E5E2DA; --fill:#F0EDE5; --card:#FFFFFF;
+    --gold:#C29A45; --gold2:#A9843A; --gold3:#7D6222; --goldbg:#F7EEDC;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  .header { background: var(--ink); color: var(--paper); padding: 60px 0 50px; text-align: center; }
+  .header .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+  .header .subtitle { font-size: 15px; font-weight: 300; color: var(--taupe); letter-spacing: 1px; max-width: 560px; margin: 0 auto; }
+  .header .version { font-size: 11px; color: #6A6A6A; margin-top: 16px; letter-spacing: 1px; }
+  .header .back { display: inline-block; margin-top: 20px; font-size: 12px; color: var(--taupe); text-decoration: none; letter-spacing: 0.5px; }
+  .header .back:hover { color: var(--paper); }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  .section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--taupe); margin-bottom: 20px; }
+  .section h2 { font-size: 22px; font-weight: 500; margin-bottom: 24px; line-height: 1.3; }
+  .section p { font-size: 15px; color: var(--ink2); margin-bottom: 16px; max-width: 680px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 32px 0; }
+  .stat { text-align: center; padding: 28px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; }
+  .stat .number { font-size: 36px; font-weight: 600; line-height: 1; }
+  .stat .number em { font-style: normal; color: var(--gold2); }
+  .stat .label { font-size: 12px; color: var(--taupe); margin-top: 8px; letter-spacing: 0.5px; }
+  .stat .detail { font-size: 11px; color: var(--sand); margin-top: 4px; }
+
+  .ai-pill { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 3px 8px; border-radius: 10px; background: var(--gold); color: var(--ink); text-transform: uppercase; white-space: nowrap; }
+  .noai-pill { font-size: 10px; font-weight: 600; letter-spacing: 1px; padding: 3px 8px; border-radius: 10px; background: var(--fill); color: var(--ink3); text-transform: uppercase; white-space: nowrap; }
+
+  /* Lifecycle */
+  .lifecycle { margin: 32px 0; position: relative; }
+  .lc-step { display: flex; gap: 20px; padding: 16px 0; position: relative; }
+  .lc-step:not(:last-child)::after { content: ''; position: absolute; left: 17px; top: 56px; bottom: -8px; width: 1px; background: var(--line); }
+  .lc-dot { width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; flex-shrink: 0; position: relative; z-index: 1; }
+  .lc-dot.gold { background: var(--gold); color: var(--ink); }
+  .lc-body { flex: 1; padding-top: 4px; }
+  .lc-who { font-size: 14px; font-weight: 600; }
+  .lc-flows { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .lc-flow { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; font-size: 12px; color: var(--ink2); max-width: 340px; }
+  .lc-flow.ai { border-left: 3px solid var(--gold); }
+  .lc-flow strong { display: block; font-size: 13px; color: var(--ink); margin-bottom: 2px; }
+  .lc-note { font-size: 12px; color: var(--taupe); margin-top: 6px; font-style: italic; }
+
+  /* Flow cards */
+  .flow-card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; margin-bottom: 14px; padding: 22px 24px; }
+  .flow-card.ai { border-left: 3px solid var(--gold); }
+  .flow-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .flow-id { font-size: 13px; font-weight: 700; color: var(--taupe); }
+  .flow-name { font-size: 15px; font-weight: 600; }
+  .flow-state { font-size: 10px; padding: 2px 8px; border-radius: 10px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; margin-left: auto; }
+  .flow-state.live { background: var(--ink); color: var(--paper); }
+  .flow-state.ready { background: var(--fill); color: var(--ink); }
+  .flow-state.wait { background: transparent; color: var(--taupe); border: 1px solid var(--line); }
+  .flow-obj { font-size: 13px; color: var(--ink2); margin: 8px 0 4px; max-width: 640px; }
+  .flow-aihow { font-size: 12px; color: var(--gold3); margin: 6px 0; font-weight: 500; }
+  .flow-mails { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; align-items: center; }
+  .mail-pill { font-size: 11px; padding: 4px 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; color: var(--ink2); white-space: nowrap; }
+  .mail-pill.sconto { background: var(--goldbg); border-color: var(--gold); color: var(--gold3); font-weight: 600; }
+  .mail-sep { font-size: 11px; color: var(--sand); }
+  .flow-branch { font-size: 11px; font-weight: 600; color: var(--taupe); letter-spacing: 0.5px; text-transform: uppercase; margin-right: 4px; }
+
+  /* Two-column AI vs noi */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0; }
+  .duo-col { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 26px; }
+  .duo-col.gold-col { border-top: 3px solid var(--gold); }
+  .duo-col.ink-col { border-top: 3px solid var(--ink); }
+  .duo-col h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .duo-col .sub { font-size: 11px; color: var(--taupe); margin-bottom: 16px; letter-spacing: 0.5px; }
+  .duo-col ul { list-style: none; }
+  .duo-col li { font-size: 13px; color: var(--ink2); padding: 8px 0; border-bottom: 1px solid var(--fill); line-height: 1.5; }
+  .duo-col li:last-child { border-bottom: none; }
+  .duo-col li strong { color: var(--ink); }
+  .duo-col li .tag { font-size: 10px; color: var(--taupe); }
+
+  /* Discount chart */
+  .chart-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 28px; margin: 28px 0; }
+  .chart-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .chart-sub { font-size: 12px; color: var(--ink3); margin-bottom: 24px; }
+  .dchart { display: flex; align-items: flex-end; gap: 18px; height: 150px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+  .dcol { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .dval { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .dbar { width: 100%; max-width: 56px; background: var(--gold); border-radius: 4px 4px 0 0; }
+  .dbar.zero { height: 3px; background: var(--sand); border-radius: 0; }
+  .dlabels { display: flex; gap: 18px; margin-top: 10px; }
+  .dlabel { flex: 1; text-align: center; font-size: 11px; color: var(--ink3); line-height: 1.4; }
+  .dlabel strong { display: block; color: var(--ink); font-size: 12px; }
+  .chart-note { margin-top: 20px; background: var(--goldbg); border-left: 3px solid var(--gold); padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 12px; color: var(--ink2); }
+
+  /* Anti-sormonto */
+  .guard { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px; margin-bottom: 10px; flex-wrap: wrap; }
+  .guard .gflow { font-size: 12px; font-weight: 600; padding: 6px 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; white-space: nowrap; }
+  .guard .ggap { flex: 1; min-width: 130px; text-align: center; font-size: 11px; font-weight: 600; color: var(--gold3); position: relative; padding: 0 6px; }
+  .guard .ggap::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed var(--sand); z-index: 0; }
+  .guard .ggap span { position: relative; z-index: 1; background: var(--card); padding: 0 10px; }
+  .guard .gwhy { width: 100%; font-size: 11px; color: var(--taupe); margin-top: 2px; }
+
+  /* Config cards */
+  .configs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0; }
+  .config { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px 22px; }
+  .config h4 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .config p { font-size: 12px; color: var(--ink3); margin: 0; line-height: 1.55; }
+  .config .k { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold2); display: block; margin-bottom: 8px; }
+
+  /* Roadmap */
+  .road { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+  .rstep { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 22px; }
+  .rstep.now { border-color: var(--ink); }
+  .rstep .rwhen { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--taupe); margin-bottom: 8px; }
+  .rstep.now .rwhen { color: var(--ink); }
+  .rstep h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .rstep p { font-size: 12px; color: var(--ink3); margin: 0; line-height: 1.5; }
+
+  /* KPI */
+  .kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px 22px; }
+  .kpi h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .kpi p { font-size: 12px; color: var(--ink3); margin: 0; }
+
+  /* CTA */
+  .cta-section { background: var(--ink); color: var(--paper); padding: 56px 32px; text-align: center; border-radius: 4px; margin: 32px 0; }
+  .cta-section h2 { font-size: 22px; font-weight: 500; margin-bottom: 12px; color: var(--paper); }
+  .cta-section p { font-size: 14px; color: var(--taupe); max-width: 540px; margin: 0 auto 28px; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .cta-button { display: inline-block; padding: 14px 28px; background: var(--paper); color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px; transition: opacity 0.2s; }
+  .cta-button:hover { opacity: 0.85; }
+  .cta-button.secondary { background: transparent; color: var(--paper); border: 1px solid var(--taupe); }
+
+  .footer { text-align: center; padding: 40px 0; font-size: 12px; color: var(--sand); border-top: 1px solid var(--line); }
+  .footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+
+  @media (max-width: 768px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .duo { grid-template-columns: 1fr; }
+    .configs { grid-template-columns: 1fr; }
+    .road { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: 1fr; }
+    .dchart { gap: 8px; }
+    .dlabels { gap: 8px; }
+    .flow-state { margin-left: 0; }
+    .mail-pill, .ai-pill, .noai-pill, .guard .gflow { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="eyebrow">Fase 3 · Retention &amp; Lifecycle</div>
+    <h1>Paleocomplex</h1>
+    <div class="subtitle">Vendere di più a chi ha già comprato, con l'AI di Klaviyo. Senza bruciare margine.</div>
+    <div class="version">v1.0 · 22 luglio 2026</div>
+    <br>
+    <a class="back" href="presentazione-lorenzo-automazioni.html">← Torna al quadro generale</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- NUMERI -->
+  <div class="section">
+    <div class="section-label">In sintesi</div>
+    <h2>Un sistema che segue ogni cliente per tutto il suo ciclo di vita</h2>
+    <p>Ogni cliente ha tempi suoi: c'è chi riordina dopo 30 giorni e chi dopo 90. La Fase 3 non manda le stesse email a tutti nello stesso momento: lascia che sia il machine learning di Klaviyo a calcolare, cliente per cliente, quando scrivere, a chi e cosa proporre.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="number">7</div>
+        <div class="label">Flow</div>
+        <div class="detail">21 email totali</div>
+      </div>
+      <div class="stat">
+        <div class="number"><em>3</em></div>
+        <div class="label">Motori AI Klaviyo</div>
+        <div class="detail">Predictive · RFM · Catalog</div>
+      </div>
+      <div class="stat">
+        <div class="number">2.895</div>
+        <div class="label">Clienti analizzati</div>
+        <div class="detail">per calibrare le soglie</div>
+      </div>
+      <div class="stat">
+        <div class="number">0<span style="font-size:20px">%</span></div>
+        <div class="label">Sconto a chi ricomprerebbe comunque</div>
+        <div class="detail">margine protetto</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIFECYCLE -->
+  <div class="section">
+    <div class="section-label">Il ciclo di vita</div>
+    <h2>Un flow per ogni momento del cliente</h2>
+
+    <div class="lifecycle">
+      <div class="lc-step">
+        <div class="lc-dot">1°</div>
+        <div class="lc-body">
+          <div class="lc-who">Ha fatto il primo ordine</div>
+          <div class="lc-flows">
+            <div class="lc-flow"><strong>71 · First-Order Reorder</strong>Reminder di riordino calibrato sulla durata reale del pack (30 / 60 / 150 giorni)</div>
+          </div>
+          <div class="lc-note">Appena riordina, esce e diventa cliente ricorrente.</div>
+        </div>
+      </div>
+
+      <div class="lc-step">
+        <div class="lc-dot gold">2+</div>
+        <div class="lc-body">
+          <div class="lc-who">Ordina regolarmente</div>
+          <div class="lc-flows">
+            <div class="lc-flow ai"><strong>72 · AI Repeat Purchase</strong>L'AI prevede la data del suo prossimo ordine e il reminder arriva proprio lì</div>
+            <div class="lc-flow ai"><strong>78 · Cross-Sell AI</strong>L'AI sceglie il prodotto da proporgli e il giorno giusto per farlo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lc-step">
+        <div class="lc-dot gold">!</div>
+        <div class="lc-body">
+          <div class="lc-who">Sta rallentando</div>
+          <div class="lc-flows">
+            <div class="lc-flow ai"><strong>73 · RFM Winback</strong>Klaviyo riclassifica tutti i clienti ogni notte: chi risulta "a rischio" riceve il recupero, calibrato sul suo valore storico</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lc-step">
+        <div class="lc-dot">zZ</div>
+        <div class="lc-body">
+          <div class="lc-who">Sparito da 6 mesi</div>
+          <div class="lc-flows">
+            <div class="lc-flow"><strong>75 · Sunset Cliente Storico</strong>Ultima lettera senza pressione + BENTORNATO20. Se non risponde: newsletter mensile, mai cancellato</div>
+            <div class="lc-flow"><strong>74 · Sunset Lead</strong>Per chi non ha mai comprato né aperto nulla: ultima chance col 20%, poi esce dalla lista</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lc-step">
+        <div class="lc-dot">↺</div>
+        <div class="lc-body">
+          <div class="lc-who">Aspetta un prodotto esaurito</div>
+          <div class="lc-flows">
+            <div class="lc-flow"><strong>76 · Back in Stock</strong>Notifica immediata al restock, priorità su tutto</div>
+          </div>
+          <div class="lc-note">In qualsiasi punto del ciclo: ogni riacquisto riporta il cliente in cima.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI VS NOI -->
+  <div class="section">
+    <div class="section-label">Come funziona</div>
+    <h2>Cosa calcola l'AI da sola, cosa abbiamo configurato noi</h2>
+
+    <div class="duo">
+      <div class="duo-col gold-col">
+        <h3>L'AI di Klaviyo calcola</h3>
+        <div class="sub">AGGIORNATO IN AUTOMATICO, CLIENTE PER CLIENTE</div>
+        <ul>
+          <li><strong>Data prevista del prossimo ordine</strong> — sul pattern personale di ciascuno <span class="tag">· ogni settimana</span></li>
+          <li><strong>Valore futuro previsto (CLV)</strong> — quanto spenderà nei prossimi 12 mesi <span class="tag">· ogni settimana</span></li>
+          <li><strong>Classificazione RFM in 6 gruppi</strong> — da Champions a Inactive <span class="tag">· ogni notte</span></li>
+          <li><strong>Miglior data di cross-sell</strong> — quando i clienti simili aggiungono un prodotto <span class="tag">· ogni giorno</span></li>
+          <li><strong>Prossimo prodotto migliore</strong> — cosa proporre a quel cliente specifico <span class="tag">· a ogni ordine</span></li>
+        </ul>
+      </div>
+      <div class="duo-col ink-col">
+        <h3>Noi abbiamo impostato</h3>
+        <div class="sub">DECISIONI DI BUSINESS, CALIBRATE SUI DATI REALI</div>
+        <ul>
+          <li><strong>Le soglie di valore cliente</strong> — 150€ e 450€, calcolate via API sui 2.895 clienti ricorrenti reali, non a sentimento</li>
+          <li><strong>La strategia sconti</strong> — dove sì, dove no, e quanto</li>
+          <li><strong>I filtri anti-sovrapposizione</strong> — mai due recuperi sullo stesso cliente</li>
+          <li><strong>Chi firma cosa</strong> — Lorenzo per i clienti top, Flaminia per il customer care</li>
+          <li><strong>Tutto il copy</strong> — 21 email, con A/B test su 3 varianti di oggetto ciascuna</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- I 7 FLOW -->
+  <div class="section">
+    <div class="section-label">I 7 flow</div>
+    <h2>Trigger, email e sconti di ciascuno</h2>
+
+    <div class="flow-card">
+      <div class="flow-head">
+        <span class="flow-id">71</span>
+        <span class="flow-name">First-Order Reorder</span>
+        <span class="noai-pill">Timing fisso</span>
+        <span class="flow-state live">Live dal 22/7</span>
+      </div>
+      <div class="flow-obj">Il primo riacquisto è il punto dove si perdono più clienti. Il reminder arriva quando il pack sta finendo davvero: il countdown parte dalla consegna, non dall'ordine.</div>
+      <div class="flow-mails">
+        <span class="flow-branch">Pack 30gg</span>
+        <span class="mail-pill">T+25</span><span class="mail-sep">→</span><span class="mail-pill">T+30</span>
+        <span class="flow-branch" style="margin-left:10px">Pack 60gg</span>
+        <span class="mail-pill">T+50</span><span class="mail-sep">→</span><span class="mail-pill">T+58</span>
+        <span class="flow-branch" style="margin-left:10px">Vitamina D</span>
+        <span class="mail-pill">T+120</span>
+      </div>
+      <div class="flow-mails" style="margin-top:8px"><span class="mail-pill">Zero sconti: il nuovo cliente non va educato allo sconto</span></div>
+    </div>
+
+    <div class="flow-card ai">
+      <div class="flow-head">
+        <span class="flow-id">72</span>
+        <span class="flow-name">AI Repeat Purchase</span>
+        <span class="ai-pill">Predictive AI</span>
+        <span class="flow-state wait">Attivo con 60-90gg di dati</span>
+      </div>
+      <div class="flow-obj">Dal secondo ordine in poi, l'AI prevede la data del prossimo acquisto di ogni singolo cliente: l'email parte proprio quel giorno, al picco di propensione.</div>
+      <div class="flow-aihow">Split sul valore previsto: 837 clienti VIP (≥150€) ricevono la voce di Lorenzo con early access; gli altri 2.058 il nurturing di Flaminia con social proof.</div>
+      <div class="flow-mails">
+        <span class="flow-branch">VIP</span>
+        <span class="mail-pill">Giorno previsto</span><span class="mail-sep">→</span><span class="mail-pill">+7gg</span>
+        <span class="flow-branch" style="margin-left:10px">Standard</span>
+        <span class="mail-pill">Giorno previsto</span><span class="mail-sep">→</span><span class="mail-pill">+7gg</span>
+        <span class="mail-pill" style="margin-left:10px">Zero sconti: sta già per comprare</span>
+      </div>
+    </div>
+
+    <div class="flow-card ai">
+      <div class="flow-head">
+        <span class="flow-id">73</span>
+        <span class="flow-name">RFM Winback</span>
+        <span class="ai-pill">RFM AI</span>
+        <span class="flow-state ready">Pronto per il montaggio</span>
+      </div>
+      <div class="flow-obj">Ogni notte Klaviyo riclassifica tutti i clienti. Chi scivola in "At Risk" o "Needs Attention" entra nel recupero, prima che sia troppo tardi.</div>
+      <div class="flow-aihow">Split sul valore storico (450€ = mediana reale): i top spender ricevono prima due lettere personali di Lorenzo, lo sconto è solo l'ultima leva.</div>
+      <div class="flow-mails">
+        <span class="flow-branch">Top spender</span>
+        <span class="mail-pill">T+0</span><span class="mail-sep">→</span><span class="mail-pill">+7gg</span><span class="mail-sep">→</span><span class="mail-pill sconto">+14gg · 15%</span>
+        <span class="flow-branch" style="margin-left:10px">Standard</span>
+        <span class="mail-pill sconto">T+0 · 10%</span><span class="mail-sep">→</span><span class="mail-pill">+10gg</span>
+      </div>
+    </div>
+
+    <div class="flow-card">
+      <div class="flow-head">
+        <span class="flow-id">74</span>
+        <span class="flow-name">Sunset Lead</span>
+        <span class="noai-pill">Comportamentale</span>
+        <span class="flow-state ready">Pronto per il montaggio</span>
+      </div>
+      <div class="flow-obj">Iscritti da 6+ mesi che non hanno mai comprato né aperto nulla: ultima chance di conversione, poi escono dalla lista. Meno costi, migliore deliverability.</div>
+      <div class="flow-mails">
+        <span class="mail-pill">T+0 · mi senti ancora?</span><span class="mail-sep">→</span><span class="mail-pill sconto">+7gg · 20%</span><span class="mail-sep">→</span><span class="mail-pill sconto">+14gg · reminder</span><span class="mail-sep">→</span><span class="mail-pill">+17gg · uscita selettiva</span>
+      </div>
+      <div class="flow-mails" style="margin-top:8px"><span class="mail-pill">Un solo click o apertura salva il profilo dalla rimozione</span></div>
+    </div>
+
+    <div class="flow-card">
+      <div class="flow-head">
+        <span class="flow-id">75</span>
+        <span class="flow-name">Sunset Cliente Storico</span>
+        <span class="noai-pill">Comportamentale</span>
+        <span class="flow-state ready">Pronto per il montaggio</span>
+      </div>
+      <div class="flow-obj">Chi ha comprato almeno una volta ma tace da 6 mesi merita rispetto, non pressione: lettera del fondatore, BENTORNATO20 senza scadenza, e se non risponde passa a frequenza mensile. Mai cancellato.</div>
+      <div class="flow-mails">
+        <span class="mail-pill sconto">T+0 · lettera + 20%</span><span class="mail-sep">→</span><span class="mail-pill">+14gg · customer care</span><span class="mail-sep">→</span><span class="mail-pill">+44gg · frequenza ridotta</span>
+      </div>
+    </div>
+
+    <div class="flow-card">
+      <div class="flow-head">
+        <span class="flow-id">76</span>
+        <span class="flow-name">Back in Stock</span>
+        <span class="noai-pill">Event-based</span>
+        <span class="flow-state ready">Pronto (serve widget sul sito)</span>
+      </div>
+      <div class="flow-obj">Chi chiede "avvisami" su un prodotto esaurito riceve la notifica nell'istante del restock. Finestra d'interesse di 24-48h, conversione altissima.</div>
+      <div class="flow-mails">
+        <span class="mail-pill">Immediata al restock</span>
+        <span class="mail-pill">Priorità assoluta: passa davanti a tutte le altre email</span>
+      </div>
+    </div>
+
+    <div class="flow-card ai">
+      <div class="flow-head">
+        <span class="flow-id">78</span>
+        <span class="flow-name">Cross-Sell Data-Driven</span>
+        <span class="ai-pill">Catalog AI</span>
+        <span class="flow-state wait">Attivo con 60-90gg di dati</span>
+      </div>
+      <div class="flow-obj">L'unico punto di cross-sell di tutto il sistema. Una sola email, ma per ogni cliente l'AI decide il prodotto da mostrare e il giorno in cui inviarla.</div>
+      <div class="flow-aihow">Doppio motore: "Best Cross-Sell Date" fissa la data, "Next Best Product" compone l'email con il prodotto giusto per quel profilo.</div>
+      <div class="flow-mails">
+        <span class="mail-pill">Data personalizzata, ore 10:00</span>
+        <span class="mail-pill sconto">10€ fissi per la prima prova</span>
+        <span class="mail-pill">Max una ogni 6 mesi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCONTI -->
+  <div class="section">
+    <div class="section-label">Strategia sconti</div>
+    <h2>Lo sconto cresce con la distanza del cliente, mai con la vicinanza</h2>
+    <p>Si sconta solo dove il cliente non comprerebbe da solo. Chi sta già per riordinare non riceve sconti: riceverli lo educherebbe ad aspettarli.</p>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Sconto per momento del ciclo di vita</div>
+      <div class="chart-sub">Più il cliente si allontana, più l'incentivo cresce</div>
+      <div class="dchart">
+        <div class="dcol"><div class="dval">0%</div><div class="dbar zero"></div></div>
+        <div class="dcol"><div class="dval">0%</div><div class="dbar zero"></div></div>
+        <div class="dcol"><div class="dval">10-15%</div><div class="dbar" style="height:52%"></div></div>
+        <div class="dcol"><div class="dval">20%</div><div class="dbar" style="height:75%"></div></div>
+        <div class="dcol"><div class="dval">20%</div><div class="dbar" style="height:75%"></div></div>
+      </div>
+      <div class="dlabels">
+        <div class="dlabel"><strong>71</strong>Primo riordino</div>
+        <div class="dlabel"><strong>72</strong>Riordino previsto</div>
+        <div class="dlabel"><strong>73</strong>Cliente a rischio</div>
+        <div class="dlabel"><strong>74</strong>Lead in uscita</div>
+        <div class="dlabel"><strong>75</strong>Cliente dormiente</div>
+      </div>
+      <div class="chart-note"><strong>Caso a parte — Flow 78:</strong> 10€ fissi sulla prova di un prodotto nuovo. Lì l'incrementalità è reale: si abbatte la barriera della prima volta, su tutto il catalogo.</div>
+    </div>
+  </div>
+
+  <!-- ANTI-SORMONTO -->
+  <div class="section">
+    <div class="section-label">Coordinamento</div>
+    <h2>Mai due recuperi sullo stesso cliente</h2>
+    <p>Sette flow che parlano agli stessi clienti si pesterebbero i piedi. Ogni sovrapposizione possibile è chiusa da un filtro di esclusione.</p>
+
+    <div class="guard">
+      <span class="gflow">72 · Riordino AI</span>
+      <span class="ggap"><span>gap 30 giorni</span></span>
+      <span class="gflow">73 · Winback</span>
+      <span class="gwhy">Il winback parte solo se il reminder AI ha già avuto il suo tempo</span>
+    </div>
+    <div class="guard">
+      <span class="gflow">73 · Winback</span>
+      <span class="ggap"><span>gap 60 giorni</span></span>
+      <span class="gflow">75 · Sunset</span>
+      <span class="gwhy">La lettera d'addio aspetta che il recupero abbia potuto rispondere</span>
+    </div>
+    <div class="guard">
+      <span class="gflow">71 · Primo riordino</span>
+      <span class="ggap"><span>esclusione 365 giorni</span></span>
+      <span class="gflow">72 · Riordino AI</span>
+      <span class="gwhy">Chi ha già ricevuto il reminder da primo cliente non riceve il doppione AI</span>
+    </div>
+    <div class="guard">
+      <span class="gflow">72 · Riordino AI</span>
+      <span class="ggap"><span>esclusione reciproca</span></span>
+      <span class="gflow">78 · Cross-sell AI</span>
+      <span class="gwhy">Mai un riordino e un cross-sell nello stesso momento</span>
+    </div>
+  </div>
+
+  <!-- CONFIGURAZIONI -->
+  <div class="section">
+    <div class="section-label">Sotto il cofano</div>
+    <h2>Le configurazioni di precisione</h2>
+
+    <div class="configs">
+      <div class="config">
+        <span class="k">Soglie sui dati reali</span>
+        <h4>Niente numeri a sentimento</h4>
+        <p>Le soglie di valore cliente (150€ e 450€) sono calcolate via API sui 2.895 clienti ricorrenti reali. La prima soglia ipotizzata (300€) mandava il 66% dei clienti nel ramo sbagliato: i dati l'hanno corretta. Ricalcolo ogni 3-6 mesi.</p>
+      </div>
+      <div class="config">
+        <span class="k">Coupon univoci</span>
+        <h4>Un codice per ogni persona</h4>
+        <p>Klaviyo genera un codice personale per profilo (RP10-, WB15-, SL20-, NP10-), collegato a WooCommerce, valido 14 giorni esatti dalla ricezione. Zero codici condivisi sui forum, zero manutenzione.</p>
+      </div>
+      <div class="config">
+        <span class="k">Trigger anti-loop</span>
+        <h4>Date predittive senza doppioni</h4>
+        <p>I flow AI partono da una data calcolata che Klaviyo ricalcola ogni settimana: senza la configurazione "trigger frequency: never" ripartirebbero in loop a ogni ricalcolo. Impostata su entrambi.</p>
+      </div>
+      <div class="config">
+        <span class="k">Uscite automatiche</span>
+        <h4>Chi compra esce subito</h4>
+        <p>Ogni flow controlla a ogni passo se il cliente ha ordinato: al primo acquisto esce immediatamente da tutto il percorso. Nessuna email di recupero a chi è già tornato.</p>
+      </div>
+      <div class="config">
+        <span class="k">Rimozione selettiva</span>
+        <h4>Si rimuove solo chi è davvero sparito</h4>
+        <p>Nel sunset dei lead, un solo click o apertura in 3 email salva il profilo. E i clienti storici non vengono mai rimossi: passano a una newsletter mensile dedicata.</p>
+      </div>
+      <div class="config">
+        <span class="k">Montaggio via API</span>
+        <h4>Costruiti a macchina, verificati a mano</h4>
+        <p>Flow montati via API con template validato: UTM su ogni email per il tracking, 3 varianti A/B di oggetto ciascuna, mittenti e split verificati sugli eventi reali del negozio.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div class="section">
+    <div class="section-label">Stato e prossimi passi</div>
+    <h2>Attivazione in tre onde</h2>
+
+    <div class="road">
+      <div class="rstep now">
+        <div class="rwhen">Adesso</div>
+        <h4>71 live</h4>
+        <p>First-Order Reorder attivo dal 22 luglio. È la rete di sicurezza sul punto di churn più alto: il primo riacquisto.</p>
+      </div>
+      <div class="rstep">
+        <div class="rwhen">Prossime settimane</div>
+        <h4>73 · 74 · 75 · 76</h4>
+        <p>Winback, i due sunset e back in stock: scritti e pronti, si montano e si attivano in sequenza.</p>
+      </div>
+      <div class="rstep">
+        <div class="rwhen">Con 60-90gg di dati</div>
+        <h4>72 · 78 (i flow AI)</h4>
+        <p>Predictive e Catalog Insights hanno bisogno di storico per prevedere bene: i due flow AI si accendono quando i dati ci sono.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="section">
+    <div class="section-label">Misurazione</div>
+    <h2>Cosa guardiamo per capire se funziona</h2>
+
+    <div class="kpis">
+      <div class="kpi"><h4>Revenue dei flow AI (72 + 78)</h4><p>È fatturato incrementale che prima non esisteva: decide se il piano Klaviyo avanzato si ripaga.</p></div>
+      <div class="kpi"><h4>Conversione del cross-sell</h4><p>Sopra il 5% è un ottimo risultato per email singola automatica.</p></div>
+      <div class="kpi"><h4>Clienti recuperati dal winback</h4><p>Quanti "At Risk" tornano attivi grazie al Flow 73.</p></div>
+      <div class="kpi"><h4>Tasso di riordino del primo cliente</h4><p>L'effetto del Flow 71 sul passaggio dal primo al secondo ordine.</p></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Tutte le email sono già scritte</h2>
+    <p>21 email complete di oggetti, A/B test, contenuti dinamici e coupon. Ogni flow ha il suo documento tecnico su GitHub.</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/giavara/paleo/tree/main/automations/fase3" class="cta-button" target="_blank">Leggi le email della Fase 3</a>
+      <a href="presentazione-lorenzo-automazioni.html" class="cta-button secondary">Torna al quadro generale</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Paleocomplex — Fase 3 Retention &amp; Lifecycle — luglio 2026</p>
+    <p style="margin-top: 4px;">Repository: <a href="https://github.com/giavara/paleo" target="_blank">github.com/giavara/paleo</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -156,7 +156,9 @@ Recensioni dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro
 
 Ciao [NOME]
 
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. 
+
+Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
 
 Sono passate circa 2-3 settimane da quando hai iniziato il tuo Renaissance. Su questo prodotto voglio essere trasparente con te: è un integratore particolare e i tempi di valutazione sono più lunghi di un multivitaminico.
 

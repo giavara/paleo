@@ -154,9 +154,11 @@ Recensioni verificate dal CSV `context/20260511 paleocomplex export-reviews.csv`
 
 Ciao [NOME]
 
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. 
 
-Sono passate circa 2-3 settimane da quando hai iniziato il tuo Armageddon. Su un prodotto come questo, dove l'effetto si misura sul recupero più che sulla "sensazione", 2-3 settimane sono il momento giusto per cominciare a vedere differenze.
+Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+
+Sono passate circa 2-3 settimane da quando hai iniziato il tuo Armageddon. Su un prodotto come questo, dove l'effetto si misura sul recupero più che sulla "sensazione", 2-3 settimane sono il momento giusto per **cominciare a vedere differenze**.
 
 Ti lascio le esperienze di chi lo ha provato prima di te:
 

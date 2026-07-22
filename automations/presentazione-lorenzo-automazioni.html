@@ -4,673 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paleocomplex — Automazioni Email Klaviyo</title>
+<!--
+  v7.0 — 22 luglio 2026
+  Changelog:
+  v7 — riscrittura visual-first: pagina overview delle 3 fasi (obiettivi, flow, email, stato aggiornato al 22/7),
+       stacked bar email per fase, percorso cliente compatto, link alla nuova pagina dedicata Fase 3
+       (presentazione-fase3.html). Rimossi: dual-track dettagliato, matrice cross-sell (superata dal Flow 78 AI),
+       sezione metodo estesa. Numeri ricalcolati dai doc: 31 flow attivi, 101 email.
+  v6 — 18 giugno 2026 (versione precedente, recuperabile da Git)
+-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+  :root{
+    --paper:#FAFAF7; --ink:#1A1A1A; --ink2:#4A4A4A; --ink3:#6A6A6A;
+    --taupe:#A0998A; --sand:#C4BFB3; --line:#E5E2DA; --fill:#F0EDE5; --card:#FFFFFF;
+    --gold:#C29A45; --gold2:#A9843A; --gold3:#7D6222;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Inter', -apple-system, sans-serif;
-    background: #FAFAF7;
-    color: #1A1A1A;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    background: var(--paper); color: var(--ink);
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
   }
 
-  /* Header */
-  .header {
-    background: #1A1A1A;
-    color: #FAFAF7;
-    padding: 60px 0 50px;
-    text-align: center;
-  }
-  .header h1 {
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .header .subtitle {
-    font-size: 15px;
-    font-weight: 300;
-    color: #A0998A;
-    letter-spacing: 1px;
-  }
-  .header .version {
-    font-size: 11px;
-    color: #6A6A6A;
-    margin-top: 16px;
-    letter-spacing: 1px;
-  }
+  .header { background: var(--ink); color: var(--paper); padding: 60px 0 50px; text-align: center; }
+  .header h1 { font-size: 28px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+  .header .subtitle { font-size: 15px; font-weight: 300; color: var(--taupe); letter-spacing: 1px; }
+  .header .version { font-size: 11px; color: #6A6A6A; margin-top: 16px; letter-spacing: 1px; }
 
-  /* Container */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
-
-  /* Section */
-  .section {
-    padding: 56px 0;
-    border-bottom: 1px solid #E5E2DA;
-  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  .section { padding: 56px 0; border-bottom: 1px solid var(--line); }
   .section:last-child { border-bottom: none; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--taupe); margin-bottom: 20px; }
+  .section h2 { font-size: 22px; font-weight: 500; margin-bottom: 24px; line-height: 1.3; }
+  .section p { font-size: 15px; color: var(--ink2); margin-bottom: 16px; max-width: 680px; }
 
-  .section-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #A0998A;
-    margin-bottom: 20px;
-  }
-  .section h2 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 24px;
-    line-height: 1.3;
-  }
-  .section p {
-    font-size: 15px;
-    color: #4A4A4A;
-    margin-bottom: 16px;
-    max-width: 680px;
-  }
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 32px 0; }
+  .stat { text-align: center; padding: 28px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; }
+  .stat .number { font-size: 36px; font-weight: 600; color: var(--ink); line-height: 1; }
+  .stat .number em { font-style: normal; color: var(--gold2); }
+  .stat .label { font-size: 12px; color: var(--taupe); margin-top: 8px; letter-spacing: 0.5px; }
+  .stat .detail { font-size: 11px; color: var(--sand); margin-top: 4px; }
 
-  /* Big numbers */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin: 32px 0;
-  }
-  .stat {
-    text-align: center;
-    padding: 28px 16px;
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-  }
-  .stat .number {
-    font-size: 36px;
-    font-weight: 600;
-    color: #1A1A1A;
-    line-height: 1;
-  }
-  .stat .label {
-    font-size: 12px;
-    color: #A0998A;
-    margin-top: 8px;
-    letter-spacing: 0.5px;
-  }
-  .stat .detail {
-    font-size: 11px;
-    color: #C4BFB3;
-    margin-top: 4px;
-  }
+  /* Stacked bar: email per fase */
+  .stackbar-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 24px; margin: 24px 0; }
+  .stackbar-title { font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+  .stackbar { display: flex; gap: 2px; height: 22px; border-radius: 4px; overflow: hidden; }
+  .stackbar .seg { height: 100%; display: flex; align-items: center; justify-content: center; }
+  .stackbar .seg span { font-size: 11px; font-weight: 600; }
+  .seg.s1 { background: var(--gold); }  .seg.s1 span { color: var(--ink); }
+  .seg.s2 { background: var(--gold2); } .seg.s2 span { color: var(--ink); }
+  .seg.s3 { background: var(--gold3); } .seg.s3 span { color: #FFFFFF; }
+  .stacklegend { display: flex; gap: 20px; margin-top: 12px; font-size: 12px; color: var(--ink3); flex-wrap: wrap; }
+  .stacklegend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  .dot.s1 { background: var(--gold); } .dot.s2 { background: var(--gold2); } .dot.s3 { background: var(--gold3); }
 
-  /* Progress tracker */
-  .progress-section {
-    margin: 32px 0;
-  }
-  .progress-bar-wrapper {
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-    padding: 24px;
-    margin-bottom: 16px;
-  }
-  .progress-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 12px;
-  }
-  .progress-title {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .progress-count {
-    font-size: 13px;
-    color: #A0998A;
-  }
-  .progress-track {
-    height: 8px;
-    background: #F0EDE5;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
-  }
-  .progress-fill-done {
-    background: #1A1A1A;
-    height: 100%;
-  }
-  .progress-fill-active {
-    background: #8A8270;
-    height: 100%;
-  }
-  .progress-legend {
-    display: flex;
-    gap: 20px;
-    margin-top: 12px;
-    font-size: 11px;
-    color: #6A6A6A;
-  }
-  .legend-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .legend-dot.done { background: #1A1A1A; }
-  .legend-dot.active { background: #8A8270; }
-  .legend-dot.pending { background: #F0EDE5; }
+  /* Pipeline (percorso cliente) */
+  .pipeline { display: flex; align-items: stretch; gap: 0; margin: 32px 0; }
+  .pipe-stage { flex: 1; text-align: center; padding: 18px 10px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; position: relative; }
+  .pipe-stage .who { font-size: 13px; font-weight: 600; }
+  .pipe-stage .what { font-size: 11px; color: var(--taupe); margin-top: 4px; line-height: 1.4; }
+  .pipe-arrow { display: flex; align-items: center; padding: 0 8px; color: var(--sand); font-size: 16px; flex-shrink: 0; }
 
-  /* Flow diagram */
-  .flow-map {
-    margin: 32px 0;
-  }
-  .phase {
-    margin-bottom: 40px;
-  }
-  .phase-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .phase-number {
-    width: 32px;
-    height: 32px;
-    background: #1A1A1A;
-    color: #FAFAF7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
-    flex-shrink: 0;
-  }
-  .phase-title {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .phase-timing {
-    font-size: 12px;
-    color: #A0998A;
-    margin-left: auto;
-  }
-  .phase-status {
-    font-size: 11px;
-    color: #FAFAF7;
-    padding: 3px 10px;
-    border-radius: 12px;
-    letter-spacing: 0.5px;
-    margin-left: 8px;
-  }
-  .phase-status.done { background: #1A1A1A; }
-  .phase-status.active { background: #8A8270; }
-  .phase-status.pending { background: #C4BFB3; }
+  /* Fase cards */
+  .fase-card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 28px; margin-bottom: 20px; }
+  .fase-card.ai { border-left: 3px solid var(--gold); }
+  .fase-top { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; flex-wrap: wrap; }
+  .fase-num { width: 36px; height: 36px; background: var(--ink); color: var(--paper); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; flex-shrink: 0; }
+  .fase-title { font-size: 16px; font-weight: 600; }
+  .fase-state { font-size: 10px; padding: 3px 10px; border-radius: 10px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; margin-left: auto; }
+  .fase-state.live { background: var(--ink); color: var(--paper); }
+  .fase-state.partial { background: var(--fill); color: var(--ink); border: 1px solid var(--line); }
+  .fase-obiettivo { font-size: 14px; color: var(--ink2); margin: 10px 0 4px; max-width: 640px; }
+  .fase-audience { font-size: 12px; color: var(--taupe); margin-bottom: 16px; }
+  .fase-metrics { display: flex; gap: 28px; margin: 16px 0; flex-wrap: wrap; }
+  .fase-metric .v { font-size: 24px; font-weight: 600; line-height: 1; }
+  .fase-metric .k { font-size: 11px; color: var(--taupe); margin-top: 3px; letter-spacing: 0.5px; }
+  .fase-flows { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .chip { font-size: 11px; padding: 4px 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; color: var(--ink2); white-space: nowrap; }
+  .chip.live { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+  .chip.aichip { border-color: var(--gold); color: var(--gold3); font-weight: 600; }
+  .fase-note { font-size: 12px; color: var(--ink3); margin-top: 14px; }
+  .fase-link { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
+  .fase-link:hover { color: var(--gold3); }
 
-  .flow-card {
-    display: flex;
-    align-items: stretch;
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    overflow: hidden;
-    transition: border-color 0.2s;
-  }
-  .flow-card:hover { border-color: #A0998A; }
-
-  .flow-badge {
-    width: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 600;
-    color: #A0998A;
-    border-right: 1px solid #E5E2DA;
-    flex-shrink: 0;
-  }
-  .flow-content {
-    flex: 1;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .flow-name {
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .flow-meta {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .flow-meta span {
-    font-size: 12px;
-    color: #A0998A;
-  }
-  .flow-emails {
-    background: #F5F4F0;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #1A1A1A;
-    flex-shrink: 0;
-  }
-  .flow-state {
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    flex-shrink: 0;
-  }
-  .flow-state.done { background: #1A1A1A; color: #FAFAF7; }
-  .flow-state.review { background: #E5E2DA; color: #1A1A1A; }
-  .flow-state.active { background: #8A8270; color: #FAFAF7; }
-  .flow-state.pending { background: transparent; color: #C4BFB3; border: 1px solid #E5E2DA; }
-
-  /* Journey */
-  .journey {
-    margin: 32px 0;
-    position: relative;
-  }
-  .journey-step {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 0;
-    padding: 20px 0;
-    position: relative;
-  }
-  .journey-step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 52px;
-    bottom: 0;
-    width: 1px;
-    background: #E5E2DA;
-  }
-  .journey-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #1A1A1A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-  .journey-dot svg { width: 14px; height: 14px; }
-  .journey-info h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .journey-info p {
-    font-size: 13px;
-    color: #A0998A;
-    margin-bottom: 0;
-  }
-  .journey-day {
-    font-size: 11px;
-    color: #C4BFB3;
-    margin-top: 2px;
-  }
-
-  /* Decision cards */
-  .decisions {
-    display: grid;
-    gap: 12px;
-    margin: 24px 0;
-  }
-  .decision {
-    display: flex;
-    gap: 16px;
-    padding: 20px 24px;
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-  }
-  .decision-icon {
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    font-weight: 600;
-  }
-  .decision h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .decision p {
-    font-size: 13px;
-    color: #6A6A6A;
-    margin-bottom: 0;
-  }
+  .ai-pill { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 3px 8px; border-radius: 10px; background: var(--gold); color: var(--ink); text-transform: uppercase; }
 
   /* Mittenti */
-  .mittenti-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 24px 0;
-  }
-  .mittente-card {
-    padding: 24px;
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-    text-align: center;
-  }
-  .mittente-card .name {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .mittente-card .role {
-    font-size: 12px;
-    color: #A0998A;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-  }
-  .mittente-card .flows {
-    font-size: 12px;
-    color: #6A6A6A;
-    line-height: 1.8;
-  }
+  .mittenti-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 24px 0; }
+  .mittente-card { padding: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; text-align: center; }
+  .mittente-card .name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .mittente-card .role { font-size: 12px; color: var(--taupe); margin-bottom: 12px; letter-spacing: 0.5px; }
+  .mittente-card .flows { font-size: 12px; color: var(--ink3); line-height: 1.8; }
 
-  /* Cross-sell matrix */
-  .matrix {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 24px 0;
-    font-size: 13px;
-  }
-  .matrix th {
-    background: #1A1A1A;
-    color: #FAFAF7;
-    padding: 10px 14px;
-    text-align: left;
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-  }
-  .matrix td {
-    padding: 10px 14px;
-    border-bottom: 1px solid #E5E2DA;
-    vertical-align: top;
-  }
-  .matrix tr:nth-child(even) td { background: #F9F8F5; }
-  .matrix .product { font-weight: 600; white-space: nowrap; }
-
-  /* Method box */
-  .method-box {
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 4px;
-    padding: 28px;
-    margin: 24px 0;
-  }
-  .method-box h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #1A1A1A;
-  }
-  .method-box p {
-    font-size: 13px;
-    color: #6A6A6A;
-    margin-bottom: 12px;
-  }
-  .method-box p:last-child { margin-bottom: 0; }
-  .method-list {
-    margin: 0;
-    padding-left: 20px;
-  }
-  .method-list li {
-    font-size: 13px;
-    color: #6A6A6A;
-    margin-bottom: 8px;
-    line-height: 1.6;
-  }
-
-  /* CTA section */
-  .cta-section {
-    background: #1A1A1A;
-    color: #FAFAF7;
-    padding: 56px 32px;
-    text-align: center;
-    border-radius: 4px;
-    margin: 32px 0;
-  }
-  .cta-section h2 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    color: #FAFAF7;
-  }
-  .cta-section p {
-    font-size: 14px;
-    color: #A0998A;
-    max-width: 540px;
-    margin: 0 auto 28px;
-  }
-  .cta-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .cta-button {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #FAFAF7;
-    color: #1A1A1A;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: opacity 0.2s;
-  }
+  /* CTA */
+  .cta-section { background: var(--ink); color: var(--paper); padding: 56px 32px; text-align: center; border-radius: 4px; margin: 32px 0; }
+  .cta-section h2 { font-size: 22px; font-weight: 500; margin-bottom: 12px; color: var(--paper); }
+  .cta-section p { font-size: 14px; color: var(--taupe); max-width: 540px; margin: 0 auto 28px; }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .cta-button { display: inline-block; padding: 14px 28px; background: var(--paper); color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px; transition: opacity 0.2s; }
   .cta-button:hover { opacity: 0.85; }
-  .cta-button.secondary {
-    background: transparent;
-    color: #FAFAF7;
-    border: 1px solid #A0998A;
-  }
+  .cta-button.gold { background: var(--gold); color: var(--ink); }
+  .cta-button.secondary { background: transparent; color: var(--paper); border: 1px solid var(--taupe); }
 
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 40px 0;
-    font-size: 12px;
-    color: #C4BFB3;
-    border-top: 1px solid #E5E2DA;
-  }
-  .footer a {
-    color: #1A1A1A;
-    text-decoration: none;
-    border-bottom: 1px solid #C4BFB3;
-  }
+  .footer { text-align: center; padding: 40px 0; font-size: 12px; color: var(--sand); border-top: 1px solid var(--line); }
+  .footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
 
-  /* Dual track diagram */
-  .dual-track {
-    margin: 32px 0;
-    position: relative;
-  }
-  .track-legend {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 24px;
-    font-size: 12px;
-  }
-  .track-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #4A4A4A;
-  }
-  .track-legend-swatch {
-    width: 14px;
-    height: 14px;
-    border-radius: 3px;
-    flex-shrink: 0;
-  }
-  .track-legend-swatch.stato { background: #1A1A1A; }
-  .track-legend-swatch.prodotto { background: #A0998A; }
-
-  .track-grid {
-    display: grid;
-    grid-template-columns: 1fr 80px 1fr;
-    gap: 0;
-    position: relative;
-  }
-  .track-header {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #A0998A;
-    text-align: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid #E5E2DA;
-    margin-bottom: 16px;
-  }
-  .track-header.stato { color: #1A1A1A; }
-  .track-header.prodotto { color: #6A6A6A; }
-  .track-header.axis { color: transparent; }
-
-  .track-row {
-    display: contents;
-  }
-  .track-cell {
-    padding: 8px 16px;
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .track-cell.left { align-items: flex-end; text-align: right; }
-  .track-cell.right { align-items: flex-start; text-align: left; }
-  .track-cell.axis {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .track-cell.axis::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: #E5E2DA;
-    z-index: 0;
-  }
-  .track-cell.axis.first::before { top: 50%; }
-  .track-cell.axis.last::before { bottom: 50%; }
-
-  .track-day {
-    background: #FAFAF7;
-    border: 1px solid #E5E2DA;
-    padding: 6px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #4A4A4A;
-    position: relative;
-    z-index: 1;
-    white-space: nowrap;
-  }
-
-  .track-card {
-    background: #fff;
-    border: 1px solid #E5E2DA;
-    border-radius: 6px;
-    padding: 12px 16px;
-    max-width: 320px;
-    position: relative;
-  }
-  .track-card.lane-stato {
-    border-left: 3px solid #1A1A1A;
-  }
-  .track-card.lane-prodotto {
-    border-left: 3px solid #A0998A;
-  }
-  .track-card .card-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #1A1A1A;
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-  .track-card .card-meta {
-    font-size: 11px;
-    color: #6A6A6A;
-    letter-spacing: 0.3px;
-  }
-  .track-card .card-meta .sender {
-    font-weight: 500;
-    color: #A0998A;
-  }
-
-  .track-empty {
-    color: #C4BFB3;
-    font-size: 11px;
-    font-style: italic;
-  }
-
-  .track-note {
-    margin-top: 32px;
-    background: #F5F4F0;
-    border-left: 3px solid #A0998A;
-    padding: 20px 24px;
-    border-radius: 0 4px 4px 0;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #4A4A4A;
-  }
-  .track-note strong {
-    color: #1A1A1A;
-    display: block;
-    margin-bottom: 6px;
-    font-size: 13px;
-  }
-
-  /* Responsive */
   @media (max-width: 768px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
     .mittenti-grid { grid-template-columns: 1fr; }
-    .flow-content { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .track-grid { grid-template-columns: 60px 1fr; gap: 0; }
-    .track-header.stato, .track-header.prodotto { display: none; }
-    .track-cell.left { display: none; }
-    .track-cell.right { padding: 8px 8px 8px 0; }
-    .track-cell.axis { padding: 8px 0; }
-    .track-card { max-width: 100%; }
+    .pipeline { flex-direction: column; }
+    .pipe-arrow { justify-content: center; padding: 4px 0; transform: rotate(90deg); }
+    .fase-state { margin-left: 0; }
+    .chip, .ai-pill { white-space: normal; }
   }
 </style>
 </head>
@@ -679,746 +127,196 @@
 <div class="header">
   <div class="container">
     <h1>Paleocomplex</h1>
-    <div class="subtitle">Automazioni Email Klaviyo — Piano Strategico</div>
-    <div class="version">v6.0 · aggiornata 18 giugno 2026</div>
+    <div class="subtitle">Automazioni Email Klaviyo — Il sistema completo</div>
+    <div class="version">v7.0 · aggiornata 22 luglio 2026</div>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- SEZIONE 1: NUMERI -->
+  <!-- IL QUADRO -->
   <div class="section">
     <div class="section-label">Il quadro</div>
-    <h2>30 flow modulari, con l'AI di Klaviyo per retention e cross-sell. Ogni email ha un ruolo preciso.</h2>
-    <p>Le vecchie automazioni ActiveCampaign avevano 218 email distribuite in 9 flow monolitici che generavano €195K di revenue totale. Il problema: il 50% delle email generava meno del 5% del revenue. Troppe email, troppo rumore, risultati concentrati su pochissime.</p>
-    <p>La nuova architettura Klaviyo è modulare: 30 flow specializzati che girano in parallelo, con la Fase 3 potenziata dal machine learning di Klaviyo (previsione riordini, clienti a rischio, cross-sell data-driven). Un cliente medio riceve solo 6-12 email nel primo mese (in base ai prodotti acquistati), ognuna pertinente al suo percorso. Ogni contatto riceve fino a 2 mesi di contenuti automatici personalizzati prima di entrare nella newsletter.</p>
+    <h2>31 flow specializzati. Ogni email arriva alla persona giusta, nel momento giusto.</h2>
+    <p>Dalle 218 email in 9 flow monolitici di ActiveCampaign a un sistema modulare su Klaviyo: ogni flow ha un compito preciso e i timing non si sovrappongono mai. Un cliente medio riceve 6-12 email nel primo mese, tutte pertinenti al suo percorso.</p>
 
     <div class="stats">
       <div class="stat">
-        <div class="number">33</div>
-        <div class="label">Flow automatici</div>
-        <div class="detail">da 9 vecchi</div>
+        <div class="number">31</div>
+        <div class="label">Flow attivi</div>
+        <div class="detail">da 9 vecchi flow</div>
       </div>
       <div class="stat">
-        <div class="number">100</div>
-        <div class="label">Email totali</div>
+        <div class="number">101</div>
+        <div class="label">Email scritte</div>
         <div class="detail">6-12 per cliente medio</div>
       </div>
       <div class="stat">
         <div class="number">3</div>
-        <div class="label">Fasi di rollout</div>
-        <div class="detail">aprile → giugno</div>
+        <div class="label">Fasi</div>
+        <div class="detail">un obiettivo ciascuna</div>
       </div>
       <div class="stat">
-        <div class="number">58</div>
-        <div class="label">Giorni di nurturing</div>
-        <div class="detail">welcome + authority + conversione</div>
+        <div class="number"><em>3</em></div>
+        <div class="label">Flow guidati dall'AI</div>
+        <div class="detail">Klaviyo Predictive + Catalog</div>
+      </div>
+    </div>
+
+    <div class="stackbar-wrap">
+      <div class="stackbar-title">Le 101 email, fase per fase</div>
+      <div class="stackbar">
+        <div class="seg s1" style="width:33.7%"><span>34</span></div>
+        <div class="seg s2" style="width:45.5%"><span>46</span></div>
+        <div class="seg s3" style="width:20.8%"><span>21</span></div>
+      </div>
+      <div class="stacklegend">
+        <span><span class="dot s1"></span>Fase 1 — Acquisizione · 34</span>
+        <span><span class="dot s2"></span>Fase 2 — Post-acquisto · 46</span>
+        <span><span class="dot s3"></span>Fase 3 — Retention · 21</span>
       </div>
     </div>
   </div>
 
-  <!-- SEZIONE 2: STATO DEI LAVORI -->
-  <div class="section">
-    <div class="section-label">Stato dei lavori</div>
-    <h2>A che punto siamo</h2>
-    <p>Il piano è organizzato in 3 fasi sequenziali. Le email sono già scritte in modo definitivo, fact-checked contro schede prodotto e FAQ, e disponibili su GitHub. Ogni flow passa per la tua review prima di essere caricato su Klaviyo.</p>
-
-    <div class="progress-section">
-      <div class="progress-bar-wrapper">
-        <div class="progress-header">
-          <div class="progress-title">Fase 1 — Revenue e acquisizione</div>
-          <div class="progress-count">6/6 flow scritti · in review</div>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill-done" style="width: 100%"></div>
-        </div>
-        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
-          Carrello, Welcome Kit, Welcome Unghie/Capelli, Authority, Browse Abandonment, Conversione.
-        </div>
-      </div>
-
-      <div class="progress-bar-wrapper">
-        <div class="progress-header">
-          <div class="progress-title">Fase 2 — Post-acquisto (architettura rinnovata)</div>
-          <div class="progress-count">17/17 flow scritti · in review</div>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill-done" style="width: 100%"></div>
-        </div>
-        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
-          Architettura a doppio binario: 2 flow stato cliente + 1 flow recensione universale (Primo Cliente / Ricorrente) + 14 flow prodotto (uno per SKU). Girano in parallelo: ogni cliente riceve il flow giusto per ogni prodotto acquistato per la prima volta.
-        </div>
-      </div>
-
-      <div class="progress-bar-wrapper">
-        <div class="progress-header">
-          <div class="progress-title">Fase 3 — Retention e lifecycle (AI-powered)</div>
-          <div class="progress-count">7/7 flow scritti · in review</div>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill-done" style="width: 100%"></div>
-        </div>
-        <div class="progress-legend" style="margin-top: 10px; font-size: 11px; color: #6A6A6A;">
-          First-Order Reorder, AI Repeat Purchase (Predictive), RFM Winback, Sunset ×2, Back in Stock, Cross-Sell Data-Driven (Catalog Insights). Fedeltà sospeso.
-        </div>
-      </div>
-
-      <div class="progress-legend" style="justify-content: center; margin-top: 20px;">
-        <span><span class="legend-dot done"></span>Scritto / In review</span>
-        <span><span class="legend-dot active"></span>In scrittura</span>
-        <span><span class="legend-dot pending"></span>Da scrivere</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SEZIONE 3: ARCHITETTURA -->
-  <div class="section">
-    <div class="section-label">Architettura</div>
-    <h2>30 flow in 3 fasi (numerazione a decine 0x-1x / 2x-6x / 7x+)</h2>
-    <p style="margin-bottom: 24px;">La novità della Fase 2: invece di 1 flow gigante con 14 blocchi condizionali, abbiamo 14 flow indipendenti (uno per ogni prodotto). Più 2 flow stato cliente. Tutti girano in parallelo, i timing non si sovrappongono. Vantaggio: un cliente esistente che compra un prodotto nuovo riceve sempre l'educazione specifica di quel prodotto, anche se non è il suo primo ordine in assoluto.</p>
-
-    <div class="flow-map">
-      <!-- FASE 1 -->
-      <div class="phase">
-        <div class="phase-header">
-          <div class="phase-number">1</div>
-          <div class="phase-title">Revenue e acquisizione</div>
-          <div class="phase-status done">In review</div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">01</div>
-          <div class="flow-content">
-            <div class="flow-name">Carrello Abbandonato</div>
-            <div class="flow-meta">
-              <span>+4h → +16h → +2gg · split nuovo/esistente</span>
-              <div class="flow-emails">3 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">02</div>
-          <div class="flow-content">
-            <div class="flow-name">Welcome Kit Benessere</div>
-            <div class="flow-meta">
-              <span>10 giorni · focus anti-aging 40+</span>
-              <div class="flow-emails">5 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">03</div>
-          <div class="flow-content">
-            <div class="flow-name">Welcome Unghie / Capelli</div>
-            <div class="flow-meta">
-              <span>12 giorni · focus collagene</span>
-              <div class="flow-emails">6 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">04</div>
-          <div class="flow-content">
-            <div class="flow-name">Authority Flow</div>
-            <div class="flow-meta">
-              <span>14 giorni · taglio editoriale, scienza</span>
-              <div class="flow-emails">6 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">05</div>
-          <div class="flow-content">
-            <div class="flow-name">Browse Abandonment</div>
-            <div class="flow-meta">
-              <span>Max 1 volta ogni 30gg</span>
-              <div class="flow-emails">2 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">06</div>
-          <div class="flow-content">
-            <div class="flow-name">Conversione</div>
-            <div class="flow-meta">
-              <span>32 giorni · scienza, obiezioni, social proof</span>
-              <div class="flow-emails">10 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FASE 2 -->
-      <div class="phase">
-        <div class="phase-header">
-          <div class="phase-number">2</div>
-          <div class="phase-title">Post-acquisto (doppio binario)</div>
-          <div class="phase-status done">In review</div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">21</div>
-          <div class="flow-content">
-            <div class="flow-name">Stato cliente — Primo Cliente Assoluto</div>
-            <div class="flow-meta">
-              <span>12 giorni · benvenuto + ottimizza abitudini · trigger Placed</span>
-              <div class="flow-emails">2 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">22</div>
-          <div class="flow-content">
-            <div class="flow-name">Stato cliente — Cliente Ricorrente</div>
-            <div class="flow-meta">
-              <span>+2h · semplice grazie del fondatore (il cross-sell è gestito dall'AI, Flow 78)</span>
-              <div class="flow-emails">2 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">24-37</div>
-          <div class="flow-content">
-            <div class="flow-name">Flow prodotto × 14 (uno per SKU)</div>
-            <div class="flow-meta">
-              <span>Istruzioni + Aspettative + Social proof · trigger Fulfilled su SKU "mai acquistato prima"</span>
-              <div class="flow-emails">42 email (3 × 14)</div>
-              <span class="flow-state review">Review</span>
-            </div>
-            <div style="margin-top: 12px; font-size: 12px; color: #6A6A6A; line-height: 1.5;">
-              Paleocomplex, Revolution, Elisir, Elisir Basic, Essentiel, Youth, Jeunesse, Hurricane, Armageddon, Artosan, Liverty, Testoplus, Renaissance, Vitamina D
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">23</div>
-          <div class="flow-content">
-            <div class="flow-name">Recensione Brand (universale)</div>
-            <div class="flow-meta">
-              <span>Trigger Fulfilled +32gg · anticipa email automatica WC ⭐⭐⭐⭐⭐ di 2 giorni</span>
-              <div class="flow-emails">1 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FASE 3 -->
-      <div class="phase">
-        <div class="phase-header">
-          <div class="phase-number">3</div>
-          <div class="phase-title">Retention e lifecycle (AI-powered)</div>
-          <div class="phase-status done">Scritta · in review</div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">71</div>
-          <div class="flow-content">
-            <div class="flow-name">First-Order Reorder</div>
-            <div class="flow-meta">
-              <span>Primo cliente · reminder riacquisto calibrato sulla durata pack (3 rami: 30gg / 60gg / VitD)</span>
-              <div class="flow-emails">5 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">72</div>
-          <div class="flow-content">
-            <div class="flow-name">AI Repeat Purchase</div>
-            <div class="flow-meta">
-              <span>Klaviyo AI prevede quando ogni cliente riordina · split su valore previsto (top: no sconto, altri: 10-15%)</span>
-              <div class="flow-emails">5 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">73</div>
-          <div class="flow-content">
-            <div class="flow-name">RFM Winback</div>
-            <div class="flow-meta">
-              <span>Klaviyo classifica i clienti a rischio ogni notte · recupero calibrato sul valore storico</span>
-              <div class="flow-emails">5 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">74-75</div>
-          <div class="flow-content">
-            <div class="flow-name">Sunset (lead + clienti storici)</div>
-            <div class="flow-meta">
-              <span>Igiene lista: i mai-clienti inattivi vengono rimossi, i clienti storici passano a frequenza ridotta</span>
-              <div class="flow-emails">4 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">76</div>
-          <div class="flow-content">
-            <div class="flow-name">Back in Stock</div>
-            <div class="flow-meta">
-              <span>Critico per Youth / Jeunesse · notifica immediata al restock</span>
-              <div class="flow-emails">1 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">78</div>
-          <div class="flow-content">
-            <div class="flow-name">Cross-Sell Data-Driven ⭐</div>
-            <div class="flow-meta">
-              <span>L'AI di Klaviyo sceglie il prodotto giusto e il momento giusto per ogni cliente · unico punto di cross-sell</span>
-              <div class="flow-emails">1 email</div>
-              <span class="flow-state review">Review</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-card">
-          <div class="flow-badge">77</div>
-          <div class="flow-content">
-            <div class="flow-name">Programma Fedeltà</div>
-            <div class="flow-meta">
-              <span>Sospeso: riprende quando il plugin loyalty sarà collegato a Klaviyo</span>
-              <div class="flow-emails">—</div>
-              <span class="flow-state pending">Sospeso</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SEZIONE 3B: SCHEMA DOPPIO BINARIO -->
-  <div class="section">
-    <div class="section-label">Come funziona dopo l'acquisto</div>
-    <h2>Esempio: cliente nuovo che acquista Paleocomplex</h2>
-    <p>I due binari girano in parallelo: il <strong>flow stato cliente</strong> (07 Primo Cliente) parla della relazione con il brand, il <strong>flow prodotto</strong> (09 Paleocomplex) parla del prodotto specifico. I timing sono alternati: mai due email lo stesso giorno, mai meno di due giorni di gap.</p>
-
-    <div class="dual-track">
-      <div class="track-legend">
-        <div class="track-legend-item">
-          <div class="track-legend-swatch stato"></div>
-          <span>Flow stato cliente (07 Primo Cliente)</span>
-        </div>
-        <div class="track-legend-item">
-          <div class="track-legend-swatch prodotto"></div>
-          <span>Flow prodotto (09 Paleocomplex)</span>
-        </div>
-      </div>
-
-      <div class="track-grid">
-        <div class="track-header stato">Stato cliente</div>
-        <div class="track-header axis">·</div>
-        <div class="track-header prodotto">Prodotto</div>
-
-        <!-- Riga 1: T+2h -->
-        <div class="track-row">
-          <div class="track-cell left">
-            <div class="track-card lane-stato">
-              <div class="card-title">Benvenuto + cosa succede adesso</div>
-              <div class="card-meta"><span class="sender">Lorenzo Zarone</span> · email statica</div>
-            </div>
-          </div>
-          <div class="track-cell axis first"><div class="track-day">T+2h</div></div>
-          <div class="track-cell right"></div>
-        </div>
-
-        <!-- Riga 2: T+1gg -->
-        <div class="track-row">
-          <div class="track-cell left"></div>
-          <div class="track-cell axis"><div class="track-day">T+1gg</div></div>
-          <div class="track-cell right">
-            <div class="track-card lane-prodotto">
-              <div class="card-title">Istruzioni assunzione Paleocomplex</div>
-              <div class="card-meta"><span class="sender">Lorenzo Zarone</span> · dosaggio, modalità, krill</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Riga 3: T+5gg -->
-        <div class="track-row">
-          <div class="track-cell left"></div>
-          <div class="track-cell axis"><div class="track-day">T+5gg</div></div>
-          <div class="track-cell right">
-            <div class="track-card lane-prodotto">
-              <div class="card-title">Aspettative multivitaminico</div>
-              <div class="card-meta"><span class="sender">Lorenzo Zarone</span> · tempi reali, costanza</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Riga 4: T+12gg -->
-        <div class="track-row">
-          <div class="track-cell left">
-            <div class="track-card lane-stato">
-              <div class="card-title">Ottimizza abitudini (5 abitudini)</div>
-              <div class="card-meta"><span class="sender">Lorenzo Zarone</span> · sonno, sole, alimentazione</div>
-            </div>
-          </div>
-          <div class="track-cell axis"><div class="track-day">T+12gg</div></div>
-          <div class="track-cell right"></div>
-        </div>
-
-        <!-- Riga 5: T+18gg -->
-        <div class="track-row">
-          <div class="track-cell left"></div>
-          <div class="track-cell axis"><div class="track-day">T+18gg</div></div>
-          <div class="track-cell right">
-            <div class="track-card lane-prodotto">
-              <div class="card-title">Social proof Paleocomplex + check-in</div>
-              <div class="card-meta"><span class="sender">Flaminia</span> · 3 recensioni verificate</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Riga 6: T+33gg (recensione, flow 23) -->
-        <div class="track-row">
-          <div class="track-cell left"></div>
-          <div class="track-cell axis"><div class="track-day">T+33gg</div></div>
-          <div class="track-cell right">
-            <div class="track-card lane-prodotto">
-              <div class="card-title">Anticipo richiesta recensione brand</div>
-              <div class="card-meta"><span class="sender">Flaminia</span> · Flow 23, trigger Fulfilled+32gg</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Riga 7: T+35gg (email automatica WC) -->
-        <div class="track-row">
-          <div class="track-cell left"></div>
-          <div class="track-cell axis last"><div class="track-day">T+35gg</div></div>
-          <div class="track-cell right">
-            <div class="track-card lane-prodotto">
-              <div class="card-title">Email automatica ⭐⭐⭐⭐⭐</div>
-              <div class="card-meta"><span class="sender">WooCommerce</span> · sistema, +34gg dal Completed</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="track-note">
-        <strong>Cosa cambia se compra 2 prodotti diversi (es. Paleocomplex + Youth)?</strong>
-        Il flow stato cliente resta identico (2 email: T+2h, T+12gg). Parte anche il flow Youth (29 → istruzioni T+1gg, aspettative T+5gg, social proof T+18gg). I due flow prodotto si scaglionano automaticamente di 1-2 giorni per non sovrapporsi. Cliente totale: ~9 email in 35 giorni, mai più di una al giorno.
-      </div>
-
-      <div class="track-note">
-        <strong>Cosa cambia per un cliente ricorrente che compra un prodotto nuovo (es. ha già Youth, ora prende Elisir)?</strong>
-        Niente flow benvenuto (è già nostro cliente). Parte il flow 22 Cliente Ricorrente: T+2h "grazie + costanza" (solo questa: il cross-sell arriva dopo, dal Flow 78, quando l'AI di Klaviyo calcola il momento ottimale). In parallelo parte il flow 26 Elisir (istruzioni T+1gg, aspettative T+5gg, social proof T+18gg) perché Elisir è "primo acquisto" per quel SKU. Più il flow 23 a T+33gg per la recensione brand. Cliente totale: ~5 email in 33 giorni + cross-sell AI al momento giusto.
-      </div>
-
-      <div class="track-note">
-        <strong>Cosa cambia per un cliente ricorrente che ricompra un prodotto già acquistato?</strong>
-        Solo il flow 22 Cliente Ricorrente (grazie + cross-sell, 2 email in 3 giorni). Nessun flow prodotto perché lo conosce già. Cliente totale: 2 email.
-      </div>
-    </div>
-  </div>
-
-  <!-- SEZIONE 4: PERCORSO CLIENTE -->
+  <!-- PERCORSO -->
   <div class="section">
     <div class="section-label">Percorso cliente</div>
-    <h2>Cosa succede dal primo contatto all'acquisto</h2>
+    <h2>Tre fasi, tre momenti diversi della stessa persona</h2>
 
-    <div class="journey">
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Optin (popup, social, blog)</h4>
-          <p>Report gratuito + sconto BENVENUTO €10</p>
-          <div class="journey-day">Giorno 0</div>
-        </div>
+    <div class="pipeline">
+      <div class="pipe-stage">
+        <div class="who">Lead</div>
+        <div class="what">si iscrive,<br>non ha mai comprato</div>
       </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Welcome Series (5-6 email)</h4>
-          <p>Delivery report → Educazione → Storia Lorenzo → Prodotti + social proof → Ultima occasione sconto</p>
-          <div class="journey-day">Giorni 0-12</div>
-        </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-stage">
+        <div class="who">Fase 1</div>
+        <div class="what">lo porta al<br><strong>primo ordine</strong></div>
       </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Acquista? → Post Purchase a doppio binario (32 giorni)</h4>
-          <p>Binario A (stato cliente): Benvenuto Lorenzo → Ottimizza abitudini → Recensione brand (Flaminia). Binario B (prodotto): per ogni prodotto acquistato per la prima volta, Istruzioni → Aspettative → Social proof. I due binari girano in parallelo: timing alternati, mai 2 email lo stesso giorno.</p>
-          <div class="journey-day">Se acquista in qualsiasi momento</div>
-        </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-stage">
+        <div class="who">Fase 2</div>
+        <div class="what">lo educa a usare<br><strong>bene il prodotto</strong></div>
       </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Non acquista? → Authority Flow (6 email)</h4>
-          <p>Carenze nutrizionali → VNR vs apporto massimo legale → Vitamina D → Metilazione → FAQ → Chiusura editoriale. Taglio scientifico, nessun pitch diretto. La tua voce.</p>
-          <div class="journey-day">Giorni 12-26</div>
-        </div>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Ancora non acquista? → Flow Conversione (10 email)</h4>
-          <p>Omega 3, K2, vitamina D stagionale, magnesio, stile di vita, obiezione prezzo, analisi del sangue, social proof. Codice PRIMOPASSO (€10 + spedizione gratis) nell'ultima email.</p>
-          <div class="journey-day">Giorni 26-58</div>
-        </div>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Dopo l'acquisto → Retention</h4>
-          <p>Cross-sell personalizzato + reminder riacquisto. Timing basato sulla durata del prodotto (25-55 giorni).</p>
-          <div class="journey-day">Post-acquisto</div>
-        </div>
-      </div>
-
-      <div class="journey-step">
-        <div class="journey-dot">
-          <svg fill="none" stroke="#FAFAF7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <div class="journey-info">
-          <h4>Non torna? → Reorder AI + Winback RFM</h4>
-          <p>Klaviyo prevede la data del prossimo ordine di ogni cliente e classifica ogni notte chi sta rallentando. Il reminder arriva al momento personalizzato; se non basta, parte il recupero calibrato sul valore storico del cliente.</p>
-          <div class="journey-day">Momento previsto dall'AI, poi segmento At Risk</div>
-        </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-stage">
+        <div class="who">Fase 3</div>
+        <div class="what">lo fa <strong>riordinare</strong>,<br>lo recupera se si perde</div>
       </div>
     </div>
+    <p style="font-size: 13px; color: #6A6A6A;">Fase 1 e 2 costruiscono il cliente. La Fase 3 lo fa fruttare nel tempo: è lì che si gioca l'LTV.</p>
   </div>
 
-  <!-- SEZIONE 5: DECISIONI CHIAVE -->
+  <!-- LE 3 FASI -->
   <div class="section">
-    <div class="section-label">Decisioni chiave</div>
-    <h2>Le 6 scelte strategiche dietro il piano</h2>
+    <div class="section-label">Le 3 fasi</div>
+    <h2>Obiettivi, numeri e stato al 22 luglio</h2>
 
-    <div class="decisions">
-      <div class="decision">
-        <div class="decision-icon">1</div>
-        <div>
-          <h4>Welcome → Authority → Conversione in sequenza</h4>
-          <p>58 giorni di contenuti automatici prima della newsletter. Welcome (12gg): ti conosciamo. Authority (14gg): scienza pura, la tua voce. Conversione (32gg): i pilastri del brand, obiezioni, social proof, codice PRIMOPASSO nell'ultima email. Mai 2 email nello stesso giorno.</p>
-        </div>
+    <div class="fase-card">
+      <div class="fase-top">
+        <div class="fase-num">1</div>
+        <div class="fase-title">Acquisizione</div>
+        <div class="fase-state partial">3 live · 4 in rifinitura</div>
       </div>
+      <div class="fase-obiettivo">Convertire lead e visitatori in primi clienti: welcome, autorevolezza, recupero carrello, spinta finale.</div>
+      <div class="fase-audience">Parla a: lead e prospect che non hanno mai comprato</div>
+      <div class="fase-metrics">
+        <div class="fase-metric"><div class="v">7</div><div class="k">FLOW</div></div>
+        <div class="fase-metric"><div class="v">34</div><div class="k">EMAIL</div></div>
+        <div class="fase-metric"><div class="v">58</div><div class="k">GIORNI DI NURTURING</div></div>
+      </div>
+      <div class="fase-flows">
+        <span class="chip">01 Carrello abbandonato</span>
+        <span class="chip">02 Welcome Kit</span>
+        <span class="chip live">03 Welcome Unghie/Capelli · LIVE</span>
+        <span class="chip live">04 Authority · LIVE</span>
+        <span class="chip">05 Browse abandonment</span>
+        <span class="chip">06 Conversione</span>
+        <span class="chip live">07 Welcome D3+K2 · LIVE</span>
+      </div>
+    </div>
 
-      <div class="decision">
-        <div class="decision-icon">2</div>
-        <div>
-          <h4>Post-purchase: un flow per prodotto, trigger sullo SKU</h4>
-          <p>Chi compra Elisir per la prima volta riceve il flow Elisir (istruzioni, aspettative, social proof specifici). Chi compra due prodotti nuovi riceve entrambi i flow, con i timing che si incastrano senza sovrapporsi. Il messaggio giusto arriva sempre alla persona giusta, anche al cliente storico che prova un prodotto nuovo.</p>
-        </div>
+    <div class="fase-card">
+      <div class="fase-top">
+        <div class="fase-num">2</div>
+        <div class="fase-title">Post-acquisto</div>
+        <div class="fase-state partial">Montata su Klaviyo · review finale</div>
       </div>
+      <div class="fase-obiettivo">Educare chi ha appena comprato, su due binari paralleli: la relazione col brand e l'uso corretto del singolo prodotto.</div>
+      <div class="fase-audience">Parla a: clienti appena dopo l'ordine</div>
+      <div class="fase-metrics">
+        <div class="fase-metric"><div class="v">17</div><div class="k">FLOW</div></div>
+        <div class="fase-metric"><div class="v">46</div><div class="k">EMAIL</div></div>
+        <div class="fase-metric"><div class="v">14</div><div class="k">FLOW PRODOTTO (1 PER SKU)</div></div>
+      </div>
+      <div class="fase-flows">
+        <span class="chip">21 Primo cliente</span>
+        <span class="chip">22 Cliente ricorrente</span>
+        <span class="chip">23 Recensione brand</span>
+        <span class="chip">24-37 Flow prodotto × 14 (istruzioni → aspettative → social proof)</span>
+      </div>
+      <div class="fase-note">Chi compra un prodotto per la prima volta riceve sempre l'educazione di quel prodotto, anche se è cliente da anni.</div>
+    </div>
 
-      <div class="decision">
-        <div class="decision-icon">3</div>
-        <div>
-          <h4>Retention a due livelli: timing fisso per il primo cliente, AI per i ricorrenti</h4>
-          <p>Il primo cliente riceve il reminder di riacquisto calibrato sulla durata reale del pack (30/60/150 giorni). Dal secondo ordine in poi entra in gioco l'AI di Klaviyo: prevede la data del prossimo ordine di ogni singolo cliente e fa arrivare il reminder al momento personalizzato. Sconto solo a chi ne ha davvero bisogno.</p>
-        </div>
+    <div class="fase-card ai">
+      <div class="fase-top">
+        <div class="fase-num">3</div>
+        <div class="fase-title">Retention &amp; Lifecycle</div>
+        <span class="ai-pill">AI Klaviyo</span>
+        <div class="fase-state partial">Flow 71 LIVE · resto in montaggio</div>
       </div>
-
-      <div class="decision">
-        <div class="decision-icon">4</div>
-        <div>
-          <h4>Retention potenziata dall'AI di Klaviyo</h4>
-          <p>Il ciclo medio tra acquisti è 76 giorni. Il flow timing parte a 85 giorni. In più, Klaviyo Predictive Analytics intercetta chi sta calando prima del timing fisso. I due sistemi sono complementari.</p>
-        </div>
+      <div class="fase-obiettivo">Aumentare il venduto su chi ha già comprato: riordino al momento giusto, recupero di chi si allontana, pulizia della lista. Sconti solo dove servono davvero.</div>
+      <div class="fase-audience">Parla a: clienti esistenti, in ogni momento del loro ciclo di vita</div>
+      <div class="fase-metrics">
+        <div class="fase-metric"><div class="v">7</div><div class="k">FLOW</div></div>
+        <div class="fase-metric"><div class="v">21</div><div class="k">EMAIL</div></div>
+        <div class="fase-metric"><div class="v">3</div><div class="k">FLOW GUIDATI DALL'AI</div></div>
       </div>
-
-      <div class="decision">
-        <div class="decision-icon">5</div>
-        <div>
-          <h4>Le 157 email educative diventano newsletter, non automazioni</h4>
-          <p>Le vecchie automazioni da 105 e 52 email avevano rendimenti decrescenti: il 50% delle email generava meno del 5% del revenue. Le migliori 15-20 diventano contenuto per la newsletter settimanale. Le altre vengono archiviate.</p>
-        </div>
+      <div class="fase-flows">
+        <span class="chip live">71 First-Order Reorder · LIVE</span>
+        <span class="chip aichip">72 AI Repeat Purchase</span>
+        <span class="chip aichip">73 RFM Winback</span>
+        <span class="chip">74 Sunset lead</span>
+        <span class="chip">75 Sunset cliente storico</span>
+        <span class="chip">76 Back in stock</span>
+        <span class="chip aichip">78 Cross-Sell AI</span>
       </div>
-
-      <div class="decision">
-        <div class="decision-icon">6</div>
-        <div>
-          <h4>Codice PRIMOPASSO: seconda occasione per chi resta 58 giorni</h4>
-          <p>Il BENVENUTO è "andato" (detto nel welcome). Chi resta in lista 58 giorni ha dimostrato interesse reale. PRIMOPASSO (€10 + spedizione gratuita sul primo ordine) è un nuovo incentivo, diverso, meritato. Abbatte la paura dell'ultimo metro.</p>
-        </div>
-      </div>
+      <div class="fase-note">L'AI di Klaviyo prevede per ogni singolo cliente quando riordinerà, chi sta per abbandonare e quale prodotto proporgli.</div>
+      <a class="fase-link" href="presentazione-fase3.html">Vedi la Fase 3 nel dettaglio →</a>
     </div>
   </div>
 
-  <!-- SEZIONE 6: METODO DI LAVORO -->
-  <div class="section">
-    <div class="section-label">Metodo di lavoro</div>
-    <h2>Come garantiamo l'accuratezza</h2>
-    <p>Per un brand di integratori la credibilità si gioca sui dettagli: dosaggi, ingredienti, forme vitaminiche, claim scientifici. Un singolo errore mina la fiducia di un cliente, soprattutto quello informato. Per questo ogni email passa attraverso un processo rigoroso prima del tuo via libera.</p>
-
-    <div class="method-box">
-      <h4>1. Scrittura basata su fonti autoritarie</h4>
-      <p>Le informazioni tecniche su prodotti vengono SEMPRE da:</p>
-      <ul class="method-list">
-        <li><strong>Schede prodotto</strong> ufficiali (fonte primaria, basata sulle etichette e sulle tue interviste)</li>
-        <li><strong>FAQ del sito</strong> (fonte secondaria, per integrare)</li>
-        <li><strong>Tue dichiarazioni dirette</strong> registrate nella documentazione del progetto</li>
-      </ul>
-      <p>Le recensioni dei clienti sono verificate verbatim dal CSV di export delle recensioni WooCommerce (418 recensioni totali, file aggiornato 2026-05-11). Nessuna recensione inventata o riformulata.</p>
-    </div>
-
-    <div class="method-box">
-      <h4>2. Audit di fact-checking prima del rilascio</h4>
-      <p>Prima che qualsiasi email arrivi nella tua review, viene eseguito un audit sistematico contro le schede prodotto. Audit fatti finora:</p>
-      <ul class="method-list">
-        <li>Audit Fase 1 — corretti 3 errori critici (NMN→NR, "più 34 nutrienti", Vit C liposomiale in Revolution)</li>
-        <li>Audit dosaggi Post Purchase — corretti 7 errori critici (tacche misurino, dosaggi inventati, Elisir Basic alternanza stagionale, Artosan/FANS, Renaissance ciclo, Testoplus dose, switch Youth/Jeunesse)</li>
-        <li>Audit aspettative — verificate timeline contro ogni "Sezione 3.3 Timeline dei Risultati Attesi" delle schede prodotto</li>
-        <li>Audit recensioni flow prodotto 08-21 — per ogni SKU selezione top 3 recensioni verificate dal CSV (filtrato per product_sku), preferenza per recensioni con dati misurabili (analisi del sangue, tempistiche specifiche), pulizia editoriale (CAPS, refusi) ma mai riformulazione del contenuto</li>
-      </ul>
-    </div>
-
-    <div class="method-box">
-      <h4>3. Versioning continuo</h4>
-      <p>Ogni modifica alle email aggiorna versione e data. Lo storico delle modifiche è tracciato su Git: puoi vedere ogni cambiamento, chi l'ha proposto, e tornare indietro se necessario. Niente perde mai.</p>
-    </div>
-  </div>
-
-  <!-- SEZIONE 7: MITTENTI -->
+  <!-- MITTENTI -->
   <div class="section">
     <div class="section-label">Mittenti</div>
-    <h2>Chi firma cosa</h2>
-    <p>Solo due voci, complementari e riconoscibili. La tua autorità è un asset: firmi le email dove la tua voce fa la differenza (educazione, brand, scienza). Tutto il resto lo firma <strong>Flaminia</strong>, il volto unico del customer care: un punto di contatto in carne e ossa che ascolta i feedback dei clienti, risponde alle domande operative, anticipa la richiesta recensione. Niente "Team Paleocomplex": troppo sterile e impersonale.</p>
+    <h2>Due sole voci, riconoscibili</h2>
 
     <div class="mittenti-grid">
       <div class="mittente-card">
         <div class="name">Lorenzo Zarone</div>
         <div class="role">La voce del brand</div>
-        <div class="flows">
-          Welcome series<br>
-          Authority flow<br>
-          Flow conversione<br>
-          Flow prodotto (istruzioni + aspettative)<br>
-          Email "benvenuto" e "grazie" stato cliente<br>
-          Reorder e winback (voce principale)<br>
-          Cross-sell AI (Flow 78)
-        </div>
+        <div class="flows">Educazione, scienza, benvenuto,<br>lettere personali ai clienti top</div>
       </div>
-
       <div class="mittente-card">
         <div class="name">Flaminia</div>
         <div class="role">Customer Care</div>
-        <div class="flows">
-          Carrello abbandonato<br>
-          Browse abandonment<br>
-          Social proof flow prodotto<br>
-          Reminder riacquisto (email soft)<br>
-          Richiesta recensione brand<br>
-          Back in stock, Programma fedeltà, Sunset<br>
-          Risposta ai feedback dei clienti
-        </div>
+        <div class="flows">Servizio, social proof, reminder,<br>recensioni, chiusure soft</div>
       </div>
     </div>
   </div>
 
-  <!-- SEZIONE 8: CROSS-SELL -->
-  <div class="section">
-    <div class="section-label">Cross-sell</div>
-    <h2>Matrice prodotti complementari</h2>
-    <p>Dopo l'acquisto, ogni cliente riceve suggerimenti personalizzati basati su cosa ha comprato. Lo sport (Hurricane + Armageddon) è proposto trasversalmente a tutti.</p>
-
-    <table class="matrix">
-      <thead>
-        <tr>
-          <th>Ha comprato</th>
-          <th>Cross-sell primario</th>
-          <th>Cross-sell sport</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="product">Elisir / Elisir Basic</td>
-          <td>Jeunesse o Renaissance</td>
-          <td>Hurricane + Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Paleocomplex</td>
-          <td>Revolution (upgrade) o Youth</td>
-          <td>Hurricane + Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Revolution</td>
-          <td>Elisir (upgrade) o Renaissance</td>
-          <td>Hurricane + Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Essentiel</td>
-          <td>Youth o Liverty</td>
-          <td>Hurricane + Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Youth</td>
-          <td>Jeunesse (upgrade) + multivitaminico</td>
-          <td>Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Jeunesse</td>
-          <td>Renaissance + multivitaminico</td>
-          <td>Hurricane + Armageddon</td>
-        </tr>
-        <tr>
-          <td class="product">Sport</td>
-          <td>L'altro prodotto sport + multivitaminico</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- CTA: leggi le email -->
+  <!-- CTA -->
   <div class="cta-section">
-    <h2>Leggi le email pronte per la review</h2>
-    <p>Ogni flow ha il suo file dettagliato: oggetti, preview text, corpo email, blocchi dinamici, recensioni, CTA. Tutto su GitHub, organizzato per fase.</p>
+    <h2>Il pezzo forte è la Fase 3</h2>
+    <p>Machine learning di Klaviyo, soglie calcolate sui dati reali dei clienti, coupon univoci, zero email sovrapposte. Tutto per vendere di più a chi ha già comprato.</p>
     <div class="cta-buttons">
-      <a href="https://github.com/giavara/paleo/tree/main/automations/fase1" class="cta-button" target="_blank">Fase 1 — 6 flow</a>
-      <a href="https://github.com/giavara/paleo/tree/main/automations/fase2" class="cta-button" target="_blank">Fase 2 — 17 flow (slot 21-37) (2 stato + 14 prodotto)</a>
-      <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutta la cartella</a>
+      <a href="presentazione-fase3.html" class="cta-button gold">Fase 3 nel dettaglio</a>
+      <a href="https://github.com/giavara/paleo/tree/main/automations" class="cta-button secondary" target="_blank">Tutte le email su GitHub</a>
     </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
-    <p>Paleocomplex — Piano Automazioni Klaviyo — Maggio 2026</p>
+    <p>Paleocomplex — Automazioni Klaviyo — luglio 2026</p>
     <p style="margin-top: 4px;">Repository: <a href="https://github.com/giavara/paleo" target="_blank">github.com/giavara/paleo</a></p>
   </div>
 

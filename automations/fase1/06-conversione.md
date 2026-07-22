@@ -427,7 +427,7 @@ Un forte abbraccio
 Lorenzo Zarone
 Fondatore di Paleocomplex
 
-P.S. Se i numeri ti hanno convinto più delle parole: **[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
+P.S. Se questi numeri non ti hanno ancora convinto: [vai alla pagina delle testimonianze](https://ctrk.klclick1.com/l/01KTDHVF6NWHBSMC03EQYXY7XV_6) dove trovi -letteralmente- centinaia tra video, screenshot e recensioni di persone reali che hanno provato i nostri prodotti.
 
 ---
 

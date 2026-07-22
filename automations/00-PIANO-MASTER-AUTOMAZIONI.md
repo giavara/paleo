@@ -1,5 +1,5 @@
-**Versione:** 6.0
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 6.1
+**Ultimo aggiornamento:** 2026-07-13
 **Status:** Fase 1 in produzione. Fase 2 montata su Klaviyo (giugno 2026). Fase 3 scritta completa (7 flow, architettura Predictive/RFM/Catalog Insights) — in review Andrea, poi montaggio. Trial Klaviyo Marketing Analytics attivo dal 2026-06-18 (30gg).
 
 # Piano Master — Automazioni Email Klaviyo
@@ -45,9 +45,10 @@ Ricostruire da zero tutte le automazioni email di Paleocomplex per la migrazione
 | 1 | Carrello abbandonato | `fase1/01-carrello-abbandonato.md` | 3 | Checkout started + non completato | Review Lorenzo OK 16/04 — applicare correzioni #13-15 poi chiudere |
 | 2 | Welcome Kit Benessere | `fase1/02-welcome-kit-benessere.md` | 5 | Optin da popup/homepage/blog/landing social | Review Lorenzo OK 16/04 |
 | 3 | Welcome Unghie/Capelli | `fase1/03-welcome-unghie-capelli.md` | 6 | Optin da lead magnet unghie/capelli | Review Lorenzo OK 16/04 |
-| 4 | Authority Flow | `fase1/04-authority-flow.md` | 6 | DOPO completamento welcome (sequenziale) + non ha comprato | v3.0 — email 2 VNR vs apporto massimo legale |
+| 4 | Authority Flow | `fase1/04-authority-flow.md` | 6 | Segmento `Sjna4H` "welcome completato" = OR delle property `flow-02/03/07-...-completed` | ✅ LIVE `YimR66` — v3.2 17/7: **risolto bug** (entrava solo il flow 02; 03 e 07 esclusi) |
 | 5 | Browse Abandonment | `fase1/05-browse-abandonment.md` | 2 | Viewed Product + non ha comprato + max 1 volta ogni 30gg | Review Lorenzo OK 16/04 |
 | 6 | Conversione | `fase1/06-conversione.md` | 10 | DOPO Authority + non ha comprato. 32 giorni. Sconto PRIMOPASSO nell'ultima email | Review Lorenzo OK 16/04 |
+| 7 | Welcome Lead Magnet D3+K2 | `fase1/07-welcome-d3-k2.md` | 2 | Segmento `UadnPz` "lm vitamina d3+k2 social" | ✅ **LIVE** 2026-07-17 — flow `SuFKGT` (creato via API) |
 
 ### FASE 2 — Flow post-acquisto (17 flow, slot 21-37, buffer 38-70)
 
@@ -264,6 +265,7 @@ Tecnica: chiusura email N con promessa specifica e curiosa sulla N+1.
 
 ## Changelog
 
+- **v6.1 (2026-07-13)**: aggiunto flow 7 Welcome Lead Magnet D3+K2 (`fase1/07-welcome-d3-k2.md`), welcome snello a 2 email (delivery report + benvenuto → bridge report/prodotto + urgency) da lead magnet report "D3 + K2: Smontiamo il Mito delle Assunzioni Separate", ingresso da landing social. Confluisce nell'Authority (flow 4) per i non convertiti: aggiungere come terza sorgente di trigger dell'Authority.
 - **v6.0 (2026-06-18)**: architettura Fase 3 definitiva basata su Klaviyo Marketing Analytics (trial 30gg attivo). Eliminati gli 11 flow retention/winback pianificati (6 retention per prodotto + 2 winback + back in stock + sunset + fedeltà) e sostituiti con 7 flow: 71 First-Order Reorder (timing fisso 3 rami famiglia pack), 72 AI Repeat Purchase (Expected Date of Next Order + split Predicted CLV), 73 RFM Winback (segmento At Risk/Needs Attention + split Historic CLV), 74 Sunset Lead (suppress), 75 Sunset Cliente Storico (frequency reduction, no suppress), 76 Back in Stock, 78 Cross-Sell Data-Driven (Best Cross-Sell Date + Next Best Product). Flow 77 Fedeltà sospeso (plugin non collegato). **Flow 22 Cliente Ricorrente ridotto a semplice grazie (v2.0)**: cross-sell rimosso e centralizzato nel Flow 78. Documento di riferimento sormonti/segmenti: `fase3/00-mappatura-fase3.md`.
 - v5.0 (2026-06-11): rinumerazione definitiva a decine (Fase 1: 01-20, Fase 2: 21-70, Fase 3: 71+). Nuovo flow 23 Recensione Brand su Fulfilled+32gg. Fix timing cross-flow su dati fulfillment reali.
 - **v3.0 (2026-05-13)**: refactor architetturale Fase 2 maggiore. Il flow monolitico "Post Purchase New Customer" con 14 blocchi condizionali è stato smontato e ricomposto in 16 flow paralleli: 2 stato cliente (21 Primo Cliente, 22 Cliente Ricorrente) + 14 flow prodotto (24-37, uno per SKU). Motivazione: il vecchio schema non garantiva educazione specifica al cliente ricorrente che acquistava un prodotto mai provato (es. cliente compra Youth, poi Elisir: con vecchio schema, niente istruzioni Elisir). Nuovo schema risolve il buco architetturale, manutenzione più pulita, trigger SKU-based (zero ambiguità). Cross-sell flow 22: aggiunta logica esclusione "già posseduto" (Andrea, maggio 2026). Numerazione Fase 3 shiftata a 71-81.

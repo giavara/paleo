@@ -156,13 +156,15 @@ Recensioni dal CSV `context/20260511 paleocomplex export-reviews.csv` — filtro
 
 Ciao [NOME]
 
-Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
+Ti scrivo io questa volta. Sono Flaminia e mi occupo del rapporto con i clienti di Paleocomplex. 
+
+Lorenzo si occupa della parte tecnica e scientifica, io invece sono il punto di contatto umano: rispondo a chi ci scrive, ascolto i feedback, raccolgo storie. Ed è proprio per questo che oggi voglio scriverti.
 
 Sono passate circa 2-3 settimane da quando hai iniziato il tuo Testoplus. Su un prodotto come questo, dove l'effetto si misura su parametri ormonali oggettivi più che sulle "sensazioni", la storia che voglio raccontarti oggi è particolare.
 
 Su Testoplus le recensioni pubbliche sono ancora poche perché è un prodotto entrato più di recente nel nostro catalogo. Ma uno dei messaggi più importanti che Lorenzo ha ricevuto è proprio una testimonianza concreta con i numeri delle analisi del sangue:
 
-*"Ti mando il valore del testosterone prima dell'utilizzo del Testoplus e dopo 2 mesi di integrazione: livelli di testosterone passati da 5,34 a 6,44."*
+*"Ti mando il valore del testosterone prima dell'utilizzo del Testoplus e dopo 2 mesi di integrazione: livelli di testosterone passati da 5,34 a 644."*
 **Messaggio di un cliente dopo 2 mesi.** Una trasformazione importante, ma ci tengo a precisare che ogni risultato è soggettivo e dipende dallo stato di partenza.
 
 È esattamente il tipo di feedback che ci interessa: documentato, misurabile, onesto. Se nelle prossime settimane noti cambiamenti (energia, libido, recupero) o se fai analisi ormonali, **rispondi pure a questa email** raccontandomi com'è andata: per me è prezioso sentire la tua esperienza diretta. E le tue parole, anonime o con il tuo nome se vuoi, servono anche a costruire social proof reale per chi verrà dopo di te.

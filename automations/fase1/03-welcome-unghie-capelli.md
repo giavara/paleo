@@ -1,6 +1,6 @@
-**Versione:** 1.3
-**Ultimo aggiornamento:** 2026-04-15
-**Status:** Bozza v1 — in attesa review Andrea
+**Versione:** 1.4
+**Ultimo aggiornamento:** 2026-07-17
+**Status:** LIVE (`VuzNGC`) — v1.4: **risolto bug critico del trigger** (partiva per chiunque compilasse un form qualsiasi)
 
 # Flow 3: Welcome Unghie e Capelli
 
@@ -24,12 +24,26 @@ Prevalentemente donne 35-55 (ma non solo), frustrate da capelli che cadono, ungh
 **Prodotti protagonisti:** Youth, Jeunesse.
 **Prodotti complementari:** multivitaminici come base per potenziare i risultati.
 
-## Configurazione Klaviyo
+## Configurazione Klaviyo (stato reale verificato 2026-07-17)
 
-**Trigger:** Added to List (lista "Lead Magnet Unghie Capelli")
+**Flow ID:** `VuzNGC` — `live`
+**Trigger:** metrica `TyCPvJ` "Form completed by profile" **con filtro `form_id equals RdfJTp`**
 **Mittente:** Lorenzo Zarone (tutte le email del flow)
-**Filtri profilo:**
-- Has not been in this flow before
+**Filtro di flow:** `Placed Order` (`Yx2zYn`) count = 0, timeframe `flow-start`
+
+⚠️ **BUG CRITICO RISOLTO il 17/7/2026.** Il trigger aveva `trigger_filter: null`: siccome `TyCPvJ` è una metrica **multiplexata** (tutti i form del sito ci passano sotto), il flow partiva per **qualunque** compilazione di form. Sugli ultimi 100 eventi: 95 erano iscrizioni al kit benessere (form `RBQbYY`/`WRYguQ`) che finivano **anche** in questo welcome. Risultato: due welcome in parallelo (~11 email sovrapposte) e contenuti su unghie e capelli a gente che aveva chiesto l'anti-age. Fix: aggiunto il filtro sul form corretto (Andrea, UI).
+
+**Mappa form → welcome (Forms API, sono solo 3):**
+
+| form_id | nome | welcome |
+|---------|------|---------|
+| `RBQbYY` | popup - welcome kit antiage | `02-welcome-kit-benessere` |
+| `WRYguQ` | embed - 7 strategie antiage | `02-welcome-kit-benessere` |
+| `RdfJTp` | **embed - unghie-capelli** | **questo flow** |
+
+Il `07-welcome-d3-k2` non ha form: entra da segmento (ManyChat → lista → segmento `UadnPz`), quindi non genera eventi `TyCPvJ` e non interferisce.
+
+⚠️ **Regola generale**: un trigger su `TyCPvJ` (o su qualsiasi metrica multiplexata) **deve sempre avere un `trigger_filter`**. Le metriche atomiche (`Placed Order`, `Started Checkout`, `Viewed Product`, `Fulfilled Order`) invece non ne hanno bisogno: l'evento stesso è la condizione.
 
 **Uscita dal flow:**
 - Se il contatto effettua un acquisto durante il flow → esce e entra nel **Post Purchase New Customer (flow 6)**
@@ -55,7 +69,7 @@ Authority parte DOPO il completamento di questo welcome (sequenziale, NON in par
 ### Preview text (3 varianti)
 
 - A: Scarica il report e scopri il tuo regalo di €10.
-- B: Le vere cause di capelli deboli e unghie fragili.
+™ø- B: Le vere cause di capelli deboli e unghie fragili.
 - C: Il report che hai richiesto è pronto.
 
 ### Corpo email
@@ -260,7 +274,7 @@ Due gesti al giorno, e il tuo corpo ha tutto quello che serve per ricostruire da
 
 Quale multivitaminico scegliere? Dipende dalle tue esigenze. Abbiamo preparato una guida che ti aiuta a trovare quello giusto in base alla tua età e ai tuoi obiettivi.
 
-**[CTA: Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
+**[Vai alla guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
 Una nostra cliente l'ha detto meglio di me:
 
@@ -268,7 +282,7 @@ Una nostra cliente l'ha detto meglio di me:
 
 Il codice **BENVENUTO** è ancora attivo: **€10 di sconto sul primo acquisto**.
 
-**[CTA: Vai allo store](https://paleocomplex.com)**
+**[Vai allo store](https://paleocomplex.com)**
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -312,9 +326,9 @@ Se non sai da dove partire:
 
 **Per il massimo dell'anti-aging cutaneo** → **Jeunesse** (12.000 mg collagene grass-fed con 12 nutrienti sinergici tra cui antiossidanti avanzati come astaxantina e estratto di corteccia di pino, €1,98/giorno)
 
-**Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[CTA: Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta/)**
+**Per il protocollo completo** → Youth o Jeunesse + un multivitaminico. **[Scopri quale nella guida alla scelta](https://paleocomplex.com/guida-scelta/)**
 
-Oppure vai direttamente allo store: **[CTA: Usa il codice BENVENUTO](https://paleocomplex.com)**
+Oppure vai direttamente allo store: **[Usa il codice BENVENUTO](https://paleocomplex.com)**
 
 Dopo questa email continuerai a ricevere contenuti di valore sulla salute e sull'integrazione. Niente spam, solo cose utili. Ma lo sconto di benvenuto non tornerà.
 
