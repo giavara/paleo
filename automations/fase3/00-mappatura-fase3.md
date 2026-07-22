@@ -13,7 +13,7 @@ Documento di riferimento per l'architettura completa Fase 3 di Paleocomplex. Inc
 | **72** | AI Repeat Purchase | Date property trigger: `Expected Date of Next Order` | ✅ **SÌ — Predictive Analytics** calcola ENO personalizzata per cliente | Reorder ricorrente al momento personalizzato | **ALTA** |
 | | └ Conditional Split | `Predicted CLV ≥ 150€` (media reale calcolata 22/7 su 2.895 clienti) | ✅ **SÌ — Predictive Analytics** calcola CLV atteso 365gg | Above/Below split per modulare il copy (nessuno sconto in questo flow) | |
 | **73** | RFM Winback | Ingresso segmento `Current RFM group ∈ [At Risk, Needs Attention]` | ✅ **SÌ — RFM Automation** classifica i clienti in 6 gruppi ogni notte | Riattivazione clienti a rischio churn | **MEDIA** |
-| | └ Conditional Split | `Historic CLV > 300€` | ❌ NO — dato storico | Distinguere top spender persi da clienti medi | |
+| | └ Conditional Split | `Historic CLV > 450€` (mediana reale calcolata 22/7) | ❌ NO — dato storico | Distinguere top spender persi da clienti medi (split 50/50) | |
 | **74** | Sunset Lead | Ingresso segmento comportamentale (`Subscribed > 180gg` + `Placed Order = 0` + `Last Open > 90gg` + `Last Click > 90gg`) | ❌ NO — segmento comportamentale semplice | Igiene lista: sopprimere iscritti mai-clienti mai-attivi | BASSA |
 | **75** | Sunset Cliente Storico | Ingresso segmento (`Placed Order ≥ 1` + `Last Placed > 180gg` + `Last Open > 180gg`) | ❌ NO — segmento comportamentale | Nurturing soft per cliente vero che è scomparso (no suppress hard) | BASSA |
 | **76** | Back in Stock | `Subscribed to Back in Stock` + prodotto restock | ❌ NO — trigger event-based nativo Klaviyo/WooCommerce | Notifica quando prodotto torna disponibile | BASSA |
@@ -35,8 +35,8 @@ Principio: **lo sconto cresce con la distanza del cliente, mai con la vicinanza*
 |------|-----------------|--------|--------|------|
 | 71 First-Order Reorder | Primo riacquisto in finestra naturale | **0%** | — | Mai educare il nuovo cliente allo sconto |
 | 72 AI Repeat Purchase | Riordino alla data prevista (picco propensione) | **0%** al lancio | — | Opzione test 10€ dopo 60-90gg di dati se conversion Below debole |
-| 73 RFM Winback Standard | At Risk, HCLV ≤300€ | **10%** | univoco `RP10-xxx` (14gg) | Primo sconto del ciclo: c'è segnale reale di allontanamento |
-| 73 RFM Winback High | At Risk, HCLV >300€ | **15%** solo Email 3 | univoco `WB15-xxx` (14gg) | Prima brand reintroduction, sconto come ultima leva |
+| 73 RFM Winback Standard | At Risk, HCLV ≤450€ | **10%** | univoco `RP10-xxx` (14gg) | Primo sconto del ciclo: c'è segnale reale di allontanamento |
+| 73 RFM Winback High | At Risk, HCLV >450€ | **15%** solo Email 3 | univoco `WB15-xxx` (14gg) | Prima brand reintroduction, sconto come ultima leva |
 | 74 Sunset Lead | Mai cliente, in uscita dalla lista | **20%** Email 2+3 | univoco `SL20-xxx` (14gg) | Baseline ~zero: ogni conversione è guadagno puro. Il click fa anche da test interesse |
 | 75 Sunset Cliente Storico | Ex cliente dormiente 180gg | **20%** open-ended | statico `BENTORNATO20` (1 uso/cliente) | Carta finale senza pressione temporale |
 | 78 Cross-Sell Data-Driven | Cliente attivo, prova prodotto NUOVO | **10€ fissi** | univoco `NP10-xxx` (14gg) | Incrementalità vera: barriera della prima prova. Vale su tutto il catalogo |

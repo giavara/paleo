@@ -1,5 +1,5 @@
-**Versione:** 3.0
-**Ultimo aggiornamento:** 2026-07-14
+**Versione:** 3.1
+**Ultimo aggiornamento:** 2026-07-22
 
 # Flow 73: RFM Winback
 
@@ -53,8 +53,8 @@ Subito dopo l'ingresso nel flow, valutare `Historic CLV`:
 
 | Ramo | Condizione | Cliente | Email | Sconto |
 |------|------------|---------|-------|--------|
-| **HIGH** | Historic CLV > 300€ | Top spender persi (valgono molto) | **3 email** | Sconto graduale (15% finale) |
-| **STANDARD** | Historic CLV ≤ 300€ | Clienti medi persi | **2 email** | Sconto 10% (codice univoco) |
+| **HIGH** | Historic CLV > 450€ | Top spender persi (sopra il cliente mediano) | **3 email** | Sconto graduale (15% finale) |
+| **STANDARD** | Historic CLV ≤ 450€ | Clienti medi persi | **2 email** | Sconto 10% (codice univoco) |
 
 ### Razionale dei rami
 
@@ -81,7 +81,7 @@ Vedi documento `00-mappatura-fase3.md` sezione Sormonti. Sintesi:
 
 ---
 
-## RAMO HIGH CLV — Cliente storico persi (Historic CLV > 300€)
+## RAMO HIGH CLV — Clienti storici persi (Historic CLV > 450€)
 
 ### Email 1 — Lorenzo (immediate dal trigger)
 
@@ -211,7 +211,7 @@ Customer Care Paleocomplex
 
 ---
 
-## RAMO STANDARD — Historic CLV ≤ 300€
+## RAMO STANDARD — Historic CLV ≤ 450€
 
 ### Email 1 — Flaminia (immediate dal trigger)
 
@@ -324,9 +324,9 @@ Klaviyo Academy raccomanda per top clienti persi di **partire con brand reintrod
 
 Ridurre il rischio percepito del cliente storico che teme di "sbagliare a riordinare". NOTA (Andrea 2026-06-18): il reso è possibile ma le spese di spedizione del reso sono a carico del cliente — per questo il copy dice "reso facile" SENZA promettere "senza spese". Per clienti standard non menziono reso.
 
-### Soglia HCLV 300€
+### Soglia HCLV 450€ (calcolata su dati reali, 2026-07-22)
 
-Stima iniziale. Ricalibrare a metà trial guardando la distribuzione HCLV nel segmento "1+ ordini". Se la mediana HCLV è ~150€, magari 300€ è troppo alto e va abbassato. Se la mediana è 400€, 300€ è troppo basso.
+Non più stima: analisi via API sul segmento Acquirenti abituali (2.895 clienti 2+ ordini): Historic CLV medio €919, **mediana €450**. Con la vecchia soglia 300€ il 66% dei clienti sarebbe finito nel ramo High (pensato per i top, non per la maggioranza). Soglia = mediana → split 50/50 con lettura pulita: "sopra o sotto il cliente mediano". Ricalcolare insieme alla soglia Predicted CLV del Flow 72 ogni 3-6 mesi.
 
 ### Filtri di esclusione riepilogo
 
@@ -349,7 +349,7 @@ Cliente entra solo se:
   - Placed Order zero times since starting this flow
     │
     ▼
-[Conditional Split: Historic CLV > 300€]
+[Conditional Split: Historic CLV > 450€]
     │
     ├── YES (High CLV)
     │     ▼ immediate
@@ -381,7 +381,7 @@ Filtro extra su Flow 75: `NOT received Flow 73 last email in last 60 days`. Cos�
 Bozza v1.0 — pronto per montaggio Klaviyo. Richiede Marketing Analytics attivo per RFM.
 
 ### Changelog
+- **v3.1 (2026-07-22)**: soglia Historic CLV **300€ → 450€** (mediana reale calcolata via API su 2.895 clienti ricorrenti; con 300€ il 66% finiva nel ramo High). Split ora 50/50: High = sopra il cliente mediano.
 - **v3.0 (2026-07-14)**: codici sconto UNIVOCI Klaviyo su entrambi i rami (RIPRENDI10X9 statico eliminato). Supporto WooCommerce nativo verificato; setup documentato nelle note operative. Il Flow 73 è ora il PRIMO punto sconto dell'intero ciclo retention (il 72 è diventato no-sconto): scala 10% Standard / 15% High CLV coerente e crescente.
 - **v2.0 (2026-06-18)**: fix da verifica content-verifier + decisioni Andrea. (1) Reso: il copy non promette più "senza spese" (le spese di reso sono a carico del cliente) → "reso facile... organizziamo tutto". (2) Codice RIPRENDI10 → **RIPRENDI10X9** (alfanumerico, validità 14gg). (3) Promesse di silenzio rese veritiere ("per i prossimi mesi..."), tolto "(davvero)" dall'oggetto. (4) Anglicismi rimossi (pitch, automation). (5) Fix sintassi ("Bastano un'email"). (6) "Ti scriverò altre due email" → "riceverai da noi" (la terza è di Flaminia). (7) Pipeline resa vaga ("nuove formule"). (8) "Leggo io" → "la leggiamo io e il mio team". (9) Newsletter descritta onestamente (include offerte).
-- v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
-- v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV (300€ soglia). Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% RIPRENDI10 + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
+- v1.0 (2026-06-18): prima stesura. Trigger RFM (At Risk + Needs Attention), conditional split Historic CLV. Ramo High CLV con brand reintroduction + news + sconto finale univoco 15% + reso facile. Ramo Standard con 10% + trasparenza finale. Filtri di esclusione con Flow 72 (30gg gap) e coordinamento con Flow 75 (60gg gap).
