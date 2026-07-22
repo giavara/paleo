@@ -1,5 +1,5 @@
-**Versione:** 3.0
-**Ultimo aggiornamento:** 2026-06-18
+**Versione:** 4.0
+**Ultimo aggiornamento:** 2026-07-22
 
 # Flow 71: First-Order Reorder Reminder
 
@@ -68,7 +68,7 @@ Lo split valuta `event.Items.0.SKU` e dirotta su uno dei 3 rami.
 
 **Pattern**: Email 1 sempre Flaminia (soft, umana, anticipa la fine del pack). Email 2 sempre Lorenzo (più diretta, push al riacquisto con autorevolezza). Eccezione Vit D: singola email diretta Lorenzo.
 
-**Niente sconti in nessuna email.** Lo sconto vive solo nei Flow 72 (Below-CLV) e 73 (At Risk Winback). Coerente con la filosofia "selective discounting" del playbook Klaviyo.
+**Niente sconti flow-specific in nessuna email.** Il primo sconto di recupero vive nel Flow 73 (At Risk Winback). Le Email 2 citano però gli **sconti quantità evergreen del sito** (PROMO3 10% / PROMO6 15%) e il programma fedeltà: non sono incentivi del flow ma leve permanenti dello store — spingono l'AOV del riordino senza educare all'attesa dello sconto (decisione Andrea 2026-07-22).
 
 ## Coordinamento con flow Fase 2 (esempio Ramo A)
 
@@ -107,7 +107,7 @@ Copre tutti i prodotti con pack che si esauriscono in circa un mese (multivit ba
 
 #### Preview text (3 varianti)
 
-- A: La costanza è tutto. Te lo ricordo io.
+- A: La costanza è tutto. 
 - B: Per non interrompere il percorso che hai iniziato.
 - C: Sto pensando a te in queste settimane.
 
@@ -115,15 +115,13 @@ Copre tutti i prodotti con pack che si esauriscono in circa un mese (multivit ba
 
 Ciao [NOME]
 
-Sono Flaminia. Ti scrivo perché ho fatto due conti: il tuo {{ event.Items.0.product_name }} sta arrivando alla fine.
-
-Sei al giorno 25 dalla spedizione e il tuo pack si sta avvicinando alla fine.
+Sono Flaminia. Ti scrivo perché in teoria il tuo {{ event.Items.0.product_name }} sta arrivando alla fine.
 
 Ti scrivo adesso, non quando sarà finito, perché ho imparato una cosa lavorando con i nostri clienti: **il vero risultato sta nella costanza**. Le interruzioni, anche brevi, rallentano il percorso che hai costruito nel primo mese.
 
 E il primo mese è importante. È la fase in cui il corpo comincia a rispondere davvero al supporto che gli stai dando, qualunque sia il prodotto che hai scelto. Saltarlo significa ricominciare da capo.
 
-Se hai dubbi su come va, su quale dosaggio scegliere, o vuoi parlarne direttamente con Lorenzo, **rispondi pure a questa email**. Leggo io e ti rispondo personalmente.
+Se hai dubbi su come va o su quale dosaggio scegliere, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
 Tra qualche giorno Lorenzo ti scriverà con il link diretto per riordinare senza fatica. Nel frattempo, se vuoi anticipare, puoi farlo direttamente dal **[nostro sito](https://paleocomplex.com)**.
 
@@ -153,7 +151,7 @@ Customer Care Paleocomplex
 
 Ciao [NOME]
 
-Sono Lorenzo. Flaminia mi ha detto che ti ha scritto qualche giorno fa. Ti scrivo io adesso perché è il momento giusto.
+Sono Lorenzo. Qualche giorno fa ti ha scritto Flaminia. Adesso ti scrivo io, perché è il momento giusto.
 
 A questo punto il tuo {{ event.Items.0.product_name }} è finito, o stai per finirlo. Ho due cose da dirti.
 
@@ -163,13 +161,15 @@ A questo punto il tuo {{ event.Items.0.product_name }} è finito, o stai per fin
 
 Te lo dico in modo diretto perché è quello che dico a chiunque mi scriva: gli integratori veri non funzionano come un farmaco che provi per 30 giorni e poi giudichi. Funzionano come un investimento sul tempo. Tre mesi continuativi è il minimo per giudicare onestamente. Dal quarto mese in poi cominciano a consolidarsi i benefici strutturali, quelli che fanno la differenza negli anni.
 
-Se hai dubbi sul dosaggio, sul prodotto giusto per te, o vuoi confrontarti con noi su qualcosa, **rispondi a questa email**: la leggiamo io e il mio team, e ti rispondiamo.
+Se hai dubbi sul dosaggio o sul prodotto giusto per te, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
-Se invece sei convinto e vuoi continuare:
+Se invece vuoi continuare:
 
 **[Riordina il tuo {{ event.Items.0.product_name }}](https://paleocomplex.com/prodotto/{{ event.Items.0.product_slug }})**
 
-Spedizione veloce come sempre, 24-48h con corriere espresso.
+Spedizione veloce come sempre, in 24-48h lavorative con corriere espresso. E paghi come preferisci: carta, PayPal o contrassegno.
+
+Un'ultima cosa che in pochi notano: **più prodotti metti nell'ordine, più risparmi**. Con 3 prodotti (anche diversi tra loro) hai il 10% di sconto con il codice PROMO3, con 6 prodotti il 15% con PROMO6. E ogni euro speso vale un punto del programma fedeltà, che sblocca sconti permanenti sugli ordini successivi. Trovi tutto nella **[pagina promozioni](https://paleocomplex.com/promozioni/)**.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -211,7 +211,7 @@ Le pause lunghe rallentano il consolidamento dei risultati su cui hai già lavor
 
 A questo punto del percorso può essere che tu abbia notato i primi cambiamenti (pelle più compatta, articolazioni migliorate, energia più costante a seconda del prodotto), oppure che stia ancora aspettando. In entrambi i casi: continua.
 
-Se hai dubbi o vuoi confrontarti con noi, **rispondi a questa email**. Leggo io e ti rispondo personalmente.
+Se hai dubbi o vuoi confrontarti con noi, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
 Tra qualche giorno Lorenzo ti scriverà con il link per riordinare.
 
@@ -249,11 +249,15 @@ I primi due mesi servono per costruire le basi. Ed è di solito dal terzo mese c
 
 Te lo dico perché ci ho visto troppi clienti smettere a metà strada e poi ricominciare da capo sei mesi dopo. Non è efficiente, e soprattutto, hai investito tempo che ora rischi di buttare via.
 
-Se vuoi confrontarti su come prosegui (dosaggio, eventuali combinazioni, dubbi sul prodotto), **rispondi a questa email**.
+Se vuoi confrontarti su come prosegui (dosaggio, eventuali combinazioni, dubbi sul prodotto), scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)**: leggiamo sempre e ti rispondiamo.
 
-Se invece sei convinto e vuoi continuare:
+Se invece vuoi continuare:
 
 **[Riordina il tuo {{ event.Items.0.product_name }}](https://paleocomplex.com/prodotto/{{ event.Items.0.product_slug }})**
+
+Spedizione veloce come sempre, in 24-48h lavorative con corriere espresso. E paghi come preferisci: carta, PayPal o contrassegno.
+
+Un'ultima cosa che in pochi notano: **più prodotti metti nell'ordine, più risparmi**. Con 3 prodotti (anche diversi tra loro) hai il 10% di sconto con il codice PROMO3, con 6 prodotti il 15% con PROMO6. E ogni euro speso vale un punto del programma fedeltà, che sblocca sconti permanenti sugli ordini successivi. Trovi tutto nella **[pagina promozioni](https://paleocomplex.com/promozioni/)**.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -293,13 +297,17 @@ Ti scrivo per tre motivi:
 
 **1. Se non l'hai ancora fatto, fai le analisi della 25(OH)D adesso.** È il momento giusto: dopo 4 mesi di supplementazione i valori si sono stabilizzati. Hai un quadro reale di come la tua dose sta funzionando. Il range ottimale è 40-60 ng/ml.
 
-**2. Se hai fatto le analisi, mi farebbe piacere conoscere i tuoi valori prima/dopo.** Rispondi pure a questa email con i numeri (anche solo "ero a X, adesso sono a Y"). Sono i dati che ci aiutano a costruire un quadro reale.
+**2. Se hai fatto le analisi, ci farebbe piacere conoscere i tuoi valori prima/dopo.** Rispondi pure a questa email con i numeri (anche solo "ero a X, adesso sono a Y"): li leggiamo sempre, e ci aiutano a costruire un quadro reale.
 
 **3. Per il riacquisto**, la Vitamina D è una supplementazione di lungo periodo, specialmente da ottobre a marzo quando in Italia il sole non basta. Se vuoi assicurarti di avere il flaconcino di scorta:
 
 **[Riordina la tua Vitamina D in gocce](https://paleocomplex.com/prodotto/vitamina-d/)**
 
-Una nota: se le analisi dovessero dirti che sei in carenza marcata, scrivimi prima di riordinare. Possiamo ragionare insieme sul dosaggio.
+Spedizione veloce come sempre, in 24-48h lavorative con corriere espresso. E paghi come preferisci: carta, PayPal o contrassegno.
+
+Un'ultima cosa che in pochi notano: **più prodotti metti nell'ordine, più risparmi**. Con 3 prodotti (anche diversi tra loro) hai il 10% di sconto con il codice PROMO3, con 6 prodotti il 15% con PROMO6. E ogni euro speso vale un punto del programma fedeltà, che sblocca sconti permanenti sugli ordini successivi. Trovi tutto nella **[pagina promozioni](https://paleocomplex.com/promozioni/)**.
+
+Una nota: se le analisi dovessero dirti che sei in carenza marcata, scrivici dalla nostra **[pagina di supporto](https://paleocomplex.com/contatti/)** prima di riordinare: ragioniamo insieme sul dosaggio.
 
 Un forte abbraccio
 Lorenzo Zarone
@@ -390,6 +398,7 @@ Verificare in Klaviyo Account Settings → Integrations → WooCommerce → Metr
 - **Prerequisito SKU/metric mapping:** non bloccante per questo design (si instrada su ProductName, gia' presente negli eventi), ma resta da disabilitare le email carrello native WooCommerce ecc. come da memoria.
 
 ### Changelog
+- **v4.0 (2026-07-22)**: revisione pre-montaggio con Andrea. (1) **Contatti → pagina di supporto** ovunque (https://paleocomplex.com/contatti/): rimosso "rispondi a questa email" per i dubbi/supporto e rimosso "parlarne direttamente con Lorenzo" (in futuro non sarà possibile); formula plurale "leggiamo sempre e ti rispondiamo". Resta il reply diretto solo per la raccolta valori analisi VitD (feedback, non supporto). (2) Email 2 apertura naturale: via "Flaminia mi ha detto" → "Qualche giorno fa ti ha scritto Flaminia". (3) **Blocco risparmio in chiusura di tutte le Email 2 + VitD**: spedizione 24-48h + pagamenti (carta, PayPal, contrassegno) + sconti quantità PROMO3/PROMO6 + programma fedeltà, con link a paleocomplex.com/promozioni/ (verificato 200). (4) Gender fix "sei convinto".
 - **v3.0 (2026-06-18)**: fix da verifica content-verifier (report 4 agenti + review Andrea). (1) Range 25(OH)D corretto da 50-80 a **40-60 ng/ml** (scheda prodotto, citazione Lorenzo). (2) Rimossi i claim di durata pack falsi per parte del ramo ("circa un mese" non regge per Elisir/EB 40gg; "circa due mesi" non regge per Jeunesse 50gg) → claim neutro "si sta avvicinando alla fine". (3) Ammorbiditi claim scientifici esagerati (interruzione 1 settimana, 15 giorni = settimane indietro, "saturare il sistema"). (4) Fix grammatica ("sta per finirlo") e gender-neutral ("Sei arrivato" ecc.). (5) "Leggo io personalmente" → "la leggiamo io e il mio team" (Lorenzo).
 - **v2.2 (2026-06-18)**: montato come Draft in Klaviyo via Create Flow API (flow ID `Xi3wcm`). Documentate le 3 differenze design-vs-implementazione (split su ProductName via conditional-split annidati invece di multi-branch su SKU; filtro primo-ordine via profile_filter Placed Order=1; variabile reale `event.ProductNames.0`) e i to-do manuali nel builder (mittenti, A/B, deep-link).
 - **v2.1 (2026-06-18)**: semplificazione drastica della ramificazione su decisione di Andrea. Da 6 rami granulari a **3 rami per blocchi di durata approssimata**:
