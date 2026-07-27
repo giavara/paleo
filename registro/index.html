@@ -1,0 +1,305 @@
+<!--
+  Registro Attività Paleocomplex — dashboard ore/valore per mese
+  versione: v1.0 (2026-07-27)
+  Fonte dati: project/Paleocomplex Registro Attivita.xlsx (tariffa 100 €/h)
+  Pubblicato: https://giavara.github.io/paleo/registro/
+  Aggiornamento dati: rigenerare da xlsx e bumpare la versione qui + changelog sotto.
+  changelog:
+    v1.0 — prima versione: hero KPI, ore per mese (stacked by categoria), tabella mese/mese, ripartizione categorie
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Registro Attività — Paleocomplex</title>
+<style>
+  :root{
+    color-scheme: light dark;
+    --plane:#f9f9f7; --surface:#fcfcfb;
+    --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --good:#006300;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+    --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      --plane:#0d0d0d; --surface:#1a1a19;
+      --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+      --good:#0ca30c;
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+      --s5:#d55181; --s6:#008300; --s7:#9085e9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --plane:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+    --good:#0ca30c;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --s5:#d55181; --s6:#008300; --s7:#9085e9;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--plane); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px; margin:0 auto; padding:32px 20px 64px}
+  header.top{margin-bottom:28px}
+  .eyebrow{font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+  h1{font-size:clamp(24px,4vw,32px); font-weight:700; margin:0 0 6px; letter-spacing:-.01em}
+  .sub{color:var(--ink2); font-size:15px; margin:0}
+  .sub b{color:var(--ink); font-weight:600}
+
+  /* KPI tiles */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:26px 0 34px}
+  @media(max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .tile{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px}
+  .tile .lab{font-size:12px; color:var(--muted); font-weight:600; letter-spacing:.02em; margin-bottom:8px}
+  .tile .val{font-size:clamp(22px,3.4vw,30px); font-weight:700; letter-spacing:-.02em; line-height:1}
+  .tile .val small{font-size:15px; font-weight:600; color:var(--ink2); letter-spacing:0}
+  .tile .foot{font-size:12px; color:var(--ink2); margin-top:6px}
+
+  section{margin-top:40px}
+  h2{font-size:17px; font-weight:700; margin:0 0 2px; letter-spacing:-.01em}
+  .h2sub{font-size:13px; color:var(--muted); margin:0 0 16px}
+
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px}
+
+  /* legend */
+  .legend{display:flex; flex-wrap:wrap; gap:10px 16px; margin:0 0 16px}
+  .legend .li{display:flex; align-items:center; gap:7px; font-size:12.5px; color:var(--ink2)}
+  .legend .sw{width:11px; height:11px; border-radius:3px; flex:none}
+
+  /* stacked bar chart */
+  .chart{width:100%; overflow-x:auto}
+  svg{display:block; width:100%; height:auto}
+  .gridline{stroke:var(--grid); stroke-width:1}
+  .axislbl{fill:var(--muted); font-size:11px}
+  .xlbl{fill:var(--ink2); font-size:13px; font-weight:600}
+  .seg{stroke:var(--surface); stroke-width:2; cursor:default; transition:opacity .12s}
+  .seg:hover{opacity:.82}
+  .totlbl{fill:var(--ink); font-size:13px; font-weight:700}
+  .partlbl{fill:var(--muted); font-size:10.5px}
+
+  /* month table */
+  .tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  table{width:100%; border-collapse:collapse; font-size:14px; min-width:460px}
+  th,td{text-align:right; padding:11px 10px; border-bottom:1px solid var(--border)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-size:11.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:600; border-bottom:1px solid var(--axis)}
+  tbody td{font-variant-numeric:tabular-nums}
+  tbody tr:last-child td{border-bottom:none}
+  tfoot td{font-weight:700; padding-top:13px; border-top:2px solid var(--axis); border-bottom:none; font-variant-numeric:tabular-nums}
+  .mname{font-weight:600}
+  .tag{display:inline-block; font-size:11px; color:var(--muted)}
+  .mixbar{display:flex; height:7px; border-radius:4px; overflow:hidden; margin-top:6px; gap:1.5px; min-width:120px}
+  .mixbar span{height:100%}
+
+  /* category ranking */
+  .catrows{display:flex; flex-direction:column; gap:12px}
+  .catrow{display:grid; grid-template-columns:130px 1fr auto; align-items:center; gap:12px}
+  @media(max-width:520px){.catrow{grid-template-columns:100px 1fr auto; gap:8px}}
+  .catname{font-size:13.5px; font-weight:600; display:flex; align-items:center; gap:8px}
+  .catname .sw{width:10px; height:10px; border-radius:3px; flex:none}
+  .track{background:var(--grid); border-radius:5px; height:10px; overflow:hidden}
+  .fill{height:100%; border-radius:5px}
+  .catval{font-size:13px; color:var(--ink2); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right}
+  .catval b{color:var(--ink); font-weight:700}
+
+  footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--border); font-size:12.5px; color:var(--muted)}
+  footer b{color:var(--ink2); font-weight:600}
+
+  /* tooltip */
+  #tip{position:fixed; pointer-events:none; z-index:20; background:var(--ink); color:var(--plane);
+    padding:7px 10px; border-radius:8px; font-size:12.5px; line-height:1.35; opacity:0; transition:opacity .1s;
+    box-shadow:0 4px 16px rgba(0,0,0,.25); max-width:220px}
+  #tip b{font-weight:700}
+  #tip .tv{font-variant-numeric:tabular-nums}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Paleocomplex · consulenza marketing</p>
+    <h1>Registro Attività</h1>
+    <p class="sub" id="subline"></p>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <h2>Ore per mese</h2>
+    <p class="h2sub">Ore lavorate mese per mese, ripartite per area di attività.</p>
+    <div class="card">
+      <div class="legend" id="legend"></div>
+      <div class="chart"><svg id="bars" viewBox="0 0 720 340" role="img" aria-label="Ore per mese ripartite per categoria"></svg></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dettaglio mese per mese</h2>
+    <p class="h2sub">Ore, valore a 100 €/h e numero di attività registrate.</p>
+    <div class="card">
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Mese</th><th>Ore</th><th>Valore</th><th>Attività</th><th>Mix aree</th></tr></thead>
+          <tbody id="tbody"></tbody>
+          <tfoot id="tfoot"></tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dove va il tempo</h2>
+    <p class="h2sub">Totale ore per area su tutto il periodo.</p>
+    <div class="card"><div class="catrows" id="catrows"></div></div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<div id="tip"></div>
+
+<script>
+/* ---- DATI (fonte: Paleocomplex Registro Attivita.xlsx, minuti) ---- */
+const RATE = 100;
+const CATS = [
+  {name:'Klaviyo',         v:'--s1'},
+  {name:'Email marketing', v:'--s2'},
+  {name:'Strategia',       v:'--s3'},
+  {name:'Meeting',         v:'--s4'},
+  {name:'Sito',            v:'--s5'},
+  {name:'Ads',             v:'--s6'},
+  {name:'Altro',           v:'--s7'},
+];
+const MONTHS = [
+  {label:'Marzo 2026',  short:'Mar', n:35, min:{Klaviyo:0,   'Email marketing':570, Strategia:450, Meeting:60,  Sito:245, Ads:230, Altro:120}},
+  {label:'Aprile 2026', short:'Apr', n:36, min:{Klaviyo:840, 'Email marketing':770, Strategia:635, Meeting:370, Sito:0,   Ads:130, Altro:0}},
+  {label:'Maggio 2026', short:'Mag', n:19, min:{Klaviyo:660, 'Email marketing':270, Strategia:90,  Meeting:180, Sito:360, Ads:30,  Altro:0}},
+  {label:'Giugno 2026', short:'Giu', n:18, min:{Klaviyo:990, 'Email marketing':360, Strategia:210, Meeting:120, Sito:0,   Ads:0,   Altro:0}},
+  {label:'Luglio 2026', short:'Lug', n:7,  partial:true, min:{Klaviyo:480, 'Email marketing':240, Strategia:40, Meeting:120, Sito:0, Ads:0, Altro:0}},
+];
+const PERIOD = {first:'3 marzo 2026', last:'23 luglio 2026', gen:'27 luglio 2026'};
+
+/* ---- helpers ---- */
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const H = m => m/60;
+const group = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');   // 1234 -> 1.234
+const fmtH = h => { const s=(Math.round(h*10)/10).toFixed(1).split('.'); return group(+s[0])+','+s[1]; };
+const fmtE = e => '€'+group(Math.round(e));
+const mTot = m => CATS.reduce((s,c)=>s+(m.min[c.name]||0),0);
+
+const totMin = MONTHS.reduce((s,m)=>s+mTot(m),0);
+const totH = H(totMin), totVal = totH*RATE;
+const totN = MONTHS.reduce((s,m)=>s+m.n,0);
+const catTot = {}; CATS.forEach(c=>catTot[c.name]=MONTHS.reduce((s,m)=>s+(m.min[c.name]||0),0));
+
+/* ---- subline ---- */
+document.getElementById('subline').innerHTML =
+  `Ore e valore del lavoro su Paleocomplex, aggregati per mese. Tariffa <b>${RATE} €/h</b> · periodo ${PERIOD.first} – ${PERIOD.last}.`;
+
+/* ---- KPI ---- */
+const kpis = [
+  {lab:'Ore totali',    val:`${fmtH(totH)}<small> h</small>`, foot:`da ${PERIOD.first}`},
+  {lab:'Valore (100 €/h)', val:fmtE(totVal),                  foot:`media ${fmtE(totVal/MONTHS.length)}/mese`},
+  {lab:'Attività',      val:totN,                             foot:'voci registrate'},
+  {lab:'Mesi tracciati', val:MONTHS.length,                   foot:'mar → lug 2026'},
+];
+document.getElementById('kpis').innerHTML = kpis.map(k=>
+  `<div class="tile"><div class="lab">${k.lab}</div><div class="val">${k.val}</div><div class="foot">${k.foot}</div></div>`).join('');
+
+/* ---- legend ---- */
+document.getElementById('legend').innerHTML = CATS.map(c=>
+  `<span class="li"><span class="sw" style="background:var(${c.v})"></span>${c.name}</span>`).join('');
+
+/* ---- tooltip ---- */
+const tip = document.getElementById('tip');
+function showTip(html,x,y){ tip.innerHTML=html; tip.style.opacity='1';
+  let tx=x+14, ty=y+14; if(tx>innerWidth-230)tx=x-tip.offsetWidth-14;
+  tip.style.left=tx+'px'; tip.style.top=ty+'px'; }
+function hideTip(){ tip.style.opacity='0'; }
+
+/* ---- stacked bar chart ---- */
+(function(){
+  const W=720,Hh=340, mL=38,mR=14,mT=24,mB=42;
+  const pw=W-mL-mR, ph=Hh-mT-mB;
+  const maxMin = Math.max(...MONTHS.map(mTot));
+  const maxH = Math.ceil(H(maxMin)/10)*10;               // 50h
+  const y = h => mT+ph-(h/maxH)*ph;
+  const bw = Math.min(74, pw/MONTHS.length*0.6);
+  const step = pw/MONTHS.length;
+  const svg = document.getElementById('bars');
+  let s='';
+  // gridlines + y ticks
+  for(let t=0;t<=maxH;t+=10){
+    s+=`<line class="gridline" x1="${mL}" y1="${y(t)}" x2="${W-mR}" y2="${y(t)}"/>`;
+    s+=`<text class="axislbl" x="${mL-8}" y="${y(t)+4}" text-anchor="end">${t}</text>`;
+  }
+  s+=`<text class="axislbl" x="${mL-8}" y="${mT-10}" text-anchor="end">ore</text>`;
+  // bars
+  MONTHS.forEach((m,i)=>{
+    const cx = mL+step*i+step/2;
+    const x = cx-bw/2;
+    let acc=0;
+    CATS.forEach(c=>{
+      const mm=m.min[c.name]||0; if(mm<=0)return;
+      const h=H(mm), y1=y(acc+h), hgt=(h/maxH)*ph;
+      s+=`<rect class="seg" x="${x}" y="${y1.toFixed(1)}" width="${bw}" height="${Math.max(hgt,0).toFixed(1)}" fill="var(${c.v})" rx="2"
+            data-m="${m.label}" data-c="${c.name}" data-h="${h.toFixed(2)}" data-e="${Math.round(h*RATE)}"></rect>`;
+      acc+=h;
+    });
+    const tot=H(mTot(m));
+    s+=`<text class="totlbl" x="${cx}" y="${y(tot)-8}" text-anchor="middle">${fmtH(tot)}${m.partial?'*':''}</text>`;
+    s+=`<text class="xlbl" x="${cx}" y="${Hh-20}" text-anchor="middle">${m.short}</text>`;
+    if(m.partial) s+=`<text class="partlbl" x="${cx}" y="${Hh-6}" text-anchor="middle">in corso</text>`;
+  });
+  // baseline
+  s+=`<line x1="${mL}" y1="${mT+ph}" x2="${W-mR}" y2="${mT+ph}" stroke="var(--axis)" stroke-width="1"/>`;
+  svg.innerHTML=s;
+  svg.querySelectorAll('.seg').forEach(r=>{
+    r.addEventListener('mousemove',e=>{
+      showTip(`<b>${r.dataset.m}</b> — ${r.dataset.c}<br><span class="tv">${fmtH(+r.dataset.h)} h · ${fmtE(+r.dataset.e)}</span>`, e.clientX,e.clientY);
+    });
+    r.addEventListener('mouseleave',hideTip);
+  });
+})();
+
+/* ---- month table ---- */
+(function(){
+  const tb=document.getElementById('tbody');
+  tb.innerHTML=MONTHS.map(m=>{
+    const h=H(mTot(m));
+    const segs=CATS.filter(c=>(m.min[c.name]||0)>0)
+      .map(c=>`<span style="flex:${m.min[c.name]};background:var(${c.v})" title="${c.name}"></span>`).join('');
+    return `<tr>
+      <td class="mname">${m.label}${m.partial?' <span class="tag">· in corso</span>':''}</td>
+      <td>${fmtH(h)}</td>
+      <td>${fmtE(h*RATE)}</td>
+      <td>${m.n}</td>
+      <td><div class="mixbar">${segs}</div></td>
+    </tr>`;
+  }).join('');
+  document.getElementById('tfoot').innerHTML=
+    `<tr><td>Totale</td><td>${fmtH(totH)}</td><td>${fmtE(totVal)}</td><td>${totN}</td><td></td></tr>`;
+})();
+
+/* ---- category ranking ---- */
+(function(){
+  const rows=CATS.map(c=>({name:c.name,v:c.v,min:catTot[c.name]})).filter(r=>r.min>0).sort((a,b)=>b.min-a.min);
+  const max=Math.max(...rows.map(r=>r.min));
+  document.getElementById('catrows').innerHTML=rows.map(r=>{
+    const h=H(r.min), pct=r.min/totMin*100;
+    return `<div class="catrow">
+      <div class="catname"><span class="sw" style="background:var(${r.v})"></span>${r.name}</div>
+      <div class="track"><div class="fill" style="width:${(r.min/max*100).toFixed(1)}%;background:var(${r.v})"></div></div>
+      <div class="catval"><b>${fmtH(h)} h</b> · ${pct.toFixed(0)}%</div>
+    </div>`;
+  }).join('');
+})();
+
+/* ---- footer ---- */
+document.getElementById('footer').innerHTML=
+  `Fonte: <b>Paleocomplex Registro Attivita.xlsx</b> · tariffa <b>${RATE} €/h</b> · generato il ${PERIOD.gen}.<br>* Luglio è il mese in corso, dati parziali. I totali contano solo le attività registrate.`;
+</script>
