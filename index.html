@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Paleocomplex — Indice del progetto</title>
+<!--
+  v1.0 — 30 luglio 2026
+  Directory delle risorse pubblicate del progetto (repo giavara/paleo, GitHub Pages).
+  Regola: SOLO risorse condivisibili. Le risorse interne (deck H2, registro) restano fuori: link nel MOC del vault.
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root{
+    --paper:#FAFAF7; --ink:#1A1A1A; --ink2:#4A4A4A; --ink3:#6A6A6A;
+    --taupe:#A0998A; --sand:#C4BFB3; --line:#E5E2DA; --fill:#F0EDE5; --card:#FFFFFF;
+    --gold:#C29A45; --gold2:#A9843A; --gold3:#7D6222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  .header { background: var(--ink); color: var(--paper); padding: 60px 0 50px; text-align: center; }
+  .header h1 { font-size: 28px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+  .header .subtitle { font-size: 15px; font-weight: 300; color: var(--taupe); letter-spacing: 1px; }
+  .header .version { font-size: 11px; color: #6A6A6A; margin-top: 16px; letter-spacing: 1px; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  .section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--taupe); margin-bottom: 6px; }
+  .section .lead { font-size: 13px; color: var(--ink3); margin-bottom: 22px; }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rcard { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color 0.15s; position: relative; }
+  .rcard:hover { border-color: var(--gold); }
+  .rcard.hero { border-left: 3px solid var(--gold); }
+  .rcard .meta { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+  .rcard .type { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold3); }
+  .rcard .date { font-size: 11px; color: var(--sand); }
+  .rcard h3 { font-size: 15px; font-weight: 600; line-height: 1.35; margin-bottom: 4px; }
+  .rcard p { font-size: 12px; color: var(--ink3); line-height: 1.5; }
+  .rcard .arrow { position: absolute; top: 22px; right: 20px; color: var(--sand); font-size: 15px; transition: color 0.15s, transform 0.15s; }
+  .rcard:hover .arrow { color: var(--gold2); transform: translateX(2px); }
+
+  .footer { text-align: center; padding: 40px 0; font-size: 12px; color: var(--sand); border-top: 1px solid var(--line); }
+  .footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sand); }
+
+  @media (max-width: 700px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Paleocomplex</h1>
+    <div class="subtitle">Indice del progetto — tutto il pubblicato, in un posto solo</div>
+    <div class="version">v1.0 · 30 luglio 2026</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-label">Automazioni email</div>
+    <div class="lead">Il sistema Klaviyo: 31 flow, 101 email, 3 fasi.</div>
+    <div class="cards">
+      <a class="rcard hero" href="automations/presentazione-lorenzo-automazioni.html">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Presentazione</span><span class="date">luglio 2026</span></div>
+        <h3>Il sistema completo — le 3 fasi</h3>
+        <p>Obiettivi, numeri e stato di ogni fase, dal lead al cliente che torna.</p>
+      </a>
+      <a class="rcard hero" href="automations/presentazione-fase3.html">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Presentazione</span><span class="date">luglio 2026</span></div>
+        <h3>Fase 3 — Retention con l'AI di Klaviyo</h3>
+        <p>Ciclo di vita, 7 flow, strategia sconti, configurazioni di precisione.</p>
+      </a>
+      <a class="rcard" href="https://github.com/giavara/paleo/tree/main/automations" target="_blank" rel="noopener">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Documentazione</span><span class="date">aggiornata di continuo</span></div>
+        <h3>Tutte le email, flow per flow</h3>
+        <p>I documenti tecnici completi su GitHub: oggetti, copy, trigger, A/B test.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Report &amp; deck</div>
+    <div class="lead">I risultati, in slide navigabili o in pagina.</div>
+    <div class="cards">
+      <a class="rcard" href="deck/h1-2026/">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Deck</span><span class="date">luglio 2026</span></div>
+        <h3>H1 2026 — il semestre</h3>
+        <p>Crescita, base clienti, margine e piano per il secondo semestre. In slide.</p>
+      </a>
+      <a class="rcard" href="presentazioni/2026-07-07_report-h1-lorenzo.html">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Report</span><span class="date">luglio 2026</span></div>
+        <h3>H1 2026 — versione pagina</h3>
+        <p>Lo stesso report del semestre, da leggere in scorrimento.</p>
+      </a>
+      <a class="rcard" href="deck/festa/">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Deck</span><span class="date">luglio 2026</span></div>
+        <h3>FESTA — il giugno record</h3>
+        <p>I numeri della festa del decennale, in slide.</p>
+      </a>
+      <a class="rcard" href="presentazioni/2026-07-07_report-festa-lorenzo.html">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Report</span><span class="date">luglio 2026</span></div>
+        <h3>FESTA — versione pagina</h3>
+        <p>Lo stesso report della festa, da leggere in scorrimento.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Brief operativi</div>
+    <div class="lead">Documenti di lavoro per fornitori e collaboratori.</div>
+    <div class="cards">
+      <a class="rcard" href="amazon-ads/">
+        <span class="arrow">→</span>
+        <div class="meta"><span class="type">Brief</span><span class="date">luglio 2026 · consegna 28/8</span></div>
+        <h3>Banner Amazon — brief per Fabiana</h3>
+        <p>Sistema visivo, copy e tabella formati per le creatività della campagna.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Paleocomplex — progetto marketing &amp; automazioni</p>
+    <p style="margin-top: 4px;">Repository: <a href="https://github.com/giavara/paleo" target="_blank" rel="noopener">github.com/giavara/paleo</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>
