@@ -93,6 +93,8 @@ Struttura standard di ogni flow prodotto:
 - Email 2 (+5gg, Lorenzo): Aspettative + tempi di risposta del prodotto
 - Email 3 (+18gg, Flaminia): Social proof con recensioni verificate + check-in
 
+**Notazione dei tempi.** Klaviyo ragiona con delay incrementali tra step, non con orari assoluti dal trigger. Dove serve montare a mano nel builder, indicare accanto al `T+X` anche il delay dall'email precedente (es. `T+18gg` → `13 days from email 2`), così il numero si copia senza fare la sottrazione.
+
 **Esempio di incastro timing** (cliente nuovo che compra Paleocomplex):
 
 ```
