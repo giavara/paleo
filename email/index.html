@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Registro email — Paleocomplex</title>
+<!--
+  Registro email Paleocomplex — ogni broadcast inviato, con le sue metriche
+  Fonte dati: API Klaviyo, storico da giugno 2026 (prima sta nel vecchio xlsx)
+  Sorgente: projects/paleocomplex/project/registro-email.csv
+  Rigenerare con: python3 scripts/registro_email.py
+  NON modificare a mano questo file: viene sovrascritto a ogni rigenerazione.
+  Le annotazioni si scrivono nella colonna `note` del CSV, che lo script non tocca.
+  Ultimo aggiornamento: 2026-08-04
+-->
+<style>
+  :root{
+    color-scheme: light dark;
+    --plane:#f9f9f7; --surface:#fcfcfb;
+    --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --border:rgba(11,11,11,0.10);
+    --good:#006300; --warn:#c98500; --bad:#c0392b;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      --plane:#0d0d0d; --surface:#1a1a19;
+      --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+      --good:#0ca30c; --warn:#d9a400; --bad:#e05c4a;
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+    }
+  }
+  :root[data-theme="dark"]{
+    --plane:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+    --good:#0ca30c; --warn:#d9a400; --bad:#e05c4a;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--plane);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 6px}
+  h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--ink2);font-size:15px;margin:0}
+  .sub b{color:var(--ink);font-weight:600}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0 30px}
+  @media(max-width:700px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .tile .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:8px}
+  .tile .val{font-size:clamp(20px,3.2vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1}
+  .tile .hint{font-size:11px;color:var(--muted);margin-top:6px}
+  h2{font-size:16px;font-weight:650;margin:34px 0 12px;letter-spacing:-.01em}
+  .bars{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;margin-bottom:8px}
+  .bar{display:grid;grid-template-columns:150px 1fr 62px;gap:12px;align-items:center;
+    margin-bottom:9px;font-size:12px}
+  @media(max-width:620px){.bar{grid-template-columns:110px 1fr 54px;gap:8px;font-size:11px}}
+  .bar .nome{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar .track{background:var(--grid);border-radius:4px;height:16px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:4px;background:var(--s1)}
+  .bar .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .filtri{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+  .filtri button{background:var(--surface);border:1px solid var(--border);color:var(--ink2);
+    border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;
+    font-family:inherit}
+  .filtri button[aria-pressed="true"]{background:var(--ink);color:var(--plane);border-color:var(--ink)}
+  .scroller{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px}
+  table{border-collapse:collapse;width:100%;font-size:13px;min-width:940px}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+    font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--surface)}
+  th:hover{color:var(--ink)}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  tbody tr:hover{background:var(--grid)}
+  tbody tr:last-child td{border-bottom:none}
+  .ogg{white-space:normal;min-width:280px;max-width:380px;font-weight:500}
+  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--border);
+    color:var(--ink2)}
+  .tag.promo{color:var(--s2);border-color:var(--s2)}
+  .tag.educativa{color:var(--s1);border-color:var(--s1)}
+  .tag.lancio{color:var(--s3);border-color:var(--s3)}
+  .tag.reminder{color:var(--s4);border-color:var(--s4)}
+  .ok{color:var(--good);font-weight:650}
+  .mid{color:var(--warn);font-weight:650}
+  .low{color:var(--bad);font-weight:650}
+  .nota{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted)}
+  a{color:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Paleocomplex</p>
+    <h1>Registro email</h1>
+    <p class="sub">Ogni broadcast partito da Klaviyo, con le sue metriche. Storico da <b>giugno 2026</b>: prima di allora i dati stanno nel vecchio foglio e su ActiveCampaign.</p>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>Open rate per invio</h2>
+  <div class="bars" id="bars"></div>
+  <p class="nota">Il riferimento: sopra il 35% l'invio ha funzionato, sotto il 25% la lista era troppo larga o il tema non ha agganciato.</p>
+
+  <h2>Tutti gli invii</h2>
+  <div class="filtri" id="filtri"></div>
+  <div class="scroller">
+    <table>
+      <thead><tr>
+        <th data-k="data">Data</th>
+        <th data-k="oggetto">Oggetto</th>
+        <th data-k="tipo">Tipo</th>
+        <th class="num" data-k="destinatari">Dest.</th>
+        <th class="num" data-k="open_rate">Open</th>
+        <th class="num" data-k="click_rate">Click</th>
+        <th class="num" data-k="disiscritti">Disisc.</th>
+        <th class="num" data-k="conversioni">Conv.</th>
+        <th class="num" data-k="fatturato">Fatturato</th>
+        <th data-k="note">Note</th>
+      </tr></thead>
+      <tbody id="corpo"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>Generato da <code>scripts/registro_email.py</code> a partire da <code>project/registro-email.csv</code>. Ultimo aggiornamento: <b>2026-08-04</b>.</p>
+    <p>Per annotare un invio si scrive nella colonna <code>note</code> del CSV: lo script non la sovrascrive mai. <a href="../">Torna all'indice</a></p>
+  </footer>
+</div>
+
+<script>
+const DATI = [
+{
+"data": "2026-07-25",
+"ora": "10:00",
+"oggetto": "Ho migliorato Jeunesse (e ti spiego esattamente come)",
+"preview": "è arrivato Jeunesse v2",
+"nome_campagna": "20260725 jeunesse v2 lancio",
+"tipo": "lancio",
+"stato": "Sent",
+"destinatari": "5064",
+"consegnate": "5042",
+"aperture_uniche": "2052",
+"open_rate": "40,70",
+"click_unici": "68",
+"click_rate": "1,35",
+"disiscritti": "31",
+"conversioni": "12",
+"fatturato": "1449,20",
+"campaign_id": "01KYBYZ1CPY6FMQ5SCQ815WB7F",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-07-22",
+"ora": "10:08",
+"oggetto": "Stanchezza e irritabilità: e se fosse la stessa causa?",
+"preview": "il sonno non risolve",
+"nome_campagna": "20260722 warmup B6 + Artosan",
+"tipo": "educativa",
+"stato": "Sent",
+"destinatari": "5073",
+"consegnate": "5048",
+"aperture_uniche": "1901",
+"open_rate": "37,66",
+"click_unici": "67",
+"click_rate": "1,33",
+"disiscritti": "21",
+"conversioni": "5",
+"fatturato": "696,45",
+"campaign_id": "01KY4ASFB8KJQSBEERR2A4XY9F",
+"file_vault": "2026-07-22_warmup-klaviyo-b6-artosan",
+"note": ""
+},
+{
+"data": "2026-06-30",
+"ora": "23:00",
+"oggetto": "Un'ora.",
+"preview": "",
+"nome_campagna": "20260630 23h promo anniversario #9",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10171",
+"consegnate": "10115",
+"aperture_uniche": "2246",
+"open_rate": "22,20",
+"click_unici": "42",
+"click_rate": "0,41",
+"disiscritti": "66",
+"conversioni": "11",
+"fatturato": "1438,50",
+"campaign_id": "01KVT8NYVST3GRMX9JTDZY4ETS",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-30",
+"ora": "21:00",
+"oggetto": "3 ore",
+"preview": "",
+"nome_campagna": "20260630 21h promo anniversario #8",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10201",
+"consegnate": "10146",
+"aperture_uniche": "2225",
+"open_rate": "21,93",
+"click_unici": "49",
+"click_rate": "0,48",
+"disiscritti": "36",
+"conversioni": "11",
+"fatturato": "2986,32",
+"campaign_id": "01KVT8NSS3TH6P4R9VAY2DNKK5",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-30",
+"ora": "16:00",
+"oggetto": "Non ti ho visto stamattina, ti aggiorno",
+"preview": "",
+"nome_campagna": "20260630 16h promo anniversario #7",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10236",
+"consegnate": "10171",
+"aperture_uniche": "2369",
+"open_rate": "23,29",
+"click_unici": "62",
+"click_rate": "0,61",
+"disiscritti": "35",
+"conversioni": "27",
+"fatturato": "3850,78",
+"campaign_id": "01KVT8NM32S7CBY15FPK91YAZR",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-30",
+"ora": "08:00",
+"oggetto": "È successo quello che temevo",
+"preview": "PRODOTTI ESAURITI",
+"nome_campagna": "20260630 8h promo anniversario #6",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "20796",
+"consegnate": "20478",
+"aperture_uniche": "3609",
+"open_rate": "17,62",
+"click_unici": "111",
+"click_rate": "0,54",
+"disiscritti": "79",
+"conversioni": "32",
+"fatturato": "6760,40",
+"campaign_id": "01KWA3BS5WFX40AQKJVFS464ZP",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-30",
+"ora": "08:00",
+"oggetto": "Oggi i 10 anni si chiudono alle 23:59",
+"preview": "",
+"nome_campagna": "[ANNULLATA-vecchia] 20260630 8h #6",
+"tipo": "altro",
+"stato": "Cancelled",
+"destinatari": "",
+"consegnate": "",
+"aperture_uniche": "",
+"open_rate": "",
+"click_unici": "",
+"click_rate": "",
+"disiscritti": "",
+"conversioni": "",
+"fatturato": "",
+"campaign_id": "01KVT8NETPEXJ2RTGS6JFXFJMH",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-29",
+"ora": "10:00",
+"oggetto": "Non devi credere a me. Credi a loro.",
+"preview": "",
+"nome_campagna": "20260629 10h promo anniversario #5",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10309",
+"consegnate": "10230",
+"aperture_uniche": "2590",
+"open_rate": "25,32",
+"click_unici": "65",
+"click_rate": "0,64",
+"disiscritti": "40",
+"conversioni": "23",
+"fatturato": "5368,46",
+"campaign_id": "01KVT8N36Z5HZWE4YZQGDQ8F5V",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-28",
+"ora": "10:00",
+"oggetto": "Il sole di luglio sta arrivando. La tua pelle è pronta?",
+"preview": "",
+"nome_campagna": "20260628 10h promo anniversario #4",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10339",
+"consegnate": "10271",
+"aperture_uniche": "2265",
+"open_rate": "22,05",
+"click_unici": "47",
+"click_rate": "0,46",
+"disiscritti": "28",
+"conversioni": "20",
+"fatturato": "3677,43",
+"campaign_id": "01KVT8N8J5VCWKQ2V3RGCY7N04",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-27",
+"ora": "10:00",
+"oggetto": "Se dovessi sceglierne uno solo, te lo dico io",
+"preview": "",
+"nome_campagna": "20260627 10h promo anniversario #3",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10301",
+"consegnate": "10223",
+"aperture_uniche": "2327",
+"open_rate": "22,76",
+"click_unici": "71",
+"click_rate": "0,69",
+"disiscritti": "37",
+"conversioni": "26",
+"fatturato": "4374,88",
+"campaign_id": "01KVT8MWNY1G8P38XWQSB1KX7B",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-26",
+"ora": "09:30",
+"oggetto": "Sei senza energie? non è colpa del caldo...",
+"preview": "Spoiler: non è pigrizia. Ed è più facile da rimettere a posto di quanto pensi.",
+"nome_campagna": "20260626 9h30 promo anniversario #2",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "20958",
+"consegnate": "20552",
+"aperture_uniche": "3339",
+"open_rate": "16,25",
+"click_unici": "113",
+"click_rate": "0,55",
+"disiscritti": "44",
+"conversioni": "16",
+"fatturato": "4765,79",
+"campaign_id": "01KVT8MPSB00K0YRR3PYPD5TZ7",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-25",
+"ora": "10:17",
+"oggetto": "10 anni di Paleocomplex. Il 30% su tutto, una volta sola.",
+"preview": "Lo sconto più alto da quando esisto. Solo fino al 30 giugno, poi non torna.",
+"nome_campagna": "20260625 10h promo anniversario #1",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "10354",
+"consegnate": "10285",
+"aperture_uniche": "2224",
+"open_rate": "21,62",
+"click_unici": "205",
+"click_rate": "1,99",
+"disiscritti": "31",
+"conversioni": "62",
+"fatturato": "12896,53",
+"campaign_id": "01KVT8MFQGW7GZMGJ5CKPRY4M1",
+"file_vault": "2026-06-25_campagna-festa-decennale",
+"note": ""
+},
+{
+"data": "2026-06-15",
+"ora": "14:42",
+"oggetto": "Dormi male col caldo?",
+"preview": "La melatonina non è la risposta",
+"nome_campagna": "20260616 warm sonno-glicina",
+"tipo": "educativa",
+"stato": "Sent",
+"destinatari": "10341",
+"consegnate": "10268",
+"aperture_uniche": "3438",
+"open_rate": "33,48",
+"click_unici": "116",
+"click_rate": "1,13",
+"disiscritti": "44",
+"conversioni": "23",
+"fatturato": "4124,16",
+"campaign_id": "01KV5EBZ1E40AZ8QREVVJKQFAJ",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2026-06-01",
+"ora": "09:30",
+"oggetto": "I 3 errori più comuni che vedo fare alla sera",
+"preview": "(e domani sei a pezzi)",
+"nome_campagna": "20260601 9.30h promo blueblocker lampada",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "9564",
+"consegnate": "9511",
+"aperture_uniche": "2562",
+"open_rate": "26,94",
+"click_unici": "59",
+"click_rate": "0,62",
+"disiscritti": "31",
+"conversioni": "20",
+"fatturato": "3672,20",
+"campaign_id": "01KST3DYCW4Z8ZXT24K52S0SD1",
+"file_vault": "",
+"note": ""
+}
+];
+
+const n = v => { const x = parseFloat(String(v).replace(',', '.')); return isNaN(x) ? 0 : x; };
+const eur = v => n(v).toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
+const cls = v => n(v) >= 35 ? 'ok' : n(v) >= 25 ? 'mid' : 'low';
+
+const inviate = DATI.filter(r => r.stato === 'Sent' && n(r.destinatari) > 0);
+
+// KPI
+const totInvii = inviate.length;
+const totFatt = inviate.reduce((s,r) => s + n(r.fatturato), 0);
+const totDest = inviate.reduce((s,r) => s + n(r.destinatari), 0);
+const apertureTot = inviate.reduce((s,r) => s + n(r.aperture_uniche), 0);
+const openMedio = totDest ? (apertureTot / totDest * 100) : 0;
+const giorni = (() => {
+  const d = inviate.map(r => r.data).filter(Boolean).sort();
+  if (!d.length) return 0;
+  return Math.round((new Date(d[d.length-1]) - new Date(d[0])) / 86400000);
+})();
+
+document.getElementById('kpis').innerHTML = [
+  ['Invii', totInvii, giorni ? `in ${giorni} giorni` : ''],
+  ['Open rate medio', openMedio.toFixed(1).replace('.',',') + '%', 'pesato sui destinatari'],
+  ['Fatturato attribuito', eur(totFatt), 'conversion value Klaviyo'],
+  ['Destinatari totali', totDest.toLocaleString('it-IT'), 'somma, non unici'],
+].map(([lab,val,hint]) => `<div class="tile"><div class="lab">${lab}</div><div class="val">${val}</div><div class="hint">${hint}</div></div>`).join('');
+
+// Barre open rate
+const perBarre = inviate.slice().sort((a,b) => a.data.localeCompare(b.data));
+document.getElementById('bars').innerHTML = perBarre.map(r => {
+  const v = n(r.open_rate);
+  const etichetta = r.data.slice(5) + ' ' + r.oggetto.slice(0, 22);
+  return `<div class="bar"><div class="nome" title="${r.oggetto}">${etichetta}</div>`
+    + `<div class="track"><div class="fill" style="width:${Math.min(v*2,100)}%"></div></div>`
+    + `<div class="num ${cls(v)}">${v.toFixed(1).replace('.',',')}%</div></div>`;
+}).join('') || '<p class="nota">Nessun invio nel periodo.</p>';
+
+// Filtri
+let filtro = 'tutti';
+const tipi = ['tutti', ...new Set(DATI.map(r => r.tipo).filter(Boolean))];
+document.getElementById('filtri').innerHTML = tipi.map(t =>
+  `<button data-t="${t}" aria-pressed="${t==='tutti'}">${t}</button>`).join('');
+document.getElementById('filtri').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  filtro = b.dataset.t;
+  document.querySelectorAll('#filtri button').forEach(x =>
+    x.setAttribute('aria-pressed', x.dataset.t === filtro));
+  disegna();
+};
+
+// Ordinamento
+let chiave = 'data', verso = -1;
+document.querySelectorAll('th').forEach(th => th.onclick = () => {
+  const k = th.dataset.k;
+  verso = (k === chiave) ? -verso : -1;
+  chiave = k;
+  disegna();
+});
+
+function disegna(){
+  const numeriche = ['destinatari','open_rate','click_rate','disiscritti','conversioni','fatturato'];
+  const righe = DATI
+    .filter(r => filtro === 'tutti' || r.tipo === filtro)
+    .sort((a,b) => {
+      const [x,y] = [a[chiave] || '', b[chiave] || ''];
+      const c = numeriche.includes(chiave) ? n(x) - n(y) : String(x).localeCompare(String(y));
+      return c * verso;
+    });
+
+  document.getElementById('corpo').innerHTML = righe.map(r => {
+    const programmata = r.stato !== 'Sent';
+    return `<tr>
+      <td>${r.data}${r.ora ? ' <span style="color:var(--muted)">' + r.ora + '</span>' : ''}</td>
+      <td class="ogg">${r.oggetto}${programmata ? ' <span class="tag">' + r.stato + '</span>' : ''}</td>
+      <td><span class="tag ${r.tipo}">${r.tipo}</span></td>
+      <td class="num">${r.destinatari ? n(r.destinatari).toLocaleString('it-IT') : '—'}</td>
+      <td class="num ${r.open_rate ? cls(r.open_rate) : ''}">${r.open_rate ? r.open_rate + '%' : '—'}</td>
+      <td class="num">${r.click_rate ? r.click_rate + '%' : '—'}</td>
+      <td class="num">${r.disiscritti || '—'}</td>
+      <td class="num">${r.conversioni || '—'}</td>
+      <td class="num">${n(r.fatturato) ? eur(r.fatturato) : '—'}</td>
+      <td style="white-space:normal;max-width:260px;color:var(--ink2)">${r.note || ''}</td>
+    </tr>`;
+  }).join('');
+}
+disegna();
+</script>
+</body>
+</html>
