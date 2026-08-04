@@ -54,6 +54,19 @@
   .step h3{margin:0 0 .3em;font-size:15px}.step p{margin:0;font-size:13.5px;color:var(--muted)}
   .placeholder{border:2px dashed var(--line);border-radius:12px;padding:26px;text-align:center;color:var(--faint);font-size:14px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;color:var(--accent)}
+  .kits{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+  .kit{display:grid;grid-template-columns:230px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  @media(max-width:700px){.kit{grid-template-columns:1fr}}
+  .thumb{display:flex;flex-direction:column;gap:10px}
+  .thumb img{width:100%;border-radius:10px;border:1px solid var(--line);background:var(--panel-2)}
+  .dl{display:block;text-align:center;text-decoration:none;font:600 13px system-ui;background:var(--ink);color:var(--ground);border-radius:8px;padding:11px 14px}
+  .dl:hover{opacity:.9}
+  .fields{display:flex;flex-direction:column;gap:13px;min-width:0}
+  .fhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .num{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:19px;color:var(--accent)}
+  .chip{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line)}
+  .titoli{display:flex;flex-direction:column;gap:6px}
+  .tt{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif}
   footer{margin:44px 0 8px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:12.5px}
   footer a{color:var(--accent)}
 </style>
@@ -62,8 +75,8 @@
 <div class="wrap">
   <div class="eyebrow">Ads OS · Youth · Launch kit</div>
   <h1>Batch #1004</h1>
-  <div class="status">In produzione — testi pronti e verificati, immagini da generare</div>
-  <p class="lede"><b>10 creatività (#190-#199), dual positioning articolazioni + pelle.</b> Qui trovi i 3 testi verificati, l'istruzione da dare a ChatGPT per le 10 immagini e la matrice approvata. Le creatività renderizzate arrivano su questa pagina appena le immagini sono pronte.</p>
+  <div class="status" style="color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)">✓ Montato e verificato — pronto da caricare su Meta</div>
+  <p class="lede"><b>10 creatività (#190-#199), dual positioning articolazioni + pelle.</b> Tutto pronto: le 10 creatività renderizzate con download, i 3 testi verificati con copia, la matrice. Le immagini AI sono state generate e montate.</p>
   <div class="rules">
     <div class="rule"><b>Testo:</b> carica A + B + C su ogni inserzione</div>
     <div class="rule"><b>CTA:</b> sempre Acquista</div>
@@ -189,12 +202,104 @@ Comprati separati costano 85-120 euro al mese. Youth costa 59 euro, con 4,9 su o
   </div>
 
   <h2>4 · Le creatività</h2>
-  <div class="placeholder">Le 10 creatività renderizzate compaiono qui (con anteprima e download) appena le immagini di ChatGPT sono in <code>creatives/asset/</code>. Questa pagina si aggiorna, stesso link.</div>
+  <p class="sec-sub">10 statiche pronte a 1080x1350. Clic sull'immagine per la piena risoluzione, Scarica per il download. Su Meta: 3 testi + 2 titoli + descrizione + CTA Acquista.</p>
+  <div class="kits">
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/190.jpg" target="_blank"><img src="img/1004/190.jpg" alt="#190" loading="lazy"></a><a class="dl" href="img/1004/190.jpg" download="190_youth_eta_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#190</span><span class="chip">Unaware</span><span class="chip">Generico · Donna 50+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">La crema resta in superficie <button class="cbtn sm" data-copy="La crema resta in superficie">Copia</button></span><span class="tt">Il collagene lavora dalla struttura <button class="cbtn sm" data-copy="Il collagene lavora dalla struttura">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">La pelle si costruisce dall'interno</span><button class="cbtn sm" data-copy="La pelle si costruisce dall'interno">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/191.jpg" target="_blank"><img src="img/1004/191.jpg" alt="#191" loading="lazy"></a><a class="dl" href="img/1004/191.jpg" download="191_youth_ginocchia_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#191</span><span class="chip">Unaware</span><span class="chip">Atletico · Uomo 60+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Supporto articolare a 4 livelli <button class="cbtn sm" data-copy="Supporto articolare a 4 livelli">Copia</button></span><span class="tt">Le ginocchia non devono decidere <button class="cbtn sm" data-copy="Le ginocchia non devono decidere">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Collagene 6.000 mg e supporto articolare</span><button class="cbtn sm" data-copy="Collagene 6.000 mg e supporto articolare">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/192.jpg" target="_blank"><img src="img/1004/192.jpg" alt="#192" loading="lazy"></a><a class="dl" href="img/1004/192.jpg" download="192_youth_creme_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#192</span><span class="chip">Problem</span><span class="chip">Generico · Donna 55+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">La crema resta in superficie <button class="cbtn sm" data-copy="La crema resta in superficie">Copia</button></span><span class="tt">Il collagene lavora dalla struttura <button class="cbtn sm" data-copy="Il collagene lavora dalla struttura">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">La pelle si costruisce dall'interno</span><button class="cbtn sm" data-copy="La pelle si costruisce dall'interno">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/193.jpg" target="_blank"><img src="img/1004/193.jpg" alt="#193" loading="lazy"></a><a class="dl" href="img/1004/193.jpg" download="193_youth_glucosamina_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#193</span><span class="chip">Problem</span><span class="chip">Atletico · Uomo 60+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Supporto articolare a 4 livelli <button class="cbtn sm" data-copy="Supporto articolare a 4 livelli">Copia</button></span><span class="tt">Le ginocchia non devono decidere <button class="cbtn sm" data-copy="Le ginocchia non devono decidere">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Collagene 6.000 mg e supporto articolare</span><button class="cbtn sm" data-copy="Collagene 6.000 mg e supporto articolare">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/194.jpg" target="_blank"><img src="img/1004/194.jpg" alt="#194" loading="lazy"></a><a class="dl" href="img/1004/194.jpg" download="194_youth_dosaggio_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#194</span><span class="chip">Solution</span><span class="chip">Generico 45+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il collagene da solo non basta <button class="cbtn sm" data-copy="Il collagene da solo non basta">Copia</button></span><span class="tt">Separati 85-120 euro. Youth 59 euro <button class="cbtn sm" data-copy="Separati 85-120 euro. Youth 59 euro">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">6.000 mg di collagene e 12 nutrienti</span><button class="cbtn sm" data-copy="6.000 mg di collagene e 12 nutrienti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/195.jpg" target="_blank"><img src="img/1004/195.jpg" alt="#195" loading="lazy"></a><a class="dl" href="img/1004/195.jpg" download="195_youth_sinergie_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#195</span><span class="chip">Solution</span><span class="chip">Generico 45+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il collagene da solo non basta <button class="cbtn sm" data-copy="Il collagene da solo non basta">Copia</button></span><span class="tt">Separati 85-120 euro. Youth 59 euro <button class="cbtn sm" data-copy="Separati 85-120 euro. Youth 59 euro">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">6.000 mg di collagene e 12 nutrienti</span><button class="cbtn sm" data-copy="6.000 mg di collagene e 12 nutrienti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/196.jpg" target="_blank"><img src="img/1004/196.jpg" alt="#196" loading="lazy"></a><a class="dl" href="img/1004/196.jpg" download="196_youth_separati_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#196</span><span class="chip">Solution</span><span class="chip">Generico 45+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il collagene da solo non basta <button class="cbtn sm" data-copy="Il collagene da solo non basta">Copia</button></span><span class="tt">Separati 85-120 euro. Youth 59 euro <button class="cbtn sm" data-copy="Separati 85-120 euro. Youth 59 euro">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">6.000 mg di collagene e 12 nutrienti</span><button class="cbtn sm" data-copy="6.000 mg di collagene e 12 nutrienti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/197.jpg" target="_blank"><img src="img/1004/197.jpg" alt="#197" loading="lazy"></a><a class="dl" href="img/1004/197.jpg" download="197_youth_sonno_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#197</span><span class="chip">Solution</span><span class="chip">Generico 50+</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Supporto articolare a 4 livelli <button class="cbtn sm" data-copy="Supporto articolare a 4 livelli">Copia</button></span><span class="tt">Le ginocchia non devono decidere <button class="cbtn sm" data-copy="Le ginocchia non devono decidere">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Collagene 6.000 mg e supporto articolare</span><button class="cbtn sm" data-copy="Collagene 6.000 mg e supporto articolare">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/198.jpg" target="_blank"><img src="img/1004/198.jpg" alt="#198" loading="lazy"></a><a class="dl" href="img/1004/198.jpg" download="198_youth_recensioni_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#198</span><span class="chip">Product</span><span class="chip">Generico</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Supporto articolare a 4 livelli <button class="cbtn sm" data-copy="Supporto articolare a 4 livelli">Copia</button></span><span class="tt">Le ginocchia non devono decidere <button class="cbtn sm" data-copy="Le ginocchia non devono decidere">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Collagene 6.000 mg e supporto articolare</span><button class="cbtn sm" data-copy="Collagene 6.000 mg e supporto articolare">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1004/199.jpg" target="_blank"><img src="img/1004/199.jpg" alt="#199" loading="lazy"></a><a class="dl" href="img/1004/199.jpg" download="199_youth_riordino_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#199</span><span class="chip">Most aware</span><span class="chip">Generico</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il collagene da solo non basta <button class="cbtn sm" data-copy="Il collagene da solo non basta">Copia</button></span><span class="tt">Separati 85-120 euro. Youth 59 euro <button class="cbtn sm" data-copy="Separati 85-120 euro. Youth 59 euro">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">6.000 mg di collagene e 12 nutrienti</span><button class="cbtn sm" data-copy="6.000 mg di collagene e 12 nutrienti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/youth/">Copia link</button></div>
+      </div>
+    </div>
+  </div>
 
   <h2>5 · Checklist pre-lancio</h2>
   <div class="next">
     <div class="step"><h3>1. Stock Youth</h3><p>Verifica con Lorenzo PRIMA del lancio (regola stock-gate: Youth sempre a rischio).</p></div>
-    <div class="step"><h3>2. Immagini</h3><p>Istruzione ChatGPT qui sopra → 10 immagini in <code>creatives/asset/</code> → dimmi "caricate".</p></div>
+    <div class="step"><h3>2. Immagini ✓</h3><p>Generate, montate e renderizzate. Le trovi qui sopra con download.</p></div>
     <div class="step"><h3>3. TSV #1003 nel foglio</h3><p>Le righe #180-186 sono pronte in <code>batch-1003/registro.tsv</code>: incolla dalla cella Batch della riga #180 e compila la data di lancio.</p></div>
     <div class="step"><h3>4. Review #1002 Elisir</h3><p>Prima del batch Elisir servono i dati di allocazione del #1002 (Ads Manager o connettore Meta).</p></div>
   </div>
