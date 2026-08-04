@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Batch #1003 — Paleocomplex · Launch kit</title>
+<style>
+  :root{--ground:#F4EFE4;--panel:#FBF8F1;--panel-2:#F0E9D9;--ink:#1B1712;--muted:#6E6455;--faint:#928871;--line:#E4DBC7;--accent:#8B6F47;--ok:#5E7A53;--shadow:0 1px 2px rgba(27,23,18,.06),0 8px 24px rgba(27,23,18,.06)}
+  @media (prefers-color-scheme:dark){:root{--ground:#141009;--panel:#1D1710;--panel-2:#241D12;--ink:#F2ECDE;--muted:#A99E8B;--faint:#7E7361;--line:#2E2618;--accent:#CBAA69;--ok:#93B181;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35)}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:clamp(20px,4vw,44px)}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:clamp(32px,6vw,52px);line-height:1.03;margin:.2em 0 .15em;letter-spacing:-.01em}
+  h2{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:clamp(21px,3vw,28px);margin:44px 0 4px;letter-spacing:-.01em}
+  .sec-sub{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:70ch}
+  .lede{color:var(--muted);font-size:16px;max-width:64ch}
+  .lede b{color:var(--ink);font-weight:600}
+  .status{display:inline-block;margin:10px 0 0;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent);padding:5px 12px;border-radius:20px}
+  .rules{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 6px}
+  .rule{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
+  .rule b{color:var(--ink)}
+  .textbank{display:flex;flex-direction:column;gap:14px}
+  .tb{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .tbh{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  .tbh .name{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:18px;color:var(--accent)}
+  .tbh .tag{font-size:12px;color:var(--muted)}
+  .ftext{white-space:pre-line;font-size:13.5px;line-height:1.5;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+  .kits{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+  .kit{display:grid;grid-template-columns:230px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  @media(max-width:700px){.kit{grid-template-columns:1fr}}
+  .thumb{display:flex;flex-direction:column;gap:10px}
+  .thumb img{width:100%;border-radius:10px;border:1px solid var(--line);background:var(--panel-2)}
+  .dl{display:block;text-align:center;text-decoration:none;font:600 13px system-ui;background:var(--ink);color:var(--ground);border-radius:8px;padding:11px 14px}
+  .dl:hover{opacity:.9}
+  .fields{display:flex;flex-direction:column;gap:13px;min-width:0}
+  .fhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .num{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:19px;color:var(--accent)}
+  .chip{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line)}
+  .frow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .flabel{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .titoli{display:flex;flex-direction:column;gap:6px}
+  .tt{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif}
+  .inline{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .val{font-size:13.5px;color:var(--ink)}
+  .sep{width:1px;height:16px;background:var(--line)}
+  .cbtn{cursor:pointer;font:600 11.5px system-ui;background:var(--accent);color:var(--ground);border:0;border-radius:6px;padding:7px 12px;white-space:nowrap}
+  .cbtn.sm{padding:5px 10px;font-size:11px}
+  .cbtn:hover{opacity:.9}.cbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}.cbtn.done{background:var(--ok)}
+  footer{margin:44px 0 8px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:12.5px}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Ads OS · Paleocomplex · Launch kit</div>
+  <h1>Batch #1003</h1>
+  <div class="status">✓ Live su Meta dal 04/08</div>
+  <p class="lede"><b>7 creatività statiche, 3 testi condivisi.</b> Su ogni inserzione si caricano tutti e 3 i testi (A, B, C): Meta testa la combinazione testo × immagine e spinge la migliore. Immagini scaricabili qui sotto.</p>
+  <div class="rules">
+    <div class="rule"><b>Testo:</b> carica A + B + C su ogni inserzione</div>
+    <div class="rule"><b>CTA:</b> sempre Acquista</div>
+    <div class="rule"><b>Titoli:</b> caricane 2, Meta ottimizza</div>
+    <div class="rule"><b>Link:</b> pagina prodotto</div>
+  </div>
+
+  <h2>I 3 testi</h2>
+  <p class="sec-sub">Vanno tutti e tre su ogni inserzione, come opzioni di testo principale.</p>
+  <div class="textbank">
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo A</span><span class="tag">funziona davvero / forme attive</span><button class="cbtn" data-src="tA">Copia A</button></div>
+      <div class="ftext" id="tA">Sei sicuro che il tuo multivitaminico funzioni davvero?
+
+La maggior parte usa acido folico sintetico e cianocobalamina: forme economiche che una parte delle persone fatica a convertire. Le prendi, le espelli, e non cambia niente.
+
+Paleocomplex usa le forme già attive: metilfolato, metilcobalamina, vitamine B metilate. In più Omega-3 da Krill e vitamina D3 a dosaggi seri. 23 nutrienti in un misurino di polvere al limone.
+
+Apri le due etichette e mettile a confronto. La differenza non è nel marketing, è negli ingredienti.</div>
+    </div>
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo B</span><span class="tag">tutto in uno / semplificazione</span><button class="cbtn" data-src="tB">Copia B</button></div>
+      <div class="ftext" id="tB">Omega-3, vitamina D, magnesio, un multivitaminico decente. Comprati separati sono cinque barattoli, e spesso non sai nemmeno se funzionano.
+
+Paleocomplex mette 23 nutrienti in un solo misurino di polvere al limone: vitamine B in forma attiva, Omega-3 da Krill, vitamina D3 a dosaggi seri. Un gesto la mattina, e non devi più ricordarti niente.
+
+Dal 2017, con 4,9 su oltre 1000 recensioni e testimonianze. Chi lo usa lo dice meglio di noi: un solo barattolo al posto dei dieci che usava prima.</div>
+    </div>
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo C</span><span class="tag">non è l'età / carenza</span><button class="cbtn" data-src="tC">Copia C</button></div>
+      <div class="ftext" id="tC">Ti svegli già senza energie, ti servono tre caffè per partire, i valori di vitamina D restano bassi da mesi. E pensi sia l'età.
+
+Spesso non è l'età: è quello che manca al tuo corpo. Il cibo di oggi ha meno nutrienti, e un integratore qualunque, a dosaggi simbolici e in forme che non assorbi, non basta.
+
+Paleocomplex è un multivitaminico completo: 23 nutrienti in forme che il corpo usa davvero, Omega-3 da Krill, vitamina D3 a dosaggi seri. Un misurino al giorno.</div>
+    </div>
+  </div>
+
+  <h2>Le 7 creatività</h2>
+  <p class="sec-sub">Clic sull'immagine per aprirla a piena risoluzione (1080×1350), o Scarica per il download diretto.</p>
+  <div class="kits">
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/180.jpg" target="_blank"><img src="img/1003/180.jpg" alt="#180" loading="lazy"></a><a class="dl" href="img/1003/180.jpg" download="180_paleocomplex_stanchezza_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#180</span><span class="chip">Unaware</span><span class="chip">Businessman · Uomo 40+</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Forse non è l'età <button class="cbtn sm" data-copy="Forse non è l'età">Copia</button></span><span class="tt">Non è l'età, è una carenza <button class="cbtn sm" data-copy="Non è l'età, è una carenza">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">Un multivitaminico completo</span><button class="cbtn sm" data-copy="Un multivitaminico completo">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/181.jpg" target="_blank"><img src="img/1003/181.jpg" alt="#181" loading="lazy"></a><a class="dl" href="img/1003/181.jpg" download="181_paleocomplex_barattoli_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#181</span><span class="chip">Problem</span><span class="chip">Generico · Donna 50+</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Cinque barattoli o un misurino? <button class="cbtn sm" data-copy="Cinque barattoli o un misurino?">Copia</button></span><span class="tt">Tutto in uno: 23 nutrienti <button class="cbtn sm" data-copy="Tutto in uno: 23 nutrienti">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">23 nutrienti in un misurino</span><button class="cbtn sm" data-copy="23 nutrienti in un misurino">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/182.jpg" target="_blank"><img src="img/1003/182.jpg" alt="#182" loading="lazy"></a><a class="dl" href="img/1003/182.jpg" download="182_paleocomplex_vitaminad_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#182</span><span class="chip">Problem</span><span class="chip">Professionista · U/D 40+</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Forse non è l'età <button class="cbtn sm" data-copy="Forse non è l'età">Copia</button></span><span class="tt">Non è l'età, è una carenza <button class="cbtn sm" data-copy="Non è l'età, è una carenza">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">Un multivitaminico completo</span><button class="cbtn sm" data-copy="Un multivitaminico completo">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/183.jpg" target="_blank"><img src="img/1003/183.jpg" alt="#183" loading="lazy"></a><a class="dl" href="img/1003/183.jpg" download="183_paleocomplex_confronto_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#183</span><span class="chip">Solution</span><span class="chip">Generico · U/D 40+</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il tuo multivitaminico funziona? <button class="cbtn sm" data-copy="Il tuo multivitaminico funziona?">Copia</button></span><span class="tt">Forme attive, non generiche <button class="cbtn sm" data-copy="Forme attive, non generiche">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">Apri e confronta le etichette</span><button class="cbtn sm" data-copy="Apri e confronta le etichette">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/184.jpg" target="_blank"><img src="img/1003/184.jpg" alt="#184" loading="lazy"></a><a class="dl" href="img/1003/184.jpg" download="184_paleocomplex_forme_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#184</span><span class="chip">Solution</span><span class="chip">Atletico · Uomo 40+</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il tuo multivitaminico funziona? <button class="cbtn sm" data-copy="Il tuo multivitaminico funziona?">Copia</button></span><span class="tt">Forme attive, non generiche <button class="cbtn sm" data-copy="Forme attive, non generiche">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">Apri e confronta le etichette</span><button class="cbtn sm" data-copy="Apri e confronta le etichette">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/185.jpg" target="_blank"><img src="img/1003/185.jpg" alt="#185" loading="lazy"></a><a class="dl" href="img/1003/185.jpg" download="185_paleocomplex_recensioni_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#185</span><span class="chip">Product</span><span class="chip">Genitore · Generico</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Cinque barattoli o un misurino? <button class="cbtn sm" data-copy="Cinque barattoli o un misurino?">Copia</button></span><span class="tt">Tutto in uno: 23 nutrienti <button class="cbtn sm" data-copy="Tutto in uno: 23 nutrienti">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">23 nutrienti in un misurino</span><button class="cbtn sm" data-copy="23 nutrienti in un misurino">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+    <div class="kit">
+      <div class="thumb"><a href="img/1003/186.jpg" target="_blank"><img src="img/1003/186.jpg" alt="#186" loading="lazy"></a><a class="dl" href="img/1003/186.jpg" download="186_paleocomplex_tuttoinuno_1080x1350.jpg">⬇ Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#186</span><span class="chip">Most aware</span><span class="chip">Generico</span></div>
+        <div class="frow"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="frow"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Tutto in uno: 23 nutrienti <button class="cbtn sm" data-copy="Tutto in uno: 23 nutrienti">Copia</button></span><span class="tt">Un misurino, tutto quello che ti serve <button class="cbtn sm" data-copy="Un misurino, tutto quello che ti serve">Copia</button></span></div></div>
+        <div class="inline"><span class="flabel">Descrizione</span><span class="val">23 nutrienti in un misurino</span><button class="cbtn sm" data-copy="23 nutrienti in un misurino">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/paleocomplex/">Copia link</button></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Ads OS · Paleocomplex · Batch #1003 · live dal 04/08 · <a href="batch-1004.html">Batch #1004 Youth →</a></footer>
+</div>
+<script>
+  function flash(btn,label){var o=btn.getAttribute('data-lbl')||btn.textContent;btn.setAttribute('data-lbl',o);btn.textContent=label;btn.classList.add('done');setTimeout(function(){btn.textContent=o;btn.classList.remove('done')},1300);}
+  function copyText(txt,btn){
+    txt=(txt||'').trim();
+    var fb=function(){
+      try{var ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,txt.length);var ok=document.execCommand('copy');document.body.removeChild(ta);flash(btn,ok?'Copiato':'Riprova');}
+      catch(e){flash(btn,'Riprova');}
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){flash(btn,'Copiato');},fb);}else{fb();}
+  }
+  document.querySelectorAll('.cbtn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var txt=(btn.dataset.copy!=null)?btn.dataset.copy:((document.getElementById(btn.dataset.src)||{}).textContent||'');
+      copyText(txt,btn);
+    });
+  });
+</script>
+</body>
+</html>
