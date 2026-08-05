@@ -54,6 +54,19 @@
   .step h3{margin:0 0 .3em;font-size:15px}.step p{margin:0;font-size:13.5px;color:var(--muted)}
   .placeholder{border:2px dashed var(--line);border-radius:12px;padding:26px;text-align:center;color:var(--faint);font-size:14px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;color:var(--accent)}
+  .kits{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+  .kit{display:grid;grid-template-columns:230px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  @media(max-width:700px){.kit{grid-template-columns:1fr}}
+  .thumb{display:flex;flex-direction:column;gap:10px}
+  .thumb img{width:100%;border-radius:10px;border:1px solid var(--line);background:var(--panel-2)}
+  .dl{display:block;text-align:center;text-decoration:none;font:600 13px system-ui;background:var(--ink);color:var(--ground);border-radius:8px;padding:11px 14px}
+  .dl:hover{opacity:.9}
+  .fields{display:flex;flex-direction:column;gap:13px;min-width:0}
+  .fhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .num{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:19px;color:var(--accent)}
+  .chip{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line)}
+  .titoli{display:flex;flex-direction:column;gap:6px}
+  .tt{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif}
   footer{margin:44px 0 8px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:12.5px}
   footer a{color:var(--accent)}
 </style>
@@ -62,7 +75,7 @@
 <div class="wrap">
   <div class="eyebrow">Ads OS · Elisir · Launch kit</div>
   <h1>Batch #1005</h1>
-  <div class="status">In produzione — testi pronti e verificati, 4 immagini da generare</div>
+  <div class="status" style="color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)">✓ Montato e verificato — pronto da caricare su Meta</div>
   <p class="lede"><b>9 creatività (#200-#208), 9 sistemi grafici diversi.</b> Ordine per awareness, hero "Sì, è caro." sul pattern della pentola, scontrino, referto lab, lettera del founder. Solo 4 immagini AI: il resto è tipografia.</p>
   <div class="rules">
     <div class="rule"><b>Testo:</b> carica A + B + C su ogni inserzione</div>
@@ -165,13 +178,96 @@ Elisir è costruito sulla seconda colonna, quella delle forme che costano di pi�
   </div>
 
   <h2>4 · Le creatività</h2>
-  <div class="placeholder">Le 9 creatività renderizzate compaiono qui appena le 4 immagini di ChatGPT sono in <code>creatives/asset/</code>. Safe zone già nel montaggio. Questa pagina si aggiorna, stesso link.</div>
+  <p class="sec-sub">9 statiche pronte a 1080x1350, 9 sistemi grafici. Clic sull'immagine per la piena risoluzione, Scarica per il download. Su Meta: 3 testi + 2 titoli + descrizione + CTA Acquista.</p>
+  <div class="kits">
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/200.jpg" target="_blank"><img src="img/1005/200.jpg" alt="#200" loading="lazy"></a><a class="dl" href="img/1005/200.jpg" download="200_elisir_crollo_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#200</span><span class="chip">Unaware</span><span class="chip">Numerone 15:30</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il calo delle 15:30 ha una causa <button class="cbtn sm" data-copy="Il calo delle 15:30 ha una causa">Copia</button></span><span class="tt">Ubiquinolo 200 mg, già attivo <button class="cbtn sm" data-copy="Ubiquinolo 200 mg, già attivo">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Supporto ai mitocondri, senza stimolanti</span><button class="cbtn sm" data-copy="Supporto ai mitocondri, senza stimolanti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/201.jpg" target="_blank"><img src="img/1005/201.jpg" alt="#201" loading="lazy"></a><a class="dl" href="img/1005/201.jpg" download="201_elisir_fari_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#201</span><span class="chip">Unaware</span><span class="chip">Cinematografico</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il calo delle 15:30 ha una causa <button class="cbtn sm" data-copy="Il calo delle 15:30 ha una causa">Copia</button></span><span class="tt">Ubiquinolo 200 mg, già attivo <button class="cbtn sm" data-copy="Ubiquinolo 200 mg, già attivo">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Supporto ai mitocondri, senza stimolanti</span><button class="cbtn sm" data-copy="Supporto ai mitocondri, senza stimolanti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/202.jpg" target="_blank"><img src="img/1005/202.jpg" alt="#202" loading="lazy"></a><a class="dl" href="img/1005/202.jpg" download="202_elisir_flatlay_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#202</span><span class="chip">Problem</span><span class="chip">Flatlay annotato</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Non è cosa prendi. È in che forma <button class="cbtn sm" data-copy="Non è cosa prendi. È in che forma">Copia</button></span><span class="tt">40 nutrienti in un misurino da 5 g <button class="cbtn sm" data-copy="40 nutrienti in un misurino da 5 g">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Ubiquinolo, liposomiale, fitosomiale</span><button class="cbtn sm" data-copy="Ubiquinolo, liposomiale, fitosomiale">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/203.jpg" target="_blank"><img src="img/1005/203.jpg" alt="#203" loading="lazy"></a><a class="dl" href="img/1005/203.jpg" download="203_elisir_ossidativo_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#203</span><span class="chip">Problem</span><span class="chip">Solo tipografia</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Il calo delle 15:30 ha una causa <button class="cbtn sm" data-copy="Il calo delle 15:30 ha una causa">Copia</button></span><span class="tt">Ubiquinolo 200 mg, già attivo <button class="cbtn sm" data-copy="Ubiquinolo 200 mg, già attivo">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Supporto ai mitocondri, senza stimolanti</span><button class="cbtn sm" data-copy="Supporto ai mitocondri, senza stimolanti">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/204.jpg" target="_blank"><img src="img/1005/204.jpg" alt="#204" loading="lazy"></a><a class="dl" href="img/1005/204.jpg" download="204_elisir_forme_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#204</span><span class="chip">Solution</span><span class="chip">Referto lab</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Non è cosa prendi. È in che forma <button class="cbtn sm" data-copy="Non è cosa prendi. È in che forma">Copia</button></span><span class="tt">40 nutrienti in un misurino da 5 g <button class="cbtn sm" data-copy="40 nutrienti in un misurino da 5 g">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Ubiquinolo, liposomiale, fitosomiale</span><button class="cbtn sm" data-copy="Ubiquinolo, liposomiale, fitosomiale">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/205.jpg" target="_blank"><img src="img/1005/205.jpg" alt="#205" loading="lazy"></a><a class="dl" href="img/1005/205.jpg" download="205_elisir_scontrino_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#205</span><span class="chip">Solution</span><span class="chip">Scontrino</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Sì, è caro. Ecco perché vale <button class="cbtn sm" data-copy="Sì, è caro. Ecco perché vale">Copia</button></span><span class="tt">Separati 302-460 euro. Elisir 139 <button class="cbtn sm" data-copy="Separati 302-460 euro. Elisir 139">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">40 nutrienti a 3,47 euro al giorno</span><button class="cbtn sm" data-copy="40 nutrienti a 3,47 euro al giorno">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/206.jpg" target="_blank"><img src="img/1005/206.jpg" alt="#206" loading="lazy"></a><a class="dl" href="img/1005/206.jpg" download="206_elisir_caro_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#206</span><span class="chip">Product</span><span class="chip">La pentola</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Sì, è caro. Ecco perché vale <button class="cbtn sm" data-copy="Sì, è caro. Ecco perché vale">Copia</button></span><span class="tt">Separati 302-460 euro. Elisir 139 <button class="cbtn sm" data-copy="Separati 302-460 euro. Elisir 139">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">40 nutrienti a 3,47 euro al giorno</span><button class="cbtn sm" data-copy="40 nutrienti a 3,47 euro al giorno">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/207.jpg" target="_blank"><img src="img/1005/207.jpg" alt="#207" loading="lazy"></a><a class="dl" href="img/1005/207.jpg" download="207_elisir_quote_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#207</span><span class="chip">Product</span><span class="chip">Quote tipografica</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Sì, è caro. Ecco perché vale <button class="cbtn sm" data-copy="Sì, è caro. Ecco perché vale">Copia</button></span><span class="tt">Separati 302-460 euro. Elisir 139 <button class="cbtn sm" data-copy="Separati 302-460 euro. Elisir 139">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">40 nutrienti a 3,47 euro al giorno</span><button class="cbtn sm" data-copy="40 nutrienti a 3,47 euro al giorno">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1005/208.jpg" target="_blank"><img src="img/1005/208.jpg" alt="#208" loading="lazy"></a><a class="dl" href="img/1005/208.jpg" download="208_elisir_lettera_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#208</span><span class="chip">Most aware</span><span class="chip">Lettera founder</span></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Non è cosa prendi. È in che forma <button class="cbtn sm" data-copy="Non è cosa prendi. È in che forma">Copia</button></span><span class="tt">40 nutrienti in un misurino da 5 g <button class="cbtn sm" data-copy="40 nutrienti in un misurino da 5 g">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Ubiquinolo, liposomiale, fitosomiale</span><button class="cbtn sm" data-copy="Ubiquinolo, liposomiale, fitosomiale">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/elisir/">Copia link</button></div>
+      </div>
+    </div>
+  </div>
 
   <h2>5 · Checklist pre-carico</h2>
   <div class="next">
     <div class="step"><h3>1. Batch #1002 live</h3><p>10 ads Elisir attive da febbraio, mai riviste: pausa o allocazione da Ads Manager PRIMA di caricare il #1005.</p></div>
     <div class="step"><h3>2. Stock Elisir</h3><p>Verifica con Lorenzo al check del venerdì.</p></div>
-    <div class="step"><h3>3. Immagini</h3><p>Istruzione ChatGPT qui sopra → 4 immagini → dimmi "caricate".</p></div>
+    <div class="step"><h3>3. Immagini ✓</h3><p>Generate, montate e renderizzate. Qui sopra con download.</p></div>
     <div class="step"><h3>4. Pubblici</h3><p>Warm/retargeting privilegiati; escludi acquirenti recenti Paleocomplex dal cold e viceversa.</p></div>
   </div>
 
