@@ -9,6 +9,7 @@
   Registro email Paleocomplex — storico completo degli invii, anno per anno
   Fonti: API Klaviyo da giugno 2026 (con metriche), vecchio "PALEOCOMPLEX - email PLAN.xlsx"
          per il periodo ActiveCampaign (senza metriche: allora non venivano registrate).
+         Tutte le righe sono invii: il tipo dice di cosa parlava l'email.
   Sorgente: projects/paleocomplex/project/registro-email.csv
   Rigenerare con: python3 scripts/registro_email.py
   NON modificare a mano questo file: viene sovrascritto a ogni rigenerazione.
@@ -122,7 +123,7 @@
   <header>
     <p class="eyebrow">Paleocomplex</p>
     <h1>Registro email</h1>
-    <p class="sub">Tutto quello che è partito, anno per anno. Da <b>giugno 2026</b> i dati arrivano da Klaviyo e hanno le metriche complete. Prima venivano dal calendario editoriale su ActiveCampaign, dove aperture e click non venivano registrati.</p>
+    <p class="sub">Tutto quello che è partito, anno per anno. Da <b>giugno 2026</b> i dati arrivano da Klaviyo e hanno le metriche complete. Prima venivano dal registro tenuto a mano ai tempi di ActiveCampaign, dove aperture e click non venivano annotati.</p>
   </header>
 
   <div class="anni" id="anni" role="tablist"></div>
@@ -148,6 +149,7 @@
         <th class="num" data-k="disiscritti">Disisc.</th>
         <th class="num" data-k="conversioni">Conv.</th>
         <th class="num" data-k="fatturato">Fatturato</th>
+        <th data-k="link_contenuto">Contenuto</th>
         <th data-k="note">Note</th>
       </tr></thead>
       <tbody id="corpo"></tbody>
@@ -182,6 +184,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "01KZ8HY3RZYNJ939Y29SB33GEQ",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "2026-08-05_warmup-klaviyo-k2-calcio",
 "note": ""
 },
@@ -195,8 +198,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "5064",
 "consegnate": "5042",
-"aperture_uniche": "2059",
-"open_rate": "40,84",
+"aperture_uniche": "2060",
+"open_rate": "40,86",
 "click_unici": "71",
 "click_rate": "1,41",
 "disiscritti": "31",
@@ -204,6 +207,7 @@ const DATI = [
 "fatturato": "1652,20",
 "campaign_id": "01KYBYZ1CPY6FMQ5SCQ815WB7F",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -226,6 +230,7 @@ const DATI = [
 "fatturato": "696,45",
 "campaign_id": "01KY4ASFB8KJQSBEERR2A4XY9F",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "2026-07-22_warmup-klaviyo-b6-artosan",
 "note": ""
 },
@@ -248,6 +253,7 @@ const DATI = [
 "fatturato": "1438,50",
 "campaign_id": "01KVT8NYVST3GRMX9JTDZY4ETS",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -270,6 +276,7 @@ const DATI = [
 "fatturato": "3130,32",
 "campaign_id": "01KVT8NSS3TH6P4R9VAY2DNKK5",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -292,6 +299,7 @@ const DATI = [
 "fatturato": "3973,78",
 "campaign_id": "01KVT8NM32S7CBY15FPK91YAZR",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -314,6 +322,7 @@ const DATI = [
 "fatturato": "6760,40",
 "campaign_id": "01KWA3BS5WFX40AQKJVFS464ZP",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -336,6 +345,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "01KVT8NETPEXJ2RTGS6JFXFJMH",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -358,6 +368,7 @@ const DATI = [
 "fatturato": "5368,46",
 "campaign_id": "01KVT8N36Z5HZWE4YZQGDQ8F5V",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -380,6 +391,7 @@ const DATI = [
 "fatturato": "3776,23",
 "campaign_id": "01KVT8N8J5VCWKQ2V3RGCY7N04",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -402,6 +414,7 @@ const DATI = [
 "fatturato": "4374,88",
 "campaign_id": "01KVT8MWNY1G8P38XWQSB1KX7B",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -424,6 +437,7 @@ const DATI = [
 "fatturato": "4765,79",
 "campaign_id": "01KVT8MPSB00K0YRR3PYPD5TZ7",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -446,6 +460,7 @@ const DATI = [
 "fatturato": "13108,13",
 "campaign_id": "01KVT8MFQGW7GZMGJ5CKPRY4M1",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "2026-06-25_campagna-festa-decennale",
 "note": ""
 },
@@ -468,6 +483,7 @@ const DATI = [
 "fatturato": "4124,16",
 "campaign_id": "01KV5EBZ1E40AZ8QREVVJKQFAJ",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -490,6 +506,7 @@ const DATI = [
 "fatturato": "4103,20",
 "campaign_id": "01KST3DYCW4Z8ZXT24K52S0SD1",
 "fonte": "klaviyo",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -512,6 +529,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -534,6 +552,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -556,6 +575,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-05-22_campagna-blue-blocker-apollo_v1",
 "note": ""
 },
@@ -578,6 +598,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -600,6 +621,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -622,6 +644,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -644,6 +667,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-05-15_pack-antiaging_sequenza-lancio",
 "note": ""
 },
@@ -666,6 +690,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-05-11_warmup-klaviyo-magnesio",
 "note": ""
 },
@@ -688,6 +713,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -710,6 +736,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -732,6 +759,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -754,6 +782,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -776,6 +805,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -798,6 +828,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -820,6 +851,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -842,6 +874,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -864,6 +897,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -886,6 +920,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-04-28_warmup-klaviyo-colesterolo-vitd",
 "note": ""
 },
@@ -908,6 +943,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-04-27_campagna-spring20-email_v1",
 "note": ""
 },
@@ -930,6 +966,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "2026-04-22_warmup-klaviyo-mitocondri",
 "note": ""
 },
@@ -952,6 +989,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -974,6 +1012,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -996,6 +1035,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1018,6 +1058,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1040,6 +1081,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1062,6 +1104,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1084,6 +1127,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1106,8 +1150,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/ferritina-bassa-quando-preoccuparsi-e-cosa-fare-per-ripristinare-le-riserve-di-ferro/",
 "file_vault": "",
-"note": "https://paleocomplex.com/ferritina-bassa-quando-preoccuparsi-e-cosa-fare-per-ripristinare-le-riserve-di-ferro/"
+"note": ""
 },
 {
 "data": "2026-03-21",
@@ -1128,8 +1173,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/WPv8X8V7YWY",
 "file_vault": "",
-"note": "https://youtu.be/WPv8X8V7YWY"
+"note": ""
 },
 {
 "data": "2026-03-14",
@@ -1150,8 +1196,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/Sb78IGLtPOQ",
 "file_vault": "",
-"note": "https://youtu.be/Sb78IGLtPOQ"
+"note": ""
 },
 {
 "data": "2026-03-09",
@@ -1172,6 +1219,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1194,8 +1242,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/27Nz_RNLiKw",
 "file_vault": "",
-"note": "https://youtu.be/27Nz_RNLiKw"
+"note": ""
 },
 {
 "data": "2026-03-07",
@@ -1216,6 +1265,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1238,8 +1288,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/sM02vkb_5Co",
 "file_vault": "",
-"note": "https://youtu.be/sM02vkb_5Co"
+"note": ""
 },
 {
 "data": "2026-03-03",
@@ -1260,6 +1311,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1282,6 +1334,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1304,6 +1357,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1326,6 +1380,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1348,6 +1403,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1370,6 +1426,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1392,8 +1449,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/lipasi-alta-il-ruolo-dellintegrazione-e-di-unalimentazione-equilibrata/",
 "file_vault": "",
-"note": "https://paleocomplex.com/lipasi-alta-il-ruolo-dellintegrazione-e-di-unalimentazione-equilibrata/"
+"note": ""
 },
 {
 "data": "2026-02-21",
@@ -1414,6 +1472,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1436,6 +1495,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1458,8 +1518,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/polifenoli-e-salute-del-fegato-come-questi-composti-vegetali-possono-proteggerlo-e-sostenerne-le-funzioni/",
 "file_vault": "",
-"note": "https://paleocomplex.com/polifenoli-e-salute-del-fegato-come-questi-composti-vegetali-possono-proteggerlo-e-sostenerne-le-funzioni/"
+"note": ""
 },
 {
 "data": "2026-02-15",
@@ -1480,6 +1541,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1502,6 +1564,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1524,6 +1587,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1546,6 +1610,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1568,8 +1633,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/lipedema-e-integrazione-come-supportare-lorganismo-con-lintegrazione/",
 "file_vault": "",
-"note": "https://paleocomplex.com/lipedema-e-integrazione-come-supportare-lorganismo-con-lintegrazione/"
+"note": ""
 },
 {
 "data": "2026-02-06",
@@ -1590,6 +1656,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1612,8 +1679,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/sindrome-metabolica-e-le-vitamine-protettive/",
 "file_vault": "",
-"note": "https://paleocomplex.com/sindrome-metabolica-e-le-vitamine-protettive/"
+"note": ""
 },
 {
 "data": "2026-01-27",
@@ -1634,6 +1702,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1656,8 +1725,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/microbiota-intestinale-e-longevita-il-legame-scientifico-che-influenza-linvecchiamento-sano/",
 "file_vault": "",
-"note": "https://paleocomplex.com/microbiota-intestinale-e-longevita-il-legame-scientifico-che-influenza-linvecchiamento-sano/"
+"note": ""
 },
 {
 "data": "2026-01-20",
@@ -1678,6 +1748,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1700,8 +1771,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/crampi-muscolari-e-integrazione-come-prevenire-e-contrastare-il-fenomeno-in-modo-efficace/",
 "file_vault": "",
-"note": "https://paleocomplex.com/crampi-muscolari-e-integrazione-come-prevenire-e-contrastare-il-fenomeno-in-modo-efficace/"
+"note": ""
 },
 {
 "data": "2026-01-14",
@@ -1722,6 +1794,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1744,8 +1817,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/integratori-utili-in-caso-di-endometriosi-e-sinergia-con-una-dieta-paleo-oriented/",
 "file_vault": "",
-"note": "https://paleocomplex.com/integratori-utili-in-caso-di-endometriosi-e-sinergia-con-una-dieta-paleo-oriented/"
+"note": ""
 },
 {
 "data": "2026-01-10",
@@ -1766,8 +1840,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/integratori-per-tendini-come-supportano-chi-si-infortuna-spesso-e-il-recupero-da-tendinopatie-e-lesioni-sportive/",
 "file_vault": "",
-"note": "https://paleocomplex.com/integratori-per-tendini-come-supportano-chi-si-infortuna-spesso-e-il-recupero-da-tendinopatie-e-lesioni-sportive/"
+"note": ""
 },
 {
 "data": "2026-01-10",
@@ -1788,8 +1863,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/integratori-per-tendini-come-supportano-chi-si-infortuna-spesso-e-il-recupero-da-tendinopatie-e-lesioni-sportive/",
 "file_vault": "",
-"note": "https://paleocomplex.com/integratori-per-tendini-come-supportano-chi-si-infortuna-spesso-e-il-recupero-da-tendinopatie-e-lesioni-sportive/"
+"note": ""
 },
 {
 "data": "2026-01-07",
@@ -1810,8 +1886,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/acido-ialuronico-e-collagene-per-la-salute-della-mucosa-intestinale-come-funzionano-quando-servono-e-come-integrarli-in-modo-sicuro/",
 "file_vault": "",
-"note": "https://paleocomplex.com/acido-ialuronico-e-collagene-per-la-salute-della-mucosa-intestinale-come-funzionano-quando-servono-e-come-integrarli-in-modo-sicuro/"
+"note": ""
 },
 {
 "data": "2026-01-07",
@@ -1832,8 +1909,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/acido-ialuronico-e-collagene-per-la-salute-della-mucosa-intestinale-come-funzionano-quando-servono-e-come-integrarli-in-modo-sicuro/",
 "file_vault": "",
-"note": "https://paleocomplex.com/acido-ialuronico-e-collagene-per-la-salute-della-mucosa-intestinale-come-funzionano-quando-servono-e-come-integrarli-in-modo-sicuro/"
+"note": ""
 },
 {
 "data": "2025-12-19",
@@ -1854,6 +1932,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1876,8 +1955,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/magnesio-bisglicinato-benefici-proprieta-utilizzi-e-perche-e-una-delle-forme-migliori-per-il-nostro-organismo/",
 "file_vault": "",
-"note": "https://paleocomplex.com/magnesio-bisglicinato-benefici-proprieta-utilizzi-e-perche-e-una-delle-forme-migliori-per-il-nostro-organismo/"
+"note": ""
 },
 {
 "data": "2025-12-11",
@@ -1898,8 +1978,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/fotobiomodulazione-benefici-rischi-e-come-scegliere-la-lampada-giusta/",
 "file_vault": "",
-"note": "https://paleocomplex.com/fotobiomodulazione-benefici-rischi-e-come-scegliere-la-lampada-giusta/"
+"note": ""
 },
 {
 "data": "2025-12-05",
@@ -1920,6 +2001,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1942,8 +2024,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/condroitina-larma-segreta-contro-i-problemi-articolari/",
 "file_vault": "",
-"note": "https://paleocomplex.com/condroitina-larma-segreta-contro-i-problemi-articolari/"
+"note": ""
 },
 {
 "data": "2025-11-28",
@@ -1964,6 +2047,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -1986,8 +2070,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/come-diminuire-lormone-dello-stress-e-aumentare-quello-del-sonno-strategie-naturali-e-integrazione-efficace/",
 "file_vault": "",
-"note": "https://paleocomplex.com/come-diminuire-lormone-dello-stress-e-aumentare-quello-del-sonno-strategie-naturali-e-integrazione-efficace/"
+"note": ""
 },
 {
 "data": "2025-11-20",
@@ -2008,6 +2093,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2030,8 +2116,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/berberina-un-potente-attivatore-dellampk/",
 "file_vault": "",
-"note": "https://paleocomplex.com/berberina-un-potente-attivatore-dellampk/"
+"note": ""
 },
 {
 "data": "2025-10-24",
@@ -2052,28 +2139,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
-"file_vault": "",
-"note": "https://paleocomplex.com/carnosina-una-molecola-naturale-per-la-protezione-cellulare-e-il-rallentamento-dellinvecchiamento/"
-},
-{
-"data": "2025-10-21",
-"ora": "",
-"oggetto": "2025 10 25 promo jeuness youth artisan",
-"preview": "",
-"nome_campagna": "",
-"tipo": "promo",
-"stato": "Sent",
-"destinatari": "",
-"consegnate": "",
-"aperture_uniche": "",
-"open_rate": "",
-"click_unici": "",
-"click_rate": "",
-"disiscritti": "",
-"conversioni": "",
-"fatturato": "",
-"campaign_id": "",
-"fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/carnosina-una-molecola-naturale-per-la-protezione-cellulare-e-il-rallentamento-dellinvecchiamento/",
 "file_vault": "",
 "note": ""
 },
@@ -2096,6 +2162,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2118,6 +2185,30 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2025-10-21",
+"ora": "",
+"oggetto": "2025 10 25 promo jeuness youth artisan",
+"preview": "",
+"nome_campagna": "",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "",
+"consegnate": "",
+"aperture_uniche": "",
+"open_rate": "",
+"click_unici": "",
+"click_rate": "",
+"disiscritti": "",
+"conversioni": "",
+"fatturato": "",
+"campaign_id": "",
+"fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2140,6 +2231,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2162,6 +2254,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2184,6 +2277,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2206,6 +2300,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2228,6 +2323,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2250,8 +2346,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/citicolina-un-alleato-antiage-per-energia-vitale-e-mente-lucida/",
 "file_vault": "",
-"note": "https://paleocomplex.com/citicolina-un-alleato-antiage-per-energia-vitale-e-mente-lucida/"
+"note": ""
 },
 {
 "data": "2025-09-26",
@@ -2272,8 +2369,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/glicina-vs-melatonina-per-aiutare-il-sonno-sfatiamo-definitivamente-un-mito/",
 "file_vault": "",
-"note": "https://paleocomplex.com/glicina-vs-melatonina-per-aiutare-il-sonno-sfatiamo-definitivamente-un-mito/"
+"note": ""
 },
 {
 "data": "2025-09-17",
@@ -2294,28 +2392,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
-"file_vault": "",
-"note": "https://paleocomplex.com/energia-e-performance-il-ruolo-di-guarana-n%e2%80%91acetil-tirosina-e-acetil%e2%80%91l%e2%80%91carnitina-negli-allenamenti-intensi/"
-},
-{
-"data": "2025-09-14",
-"ora": "",
-"oggetto": "2025 09 10 promo blue blocker",
-"preview": "",
-"nome_campagna": "",
-"tipo": "promo",
-"stato": "Sent",
-"destinatari": "",
-"consegnate": "",
-"aperture_uniche": "",
-"open_rate": "",
-"click_unici": "",
-"click_rate": "",
-"disiscritti": "",
-"conversioni": "",
-"fatturato": "",
-"campaign_id": "",
-"fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/energia-e-performance-il-ruolo-di-guarana-n%e2%80%91acetil-tirosina-e-acetil%e2%80%91l%e2%80%91carnitina-negli-allenamenti-intensi/",
 "file_vault": "",
 "note": ""
 },
@@ -2338,6 +2415,30 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2025-09-14",
+"ora": "",
+"oggetto": "2025 09 10 promo blue blocker",
+"preview": "",
+"nome_campagna": "",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "",
+"consegnate": "",
+"aperture_uniche": "",
+"open_rate": "",
+"click_unici": "",
+"click_rate": "",
+"disiscritti": "",
+"conversioni": "",
+"fatturato": "",
+"campaign_id": "",
+"fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2360,6 +2461,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2382,6 +2484,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2404,8 +2507,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/SZobcx3esak",
 "file_vault": "",
-"note": "https://youtu.be/SZobcx3esak"
+"note": ""
 },
 {
 "data": "2025-09-11",
@@ -2426,6 +2530,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2448,6 +2553,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2470,6 +2576,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2492,6 +2599,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2514,6 +2622,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2536,6 +2645,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2558,6 +2668,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2580,6 +2691,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2602,6 +2714,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2624,6 +2737,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2646,6 +2760,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2668,6 +2783,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2690,6 +2806,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2712,6 +2829,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2734,6 +2852,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2756,6 +2875,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2778,6 +2898,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2800,6 +2921,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2822,8 +2944,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/2iwmIc3QQEs",
 "file_vault": "",
-"note": "https://youtu.be/2iwmIc3QQEs"
+"note": ""
 },
 {
 "data": "2025-08-18",
@@ -2844,6 +2967,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2866,6 +2990,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2888,6 +3013,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2910,6 +3036,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2932,6 +3059,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2954,6 +3082,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2976,6 +3105,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -2998,6 +3128,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3020,8 +3151,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/collagene-e-acido-ialuronico-alimenti-benefici-e-integratori-sinergici-per-combattere-linvecchiamento/",
 "file_vault": "",
-"note": "https://paleocomplex.com/collagene-e-acido-ialuronico-alimenti-benefici-e-integratori-sinergici-per-combattere-linvecchiamento/"
+"note": ""
 },
 {
 "data": "2025-07-23",
@@ -3042,8 +3174,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/digiuno-intermittente-16-8-un-alleato-per-la-salute-cellulare-e-la-longevita/",
 "file_vault": "",
-"note": "https://paleocomplex.com/digiuno-intermittente-16-8-un-alleato-per-la-salute-cellulare-e-la-longevita/"
+"note": ""
 },
 {
 "data": "2025-07-12",
@@ -3064,8 +3197,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/dUFxOta0K1o",
 "file_vault": "",
-"note": "https://youtu.be/dUFxOta0K1o"
+"note": ""
 },
 {
 "data": "2025-07-09",
@@ -3086,6 +3220,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3108,6 +3243,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3130,8 +3266,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/l6NPQwDMlJQ",
 "file_vault": "",
-"note": "https://youtu.be/l6NPQwDMlJQ"
+"note": ""
 },
 {
 "data": "2025-07-02",
@@ -3152,6 +3289,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3174,6 +3312,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3196,6 +3335,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3218,6 +3358,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3240,8 +3381,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/1xqKefYcsGY",
 "file_vault": "",
-"note": "https://youtu.be/1xqKefYcsGY"
+"note": ""
 },
 {
 "data": "2025-06-27",
@@ -3262,6 +3404,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3284,6 +3427,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3306,6 +3450,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3328,8 +3473,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/Poqx-dETFIc",
 "file_vault": "",
-"note": "https://youtu.be/Poqx-dETFIc"
+"note": ""
 },
 {
 "data": "2025-06-18",
@@ -3350,8 +3496,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/capelli-secchi-e-danneggiati-scopri-le-vitamine-per-renderli-perfetti-luminosi-e-lucenti/",
 "file_vault": "",
-"note": "https://paleocomplex.com/capelli-secchi-e-danneggiati-scopri-le-vitamine-per-renderli-perfetti-luminosi-e-lucenti/"
+"note": ""
 },
 {
 "data": "2025-06-18",
@@ -3372,6 +3519,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3394,6 +3542,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3416,6 +3565,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3438,6 +3588,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3460,6 +3611,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3482,6 +3634,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3504,6 +3657,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3526,8 +3680,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/QgvoE_FD7SY",
 "file_vault": "",
-"note": "https://youtu.be/QgvoE_FD7SY"
+"note": ""
 },
 {
 "data": "2025-06-06",
@@ -3548,6 +3703,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3570,6 +3726,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3592,8 +3749,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/i-numerosi-benefici-della-l-arginina-per-il-nostro-organismo/",
 "file_vault": "",
-"note": "https://paleocomplex.com/i-numerosi-benefici-della-l-arginina-per-il-nostro-organismo/"
+"note": ""
 },
 {
 "data": "2025-06-02",
@@ -3614,6 +3772,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3636,8 +3795,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/BYD265LVohg",
 "file_vault": "",
-"note": "https://youtu.be/BYD265LVohg"
+"note": ""
 },
 {
 "data": "2025-05-26",
@@ -3658,6 +3818,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3680,8 +3841,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/nQx2K6bTdhM",
 "file_vault": "",
-"note": "https://youtu.be/nQx2K6bTdhM"
+"note": ""
 },
 {
 "data": "2025-05-22",
@@ -3702,8 +3864,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/flavonoidi-antiossidanti-cosa-sono-dove-si-trovano-e-perche-sono-importanti-per-la-salute/",
 "file_vault": "",
-"note": "https://paleocomplex.com/flavonoidi-antiossidanti-cosa-sono-dove-si-trovano-e-perche-sono-importanti-per-la-salute/"
+"note": ""
 },
 {
 "data": "2025-05-21",
@@ -3724,6 +3887,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3746,6 +3910,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3768,8 +3933,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/vnRshyaQeuo 20250416 Registrazione diretta vitamina d",
 "file_vault": "",
-"note": "https://youtu.be/vnRshyaQeuo 20250416 Registrazione diretta vitamina d"
+"note": ""
 },
 {
 "data": "2025-05-14",
@@ -3790,8 +3956,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/ringiovanire-i-mitocondri-nutrienti-integratori-e-strategie-per-riattivare-le-centrali-energetiche-delle-cellule/",
 "file_vault": "",
-"note": "https://paleocomplex.com/ringiovanire-i-mitocondri-nutrienti-integratori-e-strategie-per-riattivare-le-centrali-energetiche-delle-cellule/"
+"note": ""
 },
 {
 "data": "2025-05-13",
@@ -3812,6 +3979,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3834,8 +4002,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/O_uPTHaUNhk",
 "file_vault": "",
-"note": "https://youtu.be/O_uPTHaUNhk"
+"note": ""
 },
 {
 "data": "2025-05-08",
@@ -3856,8 +4025,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/cereali-latticini-e-legumi-il-lento-avvelenamento-della-dieta-mediterranea/",
 "file_vault": "",
-"note": "https://paleocomplex.com/cereali-latticini-e-legumi-il-lento-avvelenamento-della-dieta-mediterranea/"
+"note": ""
 },
 {
 "data": "2025-05-07",
@@ -3878,6 +4048,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3900,6 +4071,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3922,6 +4094,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3944,6 +4117,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3966,6 +4140,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -3988,8 +4163,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/VXMgghTNWsw",
 "file_vault": "",
-"note": "https://youtu.be/VXMgghTNWsw"
+"note": ""
 },
 {
 "data": "2025-05-01",
@@ -4010,6 +4186,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4032,6 +4209,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4054,6 +4232,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4076,8 +4255,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/nicotinamide-riboside-il-segreto-energetico-per-uninvecchiamento-sano-e-una-vita-piu-lunga/",
 "file_vault": "",
-"note": "https://paleocomplex.com/nicotinamide-riboside-il-segreto-energetico-per-uninvecchiamento-sano-e-una-vita-piu-lunga/"
+"note": ""
 },
 {
 "data": "2025-04-25",
@@ -4098,8 +4278,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/2uETGs7SEtE",
 "file_vault": "",
-"note": "https://youtu.be/2uETGs7SEtE"
+"note": ""
 },
 {
 "data": "2025-04-23",
@@ -4120,8 +4301,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/retinopatia-solare-cause-rimedi-e-integrazione/",
 "file_vault": "",
-"note": "https://paleocomplex.com/retinopatia-solare-cause-rimedi-e-integrazione/"
+"note": ""
 },
 {
 "data": "2025-04-21",
@@ -4142,6 +4324,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4164,8 +4347,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/BkgQA-cnex4",
 "file_vault": "",
-"note": "https://youtu.be/BkgQA-cnex4"
+"note": ""
 },
 {
 "data": "2025-04-16",
@@ -4186,8 +4370,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/bcaa-e-longevita-mitocondriale-un-nuovo-orizzonte-per-la-salute-dopo-i-50-anni/",
 "file_vault": "",
-"note": "https://paleocomplex.com/bcaa-e-longevita-mitocondriale-un-nuovo-orizzonte-per-la-salute-dopo-i-50-anni/"
+"note": ""
 },
 {
 "data": "2025-04-14",
@@ -4208,6 +4393,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4230,8 +4416,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/tjVCCW9NQYI",
 "file_vault": "",
-"note": "https://youtu.be/tjVCCW9NQYI"
+"note": ""
 },
 {
 "data": "2025-04-10",
@@ -4252,8 +4439,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/afte-in-bocca-un-allarme-da-non-sottovalutare/",
 "file_vault": "",
-"note": "https://paleocomplex.com/afte-in-bocca-un-allarme-da-non-sottovalutare/"
+"note": ""
 },
 {
 "data": "2025-04-04",
@@ -4274,8 +4462,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/fHDRb8uKQEE",
 "file_vault": "",
-"note": "https://youtu.be/fHDRb8uKQEE"
+"note": ""
 },
 {
 "data": "2025-04-02",
@@ -4296,28 +4485,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
-"file_vault": "",
-"note": "https://paleocomplex.com/la-malattia-di-basedow-graves-e-il-ruolo-chiave-dellalimentazione-e-dei-nutrienti-antiossidanti/"
-},
-{
-"data": "2025-03-31",
-"ora": "",
-"oggetto": "2025 03 29 Promo 20% su tutti gli integratori",
-"preview": "",
-"nome_campagna": "",
-"tipo": "promo",
-"stato": "Sent",
-"destinatari": "",
-"consegnate": "",
-"aperture_uniche": "",
-"open_rate": "",
-"click_unici": "",
-"click_rate": "",
-"disiscritti": "",
-"conversioni": "",
-"fatturato": "",
-"campaign_id": "",
-"fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/la-malattia-di-basedow-graves-e-il-ruolo-chiave-dellalimentazione-e-dei-nutrienti-antiossidanti/",
 "file_vault": "",
 "note": ""
 },
@@ -4340,6 +4508,30 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
+"file_vault": "",
+"note": ""
+},
+{
+"data": "2025-03-31",
+"ora": "",
+"oggetto": "2025 03 29 Promo 20% su tutti gli integratori",
+"preview": "",
+"nome_campagna": "",
+"tipo": "promo",
+"stato": "Sent",
+"destinatari": "",
+"consegnate": "",
+"aperture_uniche": "",
+"open_rate": "",
+"click_unici": "",
+"click_rate": "",
+"disiscritti": "",
+"conversioni": "",
+"fatturato": "",
+"campaign_id": "",
+"fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4362,6 +4554,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4384,6 +4577,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4406,8 +4600,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/WeyV5EFKvlY",
 "file_vault": "",
-"note": "https://youtu.be/WeyV5EFKvlY"
+"note": ""
 },
 {
 "data": "2025-03-26",
@@ -4428,8 +4623,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/taurina-benefici-e-luso-corretto-per-un-tuo-assoluto-vantaggio/",
 "file_vault": "",
-"note": "https://paleocomplex.com/taurina-benefici-e-luso-corretto-per-un-tuo-assoluto-vantaggio/"
+"note": ""
 },
 {
 "data": "2025-03-24",
@@ -4450,8 +4646,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/perche-e-fondamentale-integrare-durante-la-menopausa/",
 "file_vault": "",
-"note": "https://paleocomplex.com/perche-e-fondamentale-integrare-durante-la-menopausa/"
+"note": ""
 },
 {
 "data": "2025-03-21",
@@ -4472,8 +4669,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/1wTYCMYsGJs",
 "file_vault": "",
-"note": "https://youtu.be/1wTYCMYsGJs"
+"note": ""
 },
 {
 "data": "2025-03-20",
@@ -4494,8 +4692,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/condroitina-larma-segreta-contro-i-problemi-articolari/",
 "file_vault": "",
-"note": "https://paleocomplex.com/condroitina-larma-segreta-contro-i-problemi-articolari/"
+"note": ""
 },
 {
 "data": "2025-03-14",
@@ -4516,8 +4715,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/xx4qowE7asQ",
 "file_vault": "",
-"note": "https://youtu.be/xx4qowE7asQ"
+"note": ""
 },
 {
 "data": "2025-03-10",
@@ -4538,6 +4738,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4560,6 +4761,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4582,8 +4784,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/uYB2dyXv3W0",
 "file_vault": "",
-"note": "https://youtu.be/uYB2dyXv3W0"
+"note": ""
 },
 {
 "data": "2025-03-05",
@@ -4604,8 +4807,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/dipendenza-da-zucchero/",
 "file_vault": "",
-"note": "https://paleocomplex.com/dipendenza-da-zucchero/"
+"note": ""
 },
 {
 "data": "2025-03-01",
@@ -4626,6 +4830,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4648,8 +4853,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/A4dGuPTPTWo",
 "file_vault": "",
-"note": "https://youtu.be/A4dGuPTPTWo"
+"note": ""
 },
 {
 "data": "2025-02-26",
@@ -4670,8 +4876,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/carenza-vitamina-d-sintomi-cause-e-integrazione/",
 "file_vault": "",
-"note": "https://paleocomplex.com/carenza-vitamina-d-sintomi-cause-e-integrazione/"
+"note": ""
 },
 {
 "data": "2025-02-25",
@@ -4692,6 +4899,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4714,6 +4922,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4736,8 +4945,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/-ubZFI8jikQ",
 "file_vault": "",
-"note": "https://youtu.be/-ubZFI8jikQ"
+"note": ""
 },
 {
 "data": "2025-02-19",
@@ -4758,8 +4968,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/le-luci-a-led-sono-dannose-per-i-nostri-occhi-e-la-nostra-pelle/",
 "file_vault": "",
-"note": "https://paleocomplex.com/le-luci-a-led-sono-dannose-per-i-nostri-occhi-e-la-nostra-pelle/"
+"note": ""
 },
 {
 "data": "2025-02-15",
@@ -4780,8 +4991,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/influenza-stagionale-e-integrazione-un-passo-dovuto/",
 "file_vault": "",
-"note": "https://paleocomplex.com/influenza-stagionale-e-integrazione-un-passo-dovuto/"
+"note": ""
 },
 {
 "data": "2025-02-14",
@@ -4802,8 +5014,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/VHs3ugD51hk",
 "file_vault": "",
-"note": "https://youtu.be/VHs3ugD51hk"
+"note": ""
 },
 {
 "data": "2025-02-12",
@@ -4824,6 +5037,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4846,6 +5060,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4868,8 +5083,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/w8zBWLEWr08",
 "file_vault": "",
-"note": "https://youtu.be/w8zBWLEWr08"
+"note": ""
 },
 {
 "data": "2025-02-05",
@@ -4890,8 +5106,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/integratori-per-le-allergie-un-approccio-naturale-al-sollievo/",
 "file_vault": "",
-"note": "https://paleocomplex.com/integratori-per-le-allergie-un-approccio-naturale-al-sollievo/"
+"note": ""
 },
 {
 "data": "2025-01-31",
@@ -4912,8 +5129,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/V4uDjYFee1Q",
 "file_vault": "",
-"note": "https://youtu.be/V4uDjYFee1Q"
+"note": ""
 },
 {
 "data": "2025-01-29",
@@ -4934,8 +5152,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/i-danni-dellesposizione-alla-luce-blu-occhi-pelle-e-molto-altro/",
 "file_vault": "",
-"note": "https://paleocomplex.com/i-danni-dellesposizione-alla-luce-blu-occhi-pelle-e-molto-altro/"
+"note": ""
 },
 {
 "data": "2025-01-25",
@@ -4956,6 +5175,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -4978,8 +5198,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/Xg0Fb5lPosI",
 "file_vault": "",
-"note": "https://youtu.be/Xg0Fb5lPosI"
+"note": ""
 },
 {
 "data": "2025-01-14",
@@ -5000,6 +5221,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -5022,8 +5244,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/1nl3mO5hEpQ",
 "file_vault": "",
-"note": "https://youtu.be/1nl3mO5hEpQ"
+"note": ""
 },
 {
 "data": "2025-01-13",
@@ -5044,6 +5267,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -5066,6 +5290,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -5088,8 +5313,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/ETO1S5N2t_Q",
 "file_vault": "",
-"note": "https://youtu.be/ETO1S5N2t_Q"
+"note": ""
 },
 {
 "data": "2025-01-11",
@@ -5110,6 +5336,7 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "",
 "file_vault": "",
 "note": ""
 },
@@ -5132,8 +5359,9 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://youtu.be/aDE8rz1IH8k",
 "file_vault": "",
-"note": "https://youtu.be/aDE8rz1IH8k"
+"note": ""
 },
 {
 "data": "2025-01-07",
@@ -5154,11 +5382,16 @@ const DATI = [
 "fatturato": "",
 "campaign_id": "",
 "fonte": "xlsx",
+"link_contenuto": "https://paleocomplex.com/acido-ialuronico-e-collagene-gli-amici-della-nostra-pelle-e-le-nostre-articolazioni-per-una-bellezza-ed-un-benessere-senza-tempo/",
 "file_vault": "",
-"note": "https://paleocomplex.com/acido-ialuronico-e-collagene-gli-amici-della-nostra-pelle-e-le-nostre-articolazioni-per-una-bellezza-ed-un-benessere-senza-tempo/"
+"note": ""
 }
 ];
-const TIPI_EMAIL = ['promo','educativa','recensione','lancio','reminder','altro'];
+
+const ETICHETTE = {
+  promo:'promo', educativa:'educativa', recensione:'recensione', lancio:'lancio',
+  reminder:'reminder', blog:'su articolo', video:'su video', altro:'altro'
+};
 
 const n = v => { const x = parseFloat(String(v).replace(',', '.')); return isNaN(x) ? 0 : x; };
 const eur = v => n(v).toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
@@ -5169,7 +5402,7 @@ const anni = [...new Set(DATI.map(r => r.data.slice(0,4)))].filter(Boolean).sort
 let anno = anni[0], filtro = 'email', chiave = 'data', verso = -1;
 
 document.getElementById('anni').innerHTML = anni.map(a => {
-  const q = DATI.filter(r => r.data.startsWith(a) && TIPI_EMAIL.includes(r.tipo)).length;
+  const q = DATI.filter(r => r.data.startsWith(a)).length;
   return `<button role="tab" data-a="${a}" aria-selected="${a===anno}">${a}<span class="conta">${q} email</span></button>`;
 }).join('');
 document.getElementById('anni').onclick = e => {
@@ -5190,7 +5423,7 @@ function dellAnno(){ return DATI.filter(r => r.data.startsWith(anno)); }
 
 function render(){
   const righe = dellAnno();
-  const email = righe.filter(r => TIPI_EMAIL.includes(r.tipo));
+  const email = righe;
   const conMetriche = email.filter(haMetriche);
 
   // KPI
@@ -5207,12 +5440,11 @@ function render(){
       ['Fatturato attribuito', eur(totFatt), 'conversion value Klaviyo'],
       ['Destinatari totali', totDest.toLocaleString('it-IT'), 'somma, non unici']);
   } else {
-    const blog = righe.filter(r => r.tipo === 'blog').length;
-    const video = righe.filter(r => r.tipo === 'video').length;
-    kpi.push(
-      ['Articoli blog', blog, 'dal calendario editoriale'],
-      ['Video YouTube', video, 'dal calendario editoriale'],
-      ['Metriche', '—', 'non registrate su ActiveCampaign']);
+    const perTipo = {};
+    righe.forEach(r => { perTipo[r.tipo] = (perTipo[r.tipo] || 0) + 1; });
+    const top = Object.entries(perTipo).sort((a,b) => b[1]-a[1]).slice(0,2);
+    top.forEach(([t,q]) => kpi.push([ETICHETTE[t] || t, q, 'invii dell\'anno']));
+    kpi.push(['Metriche', '—', 'non registrate su ActiveCampaign']);
   }
   document.getElementById('kpis').innerHTML = kpi.map(([lab,val,hint]) =>
     `<div class="tile"><div class="lab">${lab}</div><div class="val">${val}</div><div class="hint">${hint}</div></div>`).join('');
@@ -5235,12 +5467,11 @@ function render(){
 
   // Filtri disponibili per l'anno
   const tipiAnno = [...new Set(righe.map(r => r.tipo))].filter(Boolean).sort();
-  if (!['email','tutti'].includes(filtro) && !tipiAnno.includes(filtro)) filtro = 'email';
+  if (filtro !== 'tutti' && !tipiAnno.includes(filtro)) filtro = 'tutti';
   document.getElementById('filtri').innerHTML =
-    `<button data-t="email" aria-pressed="${filtro==='email'}">solo email</button>`
-    + `<button data-t="tutti" aria-pressed="${filtro==='tutti'}">tutto</button>`
+    `<button data-t="tutti" aria-pressed="${filtro==='tutti'}">tutte</button>`
     + `<span class="sep"></span>`
-    + tipiAnno.map(t => `<button data-t="${t}" aria-pressed="${filtro===t}">${t}</button>`).join('');
+    + tipiAnno.map(t => `<button data-t="${t}" aria-pressed="${filtro===t}">${ETICHETTE[t] || t}</button>`).join('');
 
   disegnaTabella();
 }
@@ -5255,7 +5486,7 @@ document.getElementById('filtri').onclick = e => {
 function disegnaTabella(){
   const numeriche = ['destinatari','open_rate','click_rate','disiscritti','conversioni','fatturato'];
   const righe = dellAnno()
-    .filter(r => filtro === 'tutti' ? true : filtro === 'email' ? TIPI_EMAIL.includes(r.tipo) : r.tipo === filtro)
+    .filter(r => filtro === 'tutti' ? true : r.tipo === filtro)
     .sort((a,b) => {
       const [x,y] = [a[chiave] || '', b[chiave] || ''];
       const c = numeriche.includes(chiave) ? n(x) - n(y) : String(x).localeCompare(String(y));
@@ -5268,28 +5499,29 @@ function disegnaTabella(){
     const ogg = r.oggetto
       ? r.oggetto
       : `<span class="vuoto">(oggetto non registrato)</span>`;
-    const nota = r.note && r.note.startsWith('http')
-      ? `<a href="${r.note}" target="_blank" rel="noopener">${r.note.replace(/^https?:\/\/(www\.)?/,'').slice(0,42)}…</a>`
-      : (r.note || '');
+    const cont = r.link_contenuto
+      ? `<a href="${r.link_contenuto}" target="_blank" rel="noopener">${r.link_contenuto.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'').slice(0,40)}…</a>`
+      : '';
     return `<tr>
       <td>${r.data}${r.ora ? ' <span class="vuoto">' + r.ora + '</span>' : ''}</td>
       <td class="ogg">${ogg}${inCorso ? ' <span class="tag">' + r.stato + '</span>' : ''}</td>
-      <td><span class="tag ${r.tipo}">${r.tipo}</span></td>
+      <td><span class="tag ${r.tipo}">${ETICHETTE[r.tipo] || r.tipo}</span></td>
       <td class="num">${cella(n(r.destinatari) ? n(r.destinatari).toLocaleString('it-IT') : '')}</td>
       <td class="num ${r.open_rate ? cls(r.open_rate) : ''}">${cella(r.open_rate ? r.open_rate + '%' : '')}</td>
       <td class="num">${cella(r.click_rate ? r.click_rate + '%' : '')}</td>
       <td class="num">${cella(r.disiscritti)}</td>
       <td class="num">${cella(r.conversioni)}</td>
       <td class="num">${cella(n(r.fatturato) ? eur(r.fatturato) : '')}</td>
-      <td style="white-space:normal;max-width:280px;color:var(--ink2)">${nota}</td>
+      <td style="white-space:normal;max-width:240px;color:var(--ink2)">${cont}</td>
+      <td style="white-space:normal;max-width:240px;color:var(--ink2)">${r.note || ''}</td>
     </tr>`;
-  }).join('') || '<tr><td colspan="10" style="color:var(--muted)">Nessuna riga per questo filtro.</td></tr>';
+  }).join('') || '<tr><td colspan="11" style="color:var(--muted)">Nessuna riga per questo filtro.</td></tr>';
 
   document.getElementById('titolo-tabella').textContent = `Invii ${anno}`;
   const daKlaviyo = righe.filter(r => r.fonte === 'klaviyo').length;
   document.getElementById('nota-tabella').textContent = daKlaviyo === righe.length && righe.length
-    ? `${righe.length} righe, tutte da Klaviyo con metriche complete.`
-    : `${righe.length} righe di cui ${daKlaviyo} da Klaviyo. Le altre vengono dal vecchio calendario editoriale: data, tipo e contenuto ci sono, le metriche no perché all'epoca non venivano registrate.`;
+    ? `${righe.length} invii, tutti da Klaviyo con metriche complete.`
+    : `${righe.length} invii di cui ${daKlaviyo} da Klaviyo. Gli altri vengono dal registro tenuto a mano su ActiveCampaign: data, tipo e contenuto ci sono, le metriche no perché all'epoca non venivano annotate.`;
 }
 
 render();
