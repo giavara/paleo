@@ -68,6 +68,12 @@
     padding:18px 20px;position:relative}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media(max-width:820px){.grid2{grid-template-columns:1fr}}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+  .fonte-tit{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink2);margin:0 0 10px}
+  .mese-tit{font-size:15px;font-weight:650;margin:22px 0 10px}
+  .mese-tit span{color:var(--muted);font-weight:500;font-size:13px}
   .kpis{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:12px;margin:26px 0 0}
   @media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}}
   .kpis.tre{grid-template-columns:1fr 1fr 1fr;margin:0}
@@ -198,18 +204,13 @@
     </div>
   </div>
 
-  <div class="grid2" style="margin-top:14px">
-    <div>
-      <h2>Trimestri 2026</h2>
-      <p class="h2sub">Netto IVA maturato contro il target concordato il 7 agosto.</p>
-      <div class="card meters" id="trimestri"></div>
-    </div>
-    <div>
-      <h2>Canali di vendita</h2>
-      <p class="h2sub">Fatturato lordo attribuito per canale (Order Attribution WooCommerce).</p>
-      <div class="card canali" id="canali"></div>
-    </div>
-  </div>
+  <h2>Trimestri 2026</h2>
+  <p class="h2sub">Netto IVA maturato contro il target concordato il 7 agosto.</p>
+  <div class="card meters" id="trimestri" style="max-width:660px"></div>
+
+  <h2>Canali di vendita: tre attribuzioni a confronto</h2>
+  <p class="h2sub">Stesso mese, tre fonti una accanto all'altra: gli ordini reali di WooCommerce (ultimo click), quello che dichiarano Google e Meta (via Triple Whale) e quello che si attribuisce Klaviyo. Ogni piattaforma usa il suo modello, quindi le somme non tornano col fatturato: il confronto serve proprio a vedere quanto si sovrappongono.</p>
+  <div id="canali"></div>
 
   <h2>Margine 2026</h2>
   <p class="h2sub">Dove va ogni euro di ricavo netto: costo prodotti, pubblicità, costi operativi e quello che resta.</p>
@@ -717,56 +718,61 @@ const chiuso = m => !(m.m === ultimo.m);
     ' (' + pct(y2/D.target.anno) + '). Target concordati il 7 agosto 2026, valori netto IVA.');
 })();
 
-// ------------------------------------------------------------- canali
+// ------------------------------------------------------------- canali: 3 attribuzioni
 (function canali(){
   const box = $('#canali'); if (!box) return;
   const colori = {Google:'var(--s1)', Meta:'var(--s2)', Email:'var(--s3)',
+    'Klaviyo campagne':'var(--s3)', 'Klaviyo flow':'var(--s3)',
     Amazon:'var(--s4)', Diretto:'var(--s5)', Organico:'var(--s6)', Altro:'var(--muted)'};
-  const mesi = D.canali.slice(-2);
-  for (const blocco of mesi){
-    const nome = MESI_FULL[+blocco.m.slice(5,7)-1];
-    const tit = div('nota', box); tit.style.marginTop = box.children.length ? '18px' : '0';
-    tit.style.marginBottom = '8px';
-    txt(tit, nome + (blocco.m === ultimo.m ? ' (in corso)' : ''));
-    const tot = Object.values(blocco.canali).reduce((s,v) => s+v, 0) || 1;
-    const massimo = Math.max(...Object.values(blocco.canali), 1);
-    for (const [c, v] of Object.entries(blocco.canali)){
-      const r = div('riga-c', box);
-      txt(div('nome', r), c);
+
+  function cardFonte(griglia, titolo, righe, totale, nota){
+    const c = div('card canali', griglia);
+    txt(div('fonte-tit', c), titolo);
+    const massimo = Math.max(...righe.map(x => x[1]), 1);
+    let somma = 0;
+    for (const [nome, v] of righe){
+      somma += v;
+      const r = div('riga-c', c);
+      txt(div('nome', r), nome);
       const track = div('track', r);
       const fill = div('fill', track);
       fill.style.width = Math.max(v/massimo*100, 1).toFixed(1) + '%';
-      fill.style.background = colori[c] || 'var(--muted)';
-      txt(div('num', r), eurK(Math.round(v)) + ' · ' + pct(v/tot));
+      fill.style.background = colori[nome] || 'var(--muted)';
+      txt(div('num', r), eurK(Math.round(v)) + ' · ' + pct(v/totale));
+    }
+    const piede = div('nota', c);
+    txt(piede, 'Totale attribuito: ' + eurK(Math.round(somma)) + ' (' + pct(somma/totale) +
+      ' del mese). ' + nota);
+    return c;
+  }
+
+  const perTw = {}; (D.tw_canali || []).forEach(b => perTw[b.m] = b);
+  for (const blocco of D.canali.slice(-2)){
+    const m = blocco.m;
+    const nome = MESI_FULL[+m.slice(5,7)-1];
+    const lordo = perMese[m] ? perMese[m].lordo : 1;
+    const tit = div('mese-tit', box);
+    tit.appendChild(document.createTextNode(nome + (m === ultimo.m ? ' (in corso)' : '')));
+    const sp = document.createElement('span');
+    txt(sp, ' · fatturato del mese: ' + eurK(Math.round(lordo)));
+    tit.appendChild(sp);
+    const griglia = div('grid3', box);
+
+    cardFonte(griglia, 'WooCommerce · ordini reali',
+      Object.entries(blocco.canali), lordo,
+      'Ultimo click sugli ordini veri: la somma torna col fatturato.');
+
+    const b = perTw[m];
+    if (b){
+      cardFonte(griglia, 'Triple Whale · piattaforme ads',
+        [['Google', b.google], ['Meta', b.meta]], lordo,
+        'Quello che Google e Meta si attribuiscono, ciascuna per conto suo.');
+      cardFonte(griglia, 'Klaviyo · email',
+        [['Klaviyo campagne', b.klaviyo_campagne], ['Klaviyo flow', b.klaviyo_flow]], lordo,
+        'Quello che Klaviyo attribuisce a campagne e flow.');
     }
   }
-  // Attribution dichiarata dalle piattaforme (Google e Meta via Triple Whale,
-  // Klaviyo con il suo modello): ognuna si attribuisce le vendite per conto suo
-  if (D.tw_canali && D.tw_canali.length){
-    const tit = div('nota', box);
-    tit.style.marginTop = '20px'; tit.style.marginBottom = '8px';
-    tit.style.fontWeight = '600'; tit.style.color = 'var(--ink2)';
-    txt(tit, 'Secondo le piattaforme (Google e Meta via Triple Whale, Klaviyo dal suo pannello)');
-    for (const b of D.tw_canali){
-      const nome = MESI_FULL[+b.m.slice(5,7)-1];
-      const sotto = div('nota', box); sotto.style.marginTop = '6px'; sotto.style.marginBottom = '6px';
-      txt(sotto, nome + (b.m === ultimo.m ? ' (in corso)' : '') + ' · fatturato del mese: ' + eurK(b.totale));
-      const righe = [['Google', b.google, 'var(--s1)'], ['Meta', b.meta, 'var(--s2)'],
-                     ['Klaviyo camp.', b.klaviyo_campagne, 'var(--s3)'],
-                     ['Klaviyo flow', b.klaviyo_flow, 'var(--s3)']];
-      const massimo = Math.max(...righe.map(x => x[1]), 1);
-      for (const [c, v, colore] of righe){
-        const r = div('riga-c', box);
-        txt(div('nome', r), c);
-        const track = div('track', r);
-        const fill = div('fill', track);
-        fill.style.width = Math.max(v/massimo*100, 1).toFixed(1) + '%';
-        fill.style.background = colore;
-        txt(div('num', r), eurK(v) + ' · ' + pct(v/b.totale));
-      }
-    }
-    txt(div('nota', box), 'Ogni piattaforma si attribuisce le vendite con il suo modello: le somme superano il fatturato reale del mese. Il confronto con gli ordini reali (blocchi sopra) serve proprio a questo.');
-  }
+  txt(div('nota', box), 'Le tre fonti usano modelli diversi e si sovrappongono: sommate superano il fatturato reale. Il riferimento per i soldi veri resta la colonna WooCommerce.');
 })();
 
 // ------------------------------------------------------------- margini stacked
