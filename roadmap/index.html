@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Roadmap — Paleocomplex</title>
+<!--
+  Roadmap Paleocomplex fino a fine 2026
+  versione: v1.0 (2026-08-13)
+  Fonte testi: dashboard-content.json.
+  NON modificare a mano: rigenerare con python3 scripts/dashboard.py dal progetto.
+-->
+<style>
+  :root{
+    color-scheme: light dark;
+    --plane:#f9f9f7; --surface:#fcfcfb;
+    --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --good:#006300; --bad:#c0392b; --warn:#c98500;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+    --s5:#e87ba4; --s6:#4a3aa7; --s7:#008300;
+    --track:#e3ecf8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      --plane:#0d0d0d; --surface:#1a1a19;
+      --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+      --good:#0ca30c; --bad:#e05c4a; --warn:#d9a400;
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+      --s5:#d55181; --s6:#9085e9; --s7:#008300;
+      --track:#22303f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --plane:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10);
+    --good:#0ca30c; --bad:#e05c4a; --warn:#d9a400;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --s5:#d55181; --s6:#9085e9; --s7:#008300;
+    --track:#22303f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--plane);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 64px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 6px}
+  h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--ink2);font-size:15px;margin:0;max-width:70ch}
+  .sub b{color:var(--ink);font-weight:600}
+  nav.pagine{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+  nav.pagine a{font-size:12px;font-weight:600;color:var(--ink2);text-decoration:none;
+    border:1px solid var(--border);border-radius:999px;padding:6px 14px;background:var(--surface)}
+  nav.pagine a:hover{color:var(--ink);border-color:var(--axis)}
+  h2{font-size:18px;font-weight:650;margin:40px 0 4px;letter-spacing:-.01em}
+  .h2sub{color:var(--muted);font-size:13px;margin:0 0 14px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:18px 20px;position:relative}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr}}
+  .kpis{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:12px;margin:26px 0 0}
+  @media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px}
+  .tile .lab{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:8px}
+  .tile .val{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+  .tile.hero .val{font-size:clamp(34px,5vw,48px)}
+  .tile .delta{font-size:12px;font-weight:650;margin-top:7px}
+  .tile .delta.su{color:var(--good)}
+  .tile .delta.giu{color:var(--bad)}
+  .tile .hint{font-size:11px;color:var(--muted);margin-top:4px}
+  .legenda{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 0;font-size:12px;color:var(--ink2)}
+  .legenda span{display:inline-flex;align-items:center;gap:6px}
+  .legenda i{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .legenda i.linea{height:3px;border-radius:2px;width:16px}
+  svg text{font-family:inherit}
+  .tooltip{position:absolute;pointer-events:none;background:var(--surface);
+    border:1px solid var(--axis);border-radius:8px;padding:8px 12px;font-size:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);display:none;z-index:5;min-width:130px}
+  .tooltip .tt-t{color:var(--muted);font-weight:600;margin-bottom:4px}
+  .tooltip .riga{display:flex;align-items:center;gap:7px;margin-top:2px}
+  .tooltip .riga i{width:12px;height:3px;border-radius:2px;flex:none}
+  .tooltip .riga b{font-variant-numeric:tabular-nums}
+  .tooltip .riga span{color:var(--ink2)}
+  details.numeri{margin-top:12px;font-size:13px}
+  details.numeri summary{cursor:pointer;color:var(--muted);font-size:12px;font-weight:600}
+  details.numeri table{border-collapse:collapse;width:100%;margin-top:8px;font-size:12px}
+  details.numeri th,details.numeri td{padding:5px 8px;border-bottom:1px solid var(--border);
+    text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  details.numeri th:first-child,details.numeri td:first-child{text-align:left}
+  details.numeri th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;
+    letter-spacing:.04em}
+  .meters .voce{margin-bottom:14px}
+  .meters .voce:last-child{margin-bottom:0}
+  .meters .testa{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+  .meters .testa b{font-variant-numeric:tabular-nums}
+  .meters .testa .q{font-weight:650}
+  .meters .testa .valori{color:var(--ink2)}
+  .meters .track{background:var(--track);border-radius:5px;height:14px;overflow:hidden}
+  .meters .fill{height:100%;border-radius:5px 0 0 5px;background:var(--s1)}
+  .meters .fill.pieno{border-radius:5px}
+  .nota{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6;max-width:80ch}
+  .canali .riga-c{display:grid;grid-template-columns:80px 1fr 110px;gap:12px;
+    align-items:center;margin-bottom:9px;font-size:12px}
+  .canali .riga-c:last-child{margin-bottom:0}
+  .canali .track{background:var(--grid);border-radius:4px;height:16px}
+  .canali .fill{height:100%;border-radius:4px}
+  .canali .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .canali .nome{color:var(--ink2)}
+  .opercard{border-left:3px solid var(--s1);padding:14px 18px;background:var(--surface);
+    border-radius:0 10px 10px 0;border-top:1px solid var(--border);
+    border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .opergrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:820px){.opergrid{grid-template-columns:1fr}}
+  .opercard h3{font-size:14px;font-weight:650;margin:0 0 4px}
+  .opercard p{font-size:12px;color:var(--ink2);margin:0;line-height:1.55}
+  .opercard .meta{display:flex;gap:8px;margin-bottom:7px;align-items:center}
+  .stato{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;
+    text-transform:uppercase;padding:2px 9px;border-radius:999px;border:1px solid var(--border);
+    color:var(--ink2)}
+  .stato.corso{color:var(--s1);border-color:var(--s1)}
+  .stato.partenza{color:var(--s2);border-color:var(--s2)}
+  .stato.monitoraggio{color:var(--s3);border-color:var(--s3)}
+  .area{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;
+    letter-spacing:.05em}
+  .mesecard{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:20px 22px;margin-bottom:14px}
+  .mesecard .qm{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted)}
+  .mesecard h3{font-size:17px;font-weight:650;margin:2px 0 10px}
+  .mesecard ul{margin:0;padding-left:20px;font-size:13px;color:var(--ink2)}
+  .mesecard li{margin-bottom:5px}
+  .mesecard li::marker{color:var(--axis)}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--border);
+    font-size:12px;color:var(--muted);line-height:1.7}
+  footer a{color:inherit}
+  code{font-size:11px;background:var(--grid);padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Paleocomplex</p>
+    <h1>Roadmap fino a fine 2026</h1>
+    <p class="sub">Il piano di lavoro mese per mese, aggiornato al <b>13/08/2026</b>.
+    Tutto converge sul Q4: novembre è il mese che decide l'anno.</p>
+    <nav class="pagine">
+      <a href="../dashboard/">Centro di controllo</a>
+      <a href="../email/">Registro email</a>
+      <a href="../registro/">Registro attività</a>
+      <a href="../">Indice</a>
+    </nav>
+  </header>
+
+  <h2>Obiettivi</h2>
+  <p class="h2sub">Serie target concordata nella riunione del 7 agosto 2026. Valori netto IVA.</p>
+  <div class="card meters"><div class="voce"><div class="testa"><span class="q">Q1</span><span class="valori"><b>166K €</b> / 165K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q2</span><span class="valori"><b>213K €</b> / 210K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q3 · in corso</span><span class="valori"><b>51K €</b> / 190K €</span></div><div class="track"><div class="fill" style="width:26.9%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q4</span><span class="valori"><b>-</b> / 240K €</span></div><div class="track"><div class="fill" style="width:0.0%"></div></div></div><p class="nota">Anno: 431K € maturati su 805K € (53%).</p></div>
+
+  <h2>Mese per mese</h2>
+  <p class="h2sub">Temi e attività principali da qui a dicembre.</p>
+  <div class="mesecard"><div class="qm">Agosto · Q3</div><h3>Riprendere la cadenza editoriale</h3><ul><li>Newsletter educativa ogni settimana (5, 12, 18, 25 agosto)</li><li>Re-engagement dei 5.000 clienti dormienti (sequenza 4 email)</li><li>Completamento automazioni Klaviyo fase 3</li><li>Promo del mese: Lampada Apollo a 399 € e Argo a 99 € con il codice AGOSTO50 (fino al 31/8), Artosan a 39 €</li><li>Multivitaminici «compra 3, il 4° in omaggio» 24-31/8, da confermare</li><li>Monitoraggio primi dati Amazon Ads</li></ul></div><div class="mesecard"><div class="qm">Settembre · Q3</div><h3>Costruire il Q4</h3><ul><li>Preparazione campagne Black Friday (creatività, email, offerta in due fasi)</li><li>Template unico per le pagine prodotto su tutto il catalogo</li><li>Confronto prezzi ed etichette con i competitor</li><li>Spinta acquisizione con i video (ads + organico)</li><li>Prima valutazione risultati CRM predittivo</li><li>Valutazione presenza Fiera Vita Food Milano (19-20 novembre)</li></ul></div><div class="mesecard"><div class="qm">Ottobre · Q4</div><h3>Rifinitura pre Black Friday</h3><ul><li>Campagne e sequenze Black Friday pronte e testate</li><li>Contenuti editoriali d'autunno (colesterolo e vitamina D, tiroide)</li><li>Lista email calda: cadenza editoriale senza promo pesanti</li><li>Verifica stock e logistica per novembre</li></ul></div><div class="mesecard"><div class="qm">Novembre · Q4</div><h3>Black Friday in due fasi</h3><ul><li>Fase 1 (anticipo): 9-15 novembre</li><li>Fase 2: Black Friday il 27 novembre, possibile estensione Black Week</li><li>È il mese più importante dell'anno: tutto il lavoro di agosto-ottobre converge qui</li></ul></div><div class="mesecard"><div class="qm">Dicembre · Q4</div><h3>Natale e chiusura anno</h3><ul><li>Promo Natale 16-22 dicembre (bundle regalo, gift card)</li><li>Bilancio 2026 e piano 2027</li></ul></div>
+
+  <footer>
+    <p>Generato da <code>scripts/dashboard.py</code>. Ultimo aggiornamento: <b>13/08/2026</b>.</p>
+    <p><a href="../dashboard/">Centro di controllo</a> · <a href="../email/">Registro email</a> · <a href="../registro/">Registro attività</a> · <a href="../">Indice</a></p>
+  </footer>
+</div>
+</body>
+</html>
