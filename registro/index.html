@@ -117,8 +117,21 @@
     box-shadow:0 4px 16px rgba(0,0,0,.25); max-width:220px}
   #tip b{font-weight:700}
   #tip .tv{font-variant-numeric:tabular-nums}
+
+  /* menu di navigazione condiviso (aggiunto 13/8/2026) */
+  .topbar{background:var(--surface);border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:10}
+  .topbar .dentro{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;
+    align-items:center;gap:4px;overflow-x:auto}
+  .topbar .brand{font-size:13px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin-right:14px;white-space:nowrap;
+    text-decoration:none;padding:14px 0}
+  .topbar a.voce{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+    padding:14px 10px;border-bottom:2px solid transparent;white-space:nowrap}
+  .topbar a.voce:hover{color:var(--ink2)}
 </style>
 
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
   <header class="top">
     <p class="eyebrow">Paleocomplex · consulenza marketing</p>

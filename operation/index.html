@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Centro di controllo — Paleocomplex</title>
+<title>Operation — Paleocomplex</title>
 <!--
   Centro di controllo Paleocomplex — v2.0 (13/8/2026): sito multi-pagina con menu
   NON modificare a mano: rigenerare con python3 scripts/dashboard.py dal progetto.
@@ -161,21 +161,25 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce attiva" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce attiva" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
 
   <header>
     <p class="eyebrow">Paleocomplex</p>
-    <h1>Centro di controllo</h1>
-    <p class="sub">L'andamento del negozio, aggiornato al <b>13/08/2026</b>.
-    Nel menu in alto: performance complete, lavoro in corso, roadmap, report e automazioni.</p>
+    <h1>Operation</h1>
+    <p class="sub">Su cosa stiamo lavorando adesso e le ore dedicate al progetto. Aggiornato al <b>13/08/2026</b>.</p>
   </header>
 
-  <div class="kpis" id="kpis"></div>
+  <h2>Su cosa stiamo lavorando</h2>
+  <p class="h2sub">Le operazioni aperte, con il loro stato.</p>
+  <div class="opergrid" id="operazioni"></div>
 
-  <h2>Andamento mensile</h2>
-  <p class="h2sub">Fatturato lordo per mese, confronto con i due anni precedenti. Il dettaglio completo è nella pagina <a href="../performance/">Performance</a>.</p>
-  <div class="card" id="chart-andamento"></div>
+  <h2>Ore lavorate</h2>
+  <p class="h2sub">Ore registrate per mese e area di lavoro. <a href="../registro/">Apri il registro attività completo</a>.</p>
+  <div class="grid2">
+    <div class="card" id="chart-ore"></div>
+    <div></div>
+  </div>
 
 <footer>
   <p>Generato da <code>scripts/dashboard.py</code>. Netto IVA = vendite meno le tasse, come da WooCommerce. Ultimo aggiornamento: <b>13/08/2026</b>.</p>

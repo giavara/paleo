@@ -14,7 +14,7 @@
   Rigenerare con: python3 scripts/registro_email.py
   NON modificare a mano questo file: viene sovrascritto a ogni rigenerazione.
   Le annotazioni si scrivono nella colonna `note` del CSV, che lo script non tocca.
-  Ultimo aggiornamento: 2026-08-12
+  Ultimo aggiornamento: 2026-08-13
 -->
 <style>
   :root{
@@ -116,9 +116,22 @@
     font-size:12px;color:var(--muted);line-height:1.7}
   a{color:inherit}
   code{font-size:11px;background:var(--grid);padding:1px 5px;border-radius:4px}
+
+  /* menu di navigazione condiviso (aggiunto 13/8/2026) */
+  .topbar{background:var(--surface);border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:10}
+  .topbar .dentro{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;
+    align-items:center;gap:4px;overflow-x:auto}
+  .topbar .brand{font-size:13px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin-right:14px;white-space:nowrap;
+    text-decoration:none;padding:14px 0}
+  .topbar a.voce{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+    padding:14px 10px;border-bottom:2px solid transparent;white-space:nowrap}
+  .topbar a.voce:hover{color:var(--ink2)}
 </style>
 </head>
 <body>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
   <header>
     <p class="eyebrow">Paleocomplex</p>
@@ -158,7 +171,7 @@
   <p class="nota" id="nota-tabella"></p>
 
   <footer>
-    <p>Generato da <code>scripts/registro_email.py</code> a partire da <code>project/registro-email.csv</code>. Ultimo aggiornamento: <b>2026-08-12</b>.</p>
+    <p>Generato da <code>scripts/registro_email.py</code> a partire da <code>project/registro-email.csv</code>. Ultimo aggiornamento: <b>2026-08-13</b>.</p>
     <p>Per annotare un invio si scrive nella colonna <code>note</code> del CSV: lo script non la sovrascrive mai. <a href="../">Torna all'indice</a></p>
   </footer>
 </div>

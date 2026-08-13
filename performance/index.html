@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Centro di controllo — Paleocomplex</title>
+<title>Performance — Paleocomplex</title>
 <!--
   Centro di controllo Paleocomplex — v2.0 (13/8/2026): sito multi-pagina con menu
   NON modificare a mano: rigenerare con python3 scripts/dashboard.py dal progetto.
@@ -161,21 +161,79 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce attiva" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce attiva" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
 
   <header>
     <p class="eyebrow">Paleocomplex</p>
-    <h1>Centro di controllo</h1>
-    <p class="sub">L'andamento del negozio, aggiornato al <b>13/08/2026</b>.
-    Nel menu in alto: performance complete, lavoro in corso, roadmap, report e automazioni.</p>
+    <h1>Performance</h1>
+    <p class="sub">I numeri del negozio in profondità: acquisizione, valore cliente, riacquisto, margini e canali. Aggiornato al <b>13/08/2026</b>.</p>
   </header>
 
-  <div class="kpis" id="kpis"></div>
+  <h2>Anno in corso contro anno precedente</h2>
+  <p class="h2sub">Periodo confrontato: 1 gennaio - 12 agosto, 2026 contro 2025. Nuovi clienti = primo ordine di sempre (storico completo dal 2016).</p>
+  <div class="kpis tre" id="kpis-perf"></div>
 
-  <h2>Andamento mensile</h2>
-  <p class="h2sub">Fatturato lordo per mese, confronto con i due anni precedenti. Il dettaglio completo è nella pagina <a href="../performance/">Performance</a>.</p>
-  <div class="card" id="chart-andamento"></div>
+  <h2>Acquisizione clienti</h2>
+  <div class="grid2">
+    <div>
+      <p class="h2sub">Nuovi clienti al mese (primo ordine di sempre), 2026 contro 2025.</p>
+      <div class="card" id="chart-nuovi"></div>
+    </div>
+    <div>
+      <p class="h2sub">Costo di acquisizione: spesa ads del mese divisa per i nuovi clienti del mese.</p>
+      <div class="card" id="chart-cac"></div>
+    </div>
+  </div>
+
+  <h2>Valore cliente e riacquisto</h2>
+  <div class="grid2">
+    <div>
+      <p class="h2sub">Quanto vale un cliente nei primi 12 mesi, per semestre di acquisizione.</p>
+      <div class="card" id="chart-ltv"></div>
+    </div>
+    <div>
+      <p class="h2sub">Quanti nuovi clienti tornano a comprare entro 90 giorni.</p>
+      <div class="card" id="chart-repeat"></div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div>
+      <h2>Trimestri 2026</h2>
+      <p class="h2sub">Netto IVA maturato contro il target concordato il 7 agosto.</p>
+      <div class="card meters" id="trimestri"></div>
+    </div>
+    <div>
+      <h2>Canali di vendita</h2>
+      <p class="h2sub">Fatturato lordo attribuito per canale (Order Attribution WooCommerce).</p>
+      <div class="card canali" id="canali"></div>
+    </div>
+  </div>
+
+  <h2>Margine 2026</h2>
+  <p class="h2sub">Dove va ogni euro di ricavo netto: costo prodotti, pubblicità, costi operativi e quello che resta.</p>
+  <div class="card" id="chart-margini"></div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div>
+      <h2>Ordini</h2>
+      <p class="h2sub">Ordini al mese, 2026 contro 2025.</p>
+      <div class="card" id="chart-ordini"></div>
+    </div>
+    <div>
+      <h2>Scontrino medio</h2>
+      <p class="h2sub">AOV lordo per mese, 2026 contro 2025.</p>
+      <div class="card" id="chart-aov"></div>
+    </div>
+  </div>
+
+  <h2>Email</h2>
+  <p class="h2sub">Campagne inviate al mese nel 2026. Metriche complete da giugno (Klaviyo). <a href="../email/">Apri il registro email completo</a>.</p>
+  <div class="grid2">
+    <div class="card" id="chart-email"></div>
+    <div></div>
+  </div>
 
 <footer>
   <p>Generato da <code>scripts/dashboard.py</code>. Netto IVA = vendite meno le tasse, come da WooCommerce. Ultimo aggiornamento: <b>13/08/2026</b>.</p>
