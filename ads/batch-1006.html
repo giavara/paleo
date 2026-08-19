@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Batch #1006 — Jeunesse V2 · Launch kit</title>
+<style>
+  :root{--ground:#F4EFE4;--panel:#FBF8F1;--panel-2:#F0E9D9;--ink:#1B1712;--muted:#6E6455;--faint:#928871;--line:#E4DBC7;--accent:#8B6F47;--ok:#5E7A53;--warn:#A0622D;--shadow:0 1px 2px rgba(27,23,18,.06),0 8px 24px rgba(27,23,18,.06)}
+  @media (prefers-color-scheme:dark){:root{--ground:#141009;--panel:#1D1710;--panel-2:#241D12;--ink:#F2ECDE;--muted:#A99E8B;--faint:#7E7361;--line:#2E2618;--accent:#CBAA69;--ok:#93B181;--warn:#D08A4A;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35)}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:clamp(20px,4vw,44px)}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:clamp(32px,6vw,52px);line-height:1.03;margin:.2em 0 .15em;letter-spacing:-.01em}
+  h2{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:clamp(21px,3vw,28px);margin:44px 0 4px;letter-spacing:-.01em}
+  .sec-sub{color:var(--muted);font-size:14.5px;margin:0 0 18px;max-width:70ch}
+  .lede{color:var(--muted);font-size:16px;max-width:64ch}
+  .lede b{color:var(--ink);font-weight:600}
+  .status{display:inline-block;margin:10px 0 0;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--warn);background:color-mix(in srgb,var(--warn) 14%,transparent);padding:5px 12px;border-radius:20px}
+  .rules{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 6px}
+  .rule{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
+  .rule b{color:var(--ink)}
+  .textbank{display:flex;flex-direction:column;gap:14px}
+  .tb{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .tbh{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+  .tbh .name{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:18px;color:var(--accent)}
+  .tbh .tag{font-size:12px;color:var(--muted)}
+  .ftext{white-space:pre-line;font-size:13.5px;line-height:1.5;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+  .meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .flabel{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .val{font-size:13.5px;color:var(--ink)}
+  .sep{width:1px;height:16px;background:var(--line)}
+  .cbtn{cursor:pointer;font:600 11.5px system-ui;background:var(--accent);color:var(--ground);border:0;border-radius:6px;padding:7px 12px;white-space:nowrap}
+  .cbtn.big{font-size:13.5px;padding:13px 22px}
+  .cbtn.sm{padding:5px 10px;font-size:11px}
+  .cbtn:hover{opacity:.9}.cbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}.cbtn.done{background:var(--ok)}
+  .promptcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;justify-content:space-between}
+  .promptcard .pc-t{font-weight:600;font-size:15px}
+  .promptcard .pc-d{font-size:13px;color:var(--muted);margin-top:3px;max-width:60ch}
+  pre.hidden{display:none}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;background:var(--panel)}
+  .grid-t{min-width:860px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}
+  th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);background:var(--panel-2);font-weight:600}
+  tr:last-child td{border-bottom:0}
+  .cnum{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:15px;color:var(--accent);white-space:nowrap}
+  .aw{font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:20px;white-space:nowrap;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+  .hookcell{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-size:14px;line-height:1.3;min-width:240px}
+  .tcol{color:var(--muted)}
+  .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
+  .step h3{margin:0 0 .3em;font-size:15px}.step p{margin:0;font-size:13.5px;color:var(--muted)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;color:var(--accent)}
+  .kits{display:flex;flex-direction:column;gap:18px;margin-top:8px}
+  .kit{display:grid;grid-template-columns:230px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  @media(max-width:700px){.kit{grid-template-columns:1fr}}
+  .thumb{display:flex;flex-direction:column;gap:10px}
+  .thumb img{width:100%;border-radius:10px;border:1px solid var(--line);background:var(--panel-2)}
+  .dl{display:block;text-align:center;text-decoration:none;font:600 13px system-ui;background:var(--ink);color:var(--ground);border-radius:8px;padding:11px 14px}
+  .dl:hover{opacity:.9}
+  .fields{display:flex;flex-direction:column;gap:13px;min-width:0}
+  .fhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .num{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-weight:600;font-size:19px;color:var(--accent)}
+  .chip{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line)}
+  .chip.wait{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent);font-weight:600}
+  .titoli{display:flex;flex-direction:column;gap:6px}
+  .tt{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif}
+  .adname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+  footer{margin:44px 0 8px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:12.5px}
+  footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Ads OS · Jeunesse V2 · Launch kit</div>
+  <h1>Batch #1006</h1>
+  <div class="status">⏳ 7 pronte · 3 in attesa delle foto AI (#213, #214, #216)</div>
+  <p class="lede"><b>10 creatività (#210-#219), 10 sistemi grafici nuovi.</b> Il batch dei territori esclusivi Jeunesse: kilodalton, studio clinico, ciglia, capelli+unghie, prezzo bloccato. Primo offer-first banner dell'ecosistema. Solo 3 immagini AI, tutte con persone e prodotto in mano.</p>
+  <div class="rules">
+    <div class="rule"><b>Testo:</b> carica A + B + C su ogni inserzione</div>
+    <div class="rule"><b>CTA:</b> sempre Acquista</div>
+    <div class="rule"><b>Link:</b> paleocomplex.com/prodotto/jeunesse/</div>
+    <div class="rule"><b>Pubblici:</b> cold esclude acquirenti Youth recenti · #217 SOLO retargeting Youth · #219 SOLO acquirenti Jeunesse V1</div>
+  </div>
+
+  <h2>1 · Istruzione immagini per ChatGPT</h2>
+  <p class="sec-sub">Solo 3 immagini, tutte con persone e barattolo in mano/in scena. Copia e incolla in ChatGPT co-work: legge il packshot da <code>prodotti/</code> e salva in <code>creatives/asset/</code>. Quando ha finito, dimmi "caricate" e rimonto i PNG finali.</p>
+  <div class="promptcard">
+    <div><div class="pc-t">Istruzione unica — 3 immagini in batch</div><div class="pc-d">Percorsi assoluti, barattolo nero JEUNESSE identico al riferimento in ogni scena, espressioni serene, niente altro testo nelle foto.</div></div>
+    <button class="cbtn big" data-src="istruzione">Copia l'istruzione completa</button>
+  </div>
+  <pre class="hidden" id="istruzione">Sei il mio image generator per una campagna Meta Ads di un integratore italiano premium (Jeunesse V2, collagene in polvere). Hai accesso alle cartelle del progetto. Devi generarmi 3 immagini in batch e salvarle tu stesso nella cartella di destinazione, coi nomi file esatti.
+
+IMMAGINE DI RIFERIMENTO (leggila da qui):
+/Users/andrea/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Data/projects/paleocomplex/output/ads/batch-1006/prodotti/jeunesse-trasparente.png
+E' il barattolo reale: nero opaco con logo a clessidra e scritta JEUNESSE in oro, testo etichetta color champagne. In OGNI immagine il barattolo deve restare IDENTICO a questo riferimento: stessa forma, stesso colore, stessa etichetta.
+
+CARTELLA DI DESTINAZIONE (salva qui le 3 immagini finite, coi nomi esatti):
+/Users/andrea/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Data/projects/paleocomplex/output/ads/batch-1006/creatives/asset/
+
+Regole valide per tutte le immagini:
+- Fotorealismo, qualita' editoriale, luce credibile. Mai illustrazioni, mai look da stock patinato.
+- Contesto italiano/mediterraneo, ambienti vissuti.
+- Espressioni serene e attente, mai sofferenza. Niente prima/dopo.
+- NIENTE testo, loghi o marchi leggibili nella scena, TRANNE l'etichetta del barattolo di riferimento.
+- Alta risoluzione (lato lungo minimo 1200px), verticale 4:5.
+
+Le 3 immagini:
+
+1. 213_capelli.png - 4:5 - Realistic editorial photo, an Italian woman in her late 40s with healthy voluminous loose shoulder-length hair, standing in a bright modern bathroom with soft natural window light, holding the black JEUNESSE supplement jar from the reference image in one hand at chest height with the label facing the camera and EXACTLY identical to the reference, calm confident expression, light warm-white and soft sage tones, some clean space at the top of the frame for typography, no readable text anywhere except the jar label, no other logos.
+
+2. 214_vanity.png - 4:5 - Realistic beauty editorial photo, half profile of an Italian woman in her early 40s sitting at a vanity table applying mascara in front of a mirror, warm powder-pink and cream tones, soft diffused morning light, the black JEUNESSE supplement jar from the reference image standing on the vanity table clearly visible with its label EXACTLY identical to the reference, shallow depth of field, calm attentive expression, elegant lived-in setting, darker soft-focus area in the lower third of the frame for typography, no readable text except the jar label, no other logos.
+
+3. 216_inuso.png - 4:5 - Realistic premium lifestyle photo in an elegant bright kitchen with a light marble countertop: a person holds the black JEUNESSE supplement jar from the reference image in one hand (label facing the camera, EXACTLY identical to the reference) while the other hand stirs a glass of water with a small spoon, warm golden morning light, cream and gold tones, face not visible or softly out of focus, luxurious calm mood, no readable text except the jar label, no other logos.
+
+Salva le 3 immagini nella cartella di destinazione con i nomi esatti sopra. Poi dammi la conferma con la lista dei file salvati.</pre>
+
+  <h2>2 · I 3 testi (verificati su scheda e studio)</h2>
+  <p class="sec-sub">Tutti e tre su ogni inserzione. Landing verificata il 19/8 (200, prezzi 129/99 in pagina). Studio verificato sul PDF del paper: numeri sempre attribuiti ai 2,5 g dell'ingrediente, la conclusione la tira il cliente. Zero sovrapposizione lessicale coi batch Paleo, Youth, Elisir.</p>
+  <div class="textbank">
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo A</span><span class="tag">la dimensione dei peptidi / studio</span><button class="cbtn" data-src="tA">Copia A</button></div>
+      <div class="ftext" id="tA">Il collagene non è tutto uguale. La differenza è nella dimensione dei peptidi: più piccoli sono, più si assorbono.
+
+Jeunesse V2 usa COLLinstant ultra active+®, un collagene brevettato con peptidi sotto 1 kilodalton: frammenti piccolissimi, già pronti da assorbire.
+
+L'ingrediente è stato testato in uno studio randomizzato in doppio cieco su 80 donne, con soli 2,5 grammi al giorno per 6 settimane:
+
+✔ volume delle rughe ridotto del 46% rispetto al placebo
+
+✔ idratazione della pelle aumentata del 34%
+
+Jeunesse ne contiene 12 grammi per dose. Le conclusioni puoi tirarle da te.
+
+E intorno al collagene, altri 12 nutrienti: vitamina C, acido ialuronico, astaxantina, zinco, rame, biotina.
+
+99 euro invece di 129 di listino, prezzo bloccato fino a fine 2026. Una confezione dura circa 50 giorni.
+
+★★★★★ 4,9 su oltre 1000 recensioni e testimonianze</div>
+      <div class="meta-row"><span class="flabel">Titoli</span><span class="val">Collagene con peptidi sotto 1 kDa</span><button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button><span class="val">Più piccoli i peptidi, più assorbi</span><button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></div>
+      <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">12 g per dose, circa 50 giorni</span><button class="cbtn sm" data-copy="12 g per dose, circa 50 giorni">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+    </div>
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo B</span><span class="tag">tutto quello che c'è dentro / valore</span><button class="cbtn" data-src="tB">Copia B</button></div>
+      <div class="ftext" id="tB">Più che un integratore di collagene: 750 grammi e 13 ingredienti per pelle, capelli e unghie.
+
+Dentro ogni misurino di Jeunesse V2 ci sono 12 grammi di collagene idrolizzato con peptidi sotto 1 kilodalton (più piccoli sono, più si assorbono). E intorno, quello che serve al corpo per usarlo davvero:
+
+✔ vitamina C (500 mg): senza, il corpo non produce collagene
+
+✔ acido ialuronico (235 mg): trattiene fino a 1000 volte il suo peso in acqua
+
+✔ astaxantina (8 mg): uno degli antiossidanti più potenti conosciuti
+
+✔ centella asiatica, OPC di corteccia di pino, zinco, rame e biotina
+
+Una confezione da 750 grammi dura circa 50 giorni.
+
+99 euro invece di 129 di listino, prezzo bloccato fino a fine 2026.
+
+★★★★★ 4,9 su oltre 1000 recensioni e testimonianze</div>
+      <div class="meta-row"><span class="flabel">Titoli</span><span class="val">13 ingredienti, un misurino al giorno</span><button class="cbtn sm" data-copy="13 ingredienti, un misurino al giorno">Copia</button><span class="val">12 g di collagene e 12 nutrienti</span><button class="cbtn sm" data-copy="12 g di collagene e 12 nutrienti">Copia</button></div>
+      <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Prezzo bloccato fino a fine 2026</span><button class="cbtn sm" data-copy="Prezzo bloccato fino a fine 2026">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+    </div>
+    <div class="tb">
+      <div class="tbh"><span class="name">Testo C</span><span class="tag">le esperienze / riprova sociale</span><button class="cbtn" data-src="tC">Copia C</button></div>
+      <div class="ftext" id="tC">C'è chi racconta la pelle più luminosa dopo due settimane. E chi non se lo aspettava: ciglia più lunghe.
+
+Jeunesse è il collagene più avanzato della gamma Paleocomplex: 12 grammi per dose, peptidi sotto 1 kilodalton, 13 ingredienti in un misurino al giorno.
+
+Ma la cosa più interessante è quello che raccontano le persone che lo usano:
+
+✔ "Ho 40 anni e vi assicuro che neanche a 20 l'avevo così elastica e bella" (Alice B.)
+
+✔ "La mia pelle molto più radiosa già dopo 2 settimane" (Roby)
+
+✔ "Unghie durissime, capelli più folti" (Anna)
+
+Sono esperienze riportate, non promesse. Ma sono tante, e si somigliano.
+
+99 euro invece di 129 di listino, prezzo bloccato fino a fine 2026.
+
+★★★★★ 4,9 su oltre 1000 recensioni e testimonianze</div>
+      <div class="meta-row"><span class="flabel">Titoli</span><span class="val">4,9 su oltre 1000 recensioni</span><button class="cbtn sm" data-copy="4,9 su oltre 1000 recensioni">Copia</button><span class="val">Il collagene più avanzato della gamma</span><button class="cbtn sm" data-copy="Il collagene più avanzato della gamma">Copia</button></div>
+      <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Il non plus ultra del collagene</span><button class="cbtn sm" data-copy="Il non plus ultra del collagene">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+    </div>
+  </div>
+
+  <h2>3 · La matrice approvata (taglio 19/8)</h2>
+  <p class="sec-sub">10 creatività da solution a most aware, 10 sistemi grafici nuovi. Niente unaware/problem: Jeunesse è upsell e Youth è live in cold sugli stessi pain di base. Diversità del batch: 0,826 (la più alta di tutti i batch).</p>
+  <div class="tablewrap">
+    <table class="grid-t">
+      <thead><tr><th>#</th><th>Awareness</th><th>Hook</th><th>Look</th></tr></thead>
+      <tbody>
+        <tr><td class="cnum">#210</td><td><span class="aw">Solution</span></td><td class="hookcell">"Prima di comprare un collagene, fai una sola domanda: quanto pesano i peptidi?"</td><td class="tcol">Manifesto Space Grotesk su paper, zero foto</td></tr>
+        <tr><td class="cnum">#211</td><td><span class="aw">Solution</span></td><td class="hookcell">"Sotto 1 kilodalton: la soglia che decide quanto collagene assorbi davvero."</td><td class="tcol">Lavagna tecnica scura, scala dei kDa</td></tr>
+        <tr><td class="cnum">#212</td><td><span class="aw">Solution</span></td><td class="hookcell">"80 donne, sei settimane, doppio cieco."</td><td class="tcol">Stat card su crema: -46% / -44% / +34%</td></tr>
+        <tr><td class="cnum">#213</td><td><span class="aw">Solution</span></td><td class="hookcell">"Capelli e unghie si costruiscono con gli stessi mattoni. Se mancano, si vede."</td><td class="tcol">Foto barattolo in mano, pannello Marcellus</td></tr>
+        <tr><td class="cnum">#214</td><td><span class="aw">Product</span></td><td class="hookcell">"Ciglia più lunghe. Non era nemmeno il motivo per cui l'avevano comprato."</td><td class="tcol">Beauty vanity, Prata su scrim caldo</td></tr>
+        <tr><td class="cnum">#215</td><td><span class="aw">Product</span></td><td class="hookcell">"Ho 40 anni e vi assicuro che neanche a 20 l'avevo così elastica e bella." (Alice B.)</td><td class="tcol">Biglietto manoscritto + timbro verificata</td></tr>
+        <tr><td class="cnum">#216</td><td><span class="aw">Product</span></td><td class="hookcell">"Tredici ingredienti in un misurino. Più che un integratore, un gioiello."</td><td class="tcol">Foto in uso su marmo, card Bodoni Moda</td></tr>
+        <tr><td class="cnum">#217</td><td><span class="aw">Most aware</span></td><td class="hookcell">"Conosci il nostro collagene a 2 kilodalton. La V2 di Jeunesse scende sotto 1."</td><td class="tcol">Spec sheet due prodotti (SOLO retarg. Youth)</td></tr>
+        <tr><td class="cnum">#218</td><td><span class="aw">Most aware</span></td><td class="hookcell">"Listino 129 euro. Prezzo bloccato a 99 fino a fine 2026."</td><td class="tcol">Offer-first banner, Unbounded su verde</td></tr>
+        <tr><td class="cnum">#219</td><td><span class="aw">Most aware</span></td><td class="hookcell">"Se Jeunesse ti è piaciuto, la V2 assorbe di più. Stesso prezzo."</td><td class="tcol">Packshot + badge V2 (SOLO acquirenti V1)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>4 · Le creatività</h2>
+  <p class="sec-sub">7 definitive, 3 con placeholder in attesa delle foto AI (#213, #214, #216: la composizione è già quella, cambia solo lo sfondo). Clic sull'immagine per la piena risoluzione. Su Meta: 3 testi + 2 titoli + descrizione + CTA Acquista.</p>
+  <div class="kits">
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/210.jpg" target="_blank"><img src="img/1006/210.jpg" alt="#210" loading="lazy"></a><a class="dl" href="img/1006/210.jpg" download="210_jeunesse_domanda_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#210</span><span class="chip">Solution</span><span class="chip">Testo puro · domanda kDa</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">210 | static | w+40 domanda kilodalton</code><button class="cbtn sm" data-copy="210 | static | w+40 domanda kilodalton">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Collagene con peptidi sotto 1 kDa <button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button></span><span class="tt">Più piccoli i peptidi, più assorbi <button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">12 g per dose, circa 50 giorni</span><button class="cbtn sm" data-copy="12 g per dose, circa 50 giorni">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/211.jpg" target="_blank"><img src="img/1006/211.jpg" alt="#211" loading="lazy"></a><a class="dl" href="img/1006/211.jpg" download="211_jeunesse_scala_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#211</span><span class="chip">Solution</span><span class="chip">Scala 1 kDa · quadrato</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">211 | static | w+45 scala 1kDa</code><button class="cbtn sm" data-copy="211 | static | w+45 scala 1kDa">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Collagene con peptidi sotto 1 kDa <button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button></span><span class="tt">Più piccoli i peptidi, più assorbi <button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">12 g per dose, circa 50 giorni</span><button class="cbtn sm" data-copy="12 g per dose, circa 50 giorni">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/212.jpg" target="_blank"><img src="img/1006/212.jpg" alt="#212" loading="lazy"></a><a class="dl" href="img/1006/212.jpg" download="212_jeunesse_studio_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#212</span><span class="chip">Solution</span><span class="chip">Studio clinico · quadrato</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">212 | static | w+45 studio 80 donne</code><button class="cbtn sm" data-copy="212 | static | w+45 studio 80 donne">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Collagene con peptidi sotto 1 kDa <button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button></span><span class="tt">Più piccoli i peptidi, più assorbi <button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">12 g per dose, circa 50 giorni</span><button class="cbtn sm" data-copy="12 g per dose, circa 50 giorni">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/213.jpg" target="_blank"><img src="img/1006/213.jpg" alt="#213" loading="lazy"></a><a class="dl" href="img/1006/213.jpg" download="213_jeunesse_capelli_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#213</span><span class="chip">Solution</span><span class="chip wait">⏳ foto AI in arrivo</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">213 | static | w+45 capelli unghie in mano</code><button class="cbtn sm" data-copy="213 | static | w+45 capelli unghie in mano">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">13 ingredienti, un misurino al giorno <button class="cbtn sm" data-copy="13 ingredienti, un misurino al giorno">Copia</button></span><span class="tt">12 g di collagene e 12 nutrienti <button class="cbtn sm" data-copy="12 g di collagene e 12 nutrienti">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Prezzo bloccato fino a fine 2026</span><button class="cbtn sm" data-copy="Prezzo bloccato fino a fine 2026">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/214.jpg" target="_blank"><img src="img/1006/214.jpg" alt="#214" loading="lazy"></a><a class="dl" href="img/1006/214.jpg" download="214_jeunesse_ciglia_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#214</span><span class="chip">Product</span><span class="chip wait">⏳ foto AI in arrivo</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">214 | static | w+40 ciglia</code><button class="cbtn sm" data-copy="214 | static | w+40 ciglia">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">4,9 su oltre 1000 recensioni <button class="cbtn sm" data-copy="4,9 su oltre 1000 recensioni">Copia</button></span><span class="tt">Il collagene più avanzato della gamma <button class="cbtn sm" data-copy="Il collagene più avanzato della gamma">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Il non plus ultra del collagene</span><button class="cbtn sm" data-copy="Il non plus ultra del collagene">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/215.jpg" target="_blank"><img src="img/1006/215.jpg" alt="#215" loading="lazy"></a><a class="dl" href="img/1006/215.jpg" download="215_jeunesse_biglietto_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#215</span><span class="chip">Product</span><span class="chip">Biglietto manoscritto · quadrato</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">215 | static | w+40 review 20 anni</code><button class="cbtn sm" data-copy="215 | static | w+40 review 20 anni">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">4,9 su oltre 1000 recensioni <button class="cbtn sm" data-copy="4,9 su oltre 1000 recensioni">Copia</button></span><span class="tt">Il collagene più avanzato della gamma <button class="cbtn sm" data-copy="Il collagene più avanzato della gamma">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Il non plus ultra del collagene</span><button class="cbtn sm" data-copy="Il non plus ultra del collagene">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/216.jpg" target="_blank"><img src="img/1006/216.jpg" alt="#216" loading="lazy"></a><a class="dl" href="img/1006/216.jpg" download="216_jeunesse_gioiello_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#216</span><span class="chip">Product</span><span class="chip wait">⏳ foto AI in arrivo</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">216 | static | gen+45 gioiello in uso</code><button class="cbtn sm" data-copy="216 | static | gen+45 gioiello in uso">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">13 ingredienti, un misurino al giorno <button class="cbtn sm" data-copy="13 ingredienti, un misurino al giorno">Copia</button></span><span class="tt">12 g di collagene e 12 nutrienti <button class="cbtn sm" data-copy="12 g di collagene e 12 nutrienti">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Prezzo bloccato fino a fine 2026</span><button class="cbtn sm" data-copy="Prezzo bloccato fino a fine 2026">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/217.jpg" target="_blank"><img src="img/1006/217.jpg" alt="#217" loading="lazy"></a><a class="dl" href="img/1006/217.jpg" download="217_jeunesse_vs_youth_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#217</span><span class="chip">Most aware</span><span class="chip">SOLO retargeting acquirenti Youth</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">217 | static | retarg youth 2kda vs 1</code><button class="cbtn sm" data-copy="217 | static | retarg youth 2kda vs 1">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Collagene con peptidi sotto 1 kDa <button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button></span><span class="tt">Più piccoli i peptidi, più assorbi <button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">12 g per dose, circa 50 giorni</span><button class="cbtn sm" data-copy="12 g per dose, circa 50 giorni">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/218.jpg" target="_blank"><img src="img/1006/218.jpg" alt="#218" loading="lazy"></a><a class="dl" href="img/1006/218.jpg" download="218_jeunesse_prezzo_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#218</span><span class="chip">Most aware</span><span class="chip">Offer-first · primo dell'ecosistema</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">218 | static | gen prezzo bloccato 99</code><button class="cbtn sm" data-copy="218 | static | gen prezzo bloccato 99">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">13 ingredienti, un misurino al giorno <button class="cbtn sm" data-copy="13 ingredienti, un misurino al giorno">Copia</button></span><span class="tt">12 g di collagene e 12 nutrienti <button class="cbtn sm" data-copy="12 g di collagene e 12 nutrienti">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Prezzo bloccato fino a fine 2026</span><button class="cbtn sm" data-copy="Prezzo bloccato fino a fine 2026">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+    <div class="kit">
+      <div class="thumb"><a href="img/1006/219.jpg" target="_blank"><img src="img/1006/219.jpg" alt="#219" loading="lazy"></a><a class="dl" href="img/1006/219.jpg" download="219_jeunesse_v2_1080x1350.jpg">&#11015; Scarica immagine</a></div>
+      <div class="fields">
+        <div class="fhead"><span class="num">#219</span><span class="chip">Most aware</span><span class="chip">SOLO acquirenti Jeunesse V1</span></div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">219 | static | retarg jeunesse v2</code><button class="cbtn sm" data-copy="219 | static | retarg jeunesse v2">Copia</button></div>
+        <div class="meta-row"><span class="flabel">Testo principale (tutti e 3)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button></div>
+        <div><div class="meta-row" style="margin-top:0;margin-bottom:6px"><span class="flabel">Titoli</span></div><div class="titoli"><span class="tt">Collagene con peptidi sotto 1 kDa <button class="cbtn sm" data-copy="Collagene con peptidi sotto 1 kDa">Copia</button></span><span class="tt">Più piccoli i peptidi, più assorbi <button class="cbtn sm" data-copy="Più piccoli i peptidi, più assorbi">Copia</button></span></div></div>
+        <div class="meta-row"><span class="flabel">Descrizione</span><span class="val">Prezzo bloccato fino a fine 2026</span><button class="cbtn sm" data-copy="Prezzo bloccato fino a fine 2026">Copia</button><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Acquista</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/prodotto/jeunesse/">Copia link</button></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>5 · Checklist pre-carico</h2>
+  <div class="next">
+    <div class="step"><h3>1. Foto AI (3)</h3><p>Genera con l'istruzione qui sopra (213, 214, 216). Quando sono in <code>creatives/asset/</code>, dimmi "caricate": rimonto e aggiorno questa pagina.</p></div>
+    <div class="step"><h3>2. Stock ✓</h3><p>606 pezzi verificati da WooCommerce il 12/8 (~7 mesi di copertura). Nessun batch Jeunesse precedente live da pausare.</p></div>
+    <div class="step"><h3>3. Pubblici</h3><p>Cold: escludi acquirenti Youth recenti. #217 solo retargeting acquirenti Youth, #219 solo acquirenti Jeunesse V1.</p></div>
+    <div class="step"><h3>4. Landing ✓</h3><p>Verificata il 19/8: HTTP 200 senza redirect, 129 barrato / 99 in pagina.</p></div>
+  </div>
+
+  <footer>Ads OS · Paleocomplex · Batch #1006 Jeunesse V2 · matrice approvata 19/08 · <a href="batch-1005.html">← #1005 Elisir</a> · <a href="batch-1004.html">#1004 Youth</a> · <a href="batch-1003.html">#1003 Paleocomplex</a></footer>
+</div>
+<script>
+  function flash(btn,label){var o=btn.getAttribute('data-lbl')||btn.textContent;btn.setAttribute('data-lbl',o);btn.textContent=label;btn.classList.add('done');setTimeout(function(){btn.textContent=o;btn.classList.remove('done')},1300);}
+  function copyText(txt,btn){
+    txt=(txt||'').trim();
+    var fb=function(){
+      try{var ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,txt.length);var ok=document.execCommand('copy');document.body.removeChild(ta);flash(btn,ok?'Copiato':'Riprova');}
+      catch(e){flash(btn,'Riprova');}
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){flash(btn,'Copiato');},fb);}else{fb();}
+  }
+  document.querySelectorAll('.cbtn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var txt=(btn.dataset.copy!=null)?btn.dataset.copy:((document.getElementById(btn.dataset.src)||{}).textContent||'');
+      copyText(txt,btn);
+    });
+  });
+</script>
+</body>
+</html>
