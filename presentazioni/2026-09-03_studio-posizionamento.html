@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <!--
-  Studio posizionamento: prima fotografia per Lorenzo - v1 (2026-09-03)
+  Studio posizionamento: prima fotografia per Lorenzo - v2 (2026-09-03)
   Changelog:
-  v1 - prima versione per incontro del 3/9 pomeriggio. Dati: WooCommerce line items 2025-2026 (wc_product_sales.py),
-       recensioni CSV 418, stato-progetto (CAC/LTV), analisi mercato 3/9 (context/analysis/2026-09-03_analisi-mercato-posizionamento.md).
-       Fuori perimetro per scelta: Homoplex, verdetti sulle promo, le 3 architetture (vanno nel report finale).
+  v1 - prima versione per incontro del 3/9 pomeriggio.
+  v2 - feedback Andrea: titolo sobrio (via "si decide adesso"), meno testo, lista completa fonti (10 libri + input di Lorenzo),
+       ordini totali dal 2016 (23.871: cache 2024-oggi 11.846 + storico 12.025), fatturato in euro accanto alle quote prodotto,
+       mappa competitor completa con nomi (3 fasce + callout Biogena), slide mercato riframata come domanda aperta, non conclusione.
+  Fuori perimetro per scelta: Homoplex, verdetti sulle promo, le 3 architetture (vanno nel report finale).
 -->
 <html lang="it">
 <head>
@@ -25,6 +27,7 @@
   .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
   h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:50px;font-weight:600;line-height:1.15;margin-bottom:12px}
   h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:600;line-height:1.2;margin-bottom:28px}
+  h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;margin-bottom:8px}
   .sub{font-size:17px;color:var(--muted);max-width:620px}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin:36px 0}
   .stat{background:var(--card);border-radius:14px;padding:26px 22px;text-align:center}
@@ -33,22 +36,31 @@
   .stat .d{font-size:12px;color:var(--gold);font-weight:600;margin-top:4px}
   p{margin-bottom:14px;font-size:16px}
   ul{margin:0 0 14px 20px}
-  li{font-size:16px;margin-bottom:12px}
-  .hl{background:var(--beige);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;font-size:16px}
+  li{font-size:16px;margin-bottom:10px}
+  .hl{background:var(--beige);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 22px;margin:26px 0;font-size:16px}
+  .fonti{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:32px 0}
+  .fcard{background:var(--card);border-radius:14px;padding:22px 24px}
+  .fcard .t{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+  .fcard p{font-size:14px;margin-bottom:0;color:var(--ink)}
   .rank{margin:32px 0}
   .rrow{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-  .rname{width:150px;font-size:14px;font-weight:600}
+  .rname{width:130px;font-size:14px;font-weight:600}
   .rbar{height:20px;border-radius:5px;background:var(--gold)}
   .rbar.dim{background:#D8CBB3}
-  .rval{font-size:12.5px;font-weight:600;white-space:nowrap}
-  .rnote{font-size:12px;color:var(--muted);white-space:nowrap}
+  .rval{font-size:13px;font-weight:700;white-space:nowrap}
+  .rq{font-size:12px;color:var(--muted);white-space:nowrap}
+  .comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin:32px 0}
+  .ccard{background:var(--card);border-radius:14px;padding:22px 24px}
+  .ccard .fascia{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+  .ccard .prezzo{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:700;color:var(--bronze);margin-bottom:8px}
+  .ccard p{font-size:14px;margin-bottom:0}
   .foot{font-size:12px;color:var(--muted);margin-top:40px;border-top:1px solid var(--beige);padding-top:16px}
   .logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:700;letter-spacing:1px}
   .logo span{color:var(--gold)}
   header{max-width:880px;margin:0 auto;padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--beige)}
   header .date{font-size:13px;color:var(--muted)}
   @media print{.slide{page-break-after:always;padding:40px}}
-  @media (max-width:640px){.slide{padding:48px 24px}h1{font-size:36px}h2{font-size:28px}.rname{width:110px}}
+  @media (max-width:640px){.slide{padding:48px 24px}h1{font-size:36px}h2{font-size:28px}.rname{width:100px}.fonti{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -58,64 +70,77 @@
   <div class="date">Studio di posizionamento · riservato · 3 settembre 2026</div>
 </header>
 
-<!-- SLIDE 1 - Cover: perche' questo studio -->
+<!-- SLIDE 1 - Lo studio e le fonti -->
 <section class="slide">
-  <div class="kicker">Prima fotografia · studio in corso</div>
-  <h1>Il posizionamento si decide adesso.<br>Qui i primi risultati.</h1>
-  <p class="sub">Lo studio poggia su tre fondamenta: i testi di Al Ries e Jack Trout sul posizionamento, i nostri dati interni, il mercato reale. Questa è la prima fotografia. Il report completo, con 2-3 strade percorribili e una raccomandazione, arriva entro fine settembre.</p>
+  <div class="kicker">Studio in corso · prima fotografia</div>
+  <h1>I primi risultati dello studio.</h1>
+  <p class="sub">Dove siamo con l'analisi, cosa è emerso finora, cosa resta da verificare. Il report completo con le opzioni arriva entro fine settembre.</p>
   <div class="grid">
-    <div class="stat"><div class="n">10</div><div class="l">libri di strategia interrogati</div><div class="d">Ries, Trout, Laura Ries</div></div>
-    <div class="stat"><div class="n">8.081</div><div class="l">ordini analizzati riga per riga</div><div class="d">2025-2026, per prodotto</div></div>
-    <div class="stat"><div class="n">418</div><div class="l">recensioni studiate</div><div class="d">dal 2017 a oggi</div></div>
-    <div class="stat"><div class="n">15+</div><div class="l">competitor mappati</div><div class="d">Italia e internazionali</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">libri di strategia</div><div class="d">Ries, Trout, Laura Ries</div></div>
+    <div class="stat"><div class="n">23.871</div><div class="l">ordini analizzati</div><div class="d">tutti, dal 2016 a oggi</div></div>
+    <div class="stat"><div class="n">418</div><div class="l">recensioni studiate</div><div class="d">dal 2017</div></div>
+    <div class="stat"><div class="n">14</div><div class="l">competitor mappati</div><div class="d">Italia e internazionali</div></div>
   </div>
-  <div class="hl"><strong>Il problema che lo studio deve risolvere non è il prodotto, e nemmeno la pubblicità.</strong> Un cliente nuovo oggi costa quasi il doppio di un anno fa (da 81 a 141 euro) e vale meno nel tempo (da 313 a 224 euro nei primi 12 mesi). La crescita 2026 è ferma. Questi tre numeri insieme dicono una cosa sola: il messaggio non buca più, serve una posizione più chiara nella mente del cliente.</div>
+  <div class="fonti">
+    <div class="fcard"><div class="t">I libri sul tavolo</div>
+      <p>Positioning · Le 22 leggi immutabili del marketing · Focus · Marketing Warfare · Bottom-Up Marketing · The Origin of Brands · The Fall of Advertising and the Rise of PR · Visual Hammer · War in the Boardroom · The Strategic Enemy</p></div>
+    <div class="fcard"><div class="t">Gli input di Lorenzo</div>
+      <p>L'analisi del percorso Metodo Merenda e le riflessioni sul riposizionamento elaborate con l'AI: entrambe dentro lo studio, incrociate coi dati reali.</p></div>
+  </div>
+  <div class="hl"><strong>Il problema da risolvere:</strong> un cliente nuovo costa quasi il doppio di un anno fa (da 81 a 141 euro) e vale meno nel tempo (da 313 a 224 euro nei primi 12 mesi). Non è un problema di prodotto: è di posizione nella mente del cliente.</div>
 </section>
 
-<!-- SLIDE 2 - La categoria e' gia' nella testa dei clienti -->
+<!-- SLIDE 2 - I clienti -->
 <section class="slide">
   <div class="kicker">I clienti · 418 recensioni dal 2017</div>
-  <h2>La categoria esiste già. L'hanno scritta i clienti.</h2>
+  <h2>La categoria l'hanno già scritta i clienti.</h2>
   <ul>
-    <li>Nelle recensioni la parola <strong>"completo" compare 67 volte, "multivitaminico" solo 11</strong>. I clienti non ci hanno mai considerato un multivitaminico: ci comprano per un'altra ragione.</li>
-    <li>Sul prodotto storico, il tema numero uno (39% delle recensioni) è la <strong>semplificazione</strong>: "un solo barattolo al posto dei 10 che dovevo usare in precedenza".</li>
-    <li>Il nemico è fisico e visibile: la manciata quotidiana di pillole e la credenza piena di barattoli, contro un misurino.</li>
-    <li>Sul termine "multinutriente": in Italia esiste come nome di prodotto (Solgar, Terranova) ma <strong>nessuno lo ha mai reclamato come categoria</strong>. Lo spazio è occupabile, con le giuste accortezze legali e sempre agganciato al nostro marchio.</li>
+    <li>Nelle recensioni <strong>"completo" compare 67 volte, "multivitaminico" 11</strong>.</li>
+    <li>Il tema numero uno (39%) è la semplificazione: <em>"un solo barattolo al posto dei 10 che dovevo usare in precedenza"</em>.</li>
+    <li>"Multinutriente" in Italia esiste come nome di prodotto (Solgar, Terranova) ma <strong>nessuno lo ha reclamato come categoria</strong>: spazio occupabile, con verifica legale in corso.</li>
   </ul>
-  <div class="hl"><strong>Vendiamo dal 2016 in una categoria che non ha ancora un nome.</strong> Chi la battezza per primo ne diventa l'originale: quando i grandi arriveranno, saranno copie. È la credenziale più difficile da copiare che abbiamo, e nessuno la sta usando.</div>
+  <div class="hl"><strong>Vendiamo dal 2016 in una categoria senza nome.</strong> Chi la battezza per primo ne diventa l'originale.</div>
 </section>
 
-<!-- SLIDE 3 - La gamma vista dal mercato -->
+<!-- SLIDE 3 - I numeri interni -->
 <section class="slide">
-  <div class="kicker">I numeri interni · vendite per prodotto 2026</div>
+  <div class="kicker">I numeri interni · fatturato netto per prodotto, gennaio-agosto 2026</div>
   <h2>Il mercato ha già scelto i suoi eroi.</h2>
+  <p class="sub">450.800 euro di fatturato netto prodotti in 8 mesi. Quota e trend per prodotto:</p>
   <div class="rank">
-    <div class="rrow"><div class="rname">Elisir</div><div class="rbar" style="width:56%"></div><div class="rval">22,3%</div><div class="rnote">primo, in crescita</div></div>
-    <div class="rrow"><div class="rname">Youth</div><div class="rbar" style="width:42%"></div><div class="rval">16,6%</div><div class="rnote">secondo, in forte crescita</div></div>
-    <div class="rrow"><div class="rname">Revolution</div><div class="rbar" style="width:40%"></div><div class="rval">16,0%</div><div class="rnote">stabile</div></div>
-    <div class="rrow"><div class="rname">Paleocomplex</div><div class="rbar dim" style="width:36%"></div><div class="rval">14,2%</div><div class="rnote">in calo: era secondo nel 2025</div></div>
-    <div class="rrow"><div class="rname">Jeunesse</div><div class="rbar dim" style="width:22%"></div><div class="rval">8,6%</div><div class="rnote">stabile</div></div>
+    <div class="rrow"><div class="rname">Elisir</div><div class="rbar" style="width:50%"></div><div class="rval">100.400 €</div><div class="rq">22,3% · primo, in crescita</div></div>
+    <div class="rrow"><div class="rname">Youth</div><div class="rbar" style="width:37%"></div><div class="rval">75.000 €</div><div class="rq">16,6% · in forte crescita</div></div>
+    <div class="rrow"><div class="rname">Revolution</div><div class="rbar" style="width:36%"></div><div class="rval">72.000 €</div><div class="rq">16,0% · stabile</div></div>
+    <div class="rrow"><div class="rname">Paleocomplex</div><div class="rbar dim" style="width:32%"></div><div class="rval">63.800 €</div><div class="rq">14,2% · in calo, era secondo</div></div>
+    <div class="rrow"><div class="rname">Jeunesse</div><div class="rbar dim" style="width:19%"></div><div class="rval">38.800 €</div><div class="rq">8,6% · stabile</div></div>
   </div>
   <ul>
-    <li><strong>Formule complete e collagene fanno insieme l'87,8% del fatturato.</strong> La stima che avevamo fatto in riunione (80-90) era giusta: ora è un numero verificato.</li>
-    <li>Il prodotto che porta il nome del marchio è passato <strong>dal secondo al quarto posto</strong> in un anno: i clienti migrano da soli verso le formule più ricche.</li>
-    <li>Tutta la coda (sport, fegato, lampada, occhialeria, libri) vale <strong>circa il 5%</strong>: la razionalizzazione decisa a luglio è confermata dai numeri, e costa pochissimo.</li>
+    <li><strong>Formule complete + collagene = 87,8% del fatturato.</strong> La stima fatta in riunione (80-90) era giusta.</li>
+    <li>Il prodotto col nome del marchio è sceso <strong>dal secondo al quarto posto</strong>: i clienti migrano verso le formule più ricche.</li>
+    <li>Tutta la coda (sport, fegato, lampada, occhialeria, libri) vale <strong>circa il 5%</strong>.</li>
   </ul>
-  <div class="hl"><strong>Il collagene non è un contorno:</strong> da solo fa un quarto del fatturato e Youth è diventato il secondo prodotto del brand. Qualunque strategia nuova deve trattarlo come seconda gamba, non come accessorio.</div>
+  <div class="hl"><strong>Il collagene è la seconda gamba:</strong> un quarto del fatturato, con Youth secondo prodotto del brand.</div>
 </section>
 
-<!-- SLIDE 4 - Il mercato e la finestra -->
+<!-- SLIDE 4 - Il mercato: la mappa e la domanda aperta -->
 <section class="slide">
-  <div class="kicker">Il mercato · ricerca del 3 settembre 2026</div>
-  <h2>C'è un corridoio libero. Non resterà libero a lungo.</h2>
+  <div class="kicker">Il mercato · cosa stiamo verificando</div>
+  <h2>La mappa dei 14, e la domanda aperta.</h2>
+  <div class="comp">
+    <div class="ccard"><div class="fascia">Farmacia mass market</div><div class="prezzo">0,40-0,90 €/giorno</div>
+      <p>Multicentrum, Supradyn, Swisse, Solgar. Compresse, dosaggi base, dominano il canale che fa il 77% del mercato.</p></div>
+    <div class="ccard"><div class="fascia">D2C di qualità</div><div class="prezzo">0,67-1,50 €/giorno</div>
+      <p>Zreen, Terranova, VitaVi, Nutrimea, x115. Forme attive a prezzo contenuto: il confine da cui differenziarsi bene.</p></div>
+    <div class="ccard"><div class="fascia">Premium tutto-in-uno</div><div class="prezzo">1,50-9 €/giorno</div>
+      <p>Biogena ONE, AG1, Avea, Ritual, LYMA. Validano il prezzo premium. Noi (2,15-3,97 €/giorno) siamo in questa fascia.</p></div>
+  </div>
   <ul>
-    <li><strong>Il premium "tutto in uno" esiste e vende</strong>: AG1 incassa 87 euro al mese (in Italia solo in inglese, pubblico sportivo), Biogena ONE 59-129 euro, LYMA 269 euro, Avea vende routine fino a 249 euro al mese. I nostri 67-139 euro sono dentro il mercato, non fuori.</li>
-    <li><strong>Nessuno unisce le tre cose</strong>: formula completa premium, linguaggio scientifico da farmacia, persone 45-65 in Italia. Quel corridoio è esattamente il nostro cliente reale, e oggi è scoperto.</li>
-    <li><strong>Due segnali di urgenza.</strong> Biogena (gruppo da 83 milioni, +30% l'anno) è entrata in Italia a fine 2024 con un tutto-in-uno in polvere da 99 ingredienti e valuta un negozio a Milano. Avea sta facendo pubblicità in italiano proprio in queste settimane, con oltre 100 inserzioni attive rivolte a un pubblico femminile 45+.</li>
+    <li><strong>Biogena ONE va guardata da vicino</strong>: polvere, 99 ingredienti, trial a 3,90 euro, gruppo da 83 milioni entrato in Italia a fine 2024 (+30% l'anno).</li>
+    <li><strong>Avea</strong> fa pubblicità in italiano in queste settimane, oltre 100 inserzioni attive, pubblico femminile 45+.</li>
   </ul>
-  <div class="hl"><strong>La finestra realistica è di 12-24 mesi.</strong> Il posizionamento non è un progetto da rimandare: si decide quest'autunno, mentre il test sulla nuova comunicazione parte già adesso.</div>
-  <p><strong>Prossimi passi.</strong> Primo: parte il test (landing di confronto e campagna dedicata), che ci darà i primi numeri reali. Secondo: 3-4 settimane di analisi per costruire le opzioni. Terzo: entro fine settembre il report completo, con 2-3 strade percorribili e per ciascuna numeri, costi e rischi. La decisione la prendiamo insieme sul report, non prima.</p>
-  <div class="foot">Fonti: WooCommerce (ordini e righe prodotto 2025-2026), recensioni verificate dal 2017, ricerca di mercato del 3 settembre 2026 su fonti pubbliche (siti ufficiali, registri marchi, dati di settore FederSalus e IQVIA). Documento interno riservato.</div>
+  <div class="hl"><strong>L'ipotesi che stiamo verificando:</strong> nessuno dei 14 sembra unire formula completa premium, linguaggio scientifico da farmacia e pubblico 45-65 italiano. Se l'analisi e il test lo confermano, quello è il nostro spazio. È la domanda al centro dello studio, non ancora la risposta.</div>
+  <p><strong>Prossimi passi:</strong> parte il test (landing di confronto e campagna), 3-4 settimane di analisi, report entro fine settembre con 2-3 strade e per ciascuna numeri, costi e rischi. La decisione la prendiamo insieme sul report.</p>
+  <div class="foot">Fonti: WooCommerce (ordini 2016-2026), recensioni verificate, ricerca di mercato del 3 settembre 2026 su fonti pubbliche (siti ufficiali, registri marchi, dati FederSalus e IQVIA). Documento interno riservato.</div>
 </section>
 
 </body>
