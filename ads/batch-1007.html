@@ -5,14 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Batch #1007 · Test Multinutrienti · Launch kit</title>
-<!-- batch-1007.html v5 · 2026-09-22 · launch kit del batch #1007 Test Multinutrienti.
-     Testi, titoli, descrizione e parametri URL presi da copy/testi-meta.md v1.5; hook, nomi ad e formati da 01-matrice.md v1.8.
+<!-- batch-1007.html v7 · 2026-09-22 · launch kit del batch #1007 Test Multinutrienti.
+     Testi, titoli, descrizione e parametri URL presi da copy/testi-meta.md v1.5; hook, nomi ad e formati da 01-matrice.md v1.9; script video da 04-script-video-lorenzo.md v1.0.
      Changelog:
        v1 · prima pubblicazione (FASE 5 Ads OS)
        v2 · 14 creatività #220-#233 con la serie loro/noi (221, 230-233), testi e titoli v1.5, hook e nomi ad della matrice v1.6, JPG rigenerati dai PNG finali
        v3 · anteprime più che raddoppiate (colonna da 230 a 540 px, pagina larga 1240 px), su richiesta di Andrea per leggerle bene
        v4 · secondo giro di ritocchi di Andrea del 22/9 (matrice v1.7): hook in Title Case nelle card e nella tabella, riferimenti alla matrice portati a v1.7, look della #223 aggiornato (compresse sfocate nello zero, barattolo accanto), JPG 220-233 rigenerati dai PNG finali
-       v5 · terzo giro di ritocchi di Andrea del 22/9 (matrice v1.8): nuova card #234 (altra versione della #227 con Vitamina D, C e biotina, 1:1, ad set cold) e sua riga in tabella; hook della serie loro/noi senza punti finali, con le righe separate da " / "; #222 col +900% di Vitamina D in Elisir; barattolino sulla quarta striscia della serie; conteggi portati a 15 creatività, 13 cold e 2 warm; affinità del testo A estesa alla #234; JPG 220-234 rigenerati dai PNG finali -->
+       v5 · terzo giro di ritocchi di Andrea del 22/9 (matrice v1.8): nuova card #234 (altra versione della #227 con Vitamina D, C e biotina, 1:1, ad set cold) e sua riga in tabella; hook della serie loro/noi senza punti finali, con le righe separate da " / "; #222 col +900% di Vitamina D in Elisir; barattolino sulla quarta striscia della serie; conteggi portati a 15 creatività, 13 cold e 2 warm; affinità del testo A estesa alla #234; JPG 220-234 rigenerati dai PNG finali
+       v6 · approvazioni di Andrea del 22/9 (matrice v1.9): #222 con "10 volte" al posto di "+900%" (10 volte la Vitamina D in Elisir rispetto a 2 dei 3 multivitaminici analizzati); #228 col testo approvato parola per parola (Perché dentro c’è molto di più, tre confronti loro/noi, le forme migliori, 3,47 €/giorno) e via la nota "si approva in chat"; nuova sezione 6 "Script video per Lorenzo" con i 4 script di 04-script-video-lorenzo.md v1.0 (hook con bottone Copia ciascuno, script completo con bottone Copia, sovrimpressioni e scena apribili), checklist passata a sezione 7; stili nuovi solo in coda al blocco style, CSS e JavaScript esistenti invariati; JPG 222 e 228 rigenerati dai PNG finali        v7 · #234 con la Vitamina B12 al posto della biotina (Andrea, 22/9 sera): hook, nome ad, card e JPG
+-->
 <style>
 
   :root{--ground:#F4EFE4;--panel:#FBF8F1;--panel-2:#F0E9D9;--ink:#1B1712;--muted:#6E6455;--faint:#928871;--line:#E4DBC7;--accent:#8B6F47;--ok:#5E7A53;--warn:#A0622D;--shadow:0 1px 2px rgba(27,23,18,.06),0 8px 24px rgba(27,23,18,.06)}
@@ -88,6 +90,25 @@
   .chip.cold{color:var(--accent);font-weight:600}
   .chip.warm{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent);font-weight:600}
   .aff{font-size:12px;color:var(--faint);margin:-4px 0 8px}
+  /* v6 · sezione 6, script video per Lorenzo: solo stili nuovi, quelli sopra restano invariati */
+  .videos{display:flex;flex-direction:column;gap:18px;margin-top:14px}
+  .vobj{font-size:13px;color:var(--muted);margin:-2px 0 4px;max-width:90ch}
+  .vobj b{color:var(--ink)}
+  .vsub{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:16px 0 8px}
+  .vhooks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:12px}
+  .vh{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .vh .tbh{margin-bottom:8px}
+  .vh .ftext{font-family:"Iowan Old Style",Palatino,Georgia,ui-serif,serif;font-size:15.5px;line-height:1.35}
+  .vnote{font-size:13px;color:var(--muted);margin:8px 0 0;line-height:1.5}
+  .vid>.vnote{margin-top:10px}
+  details.vmore{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  details.vmore summary{cursor:pointer;font-weight:600;font-size:13.5px;color:var(--accent)}
+  details.vmore ul{margin:8px 0 0;padding-left:20px;font-size:13.5px;line-height:1.5;color:var(--ink)}
+  details.vmore li{margin:4px 0}
+  details.vmore li ul{margin:4px 0 0}
+  .notice.vrec{max-width:none}
+  .notice.vrec ul{margin:8px 0 0;padding-left:20px}
+  .notice.vrec li{margin:4px 0}
 </style>
 </head>
 <body>
@@ -95,7 +116,7 @@
   <div class="eyebrow">Ads OS · Test Multinutrienti · Launch kit</div>
   <h1>Batch #1007</h1>
   <div class="status" style="color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)">✓ Montato e verificato, pronto da caricare su Meta</div>
-  <p class="lede"><b>15 creatività (#220-#234): 13 cold solution aware e 2 warm.</b> Le 10 del set principale (#220-#229) hanno 10 sistemi grafici con font display mai usati; le 4 nuove (#230-#233) formano con la #221 la <b>serie loro/noi</b> (Magnesio, Vitamina C, Vitamina D, Vitamina B12, Omega-3): stessa grafica, un colore d’accento per ingrediente, e il barattolino del prodotto che risponde sulla sua striscia. La <b>#234</b> è un’altra versione della #227, con la stessa grafica e altri tre ingredienti: Vitamina D, Vitamina C e biotina. Il cold parla a chi prende già un multivitaminico e gli mostra una cosa verificabile sull’etichetta del prodotto che usa ogni giorno; il bottone manda al confronto completo sulla landing bridge. Il prezzo entra solo nella #228, sul warm; la #229 porta l’offerta senza prezzo.</p>
+  <p class="lede"><b>15 creatività (#220-#234): 13 cold solution aware e 2 warm.</b> Le 10 del set principale (#220-#229) hanno 10 sistemi grafici con font display mai usati; le 4 nuove (#230-#233) formano con la #221 la <b>serie loro/noi</b> (Magnesio, Vitamina C, Vitamina D, Vitamina B12, Omega-3): stessa grafica, un colore d’accento per ingrediente, e il barattolino del prodotto che risponde sulla sua striscia. La <b>#234</b> è un’altra versione della #227, con la stessa grafica e altri tre ingredienti: Vitamina D, Vitamina C e B12. Il cold parla a chi prende già un multivitaminico e gli mostra una cosa verificabile sull’etichetta del prodotto che usa ogni giorno; il bottone manda al confronto completo sulla landing bridge. Il prezzo entra solo nella #228, sul warm; la #229 porta l’offerta senza prezzo.</p>
   <div class="rules">
     <div class="rule"><b>Testo:</b> carica A + B + C + D + E su ogni inserzione</div>
     <div class="rule"><b>Titoli:</b> 5 + 1 descrizione, uguali per tutte</div>
@@ -240,7 +261,7 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
     <div class="meta-row" style="margin-top:14px"><span class="flabel">Descrizione (una sola)</span><span class="val">Guarda il confronto, poi scegli</span><button class="cbtn sm" data-copy="Guarda il confronto, poi scegli">Copia</button></div>
   </div>
 
-  <h2>4 · La matrice (v1.8: nessuna riga tagliata, testo rivisto il 21/9 e ritoccato due volte il 22/9, serie loro/noi e #234)</h2>
+  <h2>4 · La matrice (v1.9: nessuna riga tagliata, testo rivisto il 21/9 e ritoccato tre volte il 22/9, serie loro/noi e #234)</h2>
   <p class="sec-sub">Quattro famiglie di rivelazione: loro contro noi con un numero di prodotto (221 e la serie 230-233, 224, 227 e 234), il verdetto (220, 222), cosa manca (223, 226, 233), la forma (225). Il prezzo solo nel warm (228); la 229 porta l’offerta senza prezzo. Chi risponde: Elisir in 221, 222, 226, 227, 231, 232, 233 e 234; Essentiel in 224 e 230; Paleocomplex senza numero in 223; la categoria in 225; solo 220 lascia la risposta alla landing. Coppie sullo stesso fatto: 222 e 231 (Vitamina D, verdetto con la differenza contro loro/noi), 223 e 233 (Omega-3, senza numero contro con il numero); 227 e 234 hanno la stessa grafica e ingredienti diversi. Le righe seguono la numerazione: la serie aggiunta il 21/9 e la 234 del 22/9 stanno in coda, dopo le due warm.</p>
   <div class="tablewrap">
     <table class="grid-t">
@@ -248,25 +269,25 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
       <tbody>
         <tr><td class="cnum">#220</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Scopri Se Il Tuo Multivitaminico È Sottodimensionato.&quot;</td><td class="tcol">Solo tipografia, Newsreader su giallo pieno, risposta sulla landing</td><td class="tcol" style="white-space:nowrap">9:16 · 1080×1920</td></tr>
         <tr><td class="cnum">#221</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Magnesio / Loro: da 80 a 120 mg / Elisir: 450 mg&quot;</td><td class="tcol">Strisce bianche su ardesia, Barlow Condensed, accento corallo, barattolino di Elisir, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
-        <tr><td class="cnum">#222</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;I Multivitaminici Comuni Sono Sottodosati.&quot;</td><td class="tcol">Foto img-08, +900% di Vitamina D in Rubik, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
+        <tr><td class="cnum">#222</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;I Multivitaminici Comuni Sono Sottodosati.&quot;</td><td class="tcol">Foto img-08, &quot;10 volte&quot; la Vitamina D in Elisir in Rubik, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#223</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Omega-3: Neanche Un Milligrammo.&quot;</td><td class="tcol">Zero bronzo su blu petrolio con le compresse sfocate dentro, Gloock, Paleocomplex accanto</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#224</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Coenzima Q10: 4,5 mg Contro 100.&quot;</td><td class="tcol">Cerchi in proporzione su prugna, Zilla Slab, risponde Essentiel</td><td class="tcol" style="white-space:nowrap">1:1 · 1080×1080</td></tr>
         <tr><td class="cnum">#225</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Gira La Confezione Del Tuo Multivitaminico E Cerca Queste Due Parole.&quot;</td><td class="tcol">Scena AI, mani e scatola da farmacia senza marchi, Public Sans</td><td class="tcol" style="white-space:nowrap">9:16 · 1080×1920</td></tr>
         <tr><td class="cnum">#226</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;La Compressa Che Dovrebbe Coprire Tutto Non Ha Nessuno Di Questi Sei.&quot;</td><td class="tcol">Griglia 3×2 su salvia, Schibsted Grotesk, risponde Elisir</td><td class="tcol" style="white-space:nowrap">1:1 · 1080×1080</td></tr>
         <tr><td class="cnum">#227</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina E, B6 E Manganese Ci Sono. Ma Col Contagocce.&quot;</td><td class="tcol">Lista a barre su paper, Red Hat Display, risponde Elisir</td><td class="tcol" style="white-space:nowrap">1:1 · 1080×1080</td></tr>
-        <tr><td class="cnum">#228</td><td><span class="aw">Product</span></td><td class="hookcell">&quot;Sì, Costa Molte Volte Più Di Un Multivitaminico Da Farmacia.&quot;</td><td class="tcol">Syne su oro pieno, barattolo di Elisir grande, 139 €</td><td class="tcol" style="white-space:nowrap">9:16 · 1080×1920</td></tr>
+        <tr><td class="cnum">#228</td><td><span class="aw">Product</span></td><td class="hookcell">&quot;Sì, Costa Molte Volte Più Di Un Multivitaminico Da Farmacia.&quot;</td><td class="tcol">Syne su oro pieno, barattolo di Elisir grande, tre confronti loro/noi, le forme migliori, 3,47 €/giorno (testo approvato il 22/9)</td><td class="tcol" style="white-space:nowrap">9:16 · 1080×1920</td></tr>
         <tr><td class="cnum">#229</td><td><span class="aw">Most aware</span></td><td class="hookcell">&quot;Provalo Con 35 € Di Regali.&quot;</td><td class="tcol">Foto img-06 con Elisir, card coupon PRIMOORDINE, nessun prezzo</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#230</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina C / Loro: da 100 a 180 mg / Essentiel: 1.000 mg&quot;</td><td class="tcol">Serie loro/noi come la 221, accento arancio, barattolino di Essentiel, risponde Essentiel</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#231</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina D / Loro: dal 100 al 200% / Elisir: 1.000%&quot;</td><td class="tcol">Serie loro/noi come la 221, accento giallo, barattolino di Elisir, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#232</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina B12 / Loro: da 2,5 a 25 mcg / Elisir: 200 mcg&quot;</td><td class="tcol">Serie loro/noi come la 221, accento viola, barattolino di Elisir, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
         <tr><td class="cnum">#233</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Omega-3 / Loro: assenti / Elisir: 1.050 mg&quot;</td><td class="tcol">Serie loro/noi come la 221, accento azzurro, barattolino di Elisir, risponde Elisir</td><td class="tcol" style="white-space:nowrap">4:5 · 1080×1350</td></tr>
-        <tr><td class="cnum">#234</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina D, C E Biotina Ci Sono. Ma Col Contagocce.&quot;</td><td class="tcol">Come la 227: lista a barre su paper, Red Hat Display, risponde Elisir</td><td class="tcol" style="white-space:nowrap">1:1 · 1080×1080</td></tr>
+        <tr><td class="cnum">#234</td><td><span class="aw">Solution</span></td><td class="hookcell">&quot;Vitamina D, C E B12 Ci Sono. Ma Col Contagocce.&quot;</td><td class="tcol">Come la 227: lista a barre su paper, Red Hat Display, risponde Elisir</td><td class="tcol" style="white-space:nowrap">1:1 · 1080×1080</td></tr>
       </tbody>
     </table>
   </div>
 
   <h2>5 · Le creatività</h2>
-  <p class="sec-sub">15 definitive, renderizzate e verificate (matrice v1.8, due giri di ritocchi di Andrea del 22/9). La #228 ha ancora il testo del secondo giro: quello nuovo si approva in chat prima del carico. Clic sull’immagine per la piena risoluzione, Scarica per il download. Su Meta: 5 testi + i 5 titoli + la descrizione unica + CTA Scopri di più + URL pulito e parametri. Rispetto alla prima versione del kit cambiano i nomi ad di #221, #222 e #227.</p>
+  <p class="sec-sub">15 definitive, renderizzate e verificate (matrice v1.9, ritocchi e approvazioni di Andrea del 22/9: la #222 dice &quot;10 volte&quot;, la #228 ha il testo approvato). Clic sull’immagine per la piena risoluzione, Scarica per il download. Su Meta: 5 testi + i 5 titoli + la descrizione unica + CTA Scopri di più + URL pulito e parametri. Rispetto alla prima versione del kit cambiano i nomi ad di #221, #222 e #227.</p>
   <div class="kits">
     <div class="kit">
       <div class="thumb"><a href="img/1007/220.jpg" target="_blank"><img src="img/1007/220.jpg" alt="#220" loading="lazy"></a><a class="dl" href="img/1007/220.jpg" download="220_multinutrienti_sottodimensionato_1080x1920.jpg">&#11015; Scarica immagine</a></div>
@@ -295,6 +316,8 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
       <div class="fields">
         <div class="fhead"><span class="num">#222</span><span class="chip cold">Cold</span><span class="chip">Solution</span><span class="chip">Foto · sottodosati</span></div>
         <div class="hookcell" style="min-width:0">&quot;I Multivitaminici Comuni Sono Sottodosati.&quot;</div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Numero in alto</span><span class="val"><b>10 volte</b> · la Vitamina D in Elisir / rispetto a 2 dei 3 multivitaminici analizzati</span></div>
+        <div class="meta-row" style="margin-top:0"><span class="flabel">Rimando</span><span class="val">Vuoi scoprire le altre differenze? / Guarda la pagina di confronto.</span></div>
         <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">222 | static | w+50 vitamina d sottodosati</code><button class="cbtn sm" data-copy="222 | static | w+50 vitamina d sottodosati">Copia</button></div>
         <div class="meta-row"><span class="flabel">Formato</span><span class="val">static · 4:5 · 1080×1350</span></div>
         <div class="meta-row"><span class="flabel">Testo principale (tutti e 5)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button><button class="cbtn sm" data-src="tD">Copia D</button><button class="cbtn sm" data-src="tE">Copia E</button></div>
@@ -361,6 +384,7 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
       <div class="fields">
         <div class="fhead"><span class="num">#228</span><span class="chip warm">Warm</span><span class="chip">Product</span><span class="chip">Hero Elisir · iterazione di #206</span></div>
         <div class="hookcell" style="min-width:0">&quot;Sì, Costa Molte Volte Più Di Un Multivitaminico Da Farmacia.&quot;</div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Testo approvato (22/9)</span><span class="val">Perché dentro c’è molto di più. / Nutrienti: loro 23-26, <b>Elisir 40</b> / Magnesio: loro 80-120 mg, <b>Elisir 450 mg</b> / Omega-3 da krill: loro Zero, <b>Elisir 1.050 mg</b> / E nelle forme migliori: come <b>magnesio citrato</b> invece di ossido, <b>metilfolato</b> invece di acido folico. / <b>3,47 €/giorno</b></span></div>
         <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">228 | static | retarg m+45 si costa molte volte</code><button class="cbtn sm" data-copy="228 | static | retarg m+45 si costa molte volte">Copia</button></div>
         <div class="meta-row"><span class="flabel">Formato</span><span class="val">static · 9:16 · 1080×1920</span> <span class="val" style="color:var(--muted)">(nel Feed Meta ritaglia a 4:5: controlla l’anteprima in Ads Manager)</span></div>
         <div class="meta-row"><span class="flabel">Testo principale (tutti e 5)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button><button class="cbtn sm" data-src="tD">Copia D</button><button class="cbtn sm" data-src="tE">Copia E</button></div>
@@ -423,11 +447,11 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
       </div>
     </div>
     <div class="kit">
-      <div class="thumb"><a href="img/1007/234.jpg" target="_blank"><img src="img/1007/234.jpg" alt="#234" loading="lazy"></a><a class="dl" href="img/1007/234.jpg" download="234_multinutrienti_d-c-biotina-contagocce_1080x1080.jpg">&#11015; Scarica immagine</a></div>
+      <div class="thumb"><a href="img/1007/234.jpg" target="_blank"><img src="img/1007/234.jpg" alt="#234" loading="lazy"></a><a class="dl" href="img/1007/234.jpg" download="234_multinutrienti_d-c-b12-contagocce_1080x1080.jpg">&#11015; Scarica immagine</a></div>
       <div class="fields">
-        <div class="fhead"><span class="num">#234</span><span class="chip cold">Cold</span><span class="chip">Solution</span><span class="chip">Barre · D, C e biotina col contagocce</span></div>
-        <div class="hookcell" style="min-width:0">&quot;Vitamina D, C E Biotina Ci Sono. Ma Col Contagocce.&quot;</div>
-        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">234 | static | w+40 col contagocce d c biotina</code><button class="cbtn sm" data-copy="234 | static | w+40 col contagocce d c biotina">Copia</button></div>
+        <div class="fhead"><span class="num">#234</span><span class="chip cold">Cold</span><span class="chip">Solution</span><span class="chip">Barre · D, C e B12 col contagocce</span></div>
+        <div class="hookcell" style="min-width:0">&quot;Vitamina D, C E B12 Ci Sono. Ma Col Contagocce.&quot;</div>
+        <div class="meta-row" style="margin-top:2px"><span class="flabel">Nome ad</span><code class="adname">234 | static | w+40 col contagocce d c b12</code><button class="cbtn sm" data-copy="234 | static | w+40 col contagocce d c b12">Copia</button></div>
         <div class="meta-row"><span class="flabel">Formato</span><span class="val">static · 1:1 · 1080×1080</span></div>
         <div class="meta-row"><span class="flabel">Testo principale (tutti e 5)</span><button class="cbtn sm" data-src="tA">Copia A</button><button class="cbtn sm" data-src="tB">Copia B</button><button class="cbtn sm" data-src="tC">Copia C</button><button class="cbtn sm" data-src="tD">Copia D</button><button class="cbtn sm" data-src="tE">Copia E</button></div>
         <div class="meta-row"><span class="flabel">Titoli e descrizione</span><span class="val">set unico, sezione 3</span><span class="sep"></span><span class="flabel">CTA</span><span class="val"><b>Scopri di più</b></span><button class="cbtn sm" data-copy="https://paleocomplex.com/multinutrienti/">Copia URL</button><button class="cbtn sm" data-copy="utm_source={{site_source_name}}&amp;utm_medium=paid&amp;utm_campaign={{campaign.name}}&amp;utm_term={{adset.name}}&amp;utm_content={{ad.name}}">Copia parametri</button></div>
@@ -435,7 +459,338 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
     </div>
   </div>
 
-  <h2>6 · Checklist pre-carico</h2>
+  <h2>6 · Script video per Lorenzo</h2>
+  <p class="sec-sub">Quattro video verticali 9:16, da 37 a 55 secondi, che Lorenzo recita in camera in prima persona leggendo dal teleprompter. Ognuno è la versione parlata di una o più statiche del batch, verso la stessa landing, e serve anche come contenuto organico. Per ogni video: tre hook da registrare a parte e lo script completo, con i bottoni per copiarli; sovrimpressioni e scena si aprono sotto. Script v1.0 del 22/9, da rivedere da Andrea prima di mandarli a Lorenzo; le fonti di ogni numero sono nel file <code>04-script-video-lorenzo.md</code> del batch.</p>
+  <div class="notice vrec"><b>Come si registrano (vale per tutti e quattro)</b>
+<ul>
+<li><b>Teleprompter:</b> un’app sul telefono che fa scorrere il testo vicino all’obiettivo della fotocamera frontale, così lo sguardo resta in camera.</li>
+<li><b>Un hook per ripresa:</b> ogni variante di hook (A, B, C) si registra a parte, <b>tre prese per hook</b>. Il corpo del video si registra una volta sola, anche a blocchi, e in montaggio si attacca a ciascun hook: da ogni script escono tre versioni da testare.</li>
+<li><b>Risoluzione:</b> 4K verticale (2160×3840) dove il telefono lo consente, montaggio su timeline 1080×1920. Gli stacchi si ricavano con zoom digitali, e in 4K restano nitidi. Se il telefono gira solo in Full HD, lo zoom non va oltre il 110-115%.</li>
+<li><b>Un ambiente, una luce, una maglia:</b> la stessa cucina o lo stesso studio, luce naturale laterale da una finestra, maglia in tinta unita senza loghi. Tenendo uguali le tre cose, i quattro video si girano nella stessa sessione.</li>
+<li><b>Oggetti comuni:</b> una confezione vera di multivitaminico in compresse da farmacia, meglio italiana, con il fronte coperto da un foglio bianco. Se è comprata in Francia, il retro non deve mai essere leggibile in camera. Poi il barattolo di Elisir e quello di Essentiel (<b>da verificare che Lorenzo li abbia con sé</b>). Il barattolo di Paleocomplex non serve in nessuno dei quattro.</li>
+<li><b>Testo a schermo:</b> sovrimpressioni e sottotitoli del parlato stanno tra y 385 e y 1248 su 1080×1920, la stessa zona sicura delle statiche 9:16 del batch. I sottotitoli restano sempre accesi.</li>
+</ul>
+  </div>
+  <div class="videos">
+    <div class="tb vid" id="video-1">
+      <div class="tbh"><span class="name">Video 1 · Gira la confezione</span><span class="tag">53 secondi · 9:16 · teleprompter</span><button class="cbtn" data-src="v1-script">Copia script</button></div>
+      <div class="aff vobj"><b>Obiettivo:</b> far girare la scatola a chi prende già un multivitaminico, fargli trovare acido folico e ossido di magnesio e mandarlo alla tabella delle forme sulla landing. È la versione video della #225.</div>
+      <div class="vsub">Hook · 3 varianti da 3 secondi, tre prese per hook</div>
+      <div class="vhooks">
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook A</span><span class="tag">Partecipazione, il prodotto in mano</span><button class="cbtn sm" data-src="v1-hA">Copia hook A</button></div>
+          <div class="ftext" id="v1-hA">Prendi il tuo multivitaminico e giralo.</div>
+          <p class="vnote">Lorenzo entra in primo piano con la scatola già in mano, vicina all’obiettivo e col davanti coperto da un foglio bianco. Su «giralo» la ruota di scatto e porta il retro verso la camera. Il retro resta sfocato e a fuoco c’è solo il suo viso.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook B</span><span class="tag">Rompe una convinzione</span><button class="cbtn sm" data-src="v1-hB">Copia hook B</button></div>
+          <div class="ftext" id="v1-hB">Tutti leggono il davanti. Il retro, quasi nessuno.</div>
+          <p class="vnote">A mezzo busto tiene la scatola accanto al viso, col davanti coperto dal foglio bianco. Su «il retro» la gira e la appoggia di taglio sul piano, con un piccolo colpo secco.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook C</span><span class="tag">Autorità del fondatore</span><button class="cbtn sm" data-src="v1-hC">Copia hook C</button></div>
+          <div class="ftext" id="v1-hC">Formulo integratori dal 2016. Gira il tuo multivitaminico.</div>
+          <p class="vnote">Lorenzo al piano, scatola in mano, barattoli fuori campo. Su «gira» la tende verso l’obiettivo. In basso compare la targhetta «Lorenzo Zarone, fondatore di Paleocomplex».</p>
+        </div>
+      </div>
+      <p class="vnote">Con B o C il video dura circa un secondo in più (8 parole invece di 6).</p>
+      <div class="vsub">Script completo · 53 secondi</div>
+      <div class="ftext" id="v1-script"><b>[0-3s]</b> <em>(hook A, oppure B o C)</em>
+Prendi il tuo multivitaminico e giralo.
+
+<b>[3-13s]</b> <em>(tiene il retro verso la camera e ci passa sopra il dito)</em>
+Cerca due parole: acido folico e ossido di magnesio.
+Abbiamo analizzato tre dei multivitaminici più venduti in Italia.
+Le abbiamo trovate in tutti e tre.
+
+<b>[13-26s]</b> <em>(appoggia la scatola e prende il barattolo di Elisir)</em>
+L’acido folico va prima convertito dall’organismo,
+e non tutti lo convertono con la stessa efficienza.
+Nei Multinutrienti che formulo io c’è il metilfolato:
+la forma attiva, il folato che circola nel sangue.
+
+<b>[26-37s]</b> <em>(riprende la scatola; su «Essentiel» indica il barattolo nero sul piano)</em>
+Poi il magnesio.
+L’ossido è la forma più economica, e si scioglie poco.
+Nei miei Multinutrienti c’è magnesio citrato, in Essentiel bisglicinato:
+si sciolgono meglio.
+
+<b>[37-46s]</b> <em>(guarda in camera, tono più morbido: nessun sarcasmo verso chi ha la scatola)</em>
+Se le hai trovate, non hai sbagliato niente:
+sono scritte in piccolo, e nessuno ti insegna a cercarle.
+Adesso sai cosa guardare.
+
+<b>[46-53s]</b> <em>(rimette la scatola accanto a Elisir)</em>
+E non sono le uniche due.
+Il confronto completo è sulla pagina: tocca Scopri di più.</div>
+      <details class="vmore"><summary>Sovrimpressioni</summary>
+<p class="vnote">Il testo sta tra y 385 e y 1248 su 1080×1920. Gli hook sono in Title Case e le frasi brevi non hanno il punto finale.</p>
+<ul>
+<li><b>0-3s</b> · A: «Gira Il Tuo Multivitaminico». B: «Tutti Leggono Il Davanti» e poi «Il Retro, Quasi Nessuno». C: targhetta «Lorenzo Zarone, fondatore di Paleocomplex» e «Gira Il Tuo Multivitaminico»</li>
+<li><b>3-7s</b> · due campi di ricerca con la lente, uno sotto l’altro, come nella #225: prima «acido folico», poi «ossido di magnesio» (minuscolo, perché è quello che una persona digita)</li>
+<li><b>7-13s</b> · «Abbiamo analizzato 3 dei multivitaminici più venduti in Italia» e sotto, più grande, «Trovate in tutti e 3»</li>
+<li><b>15-20s</b> · «L’Acido Folico va prima convertito»</li>
+<li><b>20-26s</b> · «Loro: Acido Folico» e «Noi: Metilfolato, la forma attiva», con «Metilfolato» sull’evidenziatore</li>
+<li><b>26-37s</b> · «Magnesio» grande, come il titolo della 221. Sotto «Loro: ossido» e «Noi: citrato», poi più piccolo «Essentiel: bisglicinato»</li>
+<li><b>40-46s</b> · «Adesso sai cosa guardare»</li>
+<li><b>46-53s</b> · «Il confronto completo è sulla pagina» e «Tocca Scopri di più», grandi e centrati, con il logo Paleocomplex grande e centrato sotto</li>
+</ul>
+      </details>
+      <details class="vmore"><summary>Scena e oggetti</summary>
+<ul>
+<li><b>Ambiente:</b> un solo ambiente per tutto il video, la cucina oppure lo studio. Piano sgombro e sfondo chiaro, senza altri integratori né marchi in vista. Luce naturale laterale da una finestra, mai in controluce. Lo sfondo chiaro serve anche a non far sparire il barattolo nero di Essentiel. Niente camice e niente ambienti da studio medico.</li>
+<li><b>Telefono:</b> in verticale, su un treppiede o appoggiato, con l’obiettivo all’altezza degli occhi a 70-90 cm, a mezzo busto. L’app del teleprompter tiene il testo vicino all’obiettivo, così lo sguardo resta in camera. Si fa un’unica inquadratura fissa: gli stacchi si ricavano in montaggio con uno zoom digitale del 120-130% sulla scatola a 3s, su Elisir a 13s e su Essentiel a 26s. Per questo si gira in 4K verticale (2160×3840) e si monta su 1080×1920; se il telefono gira solo in Full HD, lo zoom si ferma al 110-115%. Lorenzo non deve mai spostare il telefono.</li>
+<li><b>Scatola del multivitaminico:</b> un astuccio di compresse da farmacia, vero, mai col marchio visibile, meglio comprato in Italia. Il davanti è coperto da un foglio bianco fissato con nastro di carta. Il retro non va mai a fuoco: se in camera si legge qualcosa, si sfoca in montaggio (con una confezione francese la regola vale a maggior ragione). Le due parole arrivano solo dalle sovrimpressioni, non dalla scatola. Se l’astuccio ha colori riconoscibili (l’arancio, il verde arcobaleno e il blu delle referenze del confronto), si fodera tutto di carta bianca.</li>
+<li><b>Barattolo di Elisir:</b> entra in scena a 13s, con l’etichetta dritta verso la camera.</li>
+<li><b>Barattolo di Essentiel:</b> sta sul piano dall’inizio, ai margini dell’inquadratura, e Lorenzo lo indica a 26s.</li>
+<li><b>Lorenzo:</b> maglia in tinta unita, senza loghi. Ritmo da conversazione e frasi brevi. Il tono è provocatorio sull’etichetta e rispettoso con chi l’ha comprata.</li>
+</ul>
+      </details>
+    </div>
+    <div class="tb vid" id="video-2">
+      <div class="tbh"><span class="name">Video 2 · Il 100% non è il pieno</span><span class="tag">55 secondi · 9:16 · teleprompter</span><button class="cbtn" data-src="v2-script">Copia script</button></div>
+      <div class="aff vobj"><b>Obiettivo:</b> far capire che il 100% dell’etichetta è la soglia della carenza e non il pieno, dimostrarlo con un esempio solo (Vitamina D, dieci volte tanto in Elisir) e mandare al confronto sulla landing.</div>
+      <div class="vsub">Hook · 3 varianti da 3 secondi, tre prese per hook</div>
+      <div class="vhooks">
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook A</span><span class="tag">Rompe una convinzione</span><button class="cbtn sm" data-src="v2-hA">Copia hook A</button></div>
+          <div class="ftext" id="v2-hA">Quel 100% sull’etichetta non è il pieno.</div>
+          <p class="vnote">Primo piano stretto sulla sola colonna delle percentuali, sul retro della confezione anonima: il dito di Lorenzo la scorre e si ferma su un 100%. Nomi dei nutrienti, intestazione della tabella e nome del prodotto restano fuori campo; se entrano, si sfocano in montaggio. Sull’ultima parola abbassa la confezione, compare il viso e guarda in camera. Per questa sola ripresa la messa a fuoco resta automatica, così passa da sola dalla confezione al viso. <b>Se la confezione disponibile è francese, si parte dall’hook C</b>, che non mostra nessuna etichetta.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook B</span><span class="tag">Curiosità</span><button class="cbtn sm" data-src="v2-hB">Copia hook B</button></div>
+          <div class="ftext" id="v2-hB">Sai cosa vuol dire quel 100% sull’etichetta?</div>
+          <p class="vnote">Mezzo busto frontale. Lorenzo alza la confezione girata accanto al viso, tocca due volte il retro con l’indice e si sporge appena verso la camera. Il retro resta sfocato.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook C</span><span class="tag">Il fondatore ci mette la faccia</span><button class="cbtn sm" data-src="v2-hC">Copia hook C</button></div>
+          <div class="ftext" id="v2-hC">Sono Lorenzo Zarone. Parliamo di quel 100%.</div>
+          <p class="vnote">Lorenzo gira verso la camera un foglio bianco con «100%» scritto a mano, grande, col pennarello nero. Lo tiene all’altezza del petto per tutta la frase e lo appoggia sul tavolo sull’ultima parola. Il sottopancia «Lorenzo Zarone, fondatore di Paleocomplex» entra subito.</p>
+        </div>
+      </div>
+      <div class="vsub">Script completo · 55 secondi</div>
+      <div class="ftext" id="v2-script"><b>[0-3s]</b> <em>(hook A, B o C)</em>
+
+<b>[3-13s]</b>
+Sul retro del tuo multivitaminico lo trovi tante volte,
+e pensi di essere a posto.
+È normale pensarlo: è scritto così su tutte le confezioni.
+
+<b>[13-23s]</b>
+Quel 100% sembra il massimo.
+In realtà è il valore di riferimento:
+solo la quantità che serve per non andare in carenza.
+
+<b>[23-36s]</b>
+Abbiamo analizzato tre dei multivitaminici più venduti in Italia.
+In due su tre la Vitamina D è al 100%.
+In Elisir è al 1.000%: dieci volte tanto.
+<em>(un secondo di pausa, sguardo in camera)</em>
+
+<b>[36-40s]</b>
+È il massimo che la legge consente in un integratore.
+<em>(un secondo di pausa; stacco con zoom sul viso)</em>
+
+<b>[41-48s]</b> <em>(senza oggetti in mano, tono da opinione personale)</em>
+Io la penso così: non andare in carenza
+e fare un’integrazione seria sono due cose diverse.
+
+<b>[48-51s]</b>
+E la Vitamina D non è l’unica differenza.
+
+<b>[51-55s]</b>
+Il confronto completo è sulla pagina: tocca Scopri di più.</div>
+      <details class="vmore"><summary>Sovrimpressioni</summary>
+<ul>
+<li><b>0-3s:</b> con l’hook A «Quel 100% Non È Il Pieno». Con l’hook B «Cosa Vuol Dire Quel 100%?». Con l’hook C nessun titolo, perché il messaggio lo porta il foglio: il sottopancia entra subito.</li>
+<li><b>3-7s</b> (0-3s con l’hook C): sottopancia «Lorenzo Zarone, fondatore di Paleocomplex».</li>
+<li><b>14-23s:</b> «100%: la quantità per non andare in carenza».</li>
+<li><b>23-27s:</b> occhiello «Abbiamo analizzato 3 dei multivitaminici più venduti in Italia».</li>
+<li><b>27-31s:</b> «Vitamina D» e sotto «2 multivitaminici su 3: 100%».</li>
+<li><b>31-36s:</b> si aggiunge «Elisir: 1.000%» sull’evidenziatore giallo, poi «10 volte tanto». In piccolo accanto «Percentuali del VNR».</li>
+<li><b>36-40s:</b> «Il massimo consentito in un integratore».</li>
+<li><b>41-48s:</b> nessuna sovrimpressione. Solo il viso, con lo zoom leggero, e i sottotitoli: è un’opinione di Lorenzo e deve sembrarlo.</li>
+<li><b>48-51s:</b> «Non è l’unica differenza».</li>
+<li><b>51-55s:</b> «Il confronto completo è sulla pagina» e «Scopri di più» grande, con una freccia verso il bottone.</li>
+<li><b>Regole:</b> la Vitamina D compare solo in percentuale, mai in microgrammi né in UI. Nessun marchio concorrente e nessuna funzione salute. I sottotitoli del parlato restano sempre accesi.</li>
+</ul>
+      </details>
+      <details class="vmore"><summary>Scena e oggetti</summary>
+<ul>
+<li><b>Ambiente:</b> un ambiente solo, la cucina (oppure lo studio). Lorenzo è in piedi o seduto al tavolo, con la luce naturale di lato da una finestra, a circa 45°, e nessun controluce. Lo sfondo è in ordine: niente altri integratori, barattoli o marchi in vista.</li>
+<li><b>Telefono:</b> in verticale su treppiede, all’altezza degli occhi, a circa un metro. Inquadratura a mezzo busto con il bordo del tavolo in campo, perché gli oggetti si vedano. Si usa la fotocamera frontale con un’app teleprompter, così legge guardando in camera. Esposizione e messa a fuoco bloccate (tranne che per l’hook A), in 4K verticale (2160×3840) a 30 fps dove il telefono lo consente e montaggio su 1080×1920: lo zoom sul viso resta nitido. In Full HD lo zoom si ferma al 110-115%.</li>
+<li><b>Audio:</b> microfono lavalier wireless collegato al telefono. Cappa e frigo spenti e nessuna musica durante la ripresa.</li>
+<li><b>Oggetti:</b> (1) Una confezione di multivitaminico in compresse da farmacia, <b>italiana, oppure con il retro mai leggibile</b>, senza marchio visibile. Si mostra solo il retro, con il fronte coperto da un foglio bianco o da nastro di carta. Se sul retro compaiono nome o logo, si coprono anche quelli, e se la confezione ha colori di marca riconoscibili si inquadra solo la parte bianca. Una tabella nutrizionale vera, con la sua impaginazione, si riconosce anche senza marchio: per questo nell’hook A entra in campo solo la colonna delle percentuali. (2) Il barattolo di Elisir, pulito, con l’etichetta frontale verso la camera, fuori campo fino al secondo 31 circa. (3) Solo per l’hook C, un foglio bianco con «100%» scritto grande a pennarello nero.</li>
+<li><b>Azioni sul parlato:</b> su «In due su tre» Lorenzo alza la confezione. Su «In Elisir» appoggia il barattolo sul tavolo accanto alla confezione, con un colpo leggero che si sente. Su «dieci volte tanto» fa un secondo di silenzio guardando in camera. Dopo «in un integratore» un altro secondo di pausa e lo stacco con lo zoom sul viso, che separa il massimo di legge dall’opinione che segue. Sulla frase «Io la penso così» niente oggetti in mano. Sulla chiusura indica verso il basso, dove sta il bottone.</li>
+<li><b>Look:</b> maglia a tinta unita, senza loghi. Niente camice bianco né ambientazione da laboratorio: niente che faccia pensare a un medico.</li>
+<li><b>Lettura dei numeri:</b> «100%» si legge «cento per cento», «1.000%» si legge «mille per cento».</li>
+<li><b>Montaggio:</b> tagli sui respiri, sempre con la stessa inquadratura e nello stesso ambiente. Le sovrimpressioni stanno in alto al centro e i sottotitoli sotto, tutti tra y 385 e y 1248 come le statiche 9:16 del batch. Font Inter, con l’accento giallo della Vitamina D della 231 (evidenziatore #E9C44C).</li>
+</ul>
+      </details>
+    </div>
+    <div class="tb vid" id="video-3">
+      <div class="tbh"><span class="name">Video 3 · Loro/noi in 40 secondi</span><span class="tag">37 secondi · 9:16 · teleprompter</span><button class="cbtn" data-src="v3-script">Copia script</button></div>
+      <div class="aff vobj"><b>Obiettivo:</b> tre confronti loro/noi che si capiscono al primo ascolto, senza fare conti, per portare chi prende già un multivitaminico alla tabella completa sulla landing.</div>
+      <div class="vsub">Hook · 3 varianti da 3 secondi, tre prese per hook</div>
+      <div class="vhooks">
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook A</span><span class="tag">Confronto diretto</span><button class="cbtn sm" data-src="v3-hA">Copia hook A</button></div>
+          <div class="ftext" id="v3-hA">Il tuo multivitaminico contro i miei: tre numeri.</div>
+          <p class="vnote">Lorenzo guarda in camera, a mezzo busto. Tiene nella mano sinistra la scatola anonima e nella destra il barattolo di Elisir, alzati all’altezza del viso come i due piatti di una bilancia. Su «tre numeri» li riappoggia sul tavolo, dove Essentiel è già in vista.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook B</span><span class="tag">Domanda sul prodotto che usa ogni giorno</span><button class="cbtn sm" data-src="v3-hB">Copia hook B</button></div>
+          <div class="ftext" id="v3-hB">Sai quanto magnesio c’è nel tuo multivitaminico?</div>
+          <p class="vnote">In primissimo piano c’è una compressa <b>bianca e anonima, senza incisioni</b>, stretta tra pollice e indice a 25-30 cm dall’obiettivo, con la messa a fuoco automatica. Alla fine della domanda Lorenzo abbassa la mano e continua a parlare in camera. Se l’unica compressa disponibile ha un colore, una forma o un’incisione riconoscibili, in montaggio si sfoca fino a lasciare leggibile solo la sagoma. Con questo hook, a [8s] «Partiamo dal magnesio.» diventa «Ecco la risposta.»</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook C</span><span class="tag">Il dubbio</span><button class="cbtn sm" data-src="v3-hC">Copia hook C</button></div>
+          <div class="ftext" id="v3-hC">Scopri se il tuo multivitaminico è sottodimensionato.</div>
+          <p class="vnote">Lorenzo posa sul tavolo la scatola girata, con il fronte verso il basso, la picchietta due volte con l’indice e alza lo sguardo in camera. È l’hook della 220 detto a voce.</p>
+        </div>
+      </div>
+      <div class="vsub">Script completo · 37 secondi</div>
+      <div class="ftext" id="v3-script"><b>[0-3s]</b> <em>(hook A)</em>
+Il tuo multivitaminico contro i miei: tre numeri.
+
+<b>[3-8s]</b>
+Abbiamo confrontato le etichette
+di tre dei multivitaminici più venduti in Italia.
+
+<b>[8-16s]</b>
+Partiamo dal magnesio.
+Loro, da 80 a 120 milligrammi.
+In una dose di Elisir ne ho messi 450.
+
+<b>[16-22s]</b>
+La Vitamina C?
+Loro, da 100 a 180 milligrammi.
+Essentiel ne ha 1.000.
+
+<b>[22-29s]</b>
+Per finire, la B12.
+Loro, da 2,5 a 25 microgrammi.
+In Elisir, 200.
+
+<b>[29-33s]</b>
+Sono tre righe di una tabella molto più lunga.
+
+<b>[33-37s]</b>
+Il confronto completo è sulla pagina: tocca Scopri di più.</div>
+      <details class="vmore"><summary>Sovrimpressioni</summary>
+<p class="vnote">Firma grafica della serie loro/noi (221, 230, 232): Barlow Condensed 600 con Inter, nomi degli ingredienti enormi con l’evidenziatore del loro colore, niente punto finale sulle righe brevi. I testi stanno tra y 385 e y 1248 su 1920, fuori dalle fasce coperte dall’interfaccia dei Reels.</p>
+<ul>
+<li><b>0-3s:</b> l’hook in Title Case, in alto e centrato. A: «Il Tuo Multivitaminico Contro I Miei». B: «Sai Quanto Magnesio C’è Nel Tuo Multivitaminico?». C: «Scopri Se Il Tuo Multivitaminico È Sottodimensionato»</li>
+<li><b>3-8s:</b> l’occhiello, grande e leggibile: «Abbiamo analizzato 3 dei multivitaminici più venduti in Italia»</li>
+<li><b>8s:</b> «Magnesio» enorme, con l’evidenziatore corallo #E8877D della 221</li>
+<li><b>10s:</b> «Loro: da 80 a 120 mg», dal lato della scatola</li>
+<li><b>13s:</b> «Elisir: 450 mg», dal lato del barattolo, con il barattolino scontornato di Elisir</li>
+<li><b>16s:</b> «Vitamina C» enorme, con l’evidenziatore arancio #F0A04B della 230</li>
+<li><b>18s:</b> «Loro: da 100 a 180 mg», dal lato della scatola</li>
+<li><b>20s:</b> «Essentiel: 1.000 mg», con il barattolino di Essentiel e il contorno chiaro sottile della 230</li>
+<li><b>22s:</b> «Vitamina B12» enorme, con l’evidenziatore lilla #A98DDB della 232</li>
+<li><b>24s:</b> «Loro: da 2,5 a 25 mcg», dal lato della scatola</li>
+<li><b>27s:</b> «Elisir: 200 mcg», con il barattolino di Elisir</li>
+<li><b>29-33s:</b> in colonna, ciascuno nel suo colore, «Magnesio», «Vitamina C» e «Vitamina B12». Sotto scorrono verso il fondo del quadro alcune righe grigie vuote, per far vedere che la tabella continua. Nessun’altra parola</li>
+<li><b>33-37s:</b> «Il confronto completo è sulla pagina» e, grande e centrato, il bottone «Scopri di più». Sotto il logo Paleocomplex grande, oppure nessun logo</li>
+</ul>
+      </details>
+      <details class="vmore"><summary>Scena e oggetti</summary>
+<ul>
+<li><b>Ambiente:</b> cucina o studio. Luce naturale che arriva di lato da una finestra, sfondo chiaro e ordinato. Non devono vedersi altri integratori, scatole o marchi. Lo sfondo chiaro serve anche a Essentiel: il barattolo nero su un fondo scuro sparisce, come è successo sulla 230.</li>
+<li><b>Inquadratura:</b> telefono in verticale su un treppiede, o appoggiato a una pila di libri, all’altezza degli occhi e a circa un metro. Lorenzo è a mezzo busto e il piano del tavolo occupa il terzo basso del quadro, così gli oggetti entrano in scena senza cambiare inquadratura. Si usa la fotocamera frontale con un’app teleprompter, con il testo che scorre vicino all’obiettivo, così lo sguardo resta in camera.</li>
+<li><b>Oggetti:</b> a sinistra dell’inquadratura, cioè dal lato «loro», una confezione di multivitaminico da farmacia con il fronte girato verso il tavolo, oppure coperta da un foglio bianco: nessun marchio e nessun colore riconoscibile. Per l’hook B serve anche una compressa bianca e anonima fuori dal blister, senza incisioni, che non sia una delle tre referenze del confronto (la 225 le ha escluse apposta anche nei colori). A destra, dal lato della risposta, i barattoli di Elisir ed Essentiel con l’etichetta verso la camera. Il barattolo di Paleocomplex non serve.</li>
+<li><b>Gesti:</b> a ogni «loro» Lorenzo tocca la scatola a sinistra. A ogni numero nostro alza verso la camera il barattolo giusto: Elisir a 13s e a 27s, Essentiel a 20s. I numeri delle compresse stanno sempre dal lato della scatola e i nostri dal lato dei barattoli, mai il contrario (regola del 22/9 sulle associazioni visive). Nessun gesto di disprezzo verso la scatola, quindi non la spinge via e non la butta: il bersaglio è il numero, non chi l’ha comprata.</li>
+<li><b>Riprese:</b> Lorenzo può girare a blocchi, uno per ingrediente, e in montaggio si uniscono con tagli secchi e un leggero zoom a ogni cambio (in 4K, come negli altri video). Il ritmo veloce lo dà il montaggio, non la fretta nella lettura.</li>
+<li><b>Lettura dei numeri:</b> «B12» si legge «bi dodici», «2,5» si legge «due e mezzo».</li>
+<li><b>Audio:</b> microfono a clip se lo ha. Altrimenti telefono a un metro, con cappa ed elettrodomestici spenti.</li>
+<li><b>Da evitare:</b> registrazioni dello schermo con la tabella della landing, perché nell’intestazione ci sono i nomi dei tre prodotti confrontati. Da evitare anche camice e riferimenti a medici.</li>
+<li><b>Da verificare:</b> che Lorenzo abbia con sé un barattolo di Elisir e uno di Essentiel.</li>
+</ul>
+      </details>
+    </div>
+    <div class="tb vid" id="video-4">
+      <div class="tbh"><span class="name">Video 4 · Sì, costa di più</span><span class="tag">49 secondi · 9:16 · teleprompter</span><button class="cbtn" data-src="v4-script">Copia script</button></div>
+      <div class="aff vobj"><b>Obiettivo:</b> pubblico warm, come la 228: a chi ha già visto la pagina e si è fermato al prezzo, Lorenzo dice per primo che Elisir costa di più e lo motiva con quantità e forme. Poi porta al clic su Scopri di più.</div>
+      <div class="vsub">Hook · 3 varianti da 3 secondi, tre prese per hook</div>
+      <div class="vhooks">
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook A</span><span class="tag">Il prezzo detto per primo</span><button class="cbtn sm" data-src="v4-hA">Copia hook A</button></div>
+          <div class="ftext" id="v4-hA">Sì, costa molte volte più di questo.</div>
+          <p class="vnote">Lorenzo ha in mano il barattolo di Elisir. Con l’altra mano batte due colpi sulla confezione del multivitaminico da farmacia, girata sul retro e appoggiata sul piano davanti a lui.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook B</span><span class="tag">La domanda che il pubblico warm si è già fatto</span><button class="cbtn sm" data-src="v4-hB">Copia hook B</button></div>
+          <div class="ftext" id="v4-hB">Perché Elisir costa così tanto?</div>
+          <p class="vnote">Lorenzo alza il barattolo di Elisir all’altezza del viso, lo gira con l’etichetta verso la camera e guarda dritto in camera.</p>
+        </div>
+        <div class="vh">
+          <div class="tbh"><span class="flabel">Hook C</span><span class="tag">Contropiede</span><button class="cbtn sm" data-src="v4-hC">Copia hook C</button></div>
+          <div class="ftext" id="v4-hC">Il prezzo più basso? Non è questo.</div>
+          <p class="vnote">Lorenzo spinge il barattolo di Elisir verso la camera con un dito, fino a riempire il primo piano.</p>
+        </div>
+      </div>
+      <p class="vnote">Con la C la frase di chiusura «Se cerchi il prezzo più basso, non siamo noi» riprende l’apertura. Resta uguale, perché fa da cornice.</p>
+      <div class="vsub">Script completo · 49 secondi</div>
+      <div class="ftext" id="v4-script"><b>[0-3s]</b> <em>(hook A)</em>
+Sì, costa molte volte più di questo.
+
+<b>[3-9s]</b>
+Il motivo è dentro.
+Abbiamo confrontato tre dei multivitaminici più venduti in Italia con Elisir.
+
+<b>[9-22s]</b>
+Loro hanno da 23 a 26 nutrienti, Elisir ne ha 40.
+Di magnesio loro ne mettono da 80 a 120 milligrammi.
+Elisir 450.
+Di Omega-3 loro zero, Elisir 1.050 milligrammi.
+
+<b>[22-37s]</b>
+E poi c’è la forma.
+Loro usano l’ossido di magnesio, quello che costa meno: in Elisir c’è il citrato.
+Loro l’acido folico: in Elisir il metilfolato, la forma attiva.
+Le forme migliori costano di più.
+
+<b>[37-49s]</b>
+Tutto questo costa 3,47 € al giorno.
+Se cerchi il prezzo più basso, non siamo noi.
+Il confronto completo è sulla pagina: tocca Scopri di più.</div>
+      <details class="vmore"><summary>Sovrimpressioni</summary>
+<p class="vnote">« / » indica un a capo. Nessun punto finale sulle frasi brevi.</p>
+<ul>
+<li><b>0-3s:</b> l’hook in Title Case. Per la A: «Sì, Costa Molte Volte Di Più». Per la B: «Perché Elisir Costa Così Tanto?». Per la C: «Il Prezzo Più Basso? Non È Questo»</li>
+<li><b>4-9s:</b> «Abbiamo analizzato 3 dei multivitaminici più venduti in Italia»</li>
+<li><b>9-13s:</b> «Nutrienti / Loro: da 23 a 26 / Elisir: 40»</li>
+<li><b>13-18s:</b> «Magnesio / Loro: da 80 a 120 mg / Elisir: 450 mg»</li>
+<li><b>18-22s:</b> «Omega-3 / Loro: zero / Elisir: 1.050 mg». La riga «Loro» va dalla parte della confezione e la riga «Elisir» dalla parte del barattolo, perché lo zero non sembri nostro.</li>
+<li><b>23-29s:</b> «Magnesio / Loro: ossido / Elisir: citrato»</li>
+<li><b>29-34s:</b> «Folati / Loro: Acido Folico / Elisir: Metilfolato», con l’evidenziatore su «Metilfolato»</li>
+<li><b>34-37s:</b> «Le forme migliori costano di più»</li>
+<li><b>37-41s:</b> «3,47 € al giorno»</li>
+<li><b>45-49s:</b> «Il confronto completo è sulla pagina» e sotto, grande, «Scopri di più»</li>
+</ul>
+<p class="vnote">Tutto il testo resta tra y 385 e y 1248 del 1080×1920, la fascia sicura già usata nel batch.</p>
+      </details>
+      <details class="vmore"><summary>Scena e oggetti</summary>
+<ul>
+<li><b>Ambiente:</b> un solo ambiente, cucina oppure studio. Luce naturale laterale da una finestra e sfondo ordinato. In vista non ci sono altri integratori né marchi.</li>
+<li><b>Inquadratura:</b> telefono in verticale su un treppiede o appoggiato, all’altezza degli occhi, a circa un metro. Lorenzo è a mezzo busto con la testa nel terzo superiore. Il piano con i due oggetti sta nella metà bassa. L’inquadratura resta fissa per tutto il video.</li>
+<li><b>Oggetti di scena:</b> solo due.
+<ul>
+<li>Il barattolo di Elisir, con l’etichetta frontale verso la camera.</li>
+<li>Una confezione di multivitaminico da farmacia, girata sul retro o coperta con carta bianca, così non si vedono marca, logo o colori riconoscibili. Meglio italiana; se è francese, il retro non va mai a fuoco.</li>
+<li>Niente cartellini con il prezzo in scena (il prezzo lo porta solo la sovrimpressione dei 37-41s) e niente bicchieri. Niente camice, perché non deve sembrare un consiglio medico.</li>
+</ul></li>
+<li><b>Gesto fisso:</b> quando dice «loro» Lorenzo tocca la confezione, quando dice «Elisir» tocca il barattolo. Così lo schema loro/noi si vede anche senza audio.</li>
+<li><b>Ripresa:</b> teleprompter sul telefono. Si può girare a quattro blocchi (hook, numeri, forme, chiusura), con la stessa posizione e la stessa luce, e montare con tagli secchi. In 4K verticale dove possibile, come gli altri video. Sottotitoli del parlato consigliati, in piccolo, sotto le sovrimpressioni e dentro la fascia sicura.</li>
+<li><b>Lettura dei numeri:</b> «3,47 €» si legge «tre euro e quarantasette», «1.050» si legge «millecinquanta».</li>
+<li><b>Tono:</b> calmo e diretto, senza difendersi. Il prezzo si ammette e non si giustifica con aggettivi. Nessun giudizio su chi prende un multivitaminico da farmacia.</li>
+</ul>
+      </details>
+    </div>
+  </div>
+
+  <h2>7 · Checklist pre-carico</h2>
   <div class="next">
     <div class="step"><h3>1. Campagna e ad set</h3><p>Campagna nuova dedicata al test: ad set cold con #220-#227 e #230-#234 (13 creatività), ad set warm con #228-#229. 50 € al giorno complessivi.</p></div>
     <div class="step"><h3>2. Esclusione acquirenti</h3><p>Proposta dei testi v1.5: tutti gli acquirenti esclusi da entrambi gli ad set. Senza, gli hook dei testi A, B e C vanno riscritti prima del carico.</p></div>
@@ -446,7 +801,7 @@ Prima di scegliere, sulla pagina trovi il confronto con tre multivitaminici da f
     <div class="step"><h3>7. Serie loro/noi</h3><p>#221 e #230-#233 hanno la stessa grafica per scelta, cambia solo il colore d’accento: Meta può trattarle come un gruppo. Si leggono sommando spesa e CAC delle cinque, poi guardando quale ingrediente prende spesa. Lo stesso vale per la coppia #227 e #234, stessa grafica e ingredienti diversi.</p></div>
   </div>
 
-  <footer>Ads OS · Paleocomplex · Batch #1007 Test Multinutrienti · matrice v1.8 del 22/09 e testi v1.5 del 21/09 · <a href="batch-1006.html">← #1006 Jeunesse V2</a> · <a href="batch-1005.html">#1005 Elisir</a> · <a href="batch-1004.html">#1004 Youth</a> · <a href="batch-1003.html">#1003 Paleocomplex</a></footer>
+  <footer>Ads OS · Paleocomplex · Batch #1007 Test Multinutrienti · matrice v1.9 del 22/09, testi v1.5 del 21/09 e script video v1.0 del 22/09 · <a href="batch-1006.html">← #1006 Jeunesse V2</a> · <a href="batch-1005.html">#1005 Elisir</a> · <a href="batch-1004.html">#1004 Youth</a> · <a href="batch-1003.html">#1003 Paleocomplex</a></footer>
 </div>
 <script>
   function flash(btn,label){var o=btn.getAttribute('data-lbl')||btn.textContent;btn.setAttribute('data-lbl',o);btn.textContent=label;btn.classList.add('done');setTimeout(function(){btn.textContent=o;btn.classList.remove('done')},1300);}
