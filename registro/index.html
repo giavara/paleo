@@ -176,25 +176,28 @@
 <div id="tip"></div>
 
 <script>
-/* ---- DATI (fonte: Paleocomplex Registro Attivita.xlsx, minuti) ---- */
+/* ---- DATI (fonte: Paleocomplex Registro Attivita.xlsx, minuti; rigenerato da scripts/dashboard.py) ---- */
 const RATE = 100;
 const CATS = [
-  {name:'Klaviyo',         v:'--s1'},
-  {name:'Email marketing', v:'--s2'},
-  {name:'Strategia',       v:'--s3'},
-  {name:'Meeting',         v:'--s4'},
-  {name:'Sito',            v:'--s5'},
-  {name:'Ads',             v:'--s6'},
-  {name:'Altro',           v:'--s7'},
+  {name:"Klaviyo", v:'--s1'},
+  {name:"Email marketing", v:'--s2'},
+  {name:"Strategia", v:'--s3'},
+  {name:"Meeting", v:'--s4'},
+  {name:"Sito", v:'--s5'},
+  {name:"Ads", v:'--s6'},
+  {name:"Customer Care", v:'--s7'},
+  {name:"Altro", v:'--muted'},
 ];
 const MONTHS = [
-  {label:'Marzo 2026',  short:'Mar', n:35, min:{Klaviyo:0,   'Email marketing':570, Strategia:450, Meeting:60,  Sito:245, Ads:230, Altro:120}},
-  {label:'Aprile 2026', short:'Apr', n:36, min:{Klaviyo:840, 'Email marketing':770, Strategia:635, Meeting:370, Sito:0,   Ads:130, Altro:0}},
-  {label:'Maggio 2026', short:'Mag', n:19, min:{Klaviyo:660, 'Email marketing':270, Strategia:90,  Meeting:180, Sito:360, Ads:30,  Altro:0}},
-  {label:'Giugno 2026', short:'Giu', n:18, min:{Klaviyo:990, 'Email marketing':360, Strategia:210, Meeting:120, Sito:0,   Ads:0,   Altro:0}},
-  {label:'Luglio 2026', short:'Lug', n:7,  partial:true, min:{Klaviyo:480, 'Email marketing':240, Strategia:40, Meeting:120, Sito:0, Ads:0, Altro:0}},
+  {label:'Marzo 2026', short:'Mar', n:35, min:{"Klaviyo":0, "Email marketing":570, "Strategia":450, "Meeting":60, "Sito":245, "Ads":230, "Customer Care":0, "Altro":120}},
+  {label:'Aprile 2026', short:'Apr', n:36, min:{"Klaviyo":840, "Email marketing":770, "Strategia":635, "Meeting":370, "Sito":0, "Ads":130, "Customer Care":0, "Altro":0}},
+  {label:'Maggio 2026', short:'Mag', n:19, min:{"Klaviyo":660, "Email marketing":270, "Strategia":90, "Meeting":180, "Sito":360, "Ads":30, "Customer Care":0, "Altro":0}},
+  {label:'Giugno 2026', short:'Giu', n:18, min:{"Klaviyo":990, "Email marketing":360, "Strategia":210, "Meeting":120, "Sito":0, "Ads":0, "Customer Care":0, "Altro":0}},
+  {label:'Luglio 2026', short:'Lug', n:7, min:{"Klaviyo":480, "Email marketing":240, "Strategia":40, "Meeting":120, "Sito":0, "Ads":0, "Customer Care":0, "Altro":0}},
+  {label:'Agosto 2026', short:'Ago', n:19, min:{"Klaviyo":540, "Email marketing":60, "Strategia":180, "Meeting":285, "Sito":675, "Ads":360, "Customer Care":0, "Altro":0}},
+  {label:'Settembre 2026', short:'Set', n:13, partial:true, min:{"Klaviyo":0, "Email marketing":40, "Strategia":120, "Meeting":205, "Sito":330, "Ads":240, "Customer Care":30, "Altro":0}},
 ];
-const PERIOD = {first:'3 marzo 2026', last:'23 luglio 2026', gen:'27 luglio 2026'};
+const PERIOD = {first:'3 marzo 2026', last:'22 settembre 2026', gen:'24 settembre 2026'};
 
 /* ---- helpers ---- */
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -218,7 +221,7 @@ const kpis = [
   {lab:'Ore totali',    val:`${fmtH(totH)}<small> h</small>`, foot:`da ${PERIOD.first}`},
   {lab:'Valore (100 €/h)', val:fmtE(totVal),                  foot:`media ${fmtE(totVal/MONTHS.length)}/mese`},
   {lab:'Attività',      val:totN,                             foot:'voci registrate'},
-  {lab:'Mesi tracciati', val:MONTHS.length,                   foot:'mar → lug 2026'},
+  {lab:'Mesi tracciati', val:MONTHS.length,                   foot:MONTHS[0].short.toLowerCase() + ' → ' + MONTHS[MONTHS.length-1].short.toLowerCase() + ' ' + MONTHS[MONTHS.length-1].label.slice(-4)},
 ];
 document.getElementById('kpis').innerHTML = kpis.map(k=>
   `<div class="tile"><div class="lab">${k.lab}</div><div class="val">${k.val}</div><div class="foot">${k.foot}</div></div>`).join('');
@@ -314,5 +317,5 @@ function hideTip(){ tip.style.opacity='0'; }
 
 /* ---- footer ---- */
 document.getElementById('footer').innerHTML=
-  `Fonte: <b>Paleocomplex Registro Attivita.xlsx</b> · tariffa <b>${RATE} €/h</b> · generato il ${PERIOD.gen}.<br>* Luglio è il mese in corso, dati parziali. I totali contano solo le attività registrate.`;
+  `Fonte: <b>Paleocomplex Registro Attivita.xlsx</b> · tariffa <b>${RATE} €/h</b> · generato il ${PERIOD.gen}.<br>* Settembre è il mese in corso, dati parziali. I totali contano solo le attività registrate.`;
 </script>
