@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Centro di controllo · Paleocomplex</title>
+<title>Clienti · Paleocomplex</title>
 <!--
   Centro di controllo Paleocomplex, v2.3 (1/10/2026)
   v2.3: nuova pagina Clienti (perché 100 clienti nuovi al mese non fanno 100.000 €), voce Clienti
@@ -188,21 +188,119 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce attiva" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../clienti/">Clienti</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav><script>(function(){var a=document.querySelector(".topbar a.attiva");if(a){var d=a.parentElement;d.scrollLeft=a.offsetLeft-(d.clientWidth-a.offsetWidth)/2;}})();</script>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce attiva" href="../clienti/">Clienti</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav><script>(function(){var a=document.querySelector(".topbar a.attiva");if(a){var d=a.parentElement;d.scrollLeft=a.offsetLeft-(d.clientWidth-a.offsetWidth)/2;}})();</script>
 <div class="wrap">
 
   <header>
     <p class="eyebrow">Paleocomplex</p>
-    <h1>Centro di controllo</h1>
-    <p class="sub">L'andamento del negozio, aggiornato al <b>01/10/2026</b>.
-    Nel menu in alto: performance complete, clienti, lavoro in corso, roadmap, report e automazioni.</p>
+    <h1>Perché 100 clienti nuovi al mese non fanno 100.000 €</h1>
+    <p class="sub">La domanda: se ogni mese arrivano circa 100 clienti nuovi, perché il negozio non fa 100.000 € al mese?
+    La risposta sta negli ordini. Tutte le cifre sono lorde, IVA e spedizioni incluse, come il target 2026.
+    Dati fino al <b>30 settembre 2026</b>.</p>
   </header>
 
-  <div class="kpis" id="kpis"></div>
+  <h2>La risposta in breve</h2>
+  <div class="kpis tre">
+    <div class="tile"><div class="lab">Spesa media del primo ordine di un cliente nuovo</div>
+      <div class="val">125 €</div>
+      <div class="hint">100 clienti nuovi portano circa 12.500 € con il primo ordine</div></div>
+    <div class="tile"><div class="lab">Clienti nuovi che non tornano entro un anno</div>
+      <div class="val">6 su 10</div>
+      <div class="hint">il 41,9% fa un secondo ordine entro 12 mesi</div></div>
+    <div class="tile"><div class="lab">Clienti attivi in più rispetto a un anno fa</div>
+      <div class="val">+98</div>
+      <div class="hint">ne sono entrati 1.617 (1.438 nuovi e 179 tornati dopo più di un anno) e usciti 1.519</div></div>
+  </div>
+  <p class="testo">Il primo ordine dei clienti nuovi vale circa un quarto del fatturato: negli ultimi 12 mesi il 23,6%.
+  Il resto lo fanno gli ordini successivi, e quelli si sommano solo se i clienti restano. Nell'ultimo anno invece ne sono
+  usciti quasi tanti quanti ne sono entrati: 1.617 entrati e 1.519 usciti, quindi la base è cresciuta di 98.
+  I clienti nuovi oggi sono già circa 120 al mese, più dei 100 della domanda, e il negozio fa in media
+  63.254 € al mese. Per avvicinarsi a 100.000 € al mese non basta che arrivino più clienti: serve che ne restino di più.</p>
 
-  <h2>Andamento mensile</h2>
-  <p class="h2sub">Fatturato lordo per mese, confronto con i due anni precedenti. Il dettaglio completo è nella pagina <a href="../performance/">Performance</a>.</p>
-  <div class="card" id="chart-andamento"></div>
+  <h2>Da dove arriva il fatturato di ogni mese</h2>
+  <p class="h2sub">Fatturato lordo per mese, diviso tra il primo ordine dei clienti nuovi e gli ordini di chi aveva già comprato. La linea tratteggiata è la soglia dei 100.000 €.</p>
+  <div class="card" id="chart-cl-fonte"></div>
+
+  <h2>Quanto vale un cliente nuovo nel tempo</h2>
+  <p class="h2sub">Spesa lorda media per cliente, sommando il primo ordine e tutti quelli dopo. Ogni barra usa i clienti più recenti che hanno già avuto quel tempo per tornare.</p>
+  <div class="grid2">
+  <div class="card" id="chart-cl-valore"></div>
+  <div class="card"><p class="testo" style="margin-top:0">Un cliente nuovo arriva in media a 289 € nel primo anno.
+  Il secondo anno aggiunge circa 98 €: chi ha fatto il primo ordine tra ottobre 2023 e
+  settembre 2024 è passato da 322 € nel primo anno a 420 € in due anni.</p>
+  <p class="testo">Con 100 clienti nuovi al mese, in ogni momento ci sono circa 1.200 clienti nel loro primo anno, e insieme
+  fanno circa 100 × 289 € = 28.900 € al mese. Per arrivare a 100.000 € gli altri 71.100 € dovrebbero
+  farli i clienti che comprano da più di un anno, che oggi ne fanno 29.699 €.</p>
+  <p class="testo">Il conto torna con i dati: negli ultimi 12 mesi, con circa 120 clienti nuovi al mese,
+  i clienti nel loro primo anno hanno fatto 33.555 € al mese.</p></div>
+  </div>
+
+  <h2>Cosa servirebbe per 100.000 € al mese</h2>
+  <div class="kpis tre">
+    <div class="tile"><div class="lab">100.000 € al mese, in un anno</div>
+      <div class="val">1,2 milioni</div>
+      <div class="hint">il 63,0% in più del 2025 (736.127 €) e il 49,1% sopra il target di 805.000 €</div></div>
+    <div class="tile"><div class="lab">Clienti attivi necessari</div>
+      <div class="val">3.797</div>
+      <div class="hint">oggi sono 2.402: il 58,1% in più, a 316 € l'anno ciascuno</div></div>
+    <div class="tile"><div class="lab">Mesi sopra 100.000 € (da marzo 2020)</div>
+      <div class="val">1 su 79</div>
+      <div class="hint">giugno 2026, con la promo dei 10 anni</div></div>
+  </div>
+  <p class="testo">Un cliente attivo, cioè con almeno un ordine negli ultimi 12 mesi, spende in media
+  316 € l'anno in 2,0 ordini. Il target 2026 vale 67.083 € al mese:
+  100.000 € al mese sono un altro negozio, con circa 1.395 clienti attivi in più di oggi.</p>
+
+  <h2>La base dei clienti attivi</h2>
+  <p class="h2sub">Clienti con almeno un ordine negli ultimi 12 mesi, contati a fine mese. È il numero che fa il fatturato, e cresce solo se entrano più clienti di quanti ne escono.</p>
+  <div class="card" id="chart-cl-base"></div>
+  <div class="card" style="margin-top:14px"><div style="overflow-x:auto"><table class="semplice" style="min-width:0"><tr><th></th><th>ott 24 - set 25</th><th>ott 25 - set 26</th></tr><tr><td>Clienti attivi all'inizio</td><td>1.842</td><td>2.304</td></tr><tr><td>Clienti nuovi</td><td>1.484</td><td>1.438</td></tr><tr><td>Tornati dopo più di un anno</td><td>139</td><td>179</td></tr><tr><td>Usciti: attivi all'inizio, nessun ordine nei 12 mesi dopo</td><td>1.161</td><td>1.519</td></tr><tr><td>Quota di attivi senza ordini nei 12 mesi dopo</td><td>63,0%</td><td>65,9%</td></tr><tr><td>Clienti attivi alla fine</td><td>2.304</td><td>2.402</td></tr><tr><td>Crescita della base</td><td>+462</td><td>+98</td></tr><tr><td>Spesa media annua per cliente attivo</td><td>319 €</td><td>316 €</td></tr></table></div></div>
+  <p class="testo">Nell'anno chiuso a settembre 2025 la base è cresciuta di 462 clienti, in quello chiuso a
+  settembre 2026 di 98. I clienti nuovi sono rimasti quasi uguali (1.484 e 1.438) e sono
+  aumentati quelli che escono, da 1.161 a 1.519. Gran parte dell'aumento viene dal fatto che la base
+  era più grande: con la quota di uscita dell'anno prima, il 63,0%, ne sarebbero usciti comunque circa
+  1.450. Il resto, circa 70 clienti, viene dalla quota salita al 65,9%.</p>
+  <p class="testo">È per questo che i clienti nuovi non si sommano: con circa 1.600 ingressi l'anno e due clienti
+  attivi su tre che in dodici mesi non ricomprano, la base si ferma intorno ai 2.450 clienti,
+  e oggi è già a 2.402.</p>
+
+  <h2>Dove sta la leva</h2>
+  <div class="grid2">
+    <div class="card"><h3>Far restare chi ha già comprato</h3>
+      <p class="testo">Se ogni anno restassero attivi 5 clienti in più ogni 100 (dal 34,1% al 39,1%),
+      sarebbero circa 115 clienti in più già il primo anno, cioè circa 3.000 € al mese.
+      L'effetto si somma anno dopo anno, perché chi resta continua a comprare, e non si paga in pubblicità:
+      è il lavoro di email, automazioni e programma fedeltà.</p></div>
+    <div class="card"><h3>Comprare più clienti nuovi</h3>
+      <p class="testo">50 clienti nuovi in più al mese valgono circa 14.450 € al mese dopo un anno
+      (50 × 289 €, la spesa di un cliente nel suo primo anno). Ma vanno comprati, e il costo medio di oggi, 146 € di pubblicità per cliente nuovo, non è il prezzo dei clienti in più. Da gennaio ad agosto la pubblicità è passata da 84.252 € nel 2025 a 152.861 € nel 2026 (+81,4%), mentre i clienti nuovi sono passati da 996 a 1.044 (+4,8%): la spesa in più ha portato pochi clienti in più, e per questo il costo medio è salito da 85 € a 146 €. E se la base continua a perdere
+      due clienti attivi su tre ogni anno, anche quelli in buona parte si perdono.</p></div>
+  </div>
+  <p class="testo">Nessuna delle due leve porta a 100.000 € al mese, e nemmeno insieme ci si arriva in un anno: con le due ipotesi
+  qui sopra, dopo dodici mesi si passerebbe da circa 63.000 € a circa 80.700 € al mese. Per avvicinarsi a
+  100.000 € servono entrambe, e servono anni. La differenza è nel costo: far restare chi ha già comprato non si paga in pubblicità,
+  e oggi è la cosa che va peggio, perché la quota di attivi che in dodici mesi non fa nessun ordine è passata dal
+  63,0% al 65,9%.</p>
+
+  <h2>Come leggere questi numeri</h2>
+  <div class="card"><ul class="note-lista">
+    <li>Le cifre sono lorde: IVA e spedizioni incluse, come il target 2026 e il fatturato del centro di controllo.</li>
+    <li>Un cliente è riconosciuto dalla sua email. Chi ricompra con un'altra email risulta nuovo: un controllo su nome,
+    cognome e CAP del 24 settembre dice che succede in circa il 10% dei casi. Quindi i clienti
+    davvero nuovi sono un po' meno di quanto si vede, e quelli che tornano un po' di più: la conclusione non cambia.</li>
+    <li>I clienti nuovi al mese sono stati 104,4 nel 2024 e 116,6 nel 2025.
+    Nei primi 9 mesi del 2026 sono 126,9 al mese, contro 122,6
+    negli stessi mesi del 2025: la differenza la fa giugno (179 nuovi contro 130).
+    Senza giugno i due anni sono pari: 121,6 al mese nel 2025 e 120,4 nel 2026.</li>
+    <li>Il valore a 3, 6, 12 e 24 mesi usa solo clienti che hanno già avuto quel tempo per tornare, quindi ogni barra
+    guarda un gruppo di clienti diverso. Li trovi tutti aprendo «Vedi i numeri» sotto il grafico.</li>
+    <li>Nella pagina <a href="../performance/">Performance</a> il valore a 12 mesi è al netto dell'IVA e calcolato per semestre
+    di primo ordine, per questo non coincide con i 289 € lordi di questa pagina: sono due gruppi di clienti diversi, contati
+    in due modi diversi.</li>
+    <li>Il riacquisto entro un anno riguarda chi ha fatto il primo ordine tra il 1 ottobre 2024 e il 30 settembre 2025
+    (1.484 clienti). Il dettaglio per trimestre è nella pagina Performance.</li>
+    <li>La pagina si aggiorna insieme al resto del centro di controllo.</li>
+  </ul></div>
 
 <footer>
   <p>Lordo = totale degli ordini, IVA e spedizioni incluse, come il target 2026; netto IVA = vendite meno le tasse registrate da WooCommerce. Ultimo aggiornamento: <b>01/10/2026</b>.</p>

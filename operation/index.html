@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Operation — Paleocomplex</title>
+<title>Operation · Paleocomplex</title>
 <!--
-  Centro di controllo Paleocomplex — v2.2 (24/9/2026)
-  v2.2: un mese entra in margini e CAC solo con spedizioni, Google e Meta; confronto CAC
+  Centro di controllo Paleocomplex, v2.3 (1/10/2026)
+  v2.3: nuova pagina Clienti (perché 100 clienti nuovi al mese non fanno 100.000 €), voce Clienti
+        nel menu; riferimento all'ultimo giorno completo (il 1° del mese il mese prima è chiuso)
+  v2.2 (24/9/2026): un mese entra in margini e CAC solo con spedizioni, Google e Meta; confronto CAC
         anno precedente esteso oltre luglio; Triple Whale spento dal 30/8 gestito nei canali;
         IVA stimata fino ad agosto 2024, solo giorni completi, KPI performance in lordo,
         mese in corso dichiarato nei grafici (correzioni dall'audit del 24/9)
@@ -73,6 +75,7 @@
   .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;
     padding:18px 20px;position:relative}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid2>*,.grid3>*{min-width:0}
   @media(max-width:820px){.grid2{grid-template-columns:1fr}}
   .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
   @media(max-width:900px){.grid3{grid-template-columns:1fr}}
@@ -124,6 +127,18 @@
   .meters .fill{height:100%;border-radius:5px 0 0 5px;background:var(--s1)}
   .meters .fill.pieno{border-radius:5px}
   .nota{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6;max-width:80ch}
+  .testo{font-size:14px;color:var(--ink2);line-height:1.65;max-width:78ch;margin:14px 0 0}
+  .card h3{font-size:15px;font-weight:650;margin:0 0 4px}
+  .card .testo{margin-top:6px}
+  table.semplice{border-collapse:collapse;width:100%;font-size:13px;min-width:460px}
+  table.semplice th,table.semplice td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:right;
+    font-variant-numeric:tabular-nums}
+  table.semplice th:first-child,table.semplice td:first-child{text-align:left;color:var(--ink2)}
+  table.semplice th{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  table.semplice tr:last-child td{border-bottom:none}
+  ul.note-lista{margin:0;padding-left:18px;font-size:13px;color:var(--ink2);line-height:1.65}
+  ul.note-lista li{margin:6px 0}
+  ul.note-lista a{color:inherit}
   .canali .riga-c{display:grid;grid-template-columns:80px 1fr 110px;gap:12px;
     align-items:center;margin-bottom:9px;font-size:12px}
   .canali .riga-c:last-child{margin-bottom:0}
@@ -173,13 +188,13 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce attiva" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../clienti/">Clienti</a><a class="voce attiva" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav><script>(function(){var a=document.querySelector(".topbar a.attiva");if(a){var d=a.parentElement;d.scrollLeft=a.offsetLeft-(d.clientWidth-a.offsetWidth)/2;}})();</script>
 <div class="wrap">
 
   <header>
     <p class="eyebrow">Paleocomplex</p>
     <h1>Operation</h1>
-    <p class="sub">Su cosa stiamo lavorando adesso e le ore dedicate al progetto. Aggiornato al <b>24/09/2026</b>.</p>
+    <p class="sub">Su cosa stiamo lavorando adesso e le ore dedicate al progetto. Aggiornato al <b>01/10/2026</b>.</p>
   </header>
 
   <h2>Su cosa stiamo lavorando</h2>
@@ -194,21 +209,22 @@
   </div>
 
 <footer>
-  <p>Generato da <code>scripts/dashboard.py</code>. Lordo = totale ordini IVA inclusa; netto IVA = vendite meno le tasse, come da WooCommerce. Target 2026 in valori lordi. Ultimo aggiornamento: <b>24/09/2026</b>.</p>
+  <p>Lordo = totale degli ordini, IVA e spedizioni incluse, come il target 2026; netto IVA = vendite meno le tasse registrate da WooCommerce. Ultimo aggiornamento: <b>01/10/2026</b>.</p>
 </footer>
 </div>
 <script>
-const D = {"aggiornato": "24/09/2026", "mesi": [{"m": "2024-01", "lordo": 38388.51, "netto": 34934.38, "ordini": 268, "aov": 143.24, "nuovi": 97}, {"m": "2024-02", "lordo": 37261.85, "netto": 33909.09, "ordini": 248, "aov": 150.25, "nuovi": 94}, {"m": "2024-03", "lordo": 63683.1, "netto": 57953.0, "ordini": 356, "aov": 178.89, "nuovi": 119}, {"m": "2024-04", "lordo": 47128.49, "netto": 42887.95, "ordini": 278, "aov": 169.53, "nuovi": 90}, {"m": "2024-05", "lordo": 70175.8, "netto": 63861.5, "ordini": 382, "aov": 183.71, "nuovi": 105}, {"m": "2024-06", "lordo": 37991.9, "netto": 34573.45, "ordini": 238, "aov": 159.63, "nuovi": 78}, {"m": "2024-07", "lordo": 52499.2, "netto": 47775.41, "ordini": 308, "aov": 170.45, "nuovi": 85}, {"m": "2024-08", "lordo": 44967.38, "netto": 40927.51, "ordini": 261, "aov": 172.29, "nuovi": 102}, {"m": "2024-09", "lordo": 51988.53, "netto": 47386.56, "ordini": 302, "aov": 172.15, "nuovi": 102}, {"m": "2024-10", "lordo": 52762.23, "netto": 48100.46, "ordini": 316, "aov": 166.97, "nuovi": 118}, {"m": "2024-11", "lordo": 71989.46, "netto": 65611.15, "ordini": 408, "aov": 176.44, "nuovi": 131}, {"m": "2024-12", "lordo": 69170.76, "netto": 62847.94, "ordini": 399, "aov": 173.36, "nuovi": 132}, {"m": "2025-01", "lordo": 48766.1, "netto": 44542.49, "ordini": 397, "aov": 122.84, "nuovi": 143}, {"m": "2025-02", "lordo": 52591.37, "netto": 47920.39, "ordini": 344, "aov": 152.88, "nuovi": 128}, {"m": "2025-03", "lordo": 78653.29, "netto": 71511.31, "ordini": 500, "aov": 157.31, "nuovi": 157}, {"m": "2025-04", "lordo": 51784.21, "netto": 46914.8, "ordini": 344, "aov": 150.54, "nuovi": 123}, {"m": "2025-05", "lordo": 58470.37, "netto": 53195.64, "ordini": 359, "aov": 162.87, "nuovi": 100}, {"m": "2025-06", "lordo": 89930.25, "netto": 81775.91, "ordini": 516, "aov": 174.28, "nuovi": 130}, {"m": "2025-07", "lordo": 63083.28, "netto": 57399.56, "ordini": 412, "aov": 153.11, "nuovi": 123}, {"m": "2025-08", "lordo": 54431.54, "netto": 49589.31, "ordini": 358, "aov": 152.04, "nuovi": 92}, {"m": "2025-09", "lordo": 42448.82, "netto": 38655.8, "ordini": 305, "aov": 139.18, "nuovi": 107}, {"m": "2025-10", "lordo": 60687.12, "netto": 55291.99, "ordini": 383, "aov": 158.45, "nuovi": 106}, {"m": "2025-11", "lordo": 76813.58, "netto": 69915.38, "ordini": 442, "aov": 173.79, "nuovi": 80}, {"m": "2025-12", "lordo": 58467.01, "netto": 52936.59, "ordini": 388, "aov": 150.69, "nuovi": 110}, {"m": "2026-01", "lordo": 53829.23, "netto": 48936.57, "ordini": 356, "aov": 151.21, "nuovi": 115}, {"m": "2026-02", "lordo": 54170.41, "netto": 49197.93, "ordini": 363, "aov": 149.23, "nuovi": 127}, {"m": "2026-03", "lordo": 74642.69, "netto": 68049.13, "ordini": 489, "aov": 152.64, "nuovi": 148}, {"m": "2026-04", "lordo": 69448.74, "netto": 63262.82, "ordini": 459, "aov": 151.3, "nuovi": 136}, {"m": "2026-05", "lordo": 57050.21, "netto": 51822.91, "ordini": 383, "aov": 148.96, "nuovi": 135}, {"m": "2026-06", "lordo": 108253.51, "netto": 98597.3, "ordini": 623, "aov": 173.76, "nuovi": 179}, {"m": "2026-07", "lordo": 38463.8, "netto": 35090.84, "ordini": 287, "aov": 134.02, "nuovi": 89}, {"m": "2026-08", "lordo": 49844.52, "netto": 45354.28, "ordini": 343, "aov": 145.32, "nuovi": 115}, {"m": "2026-09", "lordo": 45248.85, "netto": 41146.98, "ordini": 293, "aov": 154.43, "nuovi": 76}], "mtd": {"giorni": 23, "cur": {"lordo": 45248.85, "ordini": 293}, "prec": {"lordo": 35348.42, "ordini": 248}}, "margini": [{"m": "2026-01", "netto": 48937, "cogs": 7152, "ads": 17193, "operativi": 8897, "margine": 15694, "pct": 0.3207}, {"m": "2026-02", "netto": 49198, "cogs": 6565, "ads": 15838, "operativi": 9380, "margine": 17415, "pct": 0.354}, {"m": "2026-03", "netto": 68049, "cogs": 7790, "ads": 21941, "operativi": 11194, "margine": 27124, "pct": 0.3986}, {"m": "2026-04", "netto": 63263, "cogs": 8768, "ads": 21622, "operativi": 10929, "margine": 21944, "pct": 0.3469}, {"m": "2026-05", "netto": 51823, "cogs": 7307, "ads": 21316, "operativi": 9620, "margine": 13579, "pct": 0.262}, {"m": "2026-06", "netto": 98597, "cogs": 13943, "ads": 21053, "operativi": 13269, "margine": 50332, "pct": 0.5105}, {"m": "2026-07", "netto": 35091, "cogs": 4205, "ads": 20057, "operativi": 8520, "margine": 2309, "pct": 0.0658}], "margine_h1_prec": {"margine": 166500, "pct": 0.486}, "nota_margini": "I mesi successivi a luglio sono in aggiornamento: mancano alcune voci di costo del periodo.", "canali": [{"m": "2026-08", "canali": {"Google": 27961.95, "Diretto": 10690.55, "Meta": 6265.6, "Email": 3646.82, "Altro": 1279.6}}, {"m": "2026-09", "canali": {"Google": 25171.47, "Diretto": 10552.77, "Email": 5040.25, "Meta": 3863.31, "Altro": 621.05}}], "email": [{"m": "2025-01", "n": 12, "fatt": 0.0}, {"m": "2025-02", "n": 12, "fatt": 0.0}, {"m": "2025-03", "n": 15, "fatt": 0.0}, {"m": "2025-04", "n": 13, "fatt": 0.0}, {"m": "2025-05", "n": 18, "fatt": 0.0}, {"m": "2025-06", "n": 21, "fatt": 0.0}, {"m": "2025-07", "n": 6, "fatt": 0.0}, {"m": "2025-08", "n": 18, "fatt": 0.0}, {"m": "2025-09", "n": 16, "fatt": 0.0}, {"m": "2025-10", "n": 10, "fatt": 0.0}, {"m": "2025-11", "n": 4, "fatt": 0.0}, {"m": "2025-12", "n": 5, "fatt": 0.0}, {"m": "2026-01", "n": 11, "fatt": 0.0}, {"m": "2026-02", "n": 15, "fatt": 0.0}, {"m": "2026-03", "n": 8, "fatt": 0.0}, {"m": "2026-04", "n": 12, "fatt": 0.0}, {"m": "2026-05", "n": 14, "fatt": 0.0}, {"m": "2026-06", "n": 11, "fatt": 54923.85}, {"m": "2026-07", "n": 2, "fatt": 2348.65}, {"m": "2026-08", "n": 7, "fatt": 8521.11}, {"m": "2026-09", "n": 5, "fatt": 13187.24}], "ore": [{"m": "2026-03", "cat": {"Email marketing": 9.5, "Strategia": 7.5, "Sito": 4.1, "Ads": 3.8, "Altro": 2.0, "Meeting": 1.0}}, {"m": "2026-04", "cat": {"Klaviyo": 14.0, "Email marketing": 12.8, "Strategia": 10.6, "Meeting": 6.2, "Ads": 2.2}}, {"m": "2026-05", "cat": {"Klaviyo": 11.0, "Sito": 6.0, "Email marketing": 4.5, "Meeting": 3.0, "Strategia": 1.5, "Ads": 0.5}}, {"m": "2026-06", "cat": {"Klaviyo": 16.5, "Email marketing": 6.0, "Strategia": 3.5, "Meeting": 2.0}}, {"m": "2026-07", "cat": {"Klaviyo": 8.0, "Email marketing": 4.0, "Meeting": 2.0, "Strategia": 0.7}}, {"m": "2026-08", "cat": {"Sito": 11.2, "Klaviyo": 9.0, "Ads": 6.0, "Meeting": 4.8, "Strategia": 3.0, "Email marketing": 1.0}}, {"m": "2026-09", "cat": {"Sito": 5.5, "Ads": 4.0, "Meeting": 3.4, "Strategia": 2.0, "Email marketing": 0.7, "Customer Care": 0.5}}], "perf": {"etichetta": "2026", "etichetta_prec": "2025, stesso periodo", "cur": {"netto": 501458.76, "lordo": 550951.96, "ordini": 3596, "aov": 153.21, "ritorno_pct": 0.6866, "nuovi": 1120}, "prec": {"netto": 485023.52, "lordo": 533058.83, "ordini": 3478, "aov": 153.27, "ritorno_pct": 0.6875, "nuovi": 1079}, "cac": {"finestra": "gen-lug", "cur": 150, "prec": 85, "cur_acq": 55, "prec_acq": 29}, "ltv": {"coorte": "2025-H1", "cur": 278.74, "cur_tot": 312.08, "coorte_prec": "2024-H1", "prec": 282.13}}, "cac_mese": [{"m": "2026-01", "spesa": 17193, "nuovi": 115, "cac": 150, "quota_nuovi": 0.3718, "spesa_nuovi": 6392, "spesa_ritorno": 10801, "cac_acq": 56, "tw_ncpa": 132.11}, {"m": "2026-02", "spesa": 15838, "nuovi": 127, "cac": 125, "quota_nuovi": 0.3651, "spesa_nuovi": 5783, "spesa_ritorno": 10055, "cac_acq": 46, "tw_ncpa": 129.51}, {"m": "2026-03", "spesa": 21941, "nuovi": 148, "cac": 148, "quota_nuovi": 0.3763, "spesa_nuovi": 8257, "spesa_ritorno": 13685, "cac_acq": 56, "tw_ncpa": 141.62}, {"m": "2026-04", "spesa": 21622, "nuovi": 136, "cac": 159, "quota_nuovi": 0.3808, "spesa_nuovi": 8233, "spesa_ritorno": 13389, "cac_acq": 61, "tw_ncpa": 140.35}, {"m": "2026-05", "spesa": 21316, "nuovi": 135, "cac": 158, "quota_nuovi": 0.3822, "spesa_nuovi": 8148, "spesa_ritorno": 13168, "cac_acq": 60, "tw_ncpa": 140.26}, {"m": "2026-06", "spesa": 21053, "nuovi": 179, "cac": 118, "quota_nuovi": 0.3534, "spesa_nuovi": 7441, "spesa_ritorno": 13612, "cac_acq": 42, "tw_ncpa": 109.96}, {"m": "2026-07", "spesa": 20057, "nuovi": 89, "cac": 225, "quota_nuovi": 0.335, "spesa_nuovi": 6720, "spesa_ritorno": 13337, "cac_acq": 76, "tw_ncpa": 219.12}], "tw_canali": [{"m": "2026-08", "google": 30832, "google_fonte": "api", "meta": 24763, "tw_off": false, "tw_parziale": true, "klaviyo_campagne": 8521, "klaviyo_flow": 7751, "totale": 45450}, {"m": "2026-09", "google": 15439, "google_fonte": "api", "meta": null, "tw_off": true, "tw_parziale": false, "klaviyo_campagne": 13378, "klaviyo_flow": 6018, "totale": 32435}], "ltv_medio": {"clienti": 7483, "valore": 445.5}, "rapporto_iva": 0.08998, "primo_ordine_label": "febbraio 2020", "ltv_coorti": [{"coorte": "2022-H1", "clienti": 380, "ltv": 276.72, "ltv_tot": 425.33, "matura": true}, {"coorte": "2022-H2", "clienti": 343, "ltv": 275.7, "ltv_tot": 440.31, "matura": true}, {"coorte": "2023-H1", "clienti": 455, "ltv": 256.25, "ltv_tot": 431.52, "matura": true}, {"coorte": "2023-H2", "clienti": 656, "ltv": 302.39, "ltv_tot": 440.48, "matura": true}, {"coorte": "2024-H1", "clienti": 583, "ltv": 282.13, "ltv_tot": 376.78, "matura": true}, {"coorte": "2024-H2", "clienti": 670, "ltv": 275.37, "ltv_tot": 361.59, "matura": true}, {"coorte": "2025-H1", "clienti": 781, "ltv": 278.74, "ltv_tot": 312.08, "matura": true}, {"coorte": "2025-H2", "clienti": 618, "ltv": 230.89, "ltv_tot": 232.76, "matura": false}, {"coorte": "2026-H1", "clienti": 840, "ltv": 199.43, "ltv_tot": 199.43, "matura": false}], "riacquisto_coorti": [{"coorte": "2023-Q1", "clienti": 184, "r90": 0.2609, "r365": 0.3967, "matura90": true, "matura365": true}, {"coorte": "2023-Q2", "clienti": 271, "r90": 0.2325, "r365": 0.3875, "matura90": true, "matura365": true}, {"coorte": "2023-Q3", "clienti": 345, "r90": 0.2696, "r365": 0.4174, "matura90": true, "matura365": true}, {"coorte": "2023-Q4", "clienti": 311, "r90": 0.3408, "r365": 0.4373, "matura90": true, "matura365": true}, {"coorte": "2024-Q1", "clienti": 310, "r90": 0.3, "r365": 0.4065, "matura90": true, "matura365": true}, {"coorte": "2024-Q2", "clienti": 273, "r90": 0.2747, "r365": 0.4249, "matura90": true, "matura365": true}, {"coorte": "2024-Q3", "clienti": 289, "r90": 0.3253, "r365": 0.4256, "matura90": true, "matura365": true}, {"coorte": "2024-Q4", "clienti": 381, "r90": 0.3071, "r365": 0.4173, "matura90": true, "matura365": true}, {"coorte": "2025-Q1", "clienti": 428, "r90": 0.2757, "r365": 0.3949, "matura90": true, "matura365": true}, {"coorte": "2025-Q2", "clienti": 353, "r90": 0.3739, "r365": 0.4844, "matura90": true, "matura365": true}, {"coorte": "2025-Q3", "clienti": 322, "r90": 0.2453, "r365": 0.3789, "matura90": true, "matura365": false}, {"coorte": "2025-Q4", "clienti": 296, "r90": 0.2601, "r365": 0.375, "matura90": true, "matura365": false}, {"coorte": "2026-Q1", "clienti": 390, "r90": 0.2718, "r365": 0.3308, "matura90": true, "matura365": false}, {"coorte": "2026-Q2", "clienti": 450, "r90": 0.3133, "r365": 0.3489, "matura90": false, "matura365": false}], "target": {"anno": 805000, "trimestri": [{"q": "Q1", "target": 165000}, {"q": "Q2", "target": 210000}, {"q": "Q3", "target": 190000}, {"q": "Q4", "target": 240000}]}, "contenuti": {"operazioni_in_corso": [{"titolo": "Test campagna multinutrienti", "dettaglio": "Landing di confronto online, con le modifiche di Lorenzo: il multivitaminico da farmacia accanto al multinutriente, tabella dei nutrienti e offerta sul primo ordine. Le ads del test sono pronte; seguono gli script per i video. Serve a capire se il posizionamento regge.", "stato": "in corso", "area": "Ads"}, {"titolo": "Newsletter editoriale settimanale", "dettaglio": "Cadenza settimanale ripresa ad agosto. A settembre sono uscite le educative del 7/9 (muscolo e tendine), del 14/9 (creatina) e del 21/9 (ossa), più la promo sport dell'11/9: quattro invii da 2.500-3.900 € ciascuno.", "stato": "in corso", "area": "Email"}, {"titolo": "Automazioni Klaviyo: fase 3", "dettaglio": "Tutti i flow della fase 3 sono attivi da metà agosto: winback RFM, sunset lead, sunset cliente storico, riacquisto predittivo e cross-sell. Ora sono in monitoraggio.", "stato": "in monitoraggio", "area": "Klaviyo"}, {"titolo": "Creatività Meta Ads: nuovo processo", "dettaglio": "Quattro batch prodotti con il nuovo processo (Paleocomplex, Youth, Elisir, Jeunesse V2). Il quinto, 15 creatività per il test multinutrienti, è pronto da caricare. Settembre è il mese della cassa, con spesa ads ridotta in vista di Black Friday e Natale.", "stato": "in corso", "area": "Ads"}, {"titolo": "Articolo blog luce blu / lenti CR-39", "dettaglio": "Primo articolo del nuovo processo di produzione contenuti interno: copre il tema più cercato non ancora presidiato dal blog.", "stato": "in corso", "area": "Contenuti"}, {"titolo": "Campagna Amazon Ads", "dettaglio": "Live dal 1° agosto su Paleocomplex. In monitoraggio: il tracciamento degli ordini che arrivano dalle inserzioni Amazon è in verifica.", "stato": "in monitoraggio", "area": "Ads"}, {"titolo": "Landing page per i lead magnet", "dettaglio": "Due pagine dedicate con modulo di iscrizione, pagina di ringraziamento ed email di consegna automatica: report sull'alimentazione e report D3+K2. Servono a raccogliere i contatti che arrivano dai video Instagram, che finora si fermavano ai commenti.", "stato": "in monitoraggio", "area": "Sito"}, {"titolo": "Lead magnet Report D3", "dettaglio": "Flow email attivo. Alla pubblicazione del video si misurano ingressi, costo per lead e conversioni.", "stato": "in monitoraggio", "area": "Klaviyo"}, {"titolo": "Revisione claim vitamina K: guida alla scelta ed Elisir Basic", "dettaglio": "Aggiornamento del posizionamento sul tema anticoagulanti: la guida alla scelta è già online nella versione nuova; restano da allineare la scheda di Elisir Basic e i flow email collegati.", "stato": "in corso", "area": "Sito"}, {"titolo": "Centro di controllo (questa dashboard)", "dettaglio": "Dati WooCommerce, margini mensili, registro attività, registro email e roadmap in un unico posto, aggiornati a ogni chiusura.", "stato": "in corso", "area": "Sistema"}]}};
+const D = {"aggiornato": "01/10/2026", "ultimo_parziale": false, "mese_oggi": 10, "mesi": [{"m": "2024-01", "lordo": 38388.51, "netto": 34934.92, "ordini": 268, "aov": 143.24, "nuovi": 97}, {"m": "2024-02", "lordo": 37261.85, "netto": 33909.62, "ordini": 248, "aov": 150.25, "nuovi": 94}, {"m": "2024-03", "lordo": 63683.1, "netto": 57953.9, "ordini": 356, "aov": 178.89, "nuovi": 119}, {"m": "2024-04", "lordo": 47128.49, "netto": 42888.61, "ordini": 278, "aov": 169.53, "nuovi": 90}, {"m": "2024-05", "lordo": 70175.8, "netto": 63862.49, "ordini": 382, "aov": 183.71, "nuovi": 105}, {"m": "2024-06", "lordo": 37991.9, "netto": 34573.99, "ordini": 238, "aov": 159.63, "nuovi": 78}, {"m": "2024-07", "lordo": 52499.2, "netto": 47776.15, "ordini": 308, "aov": 170.45, "nuovi": 85}, {"m": "2024-08", "lordo": 44967.38, "netto": 40928.1, "ordini": 261, "aov": 172.29, "nuovi": 102}, {"m": "2024-09", "lordo": 51988.53, "netto": 47386.56, "ordini": 302, "aov": 172.15, "nuovi": 102}, {"m": "2024-10", "lordo": 52762.23, "netto": 48100.46, "ordini": 316, "aov": 166.97, "nuovi": 118}, {"m": "2024-11", "lordo": 71989.46, "netto": 65611.15, "ordini": 408, "aov": 176.44, "nuovi": 131}, {"m": "2024-12", "lordo": 69170.76, "netto": 62847.94, "ordini": 399, "aov": 173.36, "nuovi": 132}, {"m": "2025-01", "lordo": 48766.1, "netto": 44542.49, "ordini": 397, "aov": 122.84, "nuovi": 143}, {"m": "2025-02", "lordo": 52591.37, "netto": 47920.39, "ordini": 344, "aov": 152.88, "nuovi": 128}, {"m": "2025-03", "lordo": 78653.29, "netto": 71511.31, "ordini": 500, "aov": 157.31, "nuovi": 157}, {"m": "2025-04", "lordo": 51784.21, "netto": 46914.8, "ordini": 344, "aov": 150.54, "nuovi": 123}, {"m": "2025-05", "lordo": 58470.37, "netto": 53195.64, "ordini": 359, "aov": 162.87, "nuovi": 100}, {"m": "2025-06", "lordo": 89930.25, "netto": 81775.91, "ordini": 516, "aov": 174.28, "nuovi": 130}, {"m": "2025-07", "lordo": 63083.28, "netto": 57399.56, "ordini": 412, "aov": 153.11, "nuovi": 123}, {"m": "2025-08", "lordo": 54431.54, "netto": 49589.31, "ordini": 358, "aov": 152.04, "nuovi": 92}, {"m": "2025-09", "lordo": 42448.82, "netto": 38655.8, "ordini": 305, "aov": 139.18, "nuovi": 107}, {"m": "2025-10", "lordo": 60687.12, "netto": 55291.99, "ordini": 383, "aov": 158.45, "nuovi": 106}, {"m": "2025-11", "lordo": 76813.58, "netto": 69915.38, "ordini": 442, "aov": 173.79, "nuovi": 80}, {"m": "2025-12", "lordo": 58467.01, "netto": 52936.59, "ordini": 388, "aov": 150.69, "nuovi": 110}, {"m": "2026-01", "lordo": 53829.23, "netto": 48936.57, "ordini": 356, "aov": 151.21, "nuovi": 115}, {"m": "2026-02", "lordo": 54170.41, "netto": 49197.93, "ordini": 363, "aov": 149.23, "nuovi": 127}, {"m": "2026-03", "lordo": 74642.69, "netto": 68049.13, "ordini": 489, "aov": 152.64, "nuovi": 148}, {"m": "2026-04", "lordo": 69448.74, "netto": 63262.82, "ordini": 459, "aov": 151.3, "nuovi": 136}, {"m": "2026-05", "lordo": 57050.21, "netto": 51822.91, "ordini": 383, "aov": 148.96, "nuovi": 135}, {"m": "2026-06", "lordo": 108253.51, "netto": 98597.3, "ordini": 623, "aov": 173.76, "nuovi": 179}, {"m": "2026-07", "lordo": 38463.8, "netto": 35090.84, "ordini": 287, "aov": 134.02, "nuovi": 89}, {"m": "2026-08", "lordo": 49844.52, "netto": 45354.28, "ordini": 343, "aov": 145.32, "nuovi": 115}, {"m": "2026-09", "lordo": 57379.8, "netto": 52208.15, "ordini": 377, "aov": 152.2, "nuovi": 98}], "mtd": {"giorni": 30, "cur": {"lordo": 57379.8, "ordini": 377}, "prec": {"lordo": 42448.82, "ordini": 305}}, "margini": [{"m": "2026-01", "netto": 48937, "cogs": 7152, "ads": 17193, "operativi": 8897, "margine": 15694, "pct": 0.3207}, {"m": "2026-02", "netto": 49198, "cogs": 6565, "ads": 15838, "operativi": 9380, "margine": 17415, "pct": 0.354}, {"m": "2026-03", "netto": 68049, "cogs": 7790, "ads": 21941, "operativi": 11194, "margine": 27124, "pct": 0.3986}, {"m": "2026-04", "netto": 63263, "cogs": 8768, "ads": 21622, "operativi": 10929, "margine": 21944, "pct": 0.3469}, {"m": "2026-05", "netto": 51823, "cogs": 7307, "ads": 21316, "operativi": 9620, "margine": 13579, "pct": 0.262}, {"m": "2026-06", "netto": 98597, "cogs": 13943, "ads": 21053, "operativi": 13269, "margine": 50332, "pct": 0.5105}, {"m": "2026-07", "netto": 35091, "cogs": 4205, "ads": 20057, "operativi": 8520, "margine": 2309, "pct": 0.0658}, {"m": "2026-08", "netto": 45354, "cogs": 6190, "ads": 13841, "operativi": 8473, "margine": 16851, "pct": 0.3715}], "margine_h1_prec": {"margine": 166500, "pct": 0.486}, "nota_margini": "I mesi successivi a agosto sono in aggiornamento: mancano alcune voci di costo del periodo.", "canali": [{"m": "2026-08", "canali": {"Google": 27961.95, "Diretto": 10690.55, "Meta": 6265.6, "Email": 3646.82, "Altro": 1279.6}}, {"m": "2026-09", "canali": {"Google": 31841.47, "Diretto": 12653.82, "Email": 6740.25, "Meta": 5523.21, "Altro": 621.05}}], "email": [{"m": "2025-01", "n": 12, "fatt": 0.0}, {"m": "2025-02", "n": 12, "fatt": 0.0}, {"m": "2025-03", "n": 15, "fatt": 0.0}, {"m": "2025-04", "n": 13, "fatt": 0.0}, {"m": "2025-05", "n": 18, "fatt": 0.0}, {"m": "2025-06", "n": 21, "fatt": 0.0}, {"m": "2025-07", "n": 6, "fatt": 0.0}, {"m": "2025-08", "n": 18, "fatt": 0.0}, {"m": "2025-09", "n": 16, "fatt": 0.0}, {"m": "2025-10", "n": 10, "fatt": 0.0}, {"m": "2025-11", "n": 4, "fatt": 0.0}, {"m": "2025-12", "n": 5, "fatt": 0.0}, {"m": "2026-01", "n": 11, "fatt": 0.0}, {"m": "2026-02", "n": 15, "fatt": 0.0}, {"m": "2026-03", "n": 8, "fatt": 0.0}, {"m": "2026-04", "n": 12, "fatt": 0.0}, {"m": "2026-05", "n": 14, "fatt": 0.0}, {"m": "2026-06", "n": 11, "fatt": 54923.85}, {"m": "2026-07", "n": 2, "fatt": 2348.65}, {"m": "2026-08", "n": 7, "fatt": 8521.11}, {"m": "2026-09", "n": 6, "fatt": 16737.99}], "ore": [{"m": "2026-03", "cat": {"Email marketing": 9.5, "Strategia": 7.5, "Sito": 4.1, "Ads": 3.8, "Altro": 2.0, "Meeting": 1.0}}, {"m": "2026-04", "cat": {"Klaviyo": 14.0, "Email marketing": 12.8, "Strategia": 10.6, "Meeting": 6.2, "Ads": 2.2}}, {"m": "2026-05", "cat": {"Klaviyo": 11.0, "Sito": 6.0, "Email marketing": 4.5, "Meeting": 3.0, "Strategia": 1.5, "Ads": 0.5}}, {"m": "2026-06", "cat": {"Klaviyo": 16.5, "Email marketing": 6.0, "Strategia": 3.5, "Meeting": 2.0}}, {"m": "2026-07", "cat": {"Klaviyo": 8.0, "Email marketing": 4.0, "Meeting": 2.0, "Strategia": 0.7}}, {"m": "2026-08", "cat": {"Sito": 11.2, "Klaviyo": 9.0, "Ads": 6.0, "Meeting": 4.8, "Strategia": 3.0, "Email marketing": 1.0}}, {"m": "2026-09", "cat": {"Sito": 5.5, "Ads": 4.0, "Meeting": 3.4, "Strategia": 2.0, "Email marketing": 0.7, "Customer Care": 0.5}}], "perf": {"etichetta": "2026", "etichetta_prec": "2025, stesso periodo", "cur": {"netto": 512519.93, "lordo": 563082.91, "ordini": 3680, "aov": 153.01, "ritorno_pct": 0.6878, "nuovi": 1142}, "prec": {"netto": 491505.21, "lordo": 540159.23, "ordini": 3535, "aov": 152.8, "ritorno_pct": 0.6854, "nuovi": 1103}, "cac": {"finestra": "gen-ago", "cur": 146, "prec": 85, "cur_acq": 53, "prec_acq": 29, "spesa_cur": 152861, "spesa_prec": 84252, "nuovi_cur": 1044, "nuovi_prec": 996}, "ltv": {"coorte": "2025-H1", "cur": 278.74, "cur_tot": 313.11, "coorte_prec": "2024-H1", "prec": 282.13}}, "cac_mese": [{"m": "2026-01", "spesa": 17193, "nuovi": 115, "cac": 150, "quota_nuovi": 0.3718, "spesa_nuovi": 6392, "spesa_ritorno": 10801, "cac_acq": 56, "tw_ncpa": 132.11}, {"m": "2026-02", "spesa": 15838, "nuovi": 127, "cac": 125, "quota_nuovi": 0.3651, "spesa_nuovi": 5783, "spesa_ritorno": 10055, "cac_acq": 46, "tw_ncpa": 129.51}, {"m": "2026-03", "spesa": 21941, "nuovi": 148, "cac": 148, "quota_nuovi": 0.3763, "spesa_nuovi": 8257, "spesa_ritorno": 13685, "cac_acq": 56, "tw_ncpa": 141.62}, {"m": "2026-04", "spesa": 21622, "nuovi": 136, "cac": 159, "quota_nuovi": 0.3808, "spesa_nuovi": 8233, "spesa_ritorno": 13389, "cac_acq": 61, "tw_ncpa": 140.35}, {"m": "2026-05", "spesa": 21316, "nuovi": 135, "cac": 158, "quota_nuovi": 0.3822, "spesa_nuovi": 8148, "spesa_ritorno": 13168, "cac_acq": 60, "tw_ncpa": 140.26}, {"m": "2026-06", "spesa": 21053, "nuovi": 179, "cac": 118, "quota_nuovi": 0.3534, "spesa_nuovi": 7441, "spesa_ritorno": 13612, "cac_acq": 42, "tw_ncpa": 109.96}, {"m": "2026-07", "spesa": 20057, "nuovi": 89, "cac": 225, "quota_nuovi": 0.335, "spesa_nuovi": 6720, "spesa_ritorno": 13337, "cac_acq": 76, "tw_ncpa": 219.12}, {"m": "2026-08", "spesa": 13841, "nuovi": 115, "cac": 120, "quota_nuovi": 0.3417, "spesa_nuovi": 4729, "spesa_ritorno": 9112, "cac_acq": 41, "tw_ncpa": null}], "tw_canali": [{"m": "2026-08", "google": 30981, "google_fonte": "api", "meta": 24763, "tw_off": false, "tw_parziale": true, "klaviyo_campagne": 8521, "klaviyo_flow": 7751, "totale": 45450}, {"m": "2026-09", "google": 21731, "google_fonte": "api", "meta": null, "tw_off": true, "tw_parziale": false, "klaviyo_campagne": 16738, "klaviyo_flow": 7922, "totale": 32435}], "ltv_medio": {"clienti": 7505, "valore": 445.67}, "rapporto_iva": 0.08996, "primo_ordine_label": "febbraio 2020", "ltv_coorti": [{"coorte": "2022-H1", "clienti": 380, "ltv": 276.73, "ltv_tot": 425.34, "matura": true}, {"coorte": "2022-H2", "clienti": 343, "ltv": 275.7, "ltv_tot": 442.48, "matura": true}, {"coorte": "2023-H1", "clienti": 455, "ltv": 256.25, "ltv_tot": 432.84, "matura": true}, {"coorte": "2023-H2", "clienti": 656, "ltv": 302.39, "ltv_tot": 440.77, "matura": true}, {"coorte": "2024-H1", "clienti": 583, "ltv": 282.13, "ltv_tot": 377.45, "matura": true}, {"coorte": "2024-H2", "clienti": 670, "ltv": 275.37, "ltv_tot": 362.55, "matura": true}, {"coorte": "2025-H1", "clienti": 781, "ltv": 278.74, "ltv_tot": 313.11, "matura": true}, {"coorte": "2025-H2", "clienti": 618, "ltv": 231.66, "ltv_tot": 234.84, "matura": false}, {"coorte": "2026-H1", "clienti": 840, "ltv": 201.8, "ltv_tot": 201.8, "matura": false}], "riacquisto_coorti": [{"coorte": "2023-Q1", "clienti": 184, "r90": 0.2609, "r365": 0.3967, "matura90": true, "matura365": true}, {"coorte": "2023-Q2", "clienti": 271, "r90": 0.2325, "r365": 0.3875, "matura90": true, "matura365": true}, {"coorte": "2023-Q3", "clienti": 345, "r90": 0.2696, "r365": 0.4174, "matura90": true, "matura365": true}, {"coorte": "2023-Q4", "clienti": 311, "r90": 0.3408, "r365": 0.4373, "matura90": true, "matura365": true}, {"coorte": "2024-Q1", "clienti": 310, "r90": 0.3, "r365": 0.4065, "matura90": true, "matura365": true}, {"coorte": "2024-Q2", "clienti": 273, "r90": 0.2747, "r365": 0.4249, "matura90": true, "matura365": true}, {"coorte": "2024-Q3", "clienti": 289, "r90": 0.3253, "r365": 0.4256, "matura90": true, "matura365": true}, {"coorte": "2024-Q4", "clienti": 381, "r90": 0.3071, "r365": 0.4173, "matura90": true, "matura365": true}, {"coorte": "2025-Q1", "clienti": 428, "r90": 0.2757, "r365": 0.3949, "matura90": true, "matura365": true}, {"coorte": "2025-Q2", "clienti": 353, "r90": 0.3739, "r365": 0.4844, "matura90": true, "matura365": true}, {"coorte": "2025-Q3", "clienti": 322, "r90": 0.2453, "r365": 0.382, "matura90": true, "matura365": true}, {"coorte": "2025-Q4", "clienti": 296, "r90": 0.2601, "r365": 0.375, "matura90": true, "matura365": false}, {"coorte": "2026-Q1", "clienti": 390, "r90": 0.2718, "r365": 0.3308, "matura90": true, "matura365": false}, {"coorte": "2026-Q2", "clienti": 450, "r90": 0.3133, "r365": 0.3533, "matura90": true, "matura365": false}], "target": {"anno": 805000, "trimestri": [{"q": "Q1", "target": 165000}, {"q": "Q2", "target": 210000}, {"q": "Q3", "target": 190000}, {"q": "Q4", "target": 240000}]}, "contenuti": {"operazioni_in_corso": [{"titolo": "Test campagna multinutrienti", "dettaglio": "Landing di confronto online, con le modifiche di Lorenzo: il multivitaminico da farmacia accanto al multinutriente, tabella dei nutrienti e offerta sul primo ordine. Le ads del test sono pronte; seguono gli script per i video. Serve a capire se il posizionamento regge.", "stato": "in corso", "area": "Ads"}, {"titolo": "Newsletter editoriale settimanale", "dettaglio": "Cadenza settimanale ripresa ad agosto. A settembre sono uscite le educative del 7/9 (muscolo e tendine), del 14/9 (creatina) e del 21/9 (ossa), più la promo sport dell'11/9: quattro invii da 2.500-3.900 € ciascuno.", "stato": "in corso", "area": "Email"}, {"titolo": "Automazioni Klaviyo: fase 3", "dettaglio": "Tutti i flow della fase 3 sono attivi da metà agosto: winback RFM, sunset lead, sunset cliente storico, riacquisto predittivo e cross-sell. Ora sono in monitoraggio.", "stato": "in monitoraggio", "area": "Klaviyo"}, {"titolo": "Creatività Meta Ads: nuovo processo", "dettaglio": "Quattro batch prodotti con il nuovo processo (Paleocomplex, Youth, Elisir, Jeunesse V2). Il quinto, 15 creatività per il test multinutrienti, è pronto da caricare. Settembre è il mese della cassa, con spesa ads ridotta in vista di Black Friday e Natale.", "stato": "in corso", "area": "Ads"}, {"titolo": "Articolo blog luce blu / lenti CR-39", "dettaglio": "Primo articolo del nuovo processo di produzione contenuti interno: copre il tema più cercato non ancora presidiato dal blog.", "stato": "in corso", "area": "Contenuti"}, {"titolo": "Campagna Amazon Ads", "dettaglio": "Live dal 1° agosto su Paleocomplex. In monitoraggio: il tracciamento degli ordini che arrivano dalle inserzioni Amazon è in verifica.", "stato": "in monitoraggio", "area": "Ads"}, {"titolo": "Landing page per i lead magnet", "dettaglio": "Due pagine dedicate con modulo di iscrizione, pagina di ringraziamento ed email di consegna automatica: report sull'alimentazione e report D3+K2. Servono a raccogliere i contatti che arrivano dai video Instagram, che finora si fermavano ai commenti.", "stato": "in monitoraggio", "area": "Sito"}, {"titolo": "Lead magnet Report D3", "dettaglio": "Flow email attivo. Alla pubblicazione del video si misurano ingressi, costo per lead e conversioni.", "stato": "in monitoraggio", "area": "Klaviyo"}, {"titolo": "Revisione claim vitamina K: guida alla scelta ed Elisir Basic", "dettaglio": "Aggiornamento del posizionamento sul tema anticoagulanti: la guida alla scelta è già online nella versione nuova; restano da allineare la scheda di Elisir Basic e i flow email collegati.", "stato": "in corso", "area": "Sito"}, {"titolo": "Centro di controllo (questa dashboard)", "dettaglio": "Dati WooCommerce, margini mensili, registro attività, registro email e roadmap in un unico posto, aggiornati a ogni chiusura.", "stato": "in corso", "area": "Sistema"}]}, "clienti": {"rif": "2026-09-30", "fine_chiuso": "2026-09-30", "fine_chiuso_label": "30 settembre 2026", "serie": [{"m": "2024-01", "lordo": 38388.51, "primi": 11593.41, "altri": 26795.1, "nuovi": 97, "ordini": 268}, {"m": "2024-02", "lordo": 37261.85, "primi": 12935.15, "altri": 24326.7, "nuovi": 94, "ordini": 248}, {"m": "2024-03", "lordo": 63683.1, "primi": 21698.6, "altri": 41984.5, "nuovi": 119, "ordini": 356}, {"m": "2024-04", "lordo": 47128.49, "primi": 12994.61, "altri": 34133.88, "nuovi": 90, "ordini": 278}, {"m": "2024-05", "lordo": 70175.8, "primi": 13282.8, "altri": 56893.0, "nuovi": 105, "ordini": 382}, {"m": "2024-06", "lordo": 37991.9, "primi": 10507.6, "altri": 27484.3, "nuovi": 78, "ordini": 238}, {"m": "2024-07", "lordo": 52499.2, "primi": 10553.9, "altri": 41945.3, "nuovi": 85, "ordini": 308}, {"m": "2024-08", "lordo": 44967.38, "primi": 12312.3, "altri": 32655.08, "nuovi": 102, "ordini": 261}, {"m": "2024-09", "lordo": 51988.53, "primi": 14455.4, "altri": 37533.13, "nuovi": 102, "ordini": 302}, {"m": "2024-10", "lordo": 52762.23, "primi": 14579.8, "altri": 38182.43, "nuovi": 118, "ordini": 316}, {"m": "2024-11", "lordo": 71989.46, "primi": 15958.18, "altri": 56031.28, "nuovi": 131, "ordini": 408}, {"m": "2024-12", "lordo": 69170.76, "primi": 15940.16, "altri": 53230.6, "nuovi": 132, "ordini": 399}, {"m": "2025-01", "lordo": 48766.1, "primi": 14530.52, "altri": 34235.58, "nuovi": 143, "ordini": 397}, {"m": "2025-02", "lordo": 52591.37, "primi": 15163.86, "altri": 37427.51, "nuovi": 128, "ordini": 344}, {"m": "2025-03", "lordo": 78653.29, "primi": 19974.27, "altri": 58679.02, "nuovi": 157, "ordini": 500}, {"m": "2025-04", "lordo": 51784.21, "primi": 17202.4, "altri": 34581.81, "nuovi": 123, "ordini": 344}, {"m": "2025-05", "lordo": 58470.37, "primi": 12591.25, "altri": 45879.12, "nuovi": 100, "ordini": 359}, {"m": "2025-06", "lordo": 89930.25, "primi": 18061.38, "altri": 71868.87, "nuovi": 130, "ordini": 516}, {"m": "2025-07", "lordo": 63083.28, "primi": 16839.84, "altri": 46243.44, "nuovi": 123, "ordini": 412}, {"m": "2025-08", "lordo": 54431.54, "primi": 10833.92, "altri": 43597.62, "nuovi": 92, "ordini": 358}, {"m": "2025-09", "lordo": 42448.82, "primi": 13026.56, "altri": 29422.26, "nuovi": 107, "ordini": 305}, {"m": "2025-10", "lordo": 60687.12, "primi": 13867.8, "altri": 46819.32, "nuovi": 106, "ordini": 383}, {"m": "2025-11", "lordo": 76813.58, "primi": 9328.6, "altri": 67484.98, "nuovi": 80, "ordini": 442}, {"m": "2025-12", "lordo": 58467.01, "primi": 13581.38, "altri": 44885.63, "nuovi": 110, "ordini": 388}, {"m": "2026-01", "lordo": 53829.23, "primi": 14784.1, "altri": 39045.13, "nuovi": 115, "ordini": 356}, {"m": "2026-02", "lordo": 54170.41, "primi": 15291.53, "altri": 38878.88, "nuovi": 127, "ordini": 363}, {"m": "2026-03", "lordo": 74642.69, "primi": 17090.07, "altri": 57552.62, "nuovi": 148, "ordini": 489}, {"m": "2026-04", "lordo": 69448.74, "primi": 16729.9, "altri": 52718.84, "nuovi": 136, "ordini": 459}, {"m": "2026-05", "lordo": 57050.21, "primi": 16410.16, "altri": 40640.05, "nuovi": 135, "ordini": 383}, {"m": "2026-06", "lordo": 108253.51, "primi": 26374.8, "altri": 81878.71, "nuovi": 179, "ordini": 623}, {"m": "2026-07", "lordo": 38463.8, "primi": 10138.91, "altri": 28324.89, "nuovi": 89, "ordini": 287}, {"m": "2026-08", "lordo": 49844.52, "primi": 13150.35, "altri": 36694.17, "nuovi": 115, "ordini": 343}, {"m": "2026-09", "lordo": 57379.8, "primi": 12469.11, "altri": 44910.69, "nuovi": 98, "ordini": 377}], "anni": {"2024": {"mesi": 12, "nuovi_mese": 104.4, "lordo_mese": 53167, "primo_ordine": 133.13}, "2025": {"mesi": 12, "nuovi_mese": 116.6, "lordo_mese": 61344, "primo_ordine": 125.09}, "2026": {"mesi": 9, "nuovi_mese": 126.9, "lordo_mese": 62565, "primo_ordine": 124.73}}, "nuovi_senza_giugno": {"2025": 121.6, "2026": 120.4}, "valore": [{"et": "Primo ordine", "giorni": 0, "v": 124.63, "v_12": null, "clienti": 1438, "da": "2025-10-01", "a": "2026-09-30", "coorte": "primo ordine dal 1 ottobre 2025 al 30 settembre 2026"}, {"et": "3 mesi", "giorni": 91, "v": 183.25, "v_12": null, "clienti": 1458, "da": "2025-07-02", "a": "2026-07-01", "coorte": "primo ordine dal 2 luglio 2025 al 1 luglio 2026"}, {"et": "6 mesi", "giorni": 182, "v": 225.38, "v_12": null, "clienti": 1361, "da": "2025-04-02", "a": "2026-04-01", "coorte": "primo ordine dal 2 aprile 2025 al 1 aprile 2026"}, {"et": "12 mesi", "giorni": 365, "v": 288.72, "v_12": 288.72, "clienti": 1484, "da": "2024-10-01", "a": "2025-09-30", "coorte": "primo ordine dal 1 ottobre 2024 al 30 settembre 2025"}, {"et": "24 mesi", "giorni": 730, "v": 419.72, "v_12": 322.44, "clienti": 1177, "da": "2023-10-02", "a": "2024-09-30", "coorte": "primo ordine dal 2 ottobre 2023 al 30 settembre 2024"}], "valore_12m": 288.72, "base_serie": [{"m": "2023-01", "attivi": 1255}, {"m": "2023-02", "attivi": 1257}, {"m": "2023-03", "attivi": 1270}, {"m": "2023-04", "attivi": 1283}, {"m": "2023-05", "attivi": 1325}, {"m": "2023-06", "attivi": 1367}, {"m": "2023-07", "attivi": 1418}, {"m": "2023-08", "attivi": 1453}, {"m": "2023-09", "attivi": 1533}, {"m": "2023-10", "attivi": 1601}, {"m": "2023-11", "attivi": 1632}, {"m": "2023-12", "attivi": 1648}, {"m": "2024-01", "attivi": 1682}, {"m": "2024-02", "attivi": 1715}, {"m": "2024-03", "attivi": 1774}, {"m": "2024-04", "attivi": 1812}, {"m": "2024-05", "attivi": 1832}, {"m": "2024-06", "attivi": 1821}, {"m": "2024-07", "attivi": 1834}, {"m": "2024-08", "attivi": 1840}, {"m": "2024-09", "attivi": 1842}, {"m": "2024-10", "attivi": 1879}, {"m": "2024-11", "attivi": 1924}, {"m": "2024-12", "attivi": 1929}, {"m": "2025-01", "attivi": 1991}, {"m": "2025-02", "attivi": 2049}, {"m": "2025-03", "attivi": 2107}, {"m": "2025-04", "attivi": 2156}, {"m": "2025-05", "attivi": 2156}, {"m": "2025-06", "attivi": 2224}, {"m": "2025-07", "attivi": 2276}, {"m": "2025-08", "attivi": 2291}, {"m": "2025-09", "attivi": 2304}, {"m": "2025-10", "attivi": 2327}, {"m": "2025-11", "attivi": 2309}, {"m": "2025-12", "attivi": 2296}, {"m": "2026-01", "attivi": 2278}, {"m": "2026-02", "attivi": 2304}, {"m": "2026-03", "attivi": 2296}, {"m": "2026-04", "attivi": 2336}, {"m": "2026-05", "attivi": 2391}, {"m": "2026-06", "attivi": 2435}, {"m": "2026-07", "attivi": 2391}, {"m": "2026-08", "attivi": 2405}, {"m": "2026-09", "attivi": 2402}], "movimento": {"da": "2025-09-30", "a": "2026-09-30", "base_inizio": 2304, "base_fine": 2402, "nuovi": 1438, "riattivati": 179, "usciti": 1519, "crescita": 98, "abbandono": 0.6593, "lordo_12m": 759050.62, "spesa_attivo": 316.01, "ordini_attivo": 2.04}, "movimento_prec": {"da": "2024-09-30", "a": "2025-09-30", "base_inizio": 1842, "base_fine": 2304, "nuovi": 1484, "riattivati": 139, "usciti": 1161, "crescita": 462, "abbandono": 0.6303, "lordo_12m": 734081.68, "spesa_attivo": 318.61, "ordini_attivo": 2.02}, "quota_primi_12m": 0.2361, "primo_anno_mese": 33555, "oltre_anno_mese": 29699, "lordo_12m_mese": 63254, "usciti_quota_prec": 1452, "base_equilibrio": 2453, "nuovi_12m_mese": 119.8, "nuovi_stessi_mesi": {"2025": 122.6, "2026": 126.9}, "nuovi_giugno": {"2025": 130, "2026": 179}, "lordo_2025": 736127, "promo_mese": {"2026-06": "la promo dei 10 anni"}, "riacquisto_365": 0.4191, "riacquisto_coorte": 1484, "riacquisto_da": "1 ottobre 2024", "riacquisto_a": "30 settembre 2025", "mesi_totali": 79, "mesi_sopra": [{"m": "2026-06", "lordo": 108253.51}], "obiettivo_anno": 1200000, "vs_2025": 0.6302, "vs_target": 0.4907, "target_mese": 67083, "clienti_necessari": 3797, "tenuta": 0.3407, "extra_tenuta": 115, "leva_tenuta": 3028, "leva_nuovi": 14450, "quota_doppioni": 0.1, "serie_da": "2025-01"}};
 
 // ------------------------------------------------------------- utilita
 const $ = s => document.querySelector(s);
 const MESI_IT = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
 const MESI_FULL = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio',
   'Agosto','Settembre','Ottobre','Novembre','Dicembre'];
-const eur = v => v.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0});
+// useGrouping 'always': in italiano il default non separa le migliaia sotto 10.000 ("2402")
+const eur = v => v.toLocaleString('it-IT', {style:'currency', currency:'EUR', maximumFractionDigits:0, useGrouping:'always'});
 const eurK = v => Math.abs(v) >= 1000 ? (v/1000).toLocaleString('it-IT',{maximumFractionDigits:0}) + 'K €' : eur(v);
 const pct = v => (v*100).toLocaleString('it-IT',{maximumFractionDigits:1}) + '%';
-const nInt = v => v.toLocaleString('it-IT');
+const nInt = v => v.toLocaleString('it-IT', {useGrouping:'always'});
 const tick = v => v >= 1000 ? (v/1000).toLocaleString('it-IT') + 'K' : v.toLocaleString('it-IT');
 const SVGNS = 'http://www.w3.org/2000/svg';
 function sv(tag, attrs){ const e = document.createElementNS(SVGNS, tag);
@@ -322,7 +338,8 @@ function barreSemplici(card, dati, opz){
 const perMese = {}; D.mesi.forEach(r => perMese[r.m] = r);
 const ultimo = D.mesi[D.mesi.length - 1];
 const annoCur = +ultimo.m.slice(0,4), meseCur = +ultimo.m.slice(5,7);
-const chiuso = m => !(m.m === ultimo.m);
+const parzialeUltimo = D.ultimo_parziale !== false;
+const chiuso = m => !(parzialeUltimo && m.m === ultimo.m);
 
 // ------------------------------------------------------------- KPI home
 (function kpi(){
@@ -338,15 +355,16 @@ const chiuso = m => !(m.m === ultimo.m);
   txt(div('hint', heroTile), pct(lordoYtd / D.target.anno) + " dell'obiettivo anno (" + eurK(D.target.anno) + ' lordi). Netto IVA: ' + eur(nettoYtd));
 
   const t2 = div('tile', box);
-  txt(div('lab', t2), MESI_FULL[meseCur-1] + ', primi ' + D.mtd.giorni + ' giorni (lordo)');
+  txt(div('lab', t2), MESI_FULL[meseCur-1] + (parzialeUltimo ? ', primi ' + D.mtd.giorni + ' giorni' : ', mese chiuso') + ' (lordo)');
   txt(div('val', t2), eur(D.mtd.cur.lordo));
   if (D.mtd.prec.lordo > 0){
     const dl = D.mtd.cur.lordo / D.mtd.prec.lordo - 1;
     txt(div('delta ' + (dl >= 0 ? 'su' : 'giu'), t2), (dl >= 0 ? '+' : '') + pct(dl) + ' sul ' + (annoCur-1));
-    txt(div('hint', t2), 'stesso periodo ' + (annoCur-1) + ': ' + eur(D.mtd.prec.lordo));
+    txt(div('hint', t2), (parzialeUltimo ? 'stesso periodo ' : MESI_FULL[meseCur-1].toLowerCase() + ' ') + (annoCur-1) + ': ' + eur(D.mtd.prec.lordo));
   }
 
-  const mPrec = D.mesi.filter(chiuso).pop();
+  // con l'ultimo mese chiuso la tile 2 lo mostra gia': qui va il mese prima
+  const mPrec = D.mesi.filter(m => parzialeUltimo ? chiuso(m) : m.m !== ultimo.m).pop();
   if (mPrec){
     const t3 = div('tile', box);
     txt(div('lab', t3), MESI_FULL[+mPrec.m.slice(5,7)-1] + ' (lordo)');
@@ -418,7 +436,7 @@ const chiuso = m => !(m.m === ultimo.m);
   for (const s of serie){
     let ultimoIdx = -1;
     s.valori.forEach((v, i) => { if (v != null) ultimoIdx = i; });
-    const parziale = (s.nome === String(annoCur)) && (meseCur - 1 === ultimoIdx);
+    const parziale = parzialeUltimo && (s.nome === String(annoCur)) && (meseCur - 1 === ultimoIdx);
     let dPath = '', prima = true;
     s.valori.forEach((v, i) => {
       if (v == null || (parziale && i === ultimoIdx)) return;
@@ -470,9 +488,10 @@ const chiuso = m => !(m.m === ultimo.m);
   });
   svg.addEventListener('pointerleave', () => { tt.nascondi(); hair.setAttribute('visibility','hidden'); });
 
-  legenda(card, serie.slice().reverse().map(s => ({nome: s.nome + (s.nome == String(annoCur) ? ' (in corso)' : ''), colore: s.colore})), 'linea');
-  txt(div('nota', card), 'Il punto vuoto è il mese in corso, parziale: dati fino al ' +
-    D.mtd.giorni + ' ' + MESI_IT[meseCur-1] + '.');
+  legenda(card, serie.slice().reverse().map(s => ({nome: s.nome + (parzialeUltimo && s.nome == String(annoCur) ? ' (in corso)' : ''), colore: s.colore})), 'linea');
+  txt(div('nota', card), parzialeUltimo
+    ? 'Il punto vuoto è il mese in corso, parziale: dati fino al ' + D.mtd.giorni + ' ' + MESI_IT[meseCur-1] + '.'
+    : 'Dati fino al ' + D.mtd.giorni + ' ' + MESI_IT[meseCur-1] + ': tutti i mesi mostrati sono chiusi.');
   tabella(card, ['Mese', ...anni],
     Array.from({length:12}, (_, i) => [MESI_IT[i],
       ...serie.map(s => s.valori[i] != null ? eur(s.valori[i]) : '')]),
@@ -657,8 +676,9 @@ const chiuso = m => !(m.m === ultimo.m);
     const voce = div('voce', box);
     const testa = div('testa', voce);
     const qEl = document.createElement('span'); qEl.className = 'q';
-    const inCorso = (i+1 === Math.ceil(meseCur/3));
-    const futuro = (i+1 > Math.ceil(meseCur/3));
+    const qOggi = Math.ceil((D.mese_oggi || meseCur)/3);
+    const inCorso = (i+1 === qOggi);
+    const futuro = (i+1 > qOggi);
     txt(qEl, t.q + (inCorso ? ' · in corso' : ''));
     testa.appendChild(qEl);
     const vEl = document.createElement('span'); vEl.className = 'valori';
@@ -712,7 +732,7 @@ const chiuso = m => !(m.m === ultimo.m);
     const nome = MESI_FULL[+m.slice(5,7)-1];
     const lordo = perMese[m] ? perMese[m].lordo : 1;
     const tit = div('mese-tit', box);
-    tit.appendChild(document.createTextNode(nome + (m === ultimo.m ? ' (in corso)' : '')));
+    tit.appendChild(document.createTextNode(nome + (parzialeUltimo && m === ultimo.m ? ' (in corso)' : '')));
     const sp = document.createElement('span');
     txt(sp, ' · fatturato del mese: ' + eurK(Math.round(lordo)));
     tit.appendChild(sp);
@@ -857,7 +877,7 @@ function miniConfronto(sel, campo, fmt, tipo){
         if (v == null) return;
         const x = m.l + banda*(i+.5) + (si === 0 ? -barW-1 : 1);
         const y = Y(v);
-        const parziale = s.nome === String(annoCur) && i === meseCur-1;
+        const parziale = parzialeUltimo && s.nome === String(annoCur) && i === meseCur-1;
         const rett = sv('path', {d:`M${x} ${y+4}a4 4 0 0 1 4 -4h${barW-8}a4 4 0 0 1 4 4v${(H-m.b)-y-4}h${-barW}Z`,
           style:`fill:${s.colore}${parziale ? ';opacity:.5' : ''}`});
         svg.appendChild(rett);
@@ -888,17 +908,17 @@ function miniConfronto(sel, campo, fmt, tipo){
     if (righe.length){
       const cardBox = card.getBoundingClientRect();
       tt.mostra(cx*box.width/W + box.left - cardBox.left, m.t*box.height/H,
-        MESI_IT[i] + (i === meseCur-1 ? ' (' + annoCur + ' in corso)' : ''), righe);
+        MESI_IT[i] + (parzialeUltimo && i === meseCur-1 ? ' (' + annoCur + ' in corso)' : ''), righe);
     }
   });
   svg.addEventListener('pointerleave', () => { tt.nascondi(); hair.setAttribute('visibility','hidden'); });
   legenda(card, serie.slice().reverse().map(s => ({nome:s.nome, colore:s.colore})), tipo === 'barre' ? '' : 'linea');
-  txt(div('nota', card), MESI_FULL[meseCur-1][0].toUpperCase() + MESI_FULL[meseCur-1].slice(1) + ' ' +
+  if (parzialeUltimo) txt(div('nota', card), MESI_FULL[meseCur-1][0].toUpperCase() + MESI_FULL[meseCur-1].slice(1) + ' ' +
     annoCur + ' è in corso (dati fino al ' + D.mtd.giorni + ' ' + MESI_IT[meseCur-1] +
     '): ' + (tipo === 'barre' ? 'la barra chiara' : 'l\'ultimo punto') +
     ' non è confrontabile con il mese intero del ' + (annoCur-1) + '.');
   tabella(card, ['Mese', ...anni], Array.from({length:12}, (_, i) =>
-    [MESI_IT[i] + (i === meseCur-1 ? ' (in corso)' : ''), ...serie.map(s => s.v[i] != null ? fmt(s.v[i]) : '')]));
+    [MESI_IT[i] + (parzialeUltimo && i === meseCur-1 ? ' (in corso)' : ''), ...serie.map(s => s.v[i] != null ? fmt(s.v[i]) : '')]));
 }
 miniConfronto('#chart-ordini', 'ordini', nInt, 'barre');
 miniConfronto('#chart-aov', 'aov', v => eur(Math.round(v)), 'linee');
@@ -973,7 +993,7 @@ miniConfronto('#chart-nuovi', 'nuovi', nInt, 'barre');
       const d = eTop
         ? `M${cx-barW/2} ${yTop+4}a4 4 0 0 1 4 -4h${barW-8}a4 4 0 0 1 4 4v${alto-4}h${-barW}Z`
         : `M${cx-barW/2} ${yTop}h${barW}v${alto}h${-barW}Z`;
-      svg.appendChild(sv('path', {d, style:`fill:${colDi[c]}${r.m === D.mesi[D.mesi.length-1].m ? ';opacity:.5' : ''}`}));
+      svg.appendChild(sv('path', {d, style:`fill:${colDi[c]}${parzialeUltimo && r.m === D.mesi[D.mesi.length-1].m ? ';opacity:.5' : ''}`}));
       base += v;
     });
     const t = sv('text', {x:cx, y:Y(base)-6, 'text-anchor':'middle',
@@ -985,7 +1005,7 @@ miniConfronto('#chart-nuovi', 'nuovi', nInt, 'barre');
     hit.addEventListener('pointermove', () => {
       const box = svg.getBoundingClientRect(), cardBox = card.getBoundingClientRect();
       tt.mostra(cx*box.width/W + box.left - cardBox.left, Y(base)*box.height/H,
-        MESI_IT[+r.m.slice(5,7)-1] + (r.m === D.mesi[D.mesi.length-1].m ? ' (in corso)' : '') + ' · ' + Math.round(base) + ' ore',
+        MESI_IT[+r.m.slice(5,7)-1] + (parzialeUltimo && r.m === D.mesi[D.mesi.length-1].m ? ' (in corso)' : '') + ' · ' + Math.round(base) + ' ore',
         voci.slice().sort((a,b) => b[1]-a[1]).map(([c,v]) =>
           ({colore: colDi[c], valore: v.toLocaleString('it-IT') + ' h', nome: c})));
     });
@@ -997,6 +1017,138 @@ miniConfronto('#chart-nuovi', 'nuovi', nInt, 'barre');
     dati.map((r, i) => [MESI_IT[+r.m.slice(5,7)-1],
       ...categorie.map(c => r.cat[c] ? r.cat[c].toLocaleString('it-IT') + ' h' : ''),
       Math.round(totali[i]) + ' h']));
+})();
+
+// ------------------------------------------------------------- clienti: larghezza utile
+function larghezza(card){
+  // larghezza utile della card: cosi' i testi dell'SVG restano a dimensione reale anche su telefono
+  const cs = getComputedStyle(card);
+  const w = card.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
+  return Math.max(300, Math.min(1060, Math.round(w || 900)));
+}
+// tooltip anche col dito: su touch il pointerleave non chiude
+function agganciaTooltip(el, mostra, tt){
+  el.addEventListener('pointermove', mostra);
+  el.addEventListener('pointerdown', mostra);
+  el.addEventListener('pointerleave', ev => { if (ev.pointerType !== 'touch') tt.nascondi(); });
+}
+function etMese(m){ return MESI_IT[+m.slice(5,7)-1] + ' ' + m.slice(2,4); }
+
+// ------------------------------------------------------------- clienti: da dove arriva il fatturato
+(function clientiFonte(){
+  const card = $('#chart-cl-fonte'); if (!card || !D.clienti) return;
+  const dati = D.clienti.serie.filter(r => r.m >= D.clienti.serie_da);
+  const W = larghezza(card), H = 280, m = {t:16, r:12, b:28, l:46};
+  const iw = W-m.l-m.r, ih = H-m.t-m.b;
+  const massimo = niceMax(Math.max(100000, ...dati.map(r => r.primi + r.altri)));
+  const Y = v => m.t + ih*(1 - v/massimo);
+  const svg = sv('svg', {viewBox:`0 0 ${W} ${H}`, width:'100%', role:'img',
+    'aria-label':'Fatturato lordo per mese, diviso tra primo ordine dei clienti nuovi e clienti che tornano'});
+  card.appendChild(svg);
+  for (let i = 0; i <= 4; i++){
+    const v = massimo*i/4, y = Y(v);
+    svg.appendChild(sv('line', {x1:m.l, x2:W-m.r, y1:y, y2:y, style:'stroke:var(--grid);stroke-width:1'}));
+    const t = sv('text', {x:m.l-6, y:y+4, 'text-anchor':'end', style:'font-size:10px;fill:var(--muted)'});
+    txt(t, tick(v)); svg.appendChild(t);
+  }
+  const banda = iw/dati.length, barW = Math.min(22, banda*.6);
+  // una etichetta di mese ogni 'passo' barre: servono circa 40 px per "gen 26"
+  const passo = Math.max(1, Math.ceil(40 / banda));
+  const tt = tooltipDi(card);
+  // soglia della domanda: 100.000 €
+  const y100 = Y(100000);
+  svg.appendChild(sv('line', {x1:m.l, x2:W-m.r, y1:y100, y2:y100,
+    style:'stroke:var(--ink2);stroke-width:1;stroke-dasharray:4 4'}));
+  const t100 = sv('text', {x:W-m.r, y:y100-5, 'text-anchor':'end', style:'font-size:10px;font-weight:600;fill:var(--ink2)'});
+  txt(t100, '100.000 €'); svg.appendChild(t100);
+  dati.forEach((r, i) => {
+    const cx = m.l + banda*(i+.5);
+    const yA = Y(r.altri), yT = Y(r.altri + r.primi), base = H-m.b;
+    svg.appendChild(sv('path', {d:`M${cx-barW/2} ${yA}h${barW}v${base-yA}h${-barW}Z`, style:'fill:var(--s1)'}));
+    const alto = yA - yT - 2;
+    if (alto > 5) svg.appendChild(sv('path', {d:`M${cx-barW/2} ${yT+4}a4 4 0 0 1 4 -4h${barW-8}a4 4 0 0 1 4 4v${alto-4}h${-barW}Z`, style:'fill:var(--s2)'}));
+    else if (alto > 0) svg.appendChild(sv('rect', {x:cx-barW/2, y:yT, width:barW, height:alto, style:'fill:var(--s2)'}));
+    if ((dati.length - 1 - i) % passo === 0){
+      const tm = sv('text', {x:cx, y:H-8, 'text-anchor':'middle', style:'font-size:10px;fill:var(--muted)'});
+      txt(tm, etMese(r.m)); svg.appendChild(tm);
+    }
+    const hit = sv('rect', {x:m.l+banda*i, y:m.t, width:banda, height:ih, fill:'transparent'});
+    agganciaTooltip(hit, () => {
+      const box = svg.getBoundingClientRect(), cardBox = card.getBoundingClientRect();
+      const tot = r.primi + r.altri;
+      tt.mostra(cx*box.width/W + box.left - cardBox.left, yT*box.height/H,
+        MESI_FULL[+r.m.slice(5,7)-1] + ' ' + r.m.slice(0,4) + ' · ' + eur(Math.round(tot)), [
+          {colore:'var(--s2)', valore: eur(Math.round(r.primi)) + ' (' + pct(r.primi/tot) + ')',
+           nome: 'primo ordine di ' + nInt(r.nuovi) + ' clienti nuovi'},
+          {colore:'var(--s1)', valore: eur(Math.round(r.altri)), nome: 'chi aveva già comprato'}]);
+    }, tt);
+    svg.appendChild(hit);
+  });
+  legenda(card, [{nome:'Ordini di chi aveva già comprato', colore:'var(--s1)'},
+                 {nome:'Primo ordine dei clienti nuovi', colore:'var(--s2)'}]);
+  tabella(card, ['Mese', 'Clienti nuovi', 'Primi ordini', 'Chi aveva già comprato', 'Totale', 'Quota primi ordini'],
+    dati.map(r => [etMese(r.m), nInt(r.nuovi), eur(Math.round(r.primi)), eur(Math.round(r.altri)),
+                   eur(Math.round(r.primi + r.altri)), pct(r.primi/(r.primi + r.altri))]));
+})();
+
+// ------------------------------------------------------------- clienti: valore nel tempo
+(function clientiValore(){
+  const card = $('#chart-cl-valore'); if (!card || !D.clienti) return;
+  barreSemplici(card, D.clienti.valore.map(r => ({et: r.et, v: r.v,
+      sub: nInt(r.clienti) + ' clienti, ' + r.coorte})),
+    {fmt: v => eur(Math.round(v)), aria: 'Spesa lorda media per cliente nuovo, cumulata nel tempo'});
+  tabella(card, ['Dopo', 'Spesa media per cliente', 'Clienti', 'Gruppo usato'],
+    D.clienti.valore.map(r => [r.et, eur(Math.round(r.v)), nInt(r.clienti), r.coorte]));
+})();
+
+// ------------------------------------------------------------- clienti: base attiva
+(function clientiBase(){
+  const card = $('#chart-cl-base'); if (!card || !D.clienti) return;
+  const dati = D.clienti.base_serie;
+  const W = larghezza(card), H = 240, m = {t:22, r:18, b:28, l:46};
+  const iw = W-m.l-m.r, ih = H-m.t-m.b;
+  // tacche tonde: conteggi di clienti, non migliaia di euro
+  const passo = 500, massimo = Math.ceil(Math.max(...dati.map(r => r.attivi)) / passo) * passo;
+  const Y = v => m.t + ih*(1 - v/massimo);
+  const X = i => m.l + iw*i/Math.max(dati.length-1, 1);
+  const svg = sv('svg', {viewBox:`0 0 ${W} ${H}`, width:'100%', role:'img',
+    'aria-label':'Clienti attivi negli ultimi 12 mesi, a fine mese'});
+  card.appendChild(svg);
+  for (let v = 0; v <= massimo; v += passo){
+    const y = Y(v);
+    svg.appendChild(sv('line', {x1:m.l, x2:W-m.r, y1:y, y2:y, style:'stroke:var(--grid);stroke-width:1'}));
+    const t = sv('text', {x:m.l-6, y:y+4, 'text-anchor':'end', style:'font-size:10px;fill:var(--muted)'});
+    txt(t, nInt(v)); svg.appendChild(t);
+  }
+  dati.forEach((r, i) => {
+    if (r.m.slice(5,7) !== '01') return;
+    const t = sv('text', {x:X(i), y:H-8, 'text-anchor':'middle', style:'font-size:10px;fill:var(--muted)'});
+    txt(t, 'gen ' + r.m.slice(0,4)); svg.appendChild(t);
+  });
+  let d = '';
+  dati.forEach((r, i) => { d += (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(r.attivi).toFixed(1) + ' '; });
+  svg.appendChild(sv('path', {d: d.trim(), fill:'none',
+    style:'stroke:var(--s1);stroke-width:2;stroke-linejoin:round;stroke-linecap:round'}));
+  const u = dati.length - 1;
+  svg.appendChild(sv('circle', {cx:X(u), cy:Y(dati[u].attivi), r:4.5,
+    style:'fill:var(--s1);stroke:var(--surface);stroke-width:2'}));
+  const et = sv('text', {x:X(u), y:Y(dati[u].attivi)-10, 'text-anchor':'end',
+    style:'font-size:11px;font-weight:600;fill:var(--ink2)'});
+  txt(et, nInt(dati[u].attivi)); svg.appendChild(et);
+  const tt = tooltipDi(card);
+  const hair = sv('line', {y1:m.t, y2:H-m.b, style:'stroke:var(--axis);stroke-width:1', visibility:'hidden'});
+  svg.appendChild(hair);
+  agganciaTooltip(svg, ev => {
+    const box = svg.getBoundingClientRect();
+    const px = (ev.clientX - box.left)*W/box.width;
+    const i = Math.min(u, Math.max(0, Math.round((px - m.l)/iw*u)));
+    hair.setAttribute('x1', X(i)); hair.setAttribute('x2', X(i)); hair.setAttribute('visibility', 'visible');
+    const cardBox = card.getBoundingClientRect();
+    tt.mostra(X(i)*box.width/W + box.left - cardBox.left, Y(dati[i].attivi)*box.height/H,
+      MESI_FULL[+dati[i].m.slice(5,7)-1] + ' ' + dati[i].m.slice(0,4),
+      [{colore:'var(--s1)', valore: nInt(dati[i].attivi), nome:'clienti attivi'}]);
+  }, tt);
+  tabella(card, ['Fine mese', 'Clienti attivi'], dati.map(r => [etMese(r.m), nInt(r.attivi)]));
 })();
 
 // ------------------------------------------------------------- operazioni in corso

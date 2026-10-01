@@ -131,7 +131,7 @@
   .topbar a.voce:hover{color:var(--ink2)}
 </style>
 
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../clienti/">Clienti</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
   <header class="top">
     <p class="eyebrow">Paleocomplex · consulenza marketing</p>
@@ -195,9 +195,9 @@ const MONTHS = [
   {label:'Giugno 2026', short:'Giu', n:18, min:{"Klaviyo":990, "Email marketing":360, "Strategia":210, "Meeting":120, "Sito":0, "Ads":0, "Customer Care":0, "Altro":0}},
   {label:'Luglio 2026', short:'Lug', n:7, min:{"Klaviyo":480, "Email marketing":240, "Strategia":40, "Meeting":120, "Sito":0, "Ads":0, "Customer Care":0, "Altro":0}},
   {label:'Agosto 2026', short:'Ago', n:19, min:{"Klaviyo":540, "Email marketing":60, "Strategia":180, "Meeting":285, "Sito":675, "Ads":360, "Customer Care":0, "Altro":0}},
-  {label:'Settembre 2026', short:'Set', n:13, partial:true, min:{"Klaviyo":0, "Email marketing":40, "Strategia":120, "Meeting":205, "Sito":330, "Ads":240, "Customer Care":30, "Altro":0}},
+  {label:'Settembre 2026', short:'Set', n:13, min:{"Klaviyo":0, "Email marketing":40, "Strategia":120, "Meeting":205, "Sito":330, "Ads":240, "Customer Care":30, "Altro":0}},
 ];
-const PERIOD = {first:'3 marzo 2026', last:'22 settembre 2026', gen:'24 settembre 2026'};
+const PERIOD = {first:'3 marzo 2026', last:'22 settembre 2026', gen:'1 ottobre 2026'};
 
 /* ---- helpers ---- */
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -317,5 +317,5 @@ function hideTip(){ tip.style.opacity='0'; }
 
 /* ---- footer ---- */
 document.getElementById('footer').innerHTML=
-  `Fonte: <b>Paleocomplex Registro Attivita.xlsx</b> · tariffa <b>${RATE} €/h</b> · generato il ${PERIOD.gen}.<br>* Settembre è il mese in corso, dati parziali. I totali contano solo le attività registrate.`;
+  `Fonte: <b>Paleocomplex Registro Attivita.xlsx</b> · tariffa <b>${RATE} €/h</b> · generato il ${PERIOD.gen}.<br>* Ottobre è il mese in corso, dati parziali. I totali contano solo le attività registrate.`;
 </script>

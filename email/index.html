@@ -15,7 +15,7 @@
   Rigenerare con: python3 scripts/registro_email.py
   NON modificare a mano questo file: viene sovrascritto a ogni rigenerazione.
   Le annotazioni si scrivono nella colonna `note` del CSV, che lo script non tocca.
-  Ultimo aggiornamento: 2026-09-24
+  Ultimo aggiornamento: 2026-10-01
 -->
 <style>
   :root{
@@ -135,7 +135,7 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../clienti/">Clienti</a><a class="voce" href="../operation/">Operation</a><a class="voce" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
 <div class="wrap">
   <header>
     <p class="eyebrow">Paleocomplex</p>
@@ -144,7 +144,7 @@
   </header>
 
   <h2>Il quadro Klaviyo 2026</h2>
-  <div class="kpis"><div class="tile"><div class="lab">Fatturato email di set (in corso), campagne + flow</div><div class="val">19.396 €</div><div class="hint">campagne 13.378 €, flow 6.018 €</div></div><div class="tile"><div class="lab">Fatturato dai flow, 2026</div><div class="val">23.985 €</div><div class="hint">171 ordini dalle automazioni</div></div><div class="tile"><div class="lab">Crescita lista 2026</div><div class="val">+2.796</div><div class="hint">iscritti meno disiscritti, dato Klaviyo</div></div><div class="tile"><div class="lab">Flow attivi che convertono</div><div class="val">20</div><div class="hint">flow con almeno un ordine nel 2026</div></div></div>
+  <div class="kpis"><div class="tile"><div class="lab">Fatturato email di set, campagne + flow</div><div class="val">24.660 €</div><div class="hint">campagne 16.738 €, flow 7.922 €</div></div><div class="tile"><div class="lab">Fatturato dai flow, 2026</div><div class="val">23.985 €</div><div class="hint">171 ordini dalle automazioni</div></div><div class="tile"><div class="lab">Crescita lista 2026</div><div class="val">+2.796</div><div class="hint">iscritti meno disiscritti, dato Klaviyo</div></div><div class="tile"><div class="lab">Flow attivi che convertono</div><div class="val">20</div><div class="hint">flow con almeno un ordine nel 2026</div></div></div>
   <h2>I flow che portano soldi</h2>
   <div class="bars"><div class="bar"><div class="nome" title="02-welcome-kit-benessere">02-welcome-kit-benessere</div><div class="track"><div class="fill" style="width:100.0%;background:var(--s3)"></div></div><div class="num">8.888 €</div></div><div class="bar"><div class="nome" title="01 Abandoned Cart - trigger woo checkout started">01 Abandoned Cart - trigger woo checkout started</div><div class="track"><div class="fill" style="width:56.8%;background:var(--s3)"></div></div><div class="num">5.047 €</div></div><div class="bar"><div class="nome" title="05-browse-abandonment">05-browse-abandonment</div><div class="track"><div class="fill" style="width:20.0%;background:var(--s3)"></div></div><div class="num">1.774 €</div></div><div class="bar"><div class="nome" title="78 - Cross-Sell Data-Driven">78 - Cross-Sell Data-Driven</div><div class="track"><div class="fill" style="width:15.0%;background:var(--s3)"></div></div><div class="num">1.330 €</div></div><div class="bar"><div class="nome" title="23-richiesta-review">23-richiesta-review</div><div class="track"><div class="fill" style="width:13.9%;background:var(--s3)"></div></div><div class="num">1.233 €</div></div><div class="bar"><div class="nome" title="72 - AI Repeat Purchase">72 - AI Repeat Purchase</div><div class="track"><div class="fill" style="width:13.3%;background:var(--s3)"></div></div><div class="num">1.182 €</div></div><div class="bar"><div class="nome" title="03-welcome-unghie-capelli">03-welcome-unghie-capelli</div><div class="track"><div class="fill" style="width:13.2%;background:var(--s3)"></div></div><div class="num">1.172 €</div></div><div class="bar"><div class="nome" title="71 - First-Order Reorder Reminder">71 - First-Order Reorder Reminder</div><div class="track"><div class="fill" style="width:11.4%;background:var(--s3)"></div></div><div class="num">1.016 €</div></div><div class="bar"><div class="nome" title="06-conversione">06-conversione</div><div class="track"><div class="fill" style="width:5.6%;background:var(--s3)"></div></div><div class="num">498 €</div></div><div class="bar"><div class="nome" title="21-primo-cliente">21-primo-cliente</div><div class="track"><div class="fill" style="width:4.2%;background:var(--s3)"></div></div><div class="num">370 €</div></div></div>
   <p class="nota">Fatturato attribuito da Klaviyo alle automazioni (metrica Placed Order), da inizio anno. I flow di benvenuto e il carrello abbandonato fanno la parte grossa: sono le email che partono da sole.</p>
@@ -184,13 +184,36 @@
   <p class="nota" id="nota-tabella"></p>
 
   <footer>
-    <p>Generato da <code>scripts/registro_email.py</code> a partire da <code>project/registro-email.csv</code>. Ultimo aggiornamento: <b>2026-09-24</b>.</p>
+    <p>Generato da <code>scripts/registro_email.py</code> a partire da <code>project/registro-email.csv</code>. Ultimo aggiornamento: <b>2026-10-01</b>.</p>
     <p>Per annotare un invio si scrive nella colonna <code>note</code> del CSV: lo script non la sovrascrive mai. <a href="../">Torna all'indice</a></p>
   </footer>
 </div>
 
 <script>
 const DATI = [
+{
+"data": "2026-09-28",
+"ora": "10:00",
+"oggetto": "Hanno messo un virus del raffreddore nel naso a 164 persone",
+"preview": "E il risultato riguarda anche il tuo autunno",
+"nome_campagna": "20260928 educativa sistema immunitario autunno",
+"tipo": "educativa",
+"stato": "Sent",
+"destinatari": "12357",
+"consegnate": "12290",
+"aperture_uniche": "4214",
+"open_rate": "34,29",
+"click_unici": "114",
+"click_rate": "0,93",
+"disiscritti": "42",
+"conversioni": "16",
+"fatturato": "2700,05",
+"campaign_id": "01M3KFXQWY1B5D799JWRN64CXB",
+"fonte": "klaviyo",
+"link_contenuto": "",
+"file_vault": "2026-09-28_educativa-sistema-immunitario-autunno",
+"note": ""
+},
 {
 "data": "2026-09-21",
 "ora": "09:30",
@@ -201,13 +224,13 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "12360",
 "consegnate": "12290",
-"aperture_uniche": "3892",
-"open_rate": "31,67",
-"click_unici": "106",
-"click_rate": "0,86",
-"disiscritti": "28",
-"conversioni": "16",
-"fatturato": "2572,75",
+"aperture_uniche": "4096",
+"open_rate": "33,33",
+"click_unici": "119",
+"click_rate": "0,97",
+"disiscritti": "33",
+"conversioni": "22",
+"fatturato": "3423,45",
 "campaign_id": "01M316XFS5D3DJW8Y3YX92G1TY",
 "fonte": "klaviyo",
 "link_contenuto": "",
@@ -224,11 +247,11 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "20795",
 "consegnate": "20424",
-"aperture_uniche": "4124",
-"open_rate": "20,19",
-"click_unici": "75",
-"click_rate": "0,37",
-"disiscritti": "47",
+"aperture_uniche": "4204",
+"open_rate": "20,58",
+"click_unici": "78",
+"click_rate": "0,38",
+"disiscritti": "50",
 "conversioni": "19",
 "fatturato": "3907,92",
 "campaign_id": "01M2FFZW6JJ7118T0WJMAED097",
@@ -247,11 +270,11 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "9849",
 "consegnate": "9796",
-"aperture_uniche": "3039",
-"open_rate": "31,02",
+"aperture_uniche": "3089",
+"open_rate": "31,53",
 "click_unici": "46",
 "click_rate": "0,47",
-"disiscritti": "26",
+"disiscritti": "27",
 "conversioni": "20",
 "fatturato": "3765,37",
 "campaign_id": "01M27Q46HBNZFA2VSJ6XYWD2WG",
@@ -270,8 +293,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "2195",
 "consegnate": "2191",
-"aperture_uniche": "608",
-"open_rate": "27,75",
+"aperture_uniche": "619",
+"open_rate": "28,25",
 "click_unici": "14",
 "click_rate": "0,64",
 "disiscritti": "10",
@@ -293,8 +316,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "12061",
 "consegnate": "11998",
-"aperture_uniche": "4329",
-"open_rate": "36,08",
+"aperture_uniche": "4368",
+"open_rate": "36,41",
 "click_unici": "128",
 "click_rate": "1,07",
 "disiscritti": "27",
@@ -316,8 +339,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "12095",
 "consegnate": "12035",
-"aperture_uniche": "4026",
-"open_rate": "33,45",
+"aperture_uniche": "4053",
+"open_rate": "33,68",
 "click_unici": "86",
 "click_rate": "0,71",
 "disiscritti": "27",
@@ -339,8 +362,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "1932",
 "consegnate": "1931",
-"aperture_uniche": "483",
-"open_rate": "25,01",
+"aperture_uniche": "488",
+"open_rate": "25,27",
 "click_unici": "22",
 "click_rate": "1,14",
 "disiscritti": "2",
@@ -362,8 +385,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "21004",
 "consegnate": "20592",
-"aperture_uniche": "3385",
-"open_rate": "16,44",
+"aperture_uniche": "3407",
+"open_rate": "16,55",
 "click_unici": "88",
 "click_rate": "0,43",
 "disiscritti": "41",
@@ -408,8 +431,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "11909",
 "consegnate": "11850",
-"aperture_uniche": "4190",
-"open_rate": "35,36",
+"aperture_uniche": "4203",
+"open_rate": "35,47",
 "click_unici": "95",
 "click_rate": "0,80",
 "disiscritti": "39",
@@ -431,8 +454,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "2442",
 "consegnate": "2435",
-"aperture_uniche": "1403",
-"open_rate": "57,62",
+"aperture_uniche": "1406",
+"open_rate": "57,74",
 "click_unici": "48",
 "click_rate": "1,97",
 "disiscritti": "11",
@@ -454,8 +477,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "2588",
 "consegnate": "2584",
-"aperture_uniche": "1406",
-"open_rate": "54,41",
+"aperture_uniche": "1408",
+"open_rate": "54,49",
 "click_unici": "64",
 "click_rate": "2,48",
 "disiscritti": "11",
@@ -477,10 +500,10 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "5064",
 "consegnate": "5042",
-"aperture_uniche": "2127",
-"open_rate": "42,19",
-"click_unici": "77",
-"click_rate": "1,53",
+"aperture_uniche": "2129",
+"open_rate": "42,23",
+"click_unici": "78",
+"click_rate": "1,55",
 "disiscritti": "38",
 "conversioni": "13",
 "fatturato": "1652,20",
@@ -500,8 +523,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "5073",
 "consegnate": "5048",
-"aperture_uniche": "1949",
-"open_rate": "38,61",
+"aperture_uniche": "1950",
+"open_rate": "38,63",
 "click_unici": "71",
 "click_rate": "1,41",
 "disiscritti": "23",
@@ -523,8 +546,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "10171",
 "consegnate": "10115",
-"aperture_uniche": "2276",
-"open_rate": "22,50",
+"aperture_uniche": "2279",
+"open_rate": "22,53",
 "click_unici": "43",
 "click_rate": "0,43",
 "disiscritti": "72",
@@ -546,8 +569,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "10201",
 "consegnate": "10146",
-"aperture_uniche": "2257",
-"open_rate": "22,25",
+"aperture_uniche": "2260",
+"open_rate": "22,27",
 "click_unici": "49",
 "click_rate": "0,48",
 "disiscritti": "36",
@@ -569,8 +592,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "10236",
 "consegnate": "10171",
-"aperture_uniche": "2398",
-"open_rate": "23,58",
+"aperture_uniche": "2399",
+"open_rate": "23,59",
 "click_unici": "62",
 "click_rate": "0,61",
 "disiscritti": "35",
@@ -592,8 +615,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "20796",
 "consegnate": "20478",
-"aperture_uniche": "3652",
-"open_rate": "17,83",
+"aperture_uniche": "3654",
+"open_rate": "17,84",
 "click_unici": "111",
 "click_rate": "0,54",
 "disiscritti": "85",
@@ -615,8 +638,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "10309",
 "consegnate": "10230",
-"aperture_uniche": "2618",
-"open_rate": "25,59",
+"aperture_uniche": "2619",
+"open_rate": "25,60",
 "click_unici": "66",
 "click_rate": "0,65",
 "disiscritti": "40",
@@ -638,8 +661,8 @@ const DATI = [
 "stato": "Sent",
 "destinatari": "10339",
 "consegnate": "10271",
-"aperture_uniche": "2287",
-"open_rate": "22,27",
+"aperture_uniche": "2288",
+"open_rate": "22,28",
 "click_unici": "48",
 "click_rate": "0,47",
 "disiscritti": "28",

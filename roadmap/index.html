@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Roadmap — Paleocomplex</title>
+<title>Roadmap · Paleocomplex</title>
 <!--
-  Centro di controllo Paleocomplex — v2.2 (24/9/2026)
-  v2.2: un mese entra in margini e CAC solo con spedizioni, Google e Meta; confronto CAC
+  Centro di controllo Paleocomplex, v2.3 (1/10/2026)
+  v2.3: nuova pagina Clienti (perché 100 clienti nuovi al mese non fanno 100.000 €), voce Clienti
+        nel menu; riferimento all'ultimo giorno completo (il 1° del mese il mese prima è chiuso)
+  v2.2 (24/9/2026): un mese entra in margini e CAC solo con spedizioni, Google e Meta; confronto CAC
         anno precedente esteso oltre luglio; Triple Whale spento dal 30/8 gestito nei canali;
         IVA stimata fino ad agosto 2024, solo giorni completi, KPI performance in lordo,
         mese in corso dichiarato nei grafici (correzioni dall'audit del 24/9)
@@ -73,6 +75,7 @@
   .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;
     padding:18px 20px;position:relative}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid2>*,.grid3>*{min-width:0}
   @media(max-width:820px){.grid2{grid-template-columns:1fr}}
   .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
   @media(max-width:900px){.grid3{grid-template-columns:1fr}}
@@ -124,6 +127,18 @@
   .meters .fill{height:100%;border-radius:5px 0 0 5px;background:var(--s1)}
   .meters .fill.pieno{border-radius:5px}
   .nota{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6;max-width:80ch}
+  .testo{font-size:14px;color:var(--ink2);line-height:1.65;max-width:78ch;margin:14px 0 0}
+  .card h3{font-size:15px;font-weight:650;margin:0 0 4px}
+  .card .testo{margin-top:6px}
+  table.semplice{border-collapse:collapse;width:100%;font-size:13px;min-width:460px}
+  table.semplice th,table.semplice td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:right;
+    font-variant-numeric:tabular-nums}
+  table.semplice th:first-child,table.semplice td:first-child{text-align:left;color:var(--ink2)}
+  table.semplice th{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  table.semplice tr:last-child td{border-bottom:none}
+  ul.note-lista{margin:0;padding-left:18px;font-size:13px;color:var(--ink2);line-height:1.65}
+  ul.note-lista li{margin:6px 0}
+  ul.note-lista a{color:inherit}
   .canali .riga-c{display:grid;grid-template-columns:80px 1fr 110px;gap:12px;
     align-items:center;margin-bottom:9px;font-size:12px}
   .canali .riga-c:last-child{margin-bottom:0}
@@ -173,26 +188,26 @@
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../operation/">Operation</a><a class="voce attiva" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav>
+<nav class="topbar"><div class="dentro"><a class="brand" href="../dashboard/">Paleocomplex</a><a class="voce" href="../dashboard/">Centro di controllo</a><a class="voce" href="../performance/">Performance</a><a class="voce" href="../clienti/">Clienti</a><a class="voce" href="../operation/">Operation</a><a class="voce attiva" href="../roadmap/">Roadmap</a><a class="voce" href="../report/">Report</a><a class="voce" href="../automazioni/">Automazioni</a></div></nav><script>(function(){var a=document.querySelector(".topbar a.attiva");if(a){var d=a.parentElement;d.scrollLeft=a.offsetLeft-(d.clientWidth-a.offsetWidth)/2;}})();</script>
 <div class="wrap">
 
   <header>
     <p class="eyebrow">Paleocomplex</p>
     <h1>Roadmap fino a fine 2026</h1>
-    <p class="sub">Il piano di lavoro mese per mese, aggiornato al <b>24/09/2026</b>.
+    <p class="sub">Il piano di lavoro mese per mese, aggiornato al <b>01/10/2026</b>.
     Tutto converge sul Q4: novembre è il mese che decide l'anno.</p>
   </header>
 
   <h2>Obiettivi</h2>
   <p class="h2sub">Serie target concordata nella riunione del 7 agosto 2026. Valori lordi, IVA inclusa: si confrontano col fatturato lordo WooCommerce.</p>
-  <div class="card meters"><div class="voce"><div class="testa"><span class="q">Q1</span><span class="valori"><b>183K €</b> / 165K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q2</span><span class="valori"><b>235K €</b> / 210K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q3 · in corso</span><span class="valori"><b>134K €</b> / 190K €</span></div><div class="track"><div class="fill" style="width:70.3%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q4</span><span class="valori"><b>-</b> / 240K €</span></div><div class="track"><div class="fill" style="width:0.0%"></div></div></div><p class="nota">Anno: 551K € maturati su 805K € (68%).</p></div>
+  <div class="card meters"><div class="voce"><div class="testa"><span class="q">Q1</span><span class="valori"><b>183K €</b> / 165K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q2</span><span class="valori"><b>235K €</b> / 210K €</span></div><div class="track"><div class="fill pieno" style="width:100.0%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q3</span><span class="valori"><b>146K €</b> / 190K €</span></div><div class="track"><div class="fill" style="width:76.7%"></div></div></div><div class="voce"><div class="testa"><span class="q">Q4 · in corso</span><span class="valori"><b>0K €</b> / 240K €</span></div><div class="track"><div class="fill" style="width:0.0%"></div></div></div><p class="nota">Anno: 563K € maturati su 805K € (70%).</p></div>
 
   <h2>Mese per mese</h2>
   <p class="h2sub">Temi e attività principali da qui a dicembre.</p>
   <div class="mesecard"><div class="qm">Settembre · Q3</div><h3>Costruire il Q4</h3><ul><li>Test campagna multinutrienti: landing online, ads in partenza</li><li>Studio di posizionamento: secondo pezzo da mostrare a Lorenzo</li><li>Mese della cassa: spesa ads ridotta, lista email in cadenza settimanale</li><li>Preparazione campagne Black Friday (creatività, email, offerta)</li><li>Template unico per le pagine prodotto su tutto il catalogo</li><li>Confronto prezzi ed etichette con i competitor</li><li>Spinta acquisizione con i video (ads + organico)</li><li>Prima valutazione risultati CRM predittivo</li><li>Valutazione presenza Fiera Vita Food Milano (19-20 novembre)</li></ul></div><div class="mesecard"><div class="qm">Ottobre · Q4</div><h3>Rifinitura pre Black Friday</h3><ul><li>Campagne e sequenze Black Friday pronte e testate</li><li>Contenuti editoriali d'autunno (colesterolo e vitamina D, tiroide)</li><li>Lista email calda: cadenza editoriale senza promo pesanti</li><li>Verifica stock e logistica per novembre</li></ul></div><div class="mesecard"><div class="qm">Novembre · Q4</div><h3>Black Friday</h3><ul><li>Promo Black Friday: 16-22 novembre</li><li>Black Friday ufficiale: 27 novembre</li><li>È il mese più importante dell'anno: tutto il lavoro di agosto-ottobre converge qui</li></ul></div><div class="mesecard"><div class="qm">Dicembre · Q4</div><h3>Natale e chiusura anno</h3><ul><li>Promo Natale: date da definire</li><li>Bilancio 2026 e piano 2027</li></ul></div>
 
 <footer>
-  <p>Generato da <code>scripts/dashboard.py</code>. Lordo = totale ordini IVA inclusa; netto IVA = vendite meno le tasse, come da WooCommerce. Target 2026 in valori lordi. Ultimo aggiornamento: <b>24/09/2026</b>.</p>
+  <p>Lordo = totale degli ordini, IVA e spedizioni incluse, come il target 2026; netto IVA = vendite meno le tasse registrate da WooCommerce. Ultimo aggiornamento: <b>01/10/2026</b>.</p>
 </footer>
 </div>
 </body>
