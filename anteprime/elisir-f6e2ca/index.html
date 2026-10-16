@@ -1,0 +1,1726 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elisir · anteprima della pagina prodotto</title>
+<style>html,body{margin:0;padding:0;background:#FAFAF7}</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style id="pc-chrome-css">
+/*
+  Header, pre-footer e footer Paleocomplex (tema figlio, senza Elementor)
+  Versione 1.0.4, 2026-10-14
+  Generato da output/website/header-preview.html v2.8 con le regole blindate sugli id
+  (#pc-topbar, #pc-hdr, #pc-pre, #pc-ftr). Si modifica l'anteprima e si rigenera.
+*/
+/* Difese contro reset di Hello e kit di Elementor: i bottoni e i link dei tre blocchi
+   non ereditano bordi, sfondi al passaggio del mouse, maiuscole o transizioni dal tema. */
+#pc-topbar,#pc-hdr,#pc-pre,#pc-ftr{text-align:left}
+#pc-hdr button,#pc-pre button,#pc-ftr button{border-radius:0;box-shadow:none;text-transform:none;letter-spacing:normal;white-space:normal;min-height:0;min-width:0;transition:none;text-shadow:none}
+#pc-hdr a,#pc-pre a,#pc-ftr a{box-shadow:none;text-shadow:none;font-weight:inherit;font-family:inherit}
+#pc-hdr ul,#pc-pre ul,#pc-ftr ul{margin:0;padding:0;list-style:none}
+#pc-hdr li,#pc-pre li,#pc-ftr li{margin:0}
+#pc-hdr p,#pc-pre p,#pc-ftr p,#pc-ftr h2{margin:0}
+#pc-hdr img,#pc-ftr img{max-width:none}
+#pc-hdr input,#pc-ftr input{box-shadow:none;transition:none}
+#pc-ftr .pc-logo-invert{filter:brightness(0) invert(1)}
+#pc-hdr .pc-mega-grid{grid-auto-flow:column;grid-auto-columns:minmax(150px,max-content)}
+#pc-hdr .pc-mega{width:max-content;max-width:calc(100vw - 48px)}
+/* Rimbalzo di iPhone a fine pagina: sotto il footer si vede il suo colore, non il bianco */
+html{background-color:#1A1A1A}
+/* Header fisso: The Plus Addons (body.plus_row_scroll_overflow) e i template prodotto Elementor (html, body)
+   mettono overflow-x:hidden sul body, che cosi' diventa un contenitore di scorrimento e lo sticky non funziona.
+   clip taglia lo stesso quello che sborda di lato ma non crea il contenitore. Specificita' bassa apposta:
+   i blocchi di scorrimento voluti (popup Klaviyo, galleria WooCommerce aperta) restano piu' forti. */
+html body,html body.plus_row_scroll_overflow{overflow-x:clip}
+@supports not (overflow:clip){html{overflow-x:hidden}html body,html body.plus_row_scroll_overflow{overflow-x:visible}}
+
+/* ===== Header Paleocomplex (produzione) ===== */
+#pc-topbar,#pc-hdr{
+  --pc-ink:#1A1A1A;--pc-paper:#FAFAF7;--pc-paper-dim:#F2EEE4;--pc-surface:#FFFFFF;
+  --pc-bronze:#8B6F47;--pc-bronze-light:#B08D5B;--pc-line:#EDE5D3;--pc-text2:#555555;
+  --pc-serif:'Cormorant Garamond',Georgia,serif;
+  --pc-sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+#pc-topbar *,#pc-hdr *,#pc-hdr *::before,#pc-hdr *::after{box-sizing:border-box}
+
+/* Top bar */
+#pc-topbar{background:var(--pc-ink);color:var(--pc-paper);font:500 13px/1.4 var(--pc-sans);letter-spacing:.1em;text-align:center;padding:11px 16px;margin:0}
+#pc-topbar strong{color:var(--pc-bronze-light);font-weight:600}
+#pc-topbar .pc-topbar-sep{margin:0 .8em;color:var(--pc-bronze-light)}
+
+/* Barra */
+#pc-hdr{position:sticky;top:0;z-index:9000;background:var(--pc-paper);border-bottom:1px solid var(--pc-line);color:var(--pc-ink);font-family:var(--pc-sans)}
+.admin-bar #pc-hdr{top:32px}
+#pc-hdr .pc-hdr-in{max-width:1200px;margin:0 auto;padding:0 32px;height:64px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+#pc-hdr a,#pc-hdr button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#pc-hdr :focus-visible{outline:2px solid var(--pc-bronze);outline-offset:2px;border-radius:4px}
+
+/* Logo */
+#pc-hdr .pc-hdr-logo{justify-self:start;display:flex;align-items:center;padding:10px 0}
+#pc-hdr .pc-hdr-logo img{display:block;height:24px;width:auto}
+
+/* Navigazione desktop */
+#pc-hdr .pc-hdr-nav{align-self:stretch;height:100%}
+#pc-hdr .pc-nav{display:flex;align-items:stretch;height:100%;margin:0;padding:0;list-style:none}
+#pc-hdr .pc-nav-item{position:relative;display:flex;align-items:center}
+#pc-hdr .pc-nav-trigger,#pc-hdr .pc-nav-link{appearance:none;background:none;border:0;margin:0;padding:0 16px;height:100%;display:flex;align-items:center;gap:7px;font:500 15px/1 var(--pc-sans);letter-spacing:.01em;color:var(--pc-ink);text-decoration:none;cursor:pointer}
+#pc-hdr .pc-nav-label{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1.5px;text-underline-offset:7px}
+#pc-hdr .pc-chev{width:10px;height:6px;color:var(--pc-bronze);transition:transform .2s ease-out}
+#pc-hdr .pc-nav-item.is-open .pc-nav-label{text-decoration-color:var(--pc-bronze)}
+#pc-hdr .pc-nav-item.is-open .pc-chev{transform:rotate(180deg)}
+
+/* Megamenu */
+#pc-hdr .pc-mega{position:absolute;top:100%;left:50%;z-index:2;background:var(--pc-surface);border:1px solid var(--pc-line);border-radius:0 0 4px 4px;padding:30px 36px 32px;opacity:0;visibility:hidden;transform:translate(-50%,-4px);transition:opacity .16s ease-out,transform .16s ease-out,visibility 0s linear .16s}
+#pc-hdr .pc-nav-item.is-open>.pc-mega{opacity:1;visibility:visible;transform:translate(-50%,0);transition-delay:0s}
+#pc-hdr .pc-mega-grid{display:grid;gap:0 48px}
+#pc-hdr .pc-mega-title{font:600 12px/1.2 var(--pc-sans);letter-spacing:.15em;text-transform:uppercase;color:var(--pc-bronze);margin:4px 0 12px}
+#pc-hdr .pc-mega ul{list-style:none;margin:0;padding:0}
+#pc-hdr .pc-mega a{display:block;padding:7px 0;font:400 15px/1.35 var(--pc-sans);color:var(--pc-ink);text-decoration:none}
+#pc-hdr .pc-mega .pc-mega-main a{font:600 23px/1.15 var(--pc-serif);padding:6px 0}
+
+/* Icone */
+#pc-hdr .pc-hdr-act{justify-self:end;display:flex;align-items:center;gap:2px}
+#pc-hdr .pc-hdr-icon{position:relative;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:0;padding:0;margin:0;color:var(--pc-ink);text-decoration:none;cursor:pointer;border-radius:4px}
+#pc-hdr .pc-hdr-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+#pc-hdr .pc-cart-count{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--pc-ink);color:var(--pc-paper);font:600 11px/18px var(--pc-sans);text-align:center;pointer-events:none}
+#pc-hdr .pc-cart-count[data-count="0"]{display:none}
+
+/* Hamburger */
+#pc-hdr .pc-burger{display:none}
+#pc-hdr .pc-burger-lines{position:relative;width:22px;height:14px}
+#pc-hdr .pc-burger-lines span{position:absolute;left:0;width:22px;height:1.5px;background:var(--pc-ink);border-radius:1px;transition:transform .2s ease-out,opacity .2s ease-out}
+#pc-hdr .pc-burger-lines span:nth-child(1){top:0}
+#pc-hdr .pc-burger-lines span:nth-child(2){top:6.25px}
+#pc-hdr .pc-burger-lines span:nth-child(3){top:12.5px}
+#pc-hdr .pc-burger.is-open .pc-burger-lines span:nth-child(1){transform:translateY(6.25px) rotate(45deg)}
+#pc-hdr .pc-burger.is-open .pc-burger-lines span:nth-child(2){opacity:0}
+#pc-hdr .pc-burger.is-open .pc-burger-lines span:nth-child(3){transform:translateY(-6.25px) rotate(-45deg)}
+
+/* Ricerca */
+#pc-hdr .pc-search-row{border-top:1px solid var(--pc-line);background:var(--pc-paper);padding:16px 32px}
+#pc-hdr .pc-search-row[hidden]{display:none}
+#pc-hdr .pc-search{max-width:720px;margin:0 auto;display:flex;gap:8px;align-items:center}
+#pc-hdr .pc-search input[type="search"]{flex:1;min-width:0;height:52px;padding:0 16px;font:400 17px/1 var(--pc-sans);color:var(--pc-ink);background:var(--pc-surface);border:1px solid var(--pc-line);border-radius:4px;outline:none;-webkit-appearance:none;appearance:none}
+#pc-hdr .pc-search input[type="search"]:focus{border-color:var(--pc-bronze)}
+#pc-hdr .pc-search input::placeholder{color:#6E685D}
+#pc-hdr .pc-search-go{height:52px;padding:0 24px;background:var(--pc-ink);color:var(--pc-paper);border:0;border-radius:4px;font:600 15px/1 var(--pc-sans);letter-spacing:.03em;cursor:pointer}
+
+/* Menu da telefono */
+#pc-hdr .pc-mnav{position:fixed;left:0;right:0;bottom:0;top:var(--pc-mnav-top,56px);z-index:3;background:var(--pc-paper);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:12px 20px calc(40px + env(safe-area-inset-bottom,0px));transform:translateX(100%);visibility:hidden;transition:transform .26s cubic-bezier(.22,1,.36,1),visibility 0s linear .26s}
+#pc-hdr .pc-mnav.is-open{transform:none;visibility:visible;transition-delay:0s}
+#pc-hdr .pc-mnav .pc-search{margin:0 0 8px}
+#pc-hdr .pc-mnav .pc-search-go{padding:0 18px}
+#pc-hdr .pc-msec{border-bottom:1px solid var(--pc-line)}
+#pc-hdr .pc-macc-btn,#pc-hdr .pc-mlink{width:100%;min-height:64px;display:flex;align-items:center;justify-content:space-between;padding:12px 0;margin:0;background:none;border:0;font:500 20px/1.2 var(--pc-sans);letter-spacing:.005em;color:var(--pc-ink);text-align:left;text-decoration:none;cursor:pointer;-webkit-user-select:none;user-select:none}
+#pc-hdr .pc-plus{position:relative;width:18px;height:18px;flex:none}
+#pc-hdr .pc-plus::before,#pc-hdr .pc-plus::after{content:"";position:absolute;background:var(--pc-bronze);border-radius:1px}
+#pc-hdr .pc-plus::before{left:0;right:0;top:8.25px;height:1.5px}
+#pc-hdr .pc-plus::after{top:0;bottom:0;left:8.25px;width:1.5px;transition:transform .2s ease-out}
+#pc-hdr .pc-macc-btn[aria-expanded="true"] .pc-plus::after{transform:scaleY(0)}
+#pc-hdr .pc-msub{padding:0 0 18px}
+#pc-hdr .pc-msub[hidden]{display:none}
+#pc-hdr .pc-msub a{display:block;padding:11px 0;font:400 17px/1.4 var(--pc-sans);color:var(--pc-text2);text-decoration:none}
+#pc-hdr .pc-msub a.pc-mmain{font-weight:500;color:var(--pc-ink)}
+#pc-hdr .pc-mgroup{font:600 12px/1.2 var(--pc-sans);letter-spacing:.15em;text-transform:uppercase;color:var(--pc-bronze);padding:20px 0 6px}
+#pc-hdr .pc-macct{display:flex;align-items:center;gap:12px;min-height:56px;padding:16px 0 0;font:500 16px/1.3 var(--pc-sans);color:var(--pc-ink);text-decoration:none}
+#pc-hdr .pc-macct svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+html.pc-lock{overflow:hidden}
+html.pc-lock #pc-hdr{z-index:100000}
+#pc-hdr{transition:transform .22s ease-out}
+#pc-hdr.pc-hdr-hidden{transform:translateY(-100%)}
+
+/* Hover solo dove c'e' un mouse */
+@media (hover:hover){
+  #pc-hdr .pc-nav-item.has-mega:hover>.pc-mega{opacity:1;visibility:visible;transform:translate(-50%,0);transition-delay:0s}
+  #pc-hdr .pc-nav-item:hover .pc-nav-label{text-decoration-color:var(--pc-bronze)}
+  #pc-hdr .pc-nav-item.has-mega:hover .pc-chev{transform:rotate(180deg)}
+  #pc-hdr .pc-mega a:hover,#pc-hdr .pc-hdr-icon:hover,#pc-hdr .pc-msub a:hover,#pc-hdr .pc-macct:hover{color:var(--pc-bronze)}
+  #pc-hdr .pc-search-go:hover{background:var(--pc-bronze)}
+}
+
+/* Telefono e tablet */
+@media (max-width:899px){
+  #pc-topbar .pc-topbar-sep,#pc-topbar .pc-topbar-2{display:none}
+  #pc-hdr .pc-hdr-in{height:56px;padding:0 6px 0 16px;grid-template-columns:1fr auto;gap:8px}
+  #pc-hdr .pc-hdr-logo img{height:19px}
+  #pc-hdr .pc-hdr-nav,#pc-hdr .pc-hdr-search-btn,#pc-hdr .pc-search-row{display:none}
+  #pc-hdr .pc-burger{display:inline-flex}
+}
+@media (min-width:900px){#pc-hdr .pc-mnav{display:none}}
+@media (max-width:782px){.admin-bar #pc-hdr{top:46px}}
+@media (max-width:600px){.admin-bar #pc-hdr{top:0}}
+@media (prefers-reduced-motion:reduce){
+  #pc-hdr,#pc-hdr *,#pc-hdr .pc-mnav,#pc-hdr .pc-mega{transition:none!important}
+}
+
+/* ===== Pre-footer Paleocomplex (produzione) ===== */
+#pc-pre{
+  --pc-ink:#1A1A1A;--pc-paper-dim:#F2EEE4;--pc-bronze:#8B6F47;--pc-line:#EDE5D3;--pc-text2:#555555;
+  --pc-sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--pc-paper-dim);border-top:1px solid var(--pc-line);color:var(--pc-ink);font-family:var(--pc-sans);-webkit-font-smoothing:antialiased;
+}
+#pc-pre *,#pc-pre *::before,#pc-pre *::after{box-sizing:border-box}
+#pc-pre .pc-pre-in{max-width:1200px;margin:0 auto;padding:44px 32px}
+#pc-pre .pc-pre-track{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;list-style:none;margin:0;padding:0}
+#pc-pre .pc-pre-item{text-align:center;padding:0 8px}
+#pc-pre .pc-pre-ico{display:block;width:34px;height:34px;margin:0 auto 14px;fill:none;stroke:var(--pc-bronze);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#pc-pre .pc-pre-title{font:600 16px/1.3 var(--pc-sans);color:var(--pc-ink);margin:0 0 6px}
+#pc-pre .pc-pre-text{font:400 15px/1.5 var(--pc-sans);color:var(--pc-text2);margin:0 auto;max-width:20em}
+#pc-pre .pc-pre-dots{display:none}
+@media (max-width:999px){
+  #pc-pre .pc-pre-track{grid-template-columns:repeat(2,1fr);gap:32px 24px}
+}
+/* Telefono: una voce alla volta, a scorrimento */
+@media (max-width:719px){
+  #pc-pre .pc-pre-in{padding:36px 16px 20px}
+  #pc-pre .pc-pre-track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  #pc-pre .pc-pre-track::-webkit-scrollbar{display:none}
+  #pc-pre .pc-pre-item{flex:0 0 100%;scroll-snap-align:center;padding:0 16px}
+  #pc-pre .pc-pre-dots{display:flex;justify-content:center;gap:2px;margin:14px 0 0;padding:0;list-style:none}
+  #pc-pre .pc-pre-dots button{appearance:none;background:none;border:0;padding:0;width:40px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  #pc-pre .pc-pre-dots button::before{content:"";display:block;width:24px;height:3px;border-radius:2px;background:#D9CFBC;transition:background-color .2s ease-out}
+  #pc-pre .pc-pre-dots button[aria-current="true"]::before{background:var(--pc-ink)}
+}
+@media (prefers-reduced-motion:reduce){#pc-pre .pc-pre-dots button::before{transition:none}}
+
+/* ===== Footer Paleocomplex (produzione) ===== */
+#pc-ftr{
+  --pc-ink:#1A1A1A;--pc-paper:#FAFAF7;--pc-bronze:#8B6F47;--pc-bronze-light:#B08D5B;
+  --pc-ftr-line:rgba(250,250,247,.14);--pc-ftr-soft:rgba(250,250,247,.72);--pc-ftr-dim:rgba(250,250,247,.6);
+  --pc-serif:'Cormorant Garamond',Georgia,serif;
+  --pc-sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--pc-ink);color:var(--pc-paper);font-family:var(--pc-sans);-webkit-font-smoothing:antialiased;
+}
+#pc-ftr *,#pc-ftr *::before,#pc-ftr *::after{box-sizing:border-box}
+#pc-ftr a,#pc-ftr button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#pc-ftr :focus-visible{outline:2px solid var(--pc-bronze-light);outline-offset:2px;border-radius:4px}
+#pc-ftr .pc-ftr-in{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+#pc-ftr .pc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Newsletter */
+#pc-ftr .pc-ftr-nl{border-bottom:1px solid var(--pc-ftr-line)}
+#pc-ftr .pc-ftr-nl-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:56px;padding-bottom:56px}
+#pc-ftr .pc-ftr-nl-title{font:600 34px/1.1 var(--pc-serif);color:var(--pc-paper);margin:0 0 10px}
+#pc-ftr .pc-ftr-nl-text{font:400 16px/1.6 var(--pc-sans);color:var(--pc-ftr-soft);margin:0;max-width:30em}
+#pc-ftr .pc-ftr-form{display:flex;gap:8px}
+#pc-ftr .pc-ftr-form input[type="email"]{flex:1;min-width:0;height:52px;padding:0 16px;background:transparent;border:1px solid rgba(250,250,247,.35);border-radius:4px;color:var(--pc-paper);font:400 17px/1 var(--pc-sans);outline:none;-webkit-appearance:none;appearance:none}
+#pc-ftr .pc-ftr-form input::placeholder{color:var(--pc-ftr-dim)}
+#pc-ftr .pc-ftr-form input:focus{border-color:var(--pc-bronze-light)}
+#pc-ftr .pc-ftr-form button{height:52px;padding:0 26px;background:var(--pc-paper);color:var(--pc-ink);border:0;border-radius:4px;font:600 15px/1 var(--pc-sans);letter-spacing:.03em;cursor:pointer}
+#pc-ftr .pc-ftr-note{font:400 13px/1.5 var(--pc-sans);color:var(--pc-ftr-dim);margin:10px 0 0}
+#pc-ftr .pc-ftr-note a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#pc-ftr .pc-ftr-ok{font:500 16px/1.5 var(--pc-sans);color:var(--pc-paper);margin:0}
+
+/* Brand e colonne */
+#pc-ftr .pc-ftr-main{padding-top:56px;padding-bottom:56px}
+#pc-ftr .pc-ftr-cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:44px}
+#pc-ftr .pc-ftr-logo{display:inline-block;margin:0 0 18px}
+#pc-ftr .pc-ftr-logo img{display:block;height:26px;width:auto}
+#pc-ftr .pc-ftr-pos{font:400 16px/1.55 var(--pc-sans);color:var(--pc-paper);margin:0 0 12px;max-width:24em}
+#pc-ftr .pc-ftr-tm{font:400 12.5px/1.5 var(--pc-sans);color:var(--pc-ftr-dim);margin:0;max-width:30em}
+#pc-ftr .pc-ftr-social{display:flex;gap:2px;list-style:none;margin:16px 0 0 -12px;padding:0}
+#pc-ftr .pc-ftr-social a{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;color:var(--pc-paper);border-radius:4px}
+#pc-ftr .pc-ftr-social svg{width:20px;height:20px;fill:currentColor}
+#pc-ftr .pc-ftr-h{margin:0}
+#pc-ftr .pc-ftr-acc{appearance:none;background:none;border:0;margin:6px 0 12px;padding:0;width:100%;display:flex;align-items:center;justify-content:space-between;font:600 12px/1.2 var(--pc-sans);letter-spacing:.15em;text-transform:uppercase;color:var(--pc-bronze-light);text-align:left;pointer-events:none;cursor:default}
+#pc-ftr .pc-ftr-acc::after{content:"+";display:none;flex:none;font:400 24px/1 var(--pc-sans);color:var(--pc-bronze-light)}
+#pc-ftr .pc-ftr-acc[aria-expanded="true"]::after{content:"\2212"}
+#pc-ftr .pc-ftr-list{list-style:none;margin:0;padding:0}
+#pc-ftr .pc-ftr-list[hidden]{display:block}
+#pc-ftr .pc-ftr-list a{display:block;padding:7px 0;font:400 15px/1.4 var(--pc-sans);color:var(--pc-paper);text-decoration:none}
+
+/* Recensioni su una riga */
+#pc-ftr .pc-ftr-rev{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 14px;padding:18px 24px;border:1px solid var(--pc-ftr-line);border-radius:4px;color:var(--pc-paper);text-decoration:none;text-align:center}
+#pc-ftr .pc-ftr-stars{color:var(--pc-bronze-light);font-size:16px;letter-spacing:.12em;line-height:1}
+#pc-ftr .pc-ftr-score{font:400 15px/1.3 var(--pc-sans);color:var(--pc-ftr-soft)}
+#pc-ftr .pc-ftr-score strong{font:600 18px/1 var(--pc-sans);color:var(--pc-paper);margin-right:2px}
+#pc-ftr .pc-ftr-dot{color:var(--pc-bronze-light)}
+#pc-ftr .pc-ftr-revtxt{font:400 15px/1.4 var(--pc-sans);color:var(--pc-paper)}
+#pc-ftr .pc-ftr-revlink{font:500 15px/1.4 var(--pc-sans);color:var(--pc-bronze-light);text-decoration:underline;text-underline-offset:4px}
+
+/* Barra in fondo */
+#pc-ftr .pc-ftr-bar{border-top:1px solid var(--pc-ftr-line)}
+#pc-ftr .pc-ftr-bar-in{padding-top:22px;padding-bottom:28px}
+#pc-ftr .pc-ftr-row{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap}
+#pc-ftr .pc-ftr-paywrap{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+#pc-ftr .pc-ftr-paylabel{font:600 12px/1.2 var(--pc-sans);letter-spacing:.15em;text-transform:uppercase;color:var(--pc-bronze-light)}
+#pc-ftr .pc-ftr-pay{display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+#pc-ftr .pc-pay{height:32px;min-width:48px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(250,250,247,.22);border-radius:4px;color:rgba(250,250,247,.88)}
+#pc-ftr .pc-pay svg{display:block;fill:currentColor}
+#pc-ftr .pc-pay-visa svg{height:11px;width:auto}
+#pc-ftr .pc-pay-mc svg{height:17px;width:auto}
+#pc-ftr .pc-pay-pp svg{height:17px;width:auto}
+#pc-ftr .pc-pay-txt{font:500 13px/1 var(--pc-sans);letter-spacing:.02em}
+#pc-ftr .pc-ftr-links{display:flex;flex-wrap:wrap;gap:0 18px;list-style:none;margin:0;padding:0}
+#pc-ftr .pc-ftr-links a{display:inline-block;padding:6px 0;font:400 13px/1.6 var(--pc-sans);color:rgba(250,250,247,.78);text-decoration:none}
+#pc-ftr .pc-ftr-company{font:400 13px/1.6 var(--pc-sans);color:var(--pc-ftr-dim);margin:16px 0 0;padding-top:16px;border-top:1px solid var(--pc-ftr-line)}
+
+@media (hover:hover){
+  #pc-ftr .pc-ftr-list a:hover,#pc-ftr .pc-ftr-links a:hover,#pc-ftr .pc-ftr-social a:hover{color:var(--pc-bronze-light)}
+  #pc-ftr .pc-ftr-rev:hover{border-color:var(--pc-bronze-light)}
+  #pc-ftr .pc-ftr-form button:hover{background:var(--pc-bronze);color:var(--pc-paper)}
+}
+@media (max-width:999px){
+  #pc-ftr .pc-ftr-cols{grid-template-columns:repeat(3,1fr);gap:40px 32px}
+  #pc-ftr .pc-ftr-brand{grid-column:1/-1}
+}
+/* Telefono: voci a scomparsa come nella pagina FAQ */
+@media (max-width:719px){
+  #pc-ftr .pc-ftr-in{padding-left:20px;padding-right:20px}
+  #pc-ftr .pc-ftr-nl-in{grid-template-columns:1fr;gap:20px;padding-top:44px;padding-bottom:44px}
+  #pc-ftr .pc-ftr-nl-title{font-size:28px}
+  #pc-ftr .pc-ftr-form{flex-direction:column}
+  #pc-ftr .pc-ftr-form input[type="email"]{flex:none;width:100%}
+  #pc-ftr .pc-ftr-main{padding-top:44px;padding-bottom:44px}
+  #pc-ftr .pc-ftr-cols{display:block;margin-bottom:12px}
+  #pc-ftr .pc-ftr-brand{margin-bottom:32px}
+  #pc-ftr .pc-ftr-logo img{height:22px}
+  #pc-ftr .pc-ftr-sec{border:1px solid var(--pc-ftr-line);border-radius:4px;margin-bottom:12px}
+  #pc-ftr .pc-ftr-acc{margin:0;min-height:60px;padding:16px 20px;font:500 18px/1.3 var(--pc-sans);letter-spacing:0;text-transform:none;color:var(--pc-paper);pointer-events:auto;cursor:pointer;-webkit-user-select:none;user-select:none}
+  #pc-ftr .pc-ftr-acc::after{display:block}
+  #pc-ftr .pc-ftr-acc[aria-expanded="true"]{border-bottom:1px solid var(--pc-ftr-line)}
+  #pc-ftr .pc-ftr-list{padding:6px 20px 12px}
+  #pc-ftr .pc-ftr-list[hidden]{display:none}
+  #pc-ftr .pc-ftr-list a{padding:11px 0;font-size:16px}
+  #pc-ftr .pc-ftr-rev{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 12px;text-align:left;padding:14px 20px;min-height:60px}
+  #pc-ftr .pc-ftr-rev::after{content:"\203A";grid-column:2;grid-row:1/3;font:400 26px/1 var(--pc-sans);color:var(--pc-bronze-light)}
+  #pc-ftr .pc-ftr-revtxt{font-size:14px;color:var(--pc-ftr-soft)}
+  #pc-ftr .pc-ftr-dot,#pc-ftr .pc-ftr-revlink{display:none}
+  #pc-ftr .pc-ftr-row{flex-direction:column;align-items:flex-start}
+}
+
+
+@media (prefers-reduced-motion:reduce){#pc-pdp .pc-gallery{transition:none}}
+</style>
+
+<style>#pc-pdp .pc-cr-ph{border:1.5px dashed var(--line);border-radius:4px;padding:16px 18px;background:var(--surface);font-size:15px;line-height:1.5;color:var(--text2)}</style>
+</head>
+<body class="page">
+<p class="pc-topbar" id="pc-topbar"><span class="pc-topbar-1"><strong>Spedizione gratuita</strong> sopra i 200 €</span><span class="pc-topbar-sep" aria-hidden="true">·</span><span class="pc-topbar-2">Ordini entro le 14:00 <strong>spediti in giornata</strong></span></p>
+
+<header class="pc-hdr" id="pc-hdr">
+  <div class="pc-hdr-in">
+
+    <a class="pc-hdr-logo" href="https://paleocomplex.com/">
+      <img id="pc-logo" src="asset/header/logo-manico-24px-web.svg" width="2112" height="218" alt="Paleocomplex" fetchpriority="high">
+    </a>
+
+    <nav class="pc-hdr-nav" aria-label="Menu principale">
+      <ul class="pc-nav">
+        <li class="pc-nav-item has-mega">
+          <button class="pc-nav-trigger" type="button" aria-expanded="false" aria-controls="pc-mega-shop">
+            <span class="pc-nav-label">Shop</span>
+            <svg class="pc-chev" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pc-mega pc-mega-shop" id="pc-mega-shop">
+            <div class="pc-mega-grid">
+              <div>
+                <ul class="pc-mega-main">
+                  <li><a href="#" data-missing>Più venduti</a></li>
+                  <li><a href="https://paleocomplex.com/promozioni/">Promozioni</a></li>
+                  <li><a href="https://paleocomplex.com/integratori/">Tutti i prodotti</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="pc-mega-title">Per obiettivo</p>
+                <ul>
+                  <li><a href="#" data-missing>Energia e stress</a></li>
+                  <li><a href="#" data-missing>Capelli, pelle, unghie</a></li>
+                  <li><a href="#" data-missing>Mobilità e articolazioni</a></li>
+                  <li><a href="#" data-missing>Supporto immunitario</a></li>
+                  <li><a href="#" data-missing>Muscoli e performance</a></li>
+                  <li><a href="#" data-missing>Salute del cuore</a></li>
+                  <li><a href="https://paleocomplex.com/anti-aging/">Anti-aging</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="pc-mega-title">Categorie</p>
+                <ul>
+                  <li><a href="#" data-missing>Multinutrienti</a></li>
+                  <li><a href="#" data-missing>Collagene</a></li>
+                  <li><a href="#" data-missing>Aminoacidi e sport</a></li>
+                  <li><a href="#" data-missing>Detox e fegato</a></li>
+                  <li><a href="#" data-missing>Anti-aging cellulare</a></li>
+                  <li><a href="#" data-missing>Supporto ormonale</a></li>
+                  <li><a href="https://paleocomplex.com/prodotto/vitamina-d/">Vitamina D</a></li>
+                  <li><a href="https://paleocomplex.com/prodotto/lampada-apollo/">Fotobiomodulazione</a></li>
+                  <li><a href="https://paleocomplex.com/occhiali/">Blue Blocker</a></li>
+                  <li><a href="https://paleocomplex.com/libri/">Libri</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="pc-nav-item has-mega">
+          <button class="pc-nav-trigger" type="button" aria-expanded="false" aria-controls="pc-mega-scopri">
+            <span class="pc-nav-label">Scopri</span>
+            <svg class="pc-chev" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pc-mega pc-mega-scopri" id="pc-mega-scopri">
+            <div class="pc-mega-grid">
+              <div>
+                <p class="pc-mega-title">Impara</p>
+                <ul>
+                  <li><a href="https://paleocomplex.com/articoli/">Blog</a></li>
+                  <li><a href="https://www.youtube.com/@paleocomplex">Canale YouTube</a></li>
+                  <li><a href="https://paleocomplex.com/perche-integrare/">Perché integrare</a></li>
+                  <li><a href="https://paleocomplex.com/guida-scelta/">Guida alla scelta</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="pc-mega-title">Supporto</p>
+                <ul>
+                  <li><a href="https://paleocomplex.com/testimonianze/">Testimonianze</a></li>
+                  <li><a href="https://paleocomplex.com/faq/">Domande frequenti</a></li>
+                  <li><a href="https://paleocomplex.com/spedizioni/">Spedizioni e resi</a></li>
+                  <li><a href="https://paleocomplex.com/contatti/">Contatti</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="pc-nav-item">
+          <a class="pc-nav-link" href="#" data-missing><span class="pc-nav-label">Chi siamo</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="pc-hdr-act">
+      <button class="pc-hdr-icon pc-hdr-search-btn" type="button" aria-label="Cerca" aria-expanded="false" aria-controls="pc-search-row">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      </button>
+      <a class="pc-hdr-icon" href="https://paleocomplex.com/my-account/" aria-label="Il mio account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a class="pc-hdr-icon pc-hdr-cart" href="https://paleocomplex.com/cart/" aria-label="Carrello">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="pc-cart-count" data-count="0" aria-hidden="true">0</span>
+      </a>
+      <button class="pc-hdr-icon pc-burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="pc-mnav">
+        <span class="pc-burger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="pc-search-row" id="pc-search-row" hidden>
+    <form class="pc-search" role="search" action="https://paleocomplex.com/" method="get">
+      <label for="pc-s" class="screen-reader-text" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Cerca nel sito</label>
+      <input type="search" id="pc-s" name="s" placeholder="Cerca un prodotto" autocomplete="off">
+      <input type="hidden" name="post_type" value="product">
+      <button class="pc-search-go" type="submit">Cerca</button>
+    </form>
+  </div>
+
+  <div class="pc-mnav" id="pc-mnav" aria-label="Menu" inert>
+    <form class="pc-search" role="search" action="https://paleocomplex.com/" method="get">
+      <label for="pc-ms" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Cerca nel sito</label>
+      <input type="search" id="pc-ms" name="s" placeholder="Cerca un prodotto" autocomplete="off">
+      <input type="hidden" name="post_type" value="product">
+      <button class="pc-search-go" type="submit">Cerca</button>
+    </form>
+
+    <div class="pc-msec">
+      <button class="pc-macc-btn" type="button" aria-expanded="false" aria-controls="pc-msub-shop">Shop <span class="pc-plus" aria-hidden="true"></span></button>
+      <div class="pc-msub" id="pc-msub-shop" hidden>
+        <a class="pc-mmain" href="#" data-missing>Più venduti</a>
+        <a class="pc-mmain" href="https://paleocomplex.com/promozioni/">Promozioni</a>
+        <a class="pc-mmain" href="https://paleocomplex.com/integratori/">Tutti i prodotti</a>
+        <p class="pc-mgroup">Per obiettivo</p>
+        <a href="#" data-missing>Energia e stress</a>
+        <a href="#" data-missing>Capelli, pelle, unghie</a>
+        <a href="#" data-missing>Mobilità e articolazioni</a>
+        <a href="#" data-missing>Supporto immunitario</a>
+        <a href="#" data-missing>Muscoli e performance</a>
+        <a href="#" data-missing>Salute del cuore</a>
+        <a href="https://paleocomplex.com/anti-aging/">Anti-aging</a>
+        <p class="pc-mgroup">Categorie</p>
+        <a href="#" data-missing>Multinutrienti</a>
+        <a href="#" data-missing>Collagene</a>
+        <a href="#" data-missing>Aminoacidi e sport</a>
+        <a href="#" data-missing>Detox e fegato</a>
+        <a href="#" data-missing>Anti-aging cellulare</a>
+        <a href="#" data-missing>Supporto ormonale</a>
+        <a href="https://paleocomplex.com/prodotto/vitamina-d/">Vitamina D</a>
+        <a href="https://paleocomplex.com/prodotto/lampada-apollo/">Fotobiomodulazione</a>
+        <a href="https://paleocomplex.com/occhiali/">Blue Blocker</a>
+        <a href="https://paleocomplex.com/libri/">Libri</a>
+      </div>
+    </div>
+
+    <div class="pc-msec">
+      <button class="pc-macc-btn" type="button" aria-expanded="false" aria-controls="pc-msub-scopri">Scopri <span class="pc-plus" aria-hidden="true"></span></button>
+      <div class="pc-msub" id="pc-msub-scopri" hidden>
+        <p class="pc-mgroup">Impara</p>
+        <a href="https://paleocomplex.com/articoli/">Blog</a>
+        <a href="https://www.youtube.com/@paleocomplex">Canale YouTube</a>
+        <a href="https://paleocomplex.com/perche-integrare/">Perché integrare</a>
+        <a href="https://paleocomplex.com/guida-scelta/">Guida alla scelta</a>
+        <p class="pc-mgroup">Supporto</p>
+        <a href="https://paleocomplex.com/testimonianze/">Testimonianze</a>
+        <a href="https://paleocomplex.com/faq/">Domande frequenti</a>
+        <a href="https://paleocomplex.com/spedizioni/">Spedizioni e resi</a>
+        <a href="https://paleocomplex.com/contatti/">Contatti</a>
+      </div>
+    </div>
+
+    <div class="pc-msec">
+      <a class="pc-mlink" href="#" data-missing>Chi siamo</a>
+    </div>
+
+    <a class="pc-macct" href="https://paleocomplex.com/my-account/">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Il mio account
+    </a>
+  </div>
+</header>
+<main id="content">
+<div id="pc-pdp">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+#pc-pdp{--ink:#1A1A1A;--paper:#FAFAF7;--paper-dim:#F2EEE4;--bronze:#8B6F47;--bronze-light:#B08D5B;--line:#EDE5D3;--muted:#6E685D;--text2:#555555;--surface:#FFFFFF;--dark:#14130F;--serif:'Cormorant Garamond',Georgia,serif;--sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%;overflow-x:clip}
+#pc-pdp *,#pc-pdp *::before,#pc-pdp *::after{box-sizing:border-box;margin:0;padding:0}
+#pc-pdp img{display:block;max-width:100%}
+#pc-pdp a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+#pc-pdp a,#pc-pdp button,#pc-pdp summary,#pc-pdp label{touch-action:manipulation}
+#pc-pdp h1,#pc-pdp h2,#pc-pdp h3{font-family:var(--serif);font-weight:600;color:var(--ink);text-wrap:balance}
+#pc-pdp h1{line-height:1.08;letter-spacing:-0.01em}
+#pc-pdp strong{font-weight:600}
+#pc-pdp em{font-style:italic}
+#pc-pdp .pc-container{width:100%;max-width:1140px;margin:0 auto;padding:0 22px}
+#pc-pdp .pc-narrow{width:100%;max-width:644px;margin:0 auto;padding:0 22px}
+#pc-pdp .pc-tlink{text-decoration:underline;text-decoration-color:var(--bronze);text-decoration-thickness:1.5px;text-underline-offset:4px}
+#pc-pdp .pc-local{display:none}
+#pc-pdp.pc-is-local .pc-local{display:block}
+
+/* Galleria */
+#pc-pdp .pc-hero{padding:16px 0 44px}
+#pc-pdp .pc-gallery{margin-bottom:24px}
+#pc-pdp .pc-slides{display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+#pc-pdp .pc-slides::-webkit-scrollbar{display:none}
+#pc-pdp .pc-slides:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+#pc-pdp .pc-slide{scroll-snap-align:start;scroll-snap-stop:always;aspect-ratio:1/1;overflow:hidden;background:var(--paper-dim)}
+#pc-pdp .pc-slide img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-slide.pc-contain img{object-fit:contain}
+#pc-pdp .pc-slide.pc-white{background:var(--surface)}
+#pc-pdp .pc-thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:10px}
+@media (max-width:1023px){#pc-pdp .pc-thumbs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 54px) / 6.5);overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;padding:3px;margin:7px -3px 0;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}#pc-pdp .pc-thumbs::-webkit-scrollbar{display:none}#pc-pdp .pc-thumbs.is-end{-webkit-mask-image:none;mask-image:none}}
+#pc-pdp .pc-thumb{display:block;aspect-ratio:1/1;border:1.5px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper-dim);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#pc-pdp .pc-thumb img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-thumb.is-on{border-color:var(--ink)}
+#pc-pdp .pc-thumb:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+
+/* Testa */
+#pc-pdp .pc-head-top{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:18px}
+#pc-pdp .pc-chip{display:inline-flex;align-items:center;border:1px solid var(--bronze);color:var(--bronze);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;line-height:1.2;white-space:nowrap}
+#pc-pdp .pc-proof{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 8px;font-size:15px;font-weight:500;color:var(--ink);line-height:1.4;padding:8px 0;margin:-8px 0}
+#pc-pdp .pc-stars{color:var(--bronze);letter-spacing:2px;font-size:15px;line-height:1}
+#pc-pdp .pc-proof span+span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--bronze)}
+#pc-pdp .pc-eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;line-height:1.4}
+#pc-pdp .pc-head h1{font-size:40px;margin-bottom:16px}
+#pc-pdp .pc-lead{font-size:18px;line-height:1.6;max-width:42em}
+#pc-pdp .pc-facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+#pc-pdp .pc-facts li{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:14px 6px 12px;text-align:center}
+#pc-pdp .pc-facts strong{display:block;font-family:var(--sans);font-size:30px;font-weight:600;letter-spacing:-0.01em;line-height:1;color:var(--ink)}
+#pc-pdp .pc-facts span{display:block;font-size:13px;line-height:1.3;color:var(--muted);margin-top:7px}
+
+/* Blocco acquisto */
+#pc-pdp .pc-buy{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 18px 20px;scroll-margin-top:calc(var(--pc-hdr-h,0px) + 24px)}
+#pc-pdp .pc-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+#pc-pdp .pc-price{font-family:var(--sans);font-size:40px;font-weight:600;letter-spacing:-0.01em;line-height:1;color:var(--ink)}
+#pc-pdp .pc-vat{font-size:14px;color:var(--text2)}
+#pc-pdp .pc-perday{margin-top:8px;font-size:15px;font-weight:500;color:var(--bronze)}
+#pc-pdp .pc-packs{display:grid;gap:14px;margin-top:22px}
+#pc-pdp .pc-pack{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:2px;align-items:start;border:1.5px solid var(--line);border-radius:4px;padding:14px 16px 14px 48px;cursor:pointer;background:var(--paper);-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+#pc-pdp .pc-pack input{position:absolute;left:16px;top:17px;width:20px;height:20px;margin:0;accent-color:var(--ink);cursor:pointer}
+#pc-pdp .pc-pack.is-on{border-color:var(--ink);background:var(--surface)}
+#pc-pdp .pc-pack:has(input:focus-visible){outline:2px solid var(--bronze);outline-offset:2px}
+#pc-pdp .pc-pack-main{display:flex;flex-direction:column;min-width:0}
+#pc-pdp .pc-pack-qty{font-size:17px;font-weight:600;line-height:1.3}
+#pc-pdp .pc-pack-days{font-size:14px;color:var(--muted);line-height:1.4}
+#pc-pdp .pc-pack-days em{font-style:normal;font-weight:600;color:var(--bronze);white-space:nowrap}
+#pc-pdp .pc-pack-unit{grid-column:2;grid-row:1;align-self:start;text-align:right;font-family:var(--sans);font-size:22px;font-weight:600;letter-spacing:-0.01em;line-height:1;white-space:nowrap}
+#pc-pdp .pc-pack-unit small{display:block;margin-top:5px;font-size:12px;font-weight:500;letter-spacing:0;color:var(--muted)}
+#pc-pdp .pc-final .pc-pack-unit small{color:rgba(250,250,247,.72)}
+#pc-pdp .pc-pack-sub{grid-column:1 / -1;font-size:14px;line-height:1.5;color:var(--text2);margin-top:4px}
+#pc-pdp .pc-pack-badge{position:absolute;top:-11px;right:12px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;line-height:1.3}
+#pc-pdp .pc-btn{display:flex;width:100%;align-items:center;justify-content:center;min-height:54px;margin-top:18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);border-radius:4px;font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.03em;cursor:pointer;transition:background-color .2s ease-out,border-color .2s ease-out;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;-webkit-appearance:none;appearance:none}
+#pc-pdp .pc-btn:active{background:var(--bronze);border-color:var(--bronze)}
+#pc-pdp .pc-btn:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+#pc-pdp .pc-small{margin-top:10px;font-size:14px;color:var(--text2);text-align:center;line-height:1.5}
+#pc-pdp .pc-trust{list-style:none;margin-top:18px;display:grid;gap:8px}
+#pc-pdp .pc-trust li{position:relative;padding-left:24px;font-size:15px;line-height:1.5}
+#pc-pdp .pc-trust li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--bronze);font-weight:700}
+#pc-pdp .pc-deliv{margin-top:18px;font-size:15px;line-height:1.5;color:var(--ink);text-align:center}
+#pc-pdp .pc-deliv-date{font-weight:600}
+#pc-pdp .pc-deliv-timer{display:inline-block;margin-left:.3em;font-variant-numeric:tabular-nums}
+#pc-pdp .pc-deliv-timer:empty{display:none}
+#pc-pdp .pc-deliv+.pc-btn{margin-top:10px}
+#pc-pdp .pc-deliv .pc-ref{margin-right:-4px}
+#pc-pdp .pc-final .pc-deliv{color:rgba(250,250,247,.85)}
+#pc-pdp .pc-final .pc-deliv-date{color:var(--paper)}
+#pc-pdp .pc-final .pc-deliv .pc-ref{color:var(--bronze-light)}
+#pc-pdp .pc-link{display:inline-block;margin-top:10px;color:var(--bronze);text-decoration:underline;text-underline-offset:4px;font-weight:500;font-size:16px;line-height:1.4;padding:8px 0}
+#pc-pdp .pc-acc{border-top:1px solid var(--line);margin-top:16px}
+#pc-pdp .pc-acc+.pc-acc{margin-top:0}
+#pc-pdp .pc-acc:last-child{border-bottom:1px solid var(--line)}
+#pc-pdp .pc-acc summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;cursor:pointer;font-family:var(--serif);font-size:23px;font-weight:600;line-height:1.2;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+#pc-pdp .pc-acc summary::-webkit-details-marker{display:none}
+#pc-pdp .pc-acc summary::after{content:"+";font-family:var(--sans);font-size:24px;font-weight:400;line-height:1;color:var(--bronze);flex:0 0 auto;width:28px;text-align:center}
+#pc-pdp .pc-acc[open] summary::after{content:"\2212"}
+#pc-pdp .pc-acc summary:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+#pc-pdp .pc-acc-body p{font-size:16px;line-height:1.65;padding:0 0 18px;max-width:600px}
+#pc-pdp .pc-acc-body a{color:var(--bronze);text-decoration:underline;text-underline-offset:4px}
+
+/* Ancore */
+#pc-pdp .pc-anchors{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+#pc-pdp .pc-anchors ul{list-style:none;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain;margin:0 -22px;padding:0 14px}
+#pc-pdp .pc-anchors ul::-webkit-scrollbar{display:none}
+#pc-pdp .pc-anchors li{flex:0 0 auto}
+#pc-pdp .pc-anchors a{display:flex;align-items:center;min-height:48px;padding:0 10px;font-size:15px;font-weight:500;color:var(--ink);white-space:nowrap;border-bottom:2px solid transparent}
+#pc-pdp .pc-anchors a:active{border-bottom-color:var(--bronze)}
+#pc-pdp .pc-anchors a:focus-visible{outline:2px solid var(--bronze);outline-offset:-2px}
+@media (hover:hover) and (pointer:fine){
+  #pc-pdp .pc-btn:hover{background:var(--bronze);border-color:var(--bronze)}
+  #pc-pdp .pc-anchors a:hover{border-bottom-color:var(--bronze)}
+  #pc-pdp .pc-thumb:hover{border-color:var(--bronze)}
+}
+@media (min-width:720px){
+  #pc-pdp{font-size:19px}
+  #pc-pdp .pc-hero{padding:32px 0 64px}
+  #pc-pdp .pc-hero-grid{max-width:600px;margin:0 auto}
+  #pc-pdp .pc-head h1{font-size:52px}
+  #pc-pdp .pc-buy{padding:28px 26px 24px}
+  #pc-pdp .pc-anchors ul{justify-content:center;margin:0;padding:0}
+}
+@media (min-width:1024px){
+  #pc-pdp .pc-hero-grid{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+  #pc-pdp .pc-gallery{position:sticky;top:calc(var(--pc-hdr-offset,0px) + 24px);transition:top .22s ease-out;margin-bottom:0}
+}
+/* Sezioni */
+#pc-pdp .pc-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#pc-pdp .pc-section{padding:56px 0;scroll-margin-top:calc(var(--pc-hdr-h,0px) + 16px)}
+#pc-pdp .pc-dim{background:var(--paper-dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#pc-pdp .pc-shead{text-align:center;max-width:40em;margin:0 auto 32px}
+#pc-pdp .pc-kicker{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px;line-height:1.3;margin-bottom:14px}
+#pc-pdp .pc-shead h2{font-size:32px;line-height:1.1;letter-spacing:-0.01em}
+#pc-pdp .pc-shead h2::after{content:"";display:block;width:56px;height:3px;background:var(--bronze);margin:16px auto 0}
+#pc-pdp .pc-shead p{margin:18px auto 0;line-height:1.65;max-width:600px;text-align:left}
+#pc-pdp .pc-shead .pc-kicker{margin:0 0 14px;font-size:12px;line-height:1.3;max-width:none}
+#pc-pdp .pc-sub{font-size:28px;line-height:1.15;text-align:center;margin:48px 0 14px}
+#pc-pdp .pc-sub-first{margin-top:0}
+#pc-pdp .pc-gap{margin-top:24px}
+#pc-pdp .pc-prose p{margin:0 auto 14px;max-width:600px;text-align:left}
+#pc-pdp .pc-center{text-align:center}
+#pc-pdp .pc-nw{white-space:nowrap}
+#pc-pdp .pc-ref{display:inline-block;font-size:.66em;line-height:1;vertical-align:super;color:var(--bronze);font-weight:600;padding:2px 3px;margin:-2px -1px}
+#pc-pdp .pc-dim .pc-ref{color:var(--ink)}
+
+/* Benefici */
+#pc-pdp .pc-tiles{display:grid;gap:14px}
+#pc-pdp .pc-tile{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:24px 22px 20px}
+#pc-pdp .pc-tile h3{font-size:25px;line-height:1.2;margin-bottom:10px}
+#pc-pdp .pc-tile-ico{display:flex;align-items:center;justify-content:center;flex:none;width:52px;height:52px;border-radius:50%;background:var(--paper-dim);margin-bottom:16px}
+#pc-pdp .pc-tile-ico svg{width:26px;height:26px;fill:none;stroke:var(--bronze);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#pc-pdp .pc-tile p{line-height:1.6}
+#pc-pdp .pc-tile .pc-tile-nutr{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:15px;line-height:1.55;color:var(--text2)}
+
+/* Tabelle */
+#pc-pdp table.pc-tbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);font-size:16px;line-height:1.45}
+#pc-pdp table.pc-tbl th,#pc-pdp table.pc-tbl td{padding:13px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+#pc-pdp table.pc-tbl tbody tr:last-child th,#pc-pdp table.pc-tbl tbody tr:last-child td{border-bottom:0}
+#pc-pdp table.pc-tbl thead th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);background:var(--paper);line-height:1.35}
+#pc-pdp table.pc-tbl tbody th{font-weight:600}
+#pc-pdp table.pc-tbl .pc-us{background:var(--paper);font-weight:600}
+#pc-pdp table.pc-tbl thead th.pc-us{color:var(--ink)}
+#pc-pdp table.pc-tbl .pc-off{color:var(--text2)}
+#pc-pdp .pc-ing{display:flex;align-items:center;gap:14px}
+#pc-pdp .pc-ing-pic{flex:0 0 52px;width:52px;height:52px;border-radius:50%;overflow:hidden;background:var(--paper-dim);border:1px solid var(--line)}
+#pc-pdp .pc-ing-pic img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-ing-name{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.15}
+#pc-pdp .pc-forme{margin-top:22px}
+#pc-pdp .pc-also{margin:18px auto 0;max-width:540px;font-size:16px;color:var(--text2)}
+#pc-pdp .pc-callout{margin:22px auto 0;max-width:640px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px 20px;font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.35;text-align:center}
+
+/* Valori nutrizionali */
+#pc-pdp .pc-nutri{max-width:860px;margin:0 auto}
+#pc-pdp .pc-ntbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);font-size:16px;line-height:1.4;margin-top:18px}
+#pc-pdp .pc-ntbl th,#pc-pdp .pc-ntbl td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+#pc-pdp .pc-ntbl tbody tr:last-child th,#pc-pdp .pc-ntbl tbody tr:last-child td{border-bottom:0}
+#pc-pdp .pc-ntbl thead th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);background:var(--paper);vertical-align:bottom}
+#pc-pdp .pc-ntbl thead th:first-child{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink)}
+#pc-pdp .pc-ntbl tbody th{font-weight:500}
+#pc-pdp .pc-ntbl .pc-amt{font-weight:600;white-space:nowrap}
+#pc-pdp .pc-ntbl .pc-vnr{color:var(--text2);white-space:nowrap}
+#pc-pdp .pc-ntbl .pc-mx{text-align:center;color:var(--bronze);width:1%}
+#pc-pdp .pc-form{color:var(--text2);font-weight:400}
+#pc-pdp .pc-dot{color:var(--bronze)}
+#pc-pdp .pc-box{max-width:860px;margin:28px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 22px 20px}
+#pc-pdp .pc-box h3{font-size:24px;line-height:1.2;margin-bottom:8px}
+#pc-pdp .pc-box p{max-width:600px}
+#pc-pdp .pc-inglist{max-width:560px;margin:24px auto 0;font-size:15px;line-height:1.65;color:var(--text2)}
+#pc-pdp .pc-inglist strong{color:var(--ink)}
+#pc-pdp .pc-label-link{display:block;max-width:560px;margin:6px auto 0}
+#pc-pdp .pc-label-link a{display:inline-block;padding:10px 0;font-weight:500;font-size:16px}
+@media (max-width:719px){
+  #pc-pdp table.pc-cards{border:0;background:transparent}
+  #pc-pdp table.pc-cards thead{display:none}
+  #pc-pdp table.pc-cards tbody,#pc-pdp table.pc-cards tr{display:block}
+  #pc-pdp table.pc-cards tr{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:14px 16px 12px;margin-bottom:10px}
+  #pc-pdp table.pc-cards th,#pc-pdp table.pc-cards td{display:block;border:0;padding:0}
+  #pc-pdp table.pc-cards tbody th{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.2;margin-bottom:8px}
+  #pc-pdp table.pc-cards td{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px solid var(--paper-dim);font-size:15px;line-height:1.45}
+  #pc-pdp table.pc-cards td::before{content:attr(data-label);font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);line-height:1.35;padding-top:2px}
+  #pc-pdp table.pc-cards td.pc-us{background:var(--paper);margin:0 -16px;padding:8px 16px;border-top:1px solid var(--line)}
+  #pc-pdp table.pc-cards td.pc-us:last-child{margin-bottom:-12px;padding-bottom:11px;border-radius:0 0 4px 4px}
+  #pc-pdp table.pc-cards td.pc-us::before{color:var(--ink)}
+  #pc-pdp .pc-ing-pic{flex-basis:64px;width:64px;height:64px}
+  #pc-pdp .pc-ing-name{font-size:22px}
+  #pc-pdp .pc-ntbl{display:block;border-radius:4px}
+  #pc-pdp .pc-ntbl thead,#pc-pdp .pc-ntbl tbody{display:block}
+  #pc-pdp .pc-ntbl thead tr{display:block}
+  #pc-pdp .pc-ntbl thead th{display:none}
+  #pc-pdp .pc-ntbl thead th:first-child{display:block;padding:12px 14px}
+  #pc-pdp .pc-ntbl tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto 18px;column-gap:10px;row-gap:1px;padding:10px 14px;border-bottom:1px solid var(--line)}
+  #pc-pdp .pc-ntbl tbody tr:last-child{border-bottom:0}
+  #pc-pdp .pc-ntbl tbody th,#pc-pdp .pc-ntbl tbody td{display:block;padding:0;border:0}
+  #pc-pdp .pc-ntbl tbody th{grid-column:1;grid-row:1 / span 2}
+  #pc-pdp .pc-ntbl .pc-amt{grid-column:2;grid-row:1;text-align:right}
+  #pc-pdp .pc-ntbl .pc-vnr{grid-column:2;grid-row:2;text-align:right;font-size:13.5px}
+  #pc-pdp .pc-ntbl .pc-vnr::before{content:"VNR ";font-size:11px;letter-spacing:.06em;color:var(--muted)}
+  #pc-pdp .pc-ntbl .pc-vnr.pc-nil{display:none}
+  #pc-pdp .pc-ntbl .pc-mx{grid-column:3;grid-row:1;width:auto}
+}
+@media (min-width:720px){
+  #pc-pdp .pc-section{padding:80px 0}
+  #pc-pdp .pc-shead{margin-bottom:44px}
+  #pc-pdp .pc-shead h2{font-size:38px}
+  #pc-pdp .pc-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #pc-pdp .pc-sub{font-size:32px}
+}
+@media (min-width:1024px){#pc-pdp .pc-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Perche esiste */
+#pc-pdp .pc-prose-l p{margin:0 0 16px;max-width:none}
+#pc-pdp .pc-quote{margin:26px 0 28px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 22px 20px}
+#pc-pdp .pc-quote .pc-stars{display:block;margin-bottom:12px}
+#pc-pdp .pc-quote blockquote p{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;line-height:1.45;margin:0}
+#pc-pdp .pc-quote figcaption{margin-top:12px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text2)}
+
+/* Numeri */
+#pc-pdp .pc-numbers{background:var(--ink);color:var(--paper);padding:48px 0}
+#pc-pdp .pc-nums{list-style:none;display:grid;grid-template-columns:1fr;max-width:420px;margin:0 auto}
+#pc-pdp .pc-nums li{padding:18px 0;text-align:center;border-top:1px solid rgba(250,250,247,.16)}
+#pc-pdp .pc-nums li:first-child{border-top:0;padding-top:0}
+#pc-pdp .pc-nums li:last-child{padding-bottom:0}
+#pc-pdp .pc-nums strong{display:block;font-family:var(--sans);font-size:36px;font-weight:600;letter-spacing:-0.01em;line-height:1.05;color:var(--paper)}
+#pc-pdp .pc-nums li>span{display:block;margin-top:6px;font-size:16px;line-height:1.4;color:rgba(250,250,247,.82)}
+
+/* Il valore */
+#pc-pdp .pc-bars{max-width:860px;margin:30px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:20px 18px;display:grid;gap:20px}
+#pc-pdp .pc-bar-title{font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.3}
+#pc-pdp .pc-bar-line{display:flex;flex-direction:column;gap:4px;margin-top:6px}
+#pc-pdp .pc-bar-track{flex:1 1 auto;min-width:0}
+#pc-pdp .pc-bar{height:16px;border-radius:4px;background:rgba(110,104,93,.28)}
+#pc-pdp .pc-bar.pc-bar-b{background:var(--bronze)}
+#pc-pdp .pc-bar-label{font-size:14px;line-height:1.4;color:var(--text2)}
+#pc-pdp .pc-bar-label strong{color:var(--ink)}
+#pc-pdp .pc-statement{max-width:860px;margin:24px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px 20px;text-align:center;font-size:18px;line-height:1.55}
+#pc-pdp .pc-cost-note{max-width:560px;margin:14px auto 0;font-size:14px;line-height:1.6;color:var(--text2);text-align:center}
+#pc-pdp .pc-cost-link{max-width:600px;margin:18px auto 0;text-align:center}
+#pc-pdp table.pc-cost{max-width:860px;margin:22px auto 0}
+#pc-pdp table.pc-cost td{white-space:nowrap}
+#pc-pdp table.pc-cost tr.pc-total th,#pc-pdp table.pc-cost tr.pc-total td{background:var(--ink);color:var(--paper);font-weight:600;font-size:17px;border-bottom:0}
+
+/* Recensioni */
+#pc-pdp .pc-videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:1000px;margin:0 auto}
+#pc-pdp .pc-video{position:relative;display:block;overflow:hidden;border-radius:4px;background:var(--ink);cursor:pointer;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#pc-pdp .pc-video-tall{aspect-ratio:9/16}
+#pc-pdp .pc-video-tall:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:calc(50% - 6px)}
+#pc-pdp .pc-video img{width:100%;height:100%;object-fit:cover;opacity:.88}
+#pc-pdp .pc-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#pc-pdp .pc-play{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--paper)}
+#pc-pdp .pc-play::after{content:"";position:absolute;left:22px;top:18px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent var(--ink)}
+#pc-pdp .pc-video:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+#pc-pdp .pc-cr{max-width:1000px;margin:40px auto 0}
+#pc-pdp .pc-cr-block{margin-top:18px}
+#pc-pdp.pc-is-local .pc-cr-code{font-size:13px;line-height:1.5;color:var(--text2);word-break:break-all}
+#pc-pdp.pc-is-local .pc-cr-block{border:1.5px dashed var(--line);border-radius:4px;padding:14px 16px;background:var(--surface)}
+#pc-pdp .pc-local-note{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+#pc-pdp .pc-cr-summary .cr-reviews-grid-inner{display:none}
+#pc-pdp .pc-cr-more{margin:28px auto 0;max-width:600px;text-align:center}
+@media (max-width:719px){
+  #pc-pdp table.pc-cost tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:12px;padding:12px 14px}
+  #pc-pdp table.pc-cost tbody th{grid-column:1 / -1;font-size:19px;margin-bottom:6px}
+  #pc-pdp table.pc-cost td,#pc-pdp table.pc-cost td.pc-us{display:block;margin:0;padding:0;border:0;background:none;white-space:normal;font-size:15px}
+  #pc-pdp table.pc-cost td::before{display:block;margin-bottom:2px}
+  #pc-pdp table.pc-cost tr.pc-total{background:var(--ink);border-color:var(--ink)}
+  #pc-pdp table.pc-cost tr.pc-total th,#pc-pdp table.pc-cost tr.pc-total td{background:none;font-size:17px}
+  #pc-pdp table.pc-cost tr.pc-total td::before{color:rgba(250,250,247,.75)}
+}
+@media (min-width:720px){
+  #pc-pdp .pc-numbers{padding:64px 0}
+  #pc-pdp .pc-nums{max-width:none;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+  #pc-pdp .pc-nums li,#pc-pdp .pc-nums li:first-child,#pc-pdp .pc-nums li:last-child{padding:0 14px;border-top:0;border-left:1px solid rgba(250,250,247,.16)}
+  #pc-pdp .pc-nums li:first-child{border-left:0}
+  #pc-pdp .pc-nums strong{font-size:28px}
+  #pc-pdp .pc-bars{padding:28px 30px}
+  #pc-pdp .pc-bar-line{flex-direction:row;align-items:center;gap:14px}
+  #pc-pdp .pc-bar-label{flex:0 0 300px}
+  #pc-pdp .pc-quote{padding:28px 30px}
+}
+@media (min-width:720px){
+  #pc-pdp .pc-videos{grid-template-columns:repeat(5,minmax(0,1fr))}
+  #pc-pdp .pc-video-tall:last-child:nth-child(odd){grid-column:auto;width:auto}
+}
+/* Come si usa */
+#pc-pdp .pc-steps{list-style:none;display:grid;gap:14px;align-items:start;counter-reset:pcstep;max-width:1000px;margin:0 auto}
+#pc-pdp .pc-step{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;counter-increment:pcstep}
+#pc-pdp .pc-step-img{aspect-ratio:4/3;background:var(--paper-dim)}
+#pc-pdp .pc-step-img img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-step-img.pc-s1 img{object-position:50% 42%}
+#pc-pdp .pc-step-img.pc-s2 img{object-position:12% 50%}
+#pc-pdp .pc-step-img.pc-s3 img{object-position:78% 50%}
+#pc-pdp .pc-step-img.pc-s4 img{object-position:50% 45%}
+#pc-pdp .pc-step-text{position:relative;padding:18px 20px 20px 66px;line-height:1.6}
+#pc-pdp .pc-step-text::before{content:counter(pcstep);position:absolute;left:20px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:16px;font-weight:600;line-height:32px;text-align:center}
+#pc-pdp .pc-panel{max-width:660px;margin:28px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 22px 8px}
+#pc-pdp .pc-panel h3{font-size:25px;line-height:1.2;margin-bottom:10px}
+#pc-pdp .pc-panel p{margin-bottom:14px}
+
+/* Qualita */
+#pc-pdp .pc-checks{list-style:none;max-width:40em;margin:20px auto 0;display:grid;gap:12px}
+#pc-pdp .pc-checks li{position:relative;padding-left:34px;line-height:1.55}
+#pc-pdp .pc-checks li::before{content:"\2713";position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--bronze);color:var(--paper);font-size:13px;font-weight:700;line-height:22px;text-align:center}
+
+/* Lorenzo */
+#pc-pdp .pc-founder{text-align:center;margin-bottom:24px}
+#pc-pdp .pc-fphoto{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:50% 25%;margin:4px auto 18px;border:3px solid var(--surface)}
+#pc-pdp .pc-founder h2{font-size:32px;line-height:1.1}
+#pc-pdp .pc-bio p{line-height:1.65;margin-bottom:14px}
+#pc-pdp .pc-letter{margin-top:32px;background:var(--dark);color:var(--paper);border-radius:4px;padding:30px 24px 28px}
+#pc-pdp .pc-qmark{display:block;font-family:var(--serif);font-size:96px;font-weight:600;line-height:.7;height:44px;color:var(--bronze-light)}
+#pc-pdp .pc-letter h3{color:var(--paper);font-size:28px;line-height:1.15;margin:6px 0 16px}
+#pc-pdp .pc-letter blockquote p{line-height:1.65;color:rgba(250,250,247,.88);margin-bottom:14px}
+#pc-pdp .pc-sign{margin-top:22px;padding-top:18px;border-top:1px solid rgba(176,141,91,.5)}
+#pc-pdp .pc-sign span{display:block}
+#pc-pdp .pc-sign span:first-child{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;line-height:1.3;color:var(--paper)}
+#pc-pdp .pc-sign span+span{margin-top:6px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze-light)}
+#pc-pdp .pc-note-local{border:1.5px dashed var(--bronze);border-radius:4px;padding:10px 14px;margin-bottom:18px;font-size:14px;background:var(--surface)}
+
+/* Domande */
+#pc-pdp .pc-faq-item{border-bottom:1px solid var(--line);padding:22px 0}
+#pc-pdp .pc-faq-item:first-child{border-top:1px solid var(--line)}
+#pc-pdp .pc-faq-item h3{font-size:23px;line-height:1.25;margin-bottom:8px}
+#pc-pdp .pc-faq-item p{line-height:1.65}
+#pc-pdp .pc-faq-end{margin-top:26px;text-align:center}
+
+/* Completa la tua routine */
+#pc-pdp .pc-rgrid{display:grid;gap:14px;margin-top:28px}
+#pc-pdp .pc-rcard{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:20px;display:flex;flex-direction:column}
+#pc-pdp .pc-rcard-top{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+#pc-pdp .pc-rcard-pic{flex:0 0 88px;width:88px;height:88px;border-radius:4px;overflow:hidden;background:var(--paper-dim);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+#pc-pdp .pc-rcard-pic img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-rcard h3{font-size:25px;line-height:1.15}
+#pc-pdp .pc-rcard-meta{margin-top:4px;font-size:15px;color:var(--text2);line-height:1.4}
+#pc-pdp .pc-rcard-meta strong{font-size:20px;color:var(--ink);letter-spacing:-0.01em}
+#pc-pdp .pc-rcard p.pc-rcard-text{font-size:16px;line-height:1.6;flex:1 1 auto}
+#pc-pdp .pc-btn-ghost{display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:16px;border:1.5px solid var(--ink);border-radius:4px;font-size:15px;font-weight:600;letter-spacing:.03em;color:var(--ink);transition:background-color .2s ease-out,color .2s ease-out;user-select:none;-webkit-user-select:none}
+#pc-pdp .pc-btn-ghost:active{background:var(--ink);color:var(--paper)}
+#pc-pdp .pc-btn-ghost:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){#pc-pdp .pc-btn-ghost:hover{background:var(--ink);color:var(--paper)}}
+@media (min-width:720px){
+  #pc-pdp .pc-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #pc-pdp .pc-rgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #pc-pdp .pc-letter{padding:40px 44px 36px}
+  #pc-pdp .pc-founder h2{font-size:38px}
+  #pc-pdp .pc-panel{padding:28px 30px 12px}
+}
+/* Chiusura */
+#pc-pdp .pc-final{background:var(--ink);color:var(--paper);padding:60px 0 64px;scroll-margin-top:calc(var(--pc-hdr-h,0px) + 16px)}
+#pc-pdp .pc-final-inner{max-width:520px;margin:0 auto}
+#pc-pdp .pc-final-lead{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.2;color:var(--paper);text-align:center;text-wrap:balance}
+#pc-pdp .pc-final-price{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:20px}
+#pc-pdp .pc-final .pc-price{color:var(--paper)}
+#pc-pdp .pc-final-day{font-size:15px;font-weight:500;color:var(--bronze-light)}
+#pc-pdp .pc-final .pc-pack{background:transparent;border-color:rgba(250,250,247,.24);color:var(--paper)}
+#pc-pdp .pc-final .pc-pack.is-on{border-color:var(--paper);background:rgba(250,250,247,.06)}
+#pc-pdp .pc-final .pc-pack input{accent-color:var(--bronze-light)}
+#pc-pdp .pc-final .pc-pack-days{color:rgba(250,250,247,.72)}
+#pc-pdp .pc-final .pc-pack-days em{color:var(--bronze-light)}
+#pc-pdp .pc-final .pc-pack-sub{color:rgba(250,250,247,.75)}
+#pc-pdp .pc-final .pc-pack-badge{background:var(--paper);color:var(--ink)}
+#pc-pdp .pc-final .pc-pack:has(input:focus-visible){outline-color:var(--bronze-light)}
+#pc-pdp .pc-final .pc-btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+#pc-pdp .pc-final .pc-btn:active{background:var(--bronze-light);border-color:var(--bronze-light)}
+#pc-pdp .pc-final .pc-btn:focus-visible{outline-color:var(--bronze-light)}
+
+/* Note */
+#pc-pdp .pc-notes{background:var(--paper-dim);border-bottom:1px solid var(--line);padding:44px 0 48px}
+#pc-pdp .pc-notes h2{font-size:24px;line-height:1.2;margin-bottom:14px}
+#pc-pdp .pc-notes ol{padding-left:22px;max-width:540px}
+#pc-pdp .pc-notes li{font-size:14px;line-height:1.6;color:var(--text2);margin-bottom:8px;padding-left:4px;scroll-margin-top:calc(var(--pc-hdr-h,0px) + 24px)}
+#pc-pdp .pc-notes li::marker{color:var(--ink);font-weight:600}
+#pc-pdp .pc-notes li:target{background:var(--surface);outline:1px solid var(--line)}
+#pc-pdp .pc-notes a{text-decoration:underline;text-decoration-color:var(--bronze);text-underline-offset:3px;color:var(--ink)}
+#pc-pdp .pc-warn{max-width:470px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+#pc-pdp .pc-warn p{font-size:14px;line-height:1.6;color:var(--text2);margin-bottom:8px}
+
+/* Barra fissa */
+#pc-pdp .pc-sticky{position:fixed;left:0;right:0;bottom:0;z-index:99990;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(26,26,26,.10);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));transform:translateY(110%);opacity:0;visibility:hidden;transition:transform .22s ease-out,opacity .22s ease-out,visibility 0s linear .22s}
+#pc-pdp .pc-sticky.is-shown{transform:none;opacity:1;visibility:visible;transition:transform .22s ease-out,opacity .22s ease-out}
+#pc-pdp .pc-sticky-info{display:flex;flex-direction:column;align-items:flex-start;flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap}
+#pc-pdp .pc-sticky-name{max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.15}
+#pc-pdp .pc-sticky-dot,#pc-pdp .pc-sticky-price{flex:0 0 auto}
+#pc-pdp .pc-sticky-dot{display:none}
+#pc-pdp .pc-sticky-price{font-size:17px;font-weight:600;letter-spacing:-0.01em;line-height:1.3}
+#pc-pdp .pc-sticky-btn{flex:0 0 auto;display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);border-radius:4px;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.02em;cursor:pointer;-webkit-appearance:none;appearance:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;transition:background-color .2s ease-out,border-color .2s ease-out}
+#pc-pdp .pc-sticky-btn:active{background:var(--bronze);border-color:var(--bronze)}
+#pc-pdp .pc-sticky-btn:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){
+  #pc-pdp .pc-final .pc-btn:hover{background:var(--bronze-light);border-color:var(--bronze-light)}
+  #pc-pdp .pc-sticky-btn:hover{background:var(--bronze);border-color:var(--bronze)}
+}
+@media (min-width:720px){
+  #pc-pdp .pc-sticky{display:none}
+  #pc-pdp .pc-final{padding:88px 0 92px}
+  #pc-pdp .pc-final-lead{font-size:40px}
+  #pc-pdp .pc-notes{padding:56px 0 60px}
+}
+/* Numeri nei testi in serif, in IBM Plex Sans (D82 esteso ai titoli) */
+#pc-pdp .pc-num{font-family:var(--sans);font-style:normal;letter-spacing:0}
+#pc-pdp h1 .pc-num,#pc-pdp h2 .pc-num,#pc-pdp h3 .pc-num,#pc-pdp .pc-ing-name .pc-num,#pc-pdp .pc-final-lead .pc-num,#pc-pdp .pc-ntbl thead th:first-child .pc-num{font-size:.84em;font-weight:400}
+
+/* Immagini mancanti o non caricate: niente cornici vuote */
+#pc-pdp .pc-gallery:not(:has(img)),#pc-pdp .pc-slide:not(:has(img)),#pc-pdp .pc-thumb:not(:has(img)),#pc-pdp .pc-step-img:not(:has(img)),#pc-pdp .pc-ing-pic:not(:has(img)),#pc-pdp .pc-rcard-pic:not(:has(img,svg)){display:none}
+@media (min-width:1024px){#pc-pdp .pc-hero-grid:not(:has(.pc-gallery img)){grid-template-columns:minmax(0,1fr);max-width:600px;margin:0 auto}}
+@media (max-width:719px){#pc-pdp table.pc-cards tbody th .pc-num{font-size:.84em;font-weight:400}}
+@media (max-width:359px){#pc-pdp .pc-pack{grid-template-columns:minmax(0,1fr)}#pc-pdp .pc-pack-unit{grid-column:1;grid-row:auto;align-self:start;text-align:left;margin-top:6px}}
+/* Fascia dei video */
+#pc-pdp .pc-vband{background:var(--ink)}
+#pc-pdp .pc-vband .pc-shead h2{color:var(--paper)}
+#pc-pdp .pc-vband .pc-shead h2::after{background:var(--bronze-light)}
+#pc-pdp .pc-vband .pc-kicker{background:transparent;border-color:rgba(250,250,247,.24);color:var(--bronze-light)}
+
+/* Testi chiusi e sfumati, con il bottone che li apre */
+#pc-pdp .pc-fold.is-folded{overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
+#pc-pdp #pc-fold-valori.is-folded{max-height:560px}
+#pc-pdp .pc-fold-btn{display:flex;width:100%;max-width:860px;margin:14px auto 0;align-items:center;justify-content:center;min-height:52px;padding:0 18px;border:1.5px solid var(--ink);border-radius:4px;background:transparent;font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.03em;color:var(--ink);cursor:pointer;-webkit-appearance:none;appearance:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;transition:background-color .2s ease-out,color .2s ease-out}
+#pc-pdp .pc-fold-btn[hidden]{display:none}
+#pc-pdp .pc-fold-btn:active{background:var(--ink);color:var(--paper)}
+#pc-pdp .pc-fold-btn:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+#pc-pdp .pc-fold-btn.pc-fold-btn-m{display:none;max-width:560px}
+#pc-pdp table.pc-cost tr.pc-more-row{display:none}
+@media (hover:hover) and (pointer:fine){#pc-pdp .pc-fold-btn:hover{background:var(--ink);color:var(--paper)}}
+@media (min-width:720px){#pc-pdp .pc-fold-m.is-folded{overflow:visible;-webkit-mask-image:none;mask-image:none}#pc-pdp .pc-ntbl{table-layout:fixed}#pc-pdp .pc-ntbl thead th:nth-child(1){width:52%}#pc-pdp .pc-ntbl thead th:nth-child(2){width:22%}#pc-pdp .pc-ntbl thead th:nth-child(3){width:14%}#pc-pdp .pc-ntbl thead th:nth-child(4){width:12%}}
+
+/* Telefono: caroselli con la card successiva tagliata a destra, sezioni chiuse */
+@media (max-width:719px){
+  #pc-pdp .pc-rail{display:grid;grid-auto-flow:column;grid-auto-columns:85%;grid-template-columns:none;align-items:stretch;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding:0 22px;overscroll-behavior-x:contain;scrollbar-width:none;margin-left:-22px;margin-right:-22px;padding:2px 22px 10px}
+  #pc-pdp .pc-rail::-webkit-scrollbar{display:none}
+  #pc-pdp .pc-rail>*{scroll-snap-align:start;min-width:0}
+  #pc-pdp .pc-videos.pc-rail{grid-auto-columns:44%}
+  #pc-pdp .pc-videos.pc-rail .pc-video-tall:last-child:nth-child(odd){grid-column:auto;justify-self:stretch;width:auto}
+  #pc-pdp .pc-steps.pc-rail{align-items:stretch}
+  #pc-pdp table.pc-ing-tbl,#pc-pdp table.pc-forme{display:block}
+  #pc-pdp table.pc-cards tbody.pc-rail{display:grid}
+  #pc-pdp table.pc-cards tbody.pc-rail tr{margin-bottom:0}
+  #pc-pdp table.pc-cards tbody.pc-rail{align-items:start}
+  #pc-pdp .pc-tiles.pc-rail .pc-tile{display:flex;flex-direction:column}
+  #pc-pdp .pc-tiles.pc-rail .pc-tile .pc-tile-nutr{margin-top:auto}
+  #pc-pdp .pc-tiles.pc-rail .pc-tile p:not(.pc-tile-nutr){margin-bottom:16px}
+  #pc-pdp .pc-fold-m.is-folded{max-height:9.6em}
+  #pc-pdp .pc-fold-btn.pc-fold-btn-m:not([hidden]){display:flex}
+  #pc-pdp table.pc-cost tr.pc-more-row:not([hidden]){display:block;padding:0 0 10px;border:0;background:none}
+  #pc-pdp table.pc-cost tr.pc-more-row td{padding:0}
+  #pc-pdp table.pc-cost tr.pc-more-row td::before{display:none}
+  #pc-pdp table.pc-cost tr.pc-more-row .pc-fold-btn{margin-top:0}
+  #pc-pdp table.pc-cost.is-folded tbody tr:nth-child(n+3):not(.pc-total):not(.pc-more-row){display:none}
+  #pc-pdp table.pc-cost.is-folded tr.pc-fade-row{-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 85%);mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 85%);cursor:pointer}
+}
+/* Forme: spunta sulla forma di Elisir, card piu strette */
+#pc-pdp .pc-yes{display:inline-flex;align-items:center;justify-content:center;flex:0 0 20px;width:20px;height:20px;margin-right:8px;border-radius:50%;background:var(--bronze)}
+#pc-pdp .pc-yes::before{content:"\2713";color:var(--paper);font-size:12px;font-weight:700;line-height:1}
+#pc-pdp .pc-val{display:inline-flex;align-items:center}
+@media (min-width:720px){#pc-pdp table.pc-forme{max-width:860px;margin-left:auto;margin-right:auto}}
+@media (max-width:719px){
+  #pc-pdp table.pc-forme tbody.pc-rail{grid-auto-columns:64%}
+  #pc-pdp table.pc-forme td{grid-template-columns:minmax(0,1fr);gap:3px}
+  #pc-pdp table.pc-forme td .pc-val{display:flex;align-items:flex-start}
+  #pc-pdp table.pc-forme td .pc-yes{margin-top:1px}
+  #pc-pdp table.pc-forme tbody th{font-size:21px}
+  #pc-pdp .pc-rail{--fl:0px;--fr:44px;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%)}
+  #pc-pdp .pc-rail.is-scrolled{--fl:28px}
+  #pc-pdp .pc-rail.is-end{--fr:0px}
+}
+/* v1.4: elenco ingredienti a due righe, numeri 2 per 2, galleria con l'inizio della slide successiva */
+@media (max-width:719px){
+  #pc-pdp .pc-fold-m.is-folded{max-height:50px;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 45%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 45%,transparent 100%)}
+  #pc-pdp .pc-nums{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}
+  #pc-pdp .pc-nums li,#pc-pdp .pc-nums li:first-child,#pc-pdp .pc-nums li:last-child{padding:18px 10px;border-top:0}
+  #pc-pdp .pc-nums li:nth-child(odd){border-right:1px solid rgba(250,250,247,.16)}
+  #pc-pdp .pc-nums li:nth-child(-n+2){border-bottom:1px solid rgba(250,250,247,.16)}
+  #pc-pdp .pc-nums strong{font-size:28px;text-wrap:balance}
+  #pc-pdp .pc-nums li>span{font-size:15px}
+  #pc-pdp .pc-slides{margin-right:-22px;padding-right:22px;column-gap:8px;border:0;border-radius:0;background:transparent;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),rgba(0,0,0,.35) calc(100% - 14px),transparent 100%);mask-image:linear-gradient(to right,#000 calc(100% - 22px),rgba(0,0,0,.35) calc(100% - 14px),transparent 100%)}
+  #pc-pdp .pc-slide{border:1px solid var(--line);border-radius:4px}
+}
+/* v1.4: Top seller e recensioni sopra la galleria */
+#pc-pdp .pc-hero-grid>.pc-head-top{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:14px}
+#pc-pdp .pc-hero-grid>.pc-head-top .pc-proof{font-size:14px;gap:4px 8px}
+#pc-pdp .pc-hero-grid>.pc-head-top .pc-stars{font-size:14px;letter-spacing:1px}
+#pc-pdp .pc-fold-m{margin-top:24px}
+#pc-pdp .pc-fold-m>.pc-inglist{margin-top:0}
+@media (min-width:1024px){#pc-pdp .pc-hero-grid>.pc-head-top{grid-column:1 / -1;margin-bottom:-28px}}
+/* v1.5: domande a scomparsa, stesso stile delle voci del blocco acquisto */
+#pc-pdp .pc-faq .pc-acc{margin-top:0}
+#pc-pdp .pc-faq .pc-acc:first-child{border-top:1px solid var(--line)}
+#pc-pdp .pc-faq-acc summary{align-items:flex-start;padding:18px 0}
+#pc-pdp .pc-faq-acc summary h3{flex:1 1 auto;min-width:0;font-size:inherit;line-height:1.25;margin:0;color:inherit}
+#pc-pdp .pc-faq-acc summary::after{margin-top:2px}
+/* v1.7: foto nelle sezioni */
+#pc-pdp .pc-fig{margin:24px 0 28px;border-radius:4px;overflow:hidden;background:var(--paper-dim)}
+#pc-pdp .pc-fig img{width:100%;height:100%;object-fit:cover}
+#pc-pdp .pc-ba{display:grid;gap:6px;background:transparent}
+#pc-pdp .pc-ba-item{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:4px}
+#pc-pdp .pc-ba-tag{position:absolute;left:12px;bottom:12px;background:var(--ink);color:var(--paper);font-size:14px;font-weight:600;line-height:1.2;padding:6px 12px;border-radius:999px}
+#pc-pdp .pc-ba-tag.pc-ba-light{background:var(--paper);color:var(--ink)}
+#pc-pdp .pc-fig-c{aspect-ratio:4/3;max-width:600px;margin-left:auto;margin-right:auto}
+#pc-pdp .pc-fig-c img{object-position:50% 50%}
+#pc-pdp .pc-fig-p{aspect-ratio:3/2}
+@media (min-width:720px){#pc-pdp .pc-ba{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){#pc-pdp *{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<section class="pc-hero" aria-label="Elisir">
+  <div class="pc-container">
+    <div class="pc-hero-grid">
+
+      <div class="pc-head-top">
+        <span class="pc-chip">Top seller</span>
+        <a class="pc-proof" href="#recensioni"><span class="pc-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4,9 · +1.000 recensioni e testimonianze</span></a>
+      </div>
+
+      <div class="pc-gallery">
+        <div class="pc-slides" tabindex="0" aria-label="Immagini di Elisir: scorri per vederle tutte">
+          <figure class="pc-slide" id="pc-img-1"><img src="asset/elisir-galleria-01.jpg" alt="Barattolo di Elisir con tre fatti: 40 nutrienti, un misurino al giorno, 40 giorni." width="1200" height="1200" fetchpriority="high"></figure>
+          <figure class="pc-slide" id="pc-img-2"><img src="asset/elisir-galleria-02.jpg" alt="Dieci barattoli di integratori sul tavolo e, sotto, un solo barattolo di Elisir: un misurino al posto di dieci barattoli." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-3"><img src="asset/elisir-galleria-03.jpg" alt="Cosa fa Elisir: energia, difese immunitarie, protezione delle cellule, cuore e cervello, ossa e muscoli, con i nutrienti che li sostengono." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-4"><img src="asset/elisir-galleria-04.jpg" alt="Gli otto ingredienti che un multivitaminico comune non ha, con la dose per misurino." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-5"><img src="asset/elisir-galleria-05.jpg" alt="Le forme comuni a confronto con le forme usate in Elisir, per otto nutrienti." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-6"><img src="asset/elisir-galleria-06.jpg" alt="Barre a confronto tra il 100% del valore di riferimento e la dose di Elisir, al massimo di legge, per Vitamina D, B6, biotina e Vitamina E." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-7"><img src="asset/elisir-galleria-07.jpg" alt="Un misurino di polvere accanto a quindici compresse: per i nutrienti di un misurino servirebbero 12-15 compresse al giorno." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-8"><img src="asset/elisir-galleria-08.jpg" alt="Il conto degli stessi ingredienti comprati a parte, da 305 a 470 euro per 40 giorni, contro 139 euro di Elisir." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-9"><img src="asset/elisir-galleria-09.jpg" alt="Come si usa Elisir in tre passi: un misurino colmo, in acqua fresca, dopo colazione o pranzo." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-10"><img src="asset/elisir-galleria-10.jpg" alt="Riquadro dei valori nutrizionali dell'etichetta di Elisir." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-11"><img src="asset/elisir-galleria-11.jpg" alt="Confezionamento di integratori in polvere: prodotto e confezionato in Italia, con certificazione ISO 9001 e GMP." width="1200" height="1200" loading="lazy"></figure>
+          <figure class="pc-slide" id="pc-img-12"><img src="asset/elisir-galleria-12.jpg" alt="Valutazione 4,9 su oltre 1.000 recensioni e testimonianze, con la recensione di un cliente di Elisir." width="1200" height="1200" loading="lazy"></figure>
+        </div>
+        <div class="pc-thumbs">
+          <a class="pc-thumb is-on" href="#pc-img-1" aria-current="true"><img src="asset/elisir-galleria-01-300.jpg" alt="Miniatura 1 di 12: Barattolo di Elisir con tre fatti: 40 nutrienti, un misurino al giorno, 40 giorni" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-2"><img src="asset/elisir-galleria-02-300.jpg" alt="Miniatura 2 di 12: Dieci barattoli di integratori sul tavolo e, sotto, un solo barattolo di Elisir: un misurino al posto di dieci barattoli" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-3"><img src="asset/elisir-galleria-03-300.jpg" alt="Miniatura 3 di 12: Cosa fa Elisir: energia, difese immunitarie, protezione delle cellule, cuore e cervello, ossa e muscoli, con i nutrienti che li sostengono" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-4"><img src="asset/elisir-galleria-04-300.jpg" alt="Miniatura 4 di 12: Gli otto ingredienti che un multivitaminico comune non ha, con la dose per misurino" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-5"><img src="asset/elisir-galleria-05-300.jpg" alt="Miniatura 5 di 12: Le forme comuni a confronto con le forme usate in Elisir, per otto nutrienti" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-6"><img src="asset/elisir-galleria-06-300.jpg" alt="Miniatura 6 di 12: Barre a confronto tra il 100% del valore di riferimento e la dose di Elisir, al massimo di legge, per Vitamina D, B6, biotina e Vitamina E" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-7"><img src="asset/elisir-galleria-07-300.jpg" alt="Miniatura 7 di 12: Un misurino di polvere accanto a quindici compresse: per i nutrienti di un misurino servirebbero 12-15 compresse al giorno" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-8"><img src="asset/elisir-galleria-08-300.jpg" alt="Miniatura 8 di 12: Il conto degli stessi ingredienti comprati a parte, da 305 a 470 euro per 40 giorni, contro 139 euro di Elisir" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-9"><img src="asset/elisir-galleria-09-300.jpg" alt="Miniatura 9 di 12: Come si usa Elisir in tre passi: un misurino colmo, in acqua fresca, dopo colazione o pranzo" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-10"><img src="asset/elisir-galleria-10-300.jpg" alt="Miniatura 10 di 12: Riquadro dei valori nutrizionali dell'etichetta di Elisir" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-11"><img src="asset/elisir-galleria-11-300.jpg" alt="Miniatura 11 di 12: Confezionamento di integratori in polvere: prodotto e confezionato in Italia, con certificazione ISO 9001 e GMP" width="300" height="300" loading="lazy"></a>
+          <a class="pc-thumb" href="#pc-img-12"><img src="asset/elisir-galleria-12-300.jpg" alt="Miniatura 12 di 12: Valutazione 4,9 su oltre 1.000 recensioni e testimonianze, con la recensione di un cliente di Elisir" width="300" height="300" loading="lazy"></a>
+        </div>
+      </div>
+
+      <div class="pc-hero-main">
+        <div class="pc-head">
+          <p class="pc-eyebrow">L'ammiraglia dei nostri Multinutrienti</p>
+          <h1>Elisir, un misurino al posto di dieci barattoli</h1>
+          <p class="pc-lead">Più di un multivitaminico: vitamine e minerali in quantità vere, con <span class="pc-nw">Omega-3</span> da krill, glutatione e Vitamina C liposomiali, quercetina fitosomiale, trans-resveratrolo e Coenzima Q10 in forma attivata. È in polvere perché in una compressa queste quantità non ci stanno.</p>
+          <ul class="pc-facts">
+            <li><strong>40</strong><span>nutrienti</span></li>
+            <li><strong>1</strong><span>misurino al giorno</span></li>
+            <li><strong>40</strong><span>giorni a confezione</span></li>
+          </ul>
+        </div>
+
+        <div class="pc-buy" id="acquisto">
+          <div class="pc-price-row"><span class="pc-price">139&nbsp;€</span><span class="pc-vat">· IVA inclusa</span></div>
+          <p class="pc-perday">40 giorni · 3,47&nbsp;€ al giorno</p>
+          <form class="cart pc-cart" id="pc-cart-acquisto" method="post" action="https://paleocomplex.com/prodotto/elisir/" data-action="https://paleocomplex.com/prodotto/elisir/">
+            <input type="hidden" name="quantity" value="1" class="pc-qty">
+            <div class="pc-packs" role="radiogroup" aria-label="Quante confezioni">
+              <label class="pc-pack is-on" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=1">
+                <input type="radio" name="quantity" value="1" checked data-coupon="">
+                <span class="pc-pack-main"><span class="pc-pack-qty">1 confezione</span><span class="pc-pack-days">40 giorni</span></span>
+                <span class="pc-pack-unit">139,00&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 139,00&nbsp;€ · 3,47&nbsp;€ al giorno · spedizione 5&nbsp;€</span>
+              </label>
+              <label class="pc-pack" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=2&amp;wt_coupon=PROMO2">
+                <input type="radio" name="quantity" value="2" data-coupon="PROMO2">
+                <span class="pc-pack-main"><span class="pc-pack-qty">2 confezioni</span><span class="pc-pack-days">80 giorni · <em>sconto 5%</em></span></span>
+                <span class="pc-pack-unit">132,05&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 264,10&nbsp;€ · 3,30&nbsp;€ al giorno · spedizione gratuita</span>
+              </label>
+              <label class="pc-pack" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=3&amp;wt_coupon=PROMO3">
+                <span class="pc-pack-badge">Il più conveniente</span>
+                <input type="radio" name="quantity" value="3" data-coupon="PROMO3">
+                <span class="pc-pack-main"><span class="pc-pack-qty">3 confezioni</span><span class="pc-pack-days">120 giorni · <em>sconto 10%</em></span></span>
+                <span class="pc-pack-unit">125,10&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 375,30&nbsp;€ · 3,13&nbsp;€ al giorno · spedizione gratuita</span>
+              </label>
+            </div>
+            <input type="hidden" name="add-to-cart" value="48">
+            <input type="hidden" name="gtm4wp_product_data" value='{"internal_id":48,"item_id":48,"item_name":"Elisir","sku":"elisir","price":139,"stocklevel":158,"stockstatus":"instock","google_business_vertical":"retail","item_category":"Integratori","id":48}'>
+            <p class="pc-deliv">Consegna stimata <strong class="pc-deliv-date">in 1-2 giorni lavorativi</strong><a class="pc-ref" href="#pc-nota-5" aria-label="Nota 5">5</a>.<span class="pc-deliv-timer"></span></p>
+            <button type="submit" class="single_add_to_cart_button pc-btn">Aggiungi al carrello</button>
+          </form>
+          <p class="pc-small">Con 2 o 3 confezioni lo sconto è già applicato.</p>
+
+          <ul class="pc-trust">
+            <li>Spedizione 5&nbsp;€, gratuita sopra i 200&nbsp;€.</li>
+            <li>Reso entro 14 giorni.</li>
+            <li>Paghi con carta, PayPal o contrassegno.</li>
+          </ul>
+
+          <a class="pc-link" href="#valori">Vedi i 40 nutrienti e le quantità</a>
+
+          <details class="pc-acc">
+            <summary>Come si usa</summary>
+            <div class="pc-acc-body"><p>Un misurino da 5 g al giorno, sciolto in acqua fresca o a temperatura ambiente, preferibilmente dopo colazione o pranzo. Il misurino è dentro la confezione. <a href="#uso">Tutti i dettagli</a></p></div>
+          </details>
+          <details class="pc-acc">
+            <summary>Spedizione e reso</summary>
+            <div class="pc-acc-body"><p>Corriere espresso tracciato, consegna in 24-48 ore lavorative (72 ore per Calabria, Sicilia e Sardegna). La spedizione costa 5&nbsp;€ ed è gratuita sopra i 200&nbsp;€. Il contrassegno costa 7&nbsp;€ in più. Reso entro 14 giorni: le condizioni sono nella pagina <a href="https://paleocomplex.com/spedizioni/">spedizioni e resi</a>.</p></div>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<nav class="pc-anchors" aria-label="Sezioni della pagina">
+  <div class="pc-container">
+    <ul>
+      <li><a href="#benefici">Benefici</a></li>
+      <li><a href="#ingredienti">Ingredienti</a></li>
+      <li><a href="#valori">Valori</a></li>
+      <li><a href="#uso">Come si usa</a></li>
+      <li><a href="#recensioni">Recensioni</a></li>
+      <li><a href="#domande">Domande</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="pc-section pc-dim" id="benefici">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Benefici</p><h2>Cosa fa Elisir per te</h2></div>
+    <div class="pc-tiles pc-rail">
+      <article class="pc-tile">
+        <span class="pc-tile-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+        <h3>Energia vera, non quella del caffè</h3>
+        <p>Non è una spinta da stimolante. Alle cellule arriva quello che serve per produrre energia come dovrebbero, e la giornata è più costante, senza il crollo del pomeriggio.</p>
+        <p class="pc-tile-nutr">Ubiquinolo 200 mg · acido R-lipoico 200 mg · vitamine B nelle forme migliori, come B9 e B12 metilate · magnesio 450 mg</p>
+      </article>
+      <article class="pc-tile">
+        <span class="pc-tile-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3z"/></svg></span>
+        <h3>Difese immunitarie</h3>
+        <p>Se ogni cambio di stagione ti porta qualcosa, il tuo sistema immunitario ha bisogno degli strumenti giusti per fare il suo lavoro, e qui li trova insieme.</p>
+        <p class="pc-tile-nutr">Vitamina D3 2.000 UI · zinco picolinato 15 mg · Vitamina C liposomiale 500 mg · quercetina fitosomiale 250 mg · Vitamina A 1.200 mcg</p>
+      </article>
+      <article class="pc-tile">
+        <span class="pc-tile-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><circle cx="7.5" cy="9" r="0.8"/><circle cx="16.5" cy="15" r="0.8"/></svg></span>
+        <h3>Protezione delle cellule</h3>
+        <p>Lo stress ossidativo non lo senti, ma è quello che invecchia le cellule. Gli antiossidanti di Elisir lavorano come una staffetta: quando uno ha neutralizzato un radicale libero, un altro lo rigenera e lo rimette in gioco. Per questo li trovi tutti insieme, a dosi vere e in forme che il corpo assorbe.</p>
+        <p class="pc-tile-nutr">Glutatione liposomiale 250 mg · Vitamina C liposomiale 500 mg · Vitamina E naturale 60 mg · astaxantina 8 mg · trans-resveratrolo 300 mg</p>
+      </article>
+      <article class="pc-tile">
+        <span class="pc-tile-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+        <h3>Cuore e cervello</h3>
+        <p>Gli <span class="pc-nw">Omega-3</span> da krill, in forma fosfolipidica come le membrane delle cellule, a una dose seria: 1.050 mg di EPA e DHA. Nutrienti fondamentali (e nei multivitaminici comuni non sono presenti!).</p>
+        <p class="pc-tile-nutr">EPA 700 mg · DHA 350 mg, da olio di krill</p>
+      </article>
+      <article class="pc-tile">
+        <span class="pc-tile-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.5 6.5a2.5 2.5 0 1 0-3.5 3.5L14 19a2.5 2.5 0 1 0 3.5-3.5L8.5 6.5z"/><path d="M5 10a2.5 2.5 0 1 1 1-4M14 19a2.5 2.5 0 1 0 4-1"/></svg></span>
+        <h3>Ossa e muscoli</h3>
+        <p>La Vitamina D3 contribuisce al normale assorbimento del calcio, la K2 al mantenimento di ossa normali, il magnesio sostiene la funzione muscolare e aiuta a rilassarsi.</p>
+        <p class="pc-tile-nutr">Vitamina D3 2.000 UI · Vitamina K2 (MK-7) 200 mcg · magnesio citrato 450 mg</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section pc-vband" id="video">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Recensioni</p><h2>Le loro parole, in video</h2></div>
+    <div class="pc-videos pc-rail">
+      <a class="pc-video pc-video-tall" href="https://www.youtube.com/watch?v=iEjN64IoKkY" data-yt="iEjN64IoKkY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/iEjN64IoKkY/hqdefault.jpg" alt="Testimonianza video di Stefano su Elisir" width="480" height="360" loading="lazy"><span class="pc-play" aria-hidden="true"></span></a>
+      <a class="pc-video pc-video-tall" href="https://www.youtube.com/watch?v=TQfB7x8qhE4&amp;t=74s" data-yt="TQfB7x8qhE4" data-start="74" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/TQfB7x8qhE4/hqdefault.jpg" alt="Testimonianza video di Rossella" width="480" height="360" loading="lazy"><span class="pc-play" aria-hidden="true"></span></a>
+      <a class="pc-video pc-video-tall" href="https://www.youtube.com/watch?v=XSfHIesCQ7E" data-yt="XSfHIesCQ7E" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/XSfHIesCQ7E/hqdefault.jpg" alt="Testimonianza video di Onorina" width="480" height="360" loading="lazy"><span class="pc-play" aria-hidden="true"></span></a>
+      <a class="pc-video pc-video-tall" href="https://www.youtube.com/shorts/0ZArv-ZY64w" data-yt="0ZArv-ZY64w" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/0ZArv-ZY64w/hqdefault.jpg" alt="Recensione video di Andrea, osteopata" width="480" height="360" loading="lazy"><span class="pc-play" aria-hidden="true"></span></a>
+      <a class="pc-video pc-video-tall" href="https://www.youtube.com/shorts/pVPo9V9yoIc" data-yt="pVPo9V9yoIc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/pVPo9V9yoIc/hqdefault.jpg" alt="Recensione video di Matteo su Elisir" width="480" height="360" loading="lazy"><span class="pc-play" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section" id="ingredienti">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Ingredienti</p><h2>Gli ingredienti che un multivitaminico comune non ha</h2><p>Accanto a vitamine e minerali, Elisir contiene <span class="pc-nw">Omega-3</span> ed estratti che nelle compresse non ci sono. Per questo lo chiamiamo Multinutriente.</p></div>
+    <table class="pc-tbl pc-cards pc-ing-tbl">
+      <thead><tr><th scope="col">Ingrediente</th><th scope="col">Funzione</th><th scope="col" class="pc-us">Per misurino</th><th scope="col">In un multivitaminico comune</th></tr></thead>
+      <tbody class="pc-rail">
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-01-krill.jpg" alt="Immagine dell'ingrediente: Omega-3 da olio di krill" width="400" height="400" loading="lazy"></span><span class="pc-ing-name"><span class="pc-nw">Omega-<span class="pc-num">3</span></span> da olio di krill</span></span></th><td data-label="Funzione">Cuore, cervello, vista</td><td data-label="Per misurino" class="pc-us">EPA 700 mg e DHA 350 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-06-glutatione.jpg" alt="Immagine dell'ingrediente: Glutatione liposomiale" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Glutatione liposomiale</span></span></th><td data-label="Funzione">L'antiossidante numero uno del corpo</td><td data-label="Per misurino" class="pc-us">250 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-07-ubiquinolo.jpg" alt="Immagine dell'ingrediente: Coenzima Q10 in forma attivata (ubiquinolo)" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Coenzima Q<span class="pc-num">10</span> in forma attivata (ubiquinolo)</span></span></th><td data-label="Funzione">Energia delle cellule</td><td data-label="Per misurino" class="pc-us">200 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente, o pochi milligrammi</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-10-quercetina.jpg" alt="Immagine dell'ingrediente: Quercetina fitosomiale" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Quercetina fitosomiale</span></span></th><td data-label="Funzione">Antiossidante, difese</td><td data-label="Per misurino" class="pc-us">250 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-04-lipoico.jpg" alt="Immagine dell'ingrediente: Acido R-lipoico" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Acido R-lipoico</span></span></th><td data-label="Funzione">Antiossidante potente</td><td data-label="Per misurino" class="pc-us">200 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-08-astaxantina.jpg" alt="Immagine dell'ingrediente: Astaxantina" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Astaxantina</span></span></th><td data-label="Funzione">Antiossidante, pelle</td><td data-label="Per misurino" class="pc-us">8 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-11-resveratrolo.jpg" alt="Immagine dell'ingrediente: Trans-resveratrolo" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Trans-resveratrolo</span></span></th><td data-label="Funzione">Antiossidante, cuore</td><td data-label="Per misurino" class="pc-us">300 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+        <tr><th scope="row"><span class="pc-ing"><span class="pc-ing-pic"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/ing-13-pino.jpg" alt="Immagine dell'ingrediente: Corteccia di pino" width="400" height="400" loading="lazy"></span><span class="pc-ing-name">Corteccia di pino</span></span></th><td data-label="Funzione">Circolazione</td><td data-label="Per misurino" class="pc-us">60 mg</td><td data-label="In un multivitaminico comune" class="pc-off">assente</td></tr>
+      </tbody>
+    </table>
+    <p class="pc-also">E anche: polidatina 50 mg, taurina 300 mg, colina bitartrato 100 mg, mio-inositolo 60 mg, luteina, zeaxantina e licopene 10 mg ciascuno.</p>
+
+    <h3 class="pc-sub">Anche la forma conta</h3>
+    <div class="pc-prose pc-center">
+      <p>Lo stesso nutriente esiste in forme diverse, e un multivitaminico comune usa spesso le più economiche. In Elisir ci sono forme biologicamente attive, le stesse che l'organismo usa nei suoi processi.</p>
+      <p>Liposomiale e fitosomiale vogliono dire legati a grassi simili alle membrane delle cellule, che li proteggono nel passaggio (e migliora l'assorbimento del tuo corpo).</p>
+    </div>
+    <table class="pc-tbl pc-cards pc-forme">
+      <thead><tr><th scope="col">Nutriente</th><th scope="col">Forma comune</th><th scope="col" class="pc-us">In Elisir</th></tr></thead>
+      <tbody class="pc-rail">
+        <tr><th scope="row"><span class="pc-nw">Omega-<span class="pc-num">3</span></span></th><td data-label="Forma comune" class="pc-off">olio di pesce</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>olio di krill</span></td></tr>
+        <tr><th scope="row">Vitamina K</th><td data-label="Forma comune" class="pc-off">K1</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>K2 MK-7</span></td></tr>
+        <tr><th scope="row">Vitamina B<span class="pc-num">12</span></th><td data-label="Forma comune" class="pc-off">cianocobalamina</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>metilcobalamina, forma metilata</span></td></tr>
+        <tr><th scope="row">Folato (B<span class="pc-num">9</span>)</th><td data-label="Forma comune" class="pc-off">acido folico</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>metilfolato, forma metilata</span></td></tr>
+        <tr><th scope="row">Vitamina E</th><td data-label="Forma comune" class="pc-off">DL-alfa-tocoferile acetato, sintetica</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>D-alfa tocoferolo, naturale</span></td></tr>
+        <tr><th scope="row">Magnesio</th><td data-label="Forma comune" class="pc-off">ossido</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>citrato</span></td></tr>
+        <tr><th scope="row">Zinco</th><td data-label="Forma comune" class="pc-off">ossido</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>picolinato</span></td></tr>
+        <tr><th scope="row">Coenzima Q<span class="pc-num">10</span></th><td data-label="Forma comune" class="pc-off">ubichinone</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>ubiquinolo, in forma attivata</span></td></tr>
+        <tr><th scope="row">Glutatione e Vitamina C</th><td data-label="Forma comune" class="pc-off">forma semplice</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>liposomiale</span></td></tr>
+        <tr><th scope="row">Quercetina</th><td data-label="Forma comune" class="pc-off">forma semplice</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>fitosomiale</span></td></tr>
+        <tr><th scope="row">Acido lipoico</th><td data-label="Forma comune" class="pc-off">miscela delle forme R e S</td><td data-label="In Elisir" class="pc-us"><span class="pc-val"><span class="pc-yes" aria-hidden="true"></span>forma R</span></td></tr>
+      </tbody>
+    </table>
+    <p class="pc-callout">Il nome della forma è scritto nell'elenco ingredienti di ogni integratore, nostro e di qualunque altro: confronta tu, etichetta alla mano.</p>
+  </div>
+</section>
+
+<section class="pc-section pc-dim" id="valori">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Valori nutrizionali</p><h2>I <span class="pc-num">40</span> nutrienti, con le quantità</h2><p>Valori per un misurino da 5 g, presi dall'etichetta. Il segno <span class="pc-dot">&#9679;</span> indica le vitamine e i minerali al massimo ammesso dal Ministero della Salute<a class="pc-ref" href="#pc-nota-2" aria-label="Nota 2">2</a>: 19 su 23. Quantità vere, non simboliche. <a class="pc-tlink" href="#valore">Cosa vuol dire? Approfondisci</a></p></div>
+    <div class="pc-nutri">
+      <div class="pc-fold" id="pc-fold-valori" data-fold>
+        <table class="pc-ntbl">
+        <thead><tr><th scope="col"><span class="pc-nw">Omega-<span class="pc-num">3</span></span></th><th scope="col">Per misurino (5 g)</th><th scope="col">%VNR<a class="pc-ref" href="#pc-nota-1" aria-label="Nota 1">1</a></th><th scope="col">Massimo</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">EPA, da olio di krill</th><td class="pc-amt">700 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+          <tr><th scope="row">DHA, da olio di krill</th><td class="pc-amt">350 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+        </tbody>
+      </table>
+        <table class="pc-ntbl">
+        <thead><tr><th scope="col">Vitamine</th><th scope="col">Per misurino (5 g)</th><th scope="col">%VNR<a class="pc-ref" href="#pc-nota-1" aria-label="Nota 1">1</a></th><th scope="col">Massimo</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Vitamina A <span class="pc-form">(acetato)</span></th><td class="pc-amt">1.200 mcg</td><td class="pc-vnr">150%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B1 <span class="pc-form">(tiamina cloridrato)</span></th><td class="pc-amt">25 mg</td><td class="pc-vnr">2.273%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B2 <span class="pc-form">(riboflavina 5-fosfato)</span></th><td class="pc-amt">25 mg</td><td class="pc-vnr">1.786%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B3 <span class="pc-form">(niacinamide)</span></th><td class="pc-amt">54 mg</td><td class="pc-vnr">337,5%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B5 <span class="pc-form">(calcio D-pantotenato)</span></th><td class="pc-amt">18 mg</td><td class="pc-vnr">300%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B6 <span class="pc-form">(piridossina 5-fosfato)</span></th><td class="pc-amt">10 mg</td><td class="pc-vnr">714%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Biotina <span class="pc-form">(B8)</span></th><td class="pc-amt">450 mcg</td><td class="pc-vnr">900%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Folato <span class="pc-form">(B9, metiltetraidrofolato)</span></th><td class="pc-amt">400 mcg</td><td class="pc-vnr">200%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina B12 <span class="pc-form">(metilcobalamina)</span></th><td class="pc-amt">200 mcg</td><td class="pc-vnr">8.000%</td><td class="pc-mx"></td></tr>
+          <tr><th scope="row">Vitamina C liposomiale</th><td class="pc-amt">500 mg</td><td class="pc-vnr">625%</td><td class="pc-mx"></td></tr>
+          <tr><th scope="row">Vitamina D3</th><td class="pc-amt">50 mcg (2.000 UI)</td><td class="pc-vnr">1.000%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina E <span class="pc-form">(D-alfa tocoferolo)</span></th><td class="pc-amt">60 mg</td><td class="pc-vnr">500%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          <tr><th scope="row">Vitamina K2 <span class="pc-form">(menachinone-7, MK-7)</span></th><td class="pc-amt">200 mcg</td><td class="pc-vnr">267%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+        </tbody>
+      </table>
+        <table class="pc-ntbl">
+          <thead><tr><th scope="col">Minerali</th><th scope="col">Per misurino (5 g)</th><th scope="col">%VNR<a class="pc-ref" href="#pc-nota-1" aria-label="Nota 1">1</a></th><th scope="col">Massimo</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Magnesio <span class="pc-form">(citrato)</span></th><td class="pc-amt">450 mg</td><td class="pc-vnr">120%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Fosforo</th><td class="pc-amt">400 mg</td><td class="pc-vnr">57%</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Potassio <span class="pc-form">(citrato)</span></th><td class="pc-amt">400 mg</td><td class="pc-vnr">20%</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Zinco <span class="pc-form">(picolinato)</span></th><td class="pc-amt">15 mg</td><td class="pc-vnr">150%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Manganese <span class="pc-form">(gluconato)</span></th><td class="pc-amt">10 mg</td><td class="pc-vnr">500%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Boro</th><td class="pc-amt">3,6 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Rame <span class="pc-form">(gluconato)</span></th><td class="pc-amt">2 mg</td><td class="pc-vnr">200%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Iodio</th><td class="pc-amt">225 mcg</td><td class="pc-vnr">150%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Cromo <span class="pc-form">(picolinato)</span></th><td class="pc-amt">200 mcg</td><td class="pc-vnr">500%</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Selenio <span class="pc-form">(selenio-metionina)</span></th><td class="pc-amt">100 mcg</td><td class="pc-vnr">182%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+            <tr><th scope="row">Molibdeno</th><td class="pc-amt">100 mcg</td><td class="pc-vnr">200%</td><td class="pc-mx"><span aria-hidden="true">&#9679;</span><span class="pc-sr">al massimo di legge</span></td></tr>
+          </tbody>
+        </table>
+        <table class="pc-ntbl">
+          <thead><tr><th scope="col">Altri ingredienti</th><th scope="col">Per misurino (5 g)</th><th scope="col">%VNR<a class="pc-ref" href="#pc-nota-1" aria-label="Nota 1">1</a></th><th scope="col">Massimo</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Trans-resveratrolo 98%, da Polygonum cuspidatum</th><td class="pc-amt">300 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Taurina</th><td class="pc-amt">300 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Glutatione liposomiale</th><td class="pc-amt">250 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Quercetina fitosomiale 40%, da Sophora japonica</th><td class="pc-amt">250 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Acido R-lipoico</th><td class="pc-amt">200 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Coenzima Q10 in forma attivata <span class="pc-form">(ubiquinolo)</span></th><td class="pc-amt">200 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Colina bitartrato</th><td class="pc-amt">100 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Mio-inositolo</th><td class="pc-amt">60 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Corteccia di pino <span class="pc-form">(Pinus massoniana)</span>, titolata al 95% in OPC</th><td class="pc-amt">60 mg, di cui OPC 57 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Polidatina 98%, da Polygonum cuspidatum</th><td class="pc-amt">50 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Luteina</th><td class="pc-amt">10 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Zeaxantina</th><td class="pc-amt">10 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Licopene</th><td class="pc-amt">10 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+            <tr><th scope="row">Astaxantina, da 160 mg di estratto di Haematococcus pluvialis</th><td class="pc-amt">8 mg</td><td class="pc-vnr pc-nil">-</td><td class="pc-mx"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="pc-fold-btn" data-fold-btn="pc-fold-valori" aria-controls="pc-fold-valori" aria-expanded="false" data-less="Mostra meno" hidden>Mostra tutti i 40</button>
+    </div>
+    <div class="pc-box">
+      <h3>Niente calcio e ferro, per scelta</h3>
+      <p>Li abbiamo lasciati fuori apposta: vanno integrati solo se li prescrive il medico. Ne parliamo nel blog, sul <a class="pc-tlink" href="https://paleocomplex.com/stai-utilizzando-un-integratore-di-calcio-allora-leggi-subito/">calcio</a> e sul <a class="pc-tlink" href="https://paleocomplex.com/assumere-troppo-ferro-fa-male-effetti-collaterali-e-cosa-sapere/">ferro</a>.</p>
+    </div>
+    <div class="pc-fold pc-fold-m" id="pc-fold-ingredienti" data-fold>
+      <p class="pc-inglist"><strong>Ingredienti:</strong> Olio di Krill (acido eicosapentaenoico, acido docosaesaenoico), Acido Ascorbico, Magnesio Citrato, Potassio Citrato, Acido R-Lipoico, Colina Bitartrato, Mio-Inositolo, Astaxantina 5% (haematococcus pluvialis flotow, tallo) Taurina, Luteina, Zeaxantina, Licopene, Glutatione Liposomiale, Quercetina fitosomiale da Sophora japonica e.s. foglie tit.40%, Trans resveratrolo da Polygonum cuspidatum e.s. radice tit.98%, Ubiquinolo, Tocoferolo D-alpha, Niacinamide, HCL di tiamina, Riboflavina 5 fosfato, Calcio D-pantotenato, Zinco Picolinato, Piridossina 5 fosfato, Boro, Biotina, Vit. A acetato, Vit. K2 Menachinone 7, Metiltetraidrofolato, Metilcobalamina, Vit. D3, Selenio-metionina, Fosforo, Rame Gluconato, Manganese Gluconato, Cromo Picolinato, Molibdeno, Iodio, Polidatina da Polygonum cuspidatum e.s. radice tit.98%, Pino corteccia e.s. da pinus massoniana lamb. tit. 95% in OPC, Aroma limone, Lecitina di Girasole. Stabilizzatore: cellulosa microcristallina.</p>
+    </div>
+    <button type="button" class="pc-fold-btn pc-fold-btn-m" data-fold-btn="pc-fold-ingredienti" aria-controls="pc-fold-ingredienti" aria-expanded="false" data-less="Mostra meno" hidden>Leggi tutti gli ingredienti</button>
+    <p class="pc-label-link"><a class="pc-tlink" href="https://paleocomplex.com/wp-content/uploads/2026/09/etichetta-elisir.jpg">Guarda il riquadro dell'etichetta</a></p>
+  </div>
+</section>
+
+<section class="pc-section" id="perche">
+  <div class="pc-narrow">
+    <div class="pc-shead"><p class="pc-kicker">L'idea dietro Elisir</p><h2><span class="pc-num">40</span> nutrienti a dose piena, al posto di dieci barattoli</h2></div>
+    <div class="pc-prose-l">
+      <p>Chi integra con attenzione finisce spesso con una fila di barattoli sul comodino: il multivitaminico, gli <span class="pc-nw">Omega-3</span>, la Vitamina D, il magnesio, il Q10, un antiossidante. Elisir mette tutto in un misurino, e non ti dimentichi più metà delle cose.</p>
+      <figure class="pc-fig pc-ba"><div class="pc-ba-item"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/dispensa-prima-bn.jpg" alt="Dieci barattoli di integratori diversi su un tavolo di cucina." width="1200" height="675" loading="lazy"><span class="pc-ba-tag">Dieci barattoli</span></div><div class="pc-ba-item"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/dispensa-dopo.jpg" alt="Un solo barattolo di Elisir e un bicchiere d'acqua sullo stesso tavolo." width="1200" height="675" loading="lazy"><span class="pc-ba-tag pc-ba-light">Un misurino</span></div></figure>
+      <figure class="pc-quote">
+        <span class="pc-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <blockquote><p>«Sono ormai alcuni anni che assumo Elisir ogni mattina. In un solo integratore tutto ciò che assumevo in diversi prodotti. Ottimo!!!»</p></blockquote>
+        <figcaption>Pier Filippo Sbaffi, cliente Elisir</figcaption>
+      </figure>
+      <p>Nella formula c'è una scelta precisa: 40 nutrienti, non 90 o 100 a dosi da vetrina come in certi prodotti che puntano sul numero. Così ognuno può stare a dose piena: il trans-resveratrolo è a 300 mg, l'ubiquinolo a 200 mg, 19 vitamine e minerali su 23 sono al massimo di legge.</p>
+      <p>È pensato per chi ha passato i 40 anni, non vuole compromessi e vuole investire seriamente nella salute a lungo termine. Con gli anni si assorbe di meno, e sport e stress chiedono di più.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pc-numbers" aria-label="Elisir in numeri">
+  <div class="pc-container">
+    <ul class="pc-nums">
+      <li><strong>40</strong><span>nutrienti in un misurino</span></li>
+      <li><strong>19 su 23</strong><span>vitamine e minerali al massimo di legge</span></li>
+      <li><strong>1.050 mg</strong><span>di <span class="pc-nw">Omega-3</span>, EPA e DHA</span></li>
+      <li><strong>Più di 4 su 10</strong><span>clienti ricomprano Elisir</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section pc-dim" id="valore">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Il valore</p><h2>Quel <span class="pc-num">100%</span> sull'etichetta non è il massimo</h2></div>
+    <div class="pc-prose pc-center">
+      <p>Su un multivitaminico comune leggi spesso "100%". È il valore di riferimento<a class="pc-ref" href="#pc-nota-1" aria-label="Nota 1">1</a>: la quantità che serve per non essere in carenza.</p>
+      <p>Se l'hai sempre letto come il massimo, è normale: l'etichetta non lo spiega. La legge italiana<a class="pc-ref" href="#pc-nota-2" aria-label="Nota 2">2</a> permette di mettere in un integratore molto di più, ed Elisir arriva a quel massimo su 19 vitamine e minerali su 23.</p>
+    </div>
+    <div class="pc-bars">
+      <div class="pc-bar-row">
+        <p class="pc-bar-title">Vitamina E</p>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar" style="width:20%"></div></div><p class="pc-bar-label">100% del VNR: 12 mg</p></div>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar pc-bar-b" style="width:100%"></div></div><p class="pc-bar-label"><strong>In Elisir, al massimo di legge: 60 mg</strong></p></div>
+      </div>
+      <div class="pc-bar-row">
+        <p class="pc-bar-title">Vitamina B6</p>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar" style="width:14%"></div></div><p class="pc-bar-label">100% del VNR: 1,4 mg</p></div>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar pc-bar-b" style="width:100%"></div></div><p class="pc-bar-label"><strong>In Elisir, al massimo di legge: 10 mg</strong></p></div>
+      </div>
+      <div class="pc-bar-row">
+        <p class="pc-bar-title">Biotina</p>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar" style="width:11%"></div></div><p class="pc-bar-label">100% del VNR: 50 mcg</p></div>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar pc-bar-b" style="width:100%"></div></div><p class="pc-bar-label"><strong>In Elisir, al massimo di legge: 450 mcg</strong></p></div>
+      </div>
+      <div class="pc-bar-row">
+        <p class="pc-bar-title">Zinco</p>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar" style="width:67%"></div></div><p class="pc-bar-label">100% del VNR: 10 mg</p></div>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar pc-bar-b" style="width:100%"></div></div><p class="pc-bar-label"><strong>In Elisir, al massimo di legge: 15 mg</strong></p></div>
+      </div>
+      <div class="pc-bar-row">
+        <p class="pc-bar-title">Vitamina D</p>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar" style="width:10%"></div></div><p class="pc-bar-label">100% del VNR: 5 mcg (200 UI)</p></div>
+        <div class="pc-bar-line"><div class="pc-bar-track"><div class="pc-bar pc-bar-b" style="width:100%"></div></div><p class="pc-bar-label"><strong>In Elisir, al massimo di legge: 50 mcg (2.000 UI)</strong></p></div>
+      </div>
+    </div>
+    <div class="pc-prose pc-center pc-gap">
+      <p>Una compressa pesa circa un grammo, e solo una parte sono attivi. Per avere i nutrienti di un misurino di Elisir servirebbero 12-15 compresse al giorno, forse anche di più.</p>
+    </div>
+    <figure class="pc-fig pc-fig-c"><img src="asset/misurino-15-compresse.jpg" alt="Un misurino colmo di polvere di Elisir accanto a quindici compresse." width="1200" height="1500" loading="lazy"></figure>
+
+    <h3 class="pc-sub">E se lo comprassi a pezzi?</h3>
+    <div class="pc-prose pc-center">
+      <p>Abbiamo sommato quanto costano gli stessi ingredienti comprati a parte, alle stesse dosi e nelle stesse forme, come il glutatione liposomiale e il trans-resveratrolo.</p>
+    </div>
+    <table class="pc-tbl pc-cards pc-cost" id="pc-fold-costo" data-fold>
+      <thead><tr><th scope="col">Ingrediente</th><th scope="col" class="pc-us">In Elisir, 40 giorni</th><th scope="col">Comprato a parte, 40 giorni</th></tr></thead>
+      <tbody>
+        <tr><th scope="row"><span class="pc-nw">Omega-<span class="pc-num">3</span></span> da krill (EPA e DHA)</th><td data-label="In Elisir, 40 giorni" class="pc-us">1.050 mg</td><td data-label="Comprato a parte">da 30 a 50&nbsp;€</td></tr>
+        <tr class="pc-fade-row"><th scope="row">Trans-resveratrolo</th><td data-label="In Elisir, 40 giorni" class="pc-us">300 mg</td><td data-label="Comprato a parte">da 20 a 30&nbsp;€</td></tr>
+        <tr><th scope="row">Taurina</th><td data-label="In Elisir, 40 giorni" class="pc-us">300 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Ubiquinolo (Coenzima Q<span class="pc-num">10</span>)</th><td data-label="In Elisir, 40 giorni" class="pc-us">200 mg</td><td data-label="Comprato a parte">da 25 a 35&nbsp;€</td></tr>
+        <tr><th scope="row">Vitamina D<span class="pc-num">3</span></th><td data-label="In Elisir, 40 giorni" class="pc-us">2.000 UI</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Vitamina K<span class="pc-num">2</span></th><td data-label="In Elisir, 40 giorni" class="pc-us">200 mcg</td><td data-label="Comprato a parte">da 15 a 20&nbsp;€</td></tr>
+        <tr><th scope="row">Quercetina fitosomiale</th><td data-label="In Elisir, 40 giorni" class="pc-us">250 mg</td><td data-label="Comprato a parte">da 25 a 35&nbsp;€</td></tr>
+        <tr><th scope="row">Acido R-lipoico</th><td data-label="In Elisir, 40 giorni" class="pc-us">200 mg</td><td data-label="Comprato a parte">da 15 a 20&nbsp;€</td></tr>
+        <tr><th scope="row">Glutatione liposomiale</th><td data-label="In Elisir, 40 giorni" class="pc-us">250 mg</td><td data-label="Comprato a parte">da 25 a 45&nbsp;€</td></tr>
+        <tr><th scope="row">Vitamine del gruppo B</th><td data-label="In Elisir, 40 giorni" class="pc-us">B9 e B12 metilate</td><td data-label="Comprato a parte">da 20 a 30&nbsp;€</td></tr>
+        <tr><th scope="row">Corteccia di pino</th><td data-label="In Elisir, 40 giorni" class="pc-us">60 mg</td><td data-label="Comprato a parte">da 15 a 25&nbsp;€</td></tr>
+        <tr><th scope="row">Polidatina</th><td data-label="In Elisir, 40 giorni" class="pc-us">50 mg</td><td data-label="Comprato a parte">da 20 a 30&nbsp;€</td></tr>
+        <tr><th scope="row">Astaxantina</th><td data-label="In Elisir, 40 giorni" class="pc-us">8 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Luteina</th><td data-label="In Elisir, 40 giorni" class="pc-us">10 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Colina bitartrato</th><td data-label="In Elisir, 40 giorni" class="pc-us">100 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Mio-inositolo</th><td data-label="In Elisir, 40 giorni" class="pc-us">60 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Zeaxantina</th><td data-label="In Elisir, 40 giorni" class="pc-us">10 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Licopene</th><td data-label="In Elisir, 40 giorni" class="pc-us">10 mg</td><td data-label="Comprato a parte">da 10 a 15&nbsp;€</td></tr>
+        <tr><th scope="row">Multivitaminico</th><td data-label="In Elisir, 40 giorni" class="pc-us">13 vitamine e 11 minerali</td><td data-label="Comprato a parte">da 15 a 30&nbsp;€</td></tr>
+        <tr class="pc-more-row" hidden><td colspan="3"><button type="button" class="pc-fold-btn" data-fold-btn="pc-fold-costo" aria-controls="pc-fold-costo" aria-expanded="false" data-less="Mostra meno" hidden>Vedi il conto completo</button></td></tr>
+        <tr class="pc-total"><th scope="row">Totale per <span class="pc-num">40</span> giorni</th><td data-label="In Elisir, 40 giorni" class="pc-us">139&nbsp;€</td><td data-label="Comprato a parte">da 305 a 470&nbsp;€</td></tr>
+      </tbody>
+    </table>
+    <p class="pc-statement">Elisir costa <strong>3,47&nbsp;€ al giorno</strong>. Comprando tutto a parte, <strong>da 7,63 a 11,75&nbsp;€ al giorno</strong>.</p>
+    <p class="pc-cost-note">Spesa media per 40 giorni di assunzione, da altre marche, in perle, pasticche o compresse, agli stessi dosaggi di Elisir<a class="pc-ref" href="#pc-nota-4" aria-label="Nota 4">4</a>.</p>
+    <p class="pc-cost-link">Il confronto riga per riga con tre multivitaminici da farmacia è nella <a class="pc-tlink" href="https://paleocomplex.com/multinutrienti/">pagina dei nostri Multinutrienti</a>.</p>
+  </div>
+</section>
+
+<section class="pc-section" id="recensioni">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Recensioni</p><h2>Cosa dice chi usa Elisir tutti i giorni</h2></div>
+    <div class="pc-cr">
+      <div class="pc-cr-block pc-cr-summary"><p class="pc-local pc-local-note">Qui WordPress esegue lo shortcode: riepilogo di tutte le recensioni del negozio (voto e conteggio, card nascoste).</p><p class="pc-cr-ph">Qui il voto medio e il numero delle recensioni del negozio, presi dal sito.</p></div>
+      <div class="pc-cr-block"><p class="pc-local pc-local-note">Qui WordPress esegue lo shortcode: le recensioni di Elisir, 12 visibili e "Mostra altre".</p><p class="pc-cr-ph">Qui le recensioni di Elisir, prese dal sito: 12 visibili e il pulsante "Mostra altre".</p></div>
+      <div class="pc-cr-block"><p class="pc-local pc-local-note">Qui WordPress esegue lo shortcode: le recensioni di tutti i prodotti, 12 visibili e "Mostra altre".</p><p class="pc-cr-ph">Qui le recensioni di tutti i prodotti, prese dal sito: 12 visibili e il pulsante "Mostra altre".</p></div>
+    </div>
+    <p class="pc-cr-more">Tutte le recensioni e i video dei clienti sono anche nella <a class="pc-tlink" href="https://paleocomplex.com/testimonianze/">pagina testimonianze</a>.</p>
+  </div>
+</section>
+
+<section class="pc-section pc-dim" id="uso">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Come si usa</p><h2>Un misurino al giorno, dopo un pasto</h2></div>
+    <ol class="pc-steps pc-rail">
+      <li class="pc-step"><div class="pc-step-img pc-s2"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/intermezzo-versare.jpg" alt="La polvere scende dal misurino nel bicchiere." width="1600" height="686" loading="lazy"></div><p class="pc-step-text">Prendi un misurino colmo. È dentro la confezione, a volte sotto la polvere: se non c'è, scrivici dalla <a class="pc-tlink" href="https://paleocomplex.com/contatti/">pagina di supporto</a>.</p></li>
+      <li class="pc-step"><div class="pc-step-img pc-s1"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/uomo-768x960.jpg" alt="Un uomo prepara la sua dose con il misurino." width="768" height="960" loading="lazy"></div><p class="pc-step-text">Scioglilo in acqua fresca o a temperatura ambiente, mai calda. Se preferisci, in acqua e limone o in un succo di frutta.</p></li>
+      <li class="pc-step"><div class="pc-step-img pc-s3"><img src="https://paleocomplex.com/wp-content/uploads/2026/09/intermezzo-mattina.jpg" alt="Il bicchiere con la bevanda, a colazione." width="1600" height="686" loading="lazy"></div><p class="pc-step-text">Bevilo preferibilmente dopo colazione o pranzo, con un pasto che contiene grassi: le vitamine liposolubili e gli <span class="pc-nw">Omega-3</span> si assorbono meglio. Meglio non prenderlo dopo cena.</p></li>
+      <li class="pc-step"><div class="pc-step-img pc-s4"><img src="asset/donna-elisir.jpg" alt="Una donna sorride in cucina con un barattolo di Elisir in mano." width="1122" height="1402" loading="lazy"></div><p class="pc-step-text">Continua per almeno tre mesi. Dopo, se vuoi, puoi fare una pausa di 15-20 giorni: è facoltativa.</p></li>
+    </ol>
+    <div class="pc-panel">
+      <h3>Sapore e grumi, due scelte</h3>
+      <p>Il sapore è al limone, con un fondo amaro che viene dal krill e dagli estratti vegetali. Non usiamo dolcificanti, per scelta. Si può sentire un leggero odore di krill, ed è normale.</p>
+      <p>Come antiagglomerante usiamo solo la cellulosa microcristallina, senza biossido di silicio. Per questo a volte si formano piccoli grumi, che si sciolgono mescolando o si sbriciolano con il misurino.</p>
+      <p>Conservalo in un luogo fresco, asciutto e al buio. Il colore della polvere può variare da lotto a lotto, dal bianco al giallo chiaro.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pc-section" id="qualita">
+  <div class="pc-narrow">
+    <div class="pc-shead"><p class="pc-kicker">Qualità</p><h2>Prodotto e confezionato in Italia</h2><p>Elisir è prodotto e confezionato in Italia, in uno stabilimento con certificazione ISO 9001 e GMP. Il marchio Paleocomplex esiste dal 2016, Elisir dal 2021.</p></div>
+    <figure class="pc-fig pc-fig-p"><img src="asset/elisir-produzione.jpg" alt="Confezionamento di un integratore in polvere in un ambiente di produzione pulito." width="1200" height="800" loading="lazy"></figure>
+    <ul class="pc-checks">
+      <li>Niente dolcificanti, niente biossido di silicio. Gli unici eccipienti sono aroma limone, lecitina di girasole e cellulosa microcristallina.</li>
+      <li>Contiene olio di krill (crostacei).</li>
+      <li>Codice di notifica al Ministero della Salute: 150174.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pc-section pc-dim" id="lorenzo">
+  <div class="pc-narrow">
+    <div class="pc-founder">
+      <p class="pc-kicker">Chi l'ha formulato</p>
+      <img class="pc-fphoto" src="https://paleocomplex.com/wp-content/uploads/2023/04/245786615_4618394364872540_4994365621973478293_n-1.jpg" alt="Lorenzo Zarone, fondatore di Paleocomplex." width="1067" height="1083" loading="lazy">
+      <h2>Lorenzo Zarone</h2>
+    </div>
+    <p class="pc-local pc-note-local">Bio standard montata alla lettera da output/website/2026-10-09_bio-lorenzo-standard.md, sezione 1: è ancora in attesa dell'approvazione di Lorenzo.</p>
+    <div class="pc-bio">
+      <p>Lorenzo Zarone ha una laurea in Scienze Motorie (2013) e una specialistica in Nutrizione, indirizzo Nutraceutica (2021). Ha scritto tre libri, tra cui <em>La Bibbia della Salute</em> e <em>Vitamina D: tutte le bugie smascherate</em>.</p>
+      <p>Paleocomplex nasce da un'idea sola: un prodotto completo al posto di tanti barattoli. Quel prodotto ha dato il nome al marchio: Paleocomplex, il Multinutriente completo in polvere. L'originale, dal 2016.</p>
+      <p>Nel 2019 Lorenzo ha letto sulla rivista scientifica PNAS un articolo di Bruce Ames sulla teoria del triage, un'ipotesi di ricerca: quando un micronutriente scarseggia, l'organismo lo destina prima alla sopravvivenza immediata, e poi a tutto il resto. Da lì viene il suo criterio sulle dosi.</p>
+      <p>Abbiamo cercato di portare ogni vitamina e minerale al massimo che il Ministero della Salute ammette: quantità vere, non simboliche. E nei Multinutrienti abbiamo scelto le forme che il corpo usa meglio, come il metilfolato invece dell'acido folico. In etichetta c'è ogni nutriente con la sua quantità, e il meno possibile di eccipienti.</p>
+      <p>Multinutrienti e collageni sono in polvere perché quelle quantità in una compressa non entrano. Tutti i nostri integratori sono prodotti in Italia.</p>
+      <p>Da dieci anni Lorenzo spiega con email e video cosa un integratore può fare e cosa no.</p>
+      <p>Il giudizio lo lasciamo ai clienti: oltre 450 recensioni sul sito, con una media di 4,9 su 5. Lorenzo riassume l'idea così: meno integratori, più risultati.</p>
+    </div>
+    <figure class="pc-letter">
+      <span class="pc-qmark" aria-hidden="true">&#8220;</span>
+      <h3>Perché ho creato Elisir</h3>
+      <blockquote>
+        <p>Elisir l'ho formulato personalmente, ed è il più completo della nostra gamma.</p>
+        <p>La parte difficile è stata trovare l'equilibrio tra il numero di nutrienti e le dosi. Potevo metterne 90 o 100, come fanno alcuni, ma a dosi da vetrina. Ne ho messi 40, ognuno a dose piena: 19 vitamine e minerali su 23 sono al massimo che il Ministero ammette.</p>
+        <p>Per ogni ingrediente ho scelto la forma. Non il glutatione semplice, ma quello liposomiale. Non la quercetina semplice, ma quella fitosomiale. Non un resveratrolo qualsiasi, ma il trans-resveratrolo. E gli <span class="pc-nw">Omega-3</span> dal krill, non dal salmone.</p>
+        <p>La polvere non è una scelta di stile. In una compressa non entrano mille milligrammi di <span class="pc-nw">Omega-3</span>, cinquecento di Vitamina C e quattrocentocinquanta di magnesio.</p>
+        <p>Costa più di un multivitaminico da banco, ed è normale: le materie prime sono quelle e le quantità sono quelle.</p>
+      </blockquote>
+      <figcaption class="pc-sign"><span>Un forte abbraccio</span><span>Lorenzo Zarone, fondatore</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="pc-section" id="domande">
+  <div class="pc-narrow">
+    <div class="pc-shead"><p class="pc-kicker">Domande frequenti</p><h2>Prima di ordinare</h2></div>
+    <div class="pc-faq">
+      <details class="pc-acc pc-faq-acc"><summary><h3>Perché costa più di un multivitaminico da farmacia?</h3></summary><div class="pc-acc-body"><p>Perché dentro c'è molto di più. Un multivitaminico da farmacia ha 23-26 nutrienti al 100% del valore di riferimento, nelle forme più economiche. Elisir ne ha 40, tra cui <span class="pc-nw">Omega-3</span> ed estratti che nelle compresse non ci sono, con 19 vitamine e minerali su 23 al massimo di legge e nelle forme attive, che costano molte volte di più. Per questo un Multinutriente non può costare 15&nbsp;€. <a class="pc-tlink" href="#valore">Il conto completo</a></p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Il massimo di legge non è troppo?</h3></summary><div class="pc-acc-body"><p>La tabella del Ministero della Salute<a class="pc-ref" href="#pc-nota-2" aria-label="Nota 2">2</a> esiste proprio per fissare gli apporti giornalieri massimi ammessi negli integratori, ed è pubblica. Su Elisir restiamo dentro quei limiti su ogni nutriente. In presenza di patologie o terapie il riferimento resta sempre il tuo medico.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Elisir è naturale?</h3></summary><div class="pc-acc-body"><p>Gli integratori "naturali" non esistono: non crescono sugli alberi. Le fonti degli ingredienti sono in gran parte naturali, ma gli attivi vanno estratti: l'astaxantina, per esempio, viene da un'alga, l'Haematococcus pluvialis. Alcune vitamine sono di sintesi, come la metilcobalamina, la forma metilata della B12: chimicamente sono uguali a quelle del cibo, e il corpo non distingue la differenza.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Gli <span class="pc-nw">Omega-<span class="pc-num">3</span></span> da krill sono puri?</h3></summary><div class="pc-acc-body"><p>Il krill è un piccolo crostaceo che si nutre di alghe, all'inizio della catena alimentare: per questo non accumula metalli come il mercurio, a differenza dei pesci grandi. Ed è il motivo per cui non ha bisogno della certificazione IFOS, pensata per gli oli di pesce.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Chi produce Elisir?</h3></summary><div class="pc-acc-body"><p>Elisir è prodotto e confezionato in Italia, in uno stabilimento con certificazione ISO 9001 e GMP.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Che sapore ha?</h3></summary><div class="pc-acc-body"><p>Al limone, con un fondo amaro: non usiamo dolcificanti. Se non ti piace, scioglilo in acqua e limone o in un succo di frutta, mai in acqua calda.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Ho trovato dei piccoli grumi: è normale?</h3></summary><div class="pc-acc-body"><p>Sì. Non usiamo il biossido di silicio come antiagglomerante, e a volte la polvere si compatta. I grumi si sciolgono mescolando.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Non trovo il misurino.</h3></summary><div class="pc-acc-body"><p>È dentro la confezione, a volte sotto la polvere. Se proprio non c'è, scrivici dalla <a class="pc-tlink" href="https://paleocomplex.com/contatti/">pagina di supporto</a>.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Quanto dura una confezione?</h3></summary><div class="pc-acc-body"><p>Dura circa 40 giorni, con un misurino pieno al giorno. Le quantità sono vere: per averle in compresse ne servirebbero 12-15 al giorno. Costa 3,47&nbsp;€ al giorno, e con 2 o 3 confezioni lo sconto quantità lo abbassa.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Quando mi accorgerò di qualcosa?</h3></summary><div class="pc-acc-body"><p>Dipende da persona a persona: dallo stato di partenza, dall'alimentazione e dalla costanza. Mediamente comincerai a sentire benefici soprattutto a livello energetico entro le 2 settimane. Molti hanno avuto benefici immediati, dopo 2-3 giorni, altri dopo circa 1 mese.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Ho allergie o intolleranze.</h3></summary><div class="pc-acc-body"><p>Elisir non contiene glutine, soia né lattosio: la lecitina è di girasole. L'unico allergene è l'olio di krill, un crostaceo. Se sei allergico ai crostacei, <a class="pc-tlink" href="https://paleocomplex.com/prodotto/essentiel/">Essentiel</a> è l'unico dei nostri cinque Multinutrienti senza olio di krill.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Lo trovo in farmacia?</h3></summary><div class="pc-acc-body"><p>No. Il sito paleocomplex.com è l'unico canale di vendita ufficiale: non ci sono farmacie, negozi o rivenditori.</p></div></details>
+      <details class="pc-acc pc-faq-acc"><summary><h3>Posso prenderlo se seguo una terapia?</h3></summary><div class="pc-acc-body"><p>Se segui una terapia, parlane con il tuo medico. Le indicazioni generali sono nella sezione Farmaci e interazioni delle <a class="pc-tlink" href="https://paleocomplex.com/faq/">domande frequenti</a>.</p></div></details>
+    </div>
+    <p class="pc-faq-end">Altre domande? Le trovi tutte nelle <a class="pc-tlink" href="https://paleocomplex.com/faq/">domande frequenti</a>, oppure scrivici dalla <a class="pc-tlink" href="https://paleocomplex.com/contatti/">pagina di supporto</a>.</p>
+  </div>
+</section>
+
+<section class="pc-section pc-dim" id="routine">
+  <div class="pc-container">
+    <div class="pc-shead"><p class="pc-kicker">Completa la tua routine</p><h2>Cosa aggiungere a Elisir</h2><p>Con Elisir hai già vitamine, minerali e <span class="pc-nw">Omega-3</span>: un altro multivitaminico non serve. Se vuoi aggiungere altro, mai più di due integratori nello stesso momento: Elisir dopo colazione o pranzo, il collagene la sera. <a class="pc-tlink" href="https://paleocomplex.com/faq/">Come combinarli</a></p></div>
+    <div class="pc-rgrid pc-rail">
+      <article class="pc-rcard">
+        <div class="pc-rcard-top"><span class="pc-rcard-pic"><img src="https://paleocomplex.com/wp-content/uploads/2024/07/Jeunesse_Front-300x300.jpg" alt="Barattolo di Jeunesse Paleocomplex." width="300" height="300" loading="lazy"></span><div><h3>Jeunesse</h3><p class="pc-rcard-meta"><strong>99&nbsp;€</strong> · 750 g · circa 50 giorni</p></div></div>
+        <p class="pc-rcard-text">Il nostro collagene più completo: 12.000 mg di collagene grass-fed con peptidi sotto 1 kDa, acido ialuronico, centella, astaxantina e glucosamina vegetale.</p>
+        <a class="pc-btn-ghost" href="https://paleocomplex.com/prodotto/jeunesse/">Scopri Jeunesse</a>
+      </article>
+      <article class="pc-rcard">
+        <div class="pc-rcard-top"><span class="pc-rcard-pic"><img src="https://paleocomplex.com/wp-content/uploads/2023/02/Youth_Front-1-300x300.jpg" alt="Barattolo di Youth Paleocomplex." width="300" height="300" loading="lazy"></span><div><h3>Youth</h3><p class="pc-rcard-meta"><strong>59&nbsp;€</strong> · 300 g · circa 30 giorni</p></div></div>
+        <p class="pc-rcard-text">6.000 mg di collagene idrolizzato con 13 nutrienti per pelle, capelli, articolazioni e ossa, tra cui NAC, acido ialuronico, glucosamina e condroitina.</p>
+        <a class="pc-btn-ghost" href="https://paleocomplex.com/prodotto/youth/">Scopri Youth</a>
+      </article>
+      <article class="pc-rcard">
+        <div class="pc-rcard-top"><span class="pc-rcard-pic"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#8B6F47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M3.5 6l1.5 1.5L7.5 4.5"/><path d="M3.5 12l1.5 1.5 2.5-3"/><path d="M3.5 18l1.5 1.5 2.5-3"/></svg></span><div><h3>Non sai cos'altro ti serve?</h3></div></div>
+        <p class="pc-rcard-text">Rispondi a poche domande nella nostra guida alla scelta: ti indica i prodotti più adatti a te e come abbinarli.</p>
+        <a class="pc-btn-ghost" href="https://paleocomplex.com/guida-scelta/">Vai alla guida</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pc-final" id="chiusura" aria-label="Acquista Elisir">
+  <div class="pc-container">
+    <div class="pc-final-inner">
+      <p class="pc-final-lead">Elisir: un misurino al posto di dieci barattoli, per <span class="pc-num">40</span> giorni.</p>
+      <p class="pc-final-price"><span class="pc-price">139&nbsp;€</span><span class="pc-final-day">· 3,47&nbsp;€ al giorno</span></p>
+      <form class="cart pc-cart" id="pc-cart-chiusura" method="post" action="https://paleocomplex.com/prodotto/elisir/" data-action="https://paleocomplex.com/prodotto/elisir/">
+        <input type="hidden" name="quantity" value="1" class="pc-qty">
+        <div class="pc-packs" role="radiogroup" aria-label="Quante confezioni">
+          <label class="pc-pack is-on" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=1">
+            <input type="radio" name="quantity" value="1" checked data-coupon="">
+            <span class="pc-pack-main"><span class="pc-pack-qty">1 confezione</span><span class="pc-pack-days">40 giorni</span></span>
+            <span class="pc-pack-unit">139,00&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 139,00&nbsp;€ · 3,47&nbsp;€ al giorno · spedizione 5&nbsp;€</span>
+          </label>
+          <label class="pc-pack" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=2&amp;wt_coupon=PROMO2">
+            <input type="radio" name="quantity" value="2" data-coupon="PROMO2">
+            <span class="pc-pack-main"><span class="pc-pack-qty">2 confezioni</span><span class="pc-pack-days">80 giorni · <em>sconto 5%</em></span></span>
+            <span class="pc-pack-unit">132,05&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 264,10&nbsp;€ · 3,30&nbsp;€ al giorno · spedizione gratuita</span>
+          </label>
+          <label class="pc-pack" data-href="https://paleocomplex.com/prodotto/elisir/?add-to-cart=48&amp;quantity=3&amp;wt_coupon=PROMO3">
+            <span class="pc-pack-badge">Il più conveniente</span>
+            <input type="radio" name="quantity" value="3" data-coupon="PROMO3">
+            <span class="pc-pack-main"><span class="pc-pack-qty">3 confezioni</span><span class="pc-pack-days">120 giorni · <em>sconto 10%</em></span></span>
+            <span class="pc-pack-unit">125,10&nbsp;€<small>a confezione</small></span>
+                <span class="pc-pack-sub">Totale 375,30&nbsp;€ · 3,13&nbsp;€ al giorno · spedizione gratuita</span>
+          </label>
+        </div>
+        <input type="hidden" name="add-to-cart" value="48">
+        <input type="hidden" name="gtm4wp_product_data" value='{"internal_id":48,"item_id":48,"item_name":"Elisir","sku":"elisir","price":139,"stocklevel":158,"stockstatus":"instock","google_business_vertical":"retail","item_category":"Integratori","id":48}'>
+        <p class="pc-deliv">Consegna stimata <strong class="pc-deliv-date">in 1-2 giorni lavorativi</strong><a class="pc-ref" href="#pc-nota-5" aria-label="Nota 5">5</a>.<span class="pc-deliv-timer"></span></p>
+        <button type="submit" class="single_add_to_cart_button pc-btn">Aggiungi al carrello</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="pc-notes" id="note">
+  <div class="pc-container">
+    <h2>Note e riferimenti</h2>
+    <ol>
+      <li id="pc-nota-1">Il "100%" in etichetta è il VNR, Valore Nutritivo di Riferimento, definito dal Regolamento (UE) n. 1169/2011, allegato XIII.</li>
+      <li id="pc-nota-2">Apporti massimi di vitamine e minerali ammessi negli integratori alimentari: Ministero della Salute, <a href="https://www.salute.gov.it/new/it/tema/alimenti-fini-medici-speciali-ed-integratori/vitamine-e-minerali/" target="_blank" rel="noopener">tabella "Apporti giornalieri di vitamine e minerali ammessi negli integratori alimentari"</a>, revisione settembre 2021.</li>
+      <li id="pc-nota-3">Ames B.N., "Prolonging healthy aging: Longevity vitamins and proteins", PNAS, 2018, vol. 115, n. 43, pp. 10836-10844, <a href="https://doi.org/10.1073/pnas.1809045115" target="_blank" rel="noopener">doi 10.1073/pnas.1809045115</a>.</li>
+      <li id="pc-nota-4">Prezzi per 40 giorni rilevati da altre marche, agli stessi dosaggi e nelle stesse forme di Elisir.</li>
+      <li id="pc-nota-5">Consegna stimata in giorni lavorativi, esclusi sabato, domenica e festivi. Calabria, Sicilia e Sardegna: un giorno lavorativo in più.</li>
+    </ol>
+    <div class="pc-warn">
+      <p>Gli integratori alimentari non sostituiscono una dieta varia ed equilibrata e uno stile di vita sano. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini al di sotto dei tre anni.</p>
+      <p>Elisir contiene olio di krill (crostacei). In gravidanza, in allattamento, in presenza di patologie o in terapia farmacologica consultare il medico prima dell'uso.</p>
+    </div>
+  </div>
+</section>
+
+<div class="pc-sticky" role="region" aria-label="Acquisto rapido">
+  <p class="pc-sticky-info"><span class="pc-sticky-name">Elisir</span><span class="pc-sticky-dot">·</span><span class="pc-sticky-price">139&nbsp;€</span></p>
+  <a class="pc-sticky-btn" href="#chiusura">Aggiungi al carrello</a>
+</div>
+
+<script>(function(){var r=document.getElementById('pc-pdp');if(!r)return;var h=location.hostname;if(location.protocol==='file:'||h==='localhost'||h==='127.0.0.1')r.classList.add('pc-is-local');var rm=false;if(window.matchMedia)rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;var forms=r.querySelectorAll('form.pc-cart');for(var f=0;f<forms.length;f++){(function(form){var packs=form.querySelectorAll('.pc-pack input'),qty=form.querySelector('.pc-qty'),base=form.getAttribute('data-action');if(!packs.length)return;function sync(){for(var i=0;i<packs.length;i++){var on=packs[i].checked;packs[i].parentNode.classList.toggle('is-on',on);if(on){if(qty)qty.value=packs[i].value;var c=packs[i].getAttribute('data-coupon');form.setAttribute('action',c?base+'?wt_coupon='+c:base);}}}for(var i=0;i<packs.length;i++)packs[i].addEventListener('change',sync);sync();})(forms[f]);}var track=r.querySelector('.pc-slides'),cur=0;var thumbs=function(){return r.querySelectorAll('.pc-thumb');};var mark=function(n){var t=thumbs();for(var i=0;i<t.length;i++){var on=i===n;t[i].classList.toggle('is-on',on);if(on){t[i].setAttribute('aria-current','true');var p=t[i].parentNode;if(p.scrollWidth>p.clientWidth+1)p.scrollTo({left:t[i].getBoundingClientRect().left-p.getBoundingClientRect().left+p.scrollLeft-(p.clientWidth-t[i].offsetWidth)/2,behavior:rm?'auto':'smooth'});}else t[i].removeAttribute('aria-current');}cur=n;};if(track){r.addEventListener('click',function(e){var a=e.target.closest?e.target.closest('.pc-thumb'):null;if(!a)return;var s=document.getElementById((a.getAttribute('href')||'').slice(1));if(!s)return;e.preventDefault();track.scrollTo({left:s.getBoundingClientRect().left-track.getBoundingClientRect().left+track.scrollLeft,behavior:rm?'auto':'smooth'});var t=thumbs();for(var i=0;i<t.length;i++){if(t[i]===a)mark(i);}});var tick=false;track.addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;var c=track.children,step=c.length>1?c[1].offsetLeft-c[0].offsetLeft:track.clientWidth;var n=Math.round(track.scrollLeft/Math.max(1,step));if(n!==cur)mark(n);});},{passive:true});}var drop=function(img){if(img.closest('.pc-thumb')){img.style.visibility='hidden';return;}var s=img.closest('.pc-slide');if(s){var t=r.querySelector('.pc-thumb[href="#'+s.id+'"]');if(t)t.parentNode.removeChild(t);s.parentNode.removeChild(s);if(track)track.scrollLeft=0;mark(0);return;}if(img.parentNode)img.parentNode.removeChild(img);};var imgs=r.querySelectorAll('img');for(var k=0;k<imgs.length;k++){(function(img){if(img.complete)if(img.naturalWidth===0)if(img.getAttribute('src')){drop(img);return;}img.addEventListener('error',function(){drop(img);});})(imgs[k]);}var vids=r.querySelectorAll('.pc-video');for(var v=0;v<vids.length;v++){vids[v].addEventListener('click',function(e){e.preventDefault();if(this.querySelector('iframe'))return;var id=this.getAttribute('data-yt'),st=this.getAttribute('data-start'),im=this.querySelector('img'),fr=document.createElement('iframe');fr.setAttribute('src','https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1'+(st?'&start='+st:''));fr.setAttribute('title',im?im.alt:'Video');fr.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');fr.setAttribute('allowfullscreen','');this.innerHTML='';this.appendChild(fr);this.removeAttribute('href');this.removeAttribute('target');},true);}var bar=r.querySelector('.pc-sticky'),buy=r.querySelector('.pc-buy'),fin=r.querySelector('.pc-final');if(bar)if(buy)if('IntersectionObserver' in window){var upd=function(){var show=buy.getBoundingClientRect().bottom<0;if(show)if(fin)if(fin.getBoundingClientRect().top<window.innerHeight)show=false;bar.classList.toggle('is-shown',show);};var io=new IntersectionObserver(upd),hero=r.querySelector('.pc-hero');io.observe(buy);if(hero)io.observe(hero);if(fin)io.observe(fin);upd();}var go=r.querySelector('.pc-sticky-btn');if(go)if(fin)go.addEventListener('click',function(e){e.preventDefault();fin.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});var c=fin.querySelector('.pc-pack input:checked');if(c)c.focus({preventScroll:true});});var folds=r.querySelectorAll('[data-fold]');for(var q=0;q<folds.length;q++){(function(box){var btn=r.querySelector('[data-fold-btn="'+box.id+'"]');if(!btn)return;var more=btn.textContent,less=btn.getAttribute('data-less')||more,row=btn.closest('.pc-more-row');var set=function(open){box.classList.toggle('is-folded',!open);btn.setAttribute('aria-expanded',open?'true':'false');btn.textContent=open?less:more;};set(false);btn.hidden=false;if(row)row.hidden=false;btn.addEventListener('click',function(){var open=box.classList.contains('is-folded');set(open);if(!open){if(box.getBoundingClientRect().top<0)box.scrollIntoView({block:'start',behavior:rm?'auto':'smooth'});}});var fade=box.querySelector('.pc-fade-row');if(fade)fade.addEventListener('click',function(){if(box.classList.contains('is-folded'))set(true);});})(folds[q]);}var rails=r.querySelectorAll('.pc-rail,.pc-thumbs');for(var y=0;y<rails.length;y++){(function(el){var t=false;var st=function(){t=false;var max=el.scrollWidth-el.clientWidth;el.classList.toggle('is-scrolled',el.scrollLeft>4);el.classList.toggle('is-end',el.scrollLeft>=max-4);};el.addEventListener('scroll',function(){if(t)return;t=true;requestAnimationFrame(st);},{passive:true});window.addEventListener('resize',st);st();})(rails[y]);}var dv=r.querySelectorAll('.pc-deliv');if(dv.length){var MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'],FESTE=['1-1','1-6','4-25','5-1','6-2','8-15','10-4','11-1','12-8','12-25','12-26'],PICCO=[['2026-11-16','2026-12-01'],['2026-12-14','2027-01-06']],CUT=14*3600,G=864e5;var pasquetta=function(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),n=h+l-7*m+114;return Date.UTC(y,Math.floor(n/31)-1,n%31+1)+G;};var lav=function(t){var d=new Date(t),w=d.getUTCDay();if(w===0||w===6)return false;if(FESTE.indexOf((d.getUTCMonth()+1)+'-'+d.getUTCDate())>-1)return false;return t!==pasquetta(d.getUTCFullYear());};var dopo=function(t){do{t+=G;}while(!lav(t));return t;};var picco=function(t){var x=new Date(t).toISOString().slice(0,10);for(var i=0;i<PICCO.length;i++)if(x>=PICCO[i][0]&&x<=PICCO[i][1])return true;return false;};var giorni=function(a,b){var A=new Date(a),B=new Date(b),ma=A.getUTCMonth(),mb=B.getUTCMonth();return ma===mb?A.getUTCDate()+'-'+B.getUTCDate()+'\u00a0'+MESI[mb]:A.getUTCDate()+'\u00a0'+MESI[ma]+' - '+B.getUTCDate()+'\u00a0'+MESI[mb];};var simula=function(x){var q=/(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d)/.exec(x||'');return q?{t:Date.UTC(+q[1],q[2]-1,+q[3]),s:q[4]*3600+q[5]*60}:null;};var adesso=function(){var loc=r.classList.contains('pc-is-local')&&/[?&]pc_now=([^&]+)/.exec(location.search);if(loc&&simula(loc[1]))return simula(loc[1]);var n=new Date();try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Rome',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric',hourCycle:'h23'}).formatToParts(n),v={};for(var i=0;i<p.length;i++)v[p[i].type]=+p[i].value;return{t:Date.UTC(v.year,v.month-1,v.day),s:(v.hour%24)*3600+v.minute*60+v.second};}catch(e){return{t:Date.UTC(n.getFullYear(),n.getMonth(),n.getDate()),s:n.getHours()*3600+n.getMinutes()*60+n.getSeconds()};}};var promessa=function(o){var oggi=o.t,lo=lav(oggi),parte=lo&&o.s<CUT?oggi:dopo(oggi),c1=dopo(parte),c2=dopo(c1),resta=0;if(picco(parte))c2=dopo(c2);if(lo&&parte===oggi)resta=CUT-o.s;else if(lo&&parte===oggi+G)resta=86400-o.s+CUT;return{date:giorni(c1,c2),min:Math.ceil(resta/60)};};var durata=function(m){var h=Math.floor(m/60),x=m%60,z=h?h+(h===1?' ora':' ore'):'';if(x)z+=(z?' ':'')+x+' min';return z;};var scrivi=function(){var p=promessa(adesso());for(var i=0;i<dv.length;i++){var d=dv[i].querySelector('.pc-deliv-date'),tm=dv[i].querySelector('.pc-deliv-timer');if(d)d.textContent=p.date;if(tm)tm.textContent=p.min>0?'Ordina entro '+durata(p.min)+'.':'';}};if(r.classList.contains('pc-is-local'))window.pcPromessa=function(x){var p=promessa(simula(x));return p.date+(p.min>0?' | Ordina entro '+durata(p.min):'');};scrivi();setInterval(scrivi,30000);document.addEventListener('visibilitychange',function(){if(!document.hidden)scrivi();});}})();</script>
+</div>
+</main>
+<section class="pc-pre" id="pc-pre" aria-label="Perch&eacute; acquistare da Paleocomplex"><div class="pc-pre-in"><ul class="pc-pre-track" id="pc-pre-track"><li class="pc-pre-item"> <svg class="pc-pre-ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M2.5 10.5h12v1.8a6 6 0 0 1-12 0z"></path><path d="M14.5 11l7-3"></path><path d="M5 8.2c1.6-1.6 4.6-1.6 7 0"></path></svg><p class="pc-pre-title">Un misurino al giorno</p><p class="pc-pre-text">Al posto di 10 barattoli da ricordare</p></li><li class="pc-pre-item"> <svg class="pc-pre-ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M1.5 6h12.5v9H1.5z"></path><path d="M14 9h4l3.5 3.5V15H14z"></path><circle cx="6" cy="17.5" r="1.8"></circle><circle cx="17.5" cy="17.5" r="1.8"></circle></svg><p class="pc-pre-title">Consegna garantita</p><p class="pc-pre-text">In 24/48h e assicurata (gratuita sopra i 200 &euro;)</p></li><li class="pc-pre-item"> <svg class="pc-pre-ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M9 14l-4-4 4-4"></path><path d="M5 10h9a5 5 0 0 1 0 10h-3"></path></svg><p class="pc-pre-title">Reso entro 14 giorni</p><p class="pc-pre-text">Con ritiro da parte nostra</p></li><li class="pc-pre-item"> <svg class="pc-pre-ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0c0 5-6.5 11.2-6.5 11.2z"></path><circle cx="12" cy="10.2" r="2.4"></circle></svg><p class="pc-pre-title">Prodotti in Italia</p><p class="pc-pre-text">Tracciabilit&agrave; totale da produttore certificato</p></li></ul><ul class="pc-pre-dots" id="pc-pre-dots" aria-label="Scorri le garanzie"><li><button type="button" aria-label="Voce 1 di 4" aria-current="true"></button></li><li><button type="button" aria-label="Voce 2 di 4"></button></li><li><button type="button" aria-label="Voce 3 di 4"></button></li><li><button type="button" aria-label="Voce 4 di 4"></button></li></ul></div></section><footer class="pc-ftr" id="pc-ftr"><section class="pc-ftr-nl" aria-labelledby="pc-ftr-nl-title"><div class="pc-ftr-in pc-ftr-nl-in"><div><h2 class="pc-ftr-nl-title" id="pc-ftr-nl-title">La newsletter di Lorenzo</h2><p class="pc-ftr-nl-text">Consigli pratici su alimentazione e integrazione, le novit&agrave; e le promozioni. In pi&ugrave;, 10 &euro; di sconto sul tuo primo ordine.</p></div><div id="pc-ftr-nl-box"><form class="pc-ftr-form" id="pc-ftr-form" action="#" method="post" data-company="W3i9zi" data-list="VQBSLm" data-live="0"> <label class="pc-sr" for="pc-ftr-email">La tua email</label> <input type="email" id="pc-ftr-email" name="email" placeholder="La tua email" autocomplete="email" required> <button type="submit">Iscriviti</button></form><p class="pc-ftr-note" id="pc-ftr-note">Iscrivendoti accetti la <a href="https://www.iubenda.com/privacy-policy/7836105/full-legal">privacy policy</a>. Puoi cancellarti quando vuoi.</p></div></div></section><div class="pc-ftr-in pc-ftr-main"><div class="pc-ftr-cols"><div class="pc-ftr-brand"> <a class="pc-ftr-logo" href="https://paleocomplex.com/"><img src="asset/header/logo-manico-24px-web-light.svg" width="2112" height="218" alt="Paleocomplex" loading="lazy"></a><p class="pc-ftr-pos">Paleocomplex &egrave; il marchio d'integrazione che trasforma la salute delle persone con un misurino al giorno, al posto di 10 barattoli.</p><p class="pc-ftr-tm">Paleocomplex&reg; &egrave; un marchio registrato da Lorenzo Zarone e distribuito da Healthy Living.</p><ul class="pc-ftr-social" aria-label="Paleocomplex sui social"><li><a href="https://www.instagram.com/paleocomplex/" aria-label="Instagram"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path></svg></a></li><li><a href="https://www.facebook.com/Paleocomplex" aria-label="Facebook"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg></a></li><li><a href="https://www.youtube.com/@paleocomplex" aria-label="YouTube"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a></li></ul></div><nav class="pc-ftr-sec" aria-label="Shop"><h2 class="pc-ftr-h"><button class="pc-ftr-acc" type="button" aria-expanded="false" aria-controls="pc-ftr-l1">Shop</button></h2><ul class="pc-ftr-list" id="pc-ftr-l1" hidden><li><a href="https://paleocomplex.com/promozioni/">Promozioni</a></li><li><a href="https://paleocomplex.com/integratori/">Tutti i prodotti</a></li></ul></nav><nav class="pc-ftr-sec" aria-label="Impara"><h2 class="pc-ftr-h"><button class="pc-ftr-acc" type="button" aria-expanded="false" aria-controls="pc-ftr-l2">Impara</button></h2><ul class="pc-ftr-list" id="pc-ftr-l2" hidden><li><a href="https://paleocomplex.com/articoli/">Blog</a></li><li><a href="https://www.youtube.com/@paleocomplex">Canale YouTube</a></li><li><a href="https://paleocomplex.com/perche-integrare/">Perch&eacute; integrare</a></li><li><a href="https://paleocomplex.com/guida-scelta/">Guida alla scelta</a></li><li><a href="https://paleocomplex.com/libri/">Libri</a></li></ul></nav><nav class="pc-ftr-sec" aria-label="Supporto"><h2 class="pc-ftr-h"><button class="pc-ftr-acc" type="button" aria-expanded="false" aria-controls="pc-ftr-l3">Supporto</button></h2><ul class="pc-ftr-list" id="pc-ftr-l3" hidden><li><a href="https://paleocomplex.com/faq/">Domande frequenti</a></li><li><a href="https://paleocomplex.com/spedizioni/">Spedizioni e resi</a></li><li><a href="https://paleocomplex.com/programma-fedelta/">Programma fedelt&agrave;</a></li><li><a href="https://paleocomplex.com/contatti/">Contatti</a></li><li><a href="https://paleocomplex.com/my-account/">Il mio account</a></li></ul></nav></div> <a class="pc-ftr-rev" href="https://paleocomplex.com/testimonianze/"> <span><span class="pc-ftr-stars" aria-hidden="true">★★★★★</span> <span class="pc-ftr-score"><strong>4,9</strong> su 5</span></span> <span class="pc-ftr-dot" aria-hidden="true">&middot;</span> <span class="pc-ftr-revtxt">Pi&ugrave; di 1.000 recensioni e testimonianze</span> <span class="pc-ftr-revlink">Leggile tutte</span> </a></div><div class="pc-ftr-bar"><div class="pc-ftr-in pc-ftr-bar-in"><div class="pc-ftr-row"><div class="pc-ftr-paywrap"> <span class="pc-ftr-paylabel" id="pc-ftr-pay">Pagamenti sicuri</span><ul class="pc-ftr-pay" aria-labelledby="pc-ftr-pay"><li class="pc-pay pc-pay-visa"><svg viewbox="0 8.1 24 7.8" role="img" aria-label="Visa"><path d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"></path></svg></li><li class="pc-pay pc-pay-mc"><svg viewbox="0 4.4 24 15.2" role="img" aria-label="Mastercard"><path d="M11.343 18.031c.058.049.12.098.181.146-1.177.783-2.59 1.238-4.107 1.238C3.32 19.416 0 16.096 0 12c0-4.095 3.32-7.416 7.416-7.416 1.518 0 2.931.456 4.105 1.238-.06.051-.12.098-.165.15C9.6 7.489 8.595 9.688 8.595 12c0 2.311 1.001 4.51 2.748 6.031zm5.241-13.447c-1.52 0-2.931.456-4.105 1.238.06.051.12.098.165.15C14.4 7.489 15.405 9.688 15.405 12c0 2.31-1.001 4.507-2.748 6.031-.058.049-.12.098-.181.146 1.177.783 2.588 1.238 4.107 1.238C20.68 19.416 24 16.096 24 12c0-4.094-3.32-7.416-7.416-7.416zM12 6.174c-.096.075-.189.15-.28.231C10.156 7.764 9.169 9.765 9.169 12c0 2.236.987 4.236 2.551 5.595.09.08.185.158.28.232.096-.074.189-.152.28-.232 1.563-1.359 2.551-3.359 2.551-5.595 0-2.235-.987-4.236-2.551-5.595-.09-.08-.184-.156-.28-.231z"></path></svg></li><li class="pc-pay pc-pay-pp"><svg viewbox="2.1 0 18.2 24" role="img" aria-label="PayPal"><path d="M7.016 19.198h-4.2a.562.562 0 0 1-.555-.65L5.093.584A.692.692 0 0 1 5.776 0h7.222c3.417 0 5.904 2.488 5.846 5.5-.006.25-.027.5-.066.747A6.794 6.794 0 0 1 12.071 12H8.743a.69.69 0 0 0-.682.583l-.325 2.056-.013.083-.692 4.39-.015.087zM19.79 6.142c-.01.087-.01.175-.023.261a7.76 7.76 0 0 1-7.695 6.598H9.007l-.283 1.795-.013.083-.692 4.39-.134.843-.014.088H6.86l-.497 3.15a.562.562 0 0 0 .555.65h3.612c.34 0 .63-.249.683-.585l.952-6.031a.692.692 0 0 1 .683-.584h2.126a6.793 6.793 0 0 0 6.707-5.752c.306-1.95-.466-3.744-1.89-4.906z"></path></svg></li><li class="pc-pay pc-pay-txt">Contrassegno</li></ul></div><ul class="pc-ftr-links"><li><a href="https://paleocomplex.com/refund_returns/">Termini e condizioni</a></li><li><a href="https://www.iubenda.com/privacy-policy/7836105/full-legal">Privacy policy</a></li><li><a href="https://www.iubenda.com/privacy-policy/7836105/cookie-policy">Cookie policy</a></li><li><a href="https://paleocomplex.com/disclaimer/">Disclaimer</a></li></ul></div><p class="pc-ftr-company">&copy; 2026 Paleocomplex &middot; Healthy Living LZ LLC, 18395 Gulf Blvd, Ste 203 RM4, Indian Shores, FL 33785, USA</p></div></div></footer>
+<script id="pc-chrome-js">
+/* Header, pre-footer e footer Paleocomplex. Versione 1.0.4, 2026-10-14. Generato da header-preview.html v2.8 */
+(function(){
+  var root=document.documentElement,hdr=document.getElementById('pc-hdr');
+  if(!hdr)return;
+  var hoverMq=window.matchMedia('(hover:hover)'),deskMq=window.matchMedia('(min-width:900px)');
+  function setOff(){root.style.setProperty('--pc-hdr-offset',(hdr.classList.contains('pc-hdr-hidden')?0:hdr.offsetHeight)+'px')}
+  function setH(){root.style.setProperty('--pc-hdr-h',hdr.offsetHeight+'px');setOff()}
+  setH();window.addEventListener('resize',setH);
+
+  /* L'header si nasconde scorrendo verso il basso e ricompare tornando su (telefono e desktop) */
+  var mouseMq=window.matchMedia('(hover:hover)'),lastY=Math.max(0,window.pageYOffset||0),acc=0,ticking=false;
+  function showHdr(){if(!hdr.classList.contains('pc-hdr-hidden'))return;hdr.classList.remove('pc-hdr-hidden');root.classList.remove('pc-hdr-is-hidden');setOff()}
+  function hideHdr(){if(hdr.classList.contains('pc-hdr-hidden'))return;hdr.classList.add('pc-hdr-hidden');root.classList.add('pc-hdr-is-hidden');setOff()}
+  function keepHdr(){
+    if(root.classList.contains('pc-lock')||hdr.querySelector('.pc-nav-item.is-open'))return true;
+    var sr=document.getElementById('pc-search-row');if(sr&&!sr.hidden)return true;
+    return mouseMq.matches&&hdr.matches(':hover');
+  }
+  function onScroll(){
+    ticking=false;
+    var y=Math.max(0,window.pageYOffset||0),dy=y-lastY;lastY=y;
+    if(y<160||keepHdr()){showHdr();acc=0;return}
+    if((dy>0&&acc<0)||(dy<0&&acc>0))acc=0;
+    acc+=dy;
+    if(acc>24)hideHdr();
+    else if(acc<-24)showHdr();
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;window.requestAnimationFrame(onScroll)}},{passive:true});
+  hdr.addEventListener('focusin',showHdr);
+
+  /* Megamenu: hover col mouse, clic e tastiera per tutti */
+  var items=[].slice.call(hdr.querySelectorAll('.pc-nav-item.has-mega'));
+  function setOpen(it,open){it.classList.toggle('is-open',open);it.querySelector('.pc-nav-trigger').setAttribute('aria-expanded',open?'true':'false')}
+  function closeMegas(except){items.forEach(function(it){if(it!==except)setOpen(it,false)})}
+  items.forEach(function(it){
+    var b=it.querySelector('.pc-nav-trigger');
+    b.addEventListener('click',function(){var o=!it.classList.contains('is-open');closeMegas(it);setOpen(it,o)});
+    it.addEventListener('mouseenter',function(){if(hoverMq.matches)b.setAttribute('aria-expanded','true')});
+    it.addEventListener('mouseleave',function(){if(hoverMq.matches)setOpen(it,false)});
+  });
+  document.addEventListener('click',function(e){if(!e.target.closest('.pc-nav-item.has-mega'))closeMegas()});
+
+  /* Ricerca desktop */
+  var sBtn=hdr.querySelector('.pc-hdr-search-btn'),sRow=document.getElementById('pc-search-row');
+  function closeSearch(){if(sRow.hidden)return;sRow.hidden=true;sBtn.setAttribute('aria-expanded','false');setH()}
+  sBtn.addEventListener('click',function(){
+    if(!sRow.hidden){closeSearch();return}
+    closeMegas();sRow.hidden=false;sBtn.setAttribute('aria-expanded','true');setH();sRow.querySelector('input[type="search"]').focus();
+  });
+
+  /* Menu da telefono */
+  var burger=hdr.querySelector('.pc-burger'),menu=document.getElementById('pc-mnav');
+  function openMenu(){
+    showHdr();
+    menu.style.setProperty('--pc-mnav-top',Math.max(0,hdr.getBoundingClientRect().bottom)+'px');
+    menu.inert=false;menu.classList.add('is-open');burger.classList.add('is-open');
+    burger.setAttribute('aria-expanded','true');burger.setAttribute('aria-label','Chiudi il menu');root.classList.add('pc-lock');
+  }
+  function closeMenu(){
+    if(!menu.classList.contains('is-open'))return;
+    menu.classList.remove('is-open');menu.inert=true;burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Apri il menu');root.classList.remove('pc-lock');
+  }
+  burger.addEventListener('click',function(){menu.classList.contains('is-open')?closeMenu():openMenu()});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
+  deskMq.addEventListener('change',function(e){if(e.matches)closeMenu()});
+  var accs=[].slice.call(menu.querySelectorAll('.pc-macc-btn'));
+  accs.forEach(function(b){
+    b.addEventListener('click',function(){
+      var o=b.getAttribute('aria-expanded')!=='true';
+      accs.forEach(function(x){x.setAttribute('aria-expanded','false');document.getElementById(x.getAttribute('aria-controls')).hidden=true});
+      b.setAttribute('aria-expanded',o?'true':'false');document.getElementById(b.getAttribute('aria-controls')).hidden=!o;
+    });
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape')return;
+    var openIt=hdr.querySelector('.pc-nav-item.is-open');
+    closeMegas();closeSearch();
+    if(menu.classList.contains('is-open')){closeMenu();burger.focus()}
+    else if(openIt){openIt.querySelector('.pc-nav-trigger').focus()}
+  });
+})();
+
+/* Pre-footer: trattini che seguono lo scorrimento su telefono */
+(function(){
+  var track=document.getElementById('pc-pre-track'),dots=[].slice.call(document.querySelectorAll('#pc-pre-dots button'));
+  if(!track||!dots.length)return;
+  var raf=0;
+  function current(){return Math.round(track.scrollLeft/Math.max(1,track.clientWidth))}
+  function paint(){raf=0;var i=current();dots.forEach(function(d,k){if(k===i)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current')})}
+  track.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(paint)},{passive:true});
+  dots.forEach(function(d,k){d.addEventListener('click',function(){
+    var smooth=!window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    track.scrollTo({left:k*track.clientWidth,behavior:smooth?'smooth':'auto'});
+  })});
+})();
+
+/* Footer: voci a scomparsa solo su telefono */
+(function(){
+  var mq=window.matchMedia('(max-width:719px)');
+  var btns=[].slice.call(document.querySelectorAll('.pc-ftr-acc'));
+  function list(b){return document.getElementById(b.getAttribute('aria-controls'))}
+  function sync(){
+    btns.forEach(function(b){
+      if(mq.matches){b.removeAttribute('tabindex');b.setAttribute('aria-expanded',list(b).hidden?'false':'true')}
+      else{b.setAttribute('tabindex','-1');b.setAttribute('aria-expanded','true')}
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      if(!mq.matches)return;
+      var l=list(b),o=l.hidden;l.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+  mq.addEventListener('change',sync);sync();
+})();
+
+/* Newsletter del footer: iscrizione con l'API client di Klaviyo (solo se non c'e' un modulo Klaviyo incorporato) */
+(function(){
+  var form=document.getElementById('pc-ftr-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var input=form.querySelector('input[type="email"]'),btn=form.querySelector('button'),note=document.getElementById('pc-ftr-note');
+    var email=(input.value||'').trim();
+    if(!email)return;
+    if(form.getAttribute('data-live')!=='1'){if(note)note.textContent='Iscrizione non ancora attiva.';return;}
+    btn.disabled=true;
+    fetch('https://a.klaviyo.com/client/subscriptions?company_id='+encodeURIComponent(form.getAttribute('data-company')),{
+      method:'POST',
+      headers:{'Content-Type':'application/vnd.api+json','revision':'2024-10-15'},
+      body:JSON.stringify({data:{type:'subscription',attributes:{custom_source:'Footer sito',profile:{data:{type:'profile',attributes:{email:email}}}},relationships:{list:{data:{type:'list',id:form.getAttribute('data-list')}}}}})
+    }).then(function(r){
+      if(!r.ok)throw new Error(String(r.status));
+      var box=document.getElementById('pc-ftr-nl-box'),p=document.createElement('p');
+      p.className='pc-ftr-ok';p.textContent='Grazie! Ti abbiamo iscritto alla newsletter.';
+      box.innerHTML='';box.appendChild(p);
+    }).catch(function(){
+      btn.disabled=false;
+      if(note)note.textContent='Iscrizione non riuscita. Riprova tra poco.';
+    });
+  });
+})();
+
+</script>
+</body>
+</html>
