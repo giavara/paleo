@@ -6,8 +6,10 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Centro di controllo · Paleocomplex</title>
 <!--
-  Centro di controllo Paleocomplex, v2.4 (14/10/2026)
-  v2.4: nuova pagina Newsletter (lead generation, chi compra, email automatiche, chi entra e chi esce
+  Centro di controllo Paleocomplex, v2.5 (21/10/2026)
+  v2.5: margine dell'anno in valore e percentuale sopra il grafico margini, quota sul netto di ogni
+        blocco (prodotti, pubblicita', operativi) in riquadri, tabella e tooltip, riga di totale
+  v2.4 (14/10/2026): nuova pagina Newsletter (lead generation, chi compra, email automatiche, chi entra e chi esce
         dalla lista), voce nel menu; target anno 800K e Q4 237K (era 805K e 240K)
   v2.3 (1/10/2026): nuova pagina Clienti (perché 100 clienti nuovi al mese non fanno 100.000 €), voce Clienti
         nel menu; riferimento all'ultimo giorno completo (il 1° del mese il mese prima è chiuso)
@@ -98,6 +100,7 @@
   .tile .delta.su{color:var(--good)}
   .tile .delta.giu{color:var(--bad)}
   .tile .hint{font-size:11px;color:var(--muted);margin-top:4px}
+  .tile .pv{font-size:15px;font-weight:650;color:var(--ink2);margin-top:6px;font-variant-numeric:tabular-nums}
   .legenda{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 0;font-size:12px;color:var(--ink2)}
   .legenda span{display:inline-flex;align-items:center;gap:6px}
   .legenda i{width:12px;height:12px;border-radius:3px;display:inline-block}
@@ -117,6 +120,7 @@
   details.numeri th,details.numeri td{padding:5px 8px;border-bottom:1px solid var(--border);
     text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   details.numeri th:first-child,details.numeri td:first-child{text-align:left}
+  details.numeri tr.tot td{font-weight:700;border-top:2px solid var(--border)}
   details.numeri th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;
     letter-spacing:.04em}
   .meters .voce{margin-bottom:14px}
@@ -767,11 +771,41 @@ const chiuso = m => !(parzialeUltimo && m.m === ultimo.m);
   if (!dati.length){ txt(div('nota', card), 'Nessun mese coperto dal file margini.'); return; }
 
   const segmenti = [
-    {chiave:'cogs', nome:'Costo prodotti', colore:'var(--s1)'},
-    {chiave:'ads', nome:'Pubblicità', colore:'var(--s2)'},
-    {chiave:'operativi', nome:'Costi operativi', colore:'var(--s4)'},
+    {chiave:'cogs', nome:'Costo prodotti', colore:'var(--s1)', nota:"costo d'acquisto della merce venduta"},
+    {chiave:'ads', nome:'Pubblicità', colore:'var(--s2)', nota:'Google e Meta'},
+    {chiave:'operativi', nome:'Costi operativi', colore:'var(--s4)', nota:'spedizioni, commissioni, Growers, strumenti'},
     {chiave:'margine', nome:'Margine', colore:'var(--s3)'},
   ];
+
+  // Totale dei mesi completi dell'anno: le percentuali si pesano sul netto, non si fa la media dei mesi
+  const somma = k => dati.reduce((s, r) => s + r[k], 0);
+  const tot = {netto: somma('netto')};
+  segmenti.forEach(s => tot[s.chiave] = somma(s.chiave));
+  const mDa = +dati[0].m.slice(5,7), mA = +dati[dati.length-1].m.slice(5,7);
+  const periodo = MESI_IT[mDa-1] + '-' + MESI_IT[mA-1] +
+    (dati.length < mA - mDa + 1 ? ' (' + dati.length + ' mesi)' : '');
+  // un decimale sempre (51,0% e non 51%): in colonna i numeri si allineano
+  const quota = (v, n) => (v / n * 100).toLocaleString('it-IT', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%';
+  const conVal = (v, n) => eur(Math.round(v)) + ' (' + quota(v, n) + ')';
+
+  const box = $('#kpis-margini');
+  if (box){
+    const ordine = [segmenti[3], segmenti[0], segmenti[1], segmenti[2]];
+    ordine.forEach(s => {
+      const t = div('tile', box);
+      txt(div('lab', t), s.nome + ' ' + periodo);
+      if (s.chiave === 'margine'){
+        txt(div('val', t), eur(Math.round(tot.margine)));
+        txt(div('pv', t), quota(tot.margine, tot.netto) + ' del netto');
+        txt(div('hint', t), 'su ' + eur(Math.round(tot.netto)) + ' di netto. Primo semestre ' + (annoCur-1) + ': ' +
+            pct(D.margine_h1_prec.pct));
+      } else {
+        txt(div('val', t), quota(tot[s.chiave], tot.netto));
+        txt(div('pv', t), eur(Math.round(tot[s.chiave])));
+        txt(div('hint', t), s.nota);
+      }
+    });
+  }
   const W = 900, H = 320, m = {t:30, r:16, b:28, l:56};
   const iw = W - m.l - m.r, ih = H - m.t - m.b;
   const massimo = niceMax(Math.max(...dati.map(r => r.netto)));
@@ -812,8 +846,7 @@ const chiuso = m => !(parzialeUltimo && m.m === ultimo.m);
         const box = svg.getBoundingClientRect(), cardBox = card.getBoundingClientRect();
         tt.mostra(cx*box.width/W + box.left - cardBox.left, yTop*box.height/H,
           MESI_IT[mi] + ' · netto ' + eur(r.netto),
-          [{colore: s.colore, valore: eur(Math.round(v)), nome: s.nome +
-            (s.chiave === 'margine' ? ' (' + pct(r.pct) + ')' : '')}]);
+          [{colore: s.colore, valore: eur(Math.round(v)), nome: s.nome + ' (' + quota(r[s.chiave], r.netto) + ')'}]);
         rett.style.opacity = '.82';
         hit.addEventListener('pointerleave', () => { rett.style.opacity = ''; tt.nascondi(); }, {once:true});
       });
@@ -822,7 +855,7 @@ const chiuso = m => !(parzialeUltimo && m.m === ultimo.m);
     });
     const t = sv('text', {x:cx, y:Y(base)-7, 'text-anchor':'middle',
       style:'font-size:11px;font-weight:600;fill:var(--ink2)'});
-    txt(t, pct(r.pct)); svg.appendChild(t);
+    txt(t, quota(r.margine, r.netto)); svg.appendChild(t);  // r.pct e' gia' arrotondato: 0,4975 diventava 49,8%
   });
   for (let i = 0; i < 12; i++){
     const tm = sv('text', {x:m.l + banda*(i+.5), y:H-8, 'text-anchor':'middle',
@@ -832,9 +865,12 @@ const chiuso = m => !(parzialeUltimo && m.m === ultimo.m);
 
   legenda(card, segmenti.map(s => ({nome: s.nome, colore: s.colore})));
   if (D.nota_margini) txt(div('nota', card), D.nota_margini);
-  tabella(card, ['Mese','Netto','Costo prodotti','Pubblicità','Costi operativi','Margine','Margine %'],
-    dati.map(r => [MESI_IT[+r.m.slice(5,7)-1], eur(r.netto), eur(Math.round(r.cogs)),
-      eur(Math.round(r.ads)), eur(Math.round(r.operativi)), eur(Math.round(r.margine)), pct(r.pct)]));
+  const riga = (nome, r) => [nome, eur(Math.round(r.netto)),
+    ...segmenti.map(s => conVal(r[s.chiave], r.netto))];
+  tabella(card, ['Mese','Netto','Costo prodotti','Pubblicità','Costi operativi','Margine'],
+    [...dati.map(r => riga(MESI_IT[+r.m.slice(5,7)-1], r)), riga('Totale ' + periodo, tot)]);
+  const ultimaRiga = card.querySelector('details.numeri:last-of-type tr:last-child');
+  if (ultimaRiga) ultimaRiga.className = 'tot';
 })();
 
 // ------------------------------------------------------------- mini confronti 2 anni
