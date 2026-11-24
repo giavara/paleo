@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+  Amazon DSP agosto 2026, sintesi per Lorenzo
+  Versione: v2 (2026-11-24)
+  Changelog:
+  v1 — sintesi su una pagina del report Mentor di Andrea Orfei (dati Amazon DSP estratti il 5/11/2026),
+       più la verifica su WooCommerce degli ordini partiti dalle landing /lp/ (zero, agosto-ottobre 2026)
+  v2 — tolto in fondo il riquadro grande del conto (927 €, addebito in fattura): resta la frase nell'apertura
+-->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon DSP agosto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: un resoconto da leggere in trenta secondi, poi si passa al conto
+   IDEA la pagina di sintesi che Mentor mette in cima a un report di campagna
+   PICTURE speso contro venduto, una riga per ciascuna delle quattro campagne
+   COLOUR fondo nero Mentor, testo bianco, arancio Mentor per le vendite, grigio per la spesa
+   TYPE Poppins per titoli e numeri, Raleway per il testo, come il report originale
+   LAYOUT una colonna fino a 880px: titolo, quattro numeri, grafico, tre punti, il conto; sul telefono tutto impilato */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121212);--panel:light-dark(#f5f4f2,#1b1b1b);--line:light-dark(#dfddd9,#2f2f2f);--ink:light-dark(#141414,#f5f4f2);--soft:light-dark(#5a5854,#aaa7a2);--spend:light-dark(#a3a09b,#6f6c68);--accent:light-dark(#d9531c,#ff7a45)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Raleway,system-ui,sans-serif;overflow-x:clip}
+.wrap{max-width:880px;margin:0 auto;padding:clamp(24px,4vw,48px) max(5vw,16px) 40px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:14px;border-bottom:2px solid var(--ink);font-size:14px;color:var(--soft)}
+.logo{font:600 22px/1 Poppins,system-ui,sans-serif;color:var(--ink)}
+.logo b{color:var(--accent)}
+h1{font:600 clamp(32px,5.4vw,46px)/1.08 Poppins,system-ui,sans-serif;letter-spacing:-.02em;margin:30px 0 14px;text-wrap:balance}
+.nw{white-space:nowrap}
+.lead{font-size:18px;max-width:62ch;margin:0 0 28px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.figs>div{background:var(--panel);padding:18px 20px}
+.num{font:600 clamp(26px,4vw,32px)/1.1 Poppins,system-ui,sans-serif;white-space:nowrap}
+.num.hot{color:var(--accent)}
+.lab{font-size:14px;color:var(--soft);margin-top:4px}
+.note{font-size:14px;color:var(--soft);margin:12px 0 0;max-width:72ch}
+h2{font:600 clamp(22px,3vw,26px)/1.2 Poppins,system-ui,sans-serif;letter-spacing:-.01em;margin:48px 0 8px;text-wrap:balance}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--soft);margin:0 0 10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr) 5.5em;grid-template-areas:"who bars res";gap:6px 18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.who{grid-area:who}
+.who b{display:block;font-weight:600}
+.who span{font-size:14px;color:var(--soft)}
+.bars{grid-area:bars;display:grid;gap:5px}
+.bar{display:flex;align-items:center;gap:8px;font-size:14px;white-space:nowrap}
+.bar i{display:block;height:14px;border-radius:3px;min-width:2px}
+.res{grid-area:res;text-align:right;font:600 19px/1.2 Poppins,system-ui,sans-serif;white-space:nowrap}
+.res.up{color:var(--accent)}
+.res small{display:block;font:400 13px/1.3 Raleway,system-ui,sans-serif;color:var(--soft);white-space:normal}
+.tot{margin:12px 0 0;font-size:15px}
+.learn{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px;max-width:70ch}
+.learn li{position:relative;padding-left:22px}
+.learn li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.next{margin:20px 0 0;max-width:70ch}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+@media(max-width:600px){
+.lead{font-size:17px}
+.row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"who res" "bars bars"}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <span class="logo">mentor<b>.</b></span>
+    <span>Amazon DSP, agosto 2026</span>
+  </header>
+
+  <h1>Amazon ad agosto: <span class="nw">927 €</span> spesi, 10&nbsp;ordini</h1>
+  <p class="lead">Un test piccolo, con un risultato modesto: qualche vendita è arrivata, ma non abbastanza per rifarlo così com'era. La campagna è chiusa e il costo lo trovi nella prossima fattura.</p>
+
+  <section class="figs" aria-label="I numeri della campagna">
+    <div><div class="num">927 €</div><div class="lab">spesi in tre settimane</div></div>
+    <div><div class="num">2,95 mln</div><div class="lab">annunci mostrati</div></div>
+    <div><div class="num">4.637</div><div class="lab">click verso il sito</div></div>
+    <div><div class="num hot">1.552 €</div><div class="lab">di vendite, da 10 ordini</div></div>
+  </section>
+  <p class="note">Ordini e vendite li conta Amazon: chi ha visto o cliccato un annuncio e ha comprato sul sito entro 14 giorni. Nessuno ha comprato subito dopo il click: sono persone tornate sul sito in seguito, da altre strade.</p>
+
+  <h2>Due campagne su quattro hanno reso il doppio di quanto sono costate</h2>
+  <div class="legend"><span><i style="background:var(--spend)"></i>Speso</span><span><i style="background:var(--accent)"></i>Venduto</span></div>
+  <div class="rows" id="rows"></div>
+  <p class="tot">In totale <b class="nw">927 €</b> spesi e <b class="nw">1.552 €</b> venduti: ogni euro ne ha riportati <b class="nw">1,7</b>.</p>
+
+  <h2>Il pubblico giusto c'era, gli spazi no</h2>
+  <ul class="learn">
+    <li>Chi su Amazon compra già integratori ha cliccato fino a tre volte più della media.</li>
+    <li>Più di metà della spesa (59%) è finita in app di giochi sul telefono: tanti click, poca attenzione.</li>
+    <li>Gli spazi economici sono finiti subito: il costo per mille annunci è passato da <span class="nw">0,27 €</span> a <span class="nw">0,64 €</span> in tre settimane, poi la campagna ha smesso di uscire.</li>
+  </ul>
+  <p class="next"><b>Per ora non lo rifacciamo.</b> Se lo riprendiamo, solo su chi compra già integratori e fuori dalle app di giochi.</p>
+
+  <footer>Fonte: report Amazon DSP, account Growers Srl, dati estratti il 5/11/2026; ordini partiti dalle landing verificati su WooCommerce, agosto-ottobre 2026. Il report completo, con pubblico, siti e creatività, c'è se ti servono i dettagli.</footer>
+</main>
+<script>
+{
+  const data = [
+    { n: "Youth", a: "pubblico scelto da Amazon", s: 314.4, v: 642.9 },
+    { n: "Multivitaminico", a: "chi compra integratori su Amazon", s: 298.2, v: 601.6 },
+    { n: "Multivitaminico", a: "pubblico scelto da Amazon", s: 295.7, v: 308.0 },
+    { n: "Youth", a: "chi compra integratori su Amazon", s: 18.8, v: 0, stop: "fermata la prima settimana" }
+  ];
+  const max = Math.max(...data.map(d => Math.max(d.s, d.v)));
+  const eur = x => Math.round(x).toLocaleString("it-IT") + " €";
+  const bar = (x, c) => `<div class="bar"><i style="width:calc((100% - 4.5em) * ${(x / max).toFixed(4)});background:var(${c})"></i>${eur(x)}</div>`;
+  const res = d => {
+    if (d.stop) return `<div class="res">-<small>${d.stop}</small></div>`;
+    const r = d.v / d.s;
+    return `<div class="res${r >= 1.5 ? " up" : ""}">×${r.toFixed(1).replace(".", ",")}</div>`;
+  };
+  document.getElementById("rows").innerHTML = data.map(d =>
+    `<div class="row"><div class="who"><b>${d.n}</b><span>${d.a}</span></div><div class="bars">${bar(d.s, "--spend")}${bar(d.v, "--accent")}</div>${res(d)}</div>`
+  ).join("");
+}
+</script>
+</body>
+</html>
