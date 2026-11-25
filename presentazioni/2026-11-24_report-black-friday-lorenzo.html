@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+  Report Black Friday 2026 per Lorenzo - v1 (2026-11-24)
+  Generato da scripts/report_black_friday.py: numeri in project/black-friday-2026-dati.json
+  Changelog:
+  v1 - prima versione. Dati: WooCommerce (ordini 16-20/11 e promo 2025 20-26/11), Klaviyo (nove invii), Google Ads (spesa), ordini lordi IVA inclusa.
+-->
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Friday 2026 - Report | Paleocomplex</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --card:#F2EEE4; --beige:#EDE5D3;
+    --gold:#B08D5B; --bronze:#8B6F47; --ink:#1A1A1A; --muted:#6E685D;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;line-height:1.6}
+  .slide{max-width:880px;margin:0 auto;padding:72px 48px;border-bottom:1px solid var(--beige)}
+  .slide:last-child{border-bottom:none}
+  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:600;line-height:1.15;margin-bottom:12px}
+  h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:600;line-height:1.2;margin-bottom:28px}
+  .sub{font-size:17px;color:var(--muted);max-width:600px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin:36px 0}
+  .stat{background:var(--card);border-radius:14px;padding:28px 24px;text-align:center}
+  .stat .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:700;color:var(--bronze);line-height:1.1}
+  .stat .l{font-size:13px;color:var(--muted);margin-top:8px}
+  .stat .d{font-size:12px;color:var(--gold);font-weight:600;margin-top:4px}
+  p{margin-bottom:14px;font-size:16px}
+  .hl{background:var(--beige);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;font-size:16px}
+  .bars{margin:32px 0}
+  .bar-row{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .bar-label{width:150px;font-size:14px;color:var(--muted);text-align:right;flex-shrink:0}
+  .bar-track{flex:1;display:flex;align-items:center;gap:10px}
+  .bar{height:26px;border-radius:6px;background:var(--gold)}
+  .bar.alt{background:#D8CBB3}
+  .bar-val{font-size:14px;font-weight:600;white-space:nowrap}
+  .tw{overflow-x:auto;margin:28px 0}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;text-align:right;padding:8px 6px;border-bottom:2px solid var(--beige);line-height:1.3;vertical-align:bottom}
+  td{padding:10px 6px;border-bottom:1px solid var(--beige);text-align:right;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  td.txt,th.txt{text-align:left;white-space:normal;min-width:150px}
+  tr.tot td{font-weight:700;border-top:2px solid var(--gold);border-bottom:none}
+  .foot{font-size:12px;color:var(--muted);margin-top:40px;border-top:1px solid var(--beige);padding-top:16px}
+  .logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:700;letter-spacing:1px}
+  .logo span{color:var(--gold)}
+  header{max-width:880px;margin:0 auto;padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--beige)}
+  header .date{font-size:13px;color:var(--muted)}
+  @media print{.slide{page-break-after:always;padding:40px}}
+  @media (max-width:640px){.slide{padding:48px 24px}h1{font-size:38px}h2{font-size:28px}header{padding:20px 24px}.bar-label{width:96px;font-size:12px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">PALEO<span>COMPLEX</span></div>
+  <div class="date">Report riservato · 24 novembre 2026</div>
+</header>
+
+<section class="slide">
+  <div class="kicker">Black Friday · 16-20 novembre · 20% su tutto</div>
+  <h1>Cinque giorni hanno battuto i sette del 2025.</h1>
+  <p class="sub">La promo è finita una settimana prima del Black Friday ufficiale del 27, che quest'anno resta senza offerta. Risultato: più vendite della promo dell'anno scorso, che durava due giorni in più.</p>
+  <div class="grid">
+    <div class="stat"><div class="n">€53.287</div><div class="l">venduto in 5 giorni</div><div class="d">+14% sulla promo 2025</div></div>
+    <div class="stat"><div class="n">281</div><div class="l">ordini</div><div class="d">241 nei 7 giorni del 2025</div></div>
+    <div class="stat"><div class="n">€190</div><div class="l">carrello medio</div><div class="d">€194 nel 2025</div></div>
+    <div class="stat"><div class="n">40</div><div class="l">clienti nuovi (stima)</div><div class="d">31 nel 2025</div></div>
+  </div>
+  <div class="hl"><strong>€10.657 al giorno contro €6.664: +60%.</strong> Novembre è a €88.675 al 23/11, già sopra tutto novembre 2025 (€76.814, +15%) e sopra gli 85.000 € indicati per il mese, con ancora sette giorni da vendere.</div>
+  <div class="foot">Fatturato lordo: totale degli ordini completati e in lavorazione, IVA e spedizione incluse. Confronto con la promo 2025 del 20-26 novembre.</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Giorno per giorno</div>
+  <h2>Il venerdì ha fatto da solo un terzo della promo.</h2>
+  <div class="bars"><div class="bar-row"><div class="bar-label">lun 16/11</div><div class="bar-track"><div class="bar" style="width:41%"></div><div class="bar-val">€7.052 · 37 ordini</div></div></div><div class="bar-row"><div class="bar-label">mar 17/11</div><div class="bar-track"><div class="bar" style="width:65%"></div><div class="bar-val">€11.018 · 54 ordini</div></div></div><div class="bar-row"><div class="bar-label">mer 18/11</div><div class="bar-track"><div class="bar" style="width:42%"></div><div class="bar-val">€7.114 · 38 ordini</div></div></div><div class="bar-row"><div class="bar-label">gio 19/11</div><div class="bar-track"><div class="bar" style="width:65%"></div><div class="bar-val">€11.056 · 60 ordini</div></div></div><div class="bar-row"><div class="bar-label">ven 20/11</div><div class="bar-track"><div class="bar" style="width:100%"></div><div class="bar-val">€17.048 · 92 ordini</div></div></div></div>
+  <p>L'ultimo giorno ha venduto <strong>€17.048 con 92 ordini</strong>, il 32% dell'intera promo e più del miglior giorno della promo 2025 (€12.161, il 20/11). Quel giorno sono partite quattro email: alle 8, alle 16, alle 21 e alle 23. Tra le 21 e la mezzanotte sono arrivati 24 ordini, €3.997.</p>
+  <p>Il lunedì è partito più piano del giovedì del 2025 (€7.052 contro €12.161), poi il martedì ha recuperato con 54 ordini e 12 clienti nuovi.</p>
+  <div class="tw"><table>
+    <tr><th>Giorno</th><th>2026</th><th>Lordo</th><th>Ordini</th><th>2025</th><th>Lordo</th><th>Ordini</th></tr>
+    <tr><td>1</td><td>lun 16/11</td><td>€7.052</td><td>37</td><td>gio 20/11</td><td>€12.161</td><td>63</td></tr><tr><td>2</td><td>mar 17/11</td><td>€11.018</td><td>54</td><td>ven 21/11</td><td>€5.959</td><td>29</td></tr><tr><td>3</td><td>mer 18/11</td><td>€7.114</td><td>38</td><td>sab 22/11</td><td>€4.829</td><td>23</td></tr><tr><td>4</td><td>gio 19/11</td><td>€11.056</td><td>60</td><td>dom 23/11</td><td>€4.350</td><td>22</td></tr><tr><td>5</td><td>ven 20/11</td><td>€17.048</td><td>92</td><td>lun 24/11</td><td>€5.256</td><td>28</td></tr><tr><td>6</td><td colspan=3 style='color:var(--muted)'>promo finita il 20/11</td><td>mar 25/11</td><td>€2.950</td><td>21</td></tr><tr><td>7</td><td colspan=3 style='color:var(--muted)'>promo finita il 20/11</td><td>mer 26/11</td><td>€11.139</td><td>55</td></tr><tr class='tot'><td>Totale</td><td></td><td>€53.287</td><td>281</td><td></td><td>€46.645</td><td>241</td></tr>
+  </table></div>
+  <div class="hl">A parità di durata (20-24 novembre 2025, cinque giorni) il 2025 aveva venduto €32.555: <strong>+64%</strong>. Finita la promo si torna ai ritmi di sempre: €613 il 21/11, €1.947 il 22, €1.654 il 23.</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Da dove arrivano le vendite</div>
+  <h2>Sette ordini su dieci non partono dall'email.</h2>
+  <p class="sub">Canale dell'ultimo clic prima dell'acquisto, come lo registra WooCommerce su ogni ordine.</p>
+  <div class="bars"><div class="bar-row"><div class="bar-label">Email</div><div class="bar-track"><div class="bar" style="width:100%"></div><div class="bar-val">€14.468 · 27%</div></div></div><div class="bar-row"><div class="bar-label">Google organico</div><div class="bar-track"><div class="bar" style="width:92%"></div><div class="bar-val">€13.272 · 25%</div></div></div><div class="bar-row"><div class="bar-label">Diretto</div><div class="bar-track"><div class="bar" style="width:77%"></div><div class="bar-val">€11.073 · 21%</div></div></div><div class="bar-row"><div class="bar-label">Google a pagamento</div><div class="bar-track"><div class="bar" style="width:48%"></div><div class="bar-val">€6.992 · 13%</div></div></div><div class="bar-row"><div class="bar-label">Meta a pagamento</div><div class="bar-track"><div class="bar" style="width:34%"></div><div class="bar-val">€4.922 · 9%</div></div></div><div class="bar-row"><div class="bar-label">Altro</div><div class="bar-track"><div class="bar" style="width:18%"></div><div class="bar-val">€2.560 · 5%</div></div></div></div>
+  <p><strong>Email.</strong> Per ultimo clic vale il 27% delle vendite (79 ordini). Klaviyo però attribuisce alle campagne email €37.930 e 187 ordini, perché conta anche chi ha aperto o cliccato e poi è entrato dal diretto o da Google. Il valore reale dell'email sta tra i due numeri: chi apre la mail spesso compra dopo, da un'altra strada.</p>
+  <p><strong>Google organico</strong> passa da 19 a 62 ordini e <strong>Meta</strong> da 5 a 30. Google a pagamento scende da 58 a 35 ordini ma in cinque giorni invece di sette. Perché è salito l'organico non si sa con certezza: potrebbero essere clienti che cercano il nome del brand dopo avere visto email o annunci.</p>
+  <div class="tw"><table>
+    <tr><th>Canale</th><th>Ordini 2026</th><th>Lordo 2026</th><th>Nuovi 2026</th><th>Ordini 2025</th><th>Lordo 2025</th><th>Nuovi 2025</th></tr>
+    <tr><td>Email</td><td>79</td><td>€14.468</td><td>4</td><td>104</td><td>€21.141</td><td>4</td></tr><tr><td>Google organico</td><td>62</td><td>€13.272</td><td>10</td><td>19</td><td>€3.413</td><td>6</td></tr><tr><td>Diretto</td><td>62</td><td>€11.073</td><td>11</td><td>44</td><td>€10.340</td><td>6</td></tr><tr><td>Google a pagamento</td><td>35</td><td>€6.992</td><td>6</td><td>58</td><td>€9.254</td><td>12</td></tr><tr><td>Meta a pagamento</td><td>30</td><td>€4.922</td><td>7</td><td>5</td><td>€870</td><td>1</td></tr><tr><td>Altro</td><td>13</td><td>€2.560</td><td>2</td><td>11</td><td>€1.627</td><td>2</td></tr><tr class='tot'><td>Totale</td><td>281</td><td>€53.287</td><td>40</td><td>241</td><td>€46.645</td><td>31</td></tr>
+  </table></div>
+  <div class="hl">I clienti nuovi sono 40 su 281 ordini: il Black Friday lavora soprattutto sulla base. I nuovi arrivano da diretto (11), Google organico (10), Meta (7) e Google a pagamento (6), solo 4 dall'email.</div>
+  <div class="foot">2025: promo del 20-26 novembre (7 giorni); 2026: 16-20 novembre (5 giorni). «Nuovi» = primo ordine di sempre su quell'indirizzo email, controllato sullo storico dal 2016: è una stima.</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">La sequenza email</div>
+  <h2>Una email al giorno, più tre nell'ultimo.</h2>
+  <p>Gli invii alla base coinvolta sono andati a circa 12.300 contatti ciascuno; il 16/11 ne è partito anche uno ai dormienti. L'email più forte è stata quella del 16/11 (€8.663 e 43 ordini attribuiti da Klaviyo), seguita da quella del 17/11 (€6.590). Le aperture sono state più alte sull'email del 18/11 (31,4%).</p>
+  <div class="tw"><table>
+    <tr><th>Invio</th><th class="txt">Oggetto</th><th>Aperture</th><th>Click</th><th>Disiscritti</th><th>Ordini Klaviyo</th><th>Valore Klaviyo</th><th>Ordini da clic</th><th>Lordo da clic</th></tr>
+    <tr><td>16/11 10:00</td><td class='txt'>Da oggi a venerdì tutto costa il 20% in meno <span style="color:var(--muted)">(dormienti)</span></td><td>1,7%</td><td>0,1%</td><td>9</td><td>0</td><td>€0</td><td>0</td><td>€0</td></tr><tr><td>16/11 10:00</td><td class='txt'>Da oggi a venerdì tutto costa il 20% in meno <span style="color:var(--muted)">(base coinvolta)</span></td><td>25,0%</td><td>0,7%</td><td>13</td><td>43</td><td>€8.663</td><td>20</td><td>€3.374</td></tr><tr><td>17/11 09:30</td><td class='txt'>Un misurino al posto di dieci barattoli, con il 20% in meno</td><td>25,1%</td><td>0,7%</td><td>22</td><td>28</td><td>€6.590</td><td>11</td><td>€2.393</td></tr><tr><td>18/11 09:30</td><td class='txt'>Tre abitudini per la pelle d'inverno che non costano niente</td><td>31,4%</td><td>0,6%</td><td>22</td><td>28</td><td>€5.605</td><td>8</td><td>€1.325</td></tr><tr><td>19/11 09:30</td><td class='txt'>La scorta per l'inverno, con il 20% in meno</td><td>23,2%</td><td>0,3%</td><td>24</td><td>28</td><td>€6.150</td><td>7</td><td>€1.562</td></tr><tr><td>20/11 08:00</td><td class='txt'>Stasera alle 23:59 finisce il 20%</td><td>22,3%</td><td>0,4%</td><td>20</td><td>30</td><td>€5.238</td><td>12</td><td>€2.087</td></tr><tr><td>20/11 16:00</td><td class='txt'>Restano otto ore</td><td>23,0%</td><td>0,4%</td><td>15</td><td>13</td><td>€2.223</td><td>7</td><td>€1.075</td></tr><tr><td>20/11 21:00</td><td class='txt'>Ultime tre ore</td><td>22,5%</td><td>0,4%</td><td>14</td><td>7</td><td>€2.014</td><td>4</td><td>€897</td></tr><tr><td>20/11 23:00</td><td class='txt'>Ultima ora per il 20%</td><td>22,7%</td><td>0,5%</td><td>27</td><td>10</td><td>€1.447</td><td>5</td><td>€934</td></tr><tr class='tot'><td>Totale</td><td class='txt'>9 invii in 5 giorni (8 email, una in doppia versione)</td><td></td><td></td><td>166</td><td>187</td><td>€37.930</td><td>74</td><td>€13.647</td></tr>
+  </table></div>
+  <div class="hl"><strong>I dormienti non hanno risposto.</strong> L'invio ai dormienti (8.728 consegnate) ha avuto aperture all'1,7%, 0 ordini e 9 disiscrizioni. Il lavoro l'ha fatto la base coinvolta.</div>
+  <div class="foot">«Ordini e valore Klaviyo» sono gli acquisti attribuiti da Klaviyo a chi ha aperto o cliccato l'email nei giorni dopo l'invio, anche se poi è entrato da un altro canale. «Ordini da clic» sono gli acquisti arrivati direttamente dal link dell'email (ultimo clic, WooCommerce): il numero prudente. Orari in ora italiana. Disiscritti: 166 in tutto, sulle nove email.</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Il codice e i prodotti</div>
+  <h2>Il codice BLACK26 è stato usato dal 94% degli ordini.</h2>
+  <div class="grid">
+    <div class="stat"><div class="n">263</div><div class="l">ordini con BLACK26</div><div class="d">su 281</div></div>
+    <div class="stat"><div class="n">€11.288</div><div class="l">sconto erogato</div><div class="d">IVA esclusa</div></div>
+    <div class="stat"><div class="n">735</div><div class="l">pezzi venduti</div><div class="d">636 nei 7 giorni del 2025</div></div>
+  </div>
+  <p>Chi ha usato il codice ha speso in media €193 a ordine, come nella promo 2025 (€194): lo sconto non ha ridotto il carrello. I 18 ordini senza codice valgono €2.552, con uno scontrino medio di €142.</p>
+  <h2 style="font-size:26px;margin:36px 0 8px">Cosa si è venduto (pezzi, barra scura 2026, barra chiara 2025)</h2>
+  <div class="bars"><div class="bar-row"><div class="bar-label">Youth</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:71%;margin-bottom:4px"></div><div class="bar alt" style="width:27%;height:14px"></div></div><div class="bar-val">144 <span style="color:var(--muted);font-weight:400">(55 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Paleocomplex</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:67%;margin-bottom:4px"></div><div class="bar alt" style="width:100%;height:14px"></div></div><div class="bar-val">137 <span style="color:var(--muted);font-weight:400">(204 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Elisir</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:65%;margin-bottom:4px"></div><div class="bar alt" style="width:46%;height:14px"></div></div><div class="bar-val">132 <span style="color:var(--muted);font-weight:400">(94 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Jeunesse v2</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:42%;margin-bottom:4px"></div><div class="bar alt" style="width:0%;height:14px"></div></div><div class="bar-val">86 <span style="color:var(--muted);font-weight:400">(0 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Revolution</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:23%;margin-bottom:4px"></div><div class="bar alt" style="width:58%;height:14px"></div></div><div class="bar-val">47 <span style="color:var(--muted);font-weight:400">(118 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Essentiel</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:20%;margin-bottom:4px"></div><div class="bar alt" style="width:24%;height:14px"></div></div><div class="bar-val">40 <span style="color:var(--muted);font-weight:400">(49 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Elisir Basic</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:17%;margin-bottom:4px"></div><div class="bar alt" style="width:9%;height:14px"></div></div><div class="bar-val">35 <span style="color:var(--muted);font-weight:400">(18 nel 2025)</span></div></div></div><div class="bar-row"><div class="bar-label">Armageddon</div><div class="bar-track"><div style="flex:1"><div class="bar" style="width:12%;margin-bottom:4px"></div><div class="bar alt" style="width:7%;height:14px"></div></div><div class="bar-val">24 <span style="color:var(--muted);font-weight:400">(14 nel 2025)</span></div></div></div></div>
+  <div class="hl">Il mix si è spostato: il <strong>collagene</strong> (Youth e Jeunesse) vende 230 pezzi contro 70, con 86 pezzi di Jeunesse V2. I due multinutrienti storici, Paleocomplex e Revolution, calano da 322 a 184 pezzi, mentre <strong>Elisir</strong> sale da 94 a 132.</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Le ads</div>
+  <h2>Google ha speso €589 in cinque giorni.</h2>
+  <p>Gli ordini arrivati da un clic su Google a pagamento sono 35, per €6.992 lordi: circa 11,9 euro lordi venduti per ogni euro speso. Il dato interno di Google, che conta anche chi poi compra da altre strade, è più alto (€7.886 su 42,7 conversioni).</p>
+  <div class="tw"><table>
+    <tr><th class="txt">Campagna</th><th>Tipo</th><th>Spesa</th><th>Click</th><th>Conversioni (Google)</th><th>Valore (Google)</th></tr>
+    <tr><td class='txt'>Performance Max</td><td>PMax</td><td>€255</td><td>370</td><td>6,7</td><td>€1.662</td></tr><tr><td class='txt'>Brand Protection + Brand Engage</td><td>Search</td><td>€169</td><td>112</td><td>16,4</td><td>€2.277</td></tr><tr><td class='txt'>Youth Search</td><td>Search</td><td>€54</td><td>62</td><td>7,0</td><td>€596</td></tr><tr><td class='txt'>Elisir Search</td><td>Search</td><td>€50</td><td>64</td><td>12,2</td><td>€3.256</td></tr><tr><td class='txt'>Paleocomplex Search</td><td>Search</td><td>€46</td><td>27</td><td>0,4</td><td>€94</td></tr><tr><td class='txt'>Remarketing Display</td><td>Display</td><td>€15</td><td>105</td><td>0,0</td><td>€0</td></tr><tr class='tot'><td class='txt'>Totale Google Ads</td><td></td><td>€589</td><td>740</td><td>42,7</td><td>€7.886</td></tr>
+  </table></div>
+  <p><strong>Meta.</strong> Gli ordini con ultimo clic su una nostra ad Meta sono 30 (€4.922, 7 clienti nuovi); 16 vengono dall'ad set del Black Friday, che vale €2.830. Nel 2025 negli stessi giorni erano 5. La spesa Meta del periodo non è ancora in questo report.</p>
+  <div class="hl">Le ads portano il 22% delle vendite a ultimo clic (€11.915). Il resto arriva da email, ricerca organica e accessi diretti.</div>
+  <div class="foot">Fonti: WooCommerce (ordini 16-20 novembre completati e in lavorazione, lordo IVA inclusa; ordini 2025 del 20-26 novembre), Order Attribution di WooCommerce (ultimo clic), Klaviyo (report campagne, conversione Placed Order), Google Ads (16-20 novembre, ora dell'account). Preparato da Andrea · Paleocomplex</div>
+</section>
+
+</body>
+</html>
