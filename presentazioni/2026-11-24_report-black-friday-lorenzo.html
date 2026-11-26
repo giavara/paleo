@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-  Report Black Friday 2026 per Lorenzo - v1 (2026-11-24)
+  Report Black Friday 2026 per Lorenzo - v2 (2026-11-26)
   Generato da scripts/report_black_friday.py: numeri in project/black-friday-2026-dati.json
   Changelog:
+  v2 - in testa il riquadro con le Vendite lorde delle Statistiche di WooCommerce.
   v1 - prima versione. Dati: WooCommerce (ordini 16-20/11 e promo 2025 20-26/11), Klaviyo (nove invii), Google Ads (spesa), ordini lordi IVA inclusa.
 -->
 <html lang="it">
@@ -51,6 +52,14 @@
   .logo span{color:var(--gold)}
   header{max-width:880px;margin:0 auto;padding:28px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--beige)}
   header .date{font-size:13px;color:var(--muted)}
+  .woo{background:var(--card);border-radius:14px;padding:28px 24px;margin-bottom:56px}
+  .woo-n{font-family:'Cormorant Garamond',Georgia,serif;font-size:56px;font-weight:700;color:var(--bronze);line-height:1.1}
+  .woo-d{font-size:14px;color:var(--bronze);font-weight:600;margin-bottom:18px}
+  .ponte{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .ponte span{font-size:12px;color:var(--muted);background:var(--bg);border-radius:8px;padding:8px 12px}
+  .ponte span.tot{background:var(--beige)}
+  .ponte b{display:block;font-size:16px;color:var(--ink);white-space:nowrap}
+  .woo-f{font-size:12px;color:var(--muted)}
   @media print{.slide{page-break-after:always;padding:40px}}
   @media (max-width:640px){.slide{padding:48px 24px}h1{font-size:38px}h2{font-size:28px}header{padding:20px 24px}.bar-label{width:96px;font-size:12px}}
 </style>
@@ -63,6 +72,13 @@
 </header>
 
 <section class="slide">
+  <div class="woo">
+    <div class="kicker">Vendite lorde in WooCommerce · 16-20 novembre</div>
+    <div class="woo-n">€58.836</div>
+    <div class="woo-d">+18% sul 2025 (€49.894, 20-26 novembre)</div>
+    <div class="ponte"><span class=""><b>€58.836</b>vendite lorde</span><span class=""><b>−€11.344</b>buoni sconto</span><span class="tot"><b>€47.492</b>vendite nette</span><span class=""><b>+€4.893</b>IVA</span><span class=""><b>+€902</b>spedizioni</span><span class="tot"><b>€53.287</b>vendite totali</span></div>
+    <div class="woo-f">È la cifra delle Statistiche di WooCommerce: i prodotti prima dei buoni sconto, senza IVA e spedizioni. Le vendite totali sono il fatturato lordo usato nel resto del report. Per il 2025 WooCommerce sposta al 27/11 7 ordini della sera del 26: contandoli il confronto è +15%.</div>
+  </div>
   <div class="kicker">Black Friday · 16-20 novembre · 20% su tutto</div>
   <h1>Cinque giorni hanno battuto i sette del 2025.</h1>
   <p class="sub">La promo è finita una settimana prima del Black Friday ufficiale del 27, che quest'anno resta senza offerta. Risultato: più vendite della promo dell'anno scorso, che durava due giorni in più.</p>
